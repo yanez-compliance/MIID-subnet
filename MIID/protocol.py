@@ -19,6 +19,8 @@
 
 import typing
 import bittensor as bt
+import json
+from typing import List, Dict, Optional
 
 # TODO(developer): Rewrite with your protocol definition.
 
@@ -40,37 +42,28 @@ import bittensor as bt
 #   assert dummy_output == 2
 
 
-class Dummy(bt.Synapse):
+class NameVariationRequest(bt.Synapse):
     """
-    A simple dummy protocol representation which uses bt.Synapse as its base.
-    This protocol helps in handling dummy request and response communication between
-    the miner and the validator.
-
+    Protocol for requesting name variations from miners.
+    
     Attributes:
-    - dummy_input: An integer value representing the input request sent by the validator.
-    - dummy_output: An optional integer value which, when filled, represents the response from the miner.
+    - names: List of seed names to generate variations for
+    - query_template: Template string for the LLM prompt with {name} placeholder
+    - variations: Optional dictionary containing the generated variations for each name
     """
-
-    # Required request input, filled by sending dendrite caller.
-    dummy_input: int
-
-    # Optional request output, filled by receiving axon.
-    dummy_output: typing.Optional[int] = None
-
-    def deserialize(self) -> int:
+    
+    # Required request input, filled by sending dendrite caller
+    names: List[str]
+    query_template: str
+    
+    # Optional request output, filled by receiving axon
+    variations: Optional[Dict[str, List[str]]] = None
+    
+    def deserialize(self) -> Dict[str, List[str]]:
         """
-        Deserialize the dummy output. This method retrieves the response from
-        the miner in the form of dummy_output, deserializes it and returns it
-        as the output of the dendrite.query() call.
-
+        Deserialize the variations output.
+        
         Returns:
-        - int: The deserialized response, which in this case is the value of dummy_output.
-
-        Example:
-        Assuming a Dummy instance has a dummy_output value of 5:
-        >>> dummy_instance = Dummy(dummy_input=4)
-        >>> dummy_instance.dummy_output = 5
-        >>> dummy_instance.deserialize()
-        5
+        - Dict[str, List[str]]: Dictionary mapping each name to its list of variations
         """
-        return self.dummy_output
+        return self.variations
