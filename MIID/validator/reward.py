@@ -37,24 +37,24 @@ def reward(query: int, response: int) -> float:
     return 1.0 if response == query * 2 else 0
 
 
-def get_rewards(
-    self,
-    query: int,
-    responses: List[float],
-) -> np.ndarray:
-    """
-    Returns an array of rewards for the given query and responses.
+# def get_rewards(
+#     self,
+#     query: int,
+#     responses: List[float],
+# ) -> np.ndarray:
+#     """
+#     Returns an array of rewards for the given query and responses.
 
-    Args:
-    - query (int): The query sent to the miner.
-    - responses (List[float]): A list of responses from the miner.
+#     Args:
+#     - query (int): The query sent to the miner.
+#     - responses (List[float]): A list of responses from the miner.
 
-    Returns:
-    - np.ndarray: An array of rewards for the given query and responses.
-    """
-    # Get all the reward results by iteratively calling your reward() function.
+#     Returns:
+#     - np.ndarray: An array of rewards for the given query and responses.
+#     """
+#     # Get all the reward results by iteratively calling your reward() function.
 
-    return np.array([reward(query, response) for response in responses])
+#     return np.array([reward(query, response) for response in responses])
 
 
 def calculate_variation_quality(original_name: str, variations: List[str]) -> float:

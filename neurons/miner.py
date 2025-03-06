@@ -195,11 +195,13 @@ class Miner(BaseMinerNeuron):
         
         # Process the responses to extract variations
         variations = self.process_variations(Response_list, run_id, run_dir)
-        
+        ## print the variations
+        bt.logging.info(f"======== FINAL VARIATIONS===============================================: {variations}")
         # Set the variations in the synapse for return to the validator
         synapse.variations = variations
-        
+        bt.logging.info(f"======== SYNAPSE VARIATIONS===============================================: {synapse.variations}")
         bt.logging.info(f"Processed variations for {len(variations)} names in run {run_id}")
+
         return synapse
     
     def Get_Respond_LLM(self, prompt: str) -> str:
@@ -278,13 +280,14 @@ class Miner(BaseMinerNeuron):
                 
                 # Store the cleaned variations for this name
                 name_variations[name] = cleaned_variations
+                bt.logging.info(f"=================== Name variations: {name_variations}")
                 
                 bt.logging.info(f"Processed {len(cleaned_variations)} variations for {name}")
             except Exception as e:
                 bt.logging.error(f"Error processing response {i}: {e}")
         
         # Save processed variations to JSON for debugging and analysis
-       # self.save_variations_to_json(name_variations, run_id, run_dir)
+        self.save_variations_to_json(name_variations, run_id, run_dir)
         
         return name_variations
     
@@ -304,6 +307,11 @@ class Miner(BaseMinerNeuron):
             run_id: Unique identifier for this processing run
             run_dir: Directory to save run-specific files
         """
+        bt.logging.info(f"=================== Name variations: {name_variations}")
+        bt.logging.info(f"=================== Run ID: {run_id}")
+        bt.logging.info(f"=================== Run directory: {run_dir}")
+        bt.logging.info("Saving variations to JSON and DataFrame")
+
         # Find the maximum number of variations for any name
         max_variations = max([len(vars) for vars in name_variations.values()]) if name_variations else 0
         bt.logging.info(f"Maximum number of variations found: {max_variations}")
@@ -322,8 +330,8 @@ class Miner(BaseMinerNeuron):
         
         # Save DataFrame to pickle for backup and analysis
         # Include run_id in the filename
-        df_path = os.path.join(run_dir, f"variations_df_{run_id}.pkl")
-        result_df.to_pickle(df_path)
+        #df_path = os.path.join(run_dir, f"variations_df_{run_id}.pkl")
+        #result_df.to_pickle(df_path)
         
         # Convert DataFrame to JSON format
         json_data = {}
@@ -339,12 +347,12 @@ class Miner(BaseMinerNeuron):
         import json
         with open(json_path, 'w', encoding='utf-8') as f:
             json.dump(json_data, f, indent=4)
-        
+        bt.logging.info(f"Saved variations to: {json_path}")
         # Also save a copy with the model name for reference
         model_json_path = os.path.join(self.output_path, f"{self.model_name.replace(':', '_')}_run_{run_id}.json")
         with open(model_json_path, 'w', encoding='utf-8') as f:
             json.dump(json_data, f, indent=4)
-        
+        bt.logging.info(f"Saved model-specific variations to: {model_json_path}")
         bt.logging.info(f"Saved processed variations to: {json_path}")
         bt.logging.info(f"Saved model-specific variations to: {model_json_path}")
         bt.logging.info(f"DataFrame shape: {result_df.shape} with {max_variations} variation columns")
@@ -612,4 +620,4 @@ if __name__ == "__main__":
     with Miner() as miner:
         while True:
             bt.logging.info(f"----------------------------------Name Variation Miner running... {time.time()}")
-            time.sleep(5)
+            time.sleep(1)
