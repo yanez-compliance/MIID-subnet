@@ -21,7 +21,9 @@
 Name Variation Miner Module
 
 This module implements a Bittensor miner that generates alternative spellings for names
-using a local LLM (via Ollama). The miner receives requests from validators containing
+using a local LLM (via Ollama). 
+######### Ollama should be installed and running on the machine. ########
+The miner receives requests from validators containing
 a list of names and a query template, processes each name through the LLM, extracts
 the variations from the LLM's response, and returns them to the validator.
 
@@ -99,17 +101,32 @@ class Miner(BaseMinerNeuron):
         
         # Initialize the LLM client
         # You can override this in your config by setting model_name
-        self.model_name = getattr(self.config, 'model_name', 'tinyllama:latest')
-        # ollama pull tinyllama:latest
+        # Ensure we have a valid model name, defaulting to tinyllama:latest if not specified
+        self.model_name = getattr(self.config, 'model_name', None)
+        if self.model_name is None:
+            self.model_name = 'tinyllama:latest'
+            bt.logging.info(f"No model specified in config, using default model: {self.model_name}")
+        
+        bt.logging.info(f"Using LLM model: {self.model_name}")
+        
+        # Check if Ollama is available
         try:
             # Check if model exists locally first
-            ollama.list()['models'][self.model_name]
-            bt.logging.info(f"Model {self.model_name} already pulled")
-        except:
-            # Model not found locally, pull it
-            bt.logging.info(f"Pulling model {self.model_name}...")
-            ollama.pull(self.model_name)
-        bt.logging.info(f"Using LLM model: {self.model_name}")
+            models = ollama.list().get('models', [])
+            model_exists = any(model.get('name') == self.model_name for model in models)
+            
+            if model_exists:
+                bt.logging.info(f"Model {self.model_name} already pulled")
+            else:
+                # Model not found locally, pull it
+                bt.logging.info(f"Pulling model {self.model_name}...")
+                ollama.pull(self.model_name)
+        except Exception as e:
+            bt.logging.error(f"Error with Ollama: {str(e)}")
+            bt.logging.error("Make sure Ollama is installed and running on this machine")
+            bt.logging.error("Install Ollama: curl -fsSL https://ollama.com/install.sh | sh")
+            bt.logging.error("Start Ollama: ollama serve")
+            raise RuntimeError("Ollama is required for this miner. Please install and start Ollama.")
         
         # Create a directory for storing mining results
         # This helps with debugging and analysis
@@ -495,7 +512,7 @@ class Miner(BaseMinerNeuron):
                     return seed, "r3", Cleaned_name_list
 
     async def blacklist(
-        self, synapse: typing.Any
+        self, synapse: NameVariationRequest
     ) -> typing.Tuple[bool, str]:
         """
         Determines whether an incoming request should be blacklisted and thus ignored.
@@ -507,7 +524,7 @@ class Miner(BaseMinerNeuron):
         3. Whether the hotkey has validator permissions (if required)
         
         Args:
-            synapse: A synapse object constructed from the headers of the incoming request.
+            synapse: A NameVariationRequest object constructed from the incoming request.
 
         Returns:
             Tuple[bool, str]: A tuple containing:
@@ -550,7 +567,7 @@ class Miner(BaseMinerNeuron):
         )
         return False, "Hotkey recognized!"
 
-    async def priority(self, synapse: typing.Any) -> float:
+    async def priority(self, synapse: NameVariationRequest) -> float:
         """
         The priority function determines the order in which requests are handled.
         
@@ -559,7 +576,7 @@ class Miner(BaseMinerNeuron):
         ensures that validators with more stake get faster responses.
         
         Args:
-            synapse: The synapse object that contains metadata about the incoming request.
+            synapse: The NameVariationRequest object that contains metadata about the incoming request.
 
         Returns:
             float: A priority score derived from the stake of the calling entity.

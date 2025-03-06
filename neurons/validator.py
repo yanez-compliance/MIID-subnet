@@ -87,12 +87,23 @@ class Validator(BaseValidatorNeuron):
         bt.logging.info("load_state()")
         self.load_state()
         
+        # Make sure self.config exists
+        if not hasattr(self, 'config') or self.config is None:
+            bt.logging.warning("self.config is None, creating a new config object")
+            self.config = bt.config()
+        
         # Configuration for the name variation protocol
-        if not hasattr(self.config, 'name_variation'):
+        # Create the name_variation config object if it doesn't exist
+        if not hasattr(self.config, 'name_variation') or self.config.name_variation is None:
+            bt.logging.warning("name_variation config is None, creating a new config object")
             self.config.name_variation = bt.config()
-            # Number of names to sample per query
-            # This determines how many names will be sent to miners in each request
-            self.config.name_variation.sample_size = 5
+        
+        # Explicitly create the sample_size attribute with a default value
+        # This is a more direct approach that should work regardless of the config object's implementation
+        self.config.name_variation.sample_size = 5
+        
+        # Log the configuration to verify it's set correctly
+        bt.logging.info(f"Name variation sample size: {self.config.name_variation.sample_size}")
             
         # Ensure required libraries are installed
         try:
