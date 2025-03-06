@@ -245,6 +245,7 @@ class Miner(BaseMinerNeuron):
         Returns:
             Dictionary mapping each name to its list of variations
         """
+        bt.logging.info(f"Processing {len(Response_list)} responses")
         # Split the responses by "Respond" to get individual responses
         Responds = "".join(Response_list).split("Respond")
         
