@@ -193,10 +193,12 @@ def get_name_variation_rewards(
     - np.ndarray: Array of rewards for each miner
     """
     rewards = np.zeros(len(responses))
-    
+    bt.logging.info(f"######################### Responses: {responses}")
+    bt.logging.info(f"######################### UIDs: {uids}")
+    bt.logging.info(f"######################### Seed names: {seed_names}")
     for i, (response, uid) in enumerate(zip(responses, uids)):
         if response is None:
-            bt.logging.warning(f"Miner {uid} returned None response")
+            bt.logging.warning(f"+++++++++++++++++ Miner {uid} returned None response")
             continue
             
         # Calculate reward for this miner
@@ -204,28 +206,29 @@ def get_name_variation_rewards(
         
         for name in seed_names:
             if name not in response:
-                bt.logging.warning(f"Miner {uid} missing variations for name: {name}")
+                bt.logging.warning(f"+++++++++++++++++ Miner {uid} missing variations for name: {name}")
                 continue
                 
             variations = response[name]
-            
+            bt.logging.info(f"+++++++++++++++++ Variations: {variations}")
+            bt.logging.info(f"+++++++++++++++++ Name: {name}")
             # Check if we have enough variations
             if not variations or len(variations) < 5:
-                bt.logging.warning(f"Miner {uid} returned too few variations for {name}: {len(variations)}")
+                bt.logging.warning(f"+++++++++++++++++ Miner {uid} returned too few variations for {name}: {len(variations)}")
                 continue
                 
             # Reward for number of variations (up to 10)
             variation_count = min(len(variations), 10)
             count_reward = variation_count / 10.0
-            
+            bt.logging.info(f"+++++++++++++++++ Count reward: {count_reward}")
             # Reward for quality of variations
             quality_reward = calculate_variation_quality(name, variations)
-            
+            bt.logging.info(f"+++++++++++++++++ Quality reward: {quality_reward}")
             # Combine rewards
             name_reward = 0.2 * count_reward + 0.8 * quality_reward
             miner_reward += name_reward / len(seed_names)
-            
+            bt.logging.info(f"+++++++++++++++++ Miner reward: {miner_reward}")
         rewards[i] = miner_reward
-        bt.logging.info(f"Miner {uid} received reward: {miner_reward:.4f}")
+        bt.logging.info(f"+++++++++++++++++ Miner {uid} received reward: {miner_reward:.4f}")
         
     return rewards
