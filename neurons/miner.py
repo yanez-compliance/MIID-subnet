@@ -40,6 +40,9 @@ For debugging and analysis, the miner also saves:
 - Raw LLM responses
 - Processed variations in JSON format
 - A pandas DataFrame with the variations
+
+Each mining run is saved with a unique timestamp identifier to distinguish between
+different runs and facilitate analysis of results over time.
 """
 
 import time
@@ -74,6 +77,9 @@ class Miner(BaseMinerNeuron):
     - Returning the processed variations to the validator
     - Saving intermediate results for debugging and analysis
     
+    Each mining run is saved with a unique timestamp identifier to distinguish between
+    different runs and facilitate analysis of results over time.
+    
     Configuration:
     - model_name: The Ollama model to use (default: 'tinyllama:latest')
     - output_path: Directory for saving mining results (default: logging_dir/mining_results)
@@ -83,6 +89,9 @@ class Miner(BaseMinerNeuron):
         """
         Initialize the Name Variation Miner.
         
+        Sets up the LLM client and creates directories for storing mining results.
+        Each run will be saved in a separate directory with a unique timestamp.
+        
         Args:
             config: Configuration object for the miner
         """
@@ -91,6 +100,15 @@ class Miner(BaseMinerNeuron):
         # Initialize the LLM client
         # You can override this in your config by setting model_name
         self.model_name = getattr(self.config, 'model_name', 'tinyllama:latest')
+        # ollama pull tinyllama:latest
+        try:
+            # Check if model exists locally first
+            ollama.list()['models'][self.model_name]
+            bt.logging.info(f"Model {self.model_name} already pulled")
+        except:
+            # Model not found locally, pull it
+            bt.logging.info(f"Pulling model {self.model_name}...")
+            ollama.pull(self.model_name)
         bt.logging.info(f"Using LLM model: {self.model_name}")
         
         # Create a directory for storing mining results
@@ -108,6 +126,9 @@ class Miner(BaseMinerNeuron):
         2. Processes each name through the LLM
         3. Extracts variations from the LLM responses
         4. Returns the variations to the validator
+        
+        Each run is assigned a unique timestamp ID and results are saved in a
+        dedicated directory for that run.
         
         Args:
             synapse: The NameVariationRequest containing names and query template
@@ -169,6 +190,7 @@ class Miner(BaseMinerNeuron):
         Query the LLM using Ollama.
         
         This function sends a prompt to the LLM and returns its response.
+        It uses the Ollama client to communicate with a locally running LLM.
         
         Args:
             prompt: The prompt to send to the LLM
@@ -194,7 +216,8 @@ class Miner(BaseMinerNeuron):
         
         This function takes the raw LLM responses and extracts the name variations
         using the Process_function. It handles the parsing and cleaning of the
-        LLM outputs.
+        LLM outputs, ensuring that all variations are properly cleaned before
+        being returned or saved.
         
         Args:
             Response_list: List of LLM responses in the format:
@@ -224,10 +247,21 @@ class Miner(BaseMinerNeuron):
                 # Filter out empty or NaN variations
                 variations = [var for var in llm_respond[2] if not pd.isna(var) and var != ""]
                 
-                # Store the variations for this name
-                name_variations[name] = variations
+                # Clean each variation before storing
+                cleaned_variations = []
+                for var in variations:
+                    # Remove unwanted characters
+                    cleaned_var = var.replace(")", "").replace("(", "").replace("]", "").replace("[", "").replace(",", "")
+                    # Remove leading/trailing whitespace
+                    cleaned_var = cleaned_var.strip()
+                    # Only add non-empty variations
+                    if cleaned_var:
+                        cleaned_variations.append(cleaned_var)
                 
-                bt.logging.info(f"Processed {len(variations)} variations for {name}")
+                # Store the cleaned variations for this name
+                name_variations[name] = cleaned_variations
+                
+                bt.logging.info(f"Processed {len(cleaned_variations)} variations for {name}")
             except Exception as e:
                 bt.logging.error(f"Error processing response {i}: {e}")
         
@@ -240,9 +274,12 @@ class Miner(BaseMinerNeuron):
         """
         Save processed variations to JSON and DataFrame for debugging and analysis.
         
-        This function saves the processed variations in two formats:
-        1. A pandas DataFrame saved as a pickle file
-        2. A JSON file with the name variations
+        This function saves the processed variations in multiple formats:
+        1. A pandas DataFrame saved as a pickle file in the run-specific directory
+        2. A JSON file with the name variations in the run-specific directory
+        3. A JSON file with the model name and run ID in the main output directory
+        
+        Each file is named with the run ID to distinguish between different runs.
         
         Args:
             name_variations: Dictionary mapping names to variations
@@ -251,6 +288,7 @@ class Miner(BaseMinerNeuron):
         """
         # Find the maximum number of variations for any name
         max_variations = max([len(vars) for vars in name_variations.values()]) if name_variations else 0
+        bt.logging.info(f"Maximum number of variations found: {max_variations}")
         
         # Create a DataFrame with columns for the name and each variation
         columns = ['Name'] + [f'Var_{i+1}' for i in range(max_variations)]
@@ -261,16 +299,8 @@ class Miner(BaseMinerNeuron):
             row_data = [name] + variations + [''] * (max_variations - len(variations))
             result_df.loc[i] = row_data
         
-        # Clean the data by removing unwanted characters
-        for r in range(result_df.shape[0]):
-            input_row = result_df.iloc[r,:]
-            # Remove parentheses, brackets, and commas
-            input_row = input_row.astype(str).apply(lambda x: x.replace(")", ""))
-            input_row = input_row.astype(str).apply(lambda x: x.replace("(", ""))
-            input_row = input_row.astype(str).apply(lambda x: x.replace("]", ""))
-            input_row = input_row.astype(str).apply(lambda x: x.replace("[", ""))
-            input_row = input_row.astype(str).apply(lambda x: x.replace(",", ""))
-            result_df.iloc[r,:] = input_row
+        # Note: We no longer need to clean the data here since it's already cleaned
+        # in the process_variations function
         
         # Save DataFrame to pickle for backup and analysis
         # Include run_id in the filename
@@ -299,13 +329,15 @@ class Miner(BaseMinerNeuron):
         
         bt.logging.info(f"Saved processed variations to: {json_path}")
         bt.logging.info(f"Saved model-specific variations to: {model_json_path}")
+        bt.logging.info(f"DataFrame shape: {result_df.shape} with {max_variations} variation columns")
     
     def Clean_extra(self, payload: str, comma: bool, line: bool, space: bool) -> str:
         """
         Clean the LLM output by removing unwanted characters.
         
         This function removes various characters from the LLM output to make it
-        easier to parse and extract the name variations.
+        easier to parse and extract the name variations. It can selectively
+        remove commas, newlines, and spaces based on the parameters.
         
         Args:
             payload: The text to clean
@@ -341,10 +373,12 @@ class Miner(BaseMinerNeuron):
         1. The original seed name
         2. The list of name variations
         
-        It handles different response formats:
-        - Comma-separated lists
+        It handles different response formats from LLMs:
+        - Comma-separated lists (preferred format)
         - Line-separated lists
         - Space-separated lists with numbering
+        
+        The function is flexible and can handle any number of variations, not just 10.
         
         Args:
             string: The LLM response in the format:
@@ -369,7 +403,7 @@ class Miner(BaseMinerNeuron):
         payload = splits[-1]
         
         # Case 1: Comma-separated list (preferred format)
-        if len(payload.split(",")) > 10:
+        if len(payload.split(",")) > 3:  # Check if we have at least 3 commas
             # Clean the payload but keep commas
             payload = self.Clean_extra(payload, False, True, True)
             
@@ -377,8 +411,8 @@ class Miner(BaseMinerNeuron):
             for num in range(10):
                 payload = payload.replace(str(num), "")
                 
-            # Split by comma and take up to 10 variations
-            name_list = list(payload.split(",")[1:11])
+            # Split by comma and take all variations
+            name_list = list(payload.split(",")[1:])  # Skip the first element (often empty or contains intro text)
             
             # Clean each variation
             Cleaned_name_list = []
@@ -393,12 +427,11 @@ class Miner(BaseMinerNeuron):
                 else:
                     Cleaned_name_list.append(name)
                     
-            # Return the results
-            if len(Cleaned_name_list) == 10:        
-                if debug:
-                    return seed, "r1", Cleaned_name_list, payload
-                else:
-                    return seed, "r1", Cleaned_name_list
+            # Return the results - we accept any number of variations
+            if debug:
+                return seed, "r1", Cleaned_name_list, payload
+            else:
+                return seed, "r1", Cleaned_name_list
         
         # Case 2 & 3: Non-comma separated formats
         else:
@@ -412,8 +445,8 @@ class Miner(BaseMinerNeuron):
                 for num in range(10):
                     payload = payload.replace(str(num), "")
                     
-                # Split by newline and take up to 10 variations
-                name_list = list(payload.split("\\n"))[0:10]
+                # Split by newline and take all variations
+                name_list = list(payload.split("\\n"))
                 
                 # Clean each variation
                 Cleaned_name_list = []
@@ -467,7 +500,8 @@ class Miner(BaseMinerNeuron):
         """
         Determines whether an incoming request should be blacklisted and thus ignored.
         
-        This function checks if the request should be processed based on:
+        This function implements security checks to ensure that only authorized
+        validators can query this miner. It verifies:
         1. Whether the request has a valid dendrite and hotkey
         2. Whether the hotkey is registered in the metagraph
         3. Whether the hotkey has validator permissions (if required)
@@ -521,7 +555,8 @@ class Miner(BaseMinerNeuron):
         The priority function determines the order in which requests are handled.
         
         This function assigns a priority to each request based on the stake of the
-        calling entity. Requests with higher priority are processed first.
+        calling entity. Requests with higher priority are processed first, which
+        ensures that validators with more stake get faster responses.
         
         Args:
             synapse: The synapse object that contains metadata about the incoming request.
