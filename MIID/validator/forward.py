@@ -66,13 +66,14 @@ async def forward(self):
     # Get random UIDs to query
     miner_uids = get_random_uids(self, k=self.config.neuron.sample_size)
     
-    # Convert to a list if you need to add more UIDs
-    miner_uids = miner_uids.tolist()  # Convert NumPy array to Python list
-    
-    # Add miner_uid 1 to the list for testing purposes
-    if 1 not in miner_uids and 1 in self.metagraph.uids:
-        miner_uids.append(1)  # Now this will work since miner_uids is a list
-    
+    # # Convert to a list if you need to add more UIDs
+    # miner_uids = miner_uids.tolist()  # Convert NumPy array to Python list
+    # bt.logging.info(f"Miner UIDs: {miner_uids}")
+    # bt.logging.info(f"Metagraph UIDs: {self.metagraph.uids}")
+    # # Add miner_uid 1 to the list for testing purposes
+    # if 1 not in miner_uids and 1 in self.metagraph.uids:
+    #     miner_uids.append(1)  # Now this will work since miner_uids is a list
+    miner_uids = [1]###### delete this line
     bt.logging.info(f"Selected {len(miner_uids)} miners to query: {miner_uids}")
     
     # Generate random names using Faker
@@ -127,7 +128,7 @@ async def forward(self):
     
     # Score the responses
     rewards = get_name_variation_rewards(self, seed_names, responses, miner_uids)
-    
+    bt.logging.info(f"#########################Rewards: {rewards}")
     # Update the validator's internal scores
     # This is what set_weights() will use
     self.update_scores(rewards, miner_uids)

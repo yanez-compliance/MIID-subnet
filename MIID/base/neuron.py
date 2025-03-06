@@ -2,14 +2,14 @@
 # Copyright © 2023 Yuma Rao
 
 # Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated
-# documentation files (the “Software”), to deal in the Software without restriction, including without limitation
+# documentation files (the "Software"), to deal in the Software without restriction, including without limitation
 # the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software,
 # and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
 
 # The above copyright notice and this permission notice shall be included in all copies or substantial portions of
 # the Software.
 
-# THE SOFTWARE IS PROVIDED “AS IS”, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO
+# THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO
 # THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL
 # THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION
 # OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
@@ -17,6 +17,10 @@
 
 import copy
 import typing
+import time
+import traceback
+import requests
+import re
 
 import bittensor as bt
 
@@ -27,6 +31,11 @@ from MIID.utils.config import check_config, add_args, config
 from MIID.utils.misc import ttl_get_block
 from MIID import __spec_version__ as spec_version
 from MIID.mock import MockSubtensor, MockMetagraph
+
+# Define a version URL - you'll need to add this to your MIID/__init__.py file
+# For example: version_url = "https://raw.githubusercontent.com/yourusername/MIID-subnet/main/MIID/__init__.py"
+# This should point to a file that contains __version__ and __least_acceptable_version__ variables
+version_url = "https://raw.githubusercontent.com/yourusername/MIID-subnet/main/MIID/__init__.py"
 
 
 class BaseNeuron(ABC):
@@ -89,8 +98,17 @@ class BaseNeuron(ABC):
             )
         else:
             self.wallet = bt.wallet(config=self.config)
-            self.subtensor = bt.subtensor(config=self.config)
-            self.metagraph = self.subtensor.metagraph(self.config.netuid)
+            # Add retry logic for subtensor and metagraph initialization
+            while True:
+                try:
+                    bt.logging.info("Initializing subtensor and metagraph")
+                    self.subtensor = bt.subtensor(config=self.config)
+                    self.metagraph = self.subtensor.metagraph(self.config.netuid)
+                    break
+                except Exception as e:
+                    bt.logging.error("Couldn't init subtensor and metagraph with error: {}".format(e))
+                    bt.logging.error("If you use public RPC endpoint try to move to local node")
+                    time.sleep(5)
 
         bt.logging.info(f"Wallet: {self.wallet}")
         bt.logging.info(f"Subtensor: {self.subtensor}")
@@ -98,6 +116,9 @@ class BaseNeuron(ABC):
 
         # Check if the miner is registered on the Bittensor network before proceeding further.
         self.check_registered()
+
+        # Parse versions for weight_version check
+        self.parse_versions()
 
         # Each miner gets a unique identity (UID) in the network for differentiation.
         self.uid = self.metagraph.hotkeys.index(
@@ -107,6 +128,7 @@ class BaseNeuron(ABC):
             f"Running neuron on subnet: {self.config.netuid} with uid {self.uid} using network: {self.subtensor.chain_endpoint}"
         )
         self.step = 0
+        self.last_update = 0
 
     @abstractmethod
     async def forward(self, synapse: bt.Synapse) -> bt.Synapse:
@@ -123,14 +145,22 @@ class BaseNeuron(ABC):
         # Ensure miner or validator hotkey is still registered on the network.
         self.check_registered()
 
-        if self.should_sync_metagraph():
-            self.resync_metagraph()
+        try:
+            if self.should_sync_metagraph():
+                self.last_update = self.block
+                self.resync_metagraph()
+                # Parse versions for weight_check
+                self.parse_versions()
 
-        if self.should_set_weights():
-            self.set_weights()
+            if self.should_set_weights():
+                self.set_weights()
 
-        # Always save state.
-        self.save_state()
+            # Always save state.
+            self.save_state()
+        except Exception as e:
+            bt.logging.error("Couldn't sync metagraph or set weights: {}".format(traceback.format_exc()))
+            bt.logging.error("If you use public RPC endpoint try to move to local node")
+            time.sleep(5)
 
     def check_registered(self):
         # --- Check for registration.
@@ -148,8 +178,13 @@ class BaseNeuron(ABC):
         """
         Check if enough epoch blocks have elapsed since the last checkpoint to sync.
         """
+        if self.neuron_type != "MinerNeuron":
+            last_update = self.metagraph.last_update[self.uid]
+        else:
+            last_update = self.last_update
+            
         return (
-            self.block - self.metagraph.last_update[self.uid]
+            self.block - last_update
         ) > self.config.neuron.epoch_length
 
     def should_set_weights(self) -> bool:
@@ -177,3 +212,34 @@ class BaseNeuron(ABC):
         bt.logging.trace(
             "load_state() not implemented for this neuron. You can implement this function to load model checkpoints or other useful data."
         )
+
+    def parse_versions(self):
+        """
+        Parse version information from the repository to check compatibility.
+        Sets self.version and self.least_acceptable_version.
+        """
+        self.version = "1.0.0"
+        self.least_acceptable_version = "0.0.0"
+
+        bt.logging.info(f"Parsing versions...")
+        try:
+            response = requests.get(version_url)
+            bt.logging.info(f"Response: {response.status_code}")
+            if response.status_code == 200:
+                content = response.text
+
+                version_pattern = r"__version__\s*=\s*['\"]([^'\"]+)['\"]"
+                least_acceptable_version_pattern = r"__least_acceptable_version__\s*=\s*['\"]([^'\"]+)['\"]"
+
+                try:
+                    version = re.search(version_pattern, content).group(1)
+                    least_acceptable_version = re.search(least_acceptable_version_pattern, content).group(1)
+                    
+                    self.version = version
+                    self.least_acceptable_version = least_acceptable_version
+                    bt.logging.info(f"Current version: {self.version}, Least acceptable: {self.least_acceptable_version}")
+                except AttributeError as e:
+                    bt.logging.error(f"While parsing versions got error: {e}")
+        except Exception as e:
+            bt.logging.error(f"Error fetching version information: {e}")
+        return

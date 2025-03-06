@@ -284,7 +284,7 @@ class Miner(BaseMinerNeuron):
                 bt.logging.error(f"Error processing response {i}: {e}")
         
         # Save processed variations to JSON for debugging and analysis
-        self.save_variations_to_json(name_variations, run_id, run_dir)
+       # self.save_variations_to_json(name_variations, run_id, run_dir)
         
         return name_variations
     
