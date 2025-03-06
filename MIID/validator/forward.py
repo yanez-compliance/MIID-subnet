@@ -65,16 +65,38 @@ async def forward(self):
     """
     # Get random UIDs to query
     miner_uids = get_random_uids(self, k=self.config.neuron.sample_size)
-    # add miner_uid 1 to the list
-    miner_uids.append(1) # for testing purposes
+    
+    # Convert to a list if you need to add more UIDs
+    miner_uids = miner_uids.tolist()  # Convert NumPy array to Python list
+    
+    # Add miner_uid 1 to the list for testing purposes
+    if 1 not in miner_uids and 1 in self.metagraph.uids:
+        miner_uids.append(1)  # Now this will work since miner_uids is a list
+    
+    bt.logging.info(f"Selected {len(miner_uids)} miners to query: {miner_uids}")
+    
     # Generate random names using Faker
     fake = Faker()
     
     # Create a list to store the generated names
     seed_names = []
     
+    # Ensure name_variation config exists
+    if not hasattr(self.config, 'name_variation'):
+        bt.logging.warning("name_variation config not found, creating it now")
+        self.config.name_variation = bt.config()
+        self.config.name_variation.sample_size = 5
+    
+    # Ensure sample_size exists and has a valid value
+    if not hasattr(self.config.name_variation, 'sample_size') or self.config.name_variation.sample_size is None:
+        bt.logging.warning("sample_size is None, setting default value of 5")
+        self.config.name_variation.sample_size = 5
+
+    sample_size = self.config.name_variation.sample_size
+    bt.logging.info(f"Using name variation sample size: {sample_size}")
+    
     # Generate the required number of unique names
-    while len(seed_names) < self.config.name_variation.sample_size:
+    while len(seed_names) < sample_size:
         # Randomly choose between first_name and last_name
         if random.choice([True, False]):
             name = fake.first_name().lower()
@@ -105,6 +127,10 @@ async def forward(self):
     
     # Score the responses
     rewards = get_name_variation_rewards(self, seed_names, responses, miner_uids)
+    
+    # Update the validator's internal scores
+    # This is what set_weights() will use
+    self.update_scores(rewards, miner_uids)
     
     # Save the results for analysis
     # Create a unique timestamp for this run
@@ -146,8 +172,9 @@ async def forward(self):
     
     bt.logging.info(f"Saved validator results to: {json_path}")
     
-    # Set weights based on rewards
-    self.set_weights(miner_uids, rewards)
+    # Set weights based on the updated scores
+    # This uses the internal self.scores that we updated with update_scores()
+    self.set_weights()
     
     # Return success
     return True
