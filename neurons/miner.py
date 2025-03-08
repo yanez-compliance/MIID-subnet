@@ -620,4 +620,4 @@ if __name__ == "__main__":
     with Miner() as miner:
         while True:
             bt.logging.info(f"----------------------------------Name Variation Miner running... {time.time()}")
-            time.sleep(1)
+            time.sleep(30)
