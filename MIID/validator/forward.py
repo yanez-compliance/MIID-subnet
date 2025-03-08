@@ -181,17 +181,25 @@ async def forward(self):
     Returns:
         The result of the forward function from the MIID.validator module
     """
-    # Get random UIDs to query
-    miner_uids = get_random_uids(self, k=self.config.neuron.sample_size)
     
-    # Convert to a list if you need to add more UIDs
+    available_axon_size = len(self.metagraph.axons) - 1  # Except our own
+    miner_selection_size = min(available_axon_size, self.config.neuron.sample_size)
+    miner_uids = get_random_uids(self, k=miner_selection_size)
+    axons = [self.metagraph.axons[uid] for uid in miner_uids]
+
+    bt.logging.info(f"@@@@@@@@@@@@@@@@@@@@ Selected {len(axons)} axons to query: {axons}")
+    bt.logging.info(f"@@@@@@@@@@@@@@@@@@@ miner selection size: {miner_selection_size}")
+    # # Convert to a list if you need to add more UIDs
     miner_uids = miner_uids.tolist()  # Convert NumPy array to Python list
     
-    # Add miner_uid 1 to the list for testing purposes if it exists
-    if 1 not in miner_uids and 1 in self.metagraph.uids:
-        miner_uids.append(1)
     
-    bt.logging.info(f"Selected {len(miner_uids)} miners to query: {miner_uids}")
+    bt.logging.info(f"@@@@--------@@@@@@@@@@@@@@@@@@@ Selected {len(miner_uids)} miners to query: {miner_uids}")
+
+    # # Add miner_uid 1 to the list for testing purposes if it exists
+    if 1 not in miner_uids and 1 in self.metagraph.uids:
+         miner_uids.append(1)
+    
+    bt.logging.info(f"@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ Selected {len(miner_uids)} miners to query: {miner_uids}")
     
     # Generate random names using Faker
     fake = Faker()
@@ -262,6 +270,7 @@ async def forward(self):
 
     if len(responsive_uids) < len(miner_uids):
         bt.logging.warning(f"Only {len(responsive_uids)}/{len(miner_uids)} miners responded to ping")
+        bt.logging.debug(f"responsive_uids: {responsive_uids}")
         # Continue with only responsive miners
         miner_uids = responsive_uids
     
@@ -275,28 +284,37 @@ async def forward(self):
     # Define the timed_dendrite function inside the forward function
     async def timed_dendrite(dendrite, axons, synapse, deserialize, timeout, uid_map):
         start_times = {i: time.time() for i in range(len(axons))}
-        responses = await dendrite(axons=axons, synapse=synapse, deserialize=deserialize, timeout=timeout)
-        end_time = time.time()
-        
-        for i, response in enumerate(responses):
-            uid = uid_map[i]
-            response_time = end_time - start_times[i]
-            response_times[uid] = response_time
-            bt.logging.debug(f"Miner {uid} responded in {response_time:.2f}s")
-        
-        return responses
+        try:
+            responses = await dendrite(axons=axons, synapse=synapse, deserialize=deserialize, timeout=timeout)
+            end_time = time.time()
+            
+            for i, response in enumerate(responses):
+                uid = uid_map[i]
+                response_time = end_time - start_times[i]
+                response_times[uid] = response_time
+                bt.logging.debug(f"Miner {uid} responded in {response_time:.2f}s")
+            
+            return responses
+        except Exception as e:
+            bt.logging.error(f"Error in timed_dendrite: {str(e)}")
+            # Create default responses for all axons in this batch
+            return [create_default_response() for _ in range(len(axons))]
     
     # Initialize all_responses to collect responses from all batches
     all_responses = []
     
     # Process miners in batches with pauses between batches
     batch_size = 10  # Smaller batch size to reduce load
+    total_batches = (len(miner_uids) + batch_size - 1) // batch_size
+    bt.logging.info(f"Processing miners in {total_batches} batches")
+    
     for i in range(0, len(miner_uids), batch_size):
         batch_uids = miner_uids[i:i+batch_size]
         batch_axons = [self.metagraph.axons[uid] for uid in batch_uids]
         uid_map = {j: batch_uids[j] for j in range(len(batch_uids))}
         
-        bt.logging.info(f"Processing batch {i//batch_size + 1} with {len(batch_uids)} miners")
+        bt.logging.info(f"Processing batch {i//batch_size + 1}/{total_batches} with {len(batch_uids)} miners")
+        bt.logging.info(f"Progress: {i//batch_size + 1}/{total_batches} batches ({(i//batch_size + 1)*100/total_batches:.1f}%)")
         
         # Query this batch with timing
         batch_responses = await timed_dendrite(
@@ -420,11 +438,17 @@ async def forward(self):
         bt.logging.debug(f"Miner {miner_uids[i]} response status: {status}")
     
     # Add minimum processing time to avoid overwhelming the network
-    min_time = 60  # 60 seconds minimum processing time
+    min_time = 30  # 10 seconds minimum processing time
     if end_time - start_time < min_time:
         sleep_time = min_time - (end_time - start_time)
         bt.logging.info(f"Completed too quickly, sleeping for {sleep_time:.2f} seconds")
         time.sleep(sleep_time)
+    
+    # After processing all batches, identify slow miners
+    slow_miners = [uid for uid, time in response_times.items() if time > adaptive_timeout * 0.8]
+    if slow_miners:
+        bt.logging.warning(f"Slow miners detected: {slow_miners}")
+        # Could be used for future timeout adjustments or scoring
     
     # Return success
     return True
