@@ -55,7 +55,7 @@ SIMILARITY_LEVELS = ["Light", "Medium", "Far"]
 DEFAULT_VARIATION_COUNT = 10
 DEFAULT_ORTHOGRAPHIC_SIMILARITY = "Medium"
 DEFAULT_PHONETIC_SIMILARITY = "Medium"
-DEFAULT_LLM_MODEL = "tinyllama:latest"
+DEFAULT_LLM_MODEL = "llama3.1:latest"
 
 async def dendrite_with_retries(dendrite: bt.dendrite, axons: list, synapse, deserialize: bool, timeout: float, cnt_attempts=3):
     """
@@ -501,7 +501,7 @@ async def forward(self):
             synapse=request_synapse,
             deserialize=True,
             timeout=adaptive_timeout,
-            cnt_attempts=3  # Try up to 3 times
+            cnt_attempts=5  # Try up to 5 times
         )
         
         # Log response information
