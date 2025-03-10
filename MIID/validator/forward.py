@@ -378,8 +378,12 @@ async def forward(self):
             {"Light": 1.0},
             # Only Medium similarity
             {"Medium": 1.0},
-            # Only Far similarity
-            {"Far": 1.0}
+            # 50% Light, 50% Medium (no Far)
+            {"Light": 0.5, "Medium": 0.5},
+            # 70% Light, 30% Medium (no Far)
+            {"Light": 0.7, "Medium": 0.3},
+            # 30% Light, 70% Medium (no Far)
+            {"Light": 0.3, "Medium": 0.7},
         ])
         
         # 3. Set up orthographic similarity distribution
@@ -396,8 +400,12 @@ async def forward(self):
             {"Light": 1.0},
             # Only Medium similarity
             {"Medium": 1.0},
-            # Only Far similarity
-            {"Far": 1.0}
+            # 50% Light, 50% Medium (no Far)
+            {"Light": 0.5, "Medium": 0.5},
+            # 70% Light, 30% Medium (no Far)
+            {"Light": 0.7, "Medium": 0.3},
+            # 30% Light, 70% Medium (no Far)
+            {"Light": 0.3, "Medium": 0.7},
         ])
         
         # Generate a complex query using the LLM with specific parameters
