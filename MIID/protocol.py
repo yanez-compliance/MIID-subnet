@@ -42,9 +42,9 @@ from typing import List, Dict, Optional
 #   assert dummy_output == 2
 
 
-class NameVariationRequest(bt.Synapse): ### we need to change this to generic object/ class
+class IdentityRequest(bt.Synapse):
     """
-    Protocol for requesting name variations from miners.
+    Protocol for requesting identity variations from miners.
     
     Attributes:
     - names: List of seed names to generate variations for

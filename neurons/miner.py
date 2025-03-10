@@ -58,8 +58,7 @@ from typing import List, Dict, Tuple, Any, Optional
 from tqdm import tqdm
 
 # Bittensor Miner Template:
-import MIID
-from MIID.protocol import NameVariationRequest
+from MIID.protocol import IdentityRequest
 
 # import base miner class which takes care of most of the boilerplate
 from MIID.base.miner import BaseMinerNeuron
@@ -134,7 +133,7 @@ class Miner(BaseMinerNeuron):
         os.makedirs(self.output_path, exist_ok=True)
         bt.logging.info(f"Mining results will be saved to: {self.output_path}")
 
-    async def forward(self, synapse: NameVariationRequest) -> NameVariationRequest:
+    async def forward(self, synapse: IdentityRequest) -> IdentityRequest:
         """
         Process a name variation request by generating variations for each name.
         
@@ -148,7 +147,7 @@ class Miner(BaseMinerNeuron):
         dedicated directory for that run.
         
         Args:
-            synapse: The NameVariationRequest containing names and query template
+            synapse: The IdentityRequest containing names and query template
             
         Returns:
             The synapse with variations field populated with name variations
@@ -521,7 +520,7 @@ class Miner(BaseMinerNeuron):
                     return seed, "r3", Cleaned_name_list
 
     async def blacklist(
-        self, synapse: NameVariationRequest
+        self, synapse: IdentityRequest
     ) -> typing.Tuple[bool, str]:
         """
         Determines whether an incoming request should be blacklisted and thus ignored.
@@ -533,7 +532,7 @@ class Miner(BaseMinerNeuron):
         3. Whether the hotkey has validator permissions (if required)
         
         Args:
-            synapse: A NameVariationRequest object constructed from the incoming request.
+            synapse: A IdentityRequest object constructed from the incoming request.
 
         Returns:
             Tuple[bool, str]: A tuple containing:
@@ -576,7 +575,7 @@ class Miner(BaseMinerNeuron):
         )
         return False, "Hotkey recognized!"
 
-    async def priority(self, synapse: NameVariationRequest) -> float:
+    async def priority(self, synapse: IdentityRequest) -> float:
         """
         The priority function determines the order in which requests are handled.
         
@@ -585,7 +584,7 @@ class Miner(BaseMinerNeuron):
         ensures that validators with more stake get faster responses.
         
         Args:
-            synapse: The NameVariationRequest object that contains metadata about the incoming request.
+            synapse: The IdentityRequest object that contains metadata about the incoming request.
 
         Returns:
             float: A priority score derived from the stake of the calling entity.
