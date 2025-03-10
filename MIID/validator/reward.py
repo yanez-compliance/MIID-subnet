@@ -21,6 +21,10 @@ from typing import List, Dict
 import bittensor as bt
 import Levenshtein
 import jellyfish
+import os
+import csv
+import time
+import traceback
 
 
 def reward(query: int, response: int) -> float:
@@ -57,6 +61,54 @@ def reward(query: int, response: int) -> float:
 #     return np.array([reward(query, response) for response in responses])
 
 
+def calculate_phonetic_similarity(original_name: str, variation: str) -> float:
+    """
+    Calculate phonetic similarity between two strings using Soundex.
+    
+    Args:
+        original_name: The original name
+        variation: The variation to compare against
+        
+    Returns:
+        Phonetic similarity score between 0 and 1
+    """
+    try:
+        soundex_original = jellyfish.soundex(original_name)
+        soundex_variation = jellyfish.soundex(variation)
+        
+        # Calculate phonetic similarity score (0-1)
+        if soundex_original == soundex_variation:
+            return 1.0
+        else:
+            # Use Levenshtein distance as a fallback
+            return 1.0 - (Levenshtein.distance(soundex_original, soundex_variation) / 
+                         max(len(soundex_original), len(soundex_variation)))
+    except Exception as e:
+        bt.logging.warning(f"Error calculating phonetic score: {str(e)}")
+        return 0.0
+
+def calculate_orthographic_similarity(original_name: str, variation: str) -> float:
+    """
+    Calculate orthographic similarity between two strings using Levenshtein distance.
+    
+    Args:
+        original_name: The original name
+        variation: The variation to compare against
+        
+    Returns:
+        Orthographic similarity score between 0 and 1
+    """
+    try:
+        # Use Levenshtein distance to compare
+        distance = Levenshtein.distance(original_name, variation)
+        max_len = max(len(original_name), len(variation))
+        
+        # Calculate orthographic similarity score (0-1)
+        return 1.0 - (distance / max_len)
+    except Exception as e:
+        bt.logging.warning(f"Error calculating orthographic score: {str(e)}")
+        return 0.0
+
 def calculate_variation_quality(
     original_name: str, 
     variations: List[str],
@@ -66,26 +118,26 @@ def calculate_variation_quality(
     orthographic_thresholds: Dict[str, float] = None
 ) -> float:
     """
-    Calculate the quality of name variations based on specified similarity requirements.
+    Calculate the quality of name variations based on phonetic and orthographic similarity.
     
     Args:
-        original_name: The original name
-        variations: List of name variations
+        original_name: The original name to compare against
+        variations: List of name variations to evaluate
         phonetic_similarity: Dictionary mapping similarity levels to percentages
-        phonetic_thresholds: Dictionary mapping similarity levels to threshold values
+        phonetic_thresholds: Thresholds for different phonetic similarity levels
         orthographic_similarity: Dictionary mapping similarity levels to percentages
-        orthographic_thresholds: Dictionary mapping similarity levels to threshold values
+        orthographic_thresholds: Thresholds for different orthographic similarity levels
         
     Returns:
-        Float between 0 and 1 representing the quality of variations
+        Quality score between 0 and 1
     """
-    if not variations:
-        return 0.0
-    
-    # Set default values if not provided
+    # Default similarity preferences if none provided
     if phonetic_similarity is None:
         phonetic_similarity = {"Medium": 1.0}
+    if orthographic_similarity is None:
+        orthographic_similarity = {"Medium": 1.0}
     
+    # Default thresholds if none provided
     if phonetic_thresholds is None:
         phonetic_thresholds = {
             "Light": 0.8,
@@ -93,51 +145,18 @@ def calculate_variation_quality(
             "Far": 0.4
         }
     
-    if orthographic_similarity is None:
-        orthographic_similarity = {"Medium": 1.0}
-    
     if orthographic_thresholds is None:
         orthographic_thresholds = {
-            "Light": 0.8,
-            "Medium": 0.6,
-            "Far": 0.4
+            "Light": 0.7,
+            "Medium": 0.5,
+            "Far": 0.3
         }
     
     # Calculate phonetic similarity scores for each variation
-    phonetic_scores = []
-    for variation in variations:
-        # Use Soundex or other phonetic algorithm to compare
-        try:
-            soundex_original = jellyfish.soundex(original_name)
-            soundex_variation = jellyfish.soundex(variation)
-            
-            # Calculate phonetic similarity score (0-1)
-            if soundex_original == soundex_variation:
-                phonetic_score = 1.0
-            else:
-                # Use Levenshtein distance as a fallback
-                phonetic_score = 1.0 - (Levenshtein.distance(soundex_original, soundex_variation) / 
-                                      max(len(soundex_original), len(soundex_variation)))
-            
-            phonetic_scores.append(phonetic_score)
-        except Exception as e:
-            bt.logging.warning(f"Error calculating phonetic score: {str(e)}")
-            phonetic_scores.append(0.0)
+    phonetic_scores = [calculate_phonetic_similarity(original_name, variation) for variation in variations]
     
     # Calculate orthographic similarity scores for each variation
-    orthographic_scores = []
-    for variation in variations:
-        try:
-            # Use Levenshtein distance to compare
-            distance = Levenshtein.distance(original_name, variation)
-            max_len = max(len(original_name), len(variation))
-            
-            # Calculate orthographic similarity score (0-1)
-            orthographic_score = 1.0 - (distance / max_len)
-            orthographic_scores.append(orthographic_score)
-        except Exception as e:
-            bt.logging.warning(f"Error calculating orthographic score: {str(e)}")
-            orthographic_scores.append(0.0)
+    orthographic_scores = [calculate_orthographic_similarity(original_name, variation) for variation in variations]
     
     # Evaluate how well the variations match the requested similarity distributions
     phonetic_quality = 0.0
@@ -189,87 +208,164 @@ def get_name_variation_rewards(
     """
     Calculate rewards for name variation responses.
     
-    This function evaluates the quality of name variations provided by miners,
-    considering:
-    1. Whether the miner responded at all
-    2. Whether the miner provided variations for all requested names
-    3. The quality of the variations based on the requested parameters
-    
     Args:
-    - seed_names: List of original names
-    - responses: List of dictionaries mapping names to variations
-    - uids: List of miner UIDs
-    - variation_count: Number of variations requested
-    - phonetic_similarity: Dictionary mapping similarity levels to percentages
-                          (e.g., {"Light": 0.3, "Medium": 0.5, "Far": 0.2})
-    - orthographic_similarity: Dictionary mapping similarity levels to percentages
-                              (e.g., {"Light": 0.4, "Medium": 0.4, "Far": 0.2})
-    
+        seed_names: Original names to generate variations for
+        responses: List of response objects from miners
+        uids: List of UIDs corresponding to responses
+        variation_count: Expected number of variations per name
+        phonetic_similarity: Dictionary mapping similarity levels to percentages
+        orthographic_similarity: Dictionary mapping similarity levels to percentages
+        
     Returns:
-    - np.ndarray: Array of rewards for each miner
+        Array of rewards for each miner
     """
-    rewards = np.zeros(len(responses))
-    
-    # Set default values if not provided
+    # Default similarity preferences if none provided
     if phonetic_similarity is None:
         phonetic_similarity = {"Medium": 1.0}
-    
     if orthographic_similarity is None:
         orthographic_similarity = {"Medium": 1.0}
-    
-    # Convert similarity levels to numerical thresholds
+        
+    # Thresholds for different similarity levels
     phonetic_thresholds = {
-        "Light": 0.8,  # High similarity threshold
-        "Medium": 0.6,
-        "Far": 0.4     # Low similarity threshold
+        "Light": 0.8,  # High similarity
+        "Medium": 0.6, # Moderate similarity
+        "Far": 0.3     # Low similarity
     }
     
     orthographic_thresholds = {
-        "Light": 0.8,  # High similarity threshold
-        "Medium": 0.6,
-        "Far": 0.4     # Low similarity threshold
+        "Light": 0.7,  # High similarity
+        "Medium": 0.5, # Moderate similarity
+        "Far": 0.2     # Low similarity
     }
     
-    # Log the evaluation parameters
-    phonetic_spec = ", ".join([f"{int(pct*100)}% {level}" for level, pct in phonetic_similarity.items()])
-    orthographic_spec = ", ".join([f"{int(pct*100)}% {level}" for level, pct in orthographic_similarity.items()])
+    # Save variations to CSV
+    try:
+        save_variations_to_csv(
+            seed_names,
+            responses,
+            uids,
+            phonetic_thresholds,
+            orthographic_thresholds
+        )
+    except Exception as e:
+        bt.logging.error(f"Error saving variations to CSV: {str(e)}")
+        traceback.print_exc()
     
-    bt.logging.info(f"Evaluating responses with parameters: variation_count={variation_count}, " +
-                  f"phonetic similarity: {phonetic_spec}, " +
-                  f"orthographic similarity: {orthographic_spec}")
+    rewards = np.zeros(len(responses))
     
+    # Process each miner's response
     for i, (response, uid) in enumerate(zip(responses, uids)):
-        if response is None:
-            bt.logging.warning(f"Miner {uid} returned None response")
+        if not hasattr(response, 'variations') or not response.variations:
+            bt.logging.warning(f"Miner {uid} returned invalid or empty response")
+            rewards[i] = 0.0
             continue
             
-        # Calculate reward for this miner
-        miner_reward = 0.0
+        variations = response.variations
+        quality_scores = []
         
+        # Process each seed name
         for name in seed_names:
-            if name not in response:
-                bt.logging.warning(f"Miner {uid} missing variations for name: {name}")
+            if name not in variations or not variations[name]:
+                bt.logging.warning(f"Miner {uid} did not provide variations for '{name}'")
                 continue
                 
-            variations = response[name]
+            # Get variations for this name
+            name_variations = variations[name]
             
-            # Check if the miner provided the requested number of variations
-            variation_ratio = min(1.0, len(variations) / variation_count)
-            
-            # Calculate quality of variations based on the requested parameters
-            quality = calculate_variation_quality(
-                name, 
-                variations, 
-                phonetic_similarity=phonetic_similarity,
-                phonetic_thresholds=phonetic_thresholds,
-                orthographic_similarity=orthographic_similarity,
-                orthographic_thresholds=orthographic_thresholds
-            )
-            
-            # Combine the metrics
-            name_reward = variation_ratio * quality
-            miner_reward += name_reward / len(seed_names)
+            # Calculate scores for this name's variations
+            try:
+                # Calculate quality score for all variations of this name
+                quality = calculate_variation_quality(
+                    name, 
+                    name_variations,
+                    phonetic_similarity,
+                    phonetic_thresholds,
+                    orthographic_similarity,
+                    orthographic_thresholds
+                )
+                quality_scores.append(quality)
+            except Exception as e:
+                bt.logging.error(f"Error calculating quality for miner {uid}, name '{name}': {str(e)}")
+                traceback.print_exc()
         
-        rewards[i] = miner_reward
-    
+        # Calculate average quality across all names
+        if quality_scores:
+            avg_quality = sum(quality_scores) / len(quality_scores)
+            rewards[i] = avg_quality
+        else:
+            rewards[i] = 0.0
+                
     return rewards
+
+
+def save_variations_to_csv(
+    seed_names: List[str],
+    responses: List,
+    uids: List[int],
+    phonetic_thresholds: Dict[str, float],
+    orthographic_thresholds: Dict[str, float]
+):
+    """
+    Save name variations from miners to a CSV file.
+    
+    Args:
+        seed_names: Original names that variations were generated for
+        responses: List of response objects from miners
+        uids: List of UIDs corresponding to responses
+        phonetic_thresholds: Thresholds for different phonetic similarity levels
+        orthographic_thresholds: Thresholds for different orthographic similarity levels
+    """
+    # Create Database directory if it doesn't exist
+    database_dir = "/Database/"
+    os.makedirs(database_dir, exist_ok=True)
+    
+    # Create or append to the CSV file
+    timestamp = int(time.time())
+    csv_filename = os.path.join(database_dir, f"name_variations_log.csv")
+    
+    # Check if file exists to decide whether to write headers
+    file_exists = os.path.isfile(csv_filename)
+    
+    # Prepare CSV file for logging variations
+    with open(csv_filename, 'a', newline='', encoding='utf-8') as csvfile:
+        fieldnames = ['timestamp', 'seed_name', 'variation', 'miner_uid', 'phonetic_score', 'orthographic_score']
+        writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
+        
+        # Write header only if the file is new
+        if not file_exists:
+            writer.writeheader()
+        
+        # Process each miner's response
+        for response, uid in zip(responses, uids):
+            if not hasattr(response, 'variations') or not response.variations:
+                bt.logging.warning(f"Miner {uid} returned invalid or empty response")
+                continue
+                
+            variations = response.variations
+            
+            # Process each seed name
+            for name in seed_names:
+                if name not in variations or not variations[name]:
+                    bt.logging.warning(f"Miner {uid} did not provide variations for '{name}'")
+                    continue
+                    
+                # Get variations for this name
+                name_variations = variations[name]
+                
+                # Log individual scores for each variation
+                for variation in name_variations:
+                    # Calculate scores using the same functions as in reward calculation
+                    phonetic_score = calculate_phonetic_similarity(name, variation)
+                    orthographic_score = calculate_orthographic_similarity(name, variation)
+                    
+                    # Log to CSV
+                    writer.writerow({
+                        'timestamp': timestamp,
+                        'seed_name': name,
+                        'variation': variation,
+                        'miner_uid': uid,
+                        'phonetic_score': phonetic_score,
+                        'orthographic_score': orthographic_score
+                    })
+    
+    bt.logging.info(f"Saved name variations data to {csv_filename}")
