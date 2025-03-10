@@ -347,13 +347,6 @@ class Miner(BaseMinerNeuron):
         with open(json_path, 'w', encoding='utf-8') as f:
             json.dump(json_data, f, indent=4)
         bt.logging.info(f"Saved variations to: {json_path}")
-        # Also save a copy with the model name for reference
-        model_json_path = os.path.join(self.output_path, f"{self.model_name.replace(':', '_')}_run_{run_id}.json")
-        with open(model_json_path, 'w', encoding='utf-8') as f:
-            json.dump(json_data, f, indent=4)
-        bt.logging.info(f"Saved model-specific variations to: {model_json_path}")
-        bt.logging.info(f"Saved processed variations to: {json_path}")
-        bt.logging.info(f"Saved model-specific variations to: {model_json_path}")
         bt.logging.info(f"DataFrame shape: {result_df.shape} with {max_variations} variation columns")
     
     def Clean_extra(self, payload: str, comma: bool, line: bool, space: bool) -> str:
