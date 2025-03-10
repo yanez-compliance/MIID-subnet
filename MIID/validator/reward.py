@@ -316,7 +316,7 @@ def save_variations_to_csv(
         orthographic_thresholds: Thresholds for different orthographic similarity levels
     """
     # Create Database directory if it doesn't exist
-    database_dir = "/Database/"
+    database_dir = "Database/"
     os.makedirs(database_dir, exist_ok=True)
     
     # Create or append to the CSV file
