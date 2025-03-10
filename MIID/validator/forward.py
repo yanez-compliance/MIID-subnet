@@ -214,7 +214,32 @@ async def generate_complex_query(
     
     Format your response as a natural language query that a human would write, but make sure to include all these specific requirements.
     """
+
+    #### we have to add a check to see if the prompt is conveying the request variations and the similarity levels/specifications
+    # Verify that the generated prompt includes all required specifications
+    verification_points = [
+        (f"{variation_count} variation", "variation count"),
+        (phonetic_spec, "phonetic similarity levels"),
+        (orthographic_spec, "orthographic similarity levels")
+    ]
     
+    # Check if prompt contains all required elements
+    prompt_verified = True
+    for text, requirement in verification_points:
+        if text.lower() not in prompt.lower():
+            bt.logging.warning(f"Generated prompt missing {requirement}")
+            prompt_verified = False
+            
+    if not prompt_verified:
+        # If verification fails, use a more explicit prompt template
+        prompt = f"""Generate a name variation query that MUST include these EXACT requirements:
+        - Request EXACTLY {variation_count} variations for each name
+        - Specify phonetic similarity distribution as: {phonetic_spec}
+        - Specify orthographic similarity distribution as: {orthographic_spec}
+        
+        Format as a natural language query that explicitly states all requirements.
+        """
+
     try:
         # Generate the query using Ollama
         response = ollama.generate(model=model_name, prompt=prompt)
@@ -306,7 +331,7 @@ async def forward(self):
     # Convert to a list if you need to add more UIDs
     miner_uids = miner_uids.tolist()  # Convert NumPy array to Python list
     
-    # Add miner_uid 1 to the list for testing purposes if it exists
+    # # Add miner_uid 1 to the list for testing purposes if it exists --->(commented out)
     if 1 not in miner_uids and 1 in self.metagraph.uids:
         miner_uids.append(1)
     
@@ -315,7 +340,7 @@ async def forward(self):
     # Initialize Ollama with the same approach as in miner.py
     self.model_name = getattr(self.config, 'model_name', None)
     if self.model_name is None:
-        self.model_name = 'tinyllama:latest'
+        self.model_name = DEFAULT_LLM_MODEL
         bt.logging.info(f"No model specified in config, using default model: {self.model_name}")
     
     bt.logging.info(f"Using LLM model: {self.model_name}")
@@ -382,6 +407,11 @@ async def forward(self):
             phonetic_similarity=phonetic_config,
             orthographic_similarity=orthographic_config
         )
+        bt.logging.info(f"Generated query template: {query_template}")
+        bt.logging.debug(f"Variation count: {variation_count}")
+        bt.logging.debug(f"Phonetic similarity: {phonetic_config}")
+        bt.logging.debug(f"Orthographic similarity: {orthographic_config}")
+        bt.logging.debug(f"Query labels: {query_labels}")
         
     except Exception as e:
         bt.logging.error(f"Error with Ollama: {str(e)}")
