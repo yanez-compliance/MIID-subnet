@@ -40,6 +40,9 @@ import os
 import random
 from faker import Faker
 import asyncio
+import numpy as np
+from typing import List, Dict, Any, Tuple
+import ollama
 
 from MIID.protocol import NameVariationRequest
 from MIID.validator.reward import get_name_variation_rewards
@@ -47,9 +50,16 @@ from MIID.utils.uids import get_random_uids
 
 EPOCH_MIN_TIME = 200 # seconds
 
+# Constants for query generation
+SIMILARITY_LEVELS = ["Light", "Medium", "Far"]
+DEFAULT_VARIATION_COUNT = 10
+DEFAULT_ORTHOGRAPHIC_SIMILARITY = "Medium"
+DEFAULT_PHONETIC_SIMILARITY = "Medium"
+DEFAULT_LLM_MODEL = "tinyllama:latest"
+
 async def dendrite_with_retries(dendrite: bt.dendrite, axons: list, synapse, deserialize: bool, timeout: float, cnt_attempts=3):
     """
-    Send requests to miners with automatic retry logic and progressive timeouts.
+    Send requests to miners with automatic retry logic for failed connections.
     
     Args:
         dendrite: The dendrite object to use for communication
@@ -67,7 +77,6 @@ async def dendrite_with_retries(dendrite: bt.dendrite, axons: list, synapse, des
     axons_copy = axons.copy()
     
     # Create a default empty response with required fields
-    # Extract the required fields from the original synapse
     synapse_fields = {}
     if hasattr(synapse, 'names'):
         synapse_fields['names'] = synapse.names or []
@@ -99,16 +108,12 @@ async def dendrite_with_retries(dendrite: bt.dendrite, axons: list, synapse, des
             return synapse
     
     for attempt in range(cnt_attempts):
-        # Increase timeout with each retry
-        current_timeout = timeout * (1 + attempt * 0.5)  # 1x, 1.5x, 2x original timeout
-        bt.logging.info(f"Attempt {attempt+1}/{cnt_attempts} with timeout {current_timeout:.1f}s")
-        
         try:
             responses = await dendrite(
                 axons=axons_copy,
                 synapse=synapse,
                 deserialize=deserialize,
-                timeout=current_timeout
+                timeout=timeout
             )
             
             new_idx = []
@@ -166,40 +171,235 @@ async def dendrite_with_retries(dendrite: bt.dendrite, axons: list, synapse, des
             
     return res
 
+async def generate_complex_query(
+    model_name: str,
+    variation_count: int = 10,
+    phonetic_similarity: Dict[str, float] = None,
+    orthographic_similarity: Dict[str, float] = None
+) -> Tuple[str, Dict[str, Any]]:
+    """
+    Generate a complex query using an LLM with specific parameters.
+    
+    Args:
+        model_name: The name of the LLM model to use
+        variation_count: Number of variations to request
+        phonetic_similarity: Dictionary mapping similarity levels to percentages
+                            (e.g., {"Light": 0.3, "Medium": 0.5, "Far": 0.2})
+        orthographic_similarity: Dictionary mapping similarity levels to percentages
+                                (e.g., {"Light": 0.4, "Medium": 0.4, "Far": 0.2})
+    
+    Returns:
+        Tuple containing (query_template, labels_dict)
+    """
+    # Set default values if not provided
+    if phonetic_similarity is None:
+        phonetic_similarity = {"Medium": 1.0}
+    
+    if orthographic_similarity is None:
+        orthographic_similarity = {"Medium": 1.0}
+    
+    # Format the similarity specifications for the prompt
+    phonetic_spec = ", ".join([f"{int(pct*100)}% {level}" for level, pct in phonetic_similarity.items()])
+    orthographic_spec = ", ".join([f"{int(pct*100)}% {level}" for level, pct in orthographic_similarity.items()])
+    
+    bt.logging.info(f"Generating query with: {variation_count} variations, " +
+                  f"phonetic similarity: {phonetic_spec}, " +
+                  f"orthographic similarity: {orthographic_spec}")
+    
+    # Define the prompt with specific parameters
+    prompt = f"""Generate a complex name variation query for a name variation system with these exact specifications:
+    1. Request exactly {variation_count} variations for each name
+    2. For phonetic similarity, require: {phonetic_spec}
+    3. For orthographic similarity, require: {orthographic_spec}
+    
+    Format your response as a natural language query that a human would write, but make sure to include all these specific requirements.
+    """
+    
+    try:
+        # Generate the query using Ollama
+        response = ollama.generate(model=model_name, prompt=prompt)
+        query_template = response['response'].strip()
+        bt.logging.info(f"Generated query template: {query_template}")
+        
+        # Create the labels dictionary directly from the input parameters
+        labels = {
+            "variation_count": variation_count,
+            "phonetic_similarity": phonetic_similarity,
+            "orthographic_similarity": orthographic_similarity
+        }
+        
+        return query_template, labels
+        
+    except Exception as e:
+        bt.logging.error(f"Error generating complex query: {str(e)}")
+        # Fallback to a simple query template and default labels
+        simple_template = f"Give me {variation_count} comma separated alternative spellings of the name {{name}}. Include a mix of phonetically similar and orthographically similar variations. Provide only the names."
+        default_labels = {
+            "variation_count": variation_count,
+            "phonetic_similarity": phonetic_similarity,
+            "orthographic_similarity": orthographic_similarity
+        }
+        return simple_template, default_labels
+
+async def timed_dendrite(dendrite, axons, synapse, deserialize, timeout, uid_map):
+    """
+    Track response times for dendrite calls.
+    
+    Args:
+        dendrite: The dendrite object
+        axons: List of axons to query
+        synapse: The synapse object
+        deserialize: Whether to deserialize responses
+        timeout: Timeout in seconds
+        uid_map: Mapping from index to UID
+        
+    Returns:
+        List of responses
+    """
+    response_times = {}
+    start_times = {i: time.time() for i in range(len(axons))}
+    
+    try:
+        responses = await dendrite(
+            axons=axons, 
+            synapse=synapse, 
+            deserialize=deserialize, 
+            timeout=timeout
+        )
+        end_time = time.time()
+        
+        for i, response in enumerate(responses):
+            uid = uid_map[i]
+            response_time = end_time - start_times[i]
+            response_times[uid] = response_time
+            bt.logging.debug(f"Miner {uid} responded in {response_time:.2f}s")
+        
+        # Log response times
+        bt.logging.info(f"Response times: " + 
+                      ", ".join([f"UID {uid}: {response_times[uid]:.2f}s" for uid in uid_map.values()]))
+        
+        return responses
+    except Exception as e:
+        bt.logging.error(f"Error in timed_dendrite: {str(e)}")
+        # Create default responses for all axons
+        return [create_default_response() for _ in range(len(axons))]
+
 async def forward(self):
     """
     The forward function is called by the validator every time step.
-    
+
     This function is responsible for:
     1. Selecting a random set of miners to query
-    2. Generating a list of random names to request variations for
-    3. Sending the request to the selected miners with retry logic
-    4. Evaluating the quality of the variations returned by each miner
-    5. Updating the scores of the miners based on their performance
-    6. Saving the results for analysis
+    2. Generating a complex query using an LLM
+    3. Generating a list of random names to request variations for
+    4. Sending the request to the selected miners with retry logic
+    5. Evaluating the quality of the variations returned by each miner
+    6. Updating the scores of the miners based on their performance
+    7. Saving the results for analysis
     
     Returns:
         The result of the forward function from the MIID.validator module
     """
-    
-    available_axon_size = len(self.metagraph.axons) - 1  # Except our own
-    miner_selection_size = min(available_axon_size, self.config.neuron.sample_size)
-    miner_uids = get_random_uids(self, k=miner_selection_size)
-    axons = [self.metagraph.axons[uid] for uid in miner_uids]
+    # Get random UIDs to query
+    miner_uids = get_random_uids(self, k=self.config.neuron.sample_size)
 
-    bt.logging.info(f"@@@@@@@@@@@@@@@@@@@@ Selected {len(axons)} axons to query: {axons}")
-    bt.logging.info(f"@@@@@@@@@@@@@@@@@@@ miner selection size: {miner_selection_size}")
-    # # Convert to a list if you need to add more UIDs
+    # Convert to a list if you need to add more UIDs
     miner_uids = miner_uids.tolist()  # Convert NumPy array to Python list
     
-    
-    bt.logging.info(f"@@@@--------@@@@@@@@@@@@@@@@@@@ Selected {len(miner_uids)} miners to query: {miner_uids}")
-
-    # # Add miner_uid 1 to the list for testing purposes if it exists
+    # Add miner_uid 1 to the list for testing purposes if it exists
     if 1 not in miner_uids and 1 in self.metagraph.uids:
-         miner_uids.append(1)
+        miner_uids.append(1)
     
-    bt.logging.info(f"@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ Selected {len(miner_uids)} miners to query: {miner_uids}")
+    bt.logging.info(f"Selected {len(miner_uids)} miners to query: {miner_uids}")
+    
+    # Initialize Ollama with the same approach as in miner.py
+    self.model_name = getattr(self.config, 'model_name', None)
+    if self.model_name is None:
+        self.model_name = 'tinyllama:latest'
+        bt.logging.info(f"No model specified in config, using default model: {self.model_name}")
+    
+    bt.logging.info(f"Using LLM model: {self.model_name}")
+    
+    # Check if Ollama is available
+    try:
+        # Check if model exists locally first
+        models = ollama.list().get('models', [])
+        model_exists = any(model.get('name') == self.model_name for model in models)
+        
+        if model_exists:
+            bt.logging.info(f"Model {self.model_name} already pulled")
+        else:
+            # Model not found locally, pull it
+            bt.logging.info(f"Pulling model {self.model_name}...")
+            ollama.pull(self.model_name)
+            
+        # Set up query parameters - randomly select different configurations
+        # for each validation round to test miners on various tasks
+        
+        # 1. Determine variation count (between 5-15)
+        variation_count = random.randint(5, 15)
+        
+        # 2. Set up phonetic similarity distribution
+        phonetic_config = random.choice([
+            # Balanced distribution
+            {"Light": 0.33, "Medium": 0.34, "Far": 0.33},
+            # Focus on Light similarity
+            {"Light": 0.6, "Medium": 0.3, "Far": 0.1},
+            # Focus on Medium similarity
+            {"Light": 0.2, "Medium": 0.6, "Far": 0.2},
+            # Focus on Far similarity
+            {"Light": 0.1, "Medium": 0.3, "Far": 0.6},
+            # Only Light similarity
+            {"Light": 1.0},
+            # Only Medium similarity
+            {"Medium": 1.0},
+            # Only Far similarity
+            {"Far": 1.0}
+        ])
+        
+        # 3. Set up orthographic similarity distribution
+        orthographic_config = random.choice([
+            # Balanced distribution
+            {"Light": 0.33, "Medium": 0.34, "Far": 0.33},
+            # Focus on Light similarity
+            {"Light": 0.6, "Medium": 0.3, "Far": 0.1},
+            # Focus on Medium similarity
+            {"Light": 0.2, "Medium": 0.6, "Far": 0.2},
+            # Focus on Far similarity
+            {"Light": 0.1, "Medium": 0.3, "Far": 0.6},
+            # Only Light similarity
+            {"Light": 1.0},
+            # Only Medium similarity
+            {"Medium": 1.0},
+            # Only Far similarity
+            {"Far": 1.0}
+        ])
+        
+        # Generate a complex query using the LLM with specific parameters
+        query_template, query_labels = await generate_complex_query(
+            self.model_name,
+            variation_count=variation_count,
+            phonetic_similarity=phonetic_config,
+            orthographic_similarity=orthographic_config
+        )
+        
+    except Exception as e:
+        bt.logging.error(f"Error with Ollama: {str(e)}")
+        bt.logging.error("Make sure Ollama is installed and running on this machine")
+        bt.logging.error("Install Ollama: curl -fsSL https://ollama.com/install.sh | sh")
+        bt.logging.error("Start Ollama: ollama serve")
+        
+        # Fallback to a simple query template and default labels
+        variation_count = 10
+        phonetic_config = {"Medium": 1.0}
+        orthographic_config = {"Medium": 1.0}
+        
+        query_template = f"Give me {variation_count} comma separated alternative spellings of the name {{name}}. Include a mix of phonetically similar and orthographically similar variations. Provide only the names."
+        query_labels = {
+            "variation_count": variation_count,
+            "phonetic_similarity": phonetic_config,
+            "orthographic_similarity": orthographic_config
+        }
     
     # Generate random names using Faker
     fake = Faker()
@@ -234,8 +434,11 @@ async def forward(self):
     
     bt.logging.info(f"Generated {len(seed_names)} random names: {seed_names}")
     
-    # Query template
-    query_template = "Give me 10 comma separated alternative spellings of the name {name}. 5 of them should sound similar to the original name and 5 should be orthographically similar. Provide only the names."
+    # Calculate timeout based on the number of names and complexity
+    base_timeout = getattr(self.config.neuron, 'timeout', 30)
+    # Add 10 seconds per name and adjust based on variation count
+    adaptive_timeout = base_timeout + (len(seed_names) * 10) + (query_labels['variation_count'] * 2)
+    bt.logging.info(f"Using adaptive timeout of {adaptive_timeout} seconds")
     
     # Prepare the synapse for the request
     request_synapse = NameVariationRequest(
@@ -244,69 +447,16 @@ async def forward(self):
         variations={}  # Initialize with empty variations
     )
     
-    # Calculate timeout based on the number of names to process
-    base_timeout = getattr(self.config.neuron, 'timeout', 30)
-    # Add 10 seconds per name to process
-    adaptive_timeout = base_timeout + (len(seed_names) * 10)
-    bt.logging.info(f"Using adaptive timeout of {adaptive_timeout} seconds")
-    
-    # Before sending the main request, check if miners are responsive with a simple ping
-    bt.logging.info("Sending ping to check miner responsiveness")
-    ping_synapse = bt.Synapse()  # Use a simple synapse for ping
-    ping_responses = await dendrite_with_retries(
-        dendrite=self.dendrite,
-        axons=[self.metagraph.axons[uid] for uid in miner_uids],
-        synapse=ping_synapse,
-        deserialize=True,
-        timeout=10,  # Short timeout for ping
-        cnt_attempts=1
-    )
-
-    # Filter out unresponsive miners
-    responsive_uids = []
-    for i, response in enumerate(ping_responses):
-        if response is not None and hasattr(response, 'dendrite') and response.dendrite.status_code == 200:
-            responsive_uids.append(miner_uids[i])
-
-    if len(responsive_uids) < len(miner_uids):
-        bt.logging.warning(f"Only {len(responsive_uids)}/{len(miner_uids)} miners responded to ping")
-        bt.logging.debug(f"responsive_uids: {responsive_uids}")
-        # Continue with only responsive miners
-        miner_uids = responsive_uids
-    
     # Query the network with retry logic
-    bt.logging.info(f"Querying {len(miner_uids)} miners with retry logic")
+    bt.logging.info(f"Querying {len(miner_uids)} miners with complex query")
     start_time = time.time()
-    
-    # Add timing information to track how long each miner takes to respond
-    response_times = {}
-    
-    # Define the timed_dendrite function inside the forward function
-    async def timed_dendrite(dendrite, axons, synapse, deserialize, timeout, uid_map):
-        start_times = {i: time.time() for i in range(len(axons))}
-        try:
-            responses = await dendrite(axons=axons, synapse=synapse, deserialize=deserialize, timeout=timeout)
-            end_time = time.time()
-            
-            for i, response in enumerate(responses):
-                uid = uid_map[i]
-                response_time = end_time - start_times[i]
-                response_times[uid] = response_time
-                bt.logging.debug(f"Miner {uid} responded in {response_time:.2f}s")
-            
-            return responses
-        except Exception as e:
-            bt.logging.error(f"Error in timed_dendrite: {str(e)}")
-            # Create default responses for all axons in this batch
-            return [create_default_response() for _ in range(len(axons))]
     
     # Initialize all_responses to collect responses from all batches
     all_responses = []
     
-    # Process miners in batches with pauses between batches
+    # Process miners in batches to avoid overwhelming the network
     batch_size = 10  # Smaller batch size to reduce load
     total_batches = (len(miner_uids) + batch_size - 1) // batch_size
-    bt.logging.info(f"Processing miners in {total_batches} batches")
     
     for i in range(0, len(miner_uids), batch_size):
         batch_uids = miner_uids[i:i+batch_size]
@@ -314,7 +464,6 @@ async def forward(self):
         uid_map = {j: batch_uids[j] for j in range(len(batch_uids))}
         
         bt.logging.info(f"Processing batch {i//batch_size + 1}/{total_batches} with {len(batch_uids)} miners")
-        bt.logging.info(f"Progress: {i//batch_size + 1}/{total_batches} batches ({(i//batch_size + 1)*100/total_batches:.1f}%)")
         
         # Query this batch with timing
         batch_responses = await timed_dendrite(
@@ -329,11 +478,7 @@ async def forward(self):
         # Add batch responses to all_responses
         all_responses.extend(batch_responses)
         
-        # Log response times for this batch
-        bt.logging.info(f"Response times for batch {i//batch_size + 1}: " + 
-                       ", ".join([f"UID {uid}: {response_times[uid]:.2f}s" for uid in batch_uids]))
-        
-        bt.logging.info(f"Completed batch {i//batch_size + 1}, received {len(batch_responses)} responses")
+        bt.logging.info(f"Completed batch {i//batch_size + 1}/{total_batches}, received {len(batch_responses)} responses")
         
         # Sleep between batches to allow miners to recover and process new requests
         if i + batch_size < len(miner_uids):
@@ -348,42 +493,25 @@ async def forward(self):
     bt.logging.info(f"Received name variation responses for {len(all_responses)} miners")
     
     # Check for empty or invalid responses
-    valid_count = sum(1 for r in all_responses if hasattr(r, 'variations') and r.variations)
-    min_valid_responses = max(1, int(len(miner_uids) * 0.2))  # At least 20% of miners should respond
-
-    if valid_count < min_valid_responses:
-        bt.logging.warning(f"Only received {valid_count} valid responses out of {len(miner_uids)}. Retrying with longer timeout.")
-        
-        # Try again with a much longer timeout for all miners that didn't respond properly
-        retry_uids = []
-        retry_axons = []
-        for i, response in enumerate(all_responses):
-            if not (hasattr(response, 'variations') and response.variations):
-                retry_uids.append(miner_uids[i])
-                retry_axons.append(self.metagraph.axons[miner_uids[i]])
-        
-        if retry_axons:
-            bt.logging.info(f"Retrying {len(retry_axons)} miners with extended timeout")
-            retry_responses = await dendrite_with_retries(
-                dendrite=self.dendrite,
-                axons=retry_axons,
-                synapse=request_synapse,
-                deserialize=True,
-                timeout=adaptive_timeout * 2,  # Double the timeout
-                cnt_attempts=2
-            )
-            
-            # Replace the failed responses with retry responses
-            for i, uid in enumerate(retry_uids):
-                original_idx = miner_uids.index(uid)
-                all_responses[original_idx] = retry_responses[i]
-            
-            # Recount valid responses
-            valid_count = sum(1 for r in all_responses if hasattr(r, 'variations') and r.variations)
-            bt.logging.info(f"After retry: {valid_count} valid responses")
+    valid_responses = 0
+    for i, response in enumerate(all_responses):
+        if hasattr(response, 'variations') and response.variations:
+            valid_responses += 1
+        else:
+            bt.logging.warning(f"Miner {miner_uids[i]} returned invalid or empty response")
     
-    # Score the responses
-    rewards = get_name_variation_rewards(self, seed_names, all_responses, miner_uids)
+    bt.logging.info(f"Received {valid_responses} valid responses out of {len(all_responses)}")
+    
+    # Score the responses with the extracted labels
+    rewards = get_name_variation_rewards(
+        self, 
+        seed_names, 
+        all_responses, 
+        miner_uids,
+        variation_count=query_labels['variation_count'],
+        phonetic_similarity=query_labels['phonetic_similarity'],
+        orthographic_similarity=query_labels['orthographic_similarity']
+    )
     
     # Update the validator's internal scores
     self.update_scores(rewards, miner_uids)
@@ -405,6 +533,7 @@ async def forward(self):
         "timestamp": timestamp,
         "seed_names": seed_names,
         "query_template": query_template,
+        "query_labels": query_labels,
         "responses": {},
         "rewards": {}
     }
@@ -431,24 +560,12 @@ async def forward(self):
     # Set weights based on the updated scores
     self.set_weights()
     
-    # Add more detailed logging throughout the process
-    bt.logging.info(f"Request details: {len(seed_names)} names, {len(miner_uids)} miners")
-    for i, response in enumerate(all_responses):
-        status = getattr(response.dendrite, 'status_code', None) if hasattr(response, 'dendrite') else None
-        bt.logging.debug(f"Miner {miner_uids[i]} response status: {status}")
-    
     # Add minimum processing time to avoid overwhelming the network
-    min_time = 30  # 10 seconds minimum processing time
+    min_time = 60  # 60 seconds minimum processing time
     if end_time - start_time < min_time:
         sleep_time = min_time - (end_time - start_time)
         bt.logging.info(f"Completed too quickly, sleeping for {sleep_time:.2f} seconds")
         time.sleep(sleep_time)
-    
-    # After processing all batches, identify slow miners
-    slow_miners = [uid for uid, time in response_times.items() if time > adaptive_timeout * 0.8]
-    if slow_miners:
-        bt.logging.warning(f"Slow miners detected: {slow_miners}")
-        # Could be used for future timeout adjustments or scoring
     
     # Return success
     return True
