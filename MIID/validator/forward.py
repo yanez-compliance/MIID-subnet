@@ -175,28 +175,40 @@ async def generate_complex_query(
     model_name: str,
     variation_count: int = 10,
     phonetic_similarity: Dict[str, float] = None,
-    orthographic_similarity: Dict[str, float] = None
+    orthographic_similarity: Dict[str, float] = None,
+    use_default: bool = False  # Add new flag parameter
 ) -> Tuple[str, Dict[str, Any]]:
     """
-    Generate a complex query using an LLM with specific parameters.
+    Generate a complex query template for name variations using an LLM.
     
     Args:
-        model_name: The name of the LLM model to use
-        variation_count: Number of variations to request
+        model_name: Name of the LLM model to use
+        variation_count: Number of variations to request per name
         phonetic_similarity: Dictionary mapping similarity levels to percentages
-                            (e.g., {"Light": 0.3, "Medium": 0.5, "Far": 0.2})
         orthographic_similarity: Dictionary mapping similarity levels to percentages
-                                (e.g., {"Light": 0.4, "Medium": 0.4, "Far": 0.2})
-    
+        use_default: If True, skip complex query generation and use default template
+        
     Returns:
-        Tuple containing (query_template, labels_dict)
+        Tuple of (query_template, labels)
     """
-    # Set default values if not provided
+    # Default similarity preferences if none provided
     if phonetic_similarity is None:
         phonetic_similarity = {"Medium": 1.0}
-    
     if orthographic_similarity is None:
         orthographic_similarity = {"Medium": 1.0}
+    
+    # Create the labels dictionary from the parameters
+    labels = {
+        "variation_count": variation_count,
+        "phonetic_similarity": phonetic_similarity,
+        "orthographic_similarity": orthographic_similarity
+    }
+    
+    # If use_default flag is True, skip LLM and use default template
+    if use_default:
+        bt.logging.info("Using default query template (skipping complex query generation)")
+        default_template = f"Give me {variation_count} comma separated alternative spellings of the name {{name}}. Include a mix of phonetically similar and orthographically similar variations. Provide only the names."
+        return default_template, labels
     
     # Format the similarity specifications for the prompt
     phonetic_spec = ", ".join([f"{int(pct*100)}% {level}" for level, pct in phonetic_similarity.items()])
@@ -212,33 +224,8 @@ async def generate_complex_query(
     2. For phonetic similarity, require: {phonetic_spec}
     3. For orthographic similarity, require: {orthographic_spec}
     
-    Format your response as a natural language query that a human would write, but make sure to include all these specific requirements.
+    Format as a natural language query that explicitly states all requirements.
     """
-
-    #### we have to add a check to see if the prompt is conveying the request variations and the similarity levels/specifications
-    # Verify that the generated prompt includes all required specifications
-    verification_points = [
-        (f"{variation_count} variation", "variation count"),
-        (phonetic_spec, "phonetic similarity levels"),
-        (orthographic_spec, "orthographic similarity levels")
-    ]
-    
-    # Check if prompt contains all required elements
-    prompt_verified = True
-    for text, requirement in verification_points:
-        if text.lower() not in prompt.lower():
-            bt.logging.warning(f"Generated prompt missing {requirement}")
-            prompt_verified = False
-            
-    if not prompt_verified:
-        # If verification fails, use a more explicit prompt template
-        prompt = f"""Generate a name variation query that MUST include these EXACT requirements:
-        - Request EXACTLY {variation_count} variations for each name
-        - Specify phonetic similarity distribution as: {phonetic_spec}
-        - Specify orthographic similarity distribution as: {orthographic_spec}
-        
-        Format as a natural language query that explicitly states all requirements.
-        """
 
     try:
         # Generate the query using Ollama
@@ -246,25 +233,13 @@ async def generate_complex_query(
         query_template = response['response'].strip()
         bt.logging.info(f"Generated query template: {query_template}")
         
-        # Create the labels dictionary directly from the input parameters
-        labels = {
-            "variation_count": variation_count,
-            "phonetic_similarity": phonetic_similarity,
-            "orthographic_similarity": orthographic_similarity
-        }
-        
         return query_template, labels
         
     except Exception as e:
         bt.logging.error(f"Error generating complex query: {str(e)}")
         # Fallback to a simple query template and default labels
         simple_template = f"Give me {variation_count} comma separated alternative spellings of the name {{name}}. Include a mix of phonetically similar and orthographically similar variations. Provide only the names."
-        default_labels = {
-            "variation_count": variation_count,
-            "phonetic_similarity": phonetic_similarity,
-            "orthographic_similarity": orthographic_similarity
-        }
-        return simple_template, default_labels
+        return simple_template, labels
 
 async def timed_dendrite(dendrite, axons, synapse, deserialize, timeout, uid_map):
     """
@@ -408,12 +383,16 @@ async def forward(self):
             {"Light": 0.3, "Medium": 0.7},
         ])
         
-        # Generate a complex query using the LLM with specific parameters
+        # TEMPORARILY FORCE DEFAULT QUERY:
+        use_default_query = True  # Override config setting
+        
+        # Generate a complex query template
         query_template, query_labels = await generate_complex_query(
-            self.model_name,
+            model_name=self.model_name,
             variation_count=variation_count,
             phonetic_similarity=phonetic_config,
-            orthographic_similarity=orthographic_config
+            orthographic_similarity=orthographic_config,
+            use_default=use_default_query
         )
         bt.logging.info(f"@@@@@@@@@@@@@\nGenerated query template: {query_template}\n@@@@@@@@@@@@@")
         bt.logging.debug(f"Variation count: {variation_count}")
