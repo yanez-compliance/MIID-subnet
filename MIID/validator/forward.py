@@ -407,7 +407,7 @@ async def forward(self):
             phonetic_similarity=phonetic_config,
             orthographic_similarity=orthographic_config
         )
-        bt.logging.info(f"Generated query template: {query_template}")
+        bt.logging.info(f"@@@@@@@@@@@@@\nGenerated query template: {query_template}\n@@@@@@@@@@@@@")
         bt.logging.debug(f"Variation count: {variation_count}")
         bt.logging.debug(f"Phonetic similarity: {phonetic_config}")
         bt.logging.debug(f"Orthographic similarity: {orthographic_config}")
@@ -548,6 +548,8 @@ async def forward(self):
     
     # Update the validator's internal scores
     self.update_scores(rewards, miner_uids)
+    ## print the rewards and the miner uids
+    bt.logging.info(f"$$$$$$$$$$$$$$$$$$$$$$$$$$\nRewards: {rewards}\nMiner UIDs: {miner_uids}\n$$$$$$$$$$$$$$$$$$")
     
     # Save the results for analysis
     # Create a unique timestamp for this run
