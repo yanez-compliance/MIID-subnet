@@ -491,19 +491,22 @@ async def forward(self):
     for i in range(0, len(miner_uids), batch_size):
         batch_uids = miner_uids[i:i+batch_size]
         batch_axons = [self.metagraph.axons[uid] for uid in batch_uids]
-        uid_map = {j: batch_uids[j] for j in range(len(batch_uids))}
         
         bt.logging.info(f"Processing batch {i//batch_size + 1}/{total_batches} with {len(batch_uids)} miners")
         
-        # Query this batch with timing
-        batch_responses = await timed_dendrite(
+        # Use dendrite_with_retries instead of timed_dendrite to ensure we get responses
+        batch_responses = await dendrite_with_retries(
             dendrite=self.dendrite,
             axons=batch_axons,
             synapse=request_synapse,
             deserialize=True,
             timeout=adaptive_timeout,
-            uid_map=uid_map
+            cnt_attempts=3  # Try up to 3 times
         )
+        
+        # Log response information
+        valid_batch_responses = sum(1 for r in batch_responses if hasattr(r, 'variations') and r.variations)
+        bt.logging.info(f"Batch {i//batch_size + 1} results: {valid_batch_responses}/{len(batch_responses)} valid responses")
         
         # Add batch responses to all_responses
         all_responses.extend(batch_responses)
