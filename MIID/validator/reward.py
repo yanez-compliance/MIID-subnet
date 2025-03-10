@@ -238,17 +238,22 @@ def get_name_variation_rewards(
         "Far": 0.2     # Low similarity
     }
     
+    # Generate a unique run ID
+    run_id = f"run_{int(time.time())}"
+    
     # Save variations to CSV
     try:
         save_variations_to_csv(
+            self,
             seed_names,
             responses,
             uids,
             phonetic_thresholds,
-            orthographic_thresholds
+            orthographic_thresholds,
+            run_id
         )
     except Exception as e:
-        bt.logging.error(f"Error saving variations to CSV: {str(e)}")
+        bt.logging.error(f"Error calling save_variations_to_csv: {str(e)}")
         traceback.print_exc()
     
     rewards = np.zeros(len(responses))
@@ -299,73 +304,128 @@ def get_name_variation_rewards(
 
 
 def save_variations_to_csv(
+    self,
     seed_names: List[str],
     responses: List,
     uids: List[int],
     phonetic_thresholds: Dict[str, float],
-    orthographic_thresholds: Dict[str, float]
+    orthographic_thresholds: Dict[str, float],
+    run_id: str
 ):
     """
     Save name variations from miners to a CSV file.
     
     Args:
+        self: The validator object
         seed_names: Original names that variations were generated for
         responses: List of response objects from miners
         uids: List of UIDs corresponding to responses
         phonetic_thresholds: Thresholds for different phonetic similarity levels
         orthographic_thresholds: Thresholds for different orthographic similarity levels
+        run_id: Unique identifier for this validation run
     """
-    # Create Database directory if it doesn't exist
-    database_dir = "Database/"
-    os.makedirs(database_dir, exist_ok=True)
-    
-    # Create or append to the CSV file
-    timestamp = int(time.time())
-    csv_filename = os.path.join(database_dir, f"name_variations_log.csv")
-    
-    # Check if file exists to decide whether to write headers
-    file_exists = os.path.isfile(csv_filename)
-    
-    # Prepare CSV file for logging variations
-    with open(csv_filename, 'a', newline='', encoding='utf-8') as csvfile:
-        fieldnames = ['timestamp', 'seed_name', 'variation', 'miner_uid', 'phonetic_score', 'orthographic_score']
-        writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
+    try:
+        # Determine the database directory with fallbacks
+        database_dir = None
         
-        # Write header only if the file is new
-        if not file_exists:
-            writer.writeheader()
+        # Try to use logging_dir from config if it exists
+        try:
+            if hasattr(self, 'config') and hasattr(self.config, 'logging') and hasattr(self.config.logging, 'logging_dir'):
+                base_dir = self.config.logging.logging_dir
+                database_dir = os.path.join(base_dir, "Database")
+                bt.logging.info(f"Using config logging directory: {base_dir}")
+        except Exception as e:
+            bt.logging.warning(f"Could not access config.logging.logging_dir: {str(e)}")
         
-        # Process each miner's response
-        for response, uid in zip(responses, uids):
-            if not hasattr(response, 'variations') or not response.variations:
-                bt.logging.warning(f"Miner {uid} returned invalid or empty response")
-                continue
-                
-            variations = response.variations
+        # Fallback 1: Use current working directory
+        if not database_dir:
+            database_dir = os.path.join(os.getcwd(), "Database")
+            bt.logging.info(f"Using current working directory fallback: {os.getcwd()}")
+        
+        # Create directory
+        os.makedirs(database_dir, exist_ok=True)
+        
+        # Test if directory is writable
+        if not os.access(database_dir, os.W_OK):
+            # Fallback 2: Use home directory if current dir is not writable
+            home_dir = os.path.expanduser("~")
+            database_dir = os.path.join(home_dir, "Database")
+            os.makedirs(database_dir, exist_ok=True)
+            bt.logging.info(f"Using home directory fallback: {database_dir}")
             
-            # Process each seed name
-            for name in seed_names:
-                if name not in variations or not variations[name]:
-                    bt.logging.warning(f"Miner {uid} did not provide variations for '{name}'")
+            # Final check if this is writable
+            if not os.access(database_dir, os.W_OK):
+                bt.logging.error(f"Cannot write to any database directory. Aborting CSV save.")
+                return
+        
+        # Create or append to the CSV file
+        timestamp = int(time.time())
+        csv_filename = os.path.join(database_dir, f"name_variations_log.csv")
+        
+        bt.logging.info(f"Saving variations to CSV file: {csv_filename}")
+        
+        # Check if file exists to decide whether to write headers
+        file_exists = os.path.isfile(csv_filename)
+        
+        # Debug information to validate if responses have variations
+        variation_count_per_miner = {}
+        for i, (response, uid) in enumerate(zip(responses, uids)):
+            if hasattr(response, 'variations') and response.variations:
+                count = sum(len(variations) for variations in response.variations.values())
+                variation_count_per_miner[uid] = count
+            else:
+                variation_count_per_miner[uid] = 0
+        
+        bt.logging.info(f"Variation counts by miner: {variation_count_per_miner}")
+        
+        # Prepare CSV file for logging variations
+        with open(csv_filename, 'a', newline='', encoding='utf-8') as csvfile:
+            fieldnames = ['timestamp', 'run_id', 'seed_name', 'variation', 'miner_uid', 'phonetic_score', 'orthographic_score']
+            writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
+            
+            # Write header only if the file is new
+            if not file_exists:
+                writer.writeheader()
+                bt.logging.info(f"Created new CSV file with headers")
+            
+            variation_count = 0
+            # Process each miner's response
+            for response, uid in zip(responses, uids):
+                if not hasattr(response, 'variations') or not response.variations:
+                    bt.logging.warning(f"Miner {uid} returned invalid or empty response")
                     continue
                     
-                # Get variations for this name
-                name_variations = variations[name]
+                variations = response.variations
                 
-                # Log individual scores for each variation
-                for variation in name_variations:
-                    # Calculate scores using the same functions as in reward calculation
-                    phonetic_score = calculate_phonetic_similarity(name, variation)
-                    orthographic_score = calculate_orthographic_similarity(name, variation)
+                # Process each seed name
+                for name in seed_names:
+                    if name not in variations or not variations[name]:
+                        bt.logging.warning(f"Miner {uid} did not provide variations for '{name}'")
+                        continue
+                        
+                    # Get variations for this name
+                    name_variations = variations[name]
                     
-                    # Log to CSV
-                    writer.writerow({
-                        'timestamp': timestamp,
-                        'seed_name': name,
-                        'variation': variation,
-                        'miner_uid': uid,
-                        'phonetic_score': phonetic_score,
-                        'orthographic_score': orthographic_score
-                    })
-    
-    bt.logging.info(f"Saved name variations data to {csv_filename}")
+                    # Log individual scores for each variation
+                    for variation in name_variations:
+                        # Calculate scores using the same functions as in reward calculation
+                        phonetic_score = calculate_phonetic_similarity(name, variation)
+                        orthographic_score = calculate_orthographic_similarity(name, variation)
+                        
+                        # Log to CSV
+                        writer.writerow({
+                            'timestamp': timestamp,
+                            'run_id': run_id,
+                            'seed_name': name,
+                            'variation': variation,
+                            'miner_uid': uid,
+                            'phonetic_score': phonetic_score,
+                            'orthographic_score': orthographic_score
+                        })
+                        variation_count += 1
+        
+        bt.logging.info(f"Successfully saved {variation_count} variations to {csv_filename}")
+        
+    except Exception as e:
+        bt.logging.error(f"Error saving variations to CSV: {str(e)}")
+        traceback.print_exc()
