@@ -44,7 +44,7 @@ import numpy as np
 from typing import List, Dict, Any, Tuple
 import ollama
 
-from MIID.protocol import NameVariationRequest
+from MIID.protocol import IdentityRequest
 from MIID.validator.reward import get_name_variation_rewards
 from MIID.utils.uids import get_random_uids
 
@@ -89,7 +89,7 @@ async def dendrite_with_retries(dendrite: bt.dendrite, axons: list, synapse, des
             # Create a new instance with the required fields
             if isinstance(synapse, bt.Synapse):
                 # For NameVariationRequest, we need to provide the required fields
-                if synapse.__class__.__name__ == 'NameVariationRequest':
+                if synapse.__class__.__name__ == 'IdentityRequest':
                     return synapse.__class__(
                         names=synapse_fields.get('names', []),
                         query_template=synapse_fields.get('query_template', ""),
@@ -471,7 +471,7 @@ async def forward(self):
     bt.logging.info(f"Using adaptive timeout of {adaptive_timeout} seconds")
     
     # Prepare the synapse for the request
-    request_synapse = NameVariationRequest(
+    request_synapse = IdentityRequest(
         names=seed_names,
         query_template=query_template,
         variations={}  # Initialize with empty variations
