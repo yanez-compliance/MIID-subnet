@@ -141,7 +141,7 @@ class Validator(BaseValidatorNeuron):
         bt.logging.info(f"Using LLM model: {self.model_name}")
         bt.logging.info("Finished initializing Validator")
         bt.logging.info("----------------------------------")
-        time.sleep(100)
+        time.sleep(1)
 
     async def forward(self):
         """
@@ -161,6 +161,22 @@ class Validator(BaseValidatorNeuron):
         """
         try:
             res = await forward(self)
+            bt.logging.info(f"Res: {res}")
+            bt.logging.info(f"Res type: {type(res)}")
+            bt.logging.info(f"Res keys: {res.keys()}")
+            bt.logging.info(f"Res values: {res.values()}")
+            bt.logging.info(f"Res items: {res.items()}")
+            bt.logging.info(f"Res len: {len(res)}")
+            bt.logging.info(f"Res first item: {res[0]}")
+            bt.logging.info(f"Res first item type: {type(res[0])}")
+            bt.logging.info(f"Res first item keys: {res[0].keys()}")
+            bt.logging.info(f"Res first item values: {res[0].values()}")
+            bt.logging.info(f"Res first item items: {res[0].items()}")
+            bt.logging.info(f"Res first item len: {len(res[0])}")
+            bt.logging.info(f"Res first item first item: {res[0][0]}")
+            bt.logging.info(f"Res first item first item type: {type(res[0][0])}")
+            bt.logging.info('----------------------------------')
+            time.sleep(100)
             return res
         except Exception as e:
             bt.logging.error("Got error in forward function")
