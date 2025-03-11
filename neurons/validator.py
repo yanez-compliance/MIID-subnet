@@ -125,7 +125,7 @@ class Validator(BaseValidatorNeuron):
             # Check if model exists locally first
             models = ollama.list().get('models', [])
             bt.logging.info(f"Models: {models}")
-            model_exists = any(model.get('name') == self.model_name for model in models)
+            model_exists = any(model.model == self.model_name for model in models)
             
             if model_exists:
                 bt.logging.info(f"Model {self.model_name} already pulled")
