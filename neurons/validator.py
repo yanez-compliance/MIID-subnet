@@ -112,8 +112,9 @@ class Validator(BaseValidatorNeuron):
         # bt.logging.info(f"Name variation sample size: {self.config.name_variation.sample_size}")
 
         # Initialize Ollama with the same approach as in miner.py
-        self.model_name = getattr(self.config, 'neuron.ollama_model_name', None)
-        if self.model_name is None:
+        if hasattr(self.config, 'neuron') and hasattr(self.config.neuron, 'ollama_model_name'):
+            self.model_name = self.config.neuron.ollama_model_name
+        else:
             self.model_name = self.DEFAULT_LLM_MODEL
             bt.logging.info(f"No model specified in config, using default model: {self.model_name}")
         
@@ -123,6 +124,7 @@ class Validator(BaseValidatorNeuron):
         try:
             # Check if model exists locally first
             models = ollama.list().get('models', [])
+            bt.logging.info(f"Models: {models}")
             model_exists = any(model.get('name') == self.model_name for model in models)
             
             if model_exists:
