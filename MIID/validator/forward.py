@@ -53,9 +53,11 @@ EPOCH_MIN_TIME = 200 # seconds
 # Constants for query generation
 SIMILARITY_LEVELS = ["Light", "Medium", "Far"]
 DEFAULT_VARIATION_COUNT = 10
-DEFAULT_ORTHOGRAPHIC_SIMILARITY = "Medium"
-DEFAULT_PHONETIC_SIMILARITY = "Medium"
+DEFAULT_ORTHOGRAPHIC_SIMILARITY = "Light"
+DEFAULT_PHONETIC_SIMILARITY = "Light"
 DEFAULT_LLM_MODEL = "llama3.1:latest"
+
+DEFAULT_QUERY = True  # Override config setting
 
 
 async def dendrite_with_retries(dendrite: bt.dendrite, axons: list, synapse, deserialize: bool, timeout: float, cnt_attempts=7):
@@ -245,7 +247,13 @@ async def generate_complex_query(
     # If use_default flag is True, skip LLM and use default template
     if use_default:
         bt.logging.info("Using default query template (skipping complex query generation)")
-        default_template = f"Give me {variation_count} comma separated alternative spellings of the name {{name}}. Include a mix of phonetically similar and orthographically similar variations. Provide only the names."
+        default_template = f"Give me 10 comma separated alternative spellings of the name {{name}}. Include 5 of them should sound similar to the original name and 5 should be orthographically similar. Provide only the names."
+        # query_template = "Give me 10 comma separated alternative spellings of the name {name}. 5 of them should sound similar to the original name and 5 should be orthographically similar. Provide only the names."
+        labels = {
+            "variation_count": 10,
+            "phonetic_similarity": {"Medium": 0.5},
+            "orthographic_similarity": {"Medium": 0.5}
+        }
         return default_template, labels
     
     # Format the similarity specifications for the prompt
@@ -422,8 +430,7 @@ async def forward(self):
             {"Light": 0.3, "Medium": 0.7},
         ])
         
-        # TEMPORARILY FORCE DEFAULT QUERY:
-        use_default_query = False  # Override config setting
+        
         
         # Generate a complex query template
         query_template, query_labels = await generate_complex_query(
@@ -431,7 +438,7 @@ async def forward(self):
             variation_count=variation_count,
             phonetic_similarity=phonetic_config,
             orthographic_similarity=orthographic_config,
-            use_default=use_default_query
+            use_default=DEFAULT_QUERY
         )
         bt.logging.info(f"@@@@@@@@@@@@@\nGenerated query template: {query_template}\n@@@@@@@@@@@@@")
         bt.logging.debug(f"Variation count: {variation_count}")
@@ -447,10 +454,10 @@ async def forward(self):
         
         # Fallback to a simple query template and default labels
         variation_count = 10
-        phonetic_config = {"Medium": 1.0}
-        orthographic_config = {"Medium": 1.0}
+        phonetic_config = {"Medium": 0.5}
+        orthographic_config = {"Medium": 0.5}
         
-        query_template = f"Give me {variation_count} comma separated alternative spellings of the name {{name}}. Include a mix of phonetically similar and orthographically similar variations. Provide only the names."
+        query_template = f"Give me {variation_count} comma separated alternative spellings of the name {{name}}. Include 5 of them should sound similar to the original name and 5 should be orthographically similar. Provide only the names."
         query_labels = {
             "variation_count": variation_count,
             "phonetic_similarity": phonetic_config,
