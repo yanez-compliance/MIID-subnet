@@ -512,7 +512,7 @@ async def forward(self):
     )
     
     # Query the network with retry logic
-    if use_default_query:
+    if DEFAULT_QUERY:
         bt.logging.info(f"Querying {len(miner_uids)} miners with default query template")
     else:
         bt.logging.info(f"Querying {len(miner_uids)} miners with complex query")    
