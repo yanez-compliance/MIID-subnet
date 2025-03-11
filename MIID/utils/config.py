@@ -184,7 +184,7 @@ def add_validator_args(cls, parser):
         "--neuron.timeout",
         type=float,
         help="The timeout for each forward call in seconds.",
-        default=10,
+        default=60,
     )
 
     parser.add_argument(
@@ -194,6 +194,12 @@ def add_validator_args(cls, parser):
         default=1,
     )
 
+    parser.add_argument(
+        "--neuron.use_default_query",
+        action="store_true",
+        help="If set, use the default query template.",
+        default=True,
+    )
     parser.add_argument(
         "--neuron.sample_size",
         type=int,
