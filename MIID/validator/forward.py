@@ -481,7 +481,7 @@ async def forward(self):
     # Calculate timeout based on the number of names and complexity
     base_timeout = getattr(self.config.neuron, 'timeout', 60)  # Increase default from 30 to 60
     # More generous allocation - especially for LLM operations
-    adaptive_timeout = base_timeout + (len(seed_names) * 15) + (query_labels['variation_count'] * 5)
+    adaptive_timeout = base_timeout + (len(seed_names) * 15) + (query_labels['variation_count'] * 50)
     bt.logging.info(f"Using adaptive timeout of {adaptive_timeout} seconds")
     
     # Prepare the synapse for the request
