@@ -46,6 +46,7 @@ from typing import List, Dict, Any, Tuple
 from MIID.protocol import IdentityRequest
 from MIID.validator.reward import get_name_variation_rewards
 from MIID.utils.uids import get_random_uids
+from MIID.validator.query_generator import QueryGenerator
 
 EPOCH_MIN_TIME = 100 # seconds
 
@@ -209,82 +210,6 @@ async def dendrite_with_retries(dendrite: bt.dendrite, axons: list, synapse, des
     
     return res
 
-async def generate_complex_query(
-    model_name: str,
-    variation_count: int = 10,
-    phonetic_similarity: Dict[str, float] = None,
-    orthographic_similarity: Dict[str, float] = None,
-    use_default: bool = False  # Add new flag parameter
-) -> Tuple[str, Dict[str, Any]]:
-    """
-    Generate a complex query template for name variations using an LLM.
-    
-    Args:
-        model_name: Name of the LLM model to use
-        variation_count: Number of variations to request per name
-        phonetic_similarity: Dictionary mapping similarity levels to percentages
-        orthographic_similarity: Dictionary mapping similarity levels to percentages
-        use_default: If True, skip complex query generation and use default template
-        
-    Returns:
-        Tuple of (query_template, labels)
-    """
-    # Default similarity preferences if none provided
-    if phonetic_similarity is None:
-        phonetic_similarity = {"Medium": 1.0}
-    if orthographic_similarity is None:
-        orthographic_similarity = {"Medium": 1.0}
-    
-    # Create the labels dictionary from the parameters
-    labels = {
-        "variation_count": variation_count,
-        "phonetic_similarity": phonetic_similarity,
-        "orthographic_similarity": orthographic_similarity
-    }
-    
-    # If use_default flag is True, skip LLM and use default template
-    if use_default:
-        bt.logging.info("Using default query template (skipping complex query generation)")
-        default_template = f"Give me 10 comma separated alternative spellings of the name {{name}}. Include 5 of them should sound similar to the original name and 5 should be orthographically similar. Provide only the names."
-        # query_template = "Give me 10 comma separated alternative spellings of the name {name}. 5 of them should sound similar to the original name and 5 should be orthographically similar. Provide only the names."
-        labels = {
-            "variation_count": 10,
-            "phonetic_similarity": {"Medium": 0.5},
-            "orthographic_similarity": {"Medium": 0.5}
-        }
-        return default_template, labels
-    
-    # Format the similarity specifications for the prompt
-    phonetic_spec = ", ".join([f"{int(pct*100)}% {level}" for level, pct in phonetic_similarity.items()])
-    orthographic_spec = ", ".join([f"{int(pct*100)}% {level}" for level, pct in orthographic_similarity.items()])
-    
-    bt.logging.info(f"Generating query with: {variation_count} variations, " +
-                  f"phonetic similarity: {phonetic_spec}, " +
-                  f"orthographic similarity: {orthographic_spec}")
-    
-    # Define the prompt with specific parameters
-    prompt = f"""Generate a complex name variation query for a name variation system with these exact specifications:
-    1. Request exactly {variation_count} variations for each name
-    2. For phonetic similarity, require: {phonetic_spec}
-    3. For orthographic similarity, require: {orthographic_spec}
-    
-    Format as a natural language query that explicitly states all requirements.
-    """
-
-    try:
-        # Generate the query using Ollama
-        response = ollama.generate(model=model_name, prompt=prompt)
-        query_template = response['response'].strip()
-        bt.logging.info(f"Generated query template: {query_template}")
-        
-        return query_template, labels
-        
-    except Exception as e:
-        bt.logging.error(f"Error generating complex query: {str(e)}")
-        # Fallback to a simple query template and default labels
-        simple_template = f"Give me {variation_count} comma separated alternative spellings of the name {{name}}. Include a mix of phonetically similar and orthographically similar variations. Provide only the names."
-        return simple_template, labels
-
 async def timed_dendrite(dendrite, axons, synapse, deserialize, timeout, uid_map):
     """
     Track response times for dendrite calls.
@@ -345,6 +270,8 @@ async def forward(self):
         The result of the forward function from the MIID.validator module
     """
     request_start = time.time()
+    bt.logging.info("Updating and querying available uids")
+
     # Get random UIDs to query
     miner_uids = get_random_uids(self, k=self.config.neuron.sample_size)
 
@@ -352,153 +279,30 @@ async def forward(self):
     miner_uids = miner_uids.tolist()  # Convert NumPy array to Python list
     
     # # Add miner_uid 1 to the list for testing purposes if it exists --->(commented out)
-    if 1 not in miner_uids and 1 in self.metagraph.uids:
-        miner_uids.append(1)
+    #if 1 not in miner_uids and 1 in self.metagraph.uids:
+    #    miner_uids.append(1)
     
     bt.logging.info(f"Selected {len(miner_uids)} miners to query: {miner_uids}")
     
-    # # Initialize Ollama with the same approach as in miner.py
-    # self.model_name = getattr(self.config, 'model_name', None)
-    # if self.model_name is None:
-    #     self.model_name = DEFAULT_LLM_MODEL
-    #     bt.logging.info(f"No model specified in config, using default model: {self.model_name}")
+    request_start = time.time()
+
+    available_axon_size = len(self.metagraph.axons) - 1  # Except our own
+    miner_selection_size = min(available_axon_size, self.config.neuron.sample_size)
+    miner_uids = get_random_uids(self, k=miner_selection_size)
+    axons = [self.metagraph.axons[uid] for uid in miner_uids]
+    bt.logging.info(f"#########################################Miner UIDs: {miner_uids}#########################################")
+    bt.logging.info(f"#########################################Miner axons: {axons}#########################################")
+    bt.logging.info(f"#########################################Miner selection size: {miner_selection_size}#########################################")
+    bt.logging.info(f"#########################################Available axon size: {available_axon_size}#########################################")
+
+    # Initialize the query generator
+    query_generator = QueryGenerator(self.config)
     
-    # bt.logging.info(f"Using LLM model: {self.model_name}")
-    
-    # # Check if Ollama is available
-    # try:
-    #     # Check if model exists locally first
-    #     models = ollama.list().get('models', [])
-    #     model_exists = any(model.get('name') == self.model_name for model in models)
-        
-    #     if model_exists:
-    #         bt.logging.info(f"Model {self.model_name} already pulled")
-    #     else:
-    #         # Model not found locally, pull it
-    #         bt.logging.info(f"Pulling model {self.model_name}...")
-    #         ollama.pull(self.model_name)
-    try:
-        # Set up query parameters - randomly select different configurations
-        # for each validation round to test miners on various tasks
-        
-        # 1. Determine variation count (between 5-15)
-        variation_count = random.randint(5, 15)
-        
-        # 2. Set up phonetic similarity distribution
-        phonetic_config = random.choice([
-            # Balanced distribution
-            {"Light": 0.33, "Medium": 0.34, "Far": 0.33},
-            # Focus on Light similarity
-            {"Light": 0.6, "Medium": 0.3, "Far": 0.1},
-            # Focus on Medium similarity
-            {"Light": 0.2, "Medium": 0.6, "Far": 0.2},
-            # Focus on Far similarity
-            {"Light": 0.1, "Medium": 0.3, "Far": 0.6},
-            # Only Light similarity
-            {"Light": 1.0},
-            # Only Medium similarity
-            {"Medium": 1.0},
-            # 50% Light, 50% Medium (no Far)
-            {"Light": 0.5, "Medium": 0.5},
-            # 70% Light, 30% Medium (no Far)
-            {"Light": 0.7, "Medium": 0.3},
-            # 30% Light, 70% Medium (no Far)
-            {"Light": 0.3, "Medium": 0.7},
-        ])
-        
-        # 3. Set up orthographic similarity distribution
-        orthographic_config = random.choice([
-            # Balanced distribution
-            {"Light": 0.33, "Medium": 0.34, "Far": 0.33},
-            # Focus on Light similarity
-            {"Light": 0.6, "Medium": 0.3, "Far": 0.1},
-            # Focus on Medium similarity
-            {"Light": 0.2, "Medium": 0.6, "Far": 0.2},
-            # Focus on Far similarity
-            {"Light": 0.1, "Medium": 0.3, "Far": 0.6},
-            # Only Light similarity
-            {"Light": 1.0},
-            # Only Medium similarity
-            {"Medium": 1.0},
-            # 50% Light, 50% Medium (no Far)
-            {"Light": 0.5, "Medium": 0.5},
-            # 70% Light, 30% Medium (no Far)
-            {"Light": 0.7, "Medium": 0.3},
-            # 30% Light, 70% Medium (no Far)
-            {"Light": 0.3, "Medium": 0.7},
-        ])
-        
-        
-        if DEFAULT_QUERY:
-            bt.logging.info("Using default query template")
-            variation_count = 10
-            phonetic_config = {"Medium": 0.5}
-            orthographic_config = {"Medium": 0.5}
-              
-        # Generate a complex query template
-        query_template, query_labels = await generate_complex_query(
-            model_name=self.config.neuron.ollama_model_name,
-            variation_count=variation_count,
-            phonetic_similarity=phonetic_config,
-            orthographic_similarity=orthographic_config,
-            use_default=DEFAULT_QUERY
-        )
-        bt.logging.info(f"@@@@@@@@@@@@@\nGenerated query template: {query_template}\n@@@@@@@@@@@@@")
-        bt.logging.debug(f"Variation count: {variation_count}")
-        bt.logging.debug(f"Phonetic similarity: {phonetic_config}")
-        bt.logging.debug(f"Orthographic similarity: {orthographic_config}")
-        bt.logging.debug(f"Query labels: {query_labels}")
-        
-    except Exception as e:
-        bt.logging.error(f"Error with Ollama: {str(e)}")
-        bt.logging.error("Make sure Ollama is installed and running on this machine")
-        bt.logging.error("Install Ollama: curl -fsSL https://ollama.com/install.sh | sh")
-        bt.logging.error("Start Ollama: ollama serve")
-        
-        # Fallback to a simple query template and default labels
-        variation_count = 10
-        phonetic_config = {"Medium": 0.5}
-        orthographic_config = {"Medium": 0.5}
-        
-        query_template = f"Give me {variation_count} comma separated alternative spellings of the name {{name}}. Include 5 of them should sound similar to the original name and 5 should be orthographically similar. Provide only the names."
-        query_labels = {
-            "variation_count": variation_count,
-            "phonetic_similarity": phonetic_config,
-            "orthographic_similarity": orthographic_config
-        }
-    
-    # Generate random names using Faker
-    fake = Faker()
-    
-    # Create a list to store the generated names
-    seed_names = []
-    
-    # Ensure name_variation config exists
-    if not hasattr(self.config, 'name_variation') or self.config.name_variation is None:
-        bt.logging.warning("name_variation config not found, creating it now")
-        self.config.name_variation = bt.config()
-        self.config.name_variation.sample_size = 5
-    
-    # Ensure sample_size exists and has a valid value
-    sample_size = getattr(self.config.name_variation, 'sample_size', 5)
-    if sample_size is None:
-        sample_size = 5
-        
-    bt.logging.info(f"Using name variation sample size: {sample_size}")
-    
-    # Generate the required number of unique names
-    while len(seed_names) < sample_size:
-        # Randomly choose between first_name and last_name
-        if random.choice([True, False]):
-            name = fake.first_name().lower()
-        else:
-            name = fake.last_name().lower()
-        
-        # Ensure the name is unique and not too long or too short
-        if name not in seed_names and 3 <= len(name) <= 12:
-            seed_names.append(name)
-    
-    bt.logging.info(f"Generated {len(seed_names)} random names: {seed_names}")
+    # Use the query generator
+    start_time = time.time()
+    seed_names, query_template, query_labels = await query_generator.build_queries()
+    end_time = time.time()
+    bt.logging.info(f"Time to generate challenges: {int(end_time - start_time)}s")
     
     # Calculate timeout based on the number of names and complexity
     base_timeout = getattr(self.config.neuron, 'timeout', 120)  # Double from 60 to 120 seconds
@@ -515,7 +319,7 @@ async def forward(self):
     )
     
     # Query the network with retry logic
-    if DEFAULT_QUERY:
+    if query_generator.use_default_query:  
         bt.logging.info(f"Querying {len(miner_uids)} miners with default query template")
     else:
         bt.logging.info(f"Querying {len(miner_uids)} miners with complex query")    
