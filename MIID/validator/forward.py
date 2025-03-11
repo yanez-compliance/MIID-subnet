@@ -57,7 +57,7 @@ DEFAULT_ORTHOGRAPHIC_SIMILARITY = "Medium"
 DEFAULT_PHONETIC_SIMILARITY = "Medium"
 DEFAULT_LLM_MODEL = "llama3.1:latest"
 
-async def dendrite_with_retries(dendrite: bt.dendrite, axons: list, synapse, deserialize: bool, timeout: float, cnt_attempts=3):
+async def dendrite_with_retries(dendrite: bt.dendrite, axons: list, synapse, deserialize: bool, timeout: float, cnt_attempts=5):
     """
     Send requests to miners with automatic retry logic for failed connections.
     
@@ -88,7 +88,7 @@ async def dendrite_with_retries(dendrite: bt.dendrite, axons: list, synapse, des
         try:
             # Create a new instance with the required fields
             if isinstance(synapse, bt.Synapse):
-                # For NameVariationRequest, we need to provide the required fields
+                # For IdentityRequest, we need to provide the required fields
                 if synapse.__class__.__name__ == 'IdentityRequest':
                     return synapse.__class__(
                         names=synapse_fields.get('names', []),
@@ -109,15 +109,30 @@ async def dendrite_with_retries(dendrite: bt.dendrite, axons: list, synapse, des
     
     for attempt in range(cnt_attempts):
         try:
+            # Log retry information
+            if attempt > 0:
+                bt.logging.info(f"Retry attempt {attempt+1}/{cnt_attempts} for {len(axons_copy)} axons")
+                
+            # For later attempts, increase timeout to give more time
+            current_timeout = timeout * (1 + (attempt * 0.5))  # Increase timeout with each retry
+                
+            bt.logging.info(f"Sending dendrite request with timeout {current_timeout:.1f}s")
             responses = await dendrite(
                 axons=axons_copy,
                 synapse=synapse,
                 deserialize=deserialize,
-                timeout=timeout
+                timeout=current_timeout
             )
             
             new_idx = []
             new_axons = []
+            
+            # Log some diagnostic info
+            response_types = {}
+            for resp in responses:
+                resp_type = type(resp).__name__
+                response_types[resp_type] = response_types.get(resp_type, 0) + 1
+            bt.logging.info(f"Response types: {response_types}")
             
             for i, response in enumerate(responses):
                 # Check if response is None or has connection errors
@@ -134,7 +149,9 @@ async def dendrite_with_retries(dendrite: bt.dendrite, axons: list, synapse, des
                 elif hasattr(response, 'dendrite') and response.dendrite is not None and \
                      hasattr(response.dendrite, 'status_code') and \
                      response.dendrite.status_code is not None and \
-                     int(response.dendrite.status_code) == 422:
+                     int(response.dendrite.status_code) != 200:  # Check for any non-200 code
+                    status_code = int(response.dendrite.status_code)
+                    bt.logging.warning(f"Received error status {status_code} from axon {axons_copy[i]}")
                     if attempt == cnt_attempts - 1:
                         res[idx[i]] = response
                         bt.logging.warning(f"Failed to get response from axon {axons_copy[i]} after {cnt_attempts} attempts")
@@ -146,12 +163,18 @@ async def dendrite_with_retries(dendrite: bt.dendrite, axons: list, synapse, des
                     res[idx[i]] = response
             
             if len(new_idx):
-                bt.logging.info(f'Found {len(new_idx)} synapses with broken connections, retrying them')
+                bt.logging.info(f'Found {len(new_idx)} connections to retry (attempt {attempt+1}/{cnt_attempts})')
             else:
+                bt.logging.info(f'All miners responded successfully on attempt {attempt+1}')
                 break
             
             idx = new_idx
             axons_copy = new_axons
+            
+            # Wait longer between retries
+            retry_wait = 2 * (attempt + 1)  # Increase wait time with each retry
+            bt.logging.info(f"Waiting {retry_wait}s before retry attempt {attempt+2}")
+            await asyncio.sleep(retry_wait)  # Use async sleep instead of time.sleep
             
         except Exception as e:
             bt.logging.error(f"Error in dendrite call: {str(e)}")
@@ -160,7 +183,7 @@ async def dendrite_with_retries(dendrite: bt.dendrite, axons: list, synapse, des
                 for i in range(len(idx)):
                     if res[idx[i]] is None:
                         res[idx[i]] = create_default_response()
-            time.sleep(30)  # Brief pause before retry
+            await asyncio.sleep(2 * (attempt + 1))  # Use async sleep with increasing wait time
     
     # Ensure all responses are filled
     for i, r in enumerate(res):
@@ -169,6 +192,10 @@ async def dendrite_with_retries(dendrite: bt.dendrite, axons: list, synapse, des
             # Create an empty response to avoid None values
             res[i] = create_default_response()
             
+    # Log final status
+    valid_responses = sum(1 for r in res if hasattr(r, 'variations') and r.variations)
+    bt.logging.info(f"Dendrite call completed with {valid_responses}/{len(res)} valid responses")
+    
     return res
 
 async def generate_complex_query(
@@ -452,9 +479,9 @@ async def forward(self):
     bt.logging.info(f"Generated {len(seed_names)} random names: {seed_names}")
     
     # Calculate timeout based on the number of names and complexity
-    base_timeout = getattr(self.config.neuron, 'timeout', 30)
-    # Add 10 seconds per name and adjust based on variation count
-    adaptive_timeout = base_timeout + (len(seed_names) * 10) + (query_labels['variation_count'] * 2)
+    base_timeout = getattr(self.config.neuron, 'timeout', 60)  # Increase default from 30 to 60
+    # More generous allocation - especially for LLM operations
+    adaptive_timeout = base_timeout + (len(seed_names) * 15) + (query_labels['variation_count'] * 5)
     bt.logging.info(f"Using adaptive timeout of {adaptive_timeout} seconds")
     
     # Prepare the synapse for the request
@@ -465,14 +492,18 @@ async def forward(self):
     )
     
     # Query the network with retry logic
-    bt.logging.info(f"Querying {len(miner_uids)} miners with complex query")
+    if use_default_query:
+        bt.logging.info(f"Querying {len(miner_uids)} miners with default query template")
+    else:
+        bt.logging.info(f"Querying {len(miner_uids)} miners with complex query")    
+    
     start_time = time.time()
     
     # Initialize all_responses to collect responses from all batches
     all_responses = []
     
     # Process miners in batches to avoid overwhelming the network
-    batch_size = 10  # Smaller batch size to reduce load
+    batch_size = 5  # Reduce batch size from 10 to 5
     total_batches = (len(miner_uids) + batch_size - 1) // batch_size
     
     for i in range(0, len(miner_uids), batch_size):
@@ -480,16 +511,20 @@ async def forward(self):
         batch_axons = [self.metagraph.axons[uid] for uid in batch_uids]
         
         bt.logging.info(f"Processing batch {i//batch_size + 1}/{total_batches} with {len(batch_uids)} miners")
+        batch_start_time = time.time()
         
-        # Use dendrite_with_retries instead of timed_dendrite to ensure we get responses
+        # Use dendrite_with_retries to ensure we get responses
         batch_responses = await dendrite_with_retries(
             dendrite=self.dendrite,
             axons=batch_axons,
             synapse=request_synapse,
             deserialize=True,
             timeout=adaptive_timeout,
-            cnt_attempts=5  # Try up to 5 times
+            cnt_attempts=5
         )
+        
+        batch_duration = time.time() - batch_start_time
+        bt.logging.info(f"Batch {i//batch_size + 1} completed in {batch_duration:.1f}s")
         
         # Log response information
         valid_batch_responses = sum(1 for r in batch_responses if hasattr(r, 'variations') and r.variations)
@@ -498,11 +533,9 @@ async def forward(self):
         # Add batch responses to all_responses
         all_responses.extend(batch_responses)
         
-        bt.logging.info(f"Completed batch {i//batch_size + 1}/{total_batches}, received {len(batch_responses)} responses")
-        
         # Sleep between batches to allow miners to recover and process new requests
         if i + batch_size < len(miner_uids):
-            sleep_time = 5  # 5 seconds between batches
+            sleep_time = 10  # Increase from 5 to 10 seconds between batches
             bt.logging.info(f"Sleeping for {sleep_time}s before next batch")
             await asyncio.sleep(sleep_time)
     
@@ -536,7 +569,7 @@ async def forward(self):
     # Update the validator's internal scores
     self.update_scores(rewards, miner_uids)
     ## print the rewards and the miner uids
-    bt.logging.info(f"$$$$$$$$$$$$$$$$$$$$$$$$$$\nRewards: {rewards}\nMiner UIDs: {miner_uids}\n$$$$$$$$$$$$$$$$$$")
+    bt.logging.info(f"$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$\nRewards: {rewards}\nMiner UIDs: {miner_uids}\n$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$")
     
     # Save the results for analysis
     # Create a unique timestamp for this run
@@ -583,7 +616,7 @@ async def forward(self):
     self.set_weights()
     
     # Add minimum processing time to avoid overwhelming the network
-    min_time = 60  # 60 seconds minimum processing time
+    min_time = 30  # 30 seconds minimum processing time
     if end_time - start_time < min_time:
         sleep_time = min_time - (end_time - start_time)
         bt.logging.info(f"Completed too quickly, sleeping for {sleep_time:.2f} seconds")
