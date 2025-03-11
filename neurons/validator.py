@@ -43,6 +43,7 @@ matching, and data augmentation.
 """
 
 import time
+import traceback
 
 # Bittensor
 import bittensor as bt
@@ -53,6 +54,7 @@ from MIID.base.validator import BaseValidatorNeuron
 # Bittensor Validator Template:
 from MIID.validator import forward
 from MIID.validator.reward import get_name_variation_rewards
+import ollama
 
 
 class Validator(BaseValidatorNeuron):
@@ -72,6 +74,8 @@ class Validator(BaseValidatorNeuron):
     quality of the network.
     """
 
+    DEFAULT_LLM_MODEL = "llama3.1:latest"
+
     def __init__(self, config=None):
         """
         Initialize the Name Variation Validator.
@@ -82,39 +86,60 @@ class Validator(BaseValidatorNeuron):
         Args:
             config: Configuration object for the validator
         """
+        bt.logging.info("Initializing Validator")
+
         super(Validator, self).__init__(config=config)
 
         bt.logging.info("load_state()")
         self.load_state()
         
-        # Make sure self.config exists
-        if not hasattr(self, 'config') or self.config is None:
-            bt.logging.warning("self.config is None, creating a new config object")
-            self.config = bt.config()
+        # # Make sure self.config exists
+        # if not hasattr(self, 'config') or self.config is None:
+        #     bt.logging.warning("self.config is None, creating a new config object")
+        #     self.config = bt.config()
         
-        # Configuration for the name variation protocol
-        # Create the name_variation config object if it doesn't exist
-        if not hasattr(self.config, 'name_variation') or self.config.name_variation is None:
-            bt.logging.warning("name_variation config is None, creating a new config object")
-            self.config.name_variation = bt.config()
+        # # Configuration for the name variation protocol
+        # # Create the name_variation config object if it doesn't exist
+        # if not hasattr(self.config, 'name_variation') or self.config.name_variation is None:
+        #     bt.logging.warning("name_variation config is None, creating a new config object")
+        #     self.config.name_variation = bt.config()
         
-        # Explicitly create the sample_size attribute with a default value
-        # This is a more direct approach that should work regardless of the config object's implementation
-        self.config.name_variation.sample_size = 5
+        # # Explicitly create the sample_size attribute with a default value
+        # # This is a more direct approach that should work regardless of the config object's implementation
+        # self.config.name_variation.sample_size = 5
         
-        # Log the configuration to verify it's set correctly
-        bt.logging.info(f"Name variation sample size: {self.config.name_variation.sample_size}")
-            
-        # Ensure required libraries are installed
+        # # Log the configuration to verify it's set correctly
+        # bt.logging.info(f"Name variation sample size: {self.config.name_variation.sample_size}")
+
+        # Initialize Ollama with the same approach as in miner.py
+        self.model_name = getattr(self.config, 'neuron.ollama_model_name', None)
+        if self.model_name is None:
+            self.model_name = self.DEFAULT_LLM_MODEL
+            bt.logging.info(f"No model specified in config, using default model: {self.model_name}")
+        
+        bt.logging.info(f"Using LLM model: {self.model_name}")
+        
+        # Check if Ollama is available
         try:
-            from faker import Faker
-            import Levenshtein
-            import jellyfish
-            bt.logging.info("All required libraries are available")
-        except ImportError as e:
-            bt.logging.error(f"Required library not installed: {e}")
-            bt.logging.error("Please install required libraries with: pip install faker python-Levenshtein jellyfish")
-            raise ImportError("Required libraries missing. Install with: pip install faker python-Levenshtein jellyfish")
+            # Check if model exists locally first
+            models = ollama.list().get('models', [])
+            model_exists = any(model.get('name') == self.model_name for model in models)
+            
+            if model_exists:
+                bt.logging.info(f"Model {self.model_name} already pulled")
+            else:
+                # Model not found locally, pull it
+                bt.logging.info(f"Pulling model {self.model_name}...")
+                ollama.pull(self.model_name)
+        except Exception as e:
+            bt.logging.error(f"Error initializing Ollama: {e}")
+            raise e
+        
+        bt.logging.info("Ollama initialized")
+        bt.logging.info(f"Using LLM model: {self.model_name}")
+        bt.logging.info("Finished initializing Validator")
+        bt.logging.info("----------------------------------")
+        time.sleep(100)
 
     async def forward(self):
         """
@@ -132,7 +157,13 @@ class Validator(BaseValidatorNeuron):
         Returns:
             The result of the forward function from the MIID.validator module
         """
-        return await forward(self)
+        try:
+            res = await forward(self)
+            return res
+        except Exception as e:
+            bt.logging.error("Got error in forward function")
+            bt.logging.info(traceback.format_exc())
+            return None
 
 
 # The main function parses the configuration and runs the validator.

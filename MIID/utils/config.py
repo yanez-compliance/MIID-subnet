@@ -245,6 +245,18 @@ def add_validator_args(cls, parser):
         help="The name of the project where you are sending the new run.",
         default="opentensor-dev",
     )
+    parser.add_argument(
+            "--neuron.ollama_url",
+            type=str,
+            help="Url to ollama",
+            default="http://127.0.0.1:11434",
+        )
+    parser.add_argument(
+            "--neuron.ollama_model_name",
+            type=str,
+            help="Model name to use with ollama",
+            default="llama3.1:latest",
+        )
 
 
 def config(cls):
