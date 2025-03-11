@@ -134,98 +134,99 @@ class Miner(BaseMinerNeuron):
         bt.logging.info(f"Mining results will be saved to: {self.output_path}")
 
     async def forward(self, synapse: IdentityRequest) -> IdentityRequest:
-        """Process incoming forward requests from the network."""
-        bt.logging.info(f"Received request for name variations")
+        """
+        Process a name variation request by generating variations for each name.
         
-        # Start timing
-        start_time = time.time()
+        This is the main entry point for the miner's functionality. It:
+        1. Receives a request with names and a query template
+        2. Processes each name through the LLM
+        3. Extracts variations from the LLM responses
+        4. Returns the variations to the validator
         
-        try:
-            # Extract names from the request
-            seed_names = synapse.names
-            query_template = synapse.query_template
+        Each run is assigned a unique timestamp ID and results are saved in a
+        dedicated directory for that run.
+        
+        Args:
+            synapse: The IdentityRequest containing names and query template
             
-            # Create a unique run ID for logging only
-            run_id = int(time.time())
-            bt.logging.info(f"Processing {len(seed_names)} names with run_id {run_id}")
+        Returns:
+            The synapse with variations field populated with name variations
+        """
+        # Generate a unique run ID using timestamp
+        run_id = int(time.time())
+        bt.logging.info(f"Starting run {run_id} for {len(synapse.names)} names")
+        
+        # Create a run-specific directory
+        run_dir = os.path.join(self.output_path, f"run_{run_id}")
+        os.makedirs(run_dir, exist_ok=True)
+        
+        # This will store all responses from the LLM in a format that can be processed later
+        # Format: ["Respond", "---", "Query-{name}", "---", "{LLM response}"]
+        Response_list = []
+        
+        # Process each name in the request
+        for name in tqdm(synapse.names, desc="Processing names"):
+            # Format the response list for later processing
+            # This follows the format expected by Process_function
+            Response_list.append("Respond")
+            Response_list.append("---")
+            Response_list.append("Query-" + name)
+            Response_list.append("---")
             
-            # Process each name and generate variations
-            all_variations = {}
+            # Format the query with the current name
+            formatted_query = synapse.query_template.replace("{name}", name)
             
-            # Process each name
-            for name in seed_names:
-                # Format the query template with the current name
-                prompt = query_template.format(name=name)
-                
-                bt.logging.info(f"Generating variations for '{name}'")
-                
-                # Get variations from LLM with timeout handling
-                try:
-                    name_start = time.time()
-                    raw_response = self.Get_Respond_LLM(prompt)
-                    
-                    # Process and clean the response - simplified to avoid extra file operations
-                    variations = self.process_variations([raw_response], run_id, "")
-                    
-                    # Get the variations for this name
-                    name_variations = variations.get(name, [])
-                    
-                    name_elapsed = time.time() - name_start
-                    bt.logging.info(f"Generated {len(name_variations)} variations for '{name}' in {name_elapsed:.2f}s")
-                    
-                    # Add to the results
-                    all_variations[name] = name_variations
-                    
-                except Exception as e:
-                    bt.logging.error(f"Error generating variations for '{name}': {str(e)}")
-                    all_variations[name] = []  # Empty list for failed names
-            
-            # Set the variations in the response
-            synapse.variations = all_variations
-            
-            # Calculate and log time taken
-            end_time = time.time()
-            elapsed_time = end_time - start_time
-            bt.logging.info(f"Completed processing in {elapsed_time:.2f} seconds")
-            bt.logging.info(f"Returning synapse with variations for {len(synapse.variations)} names")
-            
-            # Explicitly make sure we're returning a synapse object with variations set
-            return synapse
-            
-        except Exception as e:
-            bt.logging.error(f"Error in forward: {str(e)}")
-            traceback.print_exc()
-            
-            # Return empty variations on error
-            synapse.variations = {}
-            return synapse
+            # Query the LLM
+            try:
+                bt.logging.info(f"Generating variations for name: {name}")
+                name_respond = self.Get_Respond_LLM(formatted_query)
+                Response_list.append(name_respond)
+            except Exception as e:
+                bt.logging.error(f"Error querying LLM for name {name}: {str(e)}")
+                Response_list.append("Error: " + str(e))
+        
+        # Save raw responses to file for debugging and analysis
+        # Include run_id in the filename
+        raw_response_path = os.path.join(run_dir, f"raw_responses_{run_id}.txt")
+        with open(raw_response_path, 'wt', encoding='utf-8') as f:
+            f.write(str(Response_list))
+        bt.logging.info(f"Saved raw LLM responses to: {raw_response_path}")
+        
+        # Process the responses to extract variations
+        variations = self.process_variations(Response_list, run_id, run_dir)
+        ## print the variations
+        bt.logging.info(f"======== FINAL VARIATIONS===============================================: {variations}")
+        # Set the variations in the synapse for return to the validator
+        synapse.variations = variations
+        bt.logging.info(f"======== SYNAPSE VARIATIONS===============================================: {synapse.variations}")
+        bt.logging.info(f"Processed variations for {len(variations)} names in run {run_id}")
+
         return synapse
     
     def Get_Respond_LLM(self, prompt: str) -> str:
         """
-        Query the LLM for name variations with timeout.
+        Query the LLM using Ollama.
+        
+        This function sends a prompt to the LLM and returns its response.
+        It uses the Ollama client to communicate with a locally running LLM.
+        
+        Args:
+            prompt: The prompt to send to the LLM
+            
+        Returns:
+            The LLM's response as a string
+            
+        Raises:
+            Exception: If there's an error communicating with the LLM
         """
-        try:
-            bt.logging.info(f"Querying LLM with model: {self.model_name}")
-            
-            # Add timeout to prevent hanging
-            start_time = time.time()
-            
-            # Generate response using Ollama
-            response = ollama.generate(
-                model=self.model_name,
-                prompt=prompt,
-                options={"num_predict": 512}  # Limit token generation
-            )
-            
-            elapsed = time.time() - start_time
-            bt.logging.info(f"LLM query completed in {elapsed:.2f}s")
-            
-            return response['response']
-            
-        except Exception as e:
-            bt.logging.error(f"Error querying LLM: {str(e)}")
-            raise
+        # Use Ollama to query the LLM
+        response = ollama.chat(self.model_name, messages=[{
+            'role': 'user',
+            'content': prompt,
+        }])
+        
+        # Extract and return the content of the response
+        return response['message']['content']
     
     def process_variations(self, Response_list: List[str], run_id: int, run_dir: str) -> Dict[str, List[str]]:
         """
