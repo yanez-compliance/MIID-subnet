@@ -121,7 +121,7 @@ async def dendrite_with_retries(dendrite: bt.dendrite, axons: list, synapse, des
             
             # Diagnostic logging before the call
             for i, axon in enumerate(axons_copy):
-                bt.logging.debug(f"Axon {i}: {axon.hotkey_id} at {axon.ip}:{axon.port}")
+                bt.logging.debug(f"Axon {i}: {axon.hotkey} at {axon.ip}:{axon.port}")
             
             # Perform the dendrite call
             start_time = time.time()
