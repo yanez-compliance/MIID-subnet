@@ -42,7 +42,6 @@ from faker import Faker
 import asyncio
 import numpy as np
 from typing import List, Dict, Any, Tuple
-import ollama
 
 from MIID.protocol import IdentityRequest
 from MIID.validator.reward import get_name_variation_rewards
@@ -55,7 +54,6 @@ SIMILARITY_LEVELS = ["Light", "Medium", "Far"]
 DEFAULT_VARIATION_COUNT = 10
 DEFAULT_ORTHOGRAPHIC_SIMILARITY = "Light"
 DEFAULT_PHONETIC_SIMILARITY = "Light"
-DEFAULT_LLM_MODEL = "llama3.1:latest"
 
 DEFAULT_QUERY = True  # Override config setting
 
@@ -359,27 +357,27 @@ async def forward(self):
     
     bt.logging.info(f"Selected {len(miner_uids)} miners to query: {miner_uids}")
     
-    # Initialize Ollama with the same approach as in miner.py
-    self.model_name = getattr(self.config, 'model_name', None)
-    if self.model_name is None:
-        self.model_name = DEFAULT_LLM_MODEL
-        bt.logging.info(f"No model specified in config, using default model: {self.model_name}")
+    # # Initialize Ollama with the same approach as in miner.py
+    # self.model_name = getattr(self.config, 'model_name', None)
+    # if self.model_name is None:
+    #     self.model_name = DEFAULT_LLM_MODEL
+    #     bt.logging.info(f"No model specified in config, using default model: {self.model_name}")
     
-    bt.logging.info(f"Using LLM model: {self.model_name}")
+    # bt.logging.info(f"Using LLM model: {self.model_name}")
     
-    # Check if Ollama is available
-    try:
-        # Check if model exists locally first
-        models = ollama.list().get('models', [])
-        model_exists = any(model.get('name') == self.model_name for model in models)
+    # # Check if Ollama is available
+    # try:
+    #     # Check if model exists locally first
+    #     models = ollama.list().get('models', [])
+    #     model_exists = any(model.get('name') == self.model_name for model in models)
         
-        if model_exists:
-            bt.logging.info(f"Model {self.model_name} already pulled")
-        else:
-            # Model not found locally, pull it
-            bt.logging.info(f"Pulling model {self.model_name}...")
-            ollama.pull(self.model_name)
-            
+    #     if model_exists:
+    #         bt.logging.info(f"Model {self.model_name} already pulled")
+    #     else:
+    #         # Model not found locally, pull it
+    #         bt.logging.info(f"Pulling model {self.model_name}...")
+    #         ollama.pull(self.model_name)
+    try:
         # Set up query parameters - randomly select different configurations
         # for each validation round to test miners on various tasks
         
@@ -439,7 +437,7 @@ async def forward(self):
               
         # Generate a complex query template
         query_template, query_labels = await generate_complex_query(
-            model_name=self.model_name,
+            model_name=self.config.neuron.ollama_model_name,
             variation_count=variation_count,
             phonetic_similarity=phonetic_config,
             orthographic_similarity=orthographic_config,
