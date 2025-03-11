@@ -57,6 +57,7 @@ DEFAULT_ORTHOGRAPHIC_SIMILARITY = "Medium"
 DEFAULT_PHONETIC_SIMILARITY = "Medium"
 DEFAULT_LLM_MODEL = "llama3.1:latest"
 
+
 async def dendrite_with_retries(dendrite: bt.dendrite, axons: list, synapse, deserialize: bool, timeout: float, cnt_attempts=5):
     """
     Send requests to miners with automatic retry logic for failed connections.
@@ -114,9 +115,10 @@ async def dendrite_with_retries(dendrite: bt.dendrite, axons: list, synapse, des
                 bt.logging.info(f"Retry attempt {attempt+1}/{cnt_attempts} for {len(axons_copy)} axons")
                 
             # For later attempts, increase timeout to give more time
-            current_timeout = timeout * (1 + (attempt * 0.5))  # Increase timeout with each retry
-                
-            bt.logging.info(f"Sending dendrite request with timeout {current_timeout:.1f}s")
+            current_timeout = timeout *30* (1 + (attempt * 0.5))  # Increase timeout with each retry
+            bt.debug.info("--------------------------------")
+            bt.debug.info(f"Sending dendrite request with timeout {current_timeout:.1f}s")
+            bt.debug.info("--------------------------------")
             responses = await dendrite(
                 axons=axons_copy,
                 synapse=synapse,
@@ -172,9 +174,9 @@ async def dendrite_with_retries(dendrite: bt.dendrite, axons: list, synapse, des
             axons_copy = new_axons
             
             # Wait longer between retries
-            retry_wait = 2 * (attempt + 1)  # Increase wait time with each retry
+            retry_wait = 2 * (attempt + 1)* 30  # Increase wait time with each retry
             bt.logging.info(f"Waiting {retry_wait}s before retry attempt {attempt+2}")
-            await asyncio.sleep(retry_wait)  # Use async sleep instead of time.sleep
+            time.sleep(retry_wait)  # Use async sleep instead of time.sleep
             
         except Exception as e:
             bt.logging.error(f"Error in dendrite call: {str(e)}")
@@ -183,7 +185,7 @@ async def dendrite_with_retries(dendrite: bt.dendrite, axons: list, synapse, des
                 for i in range(len(idx)):
                     if res[idx[i]] is None:
                         res[idx[i]] = create_default_response()
-            await asyncio.sleep(2 * (attempt + 1))  # Use async sleep with increasing wait time
+            time.sleep(2 * (attempt + 1)* 30)  # Use async sleep with increasing wait time
     
     # Ensure all responses are filled
     for i, r in enumerate(res):
@@ -327,6 +329,7 @@ async def forward(self):
     Returns:
         The result of the forward function from the MIID.validator module
     """
+    request_start = time.time()
     # Get random UIDs to query
     miner_uids = get_random_uids(self, k=self.config.neuron.sample_size)
 
@@ -616,11 +619,12 @@ async def forward(self):
     self.set_weights()
     
     # Add minimum processing time to avoid overwhelming the network
-    min_time = 30  # 30 seconds minimum processing time
-    if end_time - start_time < min_time:
-        sleep_time = min_time - (end_time - start_time)
-        bt.logging.info(f"Completed too quickly, sleeping for {sleep_time:.2f} seconds")
-        time.sleep(sleep_time)
+    
+    request_end = time.time()
+    if request_end - request_start < EPOCH_MIN_TIME:
+        bt.logging.info(f"Finished too fast, sleeping for {EPOCH_MIN_TIME - (request_end - request_start)} seconds")
+        time.sleep(EPOCH_MIN_TIME - (request_end - request_start))
+
     
     # Return success
     return True
