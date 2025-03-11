@@ -58,7 +58,7 @@ DEFAULT_PHONETIC_SIMILARITY = "Medium"
 DEFAULT_LLM_MODEL = "llama3.1:latest"
 
 
-async def dendrite_with_retries(dendrite: bt.dendrite, axons: list, synapse, deserialize: bool, timeout: float, cnt_attempts=5):
+async def dendrite_with_retries(dendrite: bt.dendrite, axons: list, synapse, deserialize: bool, timeout: float, cnt_attempts=7):
     """
     Send requests to miners with automatic retry logic for failed connections.
     
@@ -114,17 +114,26 @@ async def dendrite_with_retries(dendrite: bt.dendrite, axons: list, synapse, des
             if attempt > 0:
                 bt.logging.info(f"Retry attempt {attempt+1}/{cnt_attempts} for {len(axons_copy)} axons")
                 
-            # For later attempts, increase timeout to give more time
-            current_timeout = timeout * (1 + (attempt * 0.5))
-            bt.logging.info("--------------------------------")
-            bt.logging.info(f"Sending dendrite request with timeout {current_timeout:.1f}s")
-            bt.logging.info("--------------------------------")
+            # For later attempts, increase timeout dramatically
+            current_timeout = timeout * (1 + (attempt * 1.0))  # Double multiplier from 0.5 to 1.0
+            
+            bt.logging.info(f"Sending dendrite request with timeout {current_timeout:.1f}s to {len(axons_copy)} axons")
+            
+            # Diagnostic logging before the call
+            for i, axon in enumerate(axons_copy):
+                bt.logging.debug(f"Axon {i}: {axon.hotkey_id} at {axon.ip}:{axon.port}")
+            
+            # Perform the dendrite call
+            start_time = time.time()
             responses = await dendrite(
                 axons=axons_copy,
                 synapse=synapse,
                 deserialize=deserialize,
                 timeout=current_timeout
             )
+            call_duration = time.time() - start_time
+            
+            bt.logging.info(f"Dendrite call returned after {call_duration:.1f}s (timeout was {current_timeout:.1f}s)")
             
             new_idx = []
             new_axons = []
@@ -173,10 +182,10 @@ async def dendrite_with_retries(dendrite: bt.dendrite, axons: list, synapse, des
             idx = new_idx
             axons_copy = new_axons
             
-            # Wait longer between retries
-            retry_wait = 2 * (attempt + 1)* 30  # Increase wait time with each retry
+            # Increase wait time between retries substantially
+            retry_wait = 5 * (attempt + 1)  # 5s, 10s, 15s, etc.
             bt.logging.info(f"Waiting {retry_wait}s before retry attempt {attempt+2}")
-            time.sleep(retry_wait)  # Use async sleep instead of time.sleep
+            await asyncio.sleep(retry_wait)
             
         except Exception as e:
             bt.logging.error(f"Error in dendrite call: {str(e)}")
@@ -185,7 +194,7 @@ async def dendrite_with_retries(dendrite: bt.dendrite, axons: list, synapse, des
                 for i in range(len(idx)):
                     if res[idx[i]] is None:
                         res[idx[i]] = create_default_response()
-            time.sleep(2 * (attempt + 1)* 30)  # Use async sleep with increasing wait time
+            await asyncio.sleep(2 * (attempt + 1)* 30)  # Use async sleep with increasing wait time
     
     # Ensure all responses are filled
     for i, r in enumerate(res):
@@ -482,10 +491,11 @@ async def forward(self):
     bt.logging.info(f"Generated {len(seed_names)} random names: {seed_names}")
     
     # Calculate timeout based on the number of names and complexity
-    base_timeout = getattr(self.config.neuron, 'timeout', 60)  # Increase default from 30 to 60
+    base_timeout = getattr(self.config.neuron, 'timeout', 120)  # Double from 60 to 120 seconds
     # More generous allocation - especially for LLM operations
-    adaptive_timeout = base_timeout + (len(seed_names) * 15) + (query_labels['variation_count'] * 50)
-    bt.logging.info(f"Using adaptive timeout of {adaptive_timeout} seconds")
+    adaptive_timeout = base_timeout + (len(seed_names) * 20) + (query_labels['variation_count'] * 10)
+    adaptive_timeout = min(600, max(120, adaptive_timeout))  # Min 120s, max 600s (10 minutes)
+    bt.logging.info(f"Using adaptive timeout of {adaptive_timeout} seconds for {len(seed_names)} names")
     
     # Prepare the synapse for the request
     request_synapse = IdentityRequest(
@@ -506,7 +516,7 @@ async def forward(self):
     all_responses = []
     
     # Process miners in batches to avoid overwhelming the network
-    batch_size = 5  # Reduce batch size from 10 to 5
+    batch_size = 3  # Further reduce from 5 to just 3 miners per batch
     total_batches = (len(miner_uids) + batch_size - 1) // batch_size
     
     for i in range(0, len(miner_uids), batch_size):
@@ -523,22 +533,32 @@ async def forward(self):
             synapse=request_synapse,
             deserialize=True,
             timeout=adaptive_timeout,
-            cnt_attempts=5
+            cnt_attempts=7
         )
         
         batch_duration = time.time() - batch_start_time
         bt.logging.info(f"Batch {i//batch_size + 1} completed in {batch_duration:.1f}s")
         
-        # Log response information
-        valid_batch_responses = sum(1 for r in batch_responses if hasattr(r, 'variations') and r.variations)
-        bt.logging.info(f"Batch {i//batch_size + 1} results: {valid_batch_responses}/{len(batch_responses)} valid responses")
+        # More detailed response validation
+        for i, response in enumerate(batch_responses):
+            uid = batch_uids[i]
+            if not hasattr(response, 'variations'):
+                bt.logging.warning(f"Miner {uid} returned response without 'variations' attribute: {type(response)}")
+            elif response.variations is None:
+                bt.logging.warning(f"Miner {uid} returned response with None variations")
+            elif not response.variations:
+                bt.logging.warning(f"Miner {uid} returned empty variations dictionary")
+            else:
+                # Count variations
+                total_variations = sum(len(vars) for vars in response.variations.values())
+                bt.logging.info(f"Miner {uid} returned {len(response.variations)} names with {total_variations} total variations")
         
         # Add batch responses to all_responses
         all_responses.extend(batch_responses)
         
         # Sleep between batches to allow miners to recover and process new requests
         if i + batch_size < len(miner_uids):
-            sleep_time = 10  # Increase from 5 to 10 seconds between batches
+            sleep_time = 20  # Increase from 10 to 20 seconds between batches
             bt.logging.info(f"Sleeping for {sleep_time}s before next batch")
             await asyncio.sleep(sleep_time)
     
@@ -625,6 +645,8 @@ async def forward(self):
         bt.logging.info(f"Finished too fast, sleeping for {EPOCH_MIN_TIME - (request_end - request_start)} seconds")
         time.sleep(EPOCH_MIN_TIME - (request_end - request_start))
 
+    bt.logging.info("All batches processed, waiting for any remaining responses...")
+    await asyncio.sleep(30)  # Extra 30 second wait at the end
     
     # Return success
     return True
