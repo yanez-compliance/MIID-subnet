@@ -185,12 +185,12 @@ class Miner(BaseMinerNeuron):
                 bt.logging.error(f"Error querying LLM for name {name}: {str(e)}")
                 Response_list.append("Error: " + str(e))
         
-        # Save raw responses to file for debugging and analysis
-        # Include run_id in the filename
-        raw_response_path = os.path.join(run_dir, f"raw_responses_{run_id}.txt")
-        with open(raw_response_path, 'wt', encoding='utf-8') as f:
-            f.write(str(Response_list))
-        bt.logging.info(f"Saved raw LLM responses to: {raw_response_path}")
+        # # Save raw responses to file for debugging and analysis
+        # # Include run_id in the filename
+        # raw_response_path = os.path.join(run_dir, f"raw_responses_{run_id}.txt")
+        # with open(raw_response_path, 'wt', encoding='utf-8') as f:
+        #     f.write(str(Response_list))
+        # bt.logging.info(f"Saved raw LLM responses to: {raw_response_path}")
         
         # Process the responses to extract variations
         variations = self.process_variations(Response_list, run_id, run_dir)
@@ -285,8 +285,8 @@ class Miner(BaseMinerNeuron):
             except Exception as e:
                 bt.logging.error(f"Error processing response {i}: {e}")
         
-        # Save processed variations to JSON for debugging and analysis
-        self.save_variations_to_json(name_variations, run_id, run_dir)
+        # # Save processed variations to JSON for debugging and analysis
+        # self.save_variations_to_json(name_variations, run_id, run_dir)
         
         return name_variations
     
