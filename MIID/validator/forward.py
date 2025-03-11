@@ -160,7 +160,7 @@ async def dendrite_with_retries(dendrite: bt.dendrite, axons: list, synapse, des
                 for i in range(len(idx)):
                     if res[idx[i]] is None:
                         res[idx[i]] = create_default_response()
-            time.sleep(1)  # Brief pause before retry
+            time.sleep(30)  # Brief pause before retry
     
     # Ensure all responses are filled
     for i, r in enumerate(res):

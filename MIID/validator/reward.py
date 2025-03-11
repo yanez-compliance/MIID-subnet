@@ -115,7 +115,8 @@ def calculate_variation_quality(
     phonetic_similarity: Dict[str, float] = None,
     phonetic_thresholds: Dict[str, float] = None,
     orthographic_similarity: Dict[str, float] = None,
-    orthographic_thresholds: Dict[str, float] = None
+    orthographic_thresholds: Dict[str, float] = None,
+    expected_count: int = 10  # Add parameter for expected variation count
 ) -> float:
     """
     Calculate the quality of name variations based on phonetic and orthographic similarity.
@@ -127,6 +128,7 @@ def calculate_variation_quality(
         phonetic_thresholds: Thresholds for different phonetic similarity levels
         orthographic_similarity: Dictionary mapping similarity levels to percentages
         orthographic_thresholds: Thresholds for different orthographic similarity levels
+        expected_count: Expected number of variations
         
     Returns:
         Quality score between 0 and 1
@@ -152,48 +154,108 @@ def calculate_variation_quality(
             "Far": 0.3
         }
     
+    # 1. Check if count matches expected count with 20% tolerance
+    tolerance = 0.2  # 20% tolerance
+    tolerance_range = expected_count * tolerance
+    
+    # Calculate how far outside the tolerance range we are
+    actual_count = len(variations)
+    lower_bound = expected_count - tolerance_range
+    upper_bound = expected_count + tolerance_range
+    
+    if lower_bound <= actual_count <= upper_bound:
+        # Within tolerance range - perfect score
+        count_score = 1.0
+    else:
+        # Outside tolerance range - calculate penalty
+        if actual_count < lower_bound:
+            deviation = lower_bound - actual_count
+        else:  # actual_count > upper_bound
+            deviation = actual_count - upper_bound
+            
+        # Calculate score with penalty for deviation beyond tolerance
+        count_score = 1.0 - min(1.0, deviation / expected_count)
+    
+    # 2. Check for uniqueness - penalize duplicates
+    unique_variations = list(set(variations))
+    uniqueness_score = len(unique_variations) / len(variations) if variations else 0
+    
+    # 3. Calculate length reasonableness
+    length_scores = []
+    for var in unique_variations:
+        # Penalize variations that are too short or too long compared to original
+        original_len = len(original_name)
+        var_len = len(var)
+        
+        # Ideal length is within 30% of original length
+        length_ratio = min(var_len / original_len, original_len / var_len)
+        length_scores.append(length_ratio)
+    
+    length_score = sum(length_scores) / len(length_scores) if length_scores else 0
+    
     # Calculate phonetic similarity scores for each variation
-    phonetic_scores = [calculate_phonetic_similarity(original_name, variation) for variation in variations]
+    phonetic_scores = []
+    for variation in variations:
+        phonetic_score = calculate_phonetic_similarity(original_name, variation)
+        phonetic_scores.append(phonetic_score)
     
     # Calculate orthographic similarity scores for each variation
-    orthographic_scores = [calculate_orthographic_similarity(original_name, variation) for variation in variations]
+    orthographic_scores = []
+    for variation in variations:
+        orthographic_score = calculate_orthographic_similarity(original_name, variation)
+        orthographic_scores.append(orthographic_score)
     
-    # Evaluate how well the variations match the requested similarity distributions
+    # Sort scores to analyze distribution
+    phonetic_scores.sort()
+    orthographic_scores.sort()
+    
+    # Calculate quality score based on distribution of scores
     phonetic_quality = 0.0
     orthographic_quality = 0.0
     
-    # For each phonetic similarity level, check if the right percentage of variations meet the threshold
+    # Process each desired similarity level
     for level, percentage in phonetic_similarity.items():
-        threshold = phonetic_thresholds.get(level, 0.6)  # Default to Medium if level not found
-        target_count = int(len(variations) * percentage)
-        if target_count == 0:
-            continue
-            
-        # Count variations that meet this threshold
+        threshold = phonetic_thresholds.get(level, 0.5)
+        
+        # Calculate how many scores should be in this range
+        target_count = int(percentage * len(variations))
         actual_count = sum(1 for score in phonetic_scores if score >= threshold)
         
-        # Calculate quality for this level
-        level_quality = min(1.0, actual_count / target_count)
-        phonetic_quality += level_quality * percentage
+        # Calculate match quality for this level
+        if target_count > 0:
+            match_quality = min(actual_count / target_count, 1.0)
+            phonetic_quality += percentage * match_quality
     
-    # For each orthographic similarity level, check if the right percentage of variations meet the threshold
+    # Repeat for orthographic similarity
     for level, percentage in orthographic_similarity.items():
-        threshold = orthographic_thresholds.get(level, 0.6)  # Default to Medium if level not found
-        target_count = int(len(variations) * percentage)
-        if target_count == 0:
-            continue
-            
-        # Count variations that meet this threshold
+        threshold = orthographic_thresholds.get(level, 0.5)
+        
+        # Calculate how many scores should be in this range
+        target_count = int(percentage * len(variations))
         actual_count = sum(1 for score in orthographic_scores if score >= threshold)
         
-        # Calculate quality for this level
-        level_quality = min(1.0, actual_count / target_count)
-        orthographic_quality += level_quality * percentage
+        # Calculate match quality for this level
+        if target_count > 0:
+            match_quality = min(actual_count / target_count, 1.0)
+            orthographic_quality += percentage * match_quality
     
-    # Combine phonetic and orthographic quality (equal weighting)
-    overall_quality = (phonetic_quality + orthographic_quality) / 2.0
+    # Calculate final quality score with all factors
+    # Weight factors according to importance
+    similarity_weight = 0.6  # Combined weight for phonetic and orthographic similarity
+    count_weight = 0.1       # Weight for having the correct number of variations
+    uniqueness_weight = 0.2  # Weight for having unique variations
+    length_weight = 0.1      # Weight for reasonable length variations
     
-    return overall_quality
+    similarity_score = (phonetic_quality + orthographic_quality) / 2  # Average of both similarities
+    
+    final_score = (
+        similarity_weight * similarity_score +
+        count_weight * count_score +
+        uniqueness_weight * uniqueness_score +
+        length_weight * length_score
+    )
+    
+    return final_score
 
 
 def get_name_variation_rewards(
@@ -286,7 +348,8 @@ def get_name_variation_rewards(
                     phonetic_similarity,
                     phonetic_thresholds,
                     orthographic_similarity,
-                    orthographic_thresholds
+                    orthographic_thresholds,
+                    expected_count=variation_count  # Pass the expected count
                 )
                 quality_scores.append(quality)
             except Exception as e:
