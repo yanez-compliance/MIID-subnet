@@ -115,10 +115,10 @@ async def dendrite_with_retries(dendrite: bt.dendrite, axons: list, synapse, des
                 bt.logging.info(f"Retry attempt {attempt+1}/{cnt_attempts} for {len(axons_copy)} axons")
                 
             # For later attempts, increase timeout to give more time
-            current_timeout = timeout *30* (1 + (attempt * 0.5))  # Increase timeout with each retry
-            bt.debug.info("--------------------------------")
-            bt.debug.info(f"Sending dendrite request with timeout {current_timeout:.1f}s")
-            bt.debug.info("--------------------------------")
+            current_timeout = timeout * (1 + (attempt * 0.5))
+            bt.logging.info("--------------------------------")
+            bt.logging.info(f"Sending dendrite request with timeout {current_timeout:.1f}s")
+            bt.logging.info("--------------------------------")
             responses = await dendrite(
                 axons=axons_copy,
                 synapse=synapse,
