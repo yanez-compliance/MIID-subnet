@@ -423,7 +423,7 @@ async def forward(self):
         ])
         
         # TEMPORARILY FORCE DEFAULT QUERY:
-        use_default_query = True  # Override config setting
+        use_default_query = False  # Override config setting
         
         # Generate a complex query template
         query_template, query_labels = await generate_complex_query(
