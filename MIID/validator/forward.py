@@ -48,7 +48,7 @@ from MIID.protocol import IdentityRequest
 from MIID.validator.reward import get_name_variation_rewards
 from MIID.utils.uids import get_random_uids
 
-EPOCH_MIN_TIME = 200 # seconds
+EPOCH_MIN_TIME = 100 # seconds
 
 # Constants for query generation
 SIMILARITY_LEVELS = ["Light", "Medium", "Far"]
@@ -187,7 +187,7 @@ async def dendrite_with_retries(dendrite: bt.dendrite, axons: list, synapse, des
             # Increase wait time between retries substantially
             retry_wait = 5 * (attempt + 1)  # 5s, 10s, 15s, etc.
             bt.logging.info(f"Waiting {retry_wait}s before retry attempt {attempt+2}")
-            await asyncio.sleep(retry_wait)
+            time.sleep(retry_wait)
             
         except Exception as e:
             bt.logging.error(f"Error in dendrite call: {str(e)}")
@@ -196,7 +196,7 @@ async def dendrite_with_retries(dendrite: bt.dendrite, axons: list, synapse, des
                 for i in range(len(idx)):
                     if res[idx[i]] is None:
                         res[idx[i]] = create_default_response()
-            await asyncio.sleep(2 * (attempt + 1)* 30)  # Use async sleep with increasing wait time
+            time.sleep(2 * (attempt + 1)* 30)  # Use async sleep with increasing wait time
     
     # Ensure all responses are filled
     for i, r in enumerate(res):
@@ -431,7 +431,12 @@ async def forward(self):
         ])
         
         
-        
+        if DEFAULT_QUERY:
+            bt.logging.info("Using default query template")
+            variation_count = 10
+            phonetic_config = {"Medium": 0.5}
+            orthographic_config = {"Medium": 0.5}
+              
         # Generate a complex query template
         query_template, query_labels = await generate_complex_query(
             model_name=self.model_name,
