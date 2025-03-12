@@ -179,11 +179,11 @@ async def forward(self):
     miner_uids = miner_uids.tolist()  # Convert NumPy array to Python list
     bt.logging.info(f"#########################################Selected {len(miner_uids)} miners to query: {miner_uids}#########################################")
 
-    # # Add miner_uid 1 to the list for testing purposes if it exists --->(commented out)
-    if 1 not in miner_uids and 1 in self.metagraph.uids:
-        miner_uids.append(1)
+    # # # Add miner_uid 1 to the list for testing purposes if it exists --->(commented out)
+    # if 1 not in miner_uids and 1 in self.metagraph.uids:
+    #     miner_uids.append(1)
     
-    bt.logging.info(f"#########################################Selected {len(miner_uids)} miners to query after adding miner_uid 1: {miner_uids}#########################################")
+    #bt.logging.info(f"#########################################Selected {len(miner_uids)} miners to query after adding miner_uid 1: {miner_uids}#########################################")
     time.sleep(3)
     # Initialize the query generator
     query_generator = QueryGenerator(self.config)
