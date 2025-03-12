@@ -280,11 +280,16 @@ async def forward(self):
     Returns:
         The result of the forward function from the MIID.validator module
     """
+    
     request_start = time.time()
+    
     bt.logging.info("Updating and querying available uids")
 
     # Get random UIDs to query
-    miner_uids = get_random_uids(self, k=self.config.neuron.sample_size)
+    available_axon_size = len(self.metagraph.axons) - 1  # Except our own
+    miner_selection_size = min(available_axon_size, self.config.neuron.sample_size)
+    miner_uids = get_random_uids(self, k=miner_selection_size)
+    axons = [self.metagraph.axons[uid] for uid in miner_uids]
 
     # Convert to a list if you need to add more UIDs
     miner_uids = miner_uids.tolist()  # Convert NumPy array to Python list
@@ -295,13 +300,6 @@ async def forward(self):
         miner_uids.append(1)
     
     bt.logging.info(f"#########################################Selected {len(miner_uids)} miners to query after adding miner_uid 1: {miner_uids}#########################################")
-    
-    # Get random UIDs to query
-    available_axon_size = len(self.metagraph.axons) - 1  # Except our own
-    miner_selection_size = min(available_axon_size, self.config.neuron.sample_size)
-    miner_uids = get_random_uids(self, k=miner_selection_size)
-    axons = [self.metagraph.axons[uid] for uid in miner_uids]
-    bt.logging.info(f"#########################################Miner UIDs: {miner_uids}#########################################")
     bt.logging.info(f"#########################################Miner axons: {axons}#########################################")
     bt.logging.info(f"#########################################Miner selection size: {miner_selection_size}#########################################")
     bt.logging.info(f"#########################################Available axon size: {available_axon_size}#########################################")
