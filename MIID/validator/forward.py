@@ -43,7 +43,7 @@ import asyncio
 import numpy as np
 from typing import List, Dict, Any, Tuple
 
-from MIID.protocol import IdentityRequest
+from MIID.protocol import IdentitySynapse
 from MIID.validator.reward import get_name_variation_rewards
 from MIID.utils.uids import get_random_uids
 from MIID.validator.query_generator import QueryGenerator
@@ -51,7 +51,7 @@ from MIID.validator.query_generator import QueryGenerator
 EPOCH_MIN_TIME = 60 # seconds
 
 
-async def dendrite_with_retries(dendrite: bt.dendrite, axons: list, synapse: IdentityRequest, deserialize: bool, timeout: float, cnt_attempts=7):
+async def dendrite_with_retries(dendrite: bt.dendrite, axons: list, synapse: IdentitySynapse, deserialize: bool, timeout: float, cnt_attempts=7):
     """
     Send requests to miners with automatic retry logic for failed connections.
     
@@ -72,7 +72,7 @@ async def dendrite_with_retries(dendrite: bt.dendrite, axons: list, synapse: Ide
     
     # Create default response function
     def create_default_response():
-        return IdentityRequest(
+        return IdentitySynapse(
             names=synapse.names,
             query_template=synapse.query_template,
             variations={} 
@@ -96,8 +96,8 @@ async def dendrite_with_retries(dendrite: bt.dendrite, axons: list, synapse: Ide
             
             if isinstance(response, dict):
                 # Success case - we got the variations dictionary
-                # Create a new IdentityRequest with the variations
-                complete_response = IdentityRequest(
+                # Create a new IdentitySynapse with the variations
+                complete_response = IdentitySynapse(
                     names=synapse.names,
                     query_template=synapse.query_template,
                     variations=response
@@ -203,7 +203,7 @@ async def forward(self):
     bt.logging.info(f"Using adaptive timeout of {adaptive_timeout} seconds for {len(seed_names)} names")
     
     # Prepare the synapse for the request
-    request_synapse = IdentityRequest(
+    request_synapse = IdentitySynapse(
         names=seed_names,
         query_template=query_template,
         variations={}  # Initialize with empty variations

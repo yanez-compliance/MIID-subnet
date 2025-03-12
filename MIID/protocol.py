@@ -42,7 +42,7 @@ from typing import List, Dict, Optional
 #   assert dummy_output == 2
 
 
-class IdentityRequest(bt.Synapse):
+class IdentitySynapse(bt.Synapse):
     """
     Protocol for requesting identity variations from miners.
     

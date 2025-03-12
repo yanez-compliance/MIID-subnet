@@ -58,7 +58,7 @@ from typing import List, Dict, Tuple, Any, Optional
 from tqdm import tqdm
 
 # Bittensor Miner Template:
-from MIID.protocol import IdentityRequest
+from MIID.protocol import IdentitySynapse
 
 # import base miner class which takes care of most of the boilerplate
 from MIID.base.miner import BaseMinerNeuron
@@ -133,7 +133,7 @@ class Miner(BaseMinerNeuron):
         os.makedirs(self.output_path, exist_ok=True)
         bt.logging.info(f"Mining results will be saved to: {self.output_path}")
 
-    async def forward(self, synapse: IdentityRequest) -> IdentityRequest:
+    async def forward(self, synapse: IdentitySynapse) -> IdentitySynapse:
         """
         Process a name variation request by generating variations for each name.
         
@@ -147,7 +147,7 @@ class Miner(BaseMinerNeuron):
         dedicated directory for that run.
         
         Args:
-            synapse: The IdentityRequest containing names and query template
+            synapse: The IdentitySynapse containing names and query template
             
         Returns:
             The synapse with variations field populated with name variations
@@ -351,12 +351,12 @@ class Miner(BaseMinerNeuron):
         
         # Save to JSON file
         # Include run_id in the filename
-        json_path = os.path.join(run_dir, f"variations_{run_id}.json")
-        import json
-        with open(json_path, 'w', encoding='utf-8') as f:
-            json.dump(json_data, f, indent=4)
-        bt.logging.info(f"Saved variations to: {json_path}")
-        bt.logging.info(f"DataFrame shape: {result_df.shape} with {max_variations} variation columns")
+        # json_path = os.path.join(run_dir, f"variations_{run_id}.json")
+        # import json
+        # with open(json_path, 'w', encoding='utf-8') as f:
+        #     json.dump(json_data, f, indent=4)
+        # bt.logging.info(f"Saved variations to: {json_path}")
+        # bt.logging.info(f"DataFrame shape: {result_df.shape} with {max_variations} variation columns")
     
     def Clean_extra(self, payload: str, comma: bool, line: bool, space: bool) -> str:
         """
@@ -522,7 +522,7 @@ class Miner(BaseMinerNeuron):
                     return seed, "r3", Cleaned_name_list
 
     async def blacklist(
-        self, synapse: IdentityRequest
+        self, synapse: IdentitySynapse
     ) -> typing.Tuple[bool, str]:
         """
         Determines whether an incoming request should be blacklisted and thus ignored.
@@ -534,7 +534,7 @@ class Miner(BaseMinerNeuron):
         3. Whether the hotkey has validator permissions (if required)
         
         Args:
-            synapse: A IdentityRequest object constructed from the incoming request.
+            synapse: A IdentitySynapse object constructed from the incoming request.
 
         Returns:
             Tuple[bool, str]: A tuple containing:
@@ -577,7 +577,7 @@ class Miner(BaseMinerNeuron):
         )
         return False, "Hotkey recognized!"
 
-    async def priority(self, synapse: IdentityRequest) -> float:
+    async def priority(self, synapse: IdentitySynapse) -> float:
         """
         The priority function determines the order in which requests are handled.
         
@@ -586,7 +586,7 @@ class Miner(BaseMinerNeuron):
         ensures that validators with more stake get faster responses.
         
         Args:
-            synapse: The IdentityRequest object that contains metadata about the incoming request.
+            synapse: The IdentitySynapse object that contains metadata about the incoming request.
 
         Returns:
             float: A priority score derived from the stake of the calling entity.
