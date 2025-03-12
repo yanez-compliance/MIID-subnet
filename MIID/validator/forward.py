@@ -68,7 +68,7 @@ async def dendrite_with_retries(dendrite: bt.dendrite, axons: list, synapse: Ide
     """
     res: List[IdentityRequest|None] = [None] * len(axons)
     idx = list(range(len(axons)))
-    #axons_copy = axons.copy()
+    axons = axons.copy()
     
     # Create a default empty response with required fields
     # synapse_fields = {}
@@ -118,7 +118,7 @@ async def dendrite_with_retries(dendrite: bt.dendrite, axons: list, synapse: Ide
         
         # Perform the dendrite call
         start_time = time.time()
-        responses = await dendrite(
+        responses: List[IdentityRequest] = await dendrite(
             axons=axons,
             synapse=synapse,
             deserialize=deserialize,
@@ -222,48 +222,48 @@ async def dendrite_with_retries(dendrite: bt.dendrite, axons: list, synapse: Ide
     # bt.logging.info(f"Dendrite call completed with {valid_responses}/{len(res)} valid responses")
     # return res
 
-async def timed_dendrite(dendrite, axons, synapse, deserialize, timeout, uid_map):
-    """
-    Track response times for dendrite calls.
+# async def timed_dendrite(dendrite, axons, synapse, deserialize, timeout, uid_map):
+#     """
+#     Track response times for dendrite calls.
     
-    Args:
-        dendrite: The dendrite object
-        axons: List of axons to query
-        synapse: The synapse object
-        deserialize: Whether to deserialize responses
-        timeout: Timeout in seconds
-        uid_map: Mapping from index to UID
+#     Args:
+#         dendrite: The dendrite object
+#         axons: List of axons to query
+#         synapse: The synapse object
+#         deserialize: Whether to deserialize responses
+#         timeout: Timeout in seconds
+#         uid_map: Mapping from index to UID
         
-    Returns:
-        List of responses
-    """
-    response_times = {}
-    start_times = {i: time.time() for i in range(len(axons))}
+#     Returns:
+#         List of responses
+#     """
+#     response_times = {}
+#     start_times = {i: time.time() for i in range(len(axons))}
     
-    try:
-        responses = await dendrite(
-            axons=axons, 
-            synapse=synapse, 
-            deserialize=deserialize, 
-            timeout=timeout
-        )
-        end_time = time.time()
+#     try:
+#         responses = await dendrite(
+#             axons=axons, 
+#             synapse=synapse, 
+#             deserialize=deserialize, 
+#             timeout=timeout
+#         )
+#         end_time = time.time()
         
-        for i, response in enumerate(responses):
-            uid = uid_map[i]
-            response_time = end_time - start_times[i]
-            response_times[uid] = response_time
-            bt.logging.debug(f"Miner {uid} responded in {response_time:.2f}s")
+#         for i, response in enumerate(responses):
+#             uid = uid_map[i]
+#             response_time = end_time - start_times[i]
+#             response_times[uid] = response_time
+#             bt.logging.debug(f"Miner {uid} responded in {response_time:.2f}s")
         
-        # Log response times
-        bt.logging.info(f"Response times: " + 
-                      ", ".join([f"UID {uid}: {response_times[uid]:.2f}s" for uid in uid_map.values()]))
+#         # Log response times
+#         bt.logging.info(f"Response times: " + 
+#                       ", ".join([f"UID {uid}: {response_times[uid]:.2f}s" for uid in uid_map.values()]))
         
-        return responses
-    except Exception as e:
-        bt.logging.error(f"Error in timed_dendrite: {str(e)}")
-        # Create default responses for all axons
-        return [create_default_response() for _ in range(len(axons))]
+#         return responses
+#     except Exception as e:
+#         bt.logging.error(f"Error in timed_dendrite: {str(e)}")
+#         # Create default responses for all axons
+#         return [create_default_response() for _ in range(len(axons))]
 
 async def forward(self):
     """
