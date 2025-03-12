@@ -310,8 +310,6 @@ def get_name_variation_rewards(
             seed_names,
             responses,
             uids,
-            phonetic_thresholds,
-            orthographic_thresholds,
             run_id
         )
     except Exception as e:
@@ -371,8 +369,6 @@ def save_variations_to_csv(
     seed_names: List[str],
     responses: List,
     uids: List[int],
-    phonetic_thresholds: Dict[str, float],
-    orthographic_thresholds: Dict[str, float],
     run_id: str
 ):
     """
@@ -383,8 +379,6 @@ def save_variations_to_csv(
         seed_names: Original names that variations were generated for
         responses: List of response objects from miners
         uids: List of UIDs corresponding to responses
-        phonetic_thresholds: Thresholds for different phonetic similarity levels
-        orthographic_thresholds: Thresholds for different orthographic similarity levels
         run_id: Unique identifier for this validation run
     """
     try:
