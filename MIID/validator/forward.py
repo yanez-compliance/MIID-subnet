@@ -91,6 +91,9 @@ async def dendrite_with_retries(dendrite: bt.dendrite, axons: list, synapse: Ide
         
         for i, response in enumerate(responses):
             # Check if response is a dictionary (just the variations)
+            bt.logging.info(f"#########################################Response {i}: {response}#########################################")
+            bt.logging.info(f"#########################################Response type: {type(response)}#########################################")
+            
             if isinstance(response, dict):
                 # Success case - we got the variations dictionary
                 # Create a new IdentityRequest with the variations
