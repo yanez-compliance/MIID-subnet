@@ -48,7 +48,7 @@ from MIID.validator.reward import get_name_variation_rewards
 from MIID.utils.uids import get_random_uids
 from MIID.validator.query_generator import QueryGenerator
 
-EPOCH_MIN_TIME = 100 # seconds
+EPOCH_MIN_TIME = 60 # seconds
 
 
 async def dendrite_with_retries(dendrite: bt.dendrite, axons: list, synapse, deserialize: bool, timeout: float, cnt_attempts=7):
@@ -285,7 +285,7 @@ async def forward(self):
     bt.logging.info(f"#########################################Miner axons: {axons}#########################################")
     bt.logging.info(f"#########################################Miner selection size: {miner_selection_size}#########################################")
     bt.logging.info(f"#########################################Available axon size: {available_axon_size}#########################################")
-    time.sleep(10000)
+    time.sleep(30)
     # Initialize the query generator
     query_generator = QueryGenerator(self.config)
     
