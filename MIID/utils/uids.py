@@ -16,6 +16,14 @@ def check_uid_availability(
         bool: True if uid is available, False otherwise
     """
     # Filter non serving axons.
+    bt.logging.warning(f"#########################################Metagraph: {metagraph}#########################################")
+    bt.logging.warning(f"#########################################Metagraph type: {type(metagraph)}#########################################")
+    bt.logging.warning(f"#########################################Metagraph n: {metagraph.n.item()}#########################################")
+    bt.logging.warning(f"#########################################Metagraph axons: {metagraph.axons}#########################################")
+    bt.logging.warning(f"#########################################Metagraph axons type: {type(metagraph.axons)}#########################################")
+    bt.logging.warning(f"#########################################Metagraph axons[uid]: {metagraph.axons[uid]}#########################################")
+    bt.logging.warning(f"#########################################Metagraph axons[uid] type: {type(metagraph.axons[uid])}#########################################")
+    bt.logging.warning(f"#########################################Metagraph axons[uid] is serving: {metagraph.axons[uid].is_serving}#########################################")
     if not metagraph.axons[uid].is_serving:
         return False
     # Filter validator permit > 1024 stake.
