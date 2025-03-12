@@ -131,6 +131,8 @@ async def dendrite_with_retries(dendrite: bt.dendrite, axons: list, synapse: Ide
         new_idx = []
         new_axons = []
         for i, synapse in enumerate(responses):
+            bt.logging.info(f"#########################################Synapse {i}: {synapse}#########################################")
+            bt.logging.info(f"#########################################Synapse type: {type(synapse)}#########################################")
             if synapse.dendrite.status_code is not None and int(synapse.dendrite.status_code) == 422:
                 if attempt == cnt_attempts - 1:
                     res[idx[i]] = synapse
