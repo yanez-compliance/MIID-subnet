@@ -102,14 +102,15 @@ async def dendrite_with_retries(dendrite: bt.dendrite, axons: list, synapse: Ide
     #         return synapse
     
     for attempt in range(cnt_attempts):
+        bt.logging.info(f"#########################################Attempt {attempt+1}/{cnt_attempts}#########################################")
         # Log retry information
         if attempt > 0:
-            bt.logging.info(f"Retry attempt {attempt+1}/{cnt_attempts} for {len(axons_copy)} axons")
+            bt.logging.info(f"Retry attempt {attempt+1}/{cnt_attempts} for {len(axons)} axons")
             
         # For later attempts, increase timeout dramatically
         current_timeout = timeout * (1 + (attempt * 1.0))  # Double multiplier from 0.5 to 1.0
         
-        bt.logging.info(f"Sending dendrite request with timeout {current_timeout:.1f}s to {len(axons_copy)} axons")
+        bt.logging.info(f"Sending dendrite request with timeout {current_timeout:.1f}s to {len(axons)} axons")
         
         # Diagnostic logging before the call
         for i, axon in enumerate(axons):
@@ -291,6 +292,10 @@ async def forward(self):
     miner_uids = get_random_uids(self, k=miner_selection_size)
     axons = [self.metagraph.axons[uid] for uid in miner_uids]
 
+    bt.logging.info(f"#########################################Miner axons: {axons}#########################################")
+    bt.logging.info(f"#########################################Miner selection size: {miner_selection_size}#########################################")
+    bt.logging.info(f"#########################################Available axon size: {available_axon_size}#########################################")
+
     # Convert to a list if you need to add more UIDs
     miner_uids = miner_uids.tolist()  # Convert NumPy array to Python list
     bt.logging.info(f"#########################################Selected {len(miner_uids)} miners to query: {miner_uids}#########################################")
@@ -300,9 +305,6 @@ async def forward(self):
         miner_uids.append(1)
     
     bt.logging.info(f"#########################################Selected {len(miner_uids)} miners to query after adding miner_uid 1: {miner_uids}#########################################")
-    bt.logging.info(f"#########################################Miner axons: {axons}#########################################")
-    bt.logging.info(f"#########################################Miner selection size: {miner_selection_size}#########################################")
-    bt.logging.info(f"#########################################Available axon size: {available_axon_size}#########################################")
     time.sleep(3)
     # Initialize the query generator
     query_generator = QueryGenerator(self.config)
