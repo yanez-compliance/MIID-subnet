@@ -294,8 +294,9 @@ async def forward(self):
     start_time = time.time()
     seed_names, query_template, query_labels = await query_generator.build_queries()
     end_time = time.time()
-    bt.debug.info(f"Time to generate challenges: {int(end_time - start_time)}s")
-    
+    bt.logging.info(f"Time to generate challenges: {int(end_time - start_time)}s")
+
+
     # Calculate timeout based on the number of names and complexity
     base_timeout = self.config.neuron.timeout  # Double from 60 to 120 seconds
     # More generous allocation - especially for LLM operations
@@ -321,9 +322,9 @@ async def forward(self):
     bt.logging.info(f"#########################################Request synapse names: {request_synapse.names}#########################################")
     bt.logging.info(f"#########################################Request synapse query_template: {request_synapse.query_template}#########################################")
     bt.logging.info(f"#########################################Request synapse variations: {request_synapse.variations}#########################################")
-    time.sleep(10000)
+    time.sleep(60)
 
-    
+
     start_time = time.time()
     
     # Initialize all_responses to collect responses from all batches
