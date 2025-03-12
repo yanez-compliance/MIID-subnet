@@ -2,8 +2,10 @@ import random
 import bittensor as bt
 import ollama
 from typing import Dict, Any, Tuple, List
-from faker import Faker
 import os
+
+# Make sure this import is outside any function or conditional blocks
+from faker import Faker  # Ensure this is always imported
 
 # Constants for query generation
 SIMILARITY_LEVELS = ["Light", "Medium", "Far"]
