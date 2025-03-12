@@ -32,7 +32,8 @@ class QueryGenerator:
             'use_default_query', 
             DEFAULT_QUERY
         )
-        
+
+        bt.logging.info(f"#########################################use_default_query: {self.use_default_query}#########################################")
         bt.logging.info(f"QueryGenerator initialized with use_default_query={self.use_default_query}")
     
     async def generate_complex_query(
@@ -222,7 +223,6 @@ class QueryGenerator:
             }
             
             # Generate simple test names
-            from faker import Faker
             fake = Faker()
             seed_names = [fake.first_name().lower() for _ in range(5)]
             
