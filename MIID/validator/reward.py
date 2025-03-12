@@ -142,19 +142,18 @@ def calculate_variation_quality(
     # Default thresholds if none provided
     if phonetic_thresholds is None:
         phonetic_thresholds = {
-            "Light": 0.8,
-            "Medium": 0.6,
-            "Far": 0.4
+            
+            "Medium": 0.5
         }
     
     if orthographic_thresholds is None:
         orthographic_thresholds = {
-            "Light": 0.7,
-            "Medium": 0.5,
-            "Far": 0.3
+                
+            "Medium": 0.5
+            
         }
-    if True:
-        return 0.8
+    # if True:
+    #     return 0.8
     # 1. Check if count matches expected count with 20% tolerance
     tolerance = 0.2  # 20% tolerance
     tolerance_range = expected_count * tolerance
