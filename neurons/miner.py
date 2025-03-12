@@ -200,7 +200,16 @@ class Miner(BaseMinerNeuron):
         synapse.variations = variations
         bt.logging.info(f"======== SYNAPSE VARIATIONS===============================================: {synapse.variations}")
         bt.logging.info(f"==========================Processed variations for {len(variations)} names in run {run_id}")
-
+        bt.logging.info(f"==========================Synapse: {synapse}")
+        bt.logging.info(f"==========================Synapse type: {type(synapse)}")
+        bt.logging.info(f"==========================Synapse dendrite: {synapse.dendrite}")
+        bt.logging.info(f"==========================Synapse dendrite type: {type(synapse.dendrite)}")
+        bt.logging.info(f"==========================Synapse dendrite status code: {synapse.dendrite.status_code}")
+        bt.logging.info(f"==========================Synapse dendrite status code type: {type(synapse.dendrite.status_code)}")
+        bt.logging.info(f"==========================Synapse names: {synapse.names}")
+        bt.logging.info(f"==========================Synapse query template: {synapse.query_template}")
+        bt.logging.info(f"==========================Synapse variations: {synapse.variations}")
+        bt.logging.info("========================================================================================")
         return synapse
     
     def Get_Respond_LLM(self, prompt: str) -> str:
