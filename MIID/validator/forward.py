@@ -50,14 +50,6 @@ from MIID.validator.query_generator import QueryGenerator
 
 EPOCH_MIN_TIME = 100 # seconds
 
-# Constants for query generation
-SIMILARITY_LEVELS = ["Light", "Medium", "Far"]
-DEFAULT_VARIATION_COUNT = 10
-DEFAULT_ORTHOGRAPHIC_SIMILARITY = "Light"
-DEFAULT_PHONETIC_SIMILARITY = "Light"
-
-DEFAULT_QUERY = True  # Override config setting
-
 
 async def dendrite_with_retries(dendrite: bt.dendrite, axons: list, synapse, deserialize: bool, timeout: float, cnt_attempts=7):
     """
@@ -279,13 +271,12 @@ async def forward(self):
     miner_uids = miner_uids.tolist()  # Convert NumPy array to Python list
     
     # # Add miner_uid 1 to the list for testing purposes if it exists --->(commented out)
-    #if 1 not in miner_uids and 1 in self.metagraph.uids:
-    #    miner_uids.append(1)
+    if 1 not in miner_uids and 1 in self.metagraph.uids:
+        miner_uids.append(1)
     
     bt.logging.info(f"Selected {len(miner_uids)} miners to query: {miner_uids}")
     
-    request_start = time.time()
-
+    # Get random UIDs to query
     available_axon_size = len(self.metagraph.axons) - 1  # Except our own
     miner_selection_size = min(available_axon_size, self.config.neuron.sample_size)
     miner_uids = get_random_uids(self, k=miner_selection_size)
@@ -294,7 +285,7 @@ async def forward(self):
     bt.logging.info(f"#########################################Miner axons: {axons}#########################################")
     bt.logging.info(f"#########################################Miner selection size: {miner_selection_size}#########################################")
     bt.logging.info(f"#########################################Available axon size: {available_axon_size}#########################################")
-
+    time.sleep(10000)
     # Initialize the query generator
     query_generator = QueryGenerator(self.config)
     
