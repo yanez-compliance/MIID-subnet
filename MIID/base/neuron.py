@@ -107,7 +107,7 @@ class BaseNeuron(ABC):
             f"Running neuron on subnet: {self.config.netuid} with uid {self.uid} using network: {self.subtensor.chain_endpoint}"
         )
         self.step = 0
-
+        self.last_update = 0
     @abstractmethod
     async def forward(self, synapse: bt.Synapse) -> bt.Synapse:
         ...
@@ -124,6 +124,7 @@ class BaseNeuron(ABC):
         self.check_registered()
 
         if self.should_sync_metagraph():
+            self.last_update = self.block
             self.resync_metagraph()
 
         if self.should_set_weights():
