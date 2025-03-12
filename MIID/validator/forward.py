@@ -269,12 +269,13 @@ async def forward(self):
 
     # Convert to a list if you need to add more UIDs
     miner_uids = miner_uids.tolist()  # Convert NumPy array to Python list
-    
+    bt.logging.info(f"#########################################Selected {len(miner_uids)} miners to query: {miner_uids}#########################################")
+
     # # Add miner_uid 1 to the list for testing purposes if it exists --->(commented out)
     if 1 not in miner_uids and 1 in self.metagraph.uids:
         miner_uids.append(1)
     
-    bt.logging.info(f"Selected {len(miner_uids)} miners to query: {miner_uids}")
+    bt.logging.info(f"#########################################Selected {len(miner_uids)} miners to query after adding miner_uid 1: {miner_uids}#########################################")
     
     # Get random UIDs to query
     available_axon_size = len(self.metagraph.axons) - 1  # Except our own
@@ -293,10 +294,10 @@ async def forward(self):
     start_time = time.time()
     seed_names, query_template, query_labels = await query_generator.build_queries()
     end_time = time.time()
-    bt.logging.info(f"Time to generate challenges: {int(end_time - start_time)}s")
+    bt.debug.info(f"Time to generate challenges: {int(end_time - start_time)}s")
     
     # Calculate timeout based on the number of names and complexity
-    base_timeout = getattr(self.config.neuron, 'timeout', 120)  # Double from 60 to 120 seconds
+    base_timeout = self.config.neuron.timeout  # Double from 60 to 120 seconds
     # More generous allocation - especially for LLM operations
     adaptive_timeout = base_timeout + (len(seed_names) * 20) + (query_labels['variation_count'] * 10)
     adaptive_timeout = min(600, max(120, adaptive_timeout))  # Min 120s, max 600s (10 minutes)
@@ -313,7 +314,15 @@ async def forward(self):
     if query_generator.use_default_query:  
         bt.logging.info(f"Querying {len(miner_uids)} miners with default query template")
     else:
-        bt.logging.info(f"Querying {len(miner_uids)} miners with complex query")    
+        bt.logging.info(f"Querying {len(miner_uids)} miners with complex query")
+
+    bt.logging.info(f"#########################################Request synapse: {request_synapse}#########################################")
+    bt.logging.info(f"#########################################Request synapse type: {type(request_synapse)}#########################################")
+    bt.logging.info(f"#########################################Request synapse names: {request_synapse.names}#########################################")
+    bt.logging.info(f"#########################################Request synapse query_template: {request_synapse.query_template}#########################################")
+    bt.logging.info(f"#########################################Request synapse variations: {request_synapse.variations}#########################################")
+    time.sleep(10000)
+
     
     start_time = time.time()
     
