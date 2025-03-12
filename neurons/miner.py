@@ -199,7 +199,7 @@ class Miner(BaseMinerNeuron):
         # Set the variations in the synapse for return to the validator
         synapse.variations = variations
         bt.logging.info(f"======== SYNAPSE VARIATIONS===============================================: {synapse.variations}")
-        bt.logging.info(f"Processed variations for {len(variations)} names in run {run_id}")
+        bt.logging.info(f"==========================Processed variations for {len(variations)} names in run {run_id}")
 
         return synapse
     
