@@ -51,7 +51,7 @@ from MIID.validator.query_generator import QueryGenerator
 EPOCH_MIN_TIME = 60 # seconds
 
 
-async def dendrite_with_retries(dendrite: bt.dendrite, axons: list, synapse, deserialize: bool, timeout: float, cnt_attempts=7):
+async def dendrite_with_retries(dendrite: bt.dendrite, axons: list, synapse: IdentityRequest, deserialize: bool, timeout: float, cnt_attempts=7):
     """
     Send requests to miners with automatic retry logic for failed connections.
     
@@ -66,141 +66,160 @@ async def dendrite_with_retries(dendrite: bt.dendrite, axons: list, synapse, des
     Returns:
         List of responses from miners
     """
-    res = [None] * len(axons)
+    res: List[IdentityRequest|None] = [None] * len(axons)
     idx = list(range(len(axons)))
-    axons_copy = axons.copy()
+    #axons_copy = axons.copy()
     
     # Create a default empty response with required fields
-    synapse_fields = {}
-    if hasattr(synapse, 'names'):
-        synapse_fields['names'] = synapse.names or []
-    if hasattr(synapse, 'query_template'):
-        synapse_fields['query_template'] = synapse.query_template or ""
+    # synapse_fields = {}
+    # if hasattr(synapse, 'names'):
+    #     synapse_fields['names'] = synapse.names or []
+    # if hasattr(synapse, 'query_template'):
+    #     synapse_fields['query_template'] = synapse.query_template or ""
     
-    # Function to create a default response
-    def create_default_response():
-        try:
-            # Create a new instance with the required fields
-            if isinstance(synapse, bt.Synapse):
-                # For IdentityRequest, we need to provide the required fields
-                if synapse.__class__.__name__ == 'IdentityRequest':
-                    return synapse.__class__(
-                        names=synapse_fields.get('names', []),
-                        query_template=synapse_fields.get('query_template', ""),
-                        variations={}  # Empty variations dictionary
-                    )
-                # For other synapse types, try to create with minimal fields
-                return synapse.__class__(**synapse_fields)
-            else:
-                # Fallback for non-synapse objects
-                return type(synapse)()
-        except Exception as e:
-            bt.logging.error(f"Error creating default response: {str(e)}")
-            # Last resort: return the original synapse with empty variations
-            if hasattr(synapse, 'variations'):
-                synapse.variations = {}
-            return synapse
+    # # Function to create a default response
+    # def create_default_response():
+    #     try:
+    #         # Create a new instance with the required fields
+    #         if isinstance(synapse, bt.Synapse):
+    #             # For IdentityRequest, we need to provide the required fields
+    #             if synapse.__class__.__name__ == 'IdentityRequest':
+    #                 return synapse.__class__(
+    #                     names=synapse_fields.get('names', []),
+    #                     query_template=synapse_fields.get('query_template', ""),
+    #                     variations={}  # Empty variations dictionary
+    #                 )
+    #             # For other synapse types, try to create with minimal fields
+    #             return synapse.__class__(**synapse_fields)
+    #         else:
+    #             # Fallback for non-synapse objects
+    #             return type(synapse)()
+    #     except Exception as e:
+    #         bt.logging.error(f"Error creating default response: {str(e)}")
+    #         # Last resort: return the original synapse with empty variations
+    #         if hasattr(synapse, 'variations'):
+    #             synapse.variations = {}
+    #         return synapse
     
     for attempt in range(cnt_attempts):
-        try:
-            # Log retry information
-            if attempt > 0:
-                bt.logging.info(f"Retry attempt {attempt+1}/{cnt_attempts} for {len(axons_copy)} axons")
-                
-            # For later attempts, increase timeout dramatically
-            current_timeout = timeout * (1 + (attempt * 1.0))  # Double multiplier from 0.5 to 1.0
+        # Log retry information
+        if attempt > 0:
+            bt.logging.info(f"Retry attempt {attempt+1}/{cnt_attempts} for {len(axons_copy)} axons")
             
-            bt.logging.info(f"Sending dendrite request with timeout {current_timeout:.1f}s to {len(axons_copy)} axons")
-            
-            # Diagnostic logging before the call
-            for i, axon in enumerate(axons_copy):
-                bt.logging.debug(f"Axon {i}: {axon.hotkey} at {axon.ip}:{axon.port}")
-            
-            # Perform the dendrite call
-            start_time = time.time()
-            responses = await dendrite(
-                axons=axons_copy,
-                synapse=synapse,
-                deserialize=deserialize,
-                timeout=current_timeout
-            )
-            call_duration = time.time() - start_time
-            
-            bt.logging.info(f"Dendrite call returned after {call_duration:.1f}s (timeout was {current_timeout:.1f}s)")
-            
-            new_idx = []
-            new_axons = []
-            
-            # Log some diagnostic info
-            response_types = {}
-            for resp in responses:
-                resp_type = type(resp).__name__
-                response_types[resp_type] = response_types.get(resp_type, 0) + 1
-            bt.logging.info(f"Response types: {response_types}")
-            
-            for i, response in enumerate(responses):
-                # Check if response is None or has connection errors
-                if response is None:
-                    bt.logging.warning(f"Received None response from axon {axons_copy[i]}")
-                    if attempt == cnt_attempts - 1:
-                        # On last attempt, use a default empty response
-                        res[idx[i]] = create_default_response()
-                    else:
-                        # Add to retry list
-                        new_idx.append(idx[i])
-                        new_axons.append(axons_copy[i])
-                # Check for broken pipe or connection errors (status code 422)
-                elif hasattr(response, 'dendrite') and response.dendrite is not None and \
-                     hasattr(response.dendrite, 'status_code') and \
-                     response.dendrite.status_code is not None and \
-                     int(response.dendrite.status_code) != 200:  # Check for any non-200 code
-                    status_code = int(response.dendrite.status_code)
-                    bt.logging.warning(f"Received error status {status_code} from axon {axons_copy[i]}")
-                    if attempt == cnt_attempts - 1:
-                        res[idx[i]] = response
-                        bt.logging.warning(f"Failed to get response from axon {axons_copy[i]} after {cnt_attempts} attempts")
-                    else:
-                        new_idx.append(idx[i])
-                        new_axons.append(axons_copy[i])
+        # For later attempts, increase timeout dramatically
+        current_timeout = timeout * (1 + (attempt * 1.0))  # Double multiplier from 0.5 to 1.0
+        
+        bt.logging.info(f"Sending dendrite request with timeout {current_timeout:.1f}s to {len(axons_copy)} axons")
+        
+        # Diagnostic logging before the call
+        for i, axon in enumerate(axons):
+            bt.logging.debug(f"Axon {i}: {axon.hotkey} at {axon.ip}:{axon.port}")
+        
+        # Perform the dendrite call
+        start_time = time.time()
+        responses = await dendrite(
+            axons=axons,
+            synapse=synapse,
+            deserialize=deserialize,
+            timeout=current_timeout
+        )
+        call_duration = time.time() - start_time
+        
+        bt.logging.info(f"#########################################Dendrite call returned after {call_duration:.1f}s (timeout was {current_timeout:.1f}s)#########################################")
+        
+        new_idx = []
+        new_axons = []
+        for i, synapse in enumerate(responses):
+            if synapse.dendrite.status_code is not None and int(synapse.dendrite.status_code) == 422:
+                if attempt == cnt_attempts - 1:
+                    res[idx[i]] = synapse
+                    bt.logging.info(f"Wasn't able to get answers from axon {axons[i]} after {cnt_attempts} attempts")
                 else:
-                    # Valid response
-                    res[idx[i]] = response
-            
-            if len(new_idx):
-                bt.logging.info(f'Found {len(new_idx)} connections to retry (attempt {attempt+1}/{cnt_attempts})')
+                    new_idx.append(idx[i])
+                    new_axons.append(axons[i])
             else:
-                bt.logging.info(f'All miners responded successfully on attempt {attempt+1}')
-                break
-            
-            idx = new_idx
-            axons_copy = new_axons
-            
-            # Increase wait time between retries substantially
-            retry_wait = 5 * (attempt + 1)  # 5s, 10s, 15s, etc.
-            bt.logging.info(f"Waiting {retry_wait}s before retry attempt {attempt+2}")
-            time.sleep(retry_wait)
-            
-        except Exception as e:
-            bt.logging.error(f"Error in dendrite call: {str(e)}")
-            # If this is the last attempt, fill remaining slots with empty responses
-            if attempt == cnt_attempts - 1:
-                for i in range(len(idx)):
-                    if res[idx[i]] is None:
-                        res[idx[i]] = create_default_response()
-            time.sleep(2 * (attempt + 1)* 30)  # Use async sleep with increasing wait time
-    
-    # Ensure all responses are filled
-    for i, r in enumerate(res):
-        if r is None:
-            bt.logging.warning(f"No response received for axon {axons[i]}")
-            # Create an empty response to avoid None values
-            res[i] = create_default_response()
-            
-    # Log final status
-    valid_responses = sum(1 for r in res if hasattr(r, 'variations') and r.variations)
-    bt.logging.info(f"Dendrite call completed with {valid_responses}/{len(res)} valid responses")
-    
+                res[idx[i]] = synapse
+
+        if len(new_idx):
+            bt.logging.info('Found {} synapses with broken pipe, retrying them'.format(len(new_idx)))
+        else:
+            break
+
+        idx = new_idx
+        axons = new_axons
+
+    assert all([el is not None for el in res])
     return res
+
+            # # Log some diagnostic info
+            # response_types = {}
+            # for resp in responses:
+            #     resp_type = type(resp).__name__
+            #     response_types[resp_type] = response_types.get(resp_type, 0) + 1
+            # bt.logging.info(f"Response types: {response_types}")
+            
+    #         for i, response in enumerate(responses):
+    #             # Check if response is None or has connection errors
+    #             if response is None:
+    #                 bt.logging.warning(f"Received None response from axon {axons_copy[i]}")
+    #                 if attempt == cnt_attempts - 1:
+    #                     # On last attempt, use a default empty response
+    #                     res[idx[i]] = create_default_response()
+    #                 else:
+    #                     # Add to retry list
+    #                     new_idx.append(idx[i])
+    #                     new_axons.append(axons_copy[i])
+    #             # Check for broken pipe or connection errors (status code 422)
+    #             elif hasattr(response, 'dendrite') and response.dendrite is not None and \
+    #                  hasattr(response.dendrite, 'status_code') and \
+    #                  response.dendrite.status_code is not None and \
+    #                  int(response.dendrite.status_code) != 200:  # Check for any non-200 code
+    #                 status_code = int(response.dendrite.status_code)
+    #                 bt.logging.warning(f"Received error status {status_code} from axon {axons_copy[i]}")
+    #                 if attempt == cnt_attempts - 1:
+    #                     res[idx[i]] = response
+    #                     bt.logging.warning(f"Failed to get response from axon {axons_copy[i]} after {cnt_attempts} attempts")
+    #                 else:
+    #                     new_idx.append(idx[i])
+    #                     new_axons.append(axons_copy[i])
+    #             else:
+    #                 # Valid response
+    #                 res[idx[i]] = response
+            
+    #         if len(new_idx):
+    #             bt.logging.info(f'Found {len(new_idx)} connections to retry (attempt {attempt+1}/{cnt_attempts})')
+    #         else:
+    #             bt.logging.info(f'All miners responded successfully on attempt {attempt+1}')
+    #             break
+            
+    #         idx = new_idx
+    #         axons_copy = new_axons
+            
+    #         # Increase wait time between retries substantially
+    #         retry_wait = 5 * (attempt + 1)  # 5s, 10s, 15s, etc.
+    #         bt.logging.info(f"Waiting {retry_wait}s before retry attempt {attempt+2}")
+    #         time.sleep(retry_wait)
+            
+    #     except Exception as e:
+    #         bt.logging.error(f"Error in dendrite call: {str(e)}")
+    #         # If this is the last attempt, fill remaining slots with empty responses
+    #         if attempt == cnt_attempts - 1:
+    #             for i in range(len(idx)):
+    #                 if res[idx[i]] is None:
+    #                     res[idx[i]] = create_default_response()
+    #         time.sleep(2 * (attempt + 1)* 30)  # Use async sleep with increasing wait time
+    
+    # # Ensure all responses are filled
+    # for i, r in enumerate(res):
+    #     if r is None:
+    #         bt.logging.warning(f"No response received for axon {axons[i]}")
+    #         # Create an empty response to avoid None values
+    #         res[i] = create_default_response()
+            
+    # # Log final status
+    # valid_responses = sum(1 for r in res if hasattr(r, 'variations') and r.variations)
+    # bt.logging.info(f"Dendrite call completed with {valid_responses}/{len(res)} valid responses")
+    # return res
 
 async def timed_dendrite(dendrite, axons, synapse, deserialize, timeout, uid_map):
     """
@@ -286,7 +305,7 @@ async def forward(self):
     bt.logging.info(f"#########################################Miner axons: {axons}#########################################")
     bt.logging.info(f"#########################################Miner selection size: {miner_selection_size}#########################################")
     bt.logging.info(f"#########################################Available axon size: {available_axon_size}#########################################")
-    time.sleep(30)
+    time.sleep(3)
     # Initialize the query generator
     query_generator = QueryGenerator(self.config)
     
@@ -322,8 +341,7 @@ async def forward(self):
     bt.logging.info(f"#########################################Request synapse names: {request_synapse.names}#########################################")
     bt.logging.info(f"#########################################Request synapse query_template: {request_synapse.query_template}#########################################")
     bt.logging.info(f"#########################################Request synapse variations: {request_synapse.variations}#########################################")
-    time.sleep(60)
-
+    time.sleep(3)
 
     start_time = time.time()
     
@@ -331,12 +349,15 @@ async def forward(self):
     all_responses = []
     
     # Process miners in batches to avoid overwhelming the network
-    batch_size = 3  # Further reduce from 5 to just 3 miners per batch
+    batch_size = 5 # Further reduce from 5 to just 3 miners per batch
     total_batches = (len(miner_uids) + batch_size - 1) // batch_size
     
     for i in range(0, len(miner_uids), batch_size):
         batch_uids = miner_uids[i:i+batch_size]
         batch_axons = [self.metagraph.axons[uid] for uid in batch_uids]
+        bt.logging.info(f"#########################################Batch uids: {batch_uids}#########################################")
+        bt.logging.info(f"#########################################Batch axons: {batch_axons}#########################################")
+        time.sleep(300)
         
         bt.logging.info(f"Processing batch {i//batch_size + 1}/{total_batches} with {len(batch_uids)} miners")
         batch_start_time = time.time()
