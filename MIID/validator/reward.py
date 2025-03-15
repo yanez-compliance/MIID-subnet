@@ -241,10 +241,10 @@ def calculate_variation_quality(
     
     # Calculate final quality score with all factors
     # Weight factors according to importance
-    similarity_weight = 0.8  # Combined weight for phonetic and orthographic similarity
+    similarity_weight = 0.6  # Combined weight for phonetic and orthographic similarity
     count_weight = 0.05       # Weight for having the correct number of variations
-    uniqueness_weight = 0.0  # Weight for having unique variations
-    length_weight = 0.15      # Weight for reasonable length variations
+    uniqueness_weight = 0.3  # Weight for having unique variations
+    length_weight = 0.05      # Weight for reasonable length variations
     
     similarity_score = (phonetic_quality + orthographic_quality) / 2  # Average of both similarities
     

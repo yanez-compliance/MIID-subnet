@@ -3,6 +3,8 @@ pydantic>=2
 rich>=13
 pytest>=8
 torch>=2
+pandas
+tdqm
 numpy>=1
 setuptools>=68
 faker
