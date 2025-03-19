@@ -73,14 +73,7 @@ ollama pull llama3.1:latest
 
 ## Running a Miner
 
-1. Create or import a wallet:
-```bash
-btcli wallet new
-# or
-btcli wallet import
-```
-
-2. Register your miner to the subnet:
+1. Register your miner to the subnet:
 ```bash
 btcli subnet register --netuid 322 --wallet.name your_wallet_name --wallet.hotkey your_hotkey --subtensor.network test
 ```
@@ -117,9 +110,29 @@ python neurons/miner.py --netuid 322 --wallet.name your_wallet_name --wallet.hot
 
 3. The miner processes all responses and returns a dictionary mapping each input name to a list of variations.
 
+
+## Competitive Edge: Creating Better Threat Scenarios
+
+MIID validators reward miners who can generate high-quality, realistic threat scenarios through name variations. To succeed in this subnet, miners should focus on:
+
+1. **Advanced Name Variation Techniques**: Implement sophisticated algorithms that go beyond simple character substitutions to create realistic variations that might evade detection systems.
+
+2. **Linguistic Expertise**: Incorporate knowledge of different naming conventions, transliterations, and cultural variations to generate more authentic threat scenarios.
+
+3. **Prompt Engineering**: Optimize your LLM prompts to produce variations that specifically challenge identity matching systems while maintaining phonetic or orthographic similarity.
+
+4. **Model Tuning**: Consider fine-tuning your LLM specifically for identity variation tasks to outperform miners using default models.
+
+5. **Evasion Pattern Research**: Study real-world identity evasion techniques used in financial crime to inform your variation generation approach.
+
+Remember, validators score based on both quality and realism - variations that could realistically challenge actual fraud detection systems will score higher than simple character substitutions.
+
 ## Performance Tips
 
 1. Use a powerful GPU if available to speed up LLM inference
 2. Ensure your miner has reliable internet connectivity
 3. Monitor your miner's logs for errors or performance issues
 4. Consider using a high-quality LLM model for better variations
+5. Implement custom post-processing to filter and enhance LLM outputs
+6. Regularly update your variation generation techniques to remain competitive
+7. Test your variations against actual identity matching algorithms to calibrate quality
