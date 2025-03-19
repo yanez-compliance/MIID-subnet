@@ -75,14 +75,7 @@ ollama pull llama3.1:latest
 
 ## Running a Validator
 
-1. Create or import a wallet:
-```bash
-btcli wallet new
-# or
-btcli wallet import
-```
-
-2. Stake TAO to the subnet:
+1. Stake to the subnet:
 ```bash
 btcli stake add --netuid 322 --amount 100 --wallet.name your_wallet_name --wallet.hotkey your_hotkey --subtensor.network test
 ```
