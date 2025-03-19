@@ -55,6 +55,8 @@ class IdentitySynapse(bt.Synapse):
     # Required request input, filled by sending dendrite caller
     names: List[str]
     query_template: str
+
+    timeout: float = 120.0
     
     # Optional request output, filled by receiving axon
     variations: Optional[Dict[str, List[str]]] = None

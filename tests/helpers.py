@@ -15,7 +15,7 @@
 # OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
 # DEALINGS IN THE SOFTWARE.
 
-from typing import Union
+from typing import Union, List, Dict
 from bittensor import (
     Balance,
     NeuronInfo,
@@ -31,6 +31,9 @@ from bittensor.mock.wallet_mock import get_mock_wallet as _get_mock_wallet
 
 from rich.console import Console
 from rich.text import Text
+import bittensor as bt
+import torch
+from MIID.protocol import IdentitySynapse
 
 
 def __mock_wallet_factory__(*args, **kwargs) -> _MockWallet:
@@ -179,3 +182,77 @@ class MockConsole:
         output_no_syntax = Text.from_ansi(Text.from_markup(text).plain).plain
 
         return output_no_syntax
+
+
+def get_mock_wallet():
+    """Creates a mock wallet for testing"""
+    wallet = bt.wallet(name="mock", hotkey="mock")
+    return wallet
+
+
+def create_mock_metagraph(n: int = 10):
+    """
+    Creates a mock metagraph with n nodes for testing
+    
+    Args:
+        n (int): Number of nodes in the metagraph
+    """
+    metagraph = bt.metagraph(netuid=1)
+    metagraph.hotkeys = [f"hotkey_{i}" for i in range(n)]
+    metagraph.uids = torch.tensor(range(n))
+    return metagraph
+
+
+def create_test_synapse(
+    names: List[str] = None,
+    template: str = None
+) -> IdentitySynapse:
+    """
+    Creates a test synapse with specified parameters
+    
+    Args:
+        names (List[str]): List of names to generate variations for
+        template (str): Query template to use
+    """
+    if names is None:
+        names = ["John Smith"]
+    if template is None:
+        template = "Generate variations for {name}"
+        
+    return IdentitySynapse(
+        names=names,
+        query_template=template,
+        variations={}
+    )
+
+
+def create_mock_responses(
+    names: List[str],
+    response_type: str = "valid"
+) -> Dict[str, List[str]]:
+    """
+    Creates mock responses for testing
+    
+    Args:
+        names (List[str]): List of names to generate responses for
+        response_type (str): Type of response to generate (valid/empty/invalid)
+    """
+    if response_type == "valid":
+        return {
+            name: [f"{name}_var1", f"{name}_var2", f"{name}_var3"]
+            for name in names
+        }
+    elif response_type == "empty":
+        return {}
+    elif response_type == "invalid":
+        return {name: [] for name in names}
+    else:
+        raise ValueError(f"Unknown response type: {response_type}")
+
+
+def mock_query_generator_config():
+    """Creates a mock configuration for the QueryGenerator"""
+    config = bt.config(withconfig=True)
+    config.neuron.timeout = 120
+    config.neuron.use_default_query = False
+    return config

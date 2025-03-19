@@ -364,6 +364,7 @@ def get_name_variation_rewards(
     return rewards
 
 
+
 def save_variations_to_csv(
     self,
     seed_names: List[str],

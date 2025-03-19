@@ -73,7 +73,15 @@ class Validator(BaseValidatorNeuron):
     provide high-quality name variations, which helps to improve the overall
     quality of the network.
     """
-
+    # llama3.1:latest is the default model for the validator
+    # this is 8B model and it is faster than llama3.1: 70B or 405B models
+    # is a more general-purpose model with enhanced reasoning and general knowledge capabilities, suitable for a broader range of applications.
+    # it is a good balance between speed and quality
+    # llama3.2:latest is 1B model and it is efficient for on device inference
+    # llama3.3:latest is 70B model and it is the latest and most powerful model but require more memory and time to run
+    # it is recommended to use llama3.1:latest for the validator
+    # but you can try other models and see which one performs better for your use case
+    
     DEFAULT_LLM_MODEL = "llama3.1:latest"
 
     def __init__(self, config=None):

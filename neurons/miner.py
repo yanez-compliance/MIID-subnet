@@ -156,6 +156,11 @@ class Miner(BaseMinerNeuron):
         run_id = int(time.time())
         bt.logging.info(f"Starting run {run_id} for {len(synapse.names)} names")
         
+        # Get timeout from synapse (default to 120s if not specified)
+        timeout = getattr(synapse, 'timeout', 120.0)
+        bt.logging.info(f"Request timeout: {timeout:.1f}s for {len(synapse.names)} names")
+        start_time = time.time()
+        
         # Create a run-specific directory
         run_dir = os.path.join(self.output_path, f"run_{run_id}")
         os.makedirs(run_dir, exist_ok=True)
@@ -164,10 +169,26 @@ class Miner(BaseMinerNeuron):
         # Format: ["Respond", "---", "Query-{name}", "---", "{LLM response}"]
         Response_list = []
         
-        # Process each name in the request
+        # Track which names we've processed
+        processed_names = []
+        
+        # Process each name in the request, respecting the timeout
         for name in tqdm(synapse.names, desc="Processing names"):
+            # Check if we're approaching the timeout (reserve 15% for processing)
+            elapsed = time.time() - start_time
+            remaining = timeout - elapsed
+            time_buffer = timeout * 0.15  # Reserve 15% of total time for final processing
+            
+            # If time is running out, skip remaining names
+            if remaining < time_buffer:
+                bt.logging.warning(
+                    f"Time limit approaching ({elapsed:.1f}/{timeout:.1f}s), "
+                    f"processed {len(processed_names)}/{len(synapse.names)} names. "
+                    f"Skipping remaining names to ensure timely response."
+                )
+                break
+            
             # Format the response list for later processing
-            # This follows the format expected by Process_function
             Response_list.append("Respond")
             Response_list.append("---")
             Response_list.append("Query-" + name)
@@ -176,39 +197,47 @@ class Miner(BaseMinerNeuron):
             # Format the query with the current name
             formatted_query = synapse.query_template.replace("{name}", name)
             
-            # Query the LLM
+            # Query the LLM with timeout awareness
             try:
-                bt.logging.info(f"Generating variations for name: {name}")
+                bt.logging.info(f"Generating variations for name: {name}, remaining time: {remaining:.1f}s")
+                # Pass a more limited timeout to the LLM call to ensure we stay within bounds
                 name_respond = self.Get_Respond_LLM(formatted_query)
                 Response_list.append(name_respond)
+                processed_names.append(name)
             except Exception as e:
                 bt.logging.error(f"Error querying LLM for name {name}: {str(e)}")
                 Response_list.append("Error: " + str(e))
         
-        # # Save raw responses to file for debugging and analysis
-        # # Include run_id in the filename
-        # raw_response_path = os.path.join(run_dir, f"raw_responses_{run_id}.txt")
-        # with open(raw_response_path, 'wt', encoding='utf-8') as f:
-        #     f.write(str(Response_list))
-        # bt.logging.info(f"Saved raw LLM responses to: {raw_response_path}")
+        # Check if we've managed to process at least some names
+        if not processed_names:
+            bt.logging.error("Could not process any names within the timeout period")
+            synapse.variations = {}
+            return synapse
         
-        # Process the responses to extract variations
-        variations = self.process_variations(Response_list, run_id, run_dir)
-        ## print the variations
-        bt.logging.info(f"======== FINAL VARIATIONS===============================================: {variations}")
-        # Set the variations in the synapse for return to the validator
-        synapse.variations = variations
+        # Process the responses to extract variations, but be aware of remaining time
+        remaining = timeout - (time.time() - start_time)
+        bt.logging.info(f"Processing responses with {remaining:.1f}s remaining of {timeout:.1f}s timeout")
+        
+        # Only proceed with processing if we have enough time
+        if remaining > 1.0:  # Ensure at least 1 second for processing
+            variations = self.process_variations(Response_list, run_id, run_dir)
+            bt.logging.info(f"======== FINAL VARIATIONS===============================================: {variations}")
+            # Set the variations in the synapse for return to the validator
+            synapse.variations = variations
+        else:
+            bt.logging.warning(f"Insufficient time for processing responses, returning empty result")
+            synapse.variations = {}
+        
+        # Log final timing information
+        total_time = time.time() - start_time
+        bt.logging.info(
+            f"Request completed in {total_time:.2f}s of {timeout:.1f}s allowed. "
+            f"Processed {len(processed_names)}/{len(synapse.names)} names."
+        )
+        
         bt.logging.info(f"======== SYNAPSE VARIATIONS===============================================: {synapse.variations}")
-        bt.logging.info(f"==========================Processed variations for {len(variations)} names in run {run_id}")
+        bt.logging.info(f"==========================Processed variations for {len(synapse.variations)} names in run {run_id}")
         bt.logging.info(f"==========================Synapse: {synapse}")
-        bt.logging.info(f"==========================Synapse type: {type(synapse)}")
-        bt.logging.info(f"==========================Synapse dendrite: {synapse.dendrite}")
-        bt.logging.info(f"==========================Synapse dendrite type: {type(synapse.dendrite)}")
-        bt.logging.info(f"==========================Synapse dendrite status code: {synapse.dendrite.status_code}")
-        bt.logging.info(f"==========================Synapse dendrite status code type: {type(synapse.dendrite.status_code)}")
-        bt.logging.info(f"==========================Synapse names: {synapse.names}")
-        bt.logging.info(f"==========================Synapse query template: {synapse.query_template}")
-        bt.logging.info(f"==========================Synapse variations: {synapse.variations}")
         bt.logging.info("========================================================================================")
         return synapse
     
@@ -229,13 +258,24 @@ class Miner(BaseMinerNeuron):
             Exception: If there's an error communicating with the LLM
         """
         # Use Ollama to query the LLM
-        response = ollama.chat(self.model_name, messages=[{
-            'role': 'user',
-            'content': prompt,
-        }])
-        
-        # Extract and return the content of the response
-        return response['message']['content']
+        try:
+            response = ollama.chat(
+                self.model_name, 
+                messages=[{
+                    'role': 'user',
+                    'content': prompt,
+                }],
+                options={
+                    # Add a reasonable timeout to ensure we don't get stuck
+                    "num_predict": 1024
+                }
+            )
+            
+            # Extract and return the content of the response
+            return response['message']['content']
+        except Exception as e:
+            bt.logging.error(f"LLM query failed: {str(e)}")
+            raise
     
     def process_variations(self, Response_list: List[str], run_id: int, run_dir: str) -> Dict[str, List[str]]:
         """

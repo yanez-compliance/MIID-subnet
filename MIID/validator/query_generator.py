@@ -12,7 +12,7 @@ SIMILARITY_LEVELS = ["Light", "Medium", "Far"]
 DEFAULT_VARIATION_COUNT = 10
 DEFAULT_ORTHOGRAPHIC_SIMILARITY = "Light"
 DEFAULT_PHONETIC_SIMILARITY = "Light"
-DEFAULT_QUERY = True  # Use simple default query instead of complex LLM-generated one
+DEFAULT_QUERY = False  # Use simple default query instead of complex LLM-generated one
 
 class QueryGenerator:
     """
