@@ -6,7 +6,35 @@ bt_subnet_venv
 venv/
 .env/
 *.venv/
+ENV/
+virtualenv/
+*env*/
 
+# Python bytecode
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Distribution / packaging
+dist/
+build/
+*.egg-info/
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# Logs
+*.log
+
+# Local configuration
+.env
+.local
+
+# IDE specific files
+.idea/
+.vscode/
+*.swp
+*.swo
 # C extensions
 *.so
 

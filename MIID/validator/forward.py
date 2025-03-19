@@ -48,10 +48,10 @@ from MIID.validator.reward import get_name_variation_rewards
 from MIID.utils.uids import get_random_uids
 from MIID.validator.query_generator import QueryGenerator
 
-EPOCH_MIN_TIME = 60 # seconds
+EPOCH_MIN_TIME = 360 # seconds
 
 
-async def dendrite_with_retries(dendrite: bt.dendrite, axons: list, synapse: IdentitySynapse, deserialize: bool, timeout: float, cnt_attempts=7):
+async def dendrite_with_retries(dendrite: bt.dendrite, axons: list, synapse: IdentitySynapse, deserialize: bool, timeout: float, cnt_attempts=3):
     """
     Send requests to miners with automatic retry logic for failed connections.
     
@@ -184,7 +184,7 @@ async def forward(self):
     #     miner_uids.append(1)
     
     #bt.logging.info(f"#########################################Selected {len(miner_uids)} miners to query after adding miner_uid 1: {miner_uids}#########################################")
-    time.sleep(3)
+    #time.sleep(3)
     # Initialize the query generator
     query_generator = QueryGenerator(self.config)
     
@@ -206,7 +206,8 @@ async def forward(self):
     request_synapse = IdentitySynapse(
         names=seed_names,
         query_template=query_template,
-        variations={}  # Initialize with empty variations
+        variations={},
+        timeout=adaptive_timeout
     )
     
     # Query the network with retry logic
@@ -228,7 +229,7 @@ async def forward(self):
     all_responses = []
     
     # Process miners in batches to avoid overwhelming the network
-    batch_size = 5 # Further reduce from 5 to just 3 miners per batch
+    batch_size = 5 
     total_batches = (len(miner_uids) + batch_size - 1) // batch_size
     
     for i in range(0, len(miner_uids), batch_size):

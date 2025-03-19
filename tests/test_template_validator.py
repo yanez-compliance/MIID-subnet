@@ -18,15 +18,18 @@
 
 import sys
 import unittest
-
+import pytest
 import bittensor as bt
 import torch
 
 from neurons.validator import Validator
 from MIID.base.validator import BaseValidatorNeuron
-from MIID.protocol import Dummy
+from MIID.protocol import Dummy, IdentitySynapse
 from MIID.utils.uids import get_random_uids
 from MIID.validator.reward import get_rewards
+from MIID.validator.query_generator import QueryGenerator
+from MIID.mock import MockDendrite
+from tests.helpers import get_mock_wallet
 
 
 class TemplateValidatorNeuronTestCase(unittest.TestCase):
@@ -110,3 +113,76 @@ class TemplateValidatorNeuronTestCase(unittest.TestCase):
 
         with self.assertLogs(bt.logging, level="WARNING") as cm:
             self.neuron.update_scores(rewards, self.miner_uids)
+
+
+def test_validator_query_generation():
+    """Test that the validator can generate appropriate queries"""
+    # Create mock config
+    config = bt.config(withconfig=True)
+    config.neuron.timeout = 120
+    
+    # Initialize query generator
+    query_generator = QueryGenerator(config)
+    
+    # Test query generation
+    names, template, labels = query_generator.build_queries()
+    
+    # Assertions
+    assert isinstance(names, list)
+    assert all(isinstance(name, str) for name in names)
+    assert isinstance(template, str)
+    assert isinstance(labels, dict)
+    assert 'variation_count' in labels
+
+
+def test_validator_response_handling():
+    """Test that the validator can handle different types of responses"""
+    # Create mock wallet and dendrite
+    wallet = get_mock_wallet()
+    mock_dendrite = MockDendrite(wallet)
+    
+    # Create test synapse
+    test_synapse = IdentitySynapse(
+        names=["John Smith"],
+        query_template="Generate variations for {name}",
+        variations={}
+    )
+    
+    # Test valid response
+    valid_response = {
+        "John Smith": ["Johnny Smith", "J. Smith", "John S."]
+    }
+    
+    # Mock successful response
+    response = mock_dendrite.mock_response(test_synapse, valid_response)
+    assert isinstance(response.variations, dict)
+    assert "John Smith" in response.variations
+    
+    # Test error response
+    error_response = mock_dendrite.mock_error_response(test_synapse)
+    assert error_response.dendrite.status_code != 200
+
+
+def test_validator_reward_calculation():
+    """Test the reward calculation logic"""
+    # Create test responses
+    good_response = {
+        "John Smith": ["Johnny Smith", "J. Smith", "John S."]
+    }
+    empty_response = {}
+    invalid_response = {
+        "John Smith": []
+    }
+    
+    # Test reward calculations
+    from MIID.validator.reward import get_name_variation_rewards
+    
+    good_score = get_name_variation_rewards(good_response, ["John Smith"])
+    empty_score = get_name_variation_rewards(empty_response, ["John Smith"])
+    invalid_score = get_name_variation_rewards(invalid_response, ["John Smith"])
+    
+    assert good_score > empty_score
+    assert good_score > invalid_score
+    assert 0 <= good_score <= 1
+    assert 0 <= empty_score <= 1
+    assert 0 <= invalid_score <= 1

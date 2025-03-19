@@ -3,6 +3,12 @@ import asyncio
 import bittensor as bt
 from prompting.mock import MockDendrite, MockMetagraph, MockSubtensor
 from prompting.protocol import PromptingSynapse
+from MIID.mock import MockDendrite
+from tests.helpers import (
+    get_mock_wallet,
+    create_test_synapse,
+    create_mock_responses
+)
 
 
 @pytest.mark.parametrize("netuid", [1, 2, 3])
@@ -105,3 +111,49 @@ def test_mock_dendrite_timings(timeout, min_time, max_time, n):
             # check that outputs are not empty for successful responses
             assert synapse.dummy_output == synapse.dummy_input * 2
         # dont check for responses which take between timeout and max_time because they are not guaranteed to have a status code of 200 or 408
+
+
+def test_mock_dendrite_initialization():
+    """Test that MockDendrite initializes correctly"""
+    wallet = get_mock_wallet()
+    mock_dendrite = MockDendrite(wallet)
+    assert isinstance(mock_dendrite, MockDendrite)
+
+
+def test_mock_dendrite_response():
+    """Test that MockDendrite returns appropriate responses"""
+    wallet = get_mock_wallet()
+    mock_dendrite = MockDendrite(wallet)
+    
+    # Test with valid synapse
+    test_synapse = create_test_synapse()
+    response = mock_dendrite.mock_response(
+        test_synapse,
+        create_mock_responses(test_synapse.names)
+    )
+    
+    assert response.dendrite.status_code == 200
+    assert isinstance(response.variations, dict)
+    
+    # Test timeout scenario
+    timeout_response = mock_dendrite.mock_timeout_response(test_synapse)
+    assert timeout_response.dendrite.status_code == 408
+
+
+def test_mock_dendrite_batch_processing():
+    """Test that MockDendrite can handle batch requests"""
+    wallet = get_mock_wallet()
+    mock_dendrite = MockDendrite(wallet)
+    
+    # Create test batch
+    test_names = ["John Smith", "Jane Doe", "Bob Wilson"]
+    test_synapse = create_test_synapse(names=test_names)
+    
+    # Test batch response
+    responses = mock_dendrite.mock_batch_responses(
+        test_synapse,
+        [create_mock_responses([name]) for name in test_names]
+    )
+    
+    assert len(responses) == len(test_names)
+    assert all(r.dendrite.status_code in [200, 408] for r in responses)
