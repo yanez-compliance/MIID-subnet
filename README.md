@@ -1,8 +1,8 @@
 <div align="center">
 <picture>
-    <source srcset="YANEZ.ai Subnets.jpg" media="(prefers-color-scheme: dark)">
-    <source srcset="YANEZ.ai Subnets.jpg" media="(prefers-color-scheme: light)">
-    <img src="YANEZ.ai Subnets.jpg" width="600">
+    <source srcset="YanezSubnetLogo.png" media="(prefers-color-scheme: dark)">
+    <source srcset="YanezSubnetLogo.png" media="(prefers-color-scheme: light)">
+    <img src="YanezSubnetLogo.png" width="300">
 </picture>
 
 # **MIID Subnet 322 - Identity Testing Network**
@@ -116,7 +116,7 @@ We are continuously improving MIID to:
 Join us in shaping the future of **identity verification and fraud prevention**.
 
 📢 **Follow the project & contribute to our open-source development!**  
-[Discord](https://discord.gg/bittensor) | [GitHub](https://github.com/yourusername/MIID-subnet)
+[Discord](https://discord.com/channels/799672011265015819/1351934165964296232) | [GitHub](https://github.com/yanez-compliance/MIID-subnet)
 
 ---
 
