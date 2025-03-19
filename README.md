@@ -116,7 +116,7 @@ We are continuously improving MIID to:
 Join us in shaping the future of **identity verification and fraud prevention**.
 
 📢 **Follow the project & contribute to our open-source development!**  
-[Discord](https://discord.gg/bittensor) | [GitHub](https://github.com/yourusername/MIID-subnet)
+[Discord](https://discord.gg/bittensor) | [GitHub](https://github.com/yanez-compliance/MIID-subnet)
 
 ---
 
