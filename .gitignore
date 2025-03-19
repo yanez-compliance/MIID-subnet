@@ -2,8 +2,9 @@
 __pycache__/
 *.py[cod]
 *$py.class
-bt_subnet_venv
-venv/
+bt_subnet_venv/
+
+*venv/
 .env/
 *.venv/
 ENV/
