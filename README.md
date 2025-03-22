@@ -105,6 +105,40 @@ For detailed instructions, check our **[Mining Guide](docs/miner.md)** and **[Va
 MIID is not just another AI dataset—it’s a **live, evolving system** that **challenges and improves** real-world fraud detection models. Every contribution makes financial systems **safer and more secure**.
 
 ---
+## 🛣️ Roadmap
+
+### Phase 1: Initial Launch & Name-Based Threat Scenarios (April 2025)
+- Deploy MIID subnet on Bittensor mainnet.
+- Enable validators to test known threat scenarios against miner responses.
+- Introduce name-based execution vectors: phonetic, orthographic, and rule-based variations.
+
+### Phase 2: Miner-Contributed Threat Scenarios (May 2025)
+- Expand Threat Scenario Query System to allow miners to propose unknown threat scenarios.
+- Introduce a **Post-Evaluation System** to systematically validate and assess new miner-submitted threat scenarios.
+- Support new evasion tactics, including nickname-based threats, transliteration-based alterations, and middle name manipulations.
+- Improve validator scoring and introduce penalties for repetitive or low-value submissions.
+
+### Phase 3: Location-Based Threat Scenarios (July 2025)
+- Add support for location obfuscation via IP, region, and geographic manipulation.
+- Support organic queries to detect evasion tied to high-risk regions.
+
+### Phase 4: AML Ecosystem Integration (September 2025)
+- Open subnet to external institutions and regulators.
+- Enable real-world compliance queries and expand validated execution vectors.
+
+### Phase 5–11 (2026–2027): Identity Realism & Simulation
+- Integrate biometric data (Q1 2026)
+- Generate and validate synthetic documents (Q2 2026)
+- Simulate digital presence and interactions (Q3 2026)
+- Introduce financial transaction modeling (Q4 2026)
+- Build 3D identity avatars (Q2 2027)
+- Add voice and conversational AI support
+
+### Final Phase: Unified Identity Representation
+- Train a comprehensive model for identity screening.
+- Launch a decentralized platform for collaborative validation and contribution.
+
+---
 
 ## 🌍 Future Plans
 
