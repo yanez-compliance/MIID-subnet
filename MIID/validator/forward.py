@@ -51,6 +51,7 @@ from MIID.validator.query_generator import QueryGenerator
 from MIID.utils.misc import upload_data
 
 EPOCH_MIN_TIME = 360  # seconds
+MIID_SERVER = "http://127.0.0.1:5000/upload_data" ## MIID server
 
 async def dendrite_with_retries(dendrite: bt.dendrite, axons: list, synapse: IdentitySynapse,
                                 deserialize: bool, timeout: float, cnt_attempts=3):
@@ -310,18 +311,24 @@ async def forward(self):
     
     bt.logging.info(f"Saved validator results to: {json_path}")
 
+    self.set_weights()
+
     # 9) Upload to external endpoint (moved to a separate utils function)
     # Adjust endpoint URL/hotkey if needed
     results_json_string = json.dumps(results, sort_keys=True)
-    endpoint_base = "http://127.0.0.1:5000/upload_data" ## MIID server
+    
     hotkey = self.wallet.hotkey
     signed_contents = sign_message(self.wallet, results_json_string, output_file=None)
     results["signature"] = signed_contents
 
-    upload_data(endpoint_base, hotkey, results) 
-
+    #If for some reason uploading the data fails, we should just log it and continue. Server might go down but should not be a unique point of failure for the subnet
+    try:
+        upload_data(MIID_SERVER, hotkey, results) 
+    except:
+        bt.logging.error("Uploading data failed")
+        pass
     # 10) Set weights and enforce min epoch time
-    self.set_weights()
+    
     request_end = time.time()
     if request_end - request_start < EPOCH_MIN_TIME:
         bt.logging.info(f"Finished quickly; sleeping for {EPOCH_MIN_TIME - (request_end - request_start)}s")
