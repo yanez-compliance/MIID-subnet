@@ -160,4 +160,4 @@ This project is licensed under the **MIT License** - see the LICENSE file for de
 
 ---
 
-_Built with ❤️ by the MIID Team_
+_Built with ❤️ by the YANEZ-MIID Team_
