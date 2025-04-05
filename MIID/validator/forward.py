@@ -1,7 +1,7 @@
 # The MIT License (MIT)
 # Copyright © 2023 Yuma Rao
-# TODO(developer): Set your name
-# Copyright © 2023 <your name>
+# TODO(developer): YANEZ - MIID Team
+# Copyright © 2025 YANEZ
 
 # Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated
 # documentation files (the "Software"), to deal in the Software without restriction, including without limitation
@@ -20,17 +20,17 @@
 """
 Validator Forward Module
 
-This module implements the forward function for the name variation validator.
+This module implements the forward function for generating Threat Scenarios.
 The forward function is responsible for:
 1. Selecting random miners to query
-2. Generating a list of names to request variations for
-3. Sending the request to the selected miners
-4. Evaluating the responses and updating miner scores
-5. Saving the results for analysis
+2. Generating threat scenarios and identity test cases
+3. Requesting execution vectors (name variations) that could be used to bypass detection systems
+4. Evaluating the effectiveness of the execution vectors returned by miners
+5. Rewarding miners based on the quality of their execution vectors
+6. Saving the results
 
-The module uses the NameVariationRequest protocol to communicate with miners,
-and the get_name_variation_rewards function to evaluate the quality of the
-responses.
+The module simulates identity screening bypass attempts by generating and evaluating 
+name variations that could potentially evade detection systems.
 """
 
 import time
@@ -148,14 +148,14 @@ async def forward(self):
     """
     The forward function is called by the validator every time step.
 
-    This function is responsible for:
-    1. Selecting a random set of miners to query
-    2. Generating a complex query using an LLM
-    3. Generating a list of random names to request variations for
-    4. Sending the request to the selected miners with retry logic
-    5. Evaluating the quality of the variations returned by each miner
-    6. Updating the scores of the miners based on their performance
-    7. Saving the results for analysis
+    This function implements a threat detection simulation that:
+    1. Selects a random set of miners to query
+    2. Generates a complex threat scenario using an LLM
+    3. Creates a list of identity names as test cases
+    4. Sends the threat scenario to miners, requesting execution vectors (name variations)
+    5. Evaluates the effectiveness of execution vectors at bypassing identity detection
+    6. Updates miner scores based on the quality and diversity of their execution vectors
+    7. Saves the results 
     
     Returns:
         The result of the forward function from the MIID.validator module
@@ -189,10 +189,10 @@ async def forward(self):
     query_generator = QueryGenerator(self.config)
     
     # Use the query generator
-    start_time = time.time()
+    challenge_start_time = time.time()
     seed_names, query_template, query_labels = await query_generator.build_queries()
-    end_time = time.time()
-    bt.logging.info(f"Time to generate challenges: {int(end_time - start_time)}s")
+    challenge_end_time = time.time()
+    bt.logging.info(f"Time to generate challenges: {int(challenge_end_time - challenge_start_time)}s")
 
 
     # Calculate timeout based on the number of names and complexity
@@ -322,12 +322,34 @@ async def forward(self):
     run_dir = os.path.join(results_dir, f"run_{timestamp}")
     os.makedirs(run_dir, exist_ok=True)
     
+    # Format example queries with actual names to show what was sent to miners
+    formatted_queries = {}
+    for name in seed_names:
+        try:
+            # Format the query template with the actual name
+            formatted_query = query_template.replace("{name}", name)
+            formatted_queries[name] = formatted_query
+        except Exception as e:
+            bt.logging.error(f"Error formatting query for name '{name}': {str(e)}")
+            formatted_queries[name] = f"Error formatting query: {str(e)}"
+    
     # Save the query and responses to a JSON file
     results = {
         "timestamp": timestamp,
         "seed_names": seed_names,
         "query_template": query_template,
         "query_labels": query_labels,
+        "formatted_queries": formatted_queries,  # Add the formatted queries
+        "request_synapse": {
+            "names": seed_names,
+            "query_template": query_template,
+            "timeout": adaptive_timeout
+        },
+        "query_generation": {
+            "use_default_query": query_generator.use_default_query,
+            "model_name": getattr(self.config.neuron, 'ollama_model_name', "llama3.1:latest"),
+            "generation_time": challenge_end_time - challenge_start_time
+                            },
         "responses": {},
         "rewards": {}
     }
@@ -336,12 +358,32 @@ async def forward(self):
     for i, uid in enumerate(miner_uids):
         if i < len(all_responses):
             # Convert the response to a serializable format
-            miner_response = {}
+            response_data = {
+                "uid": int(uid),
+                "hotkey": str(self.metagraph.axons[uid].hotkey),
+                "response_time": time.time(),  # When we processed this response
+                "variations": {},
+                "error": None
+            }
+            
+            # Add variations if available
             if hasattr(all_responses[i], 'variations') and all_responses[i].variations is not None:
-                miner_response = all_responses[i].variations
+                response_data["variations"] = all_responses[i].variations
+            else:
+                # Log error information if available
+                if hasattr(all_responses[i], 'dendrite') and hasattr(all_responses[i].dendrite, 'status_code'):
+                    response_data["error"] = {
+                        "status_code": all_responses[i].dendrite.status_code,
+                        "status_message": getattr(all_responses[i].dendrite, 'status_message', 'Unknown error')
+                    }
+                else:
+                    response_data["error"] = {
+                        "message": "Invalid response format",
+                        "response_type": str(type(all_responses[i]))
+                    }
             
             # Add to the results
-            results["responses"][str(uid)] = miner_response
+            results["responses"][str(uid)] = response_data
             results["rewards"][str(uid)] = float(rewards[i]) if i < len(rewards) else 0.0
     
     # Save to JSON file

@@ -79,21 +79,28 @@ class QueryGenerator:
                     f"phonetic similarity: {phonetic_spec}, " +
                     f"orthographic similarity: {orthographic_spec}")
         
-        # Define the prompt with specific parameters
-        prompt = f"""Generate a complex name variation query for a name variation system with these exact specifications:
-        1. Request exactly {variation_count} variations for each name
-        2. For phonetic similarity, require: {phonetic_spec}
-        3. For orthographic similarity, require: {orthographic_spec}
+        # Define the prompt with specific parameters and security terminology
+        prompt = f"""Generate a Threat Scenario generation query with these specifications:
+
+        THREAT SCENARIO CONTEXT:
+        You are developing execution vectors to test an sanctions screening system. The regulators expect sanctions screening systems to detect these entities even when these may be trying to obfuscate themselves by providing variation of their names, instead of their actual names.
+        These execution vectors will help identify potential vulnerabilities in these systems.
         
-        Format as a natural language query that explicitly states all requirements.
+        EXECUTION VECTOR SPECIFICATIONS:
+        1. Generate exactly {variation_count} execution vectors (name variations) for each target identity
+        2. For phonetic similarity (sound-alike names), implement: {phonetic_spec}
+        3. For orthographic similarity (visually similar spellings), implement: {orthographic_spec}
+        
+        Format the query as a natural language request that explicitly states all requirements in the context of threat scenario generation.
+        The query should ask for these name variations as execution vectors that could be used to bypass sanctions screening systems.
         """
 
         try:
             # Generate the query using Ollama
             response = ollama.generate(model=model_name, prompt=prompt)
             query_template = response['response'].strip()
-            bt.logging.info(f"Generated query template: {query_template}")
-            
+            bt.logging.info(f"##########QQQQQQQQQQQ#####################Generated query template: {query_template}#########################################")
+            bt.logging.info(f"##########QQQQQQQQQQQ#####################Generated query labels: {labels}#########################################")
             return query_template, labels
             
         except Exception as e:
