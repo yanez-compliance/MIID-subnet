@@ -1,7 +1,7 @@
 # The MIT License (MIT)
 # Copyright © 2023 Yuma Rao
-# TODO(developer): Set your name
-# Copyright © 2023 <your name>
+# TODO(developer): YANEZ - MIID Team
+# Copyright © 2025 YANEZ
 
 # Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated
 # documentation files (the "Software"), to deal in the Software without restriction, including without limitation
@@ -119,19 +119,22 @@ def calculate_variation_quality(
     expected_count: int = 10  # Add parameter for expected variation count
 ) -> float:
     """
-    Calculate the quality of name variations based on phonetic and orthographic similarity.
+    Calculate the quality of execution vectors (name variations) for  threat detection.
+    
+    This function evaluates how effective a set of name variations would be as execution
+    vectors in an identity screening bypass attempt. It considers multiple factors:
     
     Args:
-        original_name: The original name to compare against
-        variations: List of name variations to evaluate
+        original_name: The original identity name to compare against
+        variations: List of execution vector variations to evaluate
         phonetic_similarity: Dictionary mapping similarity levels to percentages
         phonetic_thresholds: Thresholds for different phonetic similarity levels
         orthographic_similarity: Dictionary mapping similarity levels to percentages
         orthographic_thresholds: Thresholds for different orthographic similarity levels
-        expected_count: Expected number of variations
+        expected_count: Expected number of execution vectors
         
     Returns:
-        Quality score between 0 and 1
+        Quality score between 0 and 1 indicating effectiveness as bypass vectors
     """
     # Default similarity preferences if none provided
     if phonetic_similarity is None:
@@ -268,18 +271,24 @@ def get_name_variation_rewards(
     orthographic_similarity: Dict[str, float] = None
 ) -> np.ndarray:
     """
-    Calculate rewards for name variation responses.
+    Calculate rewards for execution vectors (name variations) that simulate threat scenarios.
+    
+    This function evaluates how well miners generate execution vectors (name variations)
+    that could be used to bypass identity screening systems. The evaluation considers:
+    1. Adherence to the specified threat scenario parameters
+    2. Quality and diversity of execution vectors
+    3. Effectiveness as potential bypass methods based on similarity metrics
     
     Args:
-        seed_names: Original names to generate variations for
-        responses: List of response objects from miners
+        seed_names: Original identity names to generate variations for
+        responses: List of execution vector responses from miners
         uids: List of UIDs corresponding to responses
-        variation_count: Expected number of variations per name
+        variation_count: Expected number of execution vectors per identity
         phonetic_similarity: Dictionary mapping similarity levels to percentages
         orthographic_similarity: Dictionary mapping similarity levels to percentages
         
     Returns:
-        Array of rewards for each miner
+        Array of rewards for each miner based on execution vector quality
     """
     # Default similarity preferences if none provided
     if phonetic_similarity is None:
