@@ -41,26 +41,6 @@ def reward(query: int, response: int) -> float:
     return 1.0 if response == query * 2 else 0
 
 
-# def get_rewards(
-#     self,
-#     query: int,
-#     responses: List[float],
-# ) -> np.ndarray:
-#     """
-#     Returns an array of rewards for the given query and responses.
-
-#     Args:
-#     - query (int): The query sent to the miner.
-#     - responses (List[float]): A list of responses from the miner.
-
-#     Returns:
-#     - np.ndarray: An array of rewards for the given query and responses.
-#     """
-#     # Get all the reward results by iteratively calling your reward() function.
-
-#     return np.array([reward(query, response) for response in responses])
-
-
 def calculate_phonetic_similarity(original_name: str, variation: str) -> float:
     """
     Calculate phonetic similarity between two strings using Soundex.
@@ -113,13 +93,11 @@ def calculate_variation_quality(
     original_name: str, 
     variations: List[str],
     phonetic_similarity: Dict[str, float] = None,
-    phonetic_thresholds: Dict[str, float] = None,
     orthographic_similarity: Dict[str, float] = None,
-    orthographic_thresholds: Dict[str, float] = None,
     expected_count: int = 10  # Add parameter for expected variation count
 ) -> float:
     """
-    Calculate the quality of execution vectors (name variations) for  threat detection.
+    Calculate the quality of execution vectors (name variations) for threat detection.
     
     This function evaluates how effective a set of name variations would be as execution
     vectors in an identity screening bypass attempt. It considers multiple factors:
@@ -128,9 +106,7 @@ def calculate_variation_quality(
         original_name: The original identity name to compare against
         variations: List of execution vector variations to evaluate
         phonetic_similarity: Dictionary mapping similarity levels to percentages
-        phonetic_thresholds: Thresholds for different phonetic similarity levels
         orthographic_similarity: Dictionary mapping similarity levels to percentages
-        orthographic_thresholds: Thresholds for different orthographic similarity levels
         expected_count: Expected number of execution vectors
         
     Returns:
@@ -142,21 +118,19 @@ def calculate_variation_quality(
     if orthographic_similarity is None:
         orthographic_similarity = {"Medium": 1.0}
     
-    # Default thresholds if none provided
-    if phonetic_thresholds is None:
-        phonetic_thresholds = {
-            
-            "Medium": 0.5
-        }
+    # Define the boundaries for each similarity level
+    phonetic_boundaries = {
+        "Light": (0.8, 1.0),  # High similarity range
+        "Medium": (0.6, 0.8), # Moderate similarity range
+        "Far": (0.3, 0.6)     # Low similarity range
+    }
     
-    if orthographic_thresholds is None:
-        orthographic_thresholds = {
-                
-            "Medium": 0.5
-            
-        }
-    # if True:
-    #     return 0.8
+    orthographic_boundaries = {
+        "Light": (0.7, 1.0),  # High similarity range
+        "Medium": (0.5, 0.7), # Moderate similarity range
+        "Far": (0.2, 0.5)     # Low similarity range
+    }
+    
     # 1. Check if count matches expected count with 20% tolerance
     tolerance = 0.2  # 20% tolerance
     tolerance_range = expected_count * tolerance
@@ -216,26 +190,42 @@ def calculate_variation_quality(
     phonetic_quality = 0.0
     orthographic_quality = 0.0
     
-    # Process each desired similarity level
+    # Count how many scores fall into each range (for phonetic)
+    phonetic_counts = {}
+    for level, (lower, upper) in phonetic_boundaries.items():
+        # Count scores that fall within this range
+        if level == "Light":  # Special case for Light (includes upper bound)
+            count = sum(1 for score in phonetic_scores if lower <= score <= upper)
+        else:
+            count = sum(1 for score in phonetic_scores if lower <= score < upper)
+        phonetic_counts[level] = count
+    
+    # For each desired level, calculate how well we match the target
     for level, percentage in phonetic_similarity.items():
-        threshold = phonetic_thresholds.get(level, 0.5)
-        
         # Calculate how many scores should be in this range
         target_count = int(percentage * len(variations))
-        actual_count = sum(1 for score in phonetic_scores if score >= threshold)
+        actual_count = phonetic_counts.get(level, 0)
         
         # Calculate match quality for this level
         if target_count > 0:
             match_quality = min(actual_count / target_count, 1.0)
             phonetic_quality += percentage * match_quality
     
-    # Repeat for orthographic similarity
+    # Repeat for orthographic similarity - count by range
+    orthographic_counts = {}
+    for level, (lower, upper) in orthographic_boundaries.items():
+        # Count scores that fall within this range
+        if level == "Light":  # Special case for Light (includes upper bound)
+            count = sum(1 for score in orthographic_scores if lower <= score <= upper)
+        else:
+            count = sum(1 for score in orthographic_scores if lower <= score < upper)
+        orthographic_counts[level] = count
+    
+    # For each desired level, calculate match quality
     for level, percentage in orthographic_similarity.items():
-        threshold = orthographic_thresholds.get(level, 0.5)
-        
         # Calculate how many scores should be in this range
         target_count = int(percentage * len(variations))
-        actual_count = sum(1 for score in orthographic_scores if score >= threshold)
+        actual_count = orthographic_counts.get(level, 0)
         
         # Calculate match quality for this level
         if target_count > 0:
@@ -296,17 +286,17 @@ def get_name_variation_rewards(
     if orthographic_similarity is None:
         orthographic_similarity = {"Medium": 1.0}
         
-    # Thresholds for different similarity levels
-    phonetic_thresholds = {
-        "Light": 0.8,  # High similarity
-        "Medium": 0.6, # Moderate similarity
-        "Far": 0.3     # Low similarity
+    # Boundaries for different similarity levels (ranges instead of thresholds)
+    phonetic_boundaries = {
+        "Light": (0.8, 1.0),  # High similarity range
+        "Medium": (0.6, 0.8), # Moderate similarity range
+        "Far": (0.3, 0.6)     # Low similarity range
     }
     
-    orthographic_thresholds = {
-        "Light": 0.7,  # High similarity
-        "Medium": 0.5, # Moderate similarity
-        "Far": 0.2     # Low similarity
+    orthographic_boundaries = {
+        "Light": (0.7, 1.0),  # High similarity range
+        "Medium": (0.5, 0.7), # Moderate similarity range
+        "Far": (0.2, 0.5)     # Low similarity range
     }
     
     # Generate a unique run ID
@@ -352,10 +342,8 @@ def get_name_variation_rewards(
                 quality = calculate_variation_quality(
                     name, 
                     name_variations,
-                    phonetic_similarity,
-                    phonetic_thresholds,
-                    orthographic_similarity,
-                    orthographic_thresholds,
+                    phonetic_similarity=phonetic_similarity,
+                    orthographic_similarity=orthographic_similarity,
                     expected_count=variation_count  # Pass the expected count
                 )
                 quality_scores.append(quality)
@@ -371,7 +359,6 @@ def get_name_variation_rewards(
             rewards[i] = 0.0
                 
     return rewards
-
 
 
 def save_variations_to_csv(
