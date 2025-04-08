@@ -327,6 +327,20 @@ def get_name_variation_rewards(
         variations = response.variations
         quality_scores = []
         
+        # Validate that miner only provided variations for requested seed names
+        invalid_names = set(variations.keys()) - set(seed_names)
+        if invalid_names:
+            bt.logging.warning(f"Miner {uid} provided variations for unexpected names: {invalid_names}")
+            rewards[i] = 0.0
+            continue
+            
+        # Check if all requested seed names have variations
+        missing_names = set(seed_names) - set(variations.keys())
+        if missing_names:
+            bt.logging.warning(f"Miner {uid} missing variations for names: {missing_names}")
+            rewards[i] = 0.0
+            continue
+        
         # Process each seed name
         for name in seed_names:
             if name not in variations or not variations[name]:
