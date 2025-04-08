@@ -327,19 +327,24 @@ def get_name_variation_rewards(
         variations = response.variations
         quality_scores = []
         
-        # Validate that miner only provided variations for requested seed names
+        # Calculate completeness penalties
+        completeness_penalty = 1.0  # Start with no penalty
+        
+        # Penalize for unexpected names (extra variations)
         invalid_names = set(variations.keys()) - set(seed_names)
         if invalid_names:
             bt.logging.warning(f"Miner {uid} provided variations for unexpected names: {invalid_names}")
-            rewards[i] = 0.0
-            continue
+            # Penalize 10% for each unexpected name, up to 50% max penalty
+            extra_penalty = min(0.5, len(invalid_names) * 0.1)
+            completeness_penalty *= (1 - extra_penalty)
             
-        # Check if all requested seed names have variations
+        # Penalize for missing names
         missing_names = set(seed_names) - set(variations.keys())
         if missing_names:
             bt.logging.warning(f"Miner {uid} missing variations for names: {missing_names}")
-            rewards[i] = 0.0
-            continue
+            # Penalize 20% for each missing name, up to 70% max penalty
+            missing_penalty = min(0.7, len(missing_names) * 0.2)
+            completeness_penalty *= (1 - missing_penalty)
         
         # Process each seed name
         for name in seed_names:
@@ -368,7 +373,8 @@ def get_name_variation_rewards(
         # Calculate average quality across all names
         if quality_scores:
             avg_quality = sum(quality_scores) / len(quality_scores)
-            rewards[i] = avg_quality
+            # Apply completeness penalty to final score
+            rewards[i] = avg_quality * completeness_penalty
         else:
             rewards[i] = 0.0
                 
