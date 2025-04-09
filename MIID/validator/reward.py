@@ -327,27 +327,29 @@ def get_name_variation_rewards(
         variations = response.variations
         quality_scores = []
         
-        # Calculate completeness penalties
-        completeness_penalty = 1.0  # Start with no penalty
+        # Initialize penalties
+        extra_penalty = 0.0
+        missing_penalty = 0.0
         
-        # Penalize for unexpected names (extra variations)
+        # Calculate penalty for unexpected names (extra variations)
         invalid_names = set(variations.keys()) - set(seed_names)
         if invalid_names:
             bt.logging.warning(f"Miner {uid} provided variations for unexpected names: {invalid_names}")
-            # Penalize 10% for each unexpected name, up to 70% max penalty
+            # 10% penalty per extra name, up to 70% max
             extra_penalty = min(0.7, len(invalid_names) * 0.1)
-            completeness_penalty *= (1 - extra_penalty)
             
-        # Penalize for missing names
+        # Calculate penalty for missing names
         missing_names = set(seed_names) - set(variations.keys())
         if missing_names:
             bt.logging.warning(f"Miner {uid} missing variations for names: {missing_names}")
-            # Penalize 20% for each missing name, up to 90% max penalty
+            # 20% penalty per missing name, up to 90% max
             missing_penalty = min(0.9, len(missing_names) * 0.2)
-            completeness_penalty *= (1 - missing_penalty)
         
-        # Ensure completeness penalty doesn't go below 0.1 (10% minimum)
-        completeness_penalty = max(0.1, completeness_penalty)
+        # Calculate total penalty (additive) with cap of 0.9
+        total_penalty = min(0.9, extra_penalty + missing_penalty)
+        
+        # Calculate completeness multiplier (minimum 0.1)
+        completeness_multiplier = max(0.1, 1.0 - total_penalty)
         
         # Process each seed name
         for name in seed_names:
@@ -376,8 +378,8 @@ def get_name_variation_rewards(
         # Calculate average quality across all names
         if quality_scores:
             avg_quality = sum(quality_scores) / len(quality_scores)
-            # Apply completeness penalty to final score
-            rewards[i] = avg_quality * completeness_penalty
+            # Apply completeness multiplier to final score
+            rewards[i] = avg_quality * completeness_multiplier
         else:
             rewards[i] = 0.0
                 
