@@ -198,7 +198,7 @@ def add_validator_args(cls, parser):
         "--neuron.use_default_query",
         action="store_true",
         help="If set, use the default query template.",
-        default=True,
+        default=False,
     )
     parser.add_argument(
         "--neuron.sample_size",
