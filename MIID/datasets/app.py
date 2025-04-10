@@ -4,18 +4,29 @@ import secrets
 import time
 from flask import Flask, request, jsonify
 
-# 1) Import your existing verify_message function
-#    (Replace the import path if your file is named differently or is located elsewhere.)
+# Import configuration
+from MIID.datasets.config import (
+    HOST,
+    PORT,
+    DEBUG,
+    DATA_DIR,
+    ALLOWED_HOTKEYS
+)
+
+# Import verify_message function
 from MIID.utils.verify_message import verify_message
 
 app = Flask(__name__)
 
 # Ensure the data directory exists
-DATA_DIR = 'data'
 os.makedirs(DATA_DIR, exist_ok=True)
 
 @app.route('/upload_data/<hotkey>', methods=['POST'])
 def upload_data(hotkey):
+    # Check if the hotkey is allowed
+    if hotkey not in ALLOWED_HOTKEYS:
+        return jsonify({"error": "Unauthorized hotkey"}), 403
+
     # 2) Check that the incoming request body is JSON
     if not request.is_json:
         return jsonify({"error": "Request body must be JSON"}), 400
@@ -49,7 +60,7 @@ def upload_data(hotkey):
 
     # 8) Create a unique filename for storing the full JSON data:
     timestamp = int(time.time())
-    random_hex = secrets.token_hex(4)  # e.g. 8-digit hex
+    random_hex = secrets.token_hex(4)
     final_filename = f"{hotkey}.{timestamp}.{random_hex}.json"
     filepath = os.path.join(DATA_DIR, final_filename)
 
@@ -63,7 +74,5 @@ def upload_data(hotkey):
         "filename": final_filename
     }), 200
 
-
 if __name__ == '__main__':
-    # For local development only. In production, run via gunicorn/uwsgi + reverse proxy.
-    app.run(debug=True, host='0.0.0.0', port=5000)
+    app.run(host=HOST, port=PORT, debug=DEBUG)
