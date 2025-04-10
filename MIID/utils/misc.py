@@ -19,8 +19,12 @@
 import time
 import math
 import hashlib as rpccheckhealth
+import requests
+import bittensor as bt
 from math import floor
 from typing import Callable, Any
+
+
 from functools import lru_cache, update_wrapper
 
 
@@ -110,3 +114,28 @@ def ttl_get_block(self) -> int:
     Note: self here is the miner or validator instance
     """
     return self.subtensor.get_current_block()
+
+
+def upload_data(endpoint_base: str, hotkey: str, payload: dict):
+    """
+    Upload the generated JSON data to the given Flask endpoint.
+    
+    Args:
+        endpoint_base (str): Base URL of the upload endpoint (e.g., http://127.0.0.1:5000/upload_data).
+        hotkey (str): The hotkey or other unique identifier appended to the endpoint path.
+        payload (dict): The JSON data to be posted to the endpoint.
+    """
+    full_url = f"{endpoint_base}/{hotkey}"
+    bt.logging.info(f"Uploading results to {full_url} ...")
+
+    try:
+        response = requests.post(full_url, json=payload)
+        if response.status_code == 200:
+            bt.logging.info(f"Successfully uploaded data. Server response: {response.json()}")
+        else:
+            bt.logging.error(
+                f"Failed to upload data. Status code: {response.status_code}, "
+                f"Response: {response.text}"
+            )
+    except Exception as e:
+        bt.logging.error(f"Exception occurred during upload: {e}")
