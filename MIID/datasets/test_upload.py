@@ -1,6 +1,6 @@
 import json
 import requests
-from sign_message import sign_message
+from MIID.utils import sign_message
 from substrateinterface import Keypair
 
 # === CONFIGURATION ===
