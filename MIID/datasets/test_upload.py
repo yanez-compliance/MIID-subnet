@@ -7,6 +7,7 @@ import json
 import requests
 from MIID.utils.sign_message import sign_message
 from substrateinterface import Keypair
+import bittensor
 
 # === CONFIGURATION ===
 HOTKEY = "5FhCUBvS49"  # Replace with your test hotkey
@@ -14,9 +15,10 @@ SERVER_URL = "http://20.83.176.136:5000"  # Replace with your server IP
 MESSAGE = {"test_data": "hello from auto-signed client"}
 
 # === STEP 1: Load or generate a wallet ===
-wallet = Keypair.create_from_mnemonic(
-    "bottom drive obey lake curtain smoke basket hold race lonely fit walk"
-)  # Replace with your real mnemonic if needed
+# === Load wallet using bittensor ===
+wallet = bittensor.wallet(name='test', hotkey='default')
+wallet.coldkey = wallet.coldkeyfile
+wallet.hotkey = wallet.hotkeyfile
 
 # === STEP 2: Sign the JSON payload ===
 payload_json_str = json.dumps({"results": MESSAGE})
