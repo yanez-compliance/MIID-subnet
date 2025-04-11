@@ -16,9 +16,9 @@ MESSAGE = {"test_data": "hello from auto-signed client"}
 
 # === STEP 1: Load or generate a wallet ===
 # === Load wallet using bittensor ===
-wallet = bittensor.wallet(name='test', hotkey='default')
-wallet.coldkey = wallet.coldkeyfile
-wallet.hotkey = wallet.hotkeyfile
+wallet = bittensor.wallet(name='validator', hotkey='validator_default')
+wallet.coldkey = wallet.coldkey
+wallet.hotkey = wallet.hotkey
 
 # === STEP 2: Sign the JSON payload ===
 payload_json_str = json.dumps({"results": MESSAGE})
