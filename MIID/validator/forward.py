@@ -48,7 +48,7 @@ from typing import List, Dict, Any, Tuple
 from MIID.protocol import IdentitySynapse
 from MIID.validator.reward import get_name_variation_rewards
 from MIID.utils.uids import get_random_uids
-from MIID.utils import sign_message
+from MIID.utils.sign_message import sign_message
 from MIID.validator.query_generator import QueryGenerator
 
 # Import your new upload_data function here
