@@ -102,13 +102,13 @@ For detailed instructions, check our **[Mining Guide](docs/miner.md)** and **[Va
 - **Validators**: Gain influence in network security and reward distribution.
 
 ### 🌎 **Real-World Impact**
-MIID is not just another AI dataset—it’s a **live, evolving system** that **challenges and improves** real-world fraud detection models. Every contribution makes financial systems **safer and more secure**.
+MIID is not just another AI dataset—it's a **live, evolving system** that **challenges and improves** real-world fraud detection models. Every contribution makes financial systems **safer and more secure**.
 
 ---
 ## 🛣️ Roadmap
 
-### Phase 1: Initial Launch & Name-Based Threat Scenarios (April 2025)
-- Deploy MIID subnet on Bittensor mainnet.
+### Phase 1: Initial Launch & Name-Based Threat Scenarios (April 2025) [Read more details here](docs/Yanez%20Identity%20Generation%20Bittensor%20Subnet%20-%20Phase%201.pdf)
+- Deploy MIID subnet on Bittensor mainnet. 
 - Enable validators to test known threat scenarios against miner responses.
 - Introduce name-based execution vectors: phonetic, orthographic, and rule-based variations.
 
