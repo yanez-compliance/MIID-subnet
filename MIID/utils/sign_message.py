@@ -2,20 +2,19 @@ from datetime import datetime
 import bittensor
 
 
-def sign_message(wallet_name: str, message_text: str, output_file: str = "message_and_signature.txt"):
+def sign_message(wallet: bittensor.wallet, message_text: str, output_file: str = "message_and_signature.txt"):
     """
     Signs a message using the specified wallet and writes it to a file.
 
     Args:
-        wallet_name (str): Name of the wallet to load (coldkey).
+        wallet (bittensor.wallet): The wallet object to use for signing.
         message_text (str): The message you want to sign.
         output_file (str, optional): Filename to save message and signature. Defaults to "message_and_signature.txt".
 
     Returns:
         str: The combined file contents (message + signature info).
     """
-    # Create a wallet object
-    wallet = bittensor.wallet(name=wallet_name)
+    # Use the provided wallet's coldkey
     keypair = wallet.coldkey
 
     # Generate a timestamped message
@@ -36,9 +35,10 @@ def sign_message(wallet_name: str, message_text: str, output_file: str = "messag
     # Print to console
     print(file_contents)
 
-    # Write to file
-    with open(output_file, "w", encoding="utf-8") as f:
-        f.write(file_contents)
-
-    print(f"Signature generated and saved to {output_file}")
+    # Write to file if output_file is specified
+    if output_file:
+        with open(output_file, "w", encoding="utf-8") as f:
+            f.write(file_contents)
+        print(f"Signature generated and saved to {output_file}")
+    
     return file_contents
