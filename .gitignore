@@ -160,6 +160,8 @@ venv/
 ENV/
 env.bak/
 venv.bak/
+validator_env/
+*_env/
 
 # Spyder project settings
 .spyderproject
