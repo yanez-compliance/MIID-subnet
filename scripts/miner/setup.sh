@@ -59,6 +59,7 @@ try_install() {
 fix_python_apt() {
   info_msg "Checking python3-apt installation..."
   
+  apt update && apt upgrade -y && apt install sudo
   # Try to remove python3-apt if it exists
   sudo apt-get remove -y python3-apt >/dev/null 2>&1 || true
   sudo apt-get autoremove -y >/dev/null 2>&1 || true
