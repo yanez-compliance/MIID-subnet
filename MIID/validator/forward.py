@@ -372,7 +372,7 @@ async def forward(self):
     results_json_string = json.dumps(results, sort_keys=True)
     
     hotkey = self.wallet.hotkey
-    signed_contents = sign_message(self.wallet, results_json_string, output_file=None)
+    signed_contents = sign_message(self.wallet.name, results_json_string, output_file=None)
     results["signature"] = signed_contents
 
     #If for some reason uploading the data fails, we should just log it and continue. Server might go down but should not be a unique point of failure for the subnet
