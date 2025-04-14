@@ -2,7 +2,7 @@ import os
 from typing import List
 
 # Server configuration
-HOST = "20.83.176.136"
+HOST = "0.0.0.0"
 PORT = 5000
 DEBUG = False
 
