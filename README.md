@@ -71,7 +71,8 @@ bash scripts/miner/setup.sh
 source miner_env/bin/activate
 
 # Start mining
-python neurons/miner.py --netuid 322 --wallet.name your_wallet --wallet.hotkey your_hotkey --subtensor.network test
+pm2 start python --name neuron-miner -- neurons/miner.py --netuid 322 --wallet.name your-wallet --wallet.hotkey your-hotkey --subtensor.network test
+
 ```
 
 ### 2️⃣ **Setup for Validators**

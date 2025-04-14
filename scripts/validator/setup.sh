@@ -68,7 +68,7 @@ install_system_dependencies() {
   fi
   
   # Install required packages
-  info_msg "Installing required packages..."
+  info_msg "Installing required base packages..."
   local PACKAGES=(
     sudo
     curl
@@ -91,6 +91,12 @@ install_system_dependencies() {
     fi
   done
   
+  # Additional installs (same as miner)
+  info_msg "Installing additional packages (nano, jq, npm, pm2)..."
+  sudo apt-get install -y nano jq npm || warn_msg "Failed to install some packages."
+  sudo npm install -g pm2 || warn_msg "Failed to install pm2 globally."
+  pm2 update || warn_msg "Failed to update pm2."
+  
   success_msg "System dependencies setup completed."
 }
 
@@ -106,7 +112,9 @@ install_ollama() {
     info_msg "Ollama is already installed. Skipping."
   fi
   
-  # Pull the required LLM model
+  # Use pm2 to serve Ollama (mirrors miner script)
+  pm2 start ollama -- serve || warn_msg "Failed to start Ollama with PM2, but continuing..."
+  
   info_msg "Pulling llama3.1:latest model..."
   ollama pull llama3.1:latest || handle_error "Failed to pull llama3.1:latest model"
   success_msg "llama3.1:latest model pulled successfully."

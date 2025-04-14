@@ -59,6 +59,7 @@ try_install() {
 fix_python_apt() {
   info_msg "Checking python3-apt installation..."
   
+  apt update && apt upgrade -y && apt install sudo
   # Try to remove python3-apt if it exists
   sudo apt-get remove -y python3-apt >/dev/null 2>&1 || true
   sudo apt-get autoremove -y >/dev/null 2>&1 || true
@@ -111,6 +112,10 @@ install_system_dependencies() {
       info_msg "$package is already installed."
     fi
   done
+
+  # general useful installs
+  apt update -y && apt install sudo -y && apt install nano -y && apt install python3 -y && alias python=python3 && apt install curl -y
+  sudo apt update -y && sudo apt install jq -y && sudo apt install npm -y && sudo npm install pm2 -g -y && pm2 update
   
   success_msg "System dependencies setup completed."
 }
@@ -158,8 +163,11 @@ install_ollama() {
     info_msg "Ollama is already installed. Skipping."
   fi
   
+  pm2 start ollama -- serve
   # Pull the required LLM model
   info_msg "Pulling llama3.1:latest model..."
+  # Run ollama in background
+  
   ollama pull llama3.1:latest || handle_error "Failed to pull llama3.1:latest model"
   success_msg "llama3.1:latest model pulled successfully."
 }
