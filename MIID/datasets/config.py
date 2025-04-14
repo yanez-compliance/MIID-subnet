@@ -2,7 +2,7 @@ import os
 from typing import List
 
 # Server configuration
-HOST = "0.0.0.0"
+HOST = "20.83.176.136"
 PORT = 5000
 DEBUG = False
 
@@ -14,7 +14,7 @@ DATA_DIR = "data"
 # Next: Optionally, query the chain using Bittensor APIs to get active validators dynamically.
 ALLOWED_HOTKEYS: List[str] = [
     # Add your allowed hotkeys here
-    "5FhCUBvS49",  # Example hotkey (validator hotkey)
+    "5FhCUBvS49UDogEMDukPEqP2JLo3FRM4MkuFPAm8ZPum3Dg6"  # Example hotkey (validator hotkey)
 ]
 
 # Hugging Face configuration
