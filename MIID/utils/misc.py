@@ -121,11 +121,11 @@ def upload_data(endpoint_base: str, hotkey: str, payload: dict):
     Upload the generated JSON data to the given Flask endpoint.
     
     Args:
-        endpoint_base (str): Base URL of the upload endpoint (e.g., http://127.0.0.1:5000/upload_data).
+        endpoint_base (str): Base URL of the upload endpoint (e.g., http://20.83.176.136:5000/upload_data).
         hotkey (str): The hotkey or other unique identifier appended to the endpoint path.
         payload (dict): The JSON data to be posted to the endpoint.
     """
-    full_url = f"{endpoint_base}/{hotkey}"
+    full_url = f"{endpoint_base}/{hotkey}/"
     bt.logging.info(f"Uploading results to {full_url} ...")
     print(f"@@@@@@@@@@@@@@@@@@@@@@@@@@@Uploading results to {full_url} ...")
     try:
