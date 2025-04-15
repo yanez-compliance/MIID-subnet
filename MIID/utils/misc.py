@@ -125,7 +125,14 @@ def upload_data(endpoint_base: str, hotkey: str, payload: dict):
         hotkey (str): The hotkey or other unique identifier appended to the endpoint path.
         payload (dict): The JSON data to be posted to the endpoint.
     """
-    full_url = f"{endpoint_base}/{hotkey}/"
+    # Ensure endpoint_base doesn't end with a slash
+    endpoint_base = endpoint_base.rstrip('/')
+    
+    # Extract the hotkey address if it's a Keypair object
+    if hasattr(hotkey, 'ss58_address'):
+        hotkey = hotkey.ss58_address
+    
+    full_url = f"{endpoint_base}/{hotkey}"
     bt.logging.info(f"Uploading results to {full_url} ...")
     print(f"@@@@@@@@@@@@@@@@@@@@@@@@@@@Uploading results to {full_url} ...")
     try:

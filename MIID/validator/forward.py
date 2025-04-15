@@ -55,7 +55,7 @@ from MIID.validator.query_generator import QueryGenerator
 from MIID.utils.misc import upload_data
 
 EPOCH_MIN_TIME = 360  # seconds
-MIID_SERVER = "http://20.83.176.136:5000/upload_data/" ## MIID server
+MIID_SERVER = "http://20.83.176.136:5000/upload_data" ## MIID server
 
 async def dendrite_with_retries(dendrite: bt.dendrite, axons: list, synapse: IdentitySynapse,
                                 deserialize: bool, timeout: float, cnt_attempts=3):
