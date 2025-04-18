@@ -61,6 +61,7 @@ Validators ensure the dataset maintains **high-quality** and **real-world releva
 - **Ollama (default LLM: llama3.1)**
 - **Bittensor wallet with TAO**
 - **8GB+ RAM (16GB recommended)**
+- **Open port 8091 for miner-to-validator communication** ([Network Setup Guide](docs/network_setup.md))
 
 ### 1️⃣ **Setup for Miners**
 ```bash
