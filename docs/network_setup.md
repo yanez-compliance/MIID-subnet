@@ -5,15 +5,34 @@
 To ensure proper connectivity with the MIID subnet, miners need to open the following ports:
 
 ### Required Ports
-- **Port 8091**: Primary miner-to-validator communication (Fixed default port)
+- **Port 8091**: Primary miner-to-validator communication (Default port)
   - Protocol: TCP
   - Direction: Inbound
   - Purpose: Main communication port for validator queries
-  - Note: This port is hardcoded in the MIID subnet implementation
+  - Note: This port can be configured using the `--axon.port` parameter when starting the miner
 
 ### Optional Ports (if using additional features)
 - **Port 5000**: Used for local API access (if running local services)
 - **Port 22**: SSH access (for remote management)
+
+## Starting the Miner with Custom Port
+
+You can specify the port when starting your miner using the `--axon.port` parameter:
+
+```bash
+btcli miner start \
+    --netuid <netuid> \
+    --wallet.name <wallet_name> \
+    --wallet.hotkey <hotkey_name> \
+    --axon.port 8091
+```
+
+Replace:
+- `<netuid>` with your subnet ID
+- `<wallet_name>` with your wallet name
+- `<hotkey_name>` with your hotkey name
+
+Note: While you can change the port using `--axon.port`, it's recommended to use the default port 8091 unless you have specific requirements.
 
 ## Network Configuration Steps
 
