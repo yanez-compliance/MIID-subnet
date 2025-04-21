@@ -2,30 +2,51 @@
 
 This guide provides step-by-step instructions for running your MIID miner in the background using either tmux or pm2. This is useful for keeping your miner running even when you're not connected to the server.
 
+> **Note**: Before following this guide, make sure you have completed the initial setup using the [Miner Guide](miner.md). This includes:
+> - Running the setup script or manual installation
+> - Creating your wallet
+> - Registering your miner
+> - Testing basic miner functionality
+
 ## Option 1: Using tmux
 
 ### Installation
 ```bash
-# Ubuntu/Debian
-sudo apt-get install tmux
+# For Ubuntu/Debian
+sudo apt update -y && \
+sudo apt install -y sudo nano python3 curl tmux
 
-# CentOS/RHEL
-sudo yum install tmux
+# For CentOS/RHEL
+sudo yum install -y sudo nano python3 curl tmux
 
-# macOS
-brew install tmux
+# For macOS
+# Install Homebrew if not already installed
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+
+# Install required packages
+brew install tmux python3 curl
+
+# Set Python3 as default
+echo 'alias python=python3' >> ~/.zshrc
+source ~/.zshrc
+
+# For Intel Macs, you might need to install some additional packages
+# brew install openssl readline sqlite3 xz zlib tcl-tk
+
+# For Apple Silicon (M1/M2) Macs, you might need to install some additional packages
+# brew install openssl readline sqlite3 xz zlib tcl-tk
 ```
 
 ### Step-by-Step Setup
 
-1. Create a new tmux session:
-```bash
-tmux new -s miid_miner
-```
-
-2. Activate your Python virtual environment:
+1. Activate your Python virtual environment (created during initial setup):
 ```bash
 source miner_env/bin/activate
+```
+
+2. Create a new tmux session:
+```bash
+tmux new -s miid_miner
 ```
 
 3. Start your miner:
@@ -57,12 +78,24 @@ tmux kill-session -t miid_miner
 
 ### Installation
 ```bash
-# Install Node.js if not already installed
-curl -fsSL https://deb.nodesource.com/setup_18.x | sudo -E bash -
-sudo apt-get install -y nodejs
+# For Ubuntu/Debian
+sudo apt update -y && \
+sudo apt install -y sudo nano python3 curl jq npm
+
+# For CentOS/RHEL
+sudo yum install -y sudo nano python3 curl jq npm
+
+# For macOS
+# Install Node.js and npm using Homebrew
+brew install node npm
+
+# Set Python3 as default (if not already done)
+echo 'alias python=python3' >> ~/.zshrc
+source ~/.zshrc
 
 # Install pm2 globally
-sudo npm install -g pm2
+sudo npm install pm2 -g -y && \
+pm2 update
 ```
 
 ### Step-by-Step Setup
