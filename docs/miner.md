@@ -79,10 +79,12 @@ ollama pull llama3.1:latest
 btcli subnet register --netuid 322 --wallet.name your_wallet_name --wallet.hotkey your_hotkey --subtensor.network test
 ```
 
-3. Start your miner:
+2. Start your miner:
 ```bash
 python neurons/miner.py --netuid 322 --wallet.name your_wallet_name --wallet.hotkey your_hotkey --subtensor.network test
 ```
+
+For running your miner in the background (recommended for production), see the [Background Mining Guide](background_mining.md).
 
 ## Configuration Options
 
