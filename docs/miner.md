@@ -46,7 +46,7 @@ If you prefer to install components manually:
 
 1. Clone the MIID repository:
 ```bash
-git clone https://github.com/yourusername/MIID-subnet.git
+git clone https://github.com/yanez-compliance/MIID-subnet.git
 cd MIID-subnet
 ```
 
