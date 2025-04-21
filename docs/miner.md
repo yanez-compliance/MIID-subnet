@@ -81,7 +81,7 @@ btcli subnet register --netuid 322 --wallet.name your_wallet_name --wallet.hotke
 
 2. Start your miner:
 ```bash
-python neurons/miner.py --netuid 322 --wallet.name your_wallet_name --wallet.hotkey your_hotkey --subtensor.network test
+python neurons/miner.py --netuid 322 --subtensor.network test --subtensor.chain_endpoint wss://test.finney.opentensor.ai:443 --wallet.name your_wallet_name --wallet.hotkey your_hotkey --logging.debug
 ```
 
 For running your miner in the background (recommended for production), see the [Background Mining Guide](background_mining.md).
