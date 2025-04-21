@@ -16,7 +16,7 @@ MIID miners receive requests from validators containing names and a query templa
 - A local LLM via Ollama (default: llama3.1:latest)
 - Sufficient storage for model weights (~10GB or more depending on model)
 - At least 8GB RAM (16GB+ recommended)
-- Open ports 8091 and 5050 for validator communication ([Network Setup Guide](network_setup.md))
+- Open port 8091 for validator communication ([Network Setup Guide](network_setup.md))
 
 ## Installation
 
