@@ -85,6 +85,8 @@ btcli stake add --netuid 322 --amount 100 --wallet.name your_wallet_name --walle
 python neurons/validator.py --netuid 322 --wallet.name your_wallet_name --wallet.hotkey your_hotkey --subtensor.network test
 ```
 
+For detailed information about logging setup and management, see the [Logging Guide](logging.md).
+
 ## Configuration Options
 
 You can configure your validator with the following command-line arguments:
