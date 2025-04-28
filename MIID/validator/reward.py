@@ -97,6 +97,10 @@ def calculate_part_score(
     expected_count: int
 ) -> float:
     """Calculate score for a single part (first or last name)"""
+    bt.logging.info(f"Calculating part score for: {original_part}")
+    bt.logging.info(f"Number of variations: {len(variations)}")
+    bt.logging.info(f"Expected count: {expected_count}")
+    
     # Define the boundaries for each similarity level
     phonetic_boundaries = {
         "Light": (0.8, 1.0),  # High similarity range
@@ -122,19 +126,27 @@ def calculate_part_score(
     if lower_bound <= actual_count <= upper_bound:
         # Within tolerance range - perfect score
         count_score = 1.0
+        bt.logging.info(f"Count score: 1.0 (within tolerance range: {lower_bound}-{upper_bound})")
     else:
         # Outside tolerance range - calculate penalty
         if actual_count < lower_bound:
             deviation = lower_bound - actual_count
+            bt.logging.warning(f"Too few variations: {actual_count} < {lower_bound}")
         else:  # actual_count > upper_bound
             deviation = actual_count - upper_bound
+            bt.logging.warning(f"Too many variations: {actual_count} > {upper_bound}")
             
         # Calculate score with penalty for deviation beyond tolerance
         count_score = 1.0 - min(1.0, deviation / expected_count)
+        bt.logging.info(f"Count score: {count_score:.3f} (penalty for deviation: {deviation})")
     
     # 2. Check for uniqueness - penalize duplicates
     unique_variations = list(set(variations))
     uniqueness_score = len(unique_variations) / len(variations) if variations else 0
+    if uniqueness_score < 1.0:
+        bt.logging.warning(f"Duplicate variations found. Uniqueness score: {uniqueness_score:.3f}")
+    else:
+        bt.logging.info(f"All variations are unique. Uniqueness score: 1.0")
     
     # 3. Calculate length reasonableness
     length_scores = []
@@ -146,20 +158,27 @@ def calculate_part_score(
         # Ideal length is within 30% of original length
         length_ratio = min(var_len / original_len, original_len / var_len)
         length_scores.append(length_ratio)
+        if length_ratio < 0.7:
+            bt.logging.warning(f"Variation '{var}' has length ratio {length_ratio:.3f} compared to original '{original_part}'")
     
     length_score = sum(length_scores) / len(length_scores) if length_scores else 0
+    bt.logging.info(f"Average length score: {length_score:.3f}")
     
     # Calculate phonetic similarity scores for each variation
     phonetic_scores = []
     for variation in variations:
         phonetic_score = calculate_phonetic_similarity(original_part, variation)
         phonetic_scores.append(phonetic_score)
+        if phonetic_score < 0.3:
+            bt.logging.warning(f"Low phonetic similarity ({phonetic_score:.3f}) between '{original_part}' and '{variation}'")
     
     # Calculate orthographic similarity scores for each variation
     orthographic_scores = []
     for variation in variations:
         orthographic_score = calculate_orthographic_similarity(original_part, variation)
         orthographic_scores.append(orthographic_score)
+        if orthographic_score < 0.3:
+            bt.logging.warning(f"Low orthographic similarity ({orthographic_score:.3f}) between '{original_part}' and '{variation}'")
     
     # Sort scores to analyze distribution
     phonetic_scores.sort()
@@ -178,6 +197,7 @@ def calculate_part_score(
         else:
             count = sum(1 for score in phonetic_scores if lower <= score < upper)
         phonetic_counts[level] = count
+        bt.logging.info(f"Phonetic {level} similarity count: {count}")
     
     # For each desired level, calculate how well we match the target
     for level, percentage in phonetic_similarity.items():
@@ -189,6 +209,7 @@ def calculate_part_score(
         if target_count > 0:
             match_quality = min(actual_count / target_count, 1.0)
             phonetic_quality += percentage * match_quality
+            bt.logging.info(f"Phonetic {level} match quality: {match_quality:.3f} (target: {target_count}, actual: {actual_count})")
     
     # Repeat for orthographic similarity - count by range
     orthographic_counts = {}
@@ -199,6 +220,7 @@ def calculate_part_score(
         else:
             count = sum(1 for score in orthographic_scores if lower <= score < upper)
         orthographic_counts[level] = count
+        bt.logging.info(f"Orthographic {level} similarity count: {count}")
     
     # For each desired level, calculate match quality
     for level, percentage in orthographic_similarity.items():
@@ -210,6 +232,7 @@ def calculate_part_score(
         if target_count > 0:
             match_quality = min(actual_count / target_count, 1.0)
             orthographic_quality += percentage * match_quality
+            bt.logging.info(f"Orthographic {level} match quality: {match_quality:.3f} (target: {target_count}, actual: {actual_count})")
     
     # Calculate final quality score with all factors
     # Weight factors according to importance
@@ -219,13 +242,34 @@ def calculate_part_score(
     length_weight = 0.05      # Weight for reasonable length variations
     
     similarity_score = (phonetic_quality + orthographic_quality) / 2  # Average of both similarities
+    bt.logging.info(f"Similarity score: {similarity_score:.3f} (phonetic: {phonetic_quality:.3f}, orthographic: {orthographic_quality:.3f})")
     
-    return (
+    final_score = (
         similarity_weight * similarity_score +
         count_weight * count_score +
         uniqueness_weight * uniqueness_score +
         length_weight * length_score
     )
+    
+    bt.logging.info(f"Final part score breakdown for '{original_part}':")
+    bt.logging.info(f"  - Similarity (60%): {similarity_weight * similarity_score:.3f}")
+    bt.logging.info(f"  - Count (5%): {count_weight * count_score:.3f}")
+    bt.logging.info(f"  - Uniqueness (30%): {uniqueness_weight * uniqueness_score:.3f}")
+    bt.logging.info(f"  - Length (5%): {length_weight * length_score:.3f}")
+    bt.logging.info(f"  - Total score: {final_score:.3f}")
+    
+    if final_score == 0:
+        bt.logging.warning(f"Zero score for '{original_part}'. Possible reasons:")
+        if len(variations) == 0:
+            bt.logging.warning("  - No variations provided")
+        if similarity_score == 0:
+            bt.logging.warning("  - Zero similarity score (both phonetic and orthographic)")
+        if uniqueness_score == 0:
+            bt.logging.warning("  - All variations are duplicates")
+        if length_score == 0:
+            bt.logging.warning("  - All variations have invalid lengths")
+    
+    return final_score
 
 def calculate_variation_quality(
     original_name: str,  # Full name as a string
@@ -238,6 +282,11 @@ def calculate_variation_quality(
     Calculate the quality of execution vectors (name variations) for threat detection.
     Calculates scores separately for first and last names, then averages them.
     """
+    bt.logging.info(f"\n{'='*50}")
+    bt.logging.info(f"Calculating variation quality for: {original_name}")
+    bt.logging.info(f"Total variations: {len(variations)}")
+    bt.logging.info(f"Expected count: {expected_count}")
+    
     # Default similarity preferences if none provided
     if phonetic_similarity is None:
         phonetic_similarity = {"Medium": 1.0}
@@ -249,9 +298,11 @@ def calculate_variation_quality(
     if len(name_parts) < 2:
         # If name can't be split, use the whole name for both parts
         first_name = last_name = original_name
+        bt.logging.warning(f"Could not split name '{original_name}' into first and last name")
     else:
         first_name = name_parts[0]
         last_name = name_parts[-1]
+        bt.logging.info(f"Split name into first: '{first_name}', last: '{last_name}'")
     
     # Split variations into first and last name parts
     first_name_variations = []
@@ -262,8 +313,14 @@ def calculate_variation_quality(
         if len(parts) >= 2:
             first_name_variations.append(parts[0])
             last_name_variations.append(parts[-1])
+        else:
+            bt.logging.warning(f"Variation '{variation}' could not be split into first and last name")
+    
+    bt.logging.info(f"First name variations: {len(first_name_variations)}")
+    bt.logging.info(f"Last name variations: {len(last_name_variations)}")
     
     # Calculate score for first name
+    bt.logging.info("\nCalculating first name score:")
     first_name_score = calculate_part_score(
         first_name,
         first_name_variations,
@@ -273,6 +330,7 @@ def calculate_variation_quality(
     )
     
     # Calculate score for last name
+    bt.logging.info("\nCalculating last name score:")
     last_name_score = calculate_part_score(
         last_name,
         last_name_variations,
@@ -282,7 +340,24 @@ def calculate_variation_quality(
     )
     
     # Return weighted average of both scores (30% first name, 70% last name)
-    return (0.3 * first_name_score + 0.7 * last_name_score)
+    final_score = (0.3 * first_name_score + 0.7 * last_name_score)
+    
+    bt.logging.info(f"\nFinal score breakdown for '{original_name}':")
+    bt.logging.info(f"  - First name score (30%): {first_name_score:.3f}")
+    bt.logging.info(f"  - Last name score (70%): {last_name_score:.3f}")
+    bt.logging.info(f"  - Final weighted score: {final_score:.3f}")
+    
+    if final_score == 0:
+        bt.logging.warning(f"Zero final score for '{original_name}'. Possible reasons:")
+        if first_name_score == 0:
+            bt.logging.warning("  - Zero first name score")
+        if last_name_score == 0:
+            bt.logging.warning("  - Zero last name score")
+        if len(variations) == 0:
+            bt.logging.warning("  - No variations provided")
+    
+    bt.logging.info(f"{'='*50}\n")
+    return final_score
 
 
 def get_name_variation_rewards(
