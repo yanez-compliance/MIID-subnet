@@ -209,32 +209,18 @@ class QueryGenerator:
                 locale = 'en_US'
                 locale_fake = Faker(locale)
                 
-                # Generate a full name with multiple parts
-                # We'll try to generate a name with 2-4 parts (first name + 1-3 middle/last names)
-                name_parts = []
+                # Generate first and last name separately
+                first_name = locale_fake.first_name().lower()
+                last_name = locale_fake.last_name().lower()
                 
-                # Always add first name
-                name_parts.append(locale_fake.first_name())
-                
-                # Randomly decide how many additional names to add (1-3)
-                num_additional_names = random.randint(1, 3)
-                
-                # Add middle names
-                for _ in range(num_additional_names):
-                    # Randomly choose between middle name and last name
-                    if random.choice([True, False]):
-                        name_parts.append(locale_fake.first_name())  # Using first_name for middle names
-                    else:
-                        name_parts.append(locale_fake.last_name())
-                
-                # Join the name parts with spaces and convert to lowercase
-                full_name = ' '.join(name_parts).lower()
+                # Create a tuple of (first_name, last_name)
+                full_name = (first_name, last_name)
                 
                 # Ensure the name is unique and meets length requirements
                 # We'll allow longer names since we're dealing with multipart names
-                if full_name not in seed_names and 3 <= len(full_name) <= 40:
+                if full_name not in seed_names and 3 <= len(first_name) <= 20 and 3 <= len(last_name) <= 20:
                     seed_names.append(full_name)
-                    bt.logging.info(f"Generated name from {locale}: {full_name}")
+                    bt.logging.info(f"Generated name from {locale}: {first_name} {last_name}")
             
             bt.logging.info(f"#########################################Generated {len(seed_names)} test names: {seed_names}#########################################")
             bt.logging.info(f"#########################################Query template: {query_template}#########################################")
