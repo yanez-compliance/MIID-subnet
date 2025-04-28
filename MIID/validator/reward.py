@@ -228,7 +228,7 @@ def calculate_part_score(
     )
 
 def calculate_variation_quality(
-    original_name: tuple,  # Tuple of (first_name, last_name)
+    original_name: str,  # Full name as a string
     variations: List[str],
     phonetic_similarity: Dict[str, float] = None,
     orthographic_similarity: Dict[str, float] = None,
@@ -244,6 +244,15 @@ def calculate_variation_quality(
     if orthographic_similarity is None:
         orthographic_similarity = {"Medium": 1.0}
     
+    # Split the original name into first and last name
+    name_parts = original_name.split()
+    if len(name_parts) < 2:
+        # If name can't be split, use the whole name for both parts
+        first_name = last_name = original_name
+    else:
+        first_name = name_parts[0]
+        last_name = name_parts[-1]
+    
     # Split variations into first and last name parts
     first_name_variations = []
     last_name_variations = []
@@ -256,7 +265,7 @@ def calculate_variation_quality(
     
     # Calculate score for first name
     first_name_score = calculate_part_score(
-        original_name[0],
+        first_name,
         first_name_variations,
         phonetic_similarity,
         orthographic_similarity,
@@ -265,15 +274,15 @@ def calculate_variation_quality(
     
     # Calculate score for last name
     last_name_score = calculate_part_score(
-        original_name[1],
+        last_name,
         last_name_variations,
         phonetic_similarity,
         orthographic_similarity,
         expected_count
     )
     
-    # Return average of both scores
-    return (0.3*first_name_score + 0.7*last_name_score)
+    # Return weighted average of both scores (30% first name, 70% last name)
+    return (0.3 * first_name_score + 0.7 * last_name_score)
 
 
 def get_name_variation_rewards(
@@ -389,7 +398,7 @@ def get_name_variation_rewards(
             try:
                 # Calculate quality score for all variations of this name
                 quality = calculate_variation_quality(
-                    (name.split()[0], name.split()[-1]),  # Pass the first and last name
+                    name,
                     name_variations,
                     phonetic_similarity=phonetic_similarity,
                     orthographic_similarity=orthographic_similarity,
