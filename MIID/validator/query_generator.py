@@ -200,12 +200,13 @@ class QueryGenerator:
             bt.logging.info(f"Using name variation sample size: {sample_size}")
             
             # Define supported locales for name generation
-            locales = ['en_US', 'es_ES', 'fr_FR', 'de_DE', 'it_IT', 'pt_BR', 'ru_RU', 'ar_SA', 'ja_JP', 'zh_CN']
+            #locales = ['en_US', 'es_ES', 'fr_FR', 'de_DE', 'it_IT', 'pt_BR', 'ru_RU', 'ar_SA', 'ja_JP', 'zh_CN']
             
             # Generate the required number of unique names
             while len(seed_names) < sample_size:
                 # Randomly select a locale
-                locale = random.choice(locales)
+                #locale = random.choice(locales)
+                locale = 'en_US'
                 locale_fake = Faker(locale)
                 
                 # Generate a full name with multiple parts
