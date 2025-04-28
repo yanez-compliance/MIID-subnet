@@ -213,8 +213,8 @@ class QueryGenerator:
                 first_name = locale_fake.first_name().lower()
                 last_name = locale_fake.last_name().lower()
                 
-                # Create a tuple of (first_name, last_name)
-                full_name = (first_name, last_name)
+                # Create full name as a string
+                full_name = f"{first_name} {last_name}"
                 
                 # Ensure the name is unique and meets length requirements
                 # We'll allow longer names since we're dealing with multipart names
@@ -244,7 +244,7 @@ class QueryGenerator:
             
             # Generate simple test names
             fake = Faker()
-            seed_names = [fake.first_name().lower() for _ in range(5)]
+            seed_names = [f"{fake.first_name().lower()} {fake.last_name().lower()}" for _ in range(5)]
             
             bt.logging.info(f"#########################################Using fallback: {len(seed_names)} test names#########################################")
             bt.logging.info(f"#########################################Query template: {query_template}#########################################")
