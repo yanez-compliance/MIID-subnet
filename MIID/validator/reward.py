@@ -89,35 +89,14 @@ def calculate_orthographic_similarity(original_name: str, variation: str) -> flo
         bt.logging.warning(f"Error calculating orthographic score: {str(e)}")
         return 0.0
 
-def calculate_variation_quality(
-    original_name: str, 
+def calculate_part_score(
+    original_part: str,
     variations: List[str],
-    phonetic_similarity: Dict[str, float] = None,
-    orthographic_similarity: Dict[str, float] = None,
-    expected_count: int = 10  # Add parameter for expected variation count
+    phonetic_similarity: Dict[str, float],
+    orthographic_similarity: Dict[str, float],
+    expected_count: int
 ) -> float:
-    """
-    Calculate the quality of execution vectors (name variations) for threat detection.
-    
-    This function evaluates how effective a set of name variations would be as execution
-    vectors in an identity screening bypass attempt. It considers multiple factors:
-    
-    Args:
-        original_name: The original identity name to compare against
-        variations: List of execution vector variations to evaluate
-        phonetic_similarity: Dictionary mapping similarity levels to percentages
-        orthographic_similarity: Dictionary mapping similarity levels to percentages
-        expected_count: Expected number of execution vectors
-        
-    Returns:
-        Quality score between 0 and 1 indicating effectiveness as bypass vectors
-    """
-    # Default similarity preferences if none provided
-    if phonetic_similarity is None:
-        phonetic_similarity = {"Medium": 1.0}
-    if orthographic_similarity is None:
-        orthographic_similarity = {"Medium": 1.0}
-    
+    """Calculate score for a single part (first or last name)"""
     # Define the boundaries for each similarity level
     phonetic_boundaries = {
         "Light": (0.8, 1.0),  # High similarity range
@@ -161,7 +140,7 @@ def calculate_variation_quality(
     length_scores = []
     for var in unique_variations:
         # Penalize variations that are too short or too long compared to original
-        original_len = len(original_name)
+        original_len = len(original_part)
         var_len = len(var)
         
         # Ideal length is within 30% of original length
@@ -173,13 +152,13 @@ def calculate_variation_quality(
     # Calculate phonetic similarity scores for each variation
     phonetic_scores = []
     for variation in variations:
-        phonetic_score = calculate_phonetic_similarity(original_name, variation)
+        phonetic_score = calculate_phonetic_similarity(original_part, variation)
         phonetic_scores.append(phonetic_score)
     
     # Calculate orthographic similarity scores for each variation
     orthographic_scores = []
     for variation in variations:
-        orthographic_score = calculate_orthographic_similarity(original_name, variation)
+        orthographic_score = calculate_orthographic_similarity(original_part, variation)
         orthographic_scores.append(orthographic_score)
     
     # Sort scores to analyze distribution
@@ -241,14 +220,60 @@ def calculate_variation_quality(
     
     similarity_score = (phonetic_quality + orthographic_quality) / 2  # Average of both similarities
     
-    final_score = (
+    return (
         similarity_weight * similarity_score +
         count_weight * count_score +
         uniqueness_weight * uniqueness_score +
         length_weight * length_score
     )
+
+def calculate_variation_quality(
+    original_name: tuple,  # Tuple of (first_name, last_name)
+    variations: List[str],
+    phonetic_similarity: Dict[str, float] = None,
+    orthographic_similarity: Dict[str, float] = None,
+    expected_count: int = 10
+) -> float:
+    """
+    Calculate the quality of execution vectors (name variations) for threat detection.
+    Calculates scores separately for first and last names, then averages them.
+    """
+    # Default similarity preferences if none provided
+    if phonetic_similarity is None:
+        phonetic_similarity = {"Medium": 1.0}
+    if orthographic_similarity is None:
+        orthographic_similarity = {"Medium": 1.0}
     
-    return final_score
+    # Split variations into first and last name parts
+    first_name_variations = []
+    last_name_variations = []
+    
+    for variation in variations:
+        parts = variation.split()
+        if len(parts) >= 2:
+            first_name_variations.append(parts[0])
+            last_name_variations.append(parts[-1])
+    
+    # Calculate score for first name
+    first_name_score = calculate_part_score(
+        original_name[0],
+        first_name_variations,
+        phonetic_similarity,
+        orthographic_similarity,
+        expected_count
+    )
+    
+    # Calculate score for last name
+    last_name_score = calculate_part_score(
+        original_name[1],
+        last_name_variations,
+        phonetic_similarity,
+        orthographic_similarity,
+        expected_count
+    )
+    
+    # Return average of both scores
+    return (0.3*first_name_score + 0.7*last_name_score)
 
 
 def get_name_variation_rewards(
@@ -364,7 +389,7 @@ def get_name_variation_rewards(
             try:
                 # Calculate quality score for all variations of this name
                 quality = calculate_variation_quality(
-                    name, 
+                    (name.split()[0], name.split()[-1]),  # Pass the first and last name
                     name_variations,
                     phonetic_similarity=phonetic_similarity,
                     orthographic_similarity=orthographic_similarity,
