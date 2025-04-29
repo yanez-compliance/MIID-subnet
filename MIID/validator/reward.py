@@ -284,7 +284,7 @@ def calculate_variation_quality(
 ) -> float:
     """
     Calculate the quality of execution vectors (name variations) for threat detection.
-    Calculates scores separately for first and last names, then averages them.
+    Currently only processes first names, last name processing is commented out.
     """
     bt.logging.info(f"\n{'='*50}")
     bt.logging.info(f"Calculating variation quality for: {original_name}")
@@ -299,29 +299,30 @@ def calculate_variation_quality(
     
     # Split the original name into first and last name
     name_parts = original_name.split()
-    if len(name_parts) < 2:
-        # If name can't be split, use the whole name for both parts
-        first_name = last_name = original_name
-        bt.logging.warning(f"Could not split name '{original_name}' into first and last name")
+    if len(name_parts) < 1:
+        # If name can't be split, use the whole name
+        first_name = original_name
+        bt.logging.warning(f"Could not split name '{original_name}'")
     else:
         first_name = name_parts[0]
-        last_name = name_parts[-1]
-        bt.logging.info(f"Split name into first: '{first_name}', last: '{last_name}'")
+        # last_name = name_parts[-1]  # Commented out: last name processing
+        bt.logging.info(f"Using first name: '{first_name}'")
+        # bt.logging.info(f"Last name: '{last_name}'")  # Commented out: last name logging
     
-    # Split variations into first and last name parts
+    # Process variations as first names only
     first_name_variations = []
-    last_name_variations = []
+    # last_name_variations = []  # Commented out: last name variations
     
     for variation in variations:
         parts = variation.split()
-        if len(parts) >= 2:
+        if len(parts) >= 1:
             first_name_variations.append(parts[0])
-            last_name_variations.append(parts[-1])
+            # last_name_variations.append(parts[-1])  # Commented out: last name processing
         else:
-            bt.logging.warning(f"Variation '{variation}' could not be split into first and last name")
+            bt.logging.warning(f"Variation '{variation}' could not be processed")
     
     bt.logging.info(f"First name variations: {len(first_name_variations)}")
-    bt.logging.info(f"Last name variations: {len(last_name_variations)}")
+    # bt.logging.info(f"Last name variations: {len(last_name_variations)}")  # Commented out: last name logging
     
     # Calculate score for first name
     bt.logging.info("\nCalculating first name score:")
@@ -333,30 +334,31 @@ def calculate_variation_quality(
         expected_count
     )
     
-    # Calculate score for last name
-    bt.logging.info("\nCalculating last name score:")
-    last_name_score = calculate_part_score(
-        last_name,
-        last_name_variations,
-        phonetic_similarity,
-        orthographic_similarity,
-        expected_count
-    )
+    # Calculate score for last name (commented out)
+    # bt.logging.info("\nCalculating last name score:")
+    # last_name_score = calculate_part_score(
+    #     last_name,
+    #     last_name_variations,
+    #     phonetic_similarity,
+    #     orthographic_similarity,
+    #     expected_count
+    # )
     
     # Return weighted average of both scores (30% first name, 70% last name)
-    final_score = (0.3 * first_name_score + 0.7 * last_name_score)
+    # final_score = (0.3 * first_name_score + 0.7 * last_name_score)  # Commented out: weighted average
+    final_score = first_name_score  # Using only first name score
     
     bt.logging.info(f"\nFinal score breakdown for '{original_name}':")
-    bt.logging.info(f"  - First name score (30%): {first_name_score:.3f}")
-    bt.logging.info(f"  - Last name score (70%): {last_name_score:.3f}")
-    bt.logging.info(f"  - Final weighted score: {final_score:.3f}")
+    bt.logging.info(f"  - First name score: {first_name_score:.3f}")
+    # bt.logging.info(f"  - Last name score (70%): {last_name_score:.3f}")  # Commented out: last name score logging
+    bt.logging.info(f"  - Final score: {final_score:.3f}")
     
     if final_score == 0:
         bt.logging.warning(f"Zero final score for '{original_name}'. Possible reasons:")
         if first_name_score == 0:
             bt.logging.warning("  - Zero first name score")
-        if last_name_score == 0:
-            bt.logging.warning("  - Zero last name score")
+        # if last_name_score == 0:  # Commented out: last name score check
+        #     bt.logging.warning("  - Zero last name score")
         if len(variations) == 0:
             bt.logging.warning("  - No variations provided")
     
