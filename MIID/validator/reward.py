@@ -429,18 +429,18 @@ def get_name_variation_rewards(
     # Generate a unique run ID
     run_id = f"run_{int(time.time())}"
     
-    # Save variations to CSV
-    try:
-        save_variations_to_csv(
-            self,
-            seed_names,
-            responses,
-            uids,
-            run_id
-        )
-    except Exception as e:
-        bt.logging.error(f"Error calling save_variations_to_csv: {str(e)}")
-        traceback.print_exc()
+    # # Save variations to CSV
+    # try:
+    #     save_variations_to_csv(
+    #         self,
+    #         seed_names,
+    #         responses,
+    #         uids,
+    #         run_id
+    #     )
+    # except Exception as e:
+    #     bt.logging.error(f"Error calling save_variations_to_csv: {str(e)}")
+    #     traceback.print_exc()
     
     rewards = np.zeros(len(responses))
     detailed_metrics = []  # Store detailed metrics for each miner
@@ -516,24 +516,24 @@ def get_name_variation_rewards(
                 "orthographic_scores": []
             }
             
-            # Calculate individual variation metrics
-            for variation in name_variations:
-                phonetic_score = calculate_phonetic_similarity(name, variation)
-                orthographic_score = calculate_orthographic_similarity(name, variation)
-                length_ratio = float(len(variation)) / float(len(name))
+            # # Calculate individual variation metrics
+            # for variation in name_variations:
+            #     phonetic_score = calculate_phonetic_similarity(name, variation)
+            #     orthographic_score = calculate_orthographic_similarity(name, variation)
+            #     length_ratio = float(len(variation)) / float(len(name))
                 
-                name_metrics["variations"].append({
-                    "variation": variation,
-                    "phonetic_score": float(phonetic_score),
-                    "orthographic_score": float(orthographic_score),
-                    "length_ratio": float(length_ratio)
-                })
-                name_metrics["phonetic_scores"].append(float(phonetic_score))
-                name_metrics["orthographic_scores"].append(float(orthographic_score))
+            #     name_metrics["variations"].append({
+            #         "variation": variation,
+            #         "phonetic_score": float(phonetic_score),
+            #         "orthographic_score": float(orthographic_score),
+            #         "length_ratio": float(length_ratio)
+            #     })
+            #     name_metrics["phonetic_scores"].append(float(phonetic_score))
+            #     name_metrics["orthographic_scores"].append(float(orthographic_score))
             
-            # Calculate uniqueness score
-            unique_variations = len(set(name_variations))
-            name_metrics["uniqueness_score"] = float(unique_variations) / len(name_variations) if name_variations else 0.0
+            # # Calculate uniqueness score
+            # unique_variations = len(set(name_variations))
+            # name_metrics["uniqueness_score"] = float(unique_variations) / len(name_variations) if name_variations else 0.0
             
             # Calculate quality score
             try:
