@@ -275,7 +275,7 @@ async def forward(self):
     
     bt.logging.info(f"Received {valid_responses} valid responses out of {len(all_responses)}")
 
-    rewards = get_name_variation_rewards(
+    rewards, detailed_metrics = get_name_variation_rewards(
         self, 
         seed_names,
         all_responses, 
@@ -336,7 +336,8 @@ async def forward(self):
                 "hotkey": str(self.metagraph.axons[uid].hotkey),
                 "response_time": time.time(),  # When we processed this response
                 "variations": {},
-                "error": None
+                "error": None,
+                "scoring_details": detailed_metrics[i] if i < len(detailed_metrics) else {}
             }
             
             # Add variations if available

@@ -17,7 +17,7 @@
 # OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
 # DEALINGS IN THE SOFTWARE.
 import numpy as np
-from typing import List, Dict
+from typing import List, Dict, Tuple
 import bittensor as bt
 import Levenshtein
 import jellyfish
@@ -374,7 +374,7 @@ def get_name_variation_rewards(
     variation_count: int = 10,
     phonetic_similarity: Dict[str, float] = None,
     orthographic_similarity: Dict[str, float] = None
-) -> np.ndarray:
+) -> Tuple[np.ndarray, List[Dict]]:
     """
     Calculate rewards for execution vectors (name variations) that simulate threat scenarios.
     
@@ -393,7 +393,9 @@ def get_name_variation_rewards(
         orthographic_similarity: Dictionary mapping similarity levels to percentages
         
     Returns:
-        Array of rewards for each miner based on execution vector quality
+        Tuple containing:
+        - Array of rewards for each miner based on execution vector quality
+        - List of dictionaries containing detailed scoring metrics for each miner
     """
     # Default similarity preferences if none provided
     if phonetic_similarity is None:
@@ -431,23 +433,35 @@ def get_name_variation_rewards(
         traceback.print_exc()
     
     rewards = np.zeros(len(responses))
+    detailed_metrics = []  # Store detailed metrics for each miner
     
     # Process each miner's response
     for i, (response, uid) in enumerate(zip(responses, uids)):
         bt.logging.info(f"\n{'='*50}")
         bt.logging.info(f"Processing miner {uid}")
         
+        # Initialize metrics dictionary for this miner
+        miner_metrics = {
+            "quality_scores": {},
+            "penalties": {
+                "extra_names": 0.0,
+                "missing_names": 0.0,
+                "total_penalty": 0.0
+            },
+            "completeness_multiplier": 1.0,
+            "name_metrics": {},
+            "invalid_names": [],
+            "missing_names": []
+        }
+        
         if not hasattr(response, 'variations') or not response.variations:
             bt.logging.warning(f"Miner {uid} returned invalid or empty response")
             rewards[i] = 0.0
+            detailed_metrics.append(miner_metrics)
             continue
             
         variations = response.variations
         quality_scores = []
-        
-        # Initialize penalties
-        extra_penalty = 0.0
-        missing_penalty = 0.0
         
         # Calculate penalty for unexpected names (extra variations)
         invalid_names = set(variations.keys()) - set(seed_names)
@@ -456,6 +470,8 @@ def get_name_variation_rewards(
             # 10% penalty per extra name, up to 70% max
             extra_penalty = min(0.7, len(invalid_names) * 0.1)
             bt.logging.info(f"Extra penalty: {extra_penalty}")
+            miner_metrics["penalties"]["extra_names"] = float(extra_penalty)
+            miner_metrics["invalid_names"] = list(invalid_names)
             
         # Calculate penalty for missing names
         missing_names = set(seed_names) - set(variations.keys())
@@ -464,56 +480,85 @@ def get_name_variation_rewards(
             # 20% penalty per missing name, up to 90% max
             missing_penalty = min(0.9, len(missing_names) * 0.2)
             bt.logging.info(f"Missing penalty: {missing_penalty}")
+            miner_metrics["penalties"]["missing_names"] = float(missing_penalty)
+            miner_metrics["missing_names"] = list(missing_names)
         
-        # Calculate total penalty (additive) with cap of 0.9
-        total_penalty = min(0.9, extra_penalty + missing_penalty)
-        bt.logging.info(f"Total penalty: {total_penalty}")
-        
-        # Calculate completeness multiplier (minimum 0.1)
+        # Calculate total penalty and completeness multiplier
+        total_penalty = min(0.9, miner_metrics["penalties"]["extra_names"] + miner_metrics["penalties"]["missing_names"])
         completeness_multiplier = max(0.1, 1.0 - total_penalty)
-        bt.logging.info(f"Completeness multiplier: {completeness_multiplier}")
+        miner_metrics["penalties"]["total_penalty"] = float(total_penalty)
+        miner_metrics["completeness_multiplier"] = float(completeness_multiplier)
         
         # Process each seed name
         for name in seed_names:
-            bt.logging.info(f"\nProcessing name: {name}")
             if name not in variations or not variations[name]:
-                bt.logging.warning(f"Miner {uid} did not provide variations for '{name}'")
                 continue
                 
             # Get variations for this name
             name_variations = variations[name]
-            bt.logging.info(f"Number of variations for {name}: {len(name_variations)}")
+            name_metrics = {
+                "variations": [],
+                "quality_score": 0.0,
+                "uniqueness_score": 0.0,
+                "count_score": 0.0,
+                "length_score": 0.0,
+                "phonetic_scores": [],
+                "orthographic_scores": []
+            }
             
-            # Calculate scores for this name's variations
+            # Calculate individual variation metrics
+            for variation in name_variations:
+                phonetic_score = calculate_phonetic_similarity(name, variation)
+                orthographic_score = calculate_orthographic_similarity(name, variation)
+                length_ratio = float(len(variation)) / float(len(name))
+                
+                name_metrics["variations"].append({
+                    "variation": variation,
+                    "phonetic_score": float(phonetic_score),
+                    "orthographic_score": float(orthographic_score),
+                    "length_ratio": float(length_ratio)
+                })
+                name_metrics["phonetic_scores"].append(float(phonetic_score))
+                name_metrics["orthographic_scores"].append(float(orthographic_score))
+            
+            # Calculate uniqueness score
+            unique_variations = len(set(name_variations))
+            name_metrics["uniqueness_score"] = float(unique_variations) / len(name_variations) if name_variations else 0.0
+            
+            # Calculate quality score
             try:
-                # Calculate quality score for all variations of this name
                 quality = calculate_variation_quality(
                     name,
                     name_variations,
                     phonetic_similarity=phonetic_similarity,
                     orthographic_similarity=orthographic_similarity,
-                    expected_count=variation_count  # Pass the expected count
+                    expected_count=variation_count
                 )
-                bt.logging.info(f"Quality score for {name}: {quality}")
                 quality_scores.append(quality)
+                name_metrics["quality_score"] = float(quality)
             except Exception as e:
                 bt.logging.error(f"Error calculating quality for miner {uid}, name '{name}': {str(e)}")
                 traceback.print_exc()
+            
+            miner_metrics["name_metrics"][name] = name_metrics
         
-        # Calculate average quality across all names
+        # Calculate final reward
         if quality_scores:
             avg_quality = sum(quality_scores) / len(quality_scores)
-            bt.logging.info(f"Average quality across all names: {avg_quality}")
-            # Apply completeness multiplier to final score
             rewards[i] = avg_quality * completeness_multiplier
-            bt.logging.info(f"Final reward after completeness multiplier: {rewards[i]}")
+            miner_metrics["average_quality"] = float(avg_quality)
+            miner_metrics["final_reward"] = float(rewards[i])
         else:
-            bt.logging.warning(f"No valid quality scores for miner {uid}")
             rewards[i] = 0.0
+            miner_metrics["average_quality"] = 0.0
+            miner_metrics["final_reward"] = 0.0
         
-        bt.logging.info(f"{'='*50}\n")
-                
-    return rewards
+        bt.logging.info(f"Miner {uid} final reward: {rewards[i]}")
+        bt.logging.info(f"Miner {uid} average quality: {miner_metrics['average_quality']}")
+        bt.logging.info(f"Miner {uid} final reward: {miner_metrics['final_reward']}")
+        detailed_metrics.append(miner_metrics)
+        
+    return rewards, detailed_metrics
 
 
 def save_variations_to_csv(
