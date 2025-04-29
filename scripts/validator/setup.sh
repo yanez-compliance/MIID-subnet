@@ -49,6 +49,37 @@ fix_python_apt() {
   sudo apt-get install -y python3-apt >/dev/null 2>&1 || warn_msg "Could not install python3-apt, but continuing anyway..."
 }
 
+ensure_python_venv() {
+  info_msg "Ensuring python3-venv is properly installed..."
+  
+  # Get Python version
+  PYTHON_VERSION=$(python3 -c 'import sys; print(".".join(map(str, sys.version_info[:2])))')
+  info_msg "Detected Python version: $PYTHON_VERSION"
+  
+  # Try installing python3-venv and version-specific venv
+  if ! dpkg -l python3-venv >/dev/null 2>&1; then
+    info_msg "Installing python3-venv packages..."
+    if ! sudo apt-get install -y python3-venv; then
+      warn_msg "Failed to install python3-venv, trying alternative methods..."
+      
+      # Try version-specific venv package
+      if ! sudo apt-get install -y "python${PYTHON_VERSION}-venv"; then
+        # Try installing both Python 3.10 and 3.11 venv packages
+        if ! sudo apt-get install -y python3.10-venv python3.11-venv; then
+          handle_error "Failed to install any Python venv package. Please install manually: sudo apt-get install python3-venv"
+        fi
+      fi
+    fi
+  fi
+  
+  # Verify venv module is working
+  if ! python3 -c "import venv" 2>/dev/null; then
+    handle_error "Python venv module is not working properly. Please try reinstalling python3-venv"
+  fi
+  
+  success_msg "Python venv is properly installed."
+}
+
 install_system_dependencies() {
   info_msg "Installing system dependencies..."
   
@@ -77,7 +108,6 @@ install_system_dependencies() {
     python3-pip
     python3-dev
     build-essential
-    python3-venv
   )
   
   for package in "${PACKAGES[@]}"; do
@@ -90,6 +120,9 @@ install_system_dependencies() {
       info_msg "$package is already installed."
     fi
   done
+  
+  # Ensure Python venv is properly installed
+  ensure_python_venv
   
   # Additional installs (same as miner)
   info_msg "Installing additional packages (nano, jq, npm, pm2)..."
@@ -126,16 +159,45 @@ install_ollama() {
 create_and_activate_venv() {
   local VENV_DIR="validator_env"
   info_msg "Creating virtual environment..."
-  if [ ! -d "$VENV_DIR" ]; then
-    python3 -m venv "$VENV_DIR" || handle_error "Failed to create virtual environment"
-    success_msg "Virtual environment created successfully."
+  
+  # Remove any existing failed/incomplete venv
+  if [ -d "$VENV_DIR" ]; then
+    info_msg "Removing existing virtual environment..."
+    rm -rf "$VENV_DIR"
+  fi
+  
+  # Try creating venv with different Python versions if needed
+  if ! python3 -m venv "$VENV_DIR"; then
+    warn_msg "Failed to create venv with python3, trying with specific Python version..."
+    PYTHON_VERSION=$(python3 -c 'import sys; print(".".join(map(str, sys.version_info[:2])))')
+    
+    if ! "python${PYTHON_VERSION}" -m venv "$VENV_DIR"; then
+      # Try with Python 3.10 specifically
+      if command -v python3.10 &>/dev/null && python3.10 -m venv "$VENV_DIR"; then
+        success_msg "Virtual environment created with Python 3.10"
+      # Try with Python 3.11
+      elif command -v python3.11 &>/dev/null && python3.11 -m venv "$VENV_DIR"; then
+        success_msg "Virtual environment created with Python 3.11"
+      else
+        handle_error "Failed to create virtual environment with any Python version"
+      fi
+    fi
   else
-    info_msg "Virtual environment already exists. Skipping."
+    success_msg "Virtual environment created successfully."
   fi
 
   info_msg "Activating virtual environment..."
   # shellcheck source=/dev/null
-  source "$VENV_DIR/bin/activate" || handle_error "Failed to activate virtual environment"
+  if ! source "$VENV_DIR/bin/activate"; then
+    handle_error "Failed to activate virtual environment"
+  fi
+  
+  # Verify virtual environment is working
+  if ! python -c "import sys; assert sys.prefix != sys.base_prefix" 2>/dev/null; then
+    handle_error "Virtual environment activation failed"
+  fi
+  
+  success_msg "Virtual environment is active and working properly."
 }
 
 # ---------------------------------------------------------

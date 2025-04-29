@@ -14,17 +14,25 @@ MIID validators:
 ## Requirements
 
 - Python 3.10 or higher
+- Git
 - A Bittensor wallet with TAO for staking
 - A local LLM via Ollama (default: llama3.1:latest)
-- Sufficient storage for challenge data and responses
+- Sufficient storage for challenge data and responses (minimum 10GB recommended)
 - Reliable internet connection
+- 8GB+ RAM (16GB recommended)
+- Open port 8091 for miner-to-validator communication
 
 ## Installation
 
 ### Option 1: Automated Setup (Recommended)
 
-For a streamlined installation process, use the provided setup script:
+1. First, clone the MIID repository:
+```bash
+git clone https://github.com/yanez-compliance/MIID-subnet.git
+cd MIID-subnet
+```
 
+2. Run the automated setup script:
 ```bash
 bash scripts/validator/setup.sh
 ```
@@ -32,12 +40,22 @@ bash scripts/validator/setup.sh
 This script will:
 - Install all system dependencies
 - Install Ollama and pull the llama3.1 model
-- Create a virtual environment (validator_env)
+- Create a Python virtual environment (validator_env)
 - Install the MIID package and Bittensor
+- Set up all necessary configurations
 
-After running the script:
+3. Activate the virtual environment:
 ```bash
 source validator_env/bin/activate
+```
+
+If you encounter any issues with python-venv during installation, the script will attempt to fix them automatically. However, you can also manually install it:
+```bash
+sudo apt-get update
+sudo apt-get install python3-venv
+# Or for specific Python versions:
+sudo apt-get install python3.10-venv  # for Python 3.10
+sudo apt-get install python3.11-venv  # for Python 3.11
 ```
 
 ### Option 2: Manual Installation
@@ -50,15 +68,21 @@ git clone https://github.com/yanez-compliance/MIID-subnet.git
 cd MIID-subnet
 ```
 
-2. Install dependencies:
+2. Create and activate a virtual environment:
+```bash
+python3 -m venv validator_env
+source validator_env/bin/activate
+```
+
+3. Install the MIID package and dependencies:
 ```bash
 python -m pip install -e .
 ```
 
-3. Install Ollama:
+4. Install Ollama:
 Visit [ollama.ai](https://ollama.ai) for installation instructions.
 
-4. Pull the default LLM model:
+5. Pull the default LLM model:
 ```bash
 ollama pull llama3.1:latest
 ```
@@ -72,6 +96,7 @@ ollama pull llama3.1:latest
   - Set up monitoring and alerts for downtime
   - Consider dedicated hardware for reliability
   - Implement regular backups of wallet keys
+  - Configure proper firewall rules for port 8091
 
 ## Running a Validator
 
