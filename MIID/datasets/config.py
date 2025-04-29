@@ -14,8 +14,8 @@ DATA_DIR = "data"
 # Next: Optionally, query the chain using Bittensor APIs to get active validators dynamically.
 ALLOWED_HOTKEYS: List[str] = [
     # Add your validator hotkeys here
-    "5FhCUBvS49UDogEMDukPEqP2JLo3FRM4MkuFPAm8ZPum3Dg6",  # Example validator hotkey
-    # Add more validator hotkeys as needed
+    "5FhCUBvS49UDogEMDukPEqP2JLo3FRM4MkuFPAm8ZPum3Dg6",  # validator 1
+    "5CnkkjPdfsA6jJDHv2U6QuiKiivDuvQpECC13ffdmSDbkgtt",   # validator 2
 ]
 
 # Hugging Face configuration
