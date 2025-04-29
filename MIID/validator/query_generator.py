@@ -256,21 +256,19 @@ class QueryGenerator:
                 locale = 'en_US'
                 locale_fake = Faker(locale)
                 
-                # Generate first name only
+                # Generate both first and last names
                 first_name = locale_fake.first_name().lower()
-                # last_name = locale_fake.last_name().lower()  # Commented out: last name generation
+                last_name = locale_fake.last_name().lower()
                 
                 # Create full name as a string
-                # full_name = f"{first_name} {last_name}"  # Commented out: full name creation
+                full_name = f"{first_name} {last_name}"
                 
                 # Ensure the name is unique and meets length requirements
-                # We'll allow longer names since we're dealing with multipart names
-                # if full_name not in seed_names and 3 <= len(first_name) <= 20 and 3 <= len(last_name) <= 20:  # Commented out: full name check
-                if first_name not in seed_names and 3 <= len(first_name) <= 20:  # Only check first name
-                    # seed_names.append(full_name)  # Commented out: full name addition
-                    seed_names.append(first_name)  # Only add first name
-                    # bt.logging.info(f"Generated name from {locale}: {first_name} {last_name}")  # Commented out: full name logging
-                    bt.logging.info(f"Generated name from {locale}: {first_name}")  # Only log first name
+                if (full_name not in seed_names and 
+                    3 <= len(first_name) <= 20 and 
+                    3 <= len(last_name) <= 20):
+                    seed_names.append(full_name)
+                    bt.logging.info(f"Generated name from {locale}: {full_name}")
             
             bt.logging.info(f"#########################################Generated {len(seed_names)} test names: {seed_names}#########################################")
             bt.logging.info(f"#########################################Query template: {query_template}#########################################")
@@ -302,8 +300,7 @@ class QueryGenerator:
             
             # Generate simple test names (first names only)
             fake = Faker()
-            # seed_names = [f"{fake.first_name().lower()} {fake.last_name().lower()}" for _ in range(5)]  # Commented out: full name generation
-            seed_names = [fake.first_name().lower() for _ in range(5)]  # Only generate first names
+            seed_names = [f"{fake.first_name().lower()} {fake.last_name().lower()}" for _ in range(5)]
             
             bt.logging.info(f"#########################################Using fallback: {len(seed_names)} test names#########################################")
             bt.logging.info(f"#########################################Query template: {query_template}#########################################")
