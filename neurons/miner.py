@@ -415,22 +415,16 @@ Remember: Only provide the name variations in a clean, comma-separated format.
         # bt.logging.info(f"Saved variations to: {json_path}")
         # bt.logging.info(f"DataFrame shape: {result_df.shape} with {max_variations} variation columns")
     
-    def Clean_extra(self, payload: str, comma: bool, line: bool, space: bool) -> str:
+    def Clean_extra(self, payload: str, comma: bool, line: bool, space: bool, preserve_name_spaces: bool = False) -> str:
         """
         Clean the LLM output by removing unwanted characters.
-        
-        This function removes various characters from the LLM output to make it
-        easier to parse and extract the name variations. It can selectively
-        remove commas, newlines, and spaces based on the parameters.
         
         Args:
             payload: The text to clean
             comma: Whether to remove commas
             line: Whether to remove newlines
             space: Whether to remove spaces
-            
-        Returns:
-            The cleaned text
+            preserve_name_spaces: Whether to preserve spaces between names (for multi-part names)
         """
         # Remove punctuation and quotes
         payload = payload.replace(".", "")
@@ -439,16 +433,62 @@ Remember: Only provide the name variations in a clean, comma-separated format.
         payload = payload.replace("-", "")
         payload = payload.replace("and ", "")
         
-        # Optionally remove spaces, commas, and newlines
+        # Handle spaces based on preservation flag
         if space:
-            payload = payload.replace(" ", "")
+            if preserve_name_spaces:
+                # Replace multiple spaces with single space
+                while "  " in payload:
+                    payload = payload.replace("  ", " ")
+            else:
+                # Original behavior - remove all spaces
+                payload = payload.replace(" ", "")
+        
         if comma:
             payload = payload.replace(",", "")
         if line:
             payload = payload.replace("\\n", "")
+        
+        return payload.strip()
+
+    def validate_variation(self, name: str, seed: str, is_multipart_name: bool) -> str:
+        """
+        Helper function to validate if a variation matches the seed name structure.
+        
+        Args:
+            name: The variation to validate
+            seed: The original seed name
+            is_multipart_name: Whether the seed is a multi-part name
             
-        return payload
-    
+        Returns:
+            str: The validated and cleaned variation, or np.nan if invalid
+        """
+        name = name.strip()
+        if not name or name.isspace():
+            return np.nan
+        
+        # Handle cases with colons (e.g., "Here are variations: Name")
+        if ":" in name:
+            name = name.split(":")[-1].strip()
+        
+        # Check length reasonability (variation shouldn't be more than 2x the seed length)
+        if len(name) > 2 * len(seed):
+            return np.nan
+        
+        # Check structure consistency with seed name
+        name_parts = name.split()
+        if is_multipart_name:
+            # For multi-part seed names (e.g., "John Smith"), variations must also have multiple parts
+            if len(name_parts) < 2:
+                bt.logging.warning(f"Skipping single-part variation '{name}' for multi-part seed '{seed}'")
+                return np.nan
+        else:
+            # For single-part seed names (e.g., "John"), variations must be single part
+            if len(name_parts) > 1:
+                bt.logging.warning(f"Skipping multi-part variation '{name}' for single-part seed '{seed}'")
+                return np.nan
+            
+        return name
+
     def Process_function(self, string: str, debug: bool) -> Tuple[str, str, List[str], Optional[str]]:
         """
         Process the LLM response to extract the seed name and variations.
@@ -462,7 +502,9 @@ Remember: Only provide the name variations in a clean, comma-separated format.
         - Line-separated lists
         - Space-separated lists with numbering
         
-        The function is flexible and can handle any number of variations, not just 10.
+        The function ensures variations match the structure of the seed name:
+        - Single-part seed names (e.g., "John") only get single-part variations
+        - Multi-part seed names (e.g., "John Smith") only get multi-part variations
         
         Args:
             string: The LLM response in the format:
@@ -479,104 +521,111 @@ Remember: Only provide the name variations in a clean, comma-separated format.
         # Split the response by "---" to extract the query and response parts
         splits = string.split('---')
         
-        # Extract the seed name from the query part
+        # Extract and analyze the seed name structure
         seed = splits[1].split("-")[1].replace(".", "").replace(",", "").replace("'", "")
-        seed = self.Clean_extra(seed, True, True, True)  # Clean the original seed name
+        seed_parts = seed.split()
+        is_multipart_name = len(seed_parts) > 1
+        seed = self.Clean_extra(seed, True, True, True, preserve_name_spaces=is_multipart_name)
+        
+        bt.logging.info(f"Processing seed name: '{seed}' (multipart: {is_multipart_name})")
         
         # Extract the response payload
         payload = splits[-1]
         
         # Case 1: Comma-separated list (preferred format)
         if len(payload.split(",")) > 3:  # Check if we have at least 3 commas
-            # Clean the payload but keep commas
-            payload = self.Clean_extra(payload, False, True, True)
+            # Clean the payload but keep commas for splitting
+            payload = self.Clean_extra(payload, False, True, True, preserve_name_spaces=is_multipart_name)
             
-            # Remove numbering
+            # Remove numbering prefixes
             for num in range(10):
                 payload = payload.replace(str(num), "")
-                
-            # Split by comma and take all variations
-            name_list = list(payload.split(",")[1:])  # Skip the first element (often empty or contains intro text)
             
-            # Clean each variation
-            Cleaned_name_list = []
-            for name in name_list:
-                # Handle case where LLM includes a prefix like "Here are 10 alternative spellings for the name Rowena: Rowenna"
-                if ":" in name:
-                    c_name = name.split(":")[-1]
-                    Cleaned_name_list.append(c_name)
-                # Skip if the variation is too long compared to the original (likely an error)
-                elif len(name) > 2*len(seed):
-                    Cleaned_name_list.append(np.nan)
-                else:
-                    Cleaned_name_list.append(name)
-                    
-            # Return the results - we accept any number of variations
+            # Split by comma and process each variation
+            variations = []
+            for name in payload.split(","):
+                cleaned_var = self.validate_variation(name, seed, is_multipart_name)
+                if not pd.isna(cleaned_var):
+                    variations.append(cleaned_var)
+            
             if debug:
-                return seed, "r1", Cleaned_name_list, payload
-            else:
-                return seed, "r1", Cleaned_name_list
+                return seed, "r1", variations, payload
+            return seed, "r1", variations
         
         # Case 2 & 3: Non-comma separated formats
         else:
             # Case 2: Line-separated list
             len_ans = len(payload.split("\\n"))
-            if len_ans > 2:  # Multiple lines, use this to separate the names
-                # Clean the payload but keep newlines
-                payload = self.Clean_extra(payload, True, False, True)
+            if len_ans > 2:  # Multiple lines indicate line-separated format
+                # Clean the payload but preserve newlines for splitting
+                payload = self.Clean_extra(payload, True, False, True, preserve_name_spaces=is_multipart_name)
                 
-                # Remove numbering
+                # Remove numbering prefixes
                 for num in range(10):
                     payload = payload.replace(str(num), "")
-                    
-                # Split by newline and take all variations
-                name_list = list(payload.split("\\n"))
                 
-                # Clean each variation
-                Cleaned_name_list = []
-                for name in name_list:
-                    if ":" in name:
-                        c_name = name.split(":")[-1]
-                        Cleaned_name_list.append(c_name)
-                    elif len(name) > 2*len(seed):
-                        Cleaned_name_list.append(np.nan)
-                    else:
-                        Cleaned_name_list.append(name)
-                        
-                # Return the results
-                if debug:
-                    return seed, "r2", Cleaned_name_list, payload
-                else:
-                    return seed, "r2", Cleaned_name_list
+                # Process line-separated variations
+                variations = []
+                for name in payload.split("\\n"):
+                    cleaned_var = self.validate_variation(name, seed, is_multipart_name)
+                    if not pd.isna(cleaned_var):
+                        variations.append(cleaned_var)
             
-            # Case 3: Space-separated list with numbering
-            else: 
-                # Clean the payload but keep spaces
-                payload = self.Clean_extra(payload, True, True, False)
+                if debug:
+                    return seed, "r2", variations, payload
+                return seed, "r2", variations
+            
+            # Case 3: Space-separated list
+            else:
+                # Clean the payload but preserve spaces for multi-part names
+                payload = self.Clean_extra(payload, True, True, False, preserve_name_spaces=is_multipart_name)
                 
-                # Remove numbering
+                # Remove numbering prefixes
                 for num in range(10):
                     payload = payload.replace(str(num), "")
-                    
-                # Split by space
-                name_list = list(payload.split(" "))
                 
-                # Clean each variation
-                Cleaned_name_list = []
-                for name in name_list:
-                    if ":" in name:
-                        c_name = name.split(":")[-1]
-                        Cleaned_name_list.append(c_name)
-                    elif len(name) > 2*len(seed):
-                        Cleaned_name_list.append(np.nan)
-                    elif len(name) != 0:  # Skip empty strings
-                        Cleaned_name_list.append(name)
+                variations = []
+                if is_multipart_name:
+                    # For multi-part names, we need to carefully group the parts
+                    current_variation = []
+                    parts = payload.split()
+                    
+                    for part in parts:
+                        part = part.strip()
+                        if not part:
+                            continue
                         
-                # Return the results
-                if debug:
-                    return seed, "r3", Cleaned_name_list, payload
+                        if ":" in part:  # New variation starts after colon
+                            if current_variation:
+                                # Process completed variation
+                                cleaned_var = self.validate_variation(" ".join(current_variation), seed, is_multipart_name)
+                                if not pd.isna(cleaned_var):
+                                    variations.append(cleaned_var)
+                            current_variation = [part.split(":")[-1].strip()]
+                        else:
+                            current_variation.append(part)
+                            # Check if we have collected enough parts for a complete name
+                            if len(current_variation) == len(seed_parts):
+                                cleaned_var = self.validate_variation(" ".join(current_variation), seed, is_multipart_name)
+                                if not pd.isna(cleaned_var):
+                                    variations.append(cleaned_var)
+                                current_variation = []
+                
+                    # Handle any remaining parts
+                    if current_variation:
+                        cleaned_var = self.validate_variation(" ".join(current_variation), seed, is_multipart_name)
+                        if not pd.isna(cleaned_var):
+                            variations.append(cleaned_var)
                 else:
-                    return seed, "r3", Cleaned_name_list
+                    # For single-part names, simple space splitting is sufficient
+                    for name in payload.split():
+                        cleaned_var = self.validate_variation(name, seed, is_multipart_name)
+                        if not pd.isna(cleaned_var):
+                            variations.append(cleaned_var)
+                
+                if debug:
+                    return seed, "r3", variations, payload
+                return seed, "r3", variations
 
     async def blacklist(
         self, synapse: IdentitySynapse
