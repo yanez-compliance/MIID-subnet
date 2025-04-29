@@ -284,7 +284,7 @@ def calculate_variation_quality(
 ) -> float:
     """
     Calculate the quality of execution vectors (name variations) for threat detection.
-    Currently only processes first names, last name processing is commented out.
+    Processes both first and last names.
     """
     bt.logging.info(f"\n{'='*50}")
     bt.logging.info(f"Calculating variation quality for: {original_name}")
@@ -299,30 +299,36 @@ def calculate_variation_quality(
     
     # Split the original name into first and last name
     name_parts = original_name.split()
-    if len(name_parts) < 1:
-        # If name can't be split, use the whole name
+    if len(name_parts) < 2:
+        # If name can't be split into first and last, use the whole name as first name
         first_name = original_name
-        bt.logging.warning(f"Could not split name '{original_name}'")
+        last_name = None
+        bt.logging.warning(f"Could not split name '{original_name}' into first and last name")
     else:
         first_name = name_parts[0]
-        # last_name = name_parts[-1]  # Commented out: last name processing
-        bt.logging.info(f"Using first name: '{first_name}'")
-        # bt.logging.info(f"Last name: '{last_name}'")  # Commented out: last name logging
+        last_name = name_parts[-1]
+        bt.logging.info(f"Using first name: '{first_name}', last name: '{last_name}'")
     
-    # Process variations as first names only
+    # Process variations for both first and last names
     first_name_variations = []
-    # last_name_variations = []  # Commented out: last name variations
+    last_name_variations = []
     
     for variation in variations:
         parts = variation.split()
-        if len(parts) >= 1:
+        if len(parts) >= 2:
             first_name_variations.append(parts[0])
-            # last_name_variations.append(parts[-1])  # Commented out: last name processing
+            last_name_variations.append(parts[-1])
+        elif len(parts) == 1:
+            # If variation is a single word, use it for both first and last name comparison
+            first_name_variations.append(parts[0])
+            if last_name:
+                last_name_variations.append(parts[0])
         else:
             bt.logging.warning(f"Variation '{variation}' could not be processed")
     
     bt.logging.info(f"First name variations: {len(first_name_variations)}")
-    # bt.logging.info(f"Last name variations: {len(last_name_variations)}")  # Commented out: last name logging
+    if last_name:
+        bt.logging.info(f"Last name variations: {len(last_name_variations)}")
     
     # Calculate score for first name
     bt.logging.info("\nCalculating first name score:")
@@ -334,31 +340,35 @@ def calculate_variation_quality(
         expected_count
     )
     
-    # Calculate score for last name (commented out)
-    # bt.logging.info("\nCalculating last name score:")
-    # last_name_score = calculate_part_score(
-    #     last_name,
-    #     last_name_variations,
-    #     phonetic_similarity,
-    #     orthographic_similarity,
-    #     expected_count
-    # )
-    
-    # Return weighted average of both scores (30% first name, 70% last name)
-    # final_score = (0.3 * first_name_score + 0.7 * last_name_score)  # Commented out: weighted average
-    final_score = first_name_score  # Using only first name score
+    # Calculate score for last name if available
+    last_name_score = 0.0
+    if last_name:
+        bt.logging.info("\nCalculating last name score:")
+        last_name_score = calculate_part_score(
+            last_name,
+            last_name_variations,
+            phonetic_similarity,
+            orthographic_similarity,
+            expected_count
+        )
+        # Return weighted average of both scores (30% first name, 70% last name)
+        final_score = (0.3 * first_name_score + 0.7 * last_name_score)
+    else:
+        # If no last name, use only first name score
+        final_score = first_name_score
     
     bt.logging.info(f"\nFinal score breakdown for '{original_name}':")
     bt.logging.info(f"  - First name score: {first_name_score:.3f}")
-    # bt.logging.info(f"  - Last name score (70%): {last_name_score:.3f}")  # Commented out: last name score logging
+    if last_name:
+        bt.logging.info(f"  - Last name score (70%): {last_name_score:.3f}")
     bt.logging.info(f"  - Final score: {final_score:.3f}")
     
     if final_score == 0:
         bt.logging.warning(f"Zero final score for '{original_name}'. Possible reasons:")
         if first_name_score == 0:
             bt.logging.warning("  - Zero first name score")
-        # if last_name_score == 0:  # Commented out: last name score check
-        #     bt.logging.warning("  - Zero last name score")
+        if last_name and last_name_score == 0:
+            bt.logging.warning("  - Zero last name score")
         if len(variations) == 0:
             bt.logging.warning("  - No variations provided")
     
@@ -632,9 +642,16 @@ def save_variations_to_csv(
         
         bt.logging.info(f"Variation counts by miner: {variation_count_per_miner}")
         
-        # Prepare CSV file for logging variations
+        # Prepare CSV file for logging variations with expanded fields for first/last name
         with open(csv_filename, 'a', newline='', encoding='utf-8') as csvfile:
-            fieldnames = ['timestamp', 'run_id', 'seed_name', 'variation', 'miner_uid', 'phonetic_score', 'orthographic_score']
+            fieldnames = [
+                'timestamp', 'run_id', 
+                'seed_name', 'seed_first_name', 'seed_last_name',
+                'variation', 'variation_first_name', 'variation_last_name',
+                'miner_uid', 
+                'phonetic_score_first', 'phonetic_score_last',
+                'orthographic_score_first', 'orthographic_score_last'
+            ]
             writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
             
             # Write header only if the file is new
@@ -656,25 +673,48 @@ def save_variations_to_csv(
                     if name not in variations or not variations[name]:
                         bt.logging.warning(f"Miner {uid} did not provide variations for '{name}'")
                         continue
-                        
+                    
+                    # Split seed name into first and last
+                    seed_parts = name.split()
+                    seed_first = seed_parts[0] if seed_parts else name
+                    seed_last = seed_parts[-1] if len(seed_parts) > 1 else None
+                    
                     # Get variations for this name
                     name_variations = variations[name]
                     
                     # Log individual scores for each variation
                     for variation in name_variations:
-                        # Calculate scores using the same functions as in reward calculation
-                        phonetic_score = calculate_phonetic_similarity(name, variation)
-                        orthographic_score = calculate_orthographic_similarity(name, variation)
+                        # Split variation into first and last
+                        var_parts = variation.split()
+                        var_first = var_parts[0] if var_parts else variation
+                        var_last = var_parts[-1] if len(var_parts) > 1 else None
+                        
+                        # Calculate scores for first name
+                        phonetic_first = calculate_phonetic_similarity(seed_first, var_first)
+                        orthographic_first = calculate_orthographic_similarity(seed_first, var_first)
+                        
+                        # Calculate scores for last name if available
+                        phonetic_last = 0.0
+                        orthographic_last = 0.0
+                        if seed_last and var_last:
+                            phonetic_last = calculate_phonetic_similarity(seed_last, var_last)
+                            orthographic_last = calculate_orthographic_similarity(seed_last, var_last)
                         
                         # Log to CSV
                         writer.writerow({
                             'timestamp': timestamp,
                             'run_id': run_id,
                             'seed_name': name,
+                            'seed_first_name': seed_first,
+                            'seed_last_name': seed_last if seed_last else '',
                             'variation': variation,
+                            'variation_first_name': var_first,
+                            'variation_last_name': var_last if var_last else '',
                             'miner_uid': uid,
-                            'phonetic_score': phonetic_score,
-                            'orthographic_score': orthographic_score
+                            'phonetic_score_first': phonetic_first,
+                            'phonetic_score_last': phonetic_last,
+                            'orthographic_score_first': orthographic_first,
+                            'orthographic_score_last': orthographic_last
                         })
                         variation_count += 1
         
