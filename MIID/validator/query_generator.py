@@ -38,6 +38,32 @@ class QueryGenerator:
         bt.logging.info(f"#########################################use_default_query: {self.use_default_query}#########################################")
         bt.logging.info(f"QueryGenerator initialized with use_default_query={self.use_default_query}")
     
+    def validate_query_template(self, query_template: str) -> Tuple[bool, str]:
+        """
+        Validate that a query template contains exactly one {name} placeholder and is properly formatted.
+        
+        Args:
+            query_template: The query template to validate
+            
+        Returns:
+            Tuple[bool, str]: (is_valid, error_message)
+        """
+        if not query_template:
+            return False, "Query template is empty"
+        
+        name_placeholders = query_template.count("{name}")
+        
+        if name_placeholders == 0:
+            return False, "Query template missing {name} placeholder"
+        elif name_placeholders > 1:
+            return False, f"Query template contains multiple {name} placeholders ({name_placeholders})"
+        
+        # Check for proper formatting of the placeholder
+        if "{name}" not in query_template:
+            return False, "Query template contains malformed name placeholder"
+        
+        return True, "Query template is valid"
+    
     async def generate_complex_query(
         self,
         model_name: str,
@@ -91,14 +117,31 @@ class QueryGenerator:
         2. For phonetic similarity (sound-alike names), implement: {phonetic_spec}
         3. For orthographic similarity (visually similar spellings), implement: {orthographic_spec}
         
-        Format the query as a natural language request that explicitly states all requirements in the context of threat scenario generation.
-        The query should ask for these name variations as execution vectors that could be used to bypass sanctions screening systems.
+        IMPORTANT FORMATTING REQUIREMENTS:
+        1. The query MUST use {{name}} as a placeholder for the target name
+        2. Use exactly one {{name}} placeholder in the query
+        3. Format as a natural language request that explicitly states all requirements
+        
+        Example format: "Generate {variation_count} variations of the name {{name}}, ensuring..."
         """
 
         try:
             # Generate the query using Ollama
             response = ollama.generate(model=model_name, prompt=prompt)
             query_template = response['response'].strip()
+            
+            # Validate the generated template
+            is_valid, error_msg = self.validate_query_template(query_template)
+            if not is_valid:
+                bt.logging.warning(f"LLM generated invalid template: {error_msg}")
+                bt.logging.warning("Falling back to default template")
+                # Fall back to a simple, valid template
+                query_template = f"Generate {variation_count} comma-separated alternative spellings of the name {{name}}. Include a mix of phonetically similar and orthographically similar variations. Provide only the names."
+                # Validate the fallback template
+                is_valid, error_msg = self.validate_query_template(query_template)
+                if not is_valid:
+                    raise ValueError(f"Fallback template validation failed: {error_msg}")
+            
             bt.logging.info(f"##########QQQQQQQQQQQ#####################Generated query template: {query_template}#########################################")
             bt.logging.info(f"##########QQQQQQQQQQQ#####################Generated query labels: {labels}#########################################")
             return query_template, labels
@@ -107,6 +150,10 @@ class QueryGenerator:
             bt.logging.error(f"Error generating complex query: {str(e)}")
             # Fallback to a simple query template and default labels
             simple_template = f"Give me {variation_count} comma separated alternative spellings of the name {{name}}. Include a mix of phonetically similar and orthographically similar variations. Provide only the names."
+            # Validate the fallback template
+            is_valid, error_msg = self.validate_query_template(simple_template)
+            if not is_valid:
+                raise ValueError(f"Fallback template validation failed: {error_msg}")
             return simple_template, labels
     
     async def build_queries(self) -> Tuple[List[str], str, Dict[str, Any]]:
@@ -239,6 +286,14 @@ class QueryGenerator:
             orthographic_config = {"Medium": 0.5}
             
             query_template = f"Give me {variation_count} comma separated alternative spellings of the name {{name}}. Include 5 phonetically similar and 5 orthographically similar variations. Provide only the names."
+            
+            # Validate the fallback template
+            is_valid, error_msg = self.validate_query_template(query_template)
+            if not is_valid:
+                bt.logging.error(f"Fallback template validation failed: {error_msg}")
+                # Use an absolutely basic template as last resort
+                query_template = f"Generate {variation_count} variations of the name {{name}}."
+            
             query_labels = {
                 "variation_count": variation_count,
                 "phonetic_similarity": phonetic_config,
