@@ -246,29 +246,27 @@ class QueryGenerator:
                 
             bt.logging.info(f"Using name variation sample size: {sample_size}")
             
-            # Define supported locales for name generation
-            #locales = ['en_US', 'es_ES', 'fr_FR', 'de_DE', 'it_IT', 'pt_BR', 'ru_RU', 'ar_SA', 'ja_JP', 'zh_CN']
-            
-            # Generate the required number of unique names
+            # Generate names with random mix of single and full names
             while len(seed_names) < sample_size:
-                # Randomly select a locale
-                #locale = random.choice(locales)
-                locale = 'en_US'
-                locale_fake = Faker(locale)
+                # Randomly decide whether to generate a single name or full name
+                is_full_name = random.choice([True, False])
                 
-                # Generate both first and last names
-                first_name = locale_fake.first_name().lower()
-                last_name = locale_fake.last_name().lower()
-                
-                # Create full name as a string
-                full_name = f"{first_name} {last_name}"
-                
-                # Ensure the name is unique and meets length requirements
-                if (full_name not in seed_names and 
-                    3 <= len(first_name) <= 20 and 
-                    3 <= len(last_name) <= 20):
-                    seed_names.append(full_name)
-                    bt.logging.info(f"Generated name from {locale}: {full_name}")
+                if is_full_name:
+                    # Generate full name
+                    first_name = fake.first_name().lower()
+                    last_name = fake.last_name().lower()
+                    name = f"{first_name} {last_name}"
+                    if (name not in seed_names and 
+                        3 <= len(first_name) <= 20 and 
+                        3 <= len(last_name) <= 20):
+                        seed_names.append(name)
+                        bt.logging.info(f"Generated full name: {name}")
+                else:
+                    # Generate single name
+                    name = fake.first_name().lower()
+                    if name not in seed_names and 3 <= len(name) <= 20:
+                        seed_names.append(name)
+                        bt.logging.info(f"Generated single name: {name}")
             
             bt.logging.info(f"#########################################Generated {len(seed_names)} test names: {seed_names}#########################################")
             bt.logging.info(f"#########################################Query template: {query_template}#########################################")
@@ -298,9 +296,24 @@ class QueryGenerator:
                 "orthographic_similarity": orthographic_config
             }
             
-            # Generate simple test names (first names only)
+            # Generate fallback names with mix of single and full names
             fake = Faker()
-            seed_names = [f"{fake.first_name().lower()} {fake.last_name().lower()}" for _ in range(5)]
+            seed_names = []
+            
+            # Use the same sample size for fallback
+            fallback_sample_size = getattr(self.config.name_variation, 'sample_size', 5)
+            
+            while len(seed_names) < fallback_sample_size:
+                # Randomly decide whether to generate a single name or full name
+                is_full_name = random.choice([True, False])
+                
+                if is_full_name:
+                    name = f"{fake.first_name().lower()} {fake.last_name().lower()}"
+                else:
+                    name = fake.first_name().lower()
+                
+                if name not in seed_names:
+                    seed_names.append(name)
             
             bt.logging.info(f"#########################################Using fallback: {len(seed_names)} test names#########################################")
             bt.logging.info(f"#########################################Query template: {query_template}#########################################")
