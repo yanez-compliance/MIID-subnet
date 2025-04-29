@@ -100,10 +100,10 @@ class Miner(BaseMinerNeuron):
         
         # Initialize the LLM client
         # You can override this in your config by setting model_name
-        # Ensure we have a valid model name, defaulting to tinyllama:latest if not specified
+        # Ensure we have a valid model name, defaulting to llama3.2:1b if not specified
         self.model_name = getattr(self.config, 'model_name', None)
         if self.model_name is None:
-            self.model_name = 'tinyllama:latest'
+            self.model_name = 'llama3.2:1b'
             bt.logging.info(f"No model specified in config, using default model: {self.model_name}")
         
         bt.logging.info(f"Using LLM model: {self.model_name}")
