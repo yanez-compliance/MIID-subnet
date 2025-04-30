@@ -217,7 +217,7 @@ async def forward(self):
     # 6) Query the network in batches
     start_time = time.time()
     all_responses = []
-    batch_size = 5
+    batch_size = self.config.neuron.batch_size
     total_batches = (len(miner_uids) + batch_size - 1) // batch_size
     
     for i in range(0, len(miner_uids), batch_size):
