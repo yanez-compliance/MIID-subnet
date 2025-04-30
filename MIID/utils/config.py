@@ -142,6 +142,13 @@ def add_miner_args(cls, parser):
     )
 
     parser.add_argument(
+        "--neuron.model_name",
+        type=str,
+        help="The Ollama model to use (default: tinyllama:latest)",
+        default="tinyllama:latest",
+    )
+
+    parser.add_argument(
         "--blacklist.force_validator_permit",
         action="store_true",
         help="If set, we will force incoming requests to have a permit.",

@@ -22,8 +22,13 @@ MIID miners receive requests from validators containing names and a query templa
 
 ### Option 1: Automated Setup (Recommended)
 
-For a streamlined installation process, use the provided setup script:
+1. First, clone the MIID repository:
+```bash
+git clone https://github.com/yanez-compliance/MIID-subnet.git
+cd MIID-subnet
+```
 
+2. Run the automated setup script:
 ```bash
 bash scripts/miner/setup.sh
 ```
@@ -92,14 +97,14 @@ For running your miner in the background (recommended for production), see the [
 
 You can configure your miner with the following command-line arguments:
 
-- `--neuron.ollama_model_name`: The Ollama model to use (default: llama3.1:latest)
+- `--neuron.model_name`: The Ollama model to use (default: tinyllama:latest)
 - `--neuron.logging.debug`: Enable debug logging
 - `--neuron.log_responses`: Save miner responses for analysis
 - `--neuron.response_cache_dir`: Directory to store response logs
 
 Example with custom configuration:
 ```bash
-python neurons/miner.py --netuid 322 --wallet.name your_wallet_name --wallet.hotkey your_hotkey --subtensor.network test --neuron.ollama_model_name mistral:7b --neuron.logging.debug
+python neurons/miner.py --netuid 322 --wallet.name your_wallet_name --wallet.hotkey your_hotkey --subtensor.network test --neuron.model_name mistral:7b --neuron.logging.debug
 ```
 
 ## How It Works

@@ -101,7 +101,7 @@ class Miner(BaseMinerNeuron):
         # Initialize the LLM client
         # You can override this in your config by setting model_name
         # Ensure we have a valid model name, defaulting to llama3.2:1b if not specified
-        self.model_name = getattr(self.config, 'model_name', None)
+        self.model_name = getattr(self.config.neuron, 'model_name', None) if hasattr(self.config, 'neuron') else None
         if self.model_name is None:
             #self.model_name = 'llama3.2:1b'
             self.model_name = 'tinyllama:latest'
