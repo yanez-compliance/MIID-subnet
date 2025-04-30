@@ -104,15 +104,15 @@ def calculate_part_score(
     phonetic_similarity: Dict[str, float],
     orthographic_similarity: Dict[str, float],
     expected_count: int
-) -> float:
-    """Calculate score for a single part (first or last name)"""
+) -> Tuple[float, Dict]:
+    """Calculate score and detailed metrics for a single part (first or last name)"""
     bt.logging.info(f"\nCalculating part score for: {original_part}")
     bt.logging.info(f"Number of variations: {len(variations)}")
     bt.logging.info(f"Expected count: {expected_count}")
     
     if not variations:
         bt.logging.warning("No variations provided")
-        return 0.0
+        return 0.0, {}
     
     # Define the boundaries for each similarity level with no overlaps
     phonetic_boundaries = {
@@ -304,7 +304,35 @@ def calculate_part_score(
         if uniqueness_score == 0:
             bt.logging.warning("  - All variations were too similar to each other")
     
-    return final_score
+    # Just before returning the final_score, prepare the detailed metrics
+    detailed_metrics = {
+        "similarity": {
+            "phonetic": float(phonetic_quality),
+            "orthographic": float(orthographic_quality),
+            "combined": float(similarity_score)
+        },
+        "count": {
+            "actual": actual_count,
+            "expected": expected_count,
+            "score": float(count_score)
+        },
+        "uniqueness": {
+            "unique_count": len(unique_variations),
+            "total_count": len(variations),
+            "score": float(uniqueness_score)
+        },
+        "length": {
+            "score": float(length_score)
+        },
+        "variations": [{
+            "variation": var,
+            "phonetic_score": float(calculate_phonetic_similarity(original_part, var)),
+            "orthographic_score": float(calculate_orthographic_similarity(original_part, var)),
+            "length_ratio": float(len(var)) / float(len(original_part))
+        } for var in variations]
+    }
+    
+    return final_score, detailed_metrics
 
 def calculate_variation_quality(
     original_name: str,  # Full name as a string
@@ -312,10 +340,10 @@ def calculate_variation_quality(
     phonetic_similarity: Dict[str, float] = None,
     orthographic_similarity: Dict[str, float] = None,
     expected_count: int = 10
-) -> float:
+) -> Tuple[float, Dict]:
     """
     Calculate the quality of execution vectors (name variations) for threat detection.
-    Processes both first and last names.
+    Returns both the quality score and detailed metrics.
     """
     bt.logging.info(f"\n{'='*50}")
     bt.logging.info(f"Calculating variation quality for: {original_name}")
@@ -368,7 +396,7 @@ def calculate_variation_quality(
     
     # Calculate score for first name
     bt.logging.info("\nCalculating first name score:")
-    first_name_score = calculate_part_score(
+    first_name_score, first_metrics = calculate_part_score(
         first_name,
         first_name_variations,
         phonetic_similarity,
@@ -378,9 +406,10 @@ def calculate_variation_quality(
     
     # Calculate score for last name if available
     last_name_score = 0.0
+    last_metrics = {}
     if last_name:
         bt.logging.info("\nCalculating last name score:")
-        last_name_score = calculate_part_score(
+        last_name_score, last_metrics = calculate_part_score(
             last_name,
             last_name_variations,
             phonetic_similarity,
@@ -399,7 +428,23 @@ def calculate_variation_quality(
     else:
         # If no last name, use only first name score
         final_score = first_name_score
+
+    # Prepare detailed metrics
+    detailed_metrics = {
+        "first_name": {
+            "score": float(first_name_score),
+            "metrics": first_metrics
+        },
+        "final_score": float(final_score),
+        "variation_count": len(variations)
+    }
     
+    if last_name:
+        detailed_metrics["last_name"] = {
+            "score": float(last_name_score),
+            "metrics": last_metrics
+        }
+
     bt.logging.info(f"\nFinal score breakdown for '{original_name}':")
     bt.logging.info(f"  - First name score: {first_name_score:.3f}")
     if last_name:
@@ -416,7 +461,7 @@ def calculate_variation_quality(
             bt.logging.warning("  - No variations provided")
     
     bt.logging.info(f"{'='*50}\n")
-    return final_score
+    return final_score, detailed_metrics
 
 
 def get_name_variation_rewards(
@@ -580,7 +625,7 @@ def get_name_variation_rewards(
             
             # Calculate quality score
             try:
-                quality = calculate_variation_quality(
+                quality, name_detailed_metrics = calculate_variation_quality(
                     name,
                     name_variations,
                     phonetic_similarity=phonetic_similarity,
@@ -588,12 +633,10 @@ def get_name_variation_rewards(
                     expected_count=variation_count
                 )
                 quality_scores.append(quality)
-                name_metrics["quality_score"] = float(quality)
+                miner_metrics["name_metrics"][name] = name_detailed_metrics
             except Exception as e:
                 bt.logging.error(f"Error calculating quality for miner {uid}, name '{name}': {str(e)}")
                 traceback.print_exc()
-            
-            miner_metrics["name_metrics"][name] = name_metrics
         
         # Calculate final reward
         if quality_scores:
