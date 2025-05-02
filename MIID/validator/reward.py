@@ -265,16 +265,26 @@ def calculate_part_score(
         orthographic_scores, orthographic_boundaries, orthographic_similarity
     )
     
-
-    
-    # Calculate final quality score with all factors
-    # Weight factors according to importance
-    similarity_weight = 0.6  # Combined weight for phonetic and orthographic similarity
-    count_weight = 0.05       # Weight for having the correct number of variations
-    uniqueness_weight = 0.3  # Weight for having unique variations
-    length_weight = 0.05      # Weight for reasonable length variations
-    
+    # Calculate combined similarity score
     similarity_score = (phonetic_quality + orthographic_quality) / 2  # Average of both similarities
+    bt.logging.info(f"Similarity score: {similarity_score:.3f} (phonetic: {phonetic_quality:.3f}, orthographic: {orthographic_quality:.3f})")
+    
+    # Apply minimum similarity threshold to prevent gaming
+    # If similarity is very low, severely reduce the score
+    min_similarity_threshold = 0.2
+    if similarity_score < min_similarity_threshold:
+        bt.logging.warning(f"Very low similarity score ({similarity_score:.3f}) detected - applying penalty")
+        # Penalize low similarity scores
+        similarity_score *= 0.1  # Keep only 10% of the similarity score
+        bt.logging.warning(f"Adjusted similarity score: {similarity_score:.3f}")
+    
+    # Calculate final quality score with all factors - updated weights from analysis
+    # Weight factors according to importance
+    similarity_weight = 0.75  # Increased weight for similarity (was 0.6)
+    count_weight = 0.05      # Same weight for count
+    uniqueness_weight = 0.15  # Reduced weight for uniqueness (was 0.3)
+    length_weight = 0.05      # Same weight for length
+    
     bt.logging.info(f"Similarity score: {similarity_score:.3f} (phonetic: {phonetic_quality:.3f}, orthographic: {orthographic_quality:.3f})")
     
     final_score = (
