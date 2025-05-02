@@ -280,10 +280,10 @@ def calculate_part_score(
     
     # Calculate final quality score with all factors - updated weights from analysis
     # Weight factors according to importance
-    similarity_weight = 0.75  # Increased weight for similarity (was 0.6)
-    count_weight = 0.05      # Same weight for count
-    uniqueness_weight = 0.15  # Reduced weight for uniqueness (was 0.3)
-    length_weight = 0.05      # Same weight for length
+    similarity_weight = 0.65  # Increased weight for similarity
+    count_weight = 0.15      # Same weight for count
+    uniqueness_weight = 0.1  # Reduced weight for uniqueness
+    length_weight = 0.15      # Same weight for length
     
     bt.logging.info(f"Similarity score: {similarity_score:.3f} (phonetic: {phonetic_quality:.3f}, orthographic: {orthographic_quality:.3f})")
     
