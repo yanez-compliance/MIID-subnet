@@ -44,6 +44,10 @@ matching, and data augmentation.
 
 import time
 import traceback
+import datetime as dt
+import json
+import wandb
+import os
 
 # Bittensor
 import bittensor as bt
@@ -53,9 +57,15 @@ from MIID.base.validator import BaseValidatorNeuron
 
 # Bittensor Validator Template:
 from MIID.validator import forward
+# Import wandb constants from the validator module
+from MIID.validator import WANDB_PROJECT, WANDB_ENTITY, MAX_RUN_STEPS_PER_WANDB_RUN
+# Import reward function if needed for metrics (or maybe just pass rewards to log_step)
 from MIID.validator.reward import get_name_variation_rewards
 import ollama
 from MIID.validator.query_generator import QueryGenerator
+
+# Define version (replace with actual version logic if available)
+__version__ = "0.0.1"
 
 class Validator(BaseValidatorNeuron):
     """
@@ -119,6 +129,11 @@ class Validator(BaseValidatorNeuron):
         # # Log the configuration to verify it's set correctly
         # bt.logging.info(f"Name variation sample size: {self.config.name_variation.sample_size}")
 
+        # Initialize wandb run
+        self.step = 0
+        self.wandb_run = None # Initialize wandb_run as None
+        self.new_wandb_run() # Start the first wandb run
+
         # Initialize Ollama with the same approach as in miner.py
         if hasattr(self.config, 'neuron') and hasattr(self.config.neuron, 'ollama_model_name'):
             self.model_name = self.config.neuron.ollama_model_name
@@ -133,7 +148,8 @@ class Validator(BaseValidatorNeuron):
             # Check if model exists locally first
             models = ollama.list().get('models', [])
             bt.logging.info(f"Models: {models}")
-            model_exists = any(model.model == self.model_name for model in models)
+            # Corrected model check: access 'name' attribute of model objects
+            model_exists = any(model['name'] == self.model_name for model in models) # Adjusted line
             
             if model_exists:
                 bt.logging.info(f"Model {self.model_name} already pulled")
@@ -150,6 +166,128 @@ class Validator(BaseValidatorNeuron):
         bt.logging.info("Finished initializing Validator")
         bt.logging.info("----------------------------------")
         time.sleep(1)
+
+    def new_wandb_run(self):
+        """Creates a new wandb run to save information to."""
+        # Create a unique run id for this run.
+        run_id = dt.datetime.utcnow().strftime("%Y-%m-%d_%H-%M-%S")
+
+        name = "validator-" + str(self.uid) + "-" + run_id
+        # Make sure to finish the previous run if it exists
+        if self.wandb_run:
+            self.wandb_run.finish()
+
+        self.wandb_run = wandb.init(
+            name=name,
+            project=WANDB_PROJECT,
+            entity=WANDB_ENTITY,
+            tags=["validation", "subnet322", "automated"],
+            group="neuron-validation-batch",
+            job_type="validation",
+            anonymous='allow', # Use 'allow' or 'must' based on preference
+            config={
+                "uid": self.uid,
+                "hotkey": self.wallet.hotkey.ss58_address,
+                "run_name": run_id,
+                "version": __version__,
+                # Add other relevant config from self.config
+                "sample_size": getattr(self.config.neuron, 'sample_size', None),
+                "batch_size": getattr(self.config.neuron, 'batch_size', None),
+                "timeout": getattr(self.config.neuron, 'timeout', None),
+                "logging_dir": getattr(self.config.logging, 'logging_dir', None),
+            },
+            allow_val_change=True,
+            reinit=True # Allows reinitializing runs, useful with MAX_RUN_STEPS_PER_WANDB_RUN
+        )
+
+        bt.logging.debug(f"Started a new wandb run: {name}")
+
+    def log_step(
+            self,
+            uids,
+            metrics, # Pass detailed metrics from forward
+            rewards,
+            extra_data=None # Optional dict for additional data from forward
+    ):
+        """Logs data for the current step to wandb, creating a new run if needed."""
+        # Check if wandb run is initialized
+        if not self.wandb_run:
+            bt.logging.warning("wandb_run not initialized. Skipping log_step.")
+            self.new_wandb_run() # Attempt to start a new run
+            if not self.wandb_run: # If still not initialized, return
+                 bt.logging.error("Failed to initialize wandb run in log_step.")
+                 return
+
+        # Increment step count
+        self.step += 1
+
+        # If we have already completed MAX_RUN_STEPS_PER_WANDB_RUN steps then we will complete the current wandb run and make a new one.
+        if self.step % MAX_RUN_STEPS_PER_WANDB_RUN == 0 and MAX_RUN_STEPS_PER_WANDB_RUN > 0:
+            bt.logging.info(
+                f"Validator has completed {self.step} run steps. Creating a new wandb run."
+            )
+            self.new_wandb_run()
+
+        # Prepare logging data
+        step_log = {
+            "timestamp": time.time(),
+            "uids": uids, # Assuming uids is already a list of ints
+            "uid_metrics": {},
+            **(extra_data or {}) # Include extra data passed from forward
+        }
+
+        # Populate metrics per UID
+        for i, uid in enumerate(uids):
+            uid_str = str(uid)
+            step_log["uid_metrics"][uid_str] = {
+                "uid": uid,
+                "weight": float(self.scores[uid]) if uid < len(self.scores) else 0.0, # Ensure score exists
+                "reward": float(rewards[i]) if i < len(rewards) else 0.0
+            }
+            # Add detailed metrics if available and correctly structured
+            if i < len(metrics) and isinstance(metrics[i], dict):
+                 step_log["uid_metrics"][uid_str].update(metrics[i])
+            else:
+                 # Log placeholder if metrics structure is unexpected
+                 step_log["uid_metrics"][uid_str]["detailed_metrics_error"] = "Metrics structure invalid or missing"
+
+
+        # Data specifically for graphing
+        graphed_data = {
+            "block": self.metagraph.block.item(), # Ensure block is item()
+            "average_reward": float(rewards.mean()) if hasattr(rewards, 'mean') else 0.0,
+            "uid_rewards": {
+                str(uids[i]): float(rewards[i]) for i in range(len(uids)) if i < len(rewards)
+            },
+            "uid_weights": {
+                 str(uid): float(self.scores[uid]) for uid in uids if uid < len(self.scores)
+             },
+        }
+
+        bt.logging.debug(f"Logging step_log keys: {list(step_log.keys())}")
+        bt.logging.debug(f"Logging graphed_data keys: {list(graphed_data.keys())}")
+
+        # Log data to wandb
+        try:
+            log_payload = {**graphed_data, "step_details": step_log}
+            self.wandb_run.log(log_payload, step=self.step)
+            bt.logging.info(f"Logged step {self.step} to Wandb")
+
+            # Log JSON results as artifact if path is provided
+            json_results_path = step_log.get("json_results_path")
+            if json_results_path and os.path.isfile(json_results_path):
+                bt.logging.info(f"Logging results JSON as artifact: {json_results_path}")
+                artifact_name = f"validator_results_step_{self.step}"
+                artifact = wandb.Artifact(artifact_name, type="validation_results")
+                artifact.add_file(json_results_path)
+                self.wandb_run.log_artifact(artifact)
+                bt.logging.info(f"Logged artifact {artifact_name}")
+            elif json_results_path:
+                bt.logging.warning(f"Could not find results JSON file for artifact logging: {json_results_path}")
+
+        except Exception as e:
+             bt.logging.error(f"Error logging step {self.step} to Wandb: {e}")
+             bt.logging.error(traceback.format_exc())
 
     async def forward(self):
         """
@@ -168,6 +306,8 @@ class Validator(BaseValidatorNeuron):
             The result of the forward function from the MIID.validator module
         """
         try:
+            # The forward function now handles the core logic
+            # It will call self.log_step internally when needed
             res = await forward(self)
             return res
         except Exception as e:

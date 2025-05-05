@@ -164,6 +164,10 @@ async def forward(self):
         The result of the forward function from the MIID.validator module
     """
 
+    # --- REMOVE WANDB SETUP --- (Now handled in Validator.__init__ and new_wandb_run)
+    # wandb_run = wandb.init(...)
+    # --- END REMOVE WANDB SETUP ---
+
     request_start = time.time()
     
     bt.logging.info("Updating and querying available uids")
@@ -379,6 +383,27 @@ async def forward(self):
     
     bt.logging.info(f"Saved validator results to: {json_path}")
 
+    # Prepare extra data for wandb logging
+    wandb_extra_data = {
+        "query_template": query_template,
+        "variation_count": query_labels.get('variation_count'),
+        "seed_names_count": len(seed_names),
+        "valid_responses": valid_responses,
+        "total_responses": len(all_responses),
+        # Include query labels directly
+        **query_labels,
+        # Add the path to the saved JSON results
+        "json_results_path": json_path
+    }
+
+    # Call log_step from the Validator instance
+    self.log_step(
+        uids=miner_uids, # Pass the list of uids
+        metrics=detailed_metrics, # Pass the detailed metrics list
+        rewards=rewards, # Pass the numpy array of rewards
+        extra_data=wandb_extra_data # Pass additional context
+    )
+
     self.set_weights()
 
     # 9) Upload to external endpoint (moved to a separate utils function)
@@ -406,5 +431,7 @@ async def forward(self):
 
     bt.logging.info("All batches processed, waiting 30 more seconds...")
     await asyncio.sleep(30)
-    
+
+    # --- REMOVE WANDB FINISH --- (Now handled in new_wandb_run)
+    # wandb_run.finish()
     return True
