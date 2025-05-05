@@ -27,6 +27,16 @@ import time
 import traceback
 import math
 
+# Define the reward component weights globally
+MIID_REWARD_WEIGHTS = {
+    "similarity_weight": 0.60,  # Combined weight for phonetic and orthographic similarity
+    "count_weight": 0.15,       # Weight for having the correct number of variations
+    "uniqueness_weight": 0.10,  # Weight for having unique variations
+    "length_weight": 0.15,      # Weight for reasonable length variations
+    # Weights for combining first/last name scores in calculate_variation_quality
+    "first_name_weight": 0.3, 
+    "last_name_weight": 0.7
+}
 
 def reward(query: int, response: int) -> float:
     """
@@ -280,13 +290,11 @@ def calculate_part_score(
     #########################################################
     ### move this to config file
     # Calculate final quality score with all factors - updated weights from analysis
-    # Weight factors according to importance
-    similarity_weight = 0.65  # Increased weight for similarity
-    count_weight = 0.15      # Same weight for count
-    uniqueness_weight = 0.1  # Reduced weight for uniqueness
-    length_weight = 0.15      # Same weight for length
-    #########################################################
-    bt.logging.info(f"Similarity score: {similarity_score:.3f} (phonetic: {phonetic_quality:.3f}, orthographic: {orthographic_quality:.3f})")
+    # Use the globally defined weights
+    similarity_weight = MIID_REWARD_WEIGHTS["similarity_weight"]
+    count_weight = MIID_REWARD_WEIGHTS["count_weight"]
+    uniqueness_weight = MIID_REWARD_WEIGHTS["uniqueness_weight"]
+    length_weight = MIID_REWARD_WEIGHTS["length_weight"]
     
     final_score = (
         similarity_weight * similarity_score +
@@ -435,7 +443,10 @@ def calculate_variation_quality(
             bt.logging.warning(f"Applied missing last name penalty: {missing_ratio:.2f}")
         
         # Return weighted average of both scores (30% first name, 70% last name)
-        final_score = (0.3 * first_name_score + 0.7 * last_name_score)
+        final_score = (
+            MIID_REWARD_WEIGHTS["first_name_weight"] * first_name_score + 
+            MIID_REWARD_WEIGHTS["last_name_weight"] * last_name_score
+        )
     else:
         # If no last name, use only first name score
         final_score = first_name_score
