@@ -277,14 +277,15 @@ def calculate_part_score(
         # Penalize low similarity scores
         similarity_score *= 0.1  # Keep only 10% of the similarity score
         bt.logging.warning(f"Adjusted similarity score: {similarity_score:.3f}")
-    
+    #########################################################
+    ### move this to config file
     # Calculate final quality score with all factors - updated weights from analysis
     # Weight factors according to importance
     similarity_weight = 0.65  # Increased weight for similarity
     count_weight = 0.15      # Same weight for count
     uniqueness_weight = 0.1  # Reduced weight for uniqueness
     length_weight = 0.15      # Same weight for length
-    
+    #########################################################
     bt.logging.info(f"Similarity score: {similarity_score:.3f} (phonetic: {phonetic_quality:.3f}, orthographic: {orthographic_quality:.3f})")
     
     final_score = (
@@ -565,6 +566,11 @@ def get_name_variation_rewards(
         if not hasattr(response, 'variations') or not response.variations:
             bt.logging.warning(f"Miner {uid} returned invalid or empty response")
             rewards[i] = 0.0
+            # Correctly set metrics for invalid/empty response
+            miner_metrics["completeness_multiplier"] = 0.0
+            miner_metrics["penalties"]["total_penalty"] = 1.0 
+            miner_metrics["average_quality"] = 0.0
+            miner_metrics["final_reward"] = 0.0
             detailed_metrics.append(miner_metrics)
             continue
             
