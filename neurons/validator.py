@@ -59,7 +59,7 @@ load_dotenv(dotenv_path=os.path.join(os.getcwd(), 'vali.env'))
 # os.environ["WANDB_MODE"] = "offline"
 
 # Set wandb to not prompt, but still upload
-os.environ["WANDB_SILENT"] = "true"
+#os.environ["WANDB_SILENT"] = "true"
 
 # Bittensor
 import bittensor as bt
@@ -158,11 +158,21 @@ class Validator(BaseValidatorNeuron):
         # Check if Ollama is available
         try:
             # Check if model exists locally first
-            models = ollama.list().get('models', [])
-            bt.logging.info(f"Models: {models}")
-            # Corrected model check: access 'name' attribute of model objects
-            model_exists = any(model['name'] == self.model_name for model in models) # Adjusted line
+            models_response = ollama.list()
+            models = models_response.get('models', [])
+            bt.logging.info(f"Ollama models response: {models_response}") # Log the raw response
             
+            # Robust check for model name
+            model_exists = False
+            if isinstance(models, list):
+                for model_info in models:
+                    # Check if model_info is a dict and has 'name'
+                    if isinstance(model_info, dict) and model_info.get('name') == self.model_name:
+                        model_exists = True
+                        break 
+            else:
+                bt.logging.warning(f"Unexpected format for ollama models list: {type(models)}")
+
             if model_exists:
                 bt.logging.info(f"Model {self.model_name} already pulled")
             else:
