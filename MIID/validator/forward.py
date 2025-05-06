@@ -388,10 +388,10 @@ async def forward(self):
         "query_template": query_template,
         "variation_count": query_labels.get('variation_count'),
         "seed_names_count": len(seed_names),
-        "valid_responses": valid_responses,
-        "total_responses": len(all_responses),
+        #"valid_responses": valid_responses,
+        #"total_responses": len(all_responses),
         # Include query labels directly
-        **query_labels,
+        "query_labels": query_labels,
         # Add the path to the saved JSON results
         "json_results_path": json_path
     }
