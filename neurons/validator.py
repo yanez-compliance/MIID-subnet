@@ -222,10 +222,10 @@ class Validator(BaseValidatorNeuron):
                     "logging_dir": getattr(self.config.logging, 'logging_dir', None),
                 },
                 allow_val_change=True,
-                reinit=True # Allows reinitializing runs, useful with MAX_RUN_STEPS_PER_WANDB_RUN
+                finish_previous=True # Replaces reinit=True, aligns with finishing previous run
             )
 
-            bt.logging.info(f"Started new wandb run: {name}")
+            bt.logging.info(f"Started new wandb run: {wandb_name}")
             
             # Check if we're connected to the wandb servers
             if wandb.run and wandb.run.mode == "online":
