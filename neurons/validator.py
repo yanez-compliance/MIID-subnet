@@ -222,7 +222,7 @@ class Validator(BaseValidatorNeuron):
                     "logging_dir": getattr(self.config.logging, 'logging_dir', None),
                 },
                 allow_val_change=True,
-                finish_previous=True # Replaces reinit=True, aligns with finishing previous run
+                reinit=True # Allows reinitializing runs, useful with MAX_RUN_STEPS_PER_WANDB_RUN
             )
 
             bt.logging.info(f"Started new wandb run: {wandb_name}")
