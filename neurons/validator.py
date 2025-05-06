@@ -216,10 +216,10 @@ class Validator(BaseValidatorNeuron):
                     "run_name": run_id,
                     "version": __version__,
                     # Add other relevant config from self.config
-                    "sample_size": getattr(self.config.neuron, 'sample_size', None),
-                    "batch_size": getattr(self.config.neuron, 'batch_size', None),
-                    "timeout": getattr(self.config.neuron, 'timeout', None),
-                    "logging_dir": getattr(self.config.logging, 'logging_dir', None),
+                    #"sample_size": getattr(self.config.neuron, 'sample_size', None),
+                    #"batch_size": getattr(self.config.neuron, 'batch_size', None),
+                    #"timeout": getattr(self.config.neuron, 'timeout', None),
+                    #"logging_dir": getattr(self.config.logging, 'logging_dir', None),
                 },
                 allow_val_change=True,
                 reinit=True # Allows reinitializing runs, useful with MAX_RUN_STEPS_PER_WANDB_RUN
@@ -272,20 +272,20 @@ class Validator(BaseValidatorNeuron):
             **(extra_data or {}) # Include extra data passed from forward
         }
 
-        # Populate metrics per UID
-        for i, uid in enumerate(uids):
-            uid_str = str(uid)
-            step_log["uid_metrics"][uid_str] = {
-                "uid": uid,
-                "weight": float(self.scores[uid]) if uid < len(self.scores) else 0.0, # Ensure score exists
-                "reward": float(rewards[i]) if i < len(rewards) else 0.0
-            }
-            # Add detailed metrics if available and correctly structured
-            if i < len(metrics) and isinstance(metrics[i], dict):
-                 step_log["uid_metrics"][uid_str].update(metrics[i])
-            else:
-                 # Log placeholder if metrics structure is unexpected
-                 step_log["uid_metrics"][uid_str]["detailed_metrics_error"] = "Metrics structure invalid or missing"
+        # # Populate metrics per UID
+        # for i, uid in enumerate(uids):
+        #     uid_str = str(uid)
+        #     step_log["uid_metrics"][uid_str] = {
+        #         "uid": uid,
+        #         "weight": float(self.scores[uid]) if uid < len(self.scores) else 0.0, # Ensure score exists
+        #         "reward": float(rewards[i]) if i < len(rewards) else 0.0
+        #     }
+        #     # Add detailed metrics if available and correctly structured
+        #     if i < len(metrics) and isinstance(metrics[i], dict):
+        #          step_log["uid_metrics"][uid_str].update(metrics[i])
+        #     else:
+        #          # Log placeholder if metrics structure is unexpected
+        #          step_log["uid_metrics"][uid_str]["detailed_metrics_error"] = "Metrics structure invalid or missing"
 
 
         # Data specifically for graphing
