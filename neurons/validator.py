@@ -48,6 +48,18 @@ import datetime as dt
 import json
 import wandb
 import os
+from dotenv import load_dotenv
+
+# Load environment variables from .env file (e.g., vali.env)
+# This will load WANDB_API_KEY if set in the file
+load_dotenv(dotenv_path=os.path.join(os.getcwd(), 'vali.env')) 
+# You might need to adjust the path if your .env file is elsewhere
+
+# Remove offline mode
+# os.environ["WANDB_MODE"] = "offline"
+
+# Set wandb to not prompt, but still upload
+os.environ["WANDB_SILENT"] = "true"
 
 # Bittensor
 import bittensor as bt
@@ -177,30 +189,44 @@ class Validator(BaseValidatorNeuron):
         if self.wandb_run:
             self.wandb_run.finish()
 
-        self.wandb_run = wandb.init(
-            name=name,
-            project=WANDB_PROJECT,
-            entity=WANDB_ENTITY,
-            tags=["validation", "subnet322", "automated"],
-            group="neuron-validation-batch",
-            job_type="validation",
-            anonymous='allow', # Use 'allow' or 'must' based on preference
-            config={
-                "uid": self.uid,
-                "hotkey": self.wallet.hotkey.ss58_address,
-                "run_name": run_id,
-                "version": __version__,
-                # Add other relevant config from self.config
-                "sample_size": getattr(self.config.neuron, 'sample_size', None),
-                "batch_size": getattr(self.config.neuron, 'batch_size', None),
-                "timeout": getattr(self.config.neuron, 'timeout', None),
-                "logging_dir": getattr(self.config.logging, 'logging_dir', None),
-            },
-            allow_val_change=True,
-            reinit=True # Allows reinitializing runs, useful with MAX_RUN_STEPS_PER_WANDB_RUN
-        )
+        try:
+            # Create the wandb run with connection to servers
+            self.wandb_run = wandb.init(
+                name=name,
+                project=WANDB_PROJECT,
+                entity=WANDB_ENTITY,
+                tags=["validation", "subnet322", "automated"],
+                group="neuron-validation-batch",
+                job_type="validation",
+                # Use anonymous="allow" instead of "must" to prefer API key auth when available
+                anonymous="allow",
+                config={
+                    "uid": self.uid,
+                    "hotkey": self.wallet.hotkey.ss58_address,
+                    "run_name": run_id,
+                    "version": __version__,
+                    # Add other relevant config from self.config
+                    "sample_size": getattr(self.config.neuron, 'sample_size', None),
+                    "batch_size": getattr(self.config.neuron, 'batch_size', None),
+                    "timeout": getattr(self.config.neuron, 'timeout', None),
+                    "logging_dir": getattr(self.config.logging, 'logging_dir', None),
+                },
+                allow_val_change=True,
+                reinit=True # Allows reinitializing runs, useful with MAX_RUN_STEPS_PER_WANDB_RUN
+            )
 
-        bt.logging.debug(f"Started a new wandb run: {name}")
+            bt.logging.info(f"Started new wandb run: {name}")
+            
+            # Check if we're connected to the wandb servers
+            if wandb.run and wandb.run.mode == "online":
+                bt.logging.info("Connected to wandb servers! Data will be uploaded.")
+            else:
+                bt.logging.warning("Not connected to wandb servers. Run may be in offline mode.")
+                
+        except Exception as e:
+            bt.logging.error(f"Error initializing wandb: {str(e)}")
+            bt.logging.error(traceback.format_exc())
+            self.wandb_run = None  # Make sure it's set to None on error
 
     def log_step(
             self,

@@ -10,6 +10,7 @@ bt_subnet_venv/
 ENV/
 virtualenv/
 *env*/
+*.env
 
 # Python bytecode
 __pycache__/
@@ -214,3 +215,4 @@ helper/
 Database/
 RewardMath/
 data/
+vali.env
