@@ -184,7 +184,7 @@ class Validator(BaseValidatorNeuron):
         # Create a unique run id for this run.
         run_id = dt.datetime.utcnow().strftime("%Y-%m-%d_%H-%M-%S")
 
-        name = "validator-" + str(self.uid) + "-" + run_id
+        wandb_name = "validator-" + str(self.uid) + "-" + run_id
         # Make sure to finish the previous run if it exists
         if self.wandb_run:
             self.wandb_run.finish()
@@ -192,7 +192,7 @@ class Validator(BaseValidatorNeuron):
         try:
             # Create the wandb run with connection to servers
             self.wandb_run = wandb.init(
-                name=name,
+                name=wandb_name,
                 project=WANDB_PROJECT,
                 entity=WANDB_ENTITY,
                 tags=["validation", "subnet322", "automated"],
