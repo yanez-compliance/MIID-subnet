@@ -20,7 +20,6 @@ MIID validators:
 - Sufficient storage for challenge data and responses (minimum 10GB recommended)
 - Reliable internet connection
 - 8GB+ RAM (16GB recommended)
-- Open port 8091 for miner-to-validator communication
 
 ## Installation
 

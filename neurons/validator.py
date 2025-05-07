@@ -272,32 +272,32 @@ class Validator(BaseValidatorNeuron):
             **(extra_data or {}) # Include extra data passed from forward
         }
 
-        # # Populate metrics per UID
-        # for i, uid in enumerate(uids):
-        #     uid_str = str(uid)
-        #     step_log["uid_metrics"][uid_str] = {
-        #         "uid": uid,
-        #         "weight": float(self.scores[uid]) if uid < len(self.scores) else 0.0, # Ensure score exists
-        #         "reward": float(rewards[i]) if i < len(rewards) else 0.0
-        #     }
-        #     # Add detailed metrics if available and correctly structured
-        #     if i < len(metrics) and isinstance(metrics[i], dict):
-        #          step_log["uid_metrics"][uid_str].update(metrics[i])
-        #     else:
-        #          # Log placeholder if metrics structure is unexpected
-        #          step_log["uid_metrics"][uid_str]["detailed_metrics_error"] = "Metrics structure invalid or missing"
+        # Populate metrics per UID
+        for i, uid in enumerate(uids):
+            uid_str = str(uid)
+            step_log["uid_metrics"][uid_str] = {
+                "uid": uid,
+                "weight": float(self.scores[uid]) if uid < len(self.scores) else 0.0, # Ensure score exists
+                "reward": float(rewards[i]) if i < len(rewards) else 0.0
+            }
+            # Add detailed metrics if available and correctly structured
+            if i < len(metrics) and isinstance(metrics[i], dict):
+                 step_log["uid_metrics"][uid_str].update(metrics[i])
+            else:
+                 # Log placeholder if metrics structure is unexpected
+                 step_log["uid_metrics"][uid_str]["detailed_metrics_error"] = "Metrics structure invalid or missing"
 
 
         # Data specifically for graphing
         graphed_data = {
-            "block": self.metagraph.block.item(), # Ensure block is item()
+            #"block": self.metagraph.block.item(), # Ensure block is item()
             "average_reward": float(rewards.mean()) if hasattr(rewards, 'mean') else 0.0,
             "uid_rewards": {
                 str(uids[i]): float(rewards[i]) for i in range(len(uids)) if i < len(rewards)
             },
-            "uid_weights": {
-                 str(uid): float(self.scores[uid]) for uid in uids if uid < len(self.scores)
-             },
+            # "uid_weights": {
+            #      str(uid): float(self.scores[uid]) for uid in uids if uid < len(self.scores)
+            #  },
         }
 
         bt.logging.debug(f"Logging step_log keys: {list(step_log.keys())}")
@@ -309,17 +309,17 @@ class Validator(BaseValidatorNeuron):
             self.wandb_run.log(log_payload, step=self.step)
             bt.logging.info(f"Logged step {self.step} to Wandb")
 
-            # Log JSON results as artifact if path is provided
-            json_results_path = step_log.get("json_results_path")
-            if json_results_path and os.path.isfile(json_results_path):
-                bt.logging.info(f"Logging results JSON as artifact: {json_results_path}")
-                artifact_name = f"validator_results_step_{self.step}"
-                artifact = wandb.Artifact(artifact_name, type="validation_results")
-                artifact.add_file(json_results_path)
-                self.wandb_run.log_artifact(artifact)
-                bt.logging.info(f"Logged artifact {artifact_name}")
-            elif json_results_path:
-                bt.logging.warning(f"Could not find results JSON file for artifact logging: {json_results_path}")
+            # # Log JSON results as artifact if path is provided
+            # json_results_path = step_log.get("json_results_path")
+            # if json_results_path and os.path.isfile(json_results_path):
+            #     bt.logging.info(f"Logging results JSON as artifact: {json_results_path}")
+            #     artifact_name = f"validator_results_step_{self.step}"
+            #     artifact = wandb.Artifact(artifact_name, type="validation_results")
+            #     artifact.add_file(json_results_path)
+            #     self.wandb_run.log_artifact(artifact)
+            #     bt.logging.info(f"Logged artifact {artifact_name}")
+            # elif json_results_path:
+            #     bt.logging.warning(f"Could not find results JSON file for artifact logging: {json_results_path}")
 
         except Exception as e:
              bt.logging.error(f"Error logging step {self.step} to Wandb: {e}")

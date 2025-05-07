@@ -393,7 +393,7 @@ async def forward(self):
         # Include query labels directly
         "query_labels": query_labels,
         # Add the path to the saved JSON results
-        "json_results_path": json_path
+        #"json_results_path": json_path
     }
 
     # Call log_step from the Validator instance

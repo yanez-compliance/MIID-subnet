@@ -12,7 +12,7 @@ compute_spec:
       architecture: "x86_64"
 
     gpu:
-      required: True
+      required: False
       min_vram: 16  # Increased from 8GB to 16GB for better LLM inference
       recommended_vram: 32  # Increased for heavy LLM workloads
       cuda_cores: 1024
@@ -48,7 +48,7 @@ compute_spec:
       architecture: "x86_64"
 
     gpu:
-      required: True
+      required: False
       min_vram: 16
       recommended_vram: 32
       cuda_cores: 1024
