@@ -111,6 +111,8 @@ python neurons/validator.py --netuid 322 --wallet.name your_wallet_name --wallet
 
 For detailed information about logging setup and management, see the [Logging Guide](logging.md).
 
+For setting up Weights & Biases to track validator metrics and performance, see the [Weights & Biases Integration Guide](weights_and_biases.md).
+
 ## Configuration Options
 
 You can configure your validator with the following command-line arguments:
