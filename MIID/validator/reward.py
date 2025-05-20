@@ -26,6 +26,7 @@ import csv
 import time
 import traceback
 import math
+import random
 
 # Define the reward component weights globally
 MIID_REWARD_WEIGHTS = {
@@ -54,37 +55,34 @@ def reward(query: int, response: int) -> float:
 
 def calculate_phonetic_similarity(original_name: str, variation: str) -> float:
     """
-    Calculate phonetic similarity between two strings using multiple phonetic algorithms.
-    
-    Args:
-        original_name: The original name
-        variation: The variation to compare against
-        
-    Returns:
-        Phonetic similarity score between 0 and 1
+    Calculate phonetic similarity between two strings using a randomized subset of phonetic algorithms.
+    This makes it harder for miners to game the system by not knowing which algorithms will be used.
+    The selection and weighting are deterministic for each original_name.
     """
-    try:
-        # Use multiple phonetic algorithms for better accuracy
-        soundex_match = jellyfish.soundex(original_name) == jellyfish.soundex(variation)
-        metaphone_match = jellyfish.metaphone(original_name) == jellyfish.metaphone(variation)
-        nysiis_match = jellyfish.nysiis(original_name) == jellyfish.nysiis(variation)
-        
-        # Calculate match ratio using Jaro-Winkler (better for names than Levenshtein)
-        #jaro_winkler_score = jellyfish.jaro_winkler_similarity(original_name, variation)
-        
-        # Weight the different components
-        phonetic_score = (
-            (soundex_match * 0.4) +      # 30% weight for Soundex
-            (metaphone_match * 0.3) +    # 30% weight for Metaphone
-            (nysiis_match * 0.3) 
-            # +       # 20% weight for NYSIIS
-           # (jaro_winkler_score * 0.2)   # 20% weight for Jaro-Winkler similarity
-        )
-        
-        return float(phonetic_score)
-    except Exception as e:
-        bt.logging.warning(f"Error calculating phonetic score: {str(e)}")
-        return 0.0
+    # Define available phonetic algorithms
+    algorithms = {
+        "soundex": lambda x, y: jellyfish.soundex(x) == jellyfish.soundex(y),
+        "metaphone": lambda x, y: jellyfish.metaphone(x) == jellyfish.metaphone(y),
+        "nysiis": lambda x, y: jellyfish.nysiis(x) == jellyfish.nysiis(y),
+        # Add more algorithms if needed
+    }
+
+    # Deterministically seed the random selection based on the original name
+    random.seed(hash(original_name) % 10000)
+    selected_algorithms = random.sample(list(algorithms.keys()), k=min(3, len(algorithms)))
+
+    # Generate random weights that sum to 1.0
+    weights = [random.random() for _ in selected_algorithms]
+    total_weight = sum(weights)
+    normalized_weights = [w / total_weight for w in weights]
+
+    # Calculate the weighted phonetic score
+    phonetic_score = sum(
+        algorithms[algo](original_name, variation) * weight
+        for algo, weight in zip(selected_algorithms, normalized_weights)
+    )
+
+    return float(phonetic_score)
 
 def calculate_orthographic_similarity(original_name: str, variation: str) -> float:
     """
@@ -353,6 +351,33 @@ def calculate_part_score(
     
     return final_score, detailed_metrics
 
+def get_name_part_weights(name: str) -> dict:
+    """Generate weights for different name parts based on name characteristics, with randomness."""
+    random.seed(hash(name) % 10000)
+    name_parts = name.split()
+    if len(name_parts) < 2:
+        return {"first_name_weight": 1.0, "last_name_weight": 0.0}
+    lengths = [len(part) for part in name_parts]
+    total_length = sum(lengths)
+    weights = []
+    for length in lengths:
+        base_weight = length / total_length
+        randomized_weight = base_weight * random.uniform(0.8, 1.2)  # 20% randomness
+        weights.append(randomized_weight)
+    total_weight = sum(weights)
+    normalized_weights = [w / total_weight for w in weights]
+    if len(name_parts) > 2:
+        return {
+            "first_name_weight": normalized_weights[0],
+            "middle_name_weight": sum(normalized_weights[1:-1]),
+            "last_name_weight": normalized_weights[-1]
+        }
+    else:
+        return {
+            "first_name_weight": normalized_weights[0],
+            "last_name_weight": normalized_weights[1]
+        }
+
 def calculate_variation_quality(
     original_name: str,  # Full name as a string
     variations: List[str],
@@ -377,8 +402,8 @@ def calculate_variation_quality(
     
     # Split the original name into first and last name
     name_parts = original_name.split()
+    part_weights = get_name_part_weights(original_name)
     if len(name_parts) < 2:
-        # If name can't be split into first and last, use the whole name as first name
         first_name = original_name
         last_name = None
         bt.logging.warning(f"Could not split name '{original_name}' into first and last name")
@@ -441,11 +466,10 @@ def calculate_variation_quality(
             missing_ratio = (len(variations) - len(last_name_variations)) / len(variations)
             last_name_score *= (1.0 - missing_ratio)
             bt.logging.warning(f"Applied missing last name penalty: {missing_ratio:.2f}")
-        
-        # Return weighted average of both scores (30% first name, 70% last name)
+        # Use dynamic weights
         final_score = (
-            MIID_REWARD_WEIGHTS["first_name_weight"] * first_name_score + 
-            MIID_REWARD_WEIGHTS["last_name_weight"] * last_name_score
+            part_weights.get("first_name_weight", 0.5) * first_name_score +
+            part_weights.get("last_name_weight", 0.5) * last_name_score
         )
     else:
         # If no last name, use only first name score
@@ -470,9 +494,8 @@ def calculate_variation_quality(
     bt.logging.info(f"\nFinal score breakdown for '{original_name}':")
     bt.logging.info(f"  - First name score: {first_name_score:.3f}")
     if last_name:
-        bt.logging.info(f"  - Last name score (70%): {last_name_score:.3f}")
+        bt.logging.info(f"  - Last name score: {last_name_score:.3f}")
     bt.logging.info(f"  - Final score: {final_score:.3f}")
-    
     if final_score == 0:
         bt.logging.warning(f"Zero final score for '{original_name}'. Possible reasons:")
         if first_name_score == 0:
