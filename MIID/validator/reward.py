@@ -17,7 +17,7 @@
 # OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
 # DEALINGS IN THE SOFTWARE.
 import numpy as np
-from typing import List, Dict, Tuple
+from typing import List, Dict, Tuple, Any
 import bittensor as bt
 import Levenshtein
 import jellyfish
@@ -28,12 +28,16 @@ import traceback
 import math
 import random
 
+# Import rule_evaluator for rule-based compliance checking
+from MIID.validator.rule_evaluator import evaluate_rule_compliance
+
 # Define the reward component weights globally
 MIID_REWARD_WEIGHTS = {
-    "similarity_weight": 0.60,  # Combined weight for phonetic and orthographic similarity
-    "count_weight": 0.15,       # Weight for having the correct number of variations
-    "uniqueness_weight": 0.10,  # Weight for having unique variations
-    "length_weight": 0.15,      # Weight for reasonable length variations
+    "similarity_weight": 0.50,       # Combined weight for phonetic and orthographic similarity (reduced from 0.60)
+    "count_weight": 0.10,            # Weight for having the correct number of variations (reduced from 0.15)
+    "uniqueness_weight": 0.10,       # Weight for having unique variations (unchanged)
+    "length_weight": 0.10,           # Weight for reasonable length variations (reduced from 0.15)
+    "rule_compliance_weight": 0.20,  # NEW: Weight for rule-based compliance
     # Weights for combining first/last name scores in calculate_variation_quality
     "first_name_weight": 0.3, 
     "last_name_weight": 0.7
@@ -383,7 +387,8 @@ def calculate_variation_quality(
     variations: List[str],
     phonetic_similarity: Dict[str, float] = None,
     orthographic_similarity: Dict[str, float] = None,
-    expected_count: int = 10
+    expected_count: int = 10,
+    rule_based: Dict[str, Any] = None  # New parameter for rule-based metadata
 ) -> Tuple[float, Dict]:
     """
     Calculate the quality of execution vectors (name variations) for threat detection.
@@ -467,13 +472,41 @@ def calculate_variation_quality(
             last_name_score *= (1.0 - missing_ratio)
             bt.logging.warning(f"Applied missing last name penalty: {missing_ratio:.2f}")
         # Use dynamic weights
-        final_score = (
+        base_score = (
             part_weights.get("first_name_weight", 0.5) * first_name_score +
             part_weights.get("last_name_weight", 0.5) * last_name_score
         )
     else:
         # If no last name, use only first name score
-        final_score = first_name_score
+        base_score = first_name_score
+        
+    # Calculate rule compliance score if rule-based metadata is provided
+    rule_compliance_score = 0.0
+    rule_compliance_metrics = {}
+    
+    if rule_based and "selected_rules" in rule_based:
+        bt.logging.info("\nCalculating rule-based compliance score:")
+        target_rules = rule_based.get("selected_rules", [])
+        target_percentage = rule_based.get("rule_percentage", 30) / 100.0  # Convert to fraction
+        
+        rule_compliance_score, rule_compliance_metrics = calculate_rule_compliance_score(
+            original_name,
+            variations,
+            target_rules,
+            target_percentage
+        )
+    else:
+        bt.logging.info("No rule-based requirements specified")
+    
+    # Apply rule compliance to final score using weights from the global config
+    # If no rules were specified, this component will be 0
+    similarity_weight = MIID_REWARD_WEIGHTS["similarity_weight"]
+    rule_compliance_weight = MIID_REWARD_WEIGHTS["rule_compliance_weight"]
+    
+    # The base_score already contains the other weighted components (length, count, uniqueness)
+    # So we need to scale it down to make room for the rule compliance component
+    base_weight = 1.0 - rule_compliance_weight
+    final_score = (base_weight * base_score) + (rule_compliance_weight * rule_compliance_score)
 
     # Prepare detailed metrics
     detailed_metrics = {
@@ -481,6 +514,7 @@ def calculate_variation_quality(
             "score": float(first_name_score),
             "metrics": first_metrics
         },
+        "base_score": float(base_score),
         "final_score": float(final_score),
         "variation_count": len(variations)
     }
@@ -490,12 +524,22 @@ def calculate_variation_quality(
             "score": float(last_name_score),
             "metrics": last_metrics
         }
+        
+    if rule_based:
+        detailed_metrics["rule_compliance"] = {
+            "score": float(rule_compliance_score),
+            "metrics": rule_compliance_metrics
+        }
 
     bt.logging.info(f"\nFinal score breakdown for '{original_name}':")
     bt.logging.info(f"  - First name score: {first_name_score:.3f}")
     if last_name:
         bt.logging.info(f"  - Last name score: {last_name_score:.3f}")
+    bt.logging.info(f"  - Base similarity score: {base_score:.3f}")
+    if rule_based:
+        bt.logging.info(f"  - Rule compliance score: {rule_compliance_score:.3f} (weight: {rule_compliance_weight:.2f})")
     bt.logging.info(f"  - Final score: {final_score:.3f}")
+    
     if final_score == 0:
         bt.logging.warning(f"Zero final score for '{original_name}'. Possible reasons:")
         if first_name_score == 0:
@@ -504,6 +548,8 @@ def calculate_variation_quality(
             bt.logging.warning("  - Zero last name score")
         if len(variations) == 0:
             bt.logging.warning("  - No variations provided")
+        if rule_based and rule_compliance_score == 0:
+            bt.logging.warning("  - Zero rule compliance score")
     
     bt.logging.info(f"{'='*50}\n")
     return final_score, detailed_metrics
@@ -516,7 +562,8 @@ def get_name_variation_rewards(
     uids: List[int],
     variation_count: int = 10,
     phonetic_similarity: Dict[str, float] = None,
-    orthographic_similarity: Dict[str, float] = None
+    orthographic_similarity: Dict[str, float] = None,
+    rule_based: Dict[str, Any] = None  # New parameter for rule-based metadata
 ) -> Tuple[np.ndarray, List[Dict]]:
     """
     Calculate rewards for execution vectors (name variations) that simulate threat scenarios.
@@ -526,6 +573,7 @@ def get_name_variation_rewards(
     1. Adherence to the specified threat scenario parameters
     2. Quality and diversity of execution vectors
     3. Effectiveness as potential bypass methods based on similarity metrics
+    4. Compliance with requested rule-based transformations
     
     Args:
         seed_names: Original identity names to generate variations for
@@ -534,6 +582,7 @@ def get_name_variation_rewards(
         variation_count: Expected number of execution vectors per identity
         phonetic_similarity: Dictionary mapping similarity levels to percentages
         orthographic_similarity: Dictionary mapping similarity levels to percentages
+        rule_based: Dictionary containing rule-based requirements
         
     Returns:
         Tuple containing:
@@ -577,6 +626,14 @@ def get_name_variation_rewards(
     
     rewards = np.zeros(len(responses))
     detailed_metrics = []  # Store detailed metrics for each miner
+    
+    # Log rule-based requirements if provided
+    if rule_based:
+        bt.logging.info(f"Rule-based requirements: {rule_based}")
+        bt.logging.info(f"Target rules: {rule_based.get('selected_rules', [])}")
+        bt.logging.info(f"Target rule-based percentage: {rule_based.get('rule_percentage', 30)}%")
+    else:
+        bt.logging.info("No rule-based requirements specified")
     
     # Process each miner's response
     for i, (response, uid) in enumerate(zip(responses, uids)):
@@ -637,6 +694,13 @@ def get_name_variation_rewards(
         miner_metrics["penalties"]["total_penalty"] = float(total_penalty)
         miner_metrics["completeness_multiplier"] = float(completeness_multiplier)
         
+        # Add rule-based metrics fields
+        if rule_based:
+            miner_metrics["rule_compliance"] = {
+                "overall_score": 0.0,
+                "by_name": {}
+            }
+        
         # Process each seed name
         for name in seed_names:
             if name not in variations or not variations[name]:
@@ -654,25 +718,6 @@ def get_name_variation_rewards(
                 "orthographic_scores": []
             }
             
-            # # Calculate individual variation metrics
-            # for variation in name_variations:
-            #     phonetic_score = calculate_phonetic_similarity(name, variation)
-            #     orthographic_score = calculate_orthographic_similarity(name, variation)
-            #     length_ratio = float(len(variation)) / float(len(name))
-                
-            #     name_metrics["variations"].append({
-            #         "variation": variation,
-            #         "phonetic_score": float(phonetic_score),
-            #         "orthographic_score": float(orthographic_score),
-            #         "length_ratio": float(length_ratio)
-            #     })
-            #     name_metrics["phonetic_scores"].append(float(phonetic_score))
-            #     name_metrics["orthographic_scores"].append(float(orthographic_score))
-            
-            # # Calculate uniqueness score
-            # unique_variations = len(set(name_variations))
-            # name_metrics["uniqueness_score"] = float(unique_variations) / len(name_variations) if name_variations else 0.0
-            
             # Calculate quality score
             try:
                 quality, name_detailed_metrics = calculate_variation_quality(
@@ -680,13 +725,28 @@ def get_name_variation_rewards(
                     name_variations,
                     phonetic_similarity=phonetic_similarity,
                     orthographic_similarity=orthographic_similarity,
-                    expected_count=variation_count
+                    expected_count=variation_count,
+                    rule_based=rule_based  # Pass rule-based metadata
                 )
                 quality_scores.append(quality)
                 miner_metrics["name_metrics"][name] = name_detailed_metrics
+                
+                # Extract rule compliance metrics if available
+                if rule_based and "rule_compliance" in name_detailed_metrics:
+                    miner_metrics["rule_compliance"]["by_name"][name] = name_detailed_metrics["rule_compliance"]
             except Exception as e:
                 bt.logging.error(f"Error calculating quality for miner {uid}, name '{name}': {str(e)}")
                 traceback.print_exc()
+        
+        # Calculate overall rule compliance score if applicable
+        if rule_based and quality_scores and any("rule_compliance" in miner_metrics["name_metrics"].get(name, {}) for name in seed_names):
+            rule_scores = [
+                miner_metrics["name_metrics"].get(name, {}).get("rule_compliance", {}).get("score", 0.0)
+                for name in seed_names if name in miner_metrics["name_metrics"]
+            ]
+            if rule_scores:
+                miner_metrics["rule_compliance"]["overall_score"] = float(sum(rule_scores) / len(rule_scores))
+                bt.logging.info(f"Overall rule compliance score: {miner_metrics['rule_compliance']['overall_score']:.3f}")
         
         # Calculate final reward
         if quality_scores:
@@ -859,3 +919,73 @@ def save_variations_to_csv(
     except Exception as e:
         bt.logging.error(f"Error saving variations to CSV: {str(e)}")
         traceback.print_exc()
+
+def calculate_rule_compliance_score(
+    original_name: str,
+    variations: List[str],
+    target_rules: List[str],
+    target_percentage: float = 0.3
+) -> Tuple[float, Dict]:
+    """
+    Calculate how well the variations comply with the target rules.
+    
+    Args:
+        original_name: The original name
+        variations: List of name variations
+        target_rules: List of rules that should be followed
+        target_percentage: Percentage of variations that should comply with rules
+        
+    Returns:
+        Tuple containing:
+        - Compliance score (0-1)
+        - Dictionary with detailed metrics
+    """
+    bt.logging.info(f"\nCalculating rule compliance for '{original_name}'")
+    bt.logging.info(f"Target rules: {target_rules}")
+    bt.logging.info(f"Target percentage: {target_percentage * 100:.1f}%")
+    
+    if not variations or not target_rules:
+        bt.logging.warning("No variations or no target rules provided")
+        return 0.0, {"compliant_variations": {}, "compliance_ratio": 0.0}
+    
+    # Evaluate rule compliance
+    compliant_variations, compliance_ratio = evaluate_rule_compliance(
+        original_name, 
+        variations, 
+        target_rules
+    )
+    
+    # Count compliant variations
+    compliant_count = len(set().union(*[set(v) for v in compliant_variations.values()])) if compliant_variations else 0
+    expected_count = max(1, int(len(variations) * target_percentage))
+    
+    bt.logging.info(f"Found {compliant_count} rule-compliant variations (expected ~{expected_count})")
+    
+    for rule, variations_list in compliant_variations.items():
+        bt.logging.info(f"Rule '{rule}': {len(variations_list)} variations")
+    
+    # Calculate the compliance score
+    # - If we have exactly the right number, score is 1.0
+    # - If we have too few or too many, score decreases based on the deviation
+    ratio = compliant_count / expected_count if expected_count > 0 else 0.0
+    
+    # Use a bell curve that peaks at ratio=1.0
+    if ratio <= 0.0:
+        score = 0.0
+    elif ratio <= 1.0:
+        # Gradually increase to 1.0
+        score = ratio
+    else:
+        # Gradually decrease from 1.0 as ratio increases above 1.0
+        # This penalizes having too many rule-compliant variations
+        score = max(0.0, 2.0 - ratio)
+    
+    bt.logging.info(f"Rule compliance ratio: {ratio:.2f}, score: {score:.2f}")
+    
+    return score, {
+        "compliant_variations": compliant_variations,
+        "compliance_ratio": compliance_ratio,
+        "compliant_count": compliant_count,
+        "expected_count": expected_count,
+        "score": score
+    }
