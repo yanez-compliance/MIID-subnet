@@ -7,6 +7,9 @@ import os
 # Make sure this import is outside any function or conditional blocks
 from faker import Faker  # Ensure this is always imported
 
+# Add import for rule-based functionality
+from MIID.validator.rule_extractor import get_rule_template_and_metadata
+
 # Constants for query generation
 SIMILARITY_LEVELS = ["Light", "Medium", "Far"]
 DEFAULT_VARIATION_COUNT = 10
@@ -34,6 +37,8 @@ class QueryGenerator:
             'use_default_query', 
             DEFAULT_QUERY
         )
+        
+
 
         bt.logging.info(f"#########################################use_default_query: {self.use_default_query}#########################################")
         bt.logging.info(f"QueryGenerator initialized with use_default_query={self.use_default_query}")
@@ -70,7 +75,8 @@ class QueryGenerator:
         variation_count: int = 10,
         phonetic_similarity: Dict[str, float] = None,
         orthographic_similarity: Dict[str, float] = None,
-        use_default: bool = False
+        use_default: bool = False,
+        rule_percentage: int = 30
     ) -> Tuple[str, Dict[str, Any]]:
         """Generate a query template based on specified parameters"""
         # Default similarity preferences if none provided
@@ -79,22 +85,28 @@ class QueryGenerator:
         if orthographic_similarity is None:
             orthographic_similarity = {"Medium": 1.0}
         
+        # Generate rule-based template and metadata
+        rule_template, rule_metadata = get_rule_template_and_metadata(rule_percentage)
+        
         # Create the labels dictionary from the parameters
         labels = {
             "variation_count": variation_count,
             "phonetic_similarity": phonetic_similarity,
-            "orthographic_similarity": orthographic_similarity
+            "orthographic_similarity": orthographic_similarity,
+            "rule_based": rule_metadata  # Add rule-based metadata
         }
         
         # If use_default flag is True, skip LLM and use default template
         if use_default:
             bt.logging.info("Using default query template (skipping complex query generation)")
-            default_template = f"Give me 10 comma separated alternative spellings of the name {{name}}. Include 5 of them should sound similar to the original name and 5 should be orthographically similar. Provide only the names."
+            default_template = f"Give me 10 comma separated alternative spellings of the name {{name}}. Include 5 of them should sound similar to the original name and 5 should be orthographically similar. {rule_template} Provide only the names."
             labels = {
                 "variation_count": 10,
                 "phonetic_similarity": {"Medium": 0.5},
-                "orthographic_similarity": {"Medium": 0.5}
+                "orthographic_similarity": {"Medium": 0.5},
+                "rule_based": rule_metadata
             }
+            bt.logging.info(f"Added rule-based request: {rule_template}")
             return default_template, labels
         
         # Format the similarity specifications for the prompt
@@ -104,6 +116,7 @@ class QueryGenerator:
         bt.logging.info(f"Generating query with: {variation_count} variations, " +
                     f"phonetic similarity: {phonetic_spec}, " +
                     f"orthographic similarity: {orthographic_spec}")
+        bt.logging.info(f"Rule-based requirement: {rule_percentage}% of variations should follow: {rule_template}")
         
         # Define the prompt with specific parameters and security terminology
         prompt = f"""Generate a Threat Scenario generation query with these specifications:
@@ -116,13 +129,15 @@ class QueryGenerator:
         1. Generate exactly {variation_count} execution vectors (name variations) for each target identity
         2. For phonetic similarity (sound-alike names), implement: {phonetic_spec}
         3. For orthographic similarity (visually similar spellings), implement: {orthographic_spec}
+        4. IMPORTANT: Approximately {rule_percentage}% of the variations should follow these rule-based transformations: {rule_template}
         
         IMPORTANT FORMATTING REQUIREMENTS:
         1. The query MUST use {{name}} as a placeholder for the target name
         2. Use exactly one {{name}} placeholder in the query
         3. Format as a natural language request that explicitly states all requirements
+        4. Include both the similarity requirements AND the rule-based transformation requirements in the query
         
-        Example format: "Generate {variation_count} variations of the name {{name}}, ensuring..."
+        Example format: "Generate {variation_count} variations of the name {{name}}, ensuring...and also include variations that {rule_template}"
         """
 
         try:
@@ -135,8 +150,8 @@ class QueryGenerator:
             if not is_valid:
                 bt.logging.warning(f"LLM generated invalid template: {error_msg}")
                 bt.logging.warning("Falling back to default template")
-                # Fall back to a simple, valid template
-                query_template = f"Generate {variation_count} comma-separated alternative spellings of the name {{name}}. Include a mix of phonetically similar and orthographically similar variations. Provide only the names."
+                # Fall back to a simple, valid template that includes rule requirements
+                query_template = f"Generate {variation_count} comma-separated alternative spellings of the name {{name}}. Include a mix of phonetically similar and orthographically similar variations. {rule_template} Provide only the names."
                 # Validate the fallback template
                 is_valid, error_msg = self.validate_query_template(query_template)
                 if not is_valid:
@@ -149,7 +164,7 @@ class QueryGenerator:
         except Exception as e:
             bt.logging.error(f"Error generating complex query: {str(e)}")
             # Fallback to a simple query template and default labels
-            simple_template = f"Give me {variation_count} comma separated alternative spellings of the name {{name}}. Include a mix of phonetically similar and orthographically similar variations. Provide only the names."
+            simple_template = f"Give me {variation_count} comma separated alternative spellings of the name {{name}}. Include a mix of phonetically similar and orthographically similar variations. {rule_template} Provide only the names."
             # Validate the fallback template
             is_valid, error_msg = self.validate_query_template(simple_template)
             if not is_valid:
@@ -211,12 +226,16 @@ class QueryGenerator:
                 {"Light": 0.3, "Medium": 0.7},
             ])
             
+            # 4. Randomly choose rule_percentage for this query (e.g. 10-60%)
+            rule_percentage = random.randint(10, 60)
+            
             if self.use_default_query:
                 bt.logging.info("Using default query template")
                 variation_count = 10
                 phonetic_config = {"Medium": 0.5}
                 orthographic_config = {"Medium": 0.5}
-                
+                rule_percentage = 30  # fallback for default
+            
             # Generate a complex query template
             model_name = getattr(self.config.neuron, 'ollama_model_name', "llama3.1:latest")
             query_template, query_labels = await self.generate_complex_query(
@@ -224,7 +243,8 @@ class QueryGenerator:
                 variation_count=variation_count,
                 phonetic_similarity=phonetic_config,
                 orthographic_similarity=orthographic_config,
-                use_default=self.use_default_query
+                use_default=self.use_default_query,
+                rule_percentage=rule_percentage
             )
             
             # Generate test names using Faker
@@ -281,19 +301,23 @@ class QueryGenerator:
             phonetic_config = {"Medium": 0.5}
             orthographic_config = {"Medium": 0.5}
             
-            query_template = f"Give me {variation_count} comma separated alternative spellings of the name {{name}}. Include 5 phonetically similar and 5 orthographically similar variations. Provide only the names."
+            # Generate rule-based template and metadata for fallback
+            rule_template, rule_metadata = get_rule_template_and_metadata(self.rule_percentage)
+            
+            query_template = f"Give me {variation_count} comma separated alternative spellings of the name {{name}}. Include 5 phonetically similar and 5 orthographically similar variations. {rule_template} Provide only the names."
             
             # Validate the fallback template
             is_valid, error_msg = self.validate_query_template(query_template)
             if not is_valid:
                 bt.logging.error(f"Fallback template validation failed: {error_msg}")
                 # Use an absolutely basic template as last resort
-                query_template = f"Generate {variation_count} variations of the name {{name}}."
+                query_template = f"Generate {variation_count} variations of the name {{name}}. {rule_template}"
             
             query_labels = {
                 "variation_count": variation_count,
                 "phonetic_similarity": phonetic_config,
-                "orthographic_similarity": orthographic_config
+                "orthographic_similarity": orthographic_config,
+                "rule_based": rule_metadata
             }
             
             # Generate fallback names with mix of single and full names

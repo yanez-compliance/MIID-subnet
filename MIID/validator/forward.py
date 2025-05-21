@@ -178,12 +178,12 @@ async def forward(self):
     miner_uids = get_random_uids(self, k=miner_selection_size)
     axons = [self.metagraph.axons[uid] for uid in miner_uids]
 
-    bt.logging.info(f"#########################################Miner axons: {axons}#########################################")
-    bt.logging.info(f"#########################################Miner selection size: {miner_selection_size}#########################################")
-    bt.logging.info(f"#########################################Available axon size: {available_axon_size}#########################################")
+    bt.logging.info(f"######################################### Miner axons: {axons}#########################################")
+    bt.logging.info(f"######################################### Miner selection size: {miner_selection_size}#########################################")
+    bt.logging.info(f"######################################### Available axon size: {available_axon_size}#########################################")
 
     miner_uids = miner_uids.tolist()
-    bt.logging.info(f"#########################################Selected {len(miner_uids)} miners to query: {miner_uids}#########################################")
+    bt.logging.info(f"######################################### Selected {len(miner_uids)} miners to query: {miner_uids}#########################################")
 
     # 2) Initialize the query generator
     query_generator = QueryGenerator(self.config)
@@ -299,7 +299,8 @@ async def forward(self):
         miner_uids,
         variation_count=query_labels['variation_count'],
         phonetic_similarity=query_labels['phonetic_similarity'],
-        orthographic_similarity=query_labels['orthographic_similarity']
+        orthographic_similarity=query_labels['orthographic_similarity'],
+        rule_based=query_labels.get('rule_based')  # Pass rule-based metadata
     )
 
     self.update_scores(rewards, miner_uids)
