@@ -945,13 +945,17 @@ def calculate_rule_compliance_score(
     bt.logging.info(f"Target percentage: {target_percentage * 100:.1f}%")
     
     if not variations or not target_rules:
-        bt.logging.warning("No variations or no target rules provided")
+        bt.logging.warning("No variations or no target rules provided for rule compliance calculation.")
         return 0.0, {
             "compliant_variations_by_rule": {},
             "rules_satisfied_by_variation": {},
             "compliance_ratio_overall_variations": 0.0,
-            "overall_compliant_count": 0,
-            "expected_compliant_count": 0,
+            "overall_compliant_unique_variations_count": 0,
+            "expected_compliant_variations_count": 0,
+            "quantity_score": 0.0,
+            "rule_diversity_factor": 0.0,
+            "num_target_rules_met": 0,
+            "total_target_rules": len(target_rules) if target_rules else 0,
             "score": 0.0
         }
     
@@ -973,34 +977,63 @@ def calculate_rule_compliance_score(
             if rule not in rules_satisfied_by_variation[variation]:
                  rules_satisfied_by_variation[variation].append(rule)
 
-    # Count unique variations that satisfied at least one rule
+    # Count unique variations that satisfied at least one rule (from the target_rules)
     overall_compliant_count = len(rules_satisfied_by_variation)
     expected_compliant_count = max(1, int(len(variations) * target_percentage))
     
-    bt.logging.info(f"Found {overall_compliant_count} unique variations complying with at least one rule (expected ~{expected_compliant_count} based on target percentage)")
+    bt.logging.info(f"Found {overall_compliant_count} unique variations complying with at least one target rule (expected ~{expected_compliant_count} based on target percentage)")
     
     for rule, variations_list in compliant_variations_by_rule.items():
+        # This logging shows all rules returned by evaluate_rule_compliance, which should be the target_rules
         bt.logging.info(f"Rule '{rule}': {len(variations_list)} variations matched")
     
-    # Calculate the compliance score based on the target percentage
-    # This score reflects how well the *quantity* of rule-based variations matches the expectation.
+    # Calculate the quantity-based compliance score
     ratio_of_actual_to_expected = overall_compliant_count / expected_compliant_count if expected_compliant_count > 0 else 0.0
     
-    score = 0.0
+    quantity_score = 0.0
     if ratio_of_actual_to_expected <= 0.0:
-        score = 0.0
-    elif ratio_of_actual_to_expected <= 1.0: # At or below target
-        score = ratio_of_actual_to_expected
-    else: # Above target - penalize for too many rule-based variations
-        score = max(0.0, 2.0 - ratio_of_actual_to_expected) 
+        quantity_score = 0.0
+    elif ratio_of_actual_to_expected <= 1.0:  # At or below target
+        quantity_score = ratio_of_actual_to_expected
+    else:  # Above target - apply a gentler penalty
+        quantity_score = max(0.0, 1.5 - 0.5 * ratio_of_actual_to_expected)
     
-    bt.logging.info(f"Overall compliance ratio vs target: {ratio_of_actual_to_expected:.2f}, Percentage-based score: {score:.2f}")
+    bt.logging.info(f"Overall compliance ratio vs target: {ratio_of_actual_to_expected:.2f}, Quantity-based score: {quantity_score:.2f}")
+
+    # Calculate rule diversity factor
+    num_target_rules_met = 0
+    rule_diversity_factor = 0.0
+
+    if not target_rules: # No specific rules targeted, so diversity is maximal or not applicable.
+        rule_diversity_factor = 1.0
+    elif overall_compliant_count == 0: # No variations complied with any target rule.
+        rule_diversity_factor = 0.0
+        num_target_rules_met = 0
+    else:
+        # Count how many of the *target_rules* were satisfied by at least one variation.
+        # compliant_variations_by_rule.keys() should be a subset of target_rules if evaluate_rule_compliance is strict.
+        satisfied_target_rules = set()
+        for rule_name, compliant_vars_for_rule_list in compliant_variations_by_rule.items():
+            if rule_name in target_rules and compliant_vars_for_rule_list:
+                satisfied_target_rules.add(rule_name)
+        num_target_rules_met = len(satisfied_target_rules)
+        rule_diversity_factor = num_target_rules_met / len(target_rules) if len(target_rules) > 0 else 1.0
+
+    bt.logging.info(f"Met {num_target_rules_met} out of {len(target_rules)} target rules. Rule diversity factor: {rule_diversity_factor:.2f}")
+
+    # Final score combines quantity and diversity
+    final_score = quantity_score * rule_diversity_factor
+    bt.logging.info(f"Final rule compliance score (quantity * diversity): {final_score:.2f}")
     
-    return score, {
+    return final_score, {
         "compliant_variations_by_rule": compliant_variations_by_rule,
         "rules_satisfied_by_variation": rules_satisfied_by_variation,
         "compliance_ratio_overall_variations": compliance_ratio_from_evaluator, # Ratio of variations that matched any rule to total variations
         "overall_compliant_unique_variations_count": overall_compliant_count,
         "expected_compliant_variations_count": expected_compliant_count,
-        "score": score # This is the score based on meeting the target rule_percentage
+        "quantity_score": float(quantity_score),
+        "rule_diversity_factor": float(rule_diversity_factor),
+        "num_target_rules_met": num_target_rules_met,
+        "total_target_rules": len(target_rules),
+        "score": float(final_score) # This is the score based on meeting the target rule_percentage and diversity
     }
