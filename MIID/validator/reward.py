@@ -946,46 +946,61 @@ def calculate_rule_compliance_score(
     
     if not variations or not target_rules:
         bt.logging.warning("No variations or no target rules provided")
-        return 0.0, {"compliant_variations": {}, "compliance_ratio": 0.0}
+        return 0.0, {
+            "compliant_variations_by_rule": {},
+            "rules_satisfied_by_variation": {},
+            "compliance_ratio_overall_variations": 0.0,
+            "overall_compliant_count": 0,
+            "expected_compliant_count": 0,
+            "score": 0.0
+        }
     
     # Evaluate rule compliance
-    compliant_variations, compliance_ratio = evaluate_rule_compliance(
+    # compliant_variations_by_rule is Dict[str (rule_name), List[str (variation)]]
+    compliant_variations_by_rule, compliance_ratio_from_evaluator = evaluate_rule_compliance(
         original_name, 
         variations, 
         target_rules
     )
     
-    # Count compliant variations
-    compliant_count = len(set().union(*[set(v) for v in compliant_variations.values()])) if compliant_variations else 0
-    expected_count = max(1, int(len(variations) * target_percentage))
+    # Create a dictionary to map each compliant variation to the list of rules it satisfied
+    rules_satisfied_by_variation = {}
+    for rule, rule_compliant_variations_list in compliant_variations_by_rule.items():
+        for variation in rule_compliant_variations_list:
+            if variation not in rules_satisfied_by_variation:
+                rules_satisfied_by_variation[variation] = []
+            # Ensure no duplicate rules (though unlikely with current evaluators)
+            if rule not in rules_satisfied_by_variation[variation]:
+                 rules_satisfied_by_variation[variation].append(rule)
+
+    # Count unique variations that satisfied at least one rule
+    overall_compliant_count = len(rules_satisfied_by_variation)
+    expected_compliant_count = max(1, int(len(variations) * target_percentage))
     
-    bt.logging.info(f"Found {compliant_count} rule-compliant variations (expected ~{expected_count})")
+    bt.logging.info(f"Found {overall_compliant_count} unique variations complying with at least one rule (expected ~{expected_compliant_count} based on target percentage)")
     
-    for rule, variations_list in compliant_variations.items():
-        bt.logging.info(f"Rule '{rule}': {len(variations_list)} variations")
+    for rule, variations_list in compliant_variations_by_rule.items():
+        bt.logging.info(f"Rule '{rule}': {len(variations_list)} variations matched")
     
-    # Calculate the compliance score
-    # - If we have exactly the right number, score is 1.0
-    # - If we have too few or too many, score decreases based on the deviation
-    ratio = compliant_count / expected_count if expected_count > 0 else 0.0
+    # Calculate the compliance score based on the target percentage
+    # This score reflects how well the *quantity* of rule-based variations matches the expectation.
+    ratio_of_actual_to_expected = overall_compliant_count / expected_compliant_count if expected_compliant_count > 0 else 0.0
     
-    # Use a bell curve that peaks at ratio=1.0
-    if ratio <= 0.0:
+    score = 0.0
+    if ratio_of_actual_to_expected <= 0.0:
         score = 0.0
-    elif ratio <= 1.0:
-        # Gradually increase to 1.0
-        score = ratio
-    else:
-        # Gradually decrease from 1.0 as ratio increases above 1.0
-        # This penalizes having too many rule-compliant variations
-        score = max(0.0, 2.0 - ratio)
+    elif ratio_of_actual_to_expected <= 1.0: # At or below target
+        score = ratio_of_actual_to_expected
+    else: # Above target - penalize for too many rule-based variations
+        score = max(0.0, 2.0 - ratio_of_actual_to_expected) 
     
-    bt.logging.info(f"Rule compliance ratio: {ratio:.2f}, score: {score:.2f}")
+    bt.logging.info(f"Overall compliance ratio vs target: {ratio_of_actual_to_expected:.2f}, Percentage-based score: {score:.2f}")
     
     return score, {
-        "compliant_variations": compliant_variations,
-        "compliance_ratio": compliance_ratio,
-        "compliant_count": compliant_count,
-        "expected_count": expected_count,
-        "score": score
+        "compliant_variations_by_rule": compliant_variations_by_rule,
+        "rules_satisfied_by_variation": rules_satisfied_by_variation,
+        "compliance_ratio_overall_variations": compliance_ratio_from_evaluator, # Ratio of variations that matched any rule to total variations
+        "overall_compliant_unique_variations_count": overall_compliant_count,
+        "expected_compliant_variations_count": expected_compliant_count,
+        "score": score # This is the score based on meeting the target rule_percentage
     }
