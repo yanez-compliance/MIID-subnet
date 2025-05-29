@@ -33,11 +33,14 @@ from MIID.validator.rule_evaluator import evaluate_rule_compliance
 
 # Define the reward component weights globally
 MIID_REWARD_WEIGHTS = {
-    "similarity_weight": 0.50,       # Combined weight for phonetic and orthographic similarity (reduced from 0.60)
-    "count_weight": 0.10,            # Weight for having the correct number of variations (reduced from 0.15)
+    ##### Quality based similarity weights (phonetic and orthographic similarity)
+    "similarity_weight": 0.60,       # Combined weight for phonetic and orthographic similarity (reduced from 0.60)
+    "count_weight": 0.15,            # Weight for having the correct number of variations (reduced from 0.15)
     "uniqueness_weight": 0.10,       # Weight for having unique variations (unchanged)
-    "length_weight": 0.10,           # Weight for reasonable length variations (reduced from 0.15)
+    "length_weight": 0.15,           # Weight for reasonable length variations (reduced from 0.15)
+    ##### Rule compliance weight
     "rule_compliance_weight": 0.20,  # NEW: Weight for rule-based compliance
+    ##### First/last name weights
     # Weights for combining first/last name scores in calculate_variation_quality
     "first_name_weight": 0.3, 
     "last_name_weight": 0.7
@@ -473,8 +476,8 @@ def calculate_variation_quality(
             bt.logging.warning(f"Applied missing last name penalty: {missing_ratio:.2f}")
         # Use dynamic weights
         base_score = (
-            part_weights.get("first_name_weight", 0.5) * first_name_score +
-            part_weights.get("last_name_weight", 0.5) * last_name_score
+            part_weights.get("first_name_weight", MIID_REWARD_WEIGHTS["first_name_weight"]) * first_name_score +
+            part_weights.get("last_name_weight", MIID_REWARD_WEIGHTS["last_name_weight"]) * last_name_score
         )
     else:
         # If no last name, use only first name score
