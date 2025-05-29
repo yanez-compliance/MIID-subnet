@@ -111,7 +111,7 @@ MIID is not just another AI dataset—it's a **live, evolving system** that **ch
 ---
 ## 🛣️ Roadmap
 
-### Phase 1: Initial Launch & Name-Based Threat Scenarios (May 2025) [Read more details here](docs/Yanez%20Identity%20Generation%20Bittensor%20Subnet%20-%20Phase%201.pdf)
+### Phase 1: Initial Launch & Name-Based Threat Scenarios (May 2025) [Read more details here](docs/Yanez%20Identity%20Generation%20Bittensor%20Subnet%20-%20Phase%201_v1_1.pdf)
 - Deploy MIID subnet on Bittensor mainnet. 
 - Enable validators to test known threat scenarios against miner responses.
 - Introduce name-based execution vectors: phonetic, orthographic, and rule-based variations.
