@@ -30,8 +30,8 @@ RULE_FUNCTIONS = {
     "character_insertion": [
         "duplicate_random_letter_as_double_letter",
         "insert_random_letter",
-        "add_random_leading_title",
-        "add_random_trailing_title"
+        #"add_random_leading_title",
+        #"add_random_trailing_title"
     ],
     "name_formatting": [
         "initial_only_first_name",
@@ -61,8 +61,8 @@ RULE_DESCRIPTIONS = {
     "remove_all_spaces": "Remove all spaces",
     "duplicate_random_letter_as_double_letter": "Duplicate a random letter",
     "insert_random_letter": "Insert a random letter",
-    "add_random_leading_title": "Add a title prefix (Mr., Dr., etc.)",
-    "add_random_trailing_title": "Add a title suffix (Jr., PhD, etc.)",
+    #"add_random_leading_title": "Add a title prefix (Mr., Dr., etc.)",
+    #"add_random_trailing_title": "Add a title suffix (Jr., PhD, etc.)",
     "initial_only_first_name": "Use first name initial with last name",
     "shorten_name_to_initials": "Convert name to initials",
     "shorten_name_to_abberivations": "Abbreviate name parts",
