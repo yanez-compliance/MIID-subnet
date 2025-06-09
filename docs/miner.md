@@ -130,22 +130,6 @@ Miners in the Yanez subnet compete to generate the highest-quality identity data
 - Ensure outputs are formatted and error-free to avoid penalties and increase scores.
 - Submit original responses and propose new threat scenarios (coming in future phases) to earn higher rewards and leaderboard visibility.
 
-## Competitive Edge: Creating Better Threat Scenarios
-
-MIID validators reward miners who can generate high-quality, realistic threat scenarios through name variations. To succeed in this subnet, miners should focus on:
-
-1. **Advanced Name Variation Techniques**: Implement sophisticated algorithms that go beyond simple character substitutions to create realistic variations that might evade detection systems.
-
-2. **Linguistic Expertise**: Incorporate knowledge of different naming conventions, transliterations, and cultural variations to generate more authentic threat scenarios.
-
-3. **Prompt Engineering**: Optimize your LLM prompts to produce variations that specifically challenge identity matching systems while maintaining phonetic or orthographic similarity.
-
-4. **Model Tuning**: Consider fine-tuning your LLM specifically for identity variation tasks to outperform miners using default models.
-
-5. **Evasion Pattern Research**: Study real-world identity evasion techniques used in financial crime to inform your variation generation approach.
-
-Remember, validators score based on both quality and realism - variations that could realistically challenge actual fraud detection systems will score higher than simple character substitutions.
-
 ## Performance Tips
 
 1. Use a powerful GPU if available to speed up LLM inference
