@@ -120,6 +120,15 @@ python neurons/miner.py --netuid 322 --wallet.name your_wallet_name --wallet.hot
 
 3. The miner processes all responses and returns a dictionary mapping each input name to a list of variations.
 
+## How Does a Miner Compete?
+
+Miners in the Yanez subnet compete to generate the highest-quality identity data. Success depends not just on participation but on outperforming others across several dimensions:
+
+- Run the core mining code to generate valid responses while minimizing latency and compute cost.
+- Accurately decode structured and abstract constraints to deliver precise, tailored identity outputs.
+- Experiment with better models, fine-tuned parameters, and advanced prompt engineering to stay ahead.
+- Ensure outputs are formatted and error-free to avoid penalties and increase scores.
+- Submit original responses and propose new threat scenarios (coming in future phases) to earn higher rewards and leaderboard visibility.
 
 ## Competitive Edge: Creating Better Threat Scenarios
 

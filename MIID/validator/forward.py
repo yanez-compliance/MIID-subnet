@@ -44,6 +44,7 @@ import random
 import asyncio
 import numpy as np
 from typing import List, Dict, Any, Tuple
+from datetime import datetime
 
 from MIID.protocol import IdentitySynapse
 from MIID.validator.reward import get_name_variation_rewards
@@ -307,7 +308,7 @@ async def forward(self):
     bt.logging.info(f"REWARDS: {rewards}  for MINER UIDs: {miner_uids}")
 
     # 8) Save results locally
-    timestamp = int(time.time())
+    timestamp = datetime.now().strftime("%Y-%m-%d_%H-%M-%S")
     results_dir = os.path.join(self.config.logging.logging_dir, "validator_results")
     os.makedirs(results_dir, exist_ok=True)
     
