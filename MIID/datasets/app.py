@@ -3,6 +3,7 @@ import json
 import secrets
 import time
 from flask import Flask, request, jsonify
+from datetime import datetime
 
 # Import configuration
 from MIID.datasets.config import (
@@ -59,7 +60,7 @@ def upload_data(hotkey):
     os.remove(tmp_signature_filename)
 
     # 8) Create a unique filename for storing the full JSON data:
-    timestamp = int(time.time())
+    timestamp = datetime.now().strftime("%Y-%m-%d_%H-%M-%S")
     random_hex = secrets.token_hex(4)
     final_filename = f"{hotkey}.{timestamp}.{random_hex}.json"
     filepath = os.path.join(DATA_DIR, final_filename)
