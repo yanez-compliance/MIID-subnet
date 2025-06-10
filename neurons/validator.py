@@ -69,8 +69,7 @@ from MIID.base.validator import BaseValidatorNeuron
 
 # Bittensor Validator Template:
 from MIID.validator import forward
-# Import wandb constants from the validator module
-from MIID.validator import WANDB_PROJECT, WANDB_ENTITY, MAX_RUN_STEPS_PER_WANDB_RUN
+# Import only what's needed from the validator module
 # Import reward function if needed for metrics (or maybe just pass rewards to log_step)
 from MIID.validator.reward import get_name_variation_rewards
 import ollama
@@ -203,8 +202,8 @@ class Validator(BaseValidatorNeuron):
             # Create the wandb run with connection to servers
             self.wandb_run = wandb.init(
                 name=wandb_name,
-                project=WANDB_PROJECT,
-                entity=WANDB_ENTITY,
+                project=self.config.wandb.project_name,
+                entity=self.config.wandb.entity,
                 tags=["validation", "subnet322", "automated"],
                 group="neuron-validation-batch",
                 job_type="validation",
@@ -222,7 +221,7 @@ class Validator(BaseValidatorNeuron):
                     #"logging_dir": getattr(self.config.logging, 'logging_dir', None),
                 },
                 allow_val_change=True,
-                reinit=True # Allows reinitializing runs, useful with MAX_RUN_STEPS_PER_WANDB_RUN
+                reinit=True # Allows reinitializing runs, useful with max_run_steps config
             )
 
             bt.logging.info(f"Started new wandb run: {wandb_name}")
@@ -257,8 +256,9 @@ class Validator(BaseValidatorNeuron):
         # Increment step count
         self.step += 1
 
-        # If we have already completed MAX_RUN_STEPS_PER_WANDB_RUN steps then we will complete the current wandb run and make a new one.
-        if self.step % MAX_RUN_STEPS_PER_WANDB_RUN == 0 and MAX_RUN_STEPS_PER_WANDB_RUN > 0:
+        # If we have already completed max_run_steps then we will complete the current wandb run and make a new one.
+        max_run_steps = self.config.wandb.max_run_steps
+        if self.step % max_run_steps == 0 and max_run_steps > 0:
             bt.logging.info(
                 f"Validator has completed {self.step} run steps. Creating a new wandb run."
             )
