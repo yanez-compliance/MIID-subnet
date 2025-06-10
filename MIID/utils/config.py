@@ -271,6 +271,12 @@ def add_validator_args(cls, parser):
         default="MIID-dev-test"   # for entity
     )
     parser.add_argument(
+        "--wandb.max_run_steps",
+        type=int,
+        help="The maximum number of steps per wandb run before creating a new run.",
+        default=1
+    )
+    parser.add_argument(
             "--neuron.ollama_url",
             type=str,
             help="Url to ollama",
