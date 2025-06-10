@@ -95,5 +95,5 @@ Navigate to [MIID-dev-test/MIID](https://wandb.ai/MIID-dev-test/MIID-mainnet) to
 
 If you encounter issues not covered here:
 - Check the [W&B documentation](https://docs.wandb.ai/)
-- Visit the [MIID Discord channel](https://discord.com/channels/799672011265015819/1371841935689388126)
+- Visit the [MIID Discord channel](https://discord.com/channels/799672011265015819/1351934165964296232)
 - Open an issue on the [MIID GitHub repository](https://github.com/yanez-compliance/MIID-subnet) 

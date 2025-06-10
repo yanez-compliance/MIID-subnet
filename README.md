@@ -6,7 +6,7 @@
 </picture>
 
 # **MIID Subnet 54 - Identity Testing Network**
-[![Discord Chat](https://img.shields.io/discord/308323056592486420.svg)](https://discord.com/channels/799672011265015819/1371841935689388126)
+[![Discord Chat](https://img.shields.io/discord/308323056592486420.svg)](https://discord.com/channels/799672011265015819/1351934165964296232)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) 
 [![Helpful Hints](https://img.shields.io/badge/Helpful-Hints-blue)](docs/helpful_hints.md)
 [![GitHub](https://img.shields.io/badge/GitHub-Repository-black)](https://github.com/yanez-compliance/MIID-subnet)
@@ -154,7 +154,7 @@ We are continuously improving MIID to:
 Join us in shaping the future of **identity verification and fraud prevention**.
 
 📢 **Follow the project & contribute to our open-source development!**  
-[Discord](https://discord.com/channels/799672011265015819/1371841935689388126) | [GitHub](https://github.com/yanez-compliance/MIID-subnet)
+[Discord](https://discord.com/channels/799672011265015819/1351934165964296232) | [GitHub](https://github.com/yanez-compliance/MIID-subnet)
 
 ---
 
