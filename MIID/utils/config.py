@@ -270,7 +270,8 @@ def add_validator_args(cls, parser):
         "--wandb.project_name",
         type=str,
         help="The name of the project where you are sending the new run.",
-        default="MIID"  # for project_name
+        #default="MIID"  # for project_name
+        default="subnet322-test"
     )
     parser.add_argument(
         "--seed_names.sample_size",
