@@ -230,7 +230,7 @@ async def forward(self):
         batch_axons = [self.metagraph.axons[uid] for uid in batch_uids]
         
         bt.logging.info(f"#########################################Batch uids: {batch_uids}#########################################")
-        time.sleep(300)  # Large sleep; adjust as desired
+        time.sleep(30)  # Large sleep; adjust as desired
 
         bt.logging.info(f"Processing batch {i//batch_size + 1}/{total_batches} with {len(batch_uids)} miners")
         batch_start_time = time.time()

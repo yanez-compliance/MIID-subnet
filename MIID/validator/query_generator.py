@@ -12,7 +12,7 @@ from MIID.validator.rule_extractor import get_rule_template_and_metadata
 
 # Constants for query generation
 SIMILARITY_LEVELS = ["Light", "Medium", "Far"]
-DEFAULT_VARIATION_COUNT = 10
+DEFAULT_VARIATION_COUNT = 15
 DEFAULT_ORTHOGRAPHIC_SIMILARITY = "Light"
 DEFAULT_PHONETIC_SIMILARITY = "Light"
 DEFAULT_QUERY = False  # Use simple default query instead of complex LLM-generated one
@@ -101,7 +101,7 @@ class QueryGenerator:
             bt.logging.info("Using default query template (skipping complex query generation)")
             default_template = f"Give me 10 comma separated alternative spellings of the name {{name}}. Include 5 of them should sound similar to the original name and 5 should be orthographically similar. {rule_template} Provide only the names."
             labels = {
-                "variation_count": 10,
+                "variation_count": DEFAULT_VARIATION_COUNT,
                 "phonetic_similarity": {"Medium": 0.5},
                 "orthographic_similarity": {"Medium": 0.5},
                 "rule_based": rule_metadata
@@ -179,8 +179,8 @@ class QueryGenerator:
             # Set up query parameters - randomly select different configurations
             # for each validation round to test miners on various tasks
             
-            # 1. Determine variation count (between 5-15)
-            variation_count = random.randint(5, 15)
+            # 1. Determine variation count (between 5-DEFAULT_VARIATION_COUNT)
+            variation_count = random.randint(5, DEFAULT_VARIATION_COUNT)
             
             # 2. Set up phonetic similarity distribution
             phonetic_config = random.choice([
@@ -253,16 +253,16 @@ class QueryGenerator:
             # Create a list to store the generated names
             seed_names = []
             
-            # Ensure name_variation config exists
-            if not hasattr(self.config, 'name_variation') or self.config.name_variation is None:
-                bt.logging.warning("name_variation config not found, creating it now")
-                self.config.name_variation = bt.config()
-                self.config.name_variation.sample_size = 5
+            # Ensure seed_names config exists
+            if not hasattr(self.config, 'seed_names') or self.config.seed_names is None:
+                bt.logging.warning("seed_names config not found, creating it now")
+                self.config.seed_names = bt.config()
+                self.config.seed_names.sample_size = 15
             
-            # Ensure sample_size exists and has a valid value
-            sample_size = getattr(self.config.name_variation, 'sample_size', 5)
+            # Ensure sample_size exists and has a valid value. The default is 15, matching config.py.
+            sample_size = getattr(self.config.seed_names, 'sample_size', 15)
             if sample_size is None:
-                sample_size = 5
+                sample_size = 15
                 
             bt.logging.info(f"Using name variation sample size: {sample_size}")
             
@@ -297,7 +297,7 @@ class QueryGenerator:
             bt.logging.error(f"Error building queries: {str(e)}")
             
             # Fallback to simple defaults
-            variation_count = 10
+            variation_count = DEFAULT_VARIATION_COUNT
             phonetic_config = {"Medium": 0.5}
             orthographic_config = {"Medium": 0.5}
             
@@ -325,7 +325,7 @@ class QueryGenerator:
             seed_names = []
             
             # Use the same sample size for fallback
-            fallback_sample_size = getattr(self.config.name_variation, 'sample_size', 5)
+            fallback_sample_size = getattr(self.config.seed_names, 'sample_size', 15)
             
             while len(seed_names) < fallback_sample_size:
                 # Randomly decide whether to generate a single name or full name
