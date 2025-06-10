@@ -256,14 +256,19 @@ def add_validator_args(cls, parser):
         "--wandb.project_name",
         type=str,
         help="The name of the project where you are sending the new run.",
-        default="template-validators",
+        default="subnet322-test"  # for project_name
     )
-
+    parser.add_argument(
+        "--seed_names.sample_size",
+        type=int,
+        help="The number of seed names to generate for each validation round.",
+        default=15,
+    )
     parser.add_argument(
         "--wandb.entity",
         type=str,
         help="The name of the project where you are sending the new run.",
-        default="opentensor-dev",
+        default="MIID-dev-test"   # for entity
     )
     parser.add_argument(
             "--neuron.ollama_url",
