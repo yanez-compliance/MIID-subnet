@@ -230,7 +230,7 @@ async def forward(self):
         batch_axons = [self.metagraph.axons[uid] for uid in batch_uids]
         
         bt.logging.info(f"#########################################Batch uids: {batch_uids}#########################################")
-        time.sleep(30)  # Large sleep; adjust as desired
+        time.sleep(3)  # Large sleep; adjust as desired
 
         bt.logging.info(f"Processing batch {i//batch_size + 1}/{total_batches} with {len(batch_uids)} miners")
         batch_start_time = time.time()
@@ -275,7 +275,7 @@ async def forward(self):
         all_responses.extend(batch_responses)
         
         if i + batch_size < len(miner_uids):
-            sleep_time = 20
+            sleep_time = 2
             bt.logging.info(f"Sleeping for {sleep_time}s before next batch")
             await asyncio.sleep(sleep_time)
     
@@ -432,7 +432,7 @@ async def forward(self):
         time.sleep(EPOCH_MIN_TIME - (request_end - request_start))
 
     bt.logging.info("All batches processed, waiting 30 more seconds...")
-    await asyncio.sleep(30)
+    await asyncio.sleep(5)
 
     # --- REMOVE WANDB FINISH --- (Now handled in new_wandb_run)
     # wandb_run.finish()
