@@ -277,7 +277,9 @@ Remember: Only provide the name variations in a clean, comma-separated format.
 
         # Use Ollama to query the LLM
         try:
-            response = ollama.chat(
+            # Create Ollama client with configured URL
+            client = ollama.Client(host=getattr(self.config.neuron, 'ollama_url', 'http://127.0.0.1:11434'))
+            response = client.chat(
                 self.model_name, 
                 messages=[{
                     'role': 'user',

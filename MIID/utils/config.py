@@ -149,6 +149,20 @@ def add_miner_args(cls, parser):
     )
 
     parser.add_argument(
+        "--neuron.ollama_url",
+        type=str,
+        help="Url to ollama",
+        default="http://127.0.0.1:11434",
+    )
+
+    parser.add_argument(
+        "--neuron.ollama_request_timeout",
+        type=int,
+        help="Timeout for the Ollama request in seconds.",
+        default=60,
+    )
+
+    parser.add_argument(
         "--blacklist.force_validator_permit",
         action="store_true",
         help="If set, we will force incoming requests to have a permit.",
