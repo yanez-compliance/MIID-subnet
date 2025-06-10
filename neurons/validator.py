@@ -227,8 +227,12 @@ class Validator(BaseValidatorNeuron):
             bt.logging.info(f"Started new wandb run: {wandb_name}")
             
             # Check if we're connected to the wandb servers
-            if wandb.run and wandb.run.mode == "online":
+            if wandb.run and hasattr(wandb.run, 'mode') and wandb.run.mode == "online":
                 bt.logging.info("Connected to wandb servers! Data will be uploaded.")
+            elif wandb.run and hasattr(wandb.run, 'settings') and wandb.run.settings.mode == "online":
+                bt.logging.info("Connected to wandb servers! Data will be uploaded.")
+            elif wandb.run:
+                bt.logging.info("wandb run initialized successfully.")
             else:
                 bt.logging.warning("Not connected to wandb servers. Run may be in offline mode.")
                 
