@@ -204,7 +204,7 @@ class Validator(BaseValidatorNeuron):
                 name=wandb_name,
                 project=self.config.wandb.project_name,
                 entity=self.config.wandb.entity,
-                tags=["validation", "subnet322", "automated"],
+                tags=["validation", "subnet54", "automated"],
                 group="neuron-validation-batch",
                 job_type="validation",
                 # Use anonymous="allow" instead of "must" to prefer API key auth when available

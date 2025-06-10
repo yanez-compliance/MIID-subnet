@@ -268,7 +268,7 @@ def add_validator_args(cls, parser):
         "--wandb.entity",
         type=str,
         help="The name of the project where you are sending the new run.",
-        default="MIID-dev-test"   # for entity
+        default="MIID-dev-test"
     )
     parser.add_argument(
         "--wandb.max_run_steps",
@@ -288,6 +288,12 @@ def add_validator_args(cls, parser):
             help="Model name to use with ollama",
             default="llama3.1:latest",
         )
+    parser.add_argument(
+        "--neuron.ollama_request_timeout",
+        type=int,
+        help="Timeout for the Ollama request in seconds.",
+        default=60,
+    )
 
 
 def config(cls):

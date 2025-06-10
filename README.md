@@ -5,8 +5,8 @@
     <img src="YanezSubnetLogo.png" width="300">
 </picture>
 
-# **MIID Subnet 322 - Identity Testing Network**
-[![Discord Chat](https://img.shields.io/discord/308323056592486420.svg)](https://discord.com/channels/799672011265015819/1351934165964296232)
+# **MIID Subnet 54 - Identity Testing Network**
+[![Discord Chat](https://img.shields.io/discord/308323056592486420.svg)](https://discord.com/channels/799672011265015819/1371841935689388126)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT) 
 [![Helpful Hints](https://img.shields.io/badge/Helpful-Hints-blue)](docs/helpful_hints.md)
 [![GitHub](https://img.shields.io/badge/GitHub-Repository-black)](https://github.com/yanez-compliance/MIID-subnet)
@@ -74,7 +74,7 @@ bash scripts/miner/setup.sh
 source miner_env/bin/activate
 
 # Start mining
-pm2 start python --name neuron-miner -- neurons/miner.py --netuid 322 --wallet.name your-wallet --wallet.hotkey your-hotkey --subtensor.network test
+pm2 start python --name neuron-miner -- neurons/miner.py --netuid 54 --wallet.name your-wallet --wallet.hotkey your-hotkey --subtensor.network finney
 
 ```
 
@@ -87,7 +87,7 @@ bash scripts/validator/setup.sh
 source validator_env/bin/activate
 
 # Start validating
-python neurons/validator.py --netuid 322 --wallet.name your_wallet --wallet.hotkey your_hotkey --subtensor.network test
+pm2 start python --name neuron-validator -- neurons/validator.py --netuid 54 --wallet.name your_wallet --wallet.hotkey your_hotkey --subtensor.network finney
 ```
 
 For detailed instructions, check our **[Mining Guide](docs/miner.md)** and **[Validator Guide](docs/validator.md)**.
@@ -154,7 +154,7 @@ We are continuously improving MIID to:
 Join us in shaping the future of **identity verification and fraud prevention**.
 
 📢 **Follow the project & contribute to our open-source development!**  
-[Discord](https://discord.com/channels/799672011265015819/1351934165964296232) | [GitHub](https://github.com/yanez-compliance/MIID-subnet)
+[Discord](https://discord.com/channels/799672011265015819/1371841935689388126) | [GitHub](https://github.com/yanez-compliance/MIID-subnet)
 
 ---
 

@@ -259,7 +259,9 @@ main() {
   info_msg "MIID Validator setup completed successfully!"
   info_msg "To start using your validator:"
   echo -e "   1. Activate the virtual environment: source validator_env/bin/activate"
-  echo -e "   2. Start your validator: python neurons/validator.py --netuid 322 --wallet.name your_wallet --wallet.hotkey your_hotkey --subtensor.network test"
+  echo -e "   2. Start your validator: python neurons/validator.py --netuid 54 --wallet.name your_wallet --wallet.hotkey your_hotkey --subtensor.network finney"
+  echo -e "   3. For more options, run: python neurons/validator.py --help"
+  echo -e "\n----------------------------------------\n"
 }
 
 main "$@"

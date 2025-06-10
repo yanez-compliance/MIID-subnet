@@ -19,6 +19,7 @@ MIID validators:
 - A local LLM via Ollama (default: llama3.1:latest)
 - Sufficient storage for challenge data and responses (minimum 10GB recommended)
 - Reliable internet connection
+- Weights & Biases account and API key (see [Weights & Biases Guide](weights_and_biases.md))
 - 8GB+ RAM (16GB recommended)
 
 ## Installation
@@ -101,12 +102,12 @@ ollama pull llama3.1:latest
 
 1. Stake to the subnet:
 ```bash
-btcli stake add --netuid 322 --amount 100 --wallet.name your_wallet_name --wallet.hotkey your_hotkey --subtensor.network test
+btcli stake add --netuid 54 --amount 100 --wallet.name your_wallet_name --wallet.hotkey your_hotkey --subtensor.network finney
 ```
 
 3. Start your validator:
 ```bash
-python neurons/validator.py --netuid 322 --wallet.name your_wallet_name --wallet.hotkey your_hotkey --subtensor.network test
+python neurons/validator.py --netuid 54 --wallet.name your_wallet_name --wallet.hotkey your_hotkey --subtensor.network finney
 ```
 
 For detailed information about logging setup and management, see the [Logging Guide](logging.md).
@@ -124,7 +125,7 @@ You can configure your validator with the following command-line arguments:
 
 Example with custom configuration:
 ```bash
-python neurons/validator.py --netuid 322 --wallet.name your_wallet_name --wallet.hotkey your_hotkey --subtensor.network test --neuron.timeout 180 --neuron.sample_size 15
+python neurons/validator.py --netuid 54 --wallet.name your_wallet_name --wallet.hotkey your_hotkey --subtensor.network finney --neuron.timeout 180 --neuron.sample_size 15
 ```
 
 ## How It Works

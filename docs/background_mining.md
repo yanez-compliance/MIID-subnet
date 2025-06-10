@@ -51,7 +51,7 @@ tmux new -s miid_miner
 
 3. Start your miner:
 ```bash
-python neurons/miner.py --netuid 322 --wallet.name your_wallet_name --wallet.hotkey your_hotkey --subtensor.network test
+python neurons/miner.py --netuid 54 --wallet.name your_wallet_name --wallet.hotkey your_hotkey --subtensor.network finney
 ```
 
 4. Detach from the tmux session:
@@ -111,7 +111,7 @@ nano ~/scripts/start_miner.sh
 ```bash
 #!/bin/bash
 source ~/miner_env/bin/activate
-python ~/MIID-subnet/neurons/miner.py --netuid 322 --wallet.name your_wallet_name --wallet.hotkey your_hotkey --subtensor.network test
+python ~/MIID-subnet/neurons/miner.py --netuid 54 --wallet.name your_wallet_name --wallet.hotkey your_hotkey --subtensor.network finney
 ```
 
 3. Make the script executable:

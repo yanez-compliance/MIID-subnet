@@ -81,12 +81,12 @@ ollama pull llama3.1:latest
 
 1. Register your miner to the subnet:
 ```bash
-btcli subnet register --netuid 322 --wallet.name your_wallet_name --wallet.hotkey your_hotkey --subtensor.network test
+btcli subnet register --netuid 54 --wallet.name your_wallet_name --wallet.hotkey your_hotkey --subtensor.network finney
 ```
 
 2. Start your miner:
 ```bash
-python neurons/miner.py --netuid 322 --subtensor.network test --subtensor.chain_endpoint wss://test.finney.opentensor.ai:443 --wallet.name your_wallet_name --wallet.hotkey your_hotkey --logging.debug
+python neurons/miner.py --netuid 54 --subtensor.network finney --subtensor.chain_endpoint wss://entrypoint-finney.opentensor.ai:443 --wallet.name your_wallet_name --wallet.hotkey your_hotkey --logging.debug
 ```
 
 For detailed information about logging setup and management, see the [Logging Guide](logging.md).
@@ -104,7 +104,7 @@ You can configure your miner with the following command-line arguments:
 
 Example with custom configuration:
 ```bash
-python neurons/miner.py --netuid 322 --wallet.name your_wallet_name --wallet.hotkey your_hotkey --subtensor.network test --neuron.model_name mistral:7b --neuron.logging.debug
+python neurons/miner.py --netuid 54 --wallet.name your_wallet_name --wallet.hotkey your_hotkey --subtensor.network finney --neuron.model_name mistral:7b --neuron.logging.debug
 ```
 
 ## How It Works
