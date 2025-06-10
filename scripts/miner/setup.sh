@@ -252,8 +252,11 @@ main() {
   
   info_msg "MIID Miner setup completed successfully!"
   info_msg "To start using your miner:"
-  echo -e "   1. Activate the virtual environment: source miner_env/bin/activate"
-  echo -e "   2. Start your miner: python neurons/miner.py --netuid 322 --wallet.name your_wallet --wallet.hotkey your_hotkey --subtensor.network test"
+  echo -e "   1. Register your miner: btcli s register --netuid 54 --wallet.name your_wallet --wallet.hotkey your_hotkey --subtensor.network finney"
+  echo -e "   2. Activate the virtual environment: source miner_env/bin/activate"
+  echo -e "   3. Start your miner: python neurons/miner.py --netuid 54 --wallet.name your_wallet --wallet.hotkey your_hotkey --subtensor.network finney"
+  echo -e "   4. For more options, run: python neurons/miner.py --help"
+  echo -e "\n----------------------------------------\n"
 }
 
 main "$@"

@@ -141,8 +141,11 @@ class QueryGenerator:
         """
 
         try:
+            # Configure the client with the timeout
+            client = ollama.Client(host=self.config.neuron.ollama_url, timeout=self.config.neuron.ollama_request_timeout)
+            
             # Generate the query using Ollama
-            response = ollama.generate(model=model_name, prompt=prompt)
+            response = client.generate(model=model_name, prompt=prompt)
             query_template = response['response'].strip()
             
             # Validate the generated template

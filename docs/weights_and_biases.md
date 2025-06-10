@@ -6,7 +6,7 @@ This guide explains how to use the built-in Weights & Biases (W&B) integration f
 
 [Weights & Biases](https://wandb.ai/) is a machine learning platform that provides tools for experiment tracking and visualization. For MIID validators, W&B offers an intuitive dashboard to monitor performance metrics over time.
 
-The MIID validator automatically logs metrics to the project: [MIID-dev-test/subnet322-test](https://wandb.ai/MIID-dev-test/subnet322-test)
+The MIID validator automatically logs metrics to the project: [MIID-dev-test/MIID](https://wandb.ai/MIID-dev-test/MIID)
 
 ## Setup Instructions
 
@@ -43,10 +43,10 @@ The validator code already handles all configurations for W&B, including:
 - Metrics logging
 - Data organization
 
-Simply run your validator as normal, and metrics will automatically be logged to the [MIID Subnet W&B Dashboard](https://wandb.ai/MIID-dev-test/subnet322-test).
+Simply run your validator as normal, and metrics will automatically be logged to the [MIID Subnet W&B Dashboard](https://wandb.ai/MIID-dev-test/MIID).
 
 ```bash
-python neurons/validator.py --netuid 322 --wallet.name your_wallet_name --wallet.hotkey your_hotkey --subtensor.network test
+python neurons/validator.py --netuid 54 --wallet.name your_wallet_name --wallet.hotkey your_hotkey --subtensor.network finney
 ```
 
 ## Tracked Metrics
@@ -70,7 +70,7 @@ The MIID validator automatically tracks the following metrics in W&B:
 
 ## Using the W&B Dashboard
 
-Navigate to [MIID-dev-test/subnet322-test](https://wandb.ai/MIID-dev-test/subnet322-test) to view:
+Navigate to [MIID-dev-test/MIID](https://wandb.ai/MIID-dev-test/MIID-mainnet) to view:
 - All validator runs in the network
 - Real-time metrics and performance
 - Comparative analysis across different validators
@@ -95,5 +95,5 @@ Navigate to [MIID-dev-test/subnet322-test](https://wandb.ai/MIID-dev-test/subnet
 
 If you encounter issues not covered here:
 - Check the [W&B documentation](https://docs.wandb.ai/)
-- Visit the [MIID Discord channel](https://discord.com/channels/799672011265015819/1351934165964296232)
+- Visit the [MIID Discord channel](https://discord.com/channels/799672011265015819/1371841935689388126)
 - Open an issue on the [MIID GitHub repository](https://github.com/yanez-compliance/MIID-subnet) 

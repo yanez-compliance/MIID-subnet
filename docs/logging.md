@@ -8,12 +8,12 @@ Both validators and miners can save their logs to files using the following comm
 
 ### Validator Logging
 ```bash
-python neurons/validator.py --netuid 322 --subtensor.network test --subtensor.chain_endpoint wss://test.finney.opentensor.ai:443 --wallet.name validator --wallet.hotkey validator_default --logging.debug > validator.log 2>&1
+python neurons/validator.py --netuid 54 --subtensor.network finney --subtensor.chain_endpoint wss://entrypoint-finney.opentensor.ai:443 --wallet.name validator --wallet.hotkey validator_default --logging.debug > validator.log 2>&1
 ```
 
 ### Miner Logging
 ```bash
-python neurons/miner.py --netuid 322 --subtensor.network test --subtensor.chain_endpoint wss://test.finney.opentensor.ai:443 --wallet.name your_wallet_name --wallet.hotkey your_hotkey --logging.debug > miner.log 2>&1
+python neurons/miner.py --netuid 54 --subtensor.network finney --subtensor.chain_endpoint wss://entrypoint-finney.opentensor.ai:443 --wallet.name your_wallet_name --wallet.hotkey your_hotkey --logging.debug > miner.log 2>&1
 ```
 
 These commands will:

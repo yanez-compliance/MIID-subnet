@@ -29,12 +29,12 @@ btcli miner start \
     --wallet.hotkey <hotkey_name> \
     --axon.port 8091
 
-# For mainnet (netuid: will be announced)
-# btcli miner start \
-#     --netuid <mainnet_netuid> \
-#     --wallet.name <wallet_name> \
-#     --wallet.hotkey <hotkey_name> \
-#     --axon.port 8091
+# For mainnet (netuid: 54)
+ btcli miner start \
+     --netuid 54 \
+     --wallet.name <wallet_name> \
+     --wallet.hotkey <hotkey_name> \
+     --axon.port 8091
 ```
 
 Replace:
