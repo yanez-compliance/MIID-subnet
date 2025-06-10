@@ -16,6 +16,7 @@ ALLOWED_HOTKEYS: List[str] = [
     # Add your validator hotkeys here
     "5FhCUBvS49UDogEMDukPEqP2JLo3FRM4MkuFPAm8ZPum3Dg6",  # validator 1
     "5CnkkjPdfsA6jJDHv2U6QuiKiivDuvQpECC13ffdmSDbkgtt",   # validator 2
+    "5CviHjwSckCQbsGMHrdan22XB9L6maeqKfmD2eTYGSyxncg9",  # validator 3
 ]
 
 # Hugging Face configuration

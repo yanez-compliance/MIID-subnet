@@ -59,17 +59,21 @@ def upload_data(hotkey):
     # 7) Verification succeeded, remove the temporary file (optional to keep or discard).
     os.remove(tmp_signature_filename)
 
-    # 8) Create a unique filename for storing the full JSON data:
+    # 8) Create a folder for this hotkey if it doesn't exist
+    hotkey_folder = os.path.join(DATA_DIR, hotkey)
+    os.makedirs(hotkey_folder, exist_ok=True)
+    
+    # 9) Create a unique filename for storing the full JSON data:
     timestamp = datetime.now().strftime("%Y-%m-%d_%H-%M-%S")
     random_hex = secrets.token_hex(4)
     final_filename = f"{hotkey}.{timestamp}.{random_hex}.json"
-    filepath = os.path.join(DATA_DIR, final_filename)
+    filepath = os.path.join(hotkey_folder, final_filename)
 
-    # 9) Save the entire JSON data (including the signature) to disk.
+    # 10) Save the entire JSON data (including the signature) to disk.
     with open(filepath, 'w', encoding='utf-8') as f:
         json.dump(data, f, indent=2)
     
-    # 10) Return a success response
+    # 11) Return a success response
     return jsonify({
         "message": "Data received and verified successfully",
         "filename": final_filename
