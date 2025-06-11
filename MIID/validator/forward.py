@@ -398,14 +398,6 @@ async def forward(self):
         #"json_results_path": json_path
     }
 
-    # Call log_step from the Validator instance
-    self.log_step(
-        uids=miner_uids, # Pass the list of uids
-        metrics=detailed_metrics, # Pass the detailed metrics list
-        rewards=rewards, # Pass the numpy array of rewards
-        extra_data=wandb_extra_data # Pass additional context
-    )
-
     self.set_weights()
 
     # 9) Upload to external endpoint (moved to a separate utils function)
@@ -417,13 +409,25 @@ async def forward(self):
     signed_contents = sign_message(self.wallet, results_json_string, output_file=None)
     results["signature"] = signed_contents
 
+    upload_success = False
     #If for some reason uploading the data fails, we should just log it and continue. Server might go down but should not be a unique point of failure for the subnet
     try:
         print(f"@@@@@@@@@@@@@@@@@@@@@@@@@@@Uploading data to: {MIID_SERVER}@@@@@@@@@@@@@@@@@@@@@@@@@@@")
         upload_data(MIID_SERVER, hotkey, results) 
+        upload_success = True
     except:
         bt.logging.error("Uploading data failed")
         pass
+    
+    wandb_extra_data["upload_success"] = upload_success
+
+    # Call log_step from the Validator instance AFTER the upload attempt
+    self.log_step(
+        uids=miner_uids, # Pass the list of uids
+        metrics=detailed_metrics, # Pass the detailed metrics list
+        rewards=rewards, # Pass the numpy array of rewards
+        extra_data=wandb_extra_data # Pass additional context
+    )
     # 10) Set weights and enforce min epoch time
     
     request_end = time.time()
