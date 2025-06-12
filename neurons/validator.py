@@ -260,13 +260,15 @@ class Validator(BaseValidatorNeuron):
         # Increment step count
         self.step += 1
 
-        # If we have already completed max_run_steps then we will complete the current wandb run and make a new one.
-        max_run_steps = self.config.wandb.max_run_steps
-        if self.step % max_run_steps == 0 and max_run_steps > 0:
-            bt.logging.info(
-                f"Validator has completed {self.step} run steps. Creating a new wandb run."
-            )
-            self.new_wandb_run()
+        # NOTE: Commented out automatic wandb run creation based on max_run_steps
+        # since we now explicitly manage wandb runs to end after weights are set
+        # # If we have already completed max_run_steps then we will complete the current wandb run and make a new one.
+        # max_run_steps = self.config.wandb.max_run_steps
+        # if self.step % max_run_steps == 0 and max_run_steps > 0:
+        #     bt.logging.info(
+        #         f"Validator has completed {self.step} run steps. Creating a new wandb run."
+        #     )
+        #     self.new_wandb_run()
 
         # Prepare logging data
         step_log = {
