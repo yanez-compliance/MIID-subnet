@@ -169,6 +169,11 @@ async def forward(self):
     # wandb_run = wandb.init(...)
     # --- END REMOVE WANDB SETUP ---
 
+    # Ensure we have a wandb run for this forward pass
+    if not self.wandb_run:
+        bt.logging.info("Creating new wandb run for this validation round")
+        self.new_wandb_run()
+
     request_start = time.time()
     
     bt.logging.info("Updating and querying available uids")
@@ -428,6 +433,13 @@ async def forward(self):
         rewards=rewards, # Pass the numpy array of rewards
         extra_data=wandb_extra_data # Pass additional context
     )
+    
+    # Finish the wandb run after weights are set and logged
+    if self.wandb_run:
+        bt.logging.info("Finishing wandb run after setting weights")
+        self.wandb_run.finish()
+        self.wandb_run = None
+    
     # 10) Set weights and enforce min epoch time
     
     request_end = time.time()
