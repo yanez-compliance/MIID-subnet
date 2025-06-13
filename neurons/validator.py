@@ -75,8 +75,8 @@ from MIID.validator.reward import get_name_variation_rewards
 import ollama
 from MIID.validator.query_generator import QueryGenerator
 
-# Define version (replace with actual version logic if available)
-__version__ = "1.1.0"
+# Import version from MIID package
+from MIID import __version__
 
 class Validator(BaseValidatorNeuron):
     """
@@ -143,7 +143,12 @@ class Validator(BaseValidatorNeuron):
         # Initialize wandb run
         self.step = 0
         self.wandb_run = None # Initialize wandb_run as None
-        self.new_wandb_run() # Start the first wandb run
+        
+        # Check if wandb is disabled via config
+        if hasattr(self.config, 'wandb') and hasattr(self.config.wandb, 'disable') and self.config.wandb.disable:
+            bt.logging.info("Wandb is disabled via config. Skipping wandb initialization.")
+        else:
+            self.new_wandb_run() # Start the first wandb run
 
         # Initialize Ollama with the same approach as in miner.py
         if hasattr(self.config, 'neuron') and hasattr(self.config.neuron, 'ollama_model_name'):
@@ -190,13 +195,24 @@ class Validator(BaseValidatorNeuron):
 
     def new_wandb_run(self):
         """Creates a new wandb run to save information to."""
+        # Check if wandb is disabled
+        if hasattr(self.config, 'wandb') and hasattr(self.config.wandb, 'disable') and self.config.wandb.disable:
+            bt.logging.debug("Wandb is disabled. Skipping run creation.")
+            self.wandb_run = None
+            return
+        
         # Create a unique run id for this run.
         run_id = dt.datetime.utcnow().strftime("%Y-%m-%d_%H-%M-%S")
 
         wandb_name = "validator-" + str(self.uid) + "-" + run_id
         # Make sure to finish the previous run if it exists
         if self.wandb_run:
-            self.wandb_run.finish()
+            try:
+                self.wandb_run.finish()
+            except Exception as e:
+                bt.logging.error(f"Error finishing previous wandb run: {e}")
+            finally:
+                self.wandb_run = None
 
         try:
             # Create the wandb run with connection to servers
@@ -249,6 +265,11 @@ class Validator(BaseValidatorNeuron):
             extra_data=None # Optional dict for additional data from forward
     ):
         """Logs data for the current step to wandb, creating a new run if needed."""
+        # Check if wandb is disabled
+        if hasattr(self.config, 'wandb') and hasattr(self.config.wandb, 'disable') and self.config.wandb.disable:
+            bt.logging.debug("Wandb is disabled. Skipping log_step.")
+            return
+        
         # Check if wandb run is initialized
         if not self.wandb_run:
             bt.logging.warning("wandb_run not initialized. Skipping log_step.")

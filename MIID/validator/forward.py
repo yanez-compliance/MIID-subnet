@@ -169,8 +169,9 @@ async def forward(self):
     # wandb_run = wandb.init(...)
     # --- END REMOVE WANDB SETUP ---
 
-    # Ensure we have a wandb run for this forward pass
-    if not self.wandb_run:
+    # Ensure we have a wandb run for this forward pass (unless wandb is disabled)
+    wandb_disabled = hasattr(self.config, 'wandb') and hasattr(self.config.wandb, 'disable') and self.config.wandb.disable
+    if not wandb_disabled and not self.wandb_run:
         bt.logging.info("Creating new wandb run for this validation round")
         self.new_wandb_run()
 
@@ -434,11 +435,15 @@ async def forward(self):
         extra_data=wandb_extra_data # Pass additional context
     )
     
-    # Finish the wandb run after weights are set and logged
-    if self.wandb_run:
+    # Finish the wandb run after weights are set and logged (unless wandb is disabled)
+    if self.wandb_run and not wandb_disabled:
         bt.logging.info("Finishing wandb run after setting weights")
-        self.wandb_run.finish()
-        self.wandb_run = None
+        try:
+            self.wandb_run.finish()
+        except Exception as e:
+            bt.logging.error(f"Error finishing wandb run: {e}")
+        finally:
+            self.wandb_run = None
     
     # 10) Set weights and enforce min epoch time
     

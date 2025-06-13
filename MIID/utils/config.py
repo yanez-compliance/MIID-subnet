@@ -291,6 +291,12 @@ def add_validator_args(cls, parser):
         default=1
     )
     parser.add_argument(
+        "--wandb.disable",
+        action="store_true",
+        help="Disable wandb logging entirely. Useful for debugging or when wandb is unavailable.",
+        default=False,
+    )
+    parser.add_argument(
             "--neuron.ollama_url",
             type=str,
             help="Url to ollama",
