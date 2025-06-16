@@ -75,8 +75,6 @@ from MIID.validator.reward import get_name_variation_rewards
 import ollama
 from MIID.validator.query_generator import QueryGenerator
 
-# Import version from MIID package
-from MIID import __version__
 
 class Validator(BaseValidatorNeuron):
     """
@@ -229,7 +227,7 @@ class Validator(BaseValidatorNeuron):
                     "uid": self.uid,
                     "hotkey": self.wallet.hotkey.ss58_address,
                     "run_name": run_id,
-                    "version": __version__,
+                    "version": self.spec_version,
                     # Add other relevant config from self.config
                     #"sample_size": getattr(self.config.neuron, 'sample_size', None),
                     #"batch_size": getattr(self.config.neuron, 'batch_size', None),
