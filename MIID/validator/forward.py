@@ -52,6 +52,7 @@ from MIID.utils.uids import get_random_uids
 from MIID.utils.sign_message import sign_message
 from MIID.validator.query_generator import QueryGenerator
 
+
 # Import your new upload_data function here
 from MIID.utils.misc import upload_data
 
@@ -404,6 +405,8 @@ async def forward(self):
         #"json_results_path": json_path
     }
 
+    # logging the spec_version before setting weights
+    bt.logging.info(f"Spec version for setting weights: {self.spec_version}")
     self.set_weights()
 
     # 9) Upload to external endpoint (moved to a separate utils function)
