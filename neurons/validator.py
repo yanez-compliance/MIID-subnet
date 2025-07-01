@@ -52,7 +52,7 @@ from dotenv import load_dotenv
 
 # Load environment variables from .env file (e.g., vali.env)
 # This will load WANDB_API_KEY if set in the file
-load_dotenv(dotenv_path=os.path.join(os.getcwd(), 'vali.env')) 
+load_dotenv(dotenv_path=os.path.join(os.getcwd(), 'vali.env')) # it has the WANDB_API_KEY
 # You might need to adjust the path if your .env file is elsewhere
 
 # Remove offline mode
@@ -101,7 +101,7 @@ class Validator(BaseValidatorNeuron):
     # it is recommended to use llama3.1:latest for the validator
     # but you can try other models and see which one performs better for your use case
     
-    DEFAULT_LLM_MODEL = "llama3.1:latest"
+    DEFAULT_LLM_MODEL = "llama3.1:latest" # llama3.1:latest is the default model for the validator
 
     def __init__(self, config=None):
         """
@@ -229,9 +229,9 @@ class Validator(BaseValidatorNeuron):
                     "run_name": run_id,
                     "version": self.spec_version,
                     # Add other relevant config from self.config
-                    #"sample_size": getattr(self.config.neuron, 'sample_size', None),
-                    #"batch_size": getattr(self.config.neuron, 'batch_size', None),
-                    #"timeout": getattr(self.config.neuron, 'timeout', None),
+                    "sample_size": getattr(self.config.neuron, 'sample_size', None),
+                    "batch_size": getattr(self.config.neuron, 'batch_size', None),
+                    "timeout": getattr(self.config.neuron, 'timeout', None),
                     #"logging_dir": getattr(self.config.logging, 'logging_dir', None),
                 },
                 allow_val_change=True,
