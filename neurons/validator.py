@@ -386,4 +386,4 @@ if __name__ == "__main__":
     with Validator() as validator:
         while True:
             bt.logging.info(f"----------------------------------Name Variation Validator running... {time.time()}")
-            time.sleep(60)
+            time.sleep(5)
