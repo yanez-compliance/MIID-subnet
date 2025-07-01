@@ -225,14 +225,14 @@ def add_validator_args(cls, parser):
         "--neuron.sample_size",
         type=int,
         help="The number of miners to query in a single step.",
-        default=50,
+        default=100,# MIID: 50 miners we want to query in a single step change to 100
     )
 
     parser.add_argument(
         "--neuron.batch_size",
         type=int,
         help="The number of miners to query in a single batch.",
-        default=5,
+        default=10, # MIID: 5 miners we want to query in a single batch change to 10
     )
 
     parser.add_argument(
@@ -282,7 +282,7 @@ def add_validator_args(cls, parser):
         "--wandb.entity",
         type=str,
         help="The name of the project where you are sending the new run.",
-        default="MIID-dev-test"
+        default="MIID-dev-test" # MIID: change to MIID-dev-test
     )
     parser.add_argument(
         "--wandb.max_run_steps",
@@ -312,7 +312,7 @@ def add_validator_args(cls, parser):
         "--neuron.ollama_request_timeout",
         type=int,
         help="Timeout for the Ollama request in seconds.",
-        default=60,
+        default=90, # MIID: 60 seconds is the default timeout to wait for a response from the Ollama server change to 90 seconds
     )
 
 
