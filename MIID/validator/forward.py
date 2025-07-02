@@ -98,8 +98,8 @@ async def dendrite_with_retries(dendrite: bt.dendrite, axons: list, synapse: Ide
         new_axons = []
         
         for i, response in enumerate(responses):
-            bt.logging.info(f"#########################################Response {i}: {response}#########################################")
-            bt.logging.info(f"#########################################Response type: {type(response)}#########################################")
+            #bt.logging.info(f"#########################################Response {i}: {response}#########################################")
+            #bt.logging.info(f"#########################################Response type: {type(response)}#########################################")
             
             if isinstance(response, dict):
                 # Got the variations dictionary directly

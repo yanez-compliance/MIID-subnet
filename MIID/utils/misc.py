@@ -134,19 +134,19 @@ def upload_data(endpoint_base: str, hotkey: str, payload: dict):
     
     full_url = f"{endpoint_base}/{hotkey}"
     bt.logging.info(f"Uploading results to {full_url} ...")
-    print(f"@@@@@@@@@@@@@@@@@@@@@@@@@@@Uploading results to {full_url} ...")
+    print(f"Uploading results to {full_url} ...")
     try:
         response = requests.post(full_url, json=payload)
         if response.status_code == 200:
             bt.logging.info(f"Successfully uploaded data. Server response: {response.json()}")
-            print(f"@@@@@@@@@@@@@@@@@@@@@@@@@@@Successfully uploaded data. Server response: {response.json()}@@@@@@@@@@@@@@@@@@@@@@@@@@@")
+            #print(f"Successfully uploaded data. Server response: {response.json()}@@@@@@@@@@@@@@@@@@@@@@@@@@@")
         else:
             bt.logging.error(
                 f"Failed to upload data. Status code: {response.status_code}, "
                 f"Response: {response.text}"
             )
-            print(f"@@@@@@@@@@@@@@@@@@@@@@@@@@@Failed to upload data. Status code: {response.status_code}, "
-                f"Response: {response.text}@@@@@@@@@@@@@@@@@@@@@@@@@@@")
+            #print(f"Failed to upload data. Status code: {response.status_code}, "
+            #    f"Response: {response.text}@@@@@@@@@@@@@@@@@@@@@@@@@@@")
     except Exception as e:
         bt.logging.error(f"Exception occurred during upload: {e}")
-        print(f"@@@@@@@@@@@@@@@@@@@@@@@@@@@Exception occurred during upload: {e}@@@@@@@@@@@@@@@@@@@@@@@@@@@")
+        #print(f"Exception occurred during upload: {e}@@@@@@@@@@@@@@@@@@@@@@@@@@@")

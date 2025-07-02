@@ -40,7 +40,7 @@ class QueryGenerator:
         
 
 
-        bt.logging.info(f"#########################################use_default_query: {self.use_default_query}#########################################")
+        bt.logging.info(f"use_default_query: {self.use_default_query}#########################################")
         bt.logging.info(f"QueryGenerator initialized with use_default_query={self.use_default_query}")
     
     def validate_query_template(self, query_template: str) -> Tuple[bool, str]:
@@ -99,14 +99,15 @@ class QueryGenerator:
         # If use_default flag is True, skip LLM and use default template
         if use_default:
             bt.logging.info("Using default query template (skipping complex query generation)")
-            default_template = f"Give me 10 comma separated alternative spellings of the name {{name}}. Include 5 of them should sound similar to the original name and 5 should be orthographically similar. {rule_template} Provide only the names."
+            default_template = f"Give me {DEFAULT_VARIATION_COUNT} comma separated alternative spellings of the name {{name}}. Include 50% of them should Medium sound similar to the original name and 50% should be Medium orthographically similar. {rule_template} Provide only the names."
             labels = {
                 "variation_count": DEFAULT_VARIATION_COUNT,
                 "phonetic_similarity": {"Medium": 0.5},
                 "orthographic_similarity": {"Medium": 0.5},
                 "rule_based": rule_metadata
             }
-            bt.logging.info(f"Added rule-based request: {rule_template}")
+            
+            bt.logging.info(f"Use default query template: {default_template}")
             return default_template, labels
         
         # Format the similarity specifications for the prompt
@@ -137,7 +138,7 @@ class QueryGenerator:
         3. Format as a natural language request that explicitly states all requirements
         4. Include both the similarity requirements AND the rule-based transformation requirements in the query
         
-        Example format: "Generate {variation_count} variations of the name {{name}}, ensuring...and also include variations that {rule_template}"
+        Example format: "Generate {variation_count} variations of the name {{name}}, ensuring phonetic similarity: {phonetic_spec}, and orthographic similarity: {orthographic_spec}, and also include {rule_percentage}% of variations that follow: {rule_template}"
         """
 
         try:
@@ -154,20 +155,20 @@ class QueryGenerator:
                 bt.logging.warning(f"LLM generated invalid template: {error_msg}")
                 bt.logging.warning("Falling back to default template")
                 # Fall back to a simple, valid template that includes rule requirements
-                query_template = f"Generate {variation_count} comma-separated alternative spellings of the name {{name}}. Include a mix of phonetically similar and orthographically similar variations. {rule_template} Provide only the names."
+                query_template = f"Generate {variation_count} variations of the name {{name}}, ensuring phonetic similarity: {phonetic_spec}, and orthographic similarity: {orthographic_spec}, and also include {rule_percentage}% of variations that follow: {rule_template}."
                 # Validate the fallback template
                 is_valid, error_msg = self.validate_query_template(query_template)
                 if not is_valid:
                     raise ValueError(f"Fallback template validation failed: {error_msg}")
             
-            bt.logging.info(f"##########QQQQQQQQQQQ#####################Generated query template: {query_template}#########################################")
-            bt.logging.info(f"##########QQQQQQQQQQQ#####################Generated query labels: {labels}#########################################")
+            bt.logging.info(f"Generated query template: {query_template}")
+            bt.logging.info(f"Generated query labels: {labels}")
             return query_template, labels
             
         except Exception as e:
             bt.logging.error(f"Error generating complex query: {str(e)}")
             # Fallback to a simple query template and default labels
-            simple_template = f"Give me {variation_count} comma separated alternative spellings of the name {{name}}. Include a mix of phonetically similar and orthographically similar variations. {rule_template} Provide only the names."
+            simple_template = f"Generate {variation_count} variations of the name {{name}}, ensuring phonetic similarity: {phonetic_spec}, and orthographic similarity: {orthographic_spec}, and also include {rule_percentage}% of variations that follow: {rule_template}."
             # Validate the fallback template
             is_valid, error_msg = self.validate_query_template(simple_template)
             if not is_valid:
@@ -291,9 +292,9 @@ class QueryGenerator:
                         seed_names.append(name)
                         bt.logging.info(f"Generated single name: {name}")
             
-            bt.logging.info(f"#########################################Generated {len(seed_names)} test names: {seed_names}#########################################")
-            bt.logging.info(f"#########################################Query template: {query_template}#########################################")
-            bt.logging.info(f"#########################################Query labels: {query_labels}#########################################")
+            bt.logging.info(f"Generated {len(seed_names)} test names: {seed_names}")
+            bt.logging.info(f"Query template: {query_template}")
+            bt.logging.info(f"Query labels: {query_labels}")
             return seed_names, query_template, query_labels
             
         except Exception as e:
@@ -307,7 +308,7 @@ class QueryGenerator:
             # Generate rule-based template and metadata for fallback
             rule_template, rule_metadata = get_rule_template_and_metadata(self.rule_percentage)
             
-            query_template = f"Give me {variation_count} comma separated alternative spellings of the name {{name}}. Include 5 phonetically similar and 5 orthographically similar variations. {rule_template} Provide only the names."
+            query_template = f"Generate {variation_count} variations of the name {{name}}, ensuring phonetic similarity: {phonetic_config}, and orthographic similarity: {orthographic_config}, and also include {rule_percentage}% of variations that follow: {rule_template}."
             
             # Validate the fallback template
             is_valid, error_msg = self.validate_query_template(query_template)
@@ -342,7 +343,7 @@ class QueryGenerator:
                 if name not in seed_names:
                     seed_names.append(name)
             
-            bt.logging.info(f"#########################################Using fallback: {len(seed_names)} test names#########################################")
-            bt.logging.info(f"#########################################Query template: {query_template}#########################################")
-            bt.logging.info(f"#########################################Query labels: {query_labels}#########################################")
+            bt.logging.info(f"Using fallback: {len(seed_names)} test names")
+            bt.logging.info(f"Query template: {query_template}")
+            bt.logging.info(f"Query labels: {query_labels}")
             return seed_names, query_template, query_labels
