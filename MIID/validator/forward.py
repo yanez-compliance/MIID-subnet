@@ -422,9 +422,10 @@ async def forward(self):
         print(f"@@@@@@@@@@@@@@@@@@@@@@@@@@@Uploading data to: {MIID_SERVER}@@@@@@@@@@@@@@@@@@@@@@@@@@@")
         upload_data(MIID_SERVER, hotkey, results) 
         upload_success = True
-    except:
-        bt.logging.error("Uploading data failed")
-        pass
+        bt.logging.info("Data uploaded successfully to external server")
+    except Exception as e:
+        bt.logging.error(f"Uploading data failed: {str(e)}")
+        upload_success = False
     
     wandb_extra_data["upload_success"] = upload_success
 
@@ -436,18 +437,24 @@ async def forward(self):
         extra_data=wandb_extra_data # Pass additional context
     )
     
-    #Delete Json file then rundir and then validator_results dir
-    bt.logging.info(f"Deleting json file: {json_path}")
-    bt.logging.info(f"Deleting rundir: {run_dir}")
-    bt.logging.info(f"Deleting validator_results dir: {results_dir}")
-    try:
-        os.remove(json_path)
-        os.rmdir(run_dir)
-        os.rmdir(results_dir)
-    except Exception as e:
-        bt.logging.error(f"Error deleting files: {e}")
-        bt.logging.warning(f" You might want to delete these files manually: {json_path}, {run_dir}, {results_dir}")
-        pass
+    # Delete JSON file and directories ONLY after successful upload
+    if upload_success:
+        bt.logging.info(f"Upload successful. Cleaning up local files...")
+        bt.logging.info(f"Deleting json file: {json_path}")
+        bt.logging.info(f"Deleting rundir: {run_dir}")
+        bt.logging.info(f"Deleting validator_results dir: {results_dir}")
+        try:
+            os.remove(json_path)
+            os.rmdir(run_dir)
+            os.rmdir(results_dir)
+            bt.logging.info("Successfully cleaned up all local files")
+        except Exception as e:
+            bt.logging.error(f"Error deleting files: {e}")
+            bt.logging.warning(f"You might want to delete these files manually: {json_path}, {run_dir}, {results_dir}")
+    else:
+        bt.logging.warning("Upload failed. Keeping local files for debugging.")
+        bt.logging.info(f"JSON file preserved at: {json_path}")
+        bt.logging.info(f"Run directory preserved at: {run_dir}")
     
     # --- FINISH WANDB RUN AFTER EACH FORWARD PASS ---
     # Finish the wandb run after weights are set and logged (unless wandb is disabled)
