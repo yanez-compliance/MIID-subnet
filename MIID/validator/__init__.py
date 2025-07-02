@@ -1,4 +1,5 @@
 from .forward import forward
 from .reward import reward
 
-__version__ = "1.1.0"
+# Import version from main MIID package instead of hardcoding
+from MIID import __version__

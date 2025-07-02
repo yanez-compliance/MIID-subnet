@@ -52,6 +52,7 @@ from MIID.utils.uids import get_random_uids
 from MIID.utils.sign_message import sign_message
 from MIID.validator.query_generator import QueryGenerator
 
+
 # Import your new upload_data function here
 from MIID.utils.misc import upload_data
 
@@ -97,8 +98,8 @@ async def dendrite_with_retries(dendrite: bt.dendrite, axons: list, synapse: Ide
         new_axons = []
         
         for i, response in enumerate(responses):
-            bt.logging.info(f"#########################################Response {i}: {response}#########################################")
-            bt.logging.info(f"#########################################Response type: {type(response)}#########################################")
+            #bt.logging.info(f"#########################################Response {i}: {response}#########################################")
+            #bt.logging.info(f"#########################################Response type: {type(response)}#########################################")
             
             if isinstance(response, dict):
                 # Got the variations dictionary directly
@@ -165,14 +166,13 @@ async def forward(self):
         The result of the forward function from the MIID.validator module
     """
 
-    # --- REMOVE WANDB SETUP --- (Now handled in Validator.__init__ and new_wandb_run)
-    # wandb_run = wandb.init(...)
-    # --- END REMOVE WANDB SETUP ---
-
-    # Ensure we have a wandb run for this forward pass
-    if not self.wandb_run:
+    # --- CREATE NEW WANDB RUN FOR EACH FORWARD PASS ---
+    # Ensure we have a wandb run for this forward pass (unless wandb is disabled)
+    wandb_disabled = hasattr(self.config, 'wandb') and hasattr(self.config.wandb, 'disable') and self.config.wandb.disable
+    if not wandb_disabled:
         bt.logging.info("Creating new wandb run for this validation round")
         self.new_wandb_run()
+    # --- END WANDB SETUP ---
 
     request_start = time.time()
     
@@ -403,6 +403,8 @@ async def forward(self):
         #"json_results_path": json_path
     }
 
+    # logging the spec_version before setting weights
+    bt.logging.info(f"Spec version for setting weights: {self.spec_version}")
     self.set_weights()
 
     # 9) Upload to external endpoint (moved to a separate utils function)
@@ -420,9 +422,10 @@ async def forward(self):
         print(f"@@@@@@@@@@@@@@@@@@@@@@@@@@@Uploading data to: {MIID_SERVER}@@@@@@@@@@@@@@@@@@@@@@@@@@@")
         upload_data(MIID_SERVER, hotkey, results) 
         upload_success = True
-    except:
-        bt.logging.error("Uploading data failed")
-        pass
+        bt.logging.info("Data uploaded successfully to external server")
+    except Exception as e:
+        bt.logging.error(f"Uploading data failed: {str(e)}")
+        upload_success = False
     
     wandb_extra_data["upload_success"] = upload_success
 
@@ -434,11 +437,37 @@ async def forward(self):
         extra_data=wandb_extra_data # Pass additional context
     )
     
-    # Finish the wandb run after weights are set and logged
-    if self.wandb_run:
-        bt.logging.info("Finishing wandb run after setting weights")
-        self.wandb_run.finish()
-        self.wandb_run = None
+    # Delete JSON file and directories ONLY after successful upload
+    if upload_success:
+        bt.logging.info(f"Upload successful. Cleaning up local files...")
+        bt.logging.info(f"Deleting json file: {json_path}")
+        bt.logging.info(f"Deleting rundir: {run_dir}")
+        bt.logging.info(f"Deleting validator_results dir: {results_dir}")
+        try:
+            os.remove(json_path)
+            os.rmdir(run_dir)
+            os.rmdir(results_dir)
+            bt.logging.info("Successfully cleaned up all local files")
+        except Exception as e:
+            bt.logging.error(f"Error deleting files: {e}")
+            bt.logging.warning(f"You might want to delete these files manually: {json_path}, {run_dir}, {results_dir}")
+    else:
+        bt.logging.warning("Upload failed. Keeping local files for debugging.")
+        bt.logging.warning("You might want to reach out to the MIID team to add your hotkey to the allowlist.")
+        bt.logging.info(f"JSON file preserved at: {json_path}")
+        bt.logging.info(f"Run directory preserved at: {run_dir}")
+    
+    # --- FINISH WANDB RUN AFTER EACH FORWARD PASS ---
+    # Finish the wandb run after weights are set and logged (unless wandb is disabled)
+    if self.wandb_run and not wandb_disabled:
+        bt.logging.info("Finishing wandb run after completing validation cycle")
+        try:
+            self.wandb_run.finish()
+        except Exception as e:
+            bt.logging.error(f"Error finishing wandb run: {e}")
+        finally:
+            self.wandb_run = None
+    # --- END WANDB FINISH ---
     
     # 10) Set weights and enforce min epoch time
     
@@ -450,6 +479,4 @@ async def forward(self):
     bt.logging.info("All batches processed, waiting 30 more seconds...")
     await asyncio.sleep(5)
 
-    # --- REMOVE WANDB FINISH --- (Now handled in new_wandb_run)
-    # wandb_run.finish()
     return True

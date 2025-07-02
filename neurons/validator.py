@@ -52,7 +52,7 @@ from dotenv import load_dotenv
 
 # Load environment variables from .env file (e.g., vali.env)
 # This will load WANDB_API_KEY if set in the file
-load_dotenv(dotenv_path=os.path.join(os.getcwd(), 'vali.env')) 
+load_dotenv(dotenv_path=os.path.join(os.getcwd(), 'vali.env')) # it has the WANDB_API_KEY
 # You might need to adjust the path if your .env file is elsewhere
 
 # Remove offline mode
@@ -75,8 +75,6 @@ from MIID.validator.reward import get_name_variation_rewards
 import ollama
 from MIID.validator.query_generator import QueryGenerator
 
-# Define version (replace with actual version logic if available)
-__version__ = "1.1.0"
 
 class Validator(BaseValidatorNeuron):
     """
@@ -103,7 +101,7 @@ class Validator(BaseValidatorNeuron):
     # it is recommended to use llama3.1:latest for the validator
     # but you can try other models and see which one performs better for your use case
     
-    DEFAULT_LLM_MODEL = "llama3.1:latest"
+    DEFAULT_LLM_MODEL = "llama3.1:latest" # llama3.1:latest is the default model for the validator
 
     def __init__(self, config=None):
         """
@@ -143,7 +141,12 @@ class Validator(BaseValidatorNeuron):
         # Initialize wandb run
         self.step = 0
         self.wandb_run = None # Initialize wandb_run as None
-        self.new_wandb_run() # Start the first wandb run
+        
+        # Check if wandb is disabled via config
+        if hasattr(self.config, 'wandb') and hasattr(self.config.wandb, 'disable') and self.config.wandb.disable:
+            bt.logging.info("Wandb is disabled via config. Skipping wandb initialization.")
+        # else:
+        #     self.new_wandb_run() # Start the first wandb run - REMOVED: Each forward pass will create its own run
 
         # Initialize Ollama with the same approach as in miner.py
         if hasattr(self.config, 'neuron') and hasattr(self.config.neuron, 'ollama_model_name'):
@@ -190,13 +193,25 @@ class Validator(BaseValidatorNeuron):
 
     def new_wandb_run(self):
         """Creates a new wandb run to save information to."""
+        # Check if wandb is disabled
+        if hasattr(self.config, 'wandb') and hasattr(self.config.wandb, 'disable') and self.config.wandb.disable:
+            bt.logging.debug("Wandb is disabled. Skipping run creation.")
+            self.wandb_run = None
+            return
+        
         # Create a unique run id for this run.
         run_id = dt.datetime.utcnow().strftime("%Y-%m-%d_%H-%M-%S")
 
         wandb_name = "validator-" + str(self.uid) + "-" + run_id
         # Make sure to finish the previous run if it exists
         if self.wandb_run:
-            self.wandb_run.finish()
+            try:
+                bt.logging.info("Finishing previous wandb run before creating new one")
+                self.wandb_run.finish()
+            except Exception as e:
+                bt.logging.error(f"Error finishing previous wandb run: {e}")
+            finally:
+                self.wandb_run = None
 
         try:
             # Create the wandb run with connection to servers
@@ -204,7 +219,7 @@ class Validator(BaseValidatorNeuron):
                 name=wandb_name,
                 project=self.config.wandb.project_name,
                 entity=self.config.wandb.entity,
-                tags=["validation", "subnet54", "automated"],
+                tags=["validation", "subnet54", "automated", "per-forward-pass"],
                 group="neuron-validation-batch",
                 job_type="validation",
                 # Use anonymous="allow" instead of "must" to prefer API key auth when available
@@ -213,18 +228,18 @@ class Validator(BaseValidatorNeuron):
                     "uid": self.uid,
                     "hotkey": self.wallet.hotkey.ss58_address,
                     "run_name": run_id,
-                    "version": __version__,
+                    "version": self.spec_version,
                     # Add other relevant config from self.config
-                    #"sample_size": getattr(self.config.neuron, 'sample_size', None),
-                    #"batch_size": getattr(self.config.neuron, 'batch_size', None),
-                    #"timeout": getattr(self.config.neuron, 'timeout', None),
+                    "sample_size": getattr(self.config.neuron, 'sample_size', None),
+                    "batch_size": getattr(self.config.neuron, 'batch_size', None),
+                    "timeout": getattr(self.config.neuron, 'timeout', None),
                     #"logging_dir": getattr(self.config.logging, 'logging_dir', None),
                 },
                 allow_val_change=True,
                 reinit=True # Allows reinitializing runs, useful with max_run_steps config
             )
 
-            bt.logging.info(f"Started new wandb run: {wandb_name}")
+            bt.logging.info(f"Started new wandb run for forward pass: {wandb_name}")
             
             # Check if we're connected to the wandb servers
             if wandb.run and hasattr(wandb.run, 'mode') and wandb.run.mode == "online":
@@ -249,13 +264,16 @@ class Validator(BaseValidatorNeuron):
             extra_data=None # Optional dict for additional data from forward
     ):
         """Logs data for the current step to wandb, creating a new run if needed."""
+        # Check if wandb is disabled
+        if hasattr(self.config, 'wandb') and hasattr(self.config.wandb, 'disable') and self.config.wandb.disable:
+            bt.logging.debug("Wandb is disabled. Skipping log_step.")
+            return
+        
         # Check if wandb run is initialized
         if not self.wandb_run:
             bt.logging.warning("wandb_run not initialized. Skipping log_step.")
-            self.new_wandb_run() # Attempt to start a new run
-            if not self.wandb_run: # If still not initialized, return
-                 bt.logging.error("Failed to initialize wandb run in log_step.")
-                 return
+            # REMOVED: No longer create new runs here - each forward pass manages its own run
+            return
 
         # Increment step count
         self.step += 1
@@ -367,4 +385,4 @@ if __name__ == "__main__":
     with Validator() as validator:
         while True:
             bt.logging.info(f"----------------------------------Name Variation Validator running... {time.time()}")
-            time.sleep(60)
+            time.sleep(5)

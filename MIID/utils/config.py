@@ -1,6 +1,8 @@
 # The MIT License (MIT)
 # Copyright © 2023 Yuma Rao
 # Copyright © 2023 Opentensor Foundation
+# TODO(developer): YANEZ - MIID Team
+# Copyright © 2025 YANEZ
 
 # Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated
 # documentation files (the "Software"), to deal in the Software without restriction, including without limitation
@@ -225,14 +227,14 @@ def add_validator_args(cls, parser):
         "--neuron.sample_size",
         type=int,
         help="The number of miners to query in a single step.",
-        default=50,
+        default=100,# MIID: 50 miners we want to query in a single step change to 100
     )
 
     parser.add_argument(
         "--neuron.batch_size",
         type=int,
         help="The number of miners to query in a single batch.",
-        default=5,
+        default=10, # MIID: 5 miners we want to query in a single batch change to 10
     )
 
     parser.add_argument(
@@ -270,8 +272,7 @@ def add_validator_args(cls, parser):
         "--wandb.project_name",
         type=str,
         help="The name of the project where you are sending the new run.",
-        #default="MIID"  # for project_name
-        default="subnet322-test"
+        default="subnet322-test"  # for project_name MIID for mainnet and subnet322-test for testnet
     )
     parser.add_argument(
         "--seed_names.sample_size",
@@ -283,13 +284,19 @@ def add_validator_args(cls, parser):
         "--wandb.entity",
         type=str,
         help="The name of the project where you are sending the new run.",
-        default="MIID-dev-test"
+        default="MIID-dev-test" # MIID: change to MIID-dev-test
     )
     parser.add_argument(
         "--wandb.max_run_steps",
         type=int,
         help="The maximum number of steps per wandb run before creating a new run.",
         default=1
+    )
+    parser.add_argument(
+        "--wandb.disable",
+        action="store_true",
+        help="Disable wandb logging entirely. Useful for debugging or when wandb is unavailable.",
+        default=False,
     )
     parser.add_argument(
             "--neuron.ollama_url",
@@ -307,7 +314,7 @@ def add_validator_args(cls, parser):
         "--neuron.ollama_request_timeout",
         type=int,
         help="Timeout for the Ollama request in seconds.",
-        default=60,
+        default=90, # MIID: 60 seconds is the default timeout to wait for a response from the Ollama server change to 90 seconds
     )
 
 
