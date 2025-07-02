@@ -138,12 +138,11 @@ def upload_data(endpoint_base: str, hotkey: str, payload: dict):
     try:
         response = requests.post(full_url, json=payload)
         if response.status_code == 200:
-            bt.logging.info(f"Successfully uploaded data. Server response: {response.json()}")
-            #print(f"Successfully uploaded data. Server response: {response.json()}@@@@@@@@@@@@@@@@@@@@@@@@@@@")
+            bt.logging.info(f"Successfully uploaded data. Server response.")
+            # print(f"Successfully uploaded data. Server response: {response.json()}@@@@@@@@@@@@@@@@@@@@@@@@@@@")
         else:
             bt.logging.error(
-                f"Failed to upload data. Status code: {response.status_code}, "
-                f"Response: {response.text}"
+                f"Failed to upload data. Status code: {response.status_code})"
             )
             #print(f"Failed to upload data. Status code: {response.status_code}, "
             #    f"Response: {response.text}@@@@@@@@@@@@@@@@@@@@@@@@@@@")
