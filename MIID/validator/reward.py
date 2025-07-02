@@ -750,7 +750,7 @@ def get_name_variation_rewards(
         
         #bt.logging.info(f"Miner {uid} final Score: {rewards[i]}")
         #bt.logging.info(f"Miner {uid} penalties: {miner_metrics['penalties']}")
-        bt.logging.info(f"Miner {uid} rule compliance: {miner_metrics['rule_compliance']["overall_score"]}")
+        bt.logging.info(f"Miner {uid} rule compliance: {miner_metrics['rule_compliance']['overall_score']}")
         bt.logging.info(f"Miner {uid} Base quality scores: {quality_scores}")
         bt.logging.info(f"Miner {uid} average quality: {miner_metrics['average_quality']}")
         bt.logging.info(f"Miner {uid} completeness multiplier: {miner_metrics['completeness_multiplier']}")
