@@ -121,9 +121,9 @@ def calculate_part_score(
     expected_count: int
 ) -> Tuple[float, Dict]:
     """Calculate score and detailed metrics for a single part (first or last name)"""
-    bt.logging.info(f"\nCalculating part score for: {original_part}")
-    bt.logging.info(f"Number of variations: {len(variations)}")
-    bt.logging.info(f"Expected count: {expected_count}")
+    # bt.logging.info(f"\nCalculating part score for: {original_part}")
+    # bt.logging.info(f"Number of variations: {len(variations)}")
+    # bt.logging.info(f"Expected count: {expected_count}")
     
     if not variations:
         bt.logging.warning("No variations provided")
@@ -155,18 +155,18 @@ def calculate_part_score(
     
     if lower_bound <= actual_count <= upper_bound:
         count_score = 1.0
-        bt.logging.info(f"Count score: 1.0 (within tolerance range: {lower_bound:.1f}-{upper_bound:.1f})")
+        #bt.logging.info(f"Count score: 1.0 (within tolerance range: {lower_bound:.1f}-{upper_bound:.1f})")
     else:
         if actual_count < lower_bound:
             deviation = lower_bound - actual_count
-            bt.logging.warning(f"Too few variations: {actual_count} < {lower_bound:.1f}")
+            #bt.logging.warning(f"Too few variations: {actual_count} < {lower_bound:.1f}")
         else:
             deviation = actual_count - upper_bound
-            bt.logging.warning(f"Too many variations: {actual_count} > {upper_bound:.1f}")
+            #bt.logging.warning(f"Too many variations: {actual_count} > {upper_bound:.1f}")
         
         # Smoother penalty curve using exponential decay
         count_score = math.exp(-deviation / expected_count)
-        bt.logging.info(f"Count score: {count_score:.3f} (penalty for deviation: {deviation})")
+        #bt.logging.info(f"Count score: {count_score:.3f} (penalty for deviation: {deviation})")
     
     # 2. Enhanced uniqueness check with similarity clustering
     unique_variations = []
@@ -180,16 +180,16 @@ def calculate_part_score(
             )
             if combined_similarity > 0.99:  # Very high similarity threshold
                 is_unique = False
-                bt.logging.warning(f"Variation '{var}' is too similar to existing variation '{unique_var}'")
+                #bt.logging.warning(f"Variation '{var}' is too similar to existing variation '{unique_var}'")
                 break
         if is_unique:
             unique_variations.append(var)
     
     uniqueness_score = len(unique_variations) / len(variations) if variations else 0
-    if uniqueness_score < 1.0:
-        bt.logging.warning(f"Found similar variations. Uniqueness score: {uniqueness_score:.3f}")
-    else:
-        bt.logging.info("All variations are sufficiently unique. Uniqueness score: 1.0")
+    # if uniqueness_score < 1.0:
+    #     bt.logging.warning(f"Found similar variations. Uniqueness score: {uniqueness_score:.3f}")
+    # else:
+        #bt.logging.info("All variations are sufficiently unique. Uniqueness score: 1.0")
     
     # 3. Improved length reasonableness with adaptive thresholds
     length_scores = []
@@ -208,14 +208,14 @@ def calculate_part_score(
         length_score = length_ratio * (1.0 - min(1.0, absolute_diff / original_len))
         length_scores.append(length_score)
         
-        if length_score < min_ratio:
-            bt.logging.warning(
-                f"Variation '{var}' (len={var_len}) has poor length score {length_score:.3f} "
-                f"compared to original '{original_part}' (len={original_len})"
-            )
+        # if length_score < min_ratio:
+        #     bt.logging.warning(
+        #         f"Variation '{var}' (len={var_len}) has poor length score {length_score:.3f} "
+        #         f"compared to original '{original_part}' (len={original_len})"
+        #     )
     
     length_score = sum(length_scores) / len(length_scores) if length_scores else 0
-    bt.logging.info(f"Average length score: {length_score:.3f}")
+    #bt.logging.info(f"Average length score: {length_score:.3f}")
     
     # Calculate similarity scores with improved distribution analysis
     phonetic_scores = []
@@ -288,10 +288,10 @@ def calculate_part_score(
     # If similarity is very low, severely reduce the score
     min_similarity_threshold = 0.2
     if similarity_score < min_similarity_threshold:
-        bt.logging.warning(f"Very low similarity score ({similarity_score:.3f}) detected - applying penalty")
+        #bt.logging.warning(f"Very low similarity score ({similarity_score:.3f}) detected - applying penalty")
         # Penalize low similarity scores
         similarity_score *= 0.1  # Keep only 10% of the similarity score
-        bt.logging.warning(f"Adjusted similarity score: {similarity_score:.3f}")
+        #bt.logging.warning(f"Adjusted similarity score: {similarity_score:.3f}")
     #########################################################
     ### move this to config file
     # Calculate final quality score with all factors - updated weights from analysis
@@ -309,15 +309,15 @@ def calculate_part_score(
     )
     
     # Detailed logging of final score components
-    bt.logging.info(f"\nFinal score breakdown for '{original_part}':")
-    bt.logging.info(f"  - Similarity ({similarity_weight*100:.0f}%):")
-    bt.logging.info(f"    * Phonetic: {phonetic_quality:.3f}")
-    bt.logging.info(f"    * Orthographic: {orthographic_quality:.3f}")
-    bt.logging.info(f"    * Combined: {similarity_score:.3f}")
-    bt.logging.info(f"  - Count ({count_weight*100:.0f}%): {count_score:.3f}")
-    bt.logging.info(f"  - Uniqueness ({uniqueness_weight*100:.0f}%): {uniqueness_score:.3f}")
-    bt.logging.info(f"  - Length ({length_weight*100:.0f}%): {length_score:.3f}")
-    bt.logging.info(f"  - Total score: {final_score:.3f}")
+    # bt.logging.info(f"\nFinal score breakdown for '{original_part}':")
+    # bt.logging.info(f"  - Similarity ({similarity_weight*100:.0f}%):")
+    # bt.logging.info(f"    * Phonetic: {phonetic_quality:.3f}")
+    # bt.logging.info(f"    * Orthographic: {orthographic_quality:.3f}")
+    # bt.logging.info(f"    * Combined: {similarity_score:.3f}")
+    # bt.logging.info(f"  - Count ({count_weight*100:.0f}%): {count_score:.3f}")
+    # bt.logging.info(f"  - Uniqueness ({uniqueness_weight*100:.0f}%): {uniqueness_score:.3f}")
+    # bt.logging.info(f"  - Length ({length_weight*100:.0f}%): {length_score:.3f}")
+    # bt.logging.info(f"  - Total score: {final_score:.3f}")
     
     if final_score == 0:
         bt.logging.warning(f"Zero score for '{original_part}'. Possible reasons:")
@@ -418,7 +418,7 @@ def calculate_variation_quality(
     else:
         first_name = name_parts[0]
         last_name = name_parts[-1]
-        bt.logging.info(f"Using first name: '{first_name}', last name: '{last_name}'")
+        #bt.logging.info(f"Using first name: '{first_name}', last name: '{last_name}'")
     
     # Process variations for both first and last names
     first_name_variations = []
@@ -442,12 +442,12 @@ def calculate_variation_quality(
         else:
             bt.logging.warning(f"Empty variation found for '{original_name}'")
     
-    bt.logging.info(f"First name variations: {len(first_name_variations)}")
-    if last_name:
-        bt.logging.info(f"Last name variations: {len(last_name_variations)}")
+    #bt.logging.info(f"First name variations: {len(first_name_variations)}")
+    # if last_name:
+    #     bt.logging.info(f"Last name variations: {len(last_name_variations)}")
     
     # Calculate score for first name
-    bt.logging.info("\nCalculating first name score:")
+    #bt.logging.info("\nCalculating first name score:")
     first_name_score, first_metrics = calculate_part_score(
         first_name,
         first_name_variations,
@@ -460,7 +460,7 @@ def calculate_variation_quality(
     last_name_score = 0.0
     last_metrics = {}
     if last_name:
-        bt.logging.info("\nCalculating last name score:")
+        #bt.logging.info("\nCalculating last name score:")
         last_name_score, last_metrics = calculate_part_score(
             last_name,
             last_name_variations,
@@ -534,14 +534,14 @@ def calculate_variation_quality(
             "metrics": rule_compliance_metrics
         }
 
-    bt.logging.info(f"\nFinal score breakdown for '{original_name}':")
-    bt.logging.info(f"  - First name score: {first_name_score:.3f}")
-    if last_name:
-        bt.logging.info(f"  - Last name score: {last_name_score:.3f}")
-    bt.logging.info(f"  - Base similarity score: {base_score:.3f}")
-    if rule_based:
-        bt.logging.info(f"  - Rule compliance score: {rule_compliance_score:.3f} (weight: {rule_compliance_weight:.2f})")
-    bt.logging.info(f"  - Final score: {final_score:.3f}")
+    # bt.logging.info(f"\nFinal score breakdown for '{original_name}':")
+    # bt.logging.info(f"  - First name score: {first_name_score:.3f}")
+    # if last_name:
+    #     bt.logging.info(f"  - Last name score: {last_name_score:.3f}")
+    # bt.logging.info(f"  - Base similarity score: {base_score:.3f}")
+    # if rule_based:
+    #     bt.logging.info(f"  - Rule compliance score: {rule_compliance_score:.3f} (weight: {rule_compliance_weight:.2f})")
+    # bt.logging.info(f"  - Final score: {final_score:.3f}")
     
     if final_score == 0:
         bt.logging.warning(f"Zero final score for '{original_name}'. Possible reasons:")
@@ -611,21 +611,7 @@ def get_name_variation_rewards(
         "Far": (0.2, 0.5)     # Low similarity range
     }
     
-    # Generate a unique run ID
-    run_id = f"run_{int(time.time())}"
-    
-    # # Save variations to CSV
-    # try:
-    #     save_variations_to_csv(
-    #         self,
-    #         seed_names,
-    #         responses,
-    #         uids,
-    #         run_id
-    #     )
-    # except Exception as e:
-    #     bt.logging.error(f"Error calling save_variations_to_csv: {str(e)}")
-    #     traceback.print_exc()
+    # Run ID is now managed at the forward pass level, not in reward function
     
     rewards = np.zeros(len(responses))
     detailed_metrics = []  # Store detailed metrics for each miner
@@ -762,166 +748,17 @@ def get_name_variation_rewards(
             miner_metrics["average_quality"] = 0.0
             miner_metrics["final_reward"] = 0.0
         
-        bt.logging.info(f"Miner {uid} final reward: {rewards[i]}")
+        #bt.logging.info(f"Miner {uid} final Score: {rewards[i]}")
+        #bt.logging.info(f"Miner {uid} penalties: {miner_metrics['penalties']}")
+        bt.logging.info(f"Miner {uid} rule compliance: {miner_metrics['rule_compliance']}")
+        bt.logging.info(f"Miner {uid} Base quality scores: {quality_scores}")
         bt.logging.info(f"Miner {uid} average quality: {miner_metrics['average_quality']}")
-        bt.logging.info(f"Miner {uid} final reward: {miner_metrics['final_reward']}")
+        bt.logging.info(f"Miner {uid} completeness multiplier: {miner_metrics['completeness_multiplier']}")
+        bt.logging.info(f"Miner {uid} final Score: {miner_metrics['final_reward']}")
         detailed_metrics.append(miner_metrics)
         
     return rewards, detailed_metrics
 
-
-def save_variations_to_csv(
-    self,
-    seed_names: List[str],
-    responses: List,
-    uids: List[int],
-    run_id: str
-):
-    """
-    Save name variations from miners to a CSV file.
-    
-    Args:
-        self: The validator object
-        seed_names: Original names that variations were generated for
-        responses: List of response objects from miners
-        uids: List of UIDs corresponding to responses
-        run_id: Unique identifier for this validation run
-    """
-    try:
-        # Determine the database directory with fallbacks
-        database_dir = None
-        
-        # Try to use logging_dir from config if it exists
-        try:
-            if hasattr(self, 'config') and hasattr(self.config, 'logging') and hasattr(self.config.logging, 'logging_dir'):
-                base_dir = self.config.logging.logging_dir
-                database_dir = os.path.join(base_dir, "Database")
-                bt.logging.info(f"Using config logging directory: {base_dir}")
-        except Exception as e:
-            bt.logging.warning(f"Could not access config.logging.logging_dir: {str(e)}")
-        
-        # Fallback 1: Use current working directory
-        if not database_dir:
-            database_dir = os.path.join(os.getcwd(), "Database")
-            bt.logging.info(f"Using current working directory fallback: {os.getcwd()}")
-        
-        # Create directory
-        os.makedirs(database_dir, exist_ok=True)
-        
-        # Test if directory is writable
-        if not os.access(database_dir, os.W_OK):
-            # Fallback 2: Use home directory if current dir is not writable
-            home_dir = os.path.expanduser("~")
-            database_dir = os.path.join(home_dir, "Database")
-            os.makedirs(database_dir, exist_ok=True)
-            bt.logging.info(f"Using home directory fallback: {database_dir}")
-            
-            # Final check if this is writable
-            if not os.access(database_dir, os.W_OK):
-                bt.logging.error(f"Cannot write to any database directory. Aborting CSV save.")
-                return
-        
-        # Create or append to the CSV file
-        timestamp = int(time.time())
-        csv_filename = os.path.join(database_dir, f"name_variations_log.csv")
-        
-        bt.logging.info(f"Saving variations to CSV file: {csv_filename}")
-        
-        # Check if file exists to decide whether to write headers
-        file_exists = os.path.isfile(csv_filename)
-        
-        # Debug information to validate if responses have variations
-        variation_count_per_miner = {}
-        for i, (response, uid) in enumerate(zip(responses, uids)):
-            if hasattr(response, 'variations') and response.variations:
-                count = sum(len(variations) for variations in response.variations.values())
-                variation_count_per_miner[uid] = count
-            else:
-                variation_count_per_miner[uid] = 0
-        
-        bt.logging.info(f"Variation counts by miner: {variation_count_per_miner}")
-        
-        # Prepare CSV file for logging variations with expanded fields for first/last name
-        with open(csv_filename, 'a', newline='', encoding='utf-8') as csvfile:
-            fieldnames = [
-                'timestamp', 'run_id', 
-                'seed_name', 'seed_first_name', 'seed_last_name',
-                'variation', 'variation_first_name', 'variation_last_name',
-                'miner_uid', 
-                'phonetic_score_first', 'phonetic_score_last',
-                'orthographic_score_first', 'orthographic_score_last'
-            ]
-            writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
-            
-            # Write header only if the file is new
-            if not file_exists:
-                writer.writeheader()
-                bt.logging.info(f"Created new CSV file with headers")
-            
-            variation_count = 0
-            # Process each miner's response
-            for response, uid in zip(responses, uids):
-                if not hasattr(response, 'variations') or not response.variations:
-                    bt.logging.warning(f"Miner {uid} returned invalid or empty response")
-                    continue
-                    
-                variations = response.variations
-                
-                # Process each seed name
-                for name in seed_names:
-                    if name not in variations or not variations[name]:
-                        bt.logging.warning(f"Miner {uid} did not provide variations for '{name}'")
-                        continue
-                    
-                    # Split seed name into first and last
-                    seed_parts = name.split()
-                    seed_first = seed_parts[0] if seed_parts else name
-                    seed_last = seed_parts[-1] if len(seed_parts) > 1 else None
-                    
-                    # Get variations for this name
-                    name_variations = variations[name]
-                    
-                    # Log individual scores for each variation
-                    for variation in name_variations:
-                        # Split variation into first and last
-                        var_parts = variation.split()
-                        var_first = var_parts[0] if var_parts else variation
-                        var_last = var_parts[-1] if len(var_parts) > 1 else None
-                        
-                        # Calculate scores for first name
-                        phonetic_first = calculate_phonetic_similarity(seed_first, var_first)
-                        orthographic_first = calculate_orthographic_similarity(seed_first, var_first)
-                        
-                        # Calculate scores for last name if available
-                        phonetic_last = 0.0
-                        orthographic_last = 0.0
-                        if seed_last and var_last:
-                            phonetic_last = calculate_phonetic_similarity(seed_last, var_last)
-                            orthographic_last = calculate_orthographic_similarity(seed_last, var_last)
-                        
-                        # Log to CSV
-                        writer.writerow({
-                            'timestamp': timestamp,
-                            'run_id': run_id,
-                            'seed_name': name,
-                            'seed_first_name': seed_first,
-                            'seed_last_name': seed_last if seed_last else '',
-                            'variation': variation,
-                            'variation_first_name': var_first,
-                            'variation_last_name': var_last if var_last else '',
-                            'miner_uid': uid,
-                            'phonetic_score_first': phonetic_first,
-                            'phonetic_score_last': phonetic_last,
-                            'orthographic_score_first': orthographic_first,
-                            'orthographic_score_last': orthographic_last
-                        })
-                        variation_count += 1
-        
-        bt.logging.info(f"Successfully saved {variation_count} variations to {csv_filename}")
-        
-    except Exception as e:
-        bt.logging.error(f"Error saving variations to CSV: {str(e)}")
-        traceback.print_exc()
 
 def calculate_rule_compliance_score(
     original_name: str,
