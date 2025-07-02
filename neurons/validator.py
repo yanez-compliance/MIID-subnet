@@ -145,8 +145,8 @@ class Validator(BaseValidatorNeuron):
         # Check if wandb is disabled via config
         if hasattr(self.config, 'wandb') and hasattr(self.config.wandb, 'disable') and self.config.wandb.disable:
             bt.logging.info("Wandb is disabled via config. Skipping wandb initialization.")
-        else:
-            self.new_wandb_run() # Start the first wandb run
+        # else:
+        #     self.new_wandb_run() # Start the first wandb run - REMOVED: Each forward pass will create its own run
 
         # Initialize Ollama with the same approach as in miner.py
         if hasattr(self.config, 'neuron') and hasattr(self.config.neuron, 'ollama_model_name'):
@@ -206,6 +206,7 @@ class Validator(BaseValidatorNeuron):
         # Make sure to finish the previous run if it exists
         if self.wandb_run:
             try:
+                bt.logging.info("Finishing previous wandb run before creating new one")
                 self.wandb_run.finish()
             except Exception as e:
                 bt.logging.error(f"Error finishing previous wandb run: {e}")
@@ -218,7 +219,7 @@ class Validator(BaseValidatorNeuron):
                 name=wandb_name,
                 project=self.config.wandb.project_name,
                 entity=self.config.wandb.entity,
-                tags=["validation", "subnet54", "automated"],
+                tags=["validation", "subnet54", "automated", "per-forward-pass"],
                 group="neuron-validation-batch",
                 job_type="validation",
                 # Use anonymous="allow" instead of "must" to prefer API key auth when available
@@ -238,7 +239,7 @@ class Validator(BaseValidatorNeuron):
                 reinit=True # Allows reinitializing runs, useful with max_run_steps config
             )
 
-            bt.logging.info(f"Started new wandb run: {wandb_name}")
+            bt.logging.info(f"Started new wandb run for forward pass: {wandb_name}")
             
             # Check if we're connected to the wandb servers
             if wandb.run and hasattr(wandb.run, 'mode') and wandb.run.mode == "online":
@@ -271,10 +272,8 @@ class Validator(BaseValidatorNeuron):
         # Check if wandb run is initialized
         if not self.wandb_run:
             bt.logging.warning("wandb_run not initialized. Skipping log_step.")
-            self.new_wandb_run() # Attempt to start a new run
-            if not self.wandb_run: # If still not initialized, return
-                 bt.logging.error("Failed to initialize wandb run in log_step.")
-                 return
+            # REMOVED: No longer create new runs here - each forward pass manages its own run
+            return
 
         # Increment step count
         self.step += 1

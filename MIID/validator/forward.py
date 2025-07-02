@@ -166,15 +166,13 @@ async def forward(self):
         The result of the forward function from the MIID.validator module
     """
 
-    # --- REMOVE WANDB SETUP --- (Now handled in Validator.__init__ and new_wandb_run)
-    # wandb_run = wandb.init(...)
-    # --- END REMOVE WANDB SETUP ---
-
+    # --- CREATE NEW WANDB RUN FOR EACH FORWARD PASS ---
     # Ensure we have a wandb run for this forward pass (unless wandb is disabled)
     wandb_disabled = hasattr(self.config, 'wandb') and hasattr(self.config.wandb, 'disable') and self.config.wandb.disable
-    if not wandb_disabled and not self.wandb_run:
+    if not wandb_disabled:
         bt.logging.info("Creating new wandb run for this validation round")
         self.new_wandb_run()
+    # --- END WANDB SETUP ---
 
     request_start = time.time()
     
@@ -438,15 +436,30 @@ async def forward(self):
         extra_data=wandb_extra_data # Pass additional context
     )
     
+    #Delete Json file then rundir and then validator_results dir
+    bt.logging.info(f"Deleting json file: {json_path}")
+    bt.logging.info(f"Deleting rundir: {run_dir}")
+    bt.logging.info(f"Deleting validator_results dir: {results_dir}")
+    try:
+        os.remove(json_path)
+        os.rmdir(run_dir)
+        os.rmdir(results_dir)
+    except Exception as e:
+        bt.logging.error(f"Error deleting files: {e}")
+        bt.logging.warning(f" You might want to delete these files manually: {json_path}, {run_dir}, {results_dir}")
+        pass
+    
+    # --- FINISH WANDB RUN AFTER EACH FORWARD PASS ---
     # Finish the wandb run after weights are set and logged (unless wandb is disabled)
     if self.wandb_run and not wandb_disabled:
-        bt.logging.info("Finishing wandb run after setting weights")
+        bt.logging.info("Finishing wandb run after completing validation cycle")
         try:
             self.wandb_run.finish()
         except Exception as e:
             bt.logging.error(f"Error finishing wandb run: {e}")
         finally:
             self.wandb_run = None
+    # --- END WANDB FINISH ---
     
     # 10) Set weights and enforce min epoch time
     
@@ -458,6 +471,4 @@ async def forward(self):
     bt.logging.info("All batches processed, waiting 30 more seconds...")
     await asyncio.sleep(5)
 
-    # --- REMOVE WANDB FINISH --- (Now handled in new_wandb_run)
-    # wandb_run.finish()
     return True

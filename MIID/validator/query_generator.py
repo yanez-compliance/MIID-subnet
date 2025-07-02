@@ -98,7 +98,7 @@ class QueryGenerator:
         
         # If use_default flag is True, skip LLM and use default template
         if use_default:
-            bt.logging.info("Using default query template (skipping complex query generation)")
+            bt.logging.warning("Using default query template (skipping complex query generation)")
             default_template = f"Give me {DEFAULT_VARIATION_COUNT} comma separated alternative spellings of the name {{name}}. Include 50% of them should Medium sound similar to the original name and 50% should be Medium orthographically similar. {rule_template} Provide only the names."
             labels = {
                 "variation_count": DEFAULT_VARIATION_COUNT,
@@ -107,7 +107,7 @@ class QueryGenerator:
                 "rule_based": rule_metadata
             }
             
-            bt.logging.info(f"Use default query template: {default_template}")
+            bt.logging.warning(f"Use default query template: {default_template}")
             return default_template, labels
         
         # Format the similarity specifications for the prompt
@@ -161,8 +161,8 @@ class QueryGenerator:
                 if not is_valid:
                     raise ValueError(f"Fallback template validation failed: {error_msg}")
             
-            bt.logging.info(f"Generated query template: {query_template}")
-            bt.logging.info(f"Generated query labels: {labels}")
+            bt.logging.warning(f"Generated query template: {query_template}")
+            bt.logging.warning(f"Generated query labels: {labels}")
             return query_template, labels
             
         except Exception as e:
