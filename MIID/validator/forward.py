@@ -453,6 +453,7 @@ async def forward(self):
             bt.logging.warning(f"You might want to delete these files manually: {json_path}, {run_dir}, {results_dir}")
     else:
         bt.logging.warning("Upload failed. Keeping local files for debugging.")
+        bt.logging.warning("You might want to reach out to the MIID team to add your hotkey to the allowlist.")
         bt.logging.info(f"JSON file preserved at: {json_path}")
         bt.logging.info(f"Run directory preserved at: {run_dir}")
     
