@@ -99,7 +99,8 @@ class QueryGenerator:
         # If use_default flag is True, skip LLM and use default template
         if use_default:
             bt.logging.warning("Using default query template (skipping complex query generation)")
-            default_template = f"Give me {DEFAULT_VARIATION_COUNT} comma separated alternative spellings of the name {{name}}. Include 50% of them should Medium sound similar to the original name and 50% should be Medium orthographically similar. {rule_template} Provide only the names."
+            clarifying_prefix = "The following name is the seed name to generate variations for: {name}. "
+            default_template = f"{clarifying_prefix}Give me {DEFAULT_VARIATION_COUNT} comma separated alternative spellings of the name {{name}}. Include 50% of them should Medium sound similar to the original name and 50% should be Medium orthographically similar. {rule_template} Provide only the names."
             labels = {
                 "variation_count": DEFAULT_VARIATION_COUNT,
                 "phonetic_similarity": {"Medium": 0.5},
@@ -153,13 +154,31 @@ class QueryGenerator:
             is_valid, error_msg = self.validate_query_template(query_template)
             if not is_valid:
                 bt.logging.warning(f"LLM generated invalid template: {error_msg}")
-                bt.logging.warning("Falling back to default template")
-                # Fall back to a simple, valid template that includes rule requirements
-                query_template = f"Generate {variation_count} variations of the name {{name}}, ensuring phonetic similarity: {phonetic_spec}, and orthographic similarity: {orthographic_spec}, and also include {rule_percentage}% of variations that follow: {rule_template}."
-                # Validate the fallback template
+                bt.logging.warning("Adding clarifying sentence to fix the template")
+                
+                # Add a clarifying sentence at the beginning to make it clear this is the seed name
+                clarifying_prefix = "The following name is the seed name to generate variations for: {name}. "
+                
+                # Check if the template already has a clarifying sentence
+                if not query_template.startswith("The following name is") and not query_template.startswith("This is the seed name"):
+                    # Add the clarifying prefix and ensure proper formatting
+                    if "{name}" in query_template:
+                        # If the template has the placeholder, add the prefix
+                        query_template = f"{clarifying_prefix}{query_template}"
+                    else:
+                        # If no placeholder, create a proper template
+                        query_template = f"{clarifying_prefix}Generate {variation_count} variations of the name {{name}}, ensuring phonetic similarity: {phonetic_spec}, and orthographic similarity: {orthographic_spec}, and also include {rule_percentage}% of variations that follow: {rule_template}."
+                
+                # Validate the fixed template
                 is_valid, error_msg = self.validate_query_template(query_template)
                 if not is_valid:
-                    raise ValueError(f"Fallback template validation failed: {error_msg}")
+                    bt.logging.error(f"Template still invalid after adding clarifying sentence: {error_msg}")
+                    # Final fallback with clarifying sentence
+                    query_template = f"{clarifying_prefix}Generate {variation_count} variations of the name {{name}}, ensuring phonetic similarity: {phonetic_spec}, and orthographic similarity: {orthographic_spec}, and also include {rule_percentage}% of variations that follow: {rule_template}."
+                    # Validate the final fallback template
+                    is_valid, error_msg = self.validate_query_template(query_template)
+                    if not is_valid:
+                        raise ValueError(f"Final fallback template validation failed: {error_msg}")
             
             bt.logging.warning(f"Generated query template: {query_template}")
             bt.logging.warning(f"Generated query labels: {labels}")
@@ -167,8 +186,9 @@ class QueryGenerator:
             
         except Exception as e:
             bt.logging.error(f"Error generating complex query: {str(e)}")
-            # Fallback to a simple query template and default labels
-            simple_template = f"Generate {variation_count} variations of the name {{name}}, ensuring phonetic similarity: {phonetic_spec}, and orthographic similarity: {orthographic_spec}, and also include {rule_percentage}% of variations that follow: {rule_template}."
+            # Fallback to a query template with clarifying sentence
+            clarifying_prefix = "The following name is the seed name to generate variations for: {name}. "
+            simple_template = f"{clarifying_prefix}Generate {variation_count} variations of the name {{name}}, ensuring phonetic similarity: {phonetic_spec}, and orthographic similarity: {orthographic_spec}, and also include {rule_percentage}% of variations that follow: {rule_template}."
             # Validate the fallback template
             is_valid, error_msg = self.validate_query_template(simple_template)
             if not is_valid:
@@ -306,16 +326,18 @@ class QueryGenerator:
             orthographic_config = {"Medium": 0.5}
             
             # Generate rule-based template and metadata for fallback
-            rule_template, rule_metadata = get_rule_template_and_metadata(self.rule_percentage)
+            rule_template, rule_metadata = get_rule_template_and_metadata(rule_percentage)
             
-            query_template = f"Generate {variation_count} variations of the name {{name}}, ensuring phonetic similarity: {phonetic_config}, and orthographic similarity: {orthographic_config}, and also include {rule_percentage}% of variations that follow: {rule_template}."
+            # Add clarifying sentence to fallback template
+            clarifying_prefix = "The following name is the seed name to generate variations for: {name}. "
+            query_template = f"{clarifying_prefix}Generate {variation_count} variations of the name {{name}}, ensuring phonetic similarity: {phonetic_config}, and orthographic similarity: {orthographic_config}, and also include {rule_percentage}% of variations that follow: {rule_template}."
             
             # Validate the fallback template
             is_valid, error_msg = self.validate_query_template(query_template)
             if not is_valid:
                 bt.logging.error(f"Fallback template validation failed: {error_msg}")
-                # Use an absolutely basic template as last resort
-                query_template = f"Generate {variation_count} variations of the name {{name}}. {rule_template}"
+                # Use an absolutely basic template as last resort with clarifying sentence
+                query_template = f"{clarifying_prefix}Generate {variation_count} variations of the name {{name}}. {rule_template}"
             
             query_labels = {
                 "variation_count": variation_count,
