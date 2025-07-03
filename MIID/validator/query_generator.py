@@ -60,8 +60,8 @@ class QueryGenerator:
         
         if name_placeholders == 0:
             return False, "Query template missing {name} placeholder"
-        elif name_placeholders > 1:
-            return False, f"Query template contains multiple {name} placeholders ({name_placeholders})"
+        #elif name_placeholders > 1:
+          #  return False, f"Query template contains multiple {{name}} placeholders ({name_placeholders})"
         
         # Check for proper formatting of the placeholder
         if "{name}" not in query_template:
