@@ -397,10 +397,10 @@ def calculate_variation_quality(
     Calculate the quality of execution vectors (name variations) for threat detection.
     Returns both the quality score and detailed metrics.
     """
-    bt.logging.info(f"\n{'='*50}")
-    bt.logging.info(f"Calculating variation quality for: {original_name}")
-    bt.logging.info(f"Total variations: {len(variations)}")
-    bt.logging.info(f"Expected count: {expected_count}")
+    #bt.logging.info(f"\n{'='*50}")
+    #bt.logging.info(f"Calculating variation quality for: {original_name}")
+    #bt.logging.info(f"Total variations: {len(variations)}")
+    #bt.logging.info(f"Expected count: {expected_count}")
     
     # Default similarity preferences if none provided
     if phonetic_similarity is None:
@@ -414,7 +414,7 @@ def calculate_variation_quality(
     if len(name_parts) < 2:
         first_name = original_name
         last_name = None
-        bt.logging.warning(f"Could not split name '{original_name}' into first and last name")
+        #bt.logging.warning(f"Could not split name '{original_name}' into first and last name")
     else:
         first_name = name_parts[0]
         last_name = name_parts[-1]
@@ -488,7 +488,7 @@ def calculate_variation_quality(
     rule_compliance_metrics = {}
     
     if rule_based and "selected_rules" in rule_based:
-        bt.logging.info("\nCalculating rule-based compliance score:")
+        #bt.logging.info("\nCalculating rule-based compliance score:")
         target_rules = rule_based.get("selected_rules", [])
         target_percentage = rule_based.get("rule_percentage", 30) / 100.0  # Convert to fraction
         
