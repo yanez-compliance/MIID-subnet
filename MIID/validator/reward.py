@@ -259,17 +259,17 @@ def calculate_part_score(
                 quality += target_percentage * match_quality
                 total_matched += count
                 
-                bt.logging.info(
-                    f"{level} similarity: {count}/{target_count} variations "
-                    f"({match_quality:.3f} quality)"
-                )
+                # bt.logging.info(
+                #     f"{level} similarity: {count}/{target_count} variations "
+                #     f"({match_quality:.3f} quality)"
+                # )
         
         # Penalize unmatched variations
         unmatched = len(scores) - total_matched
         if unmatched > 0:
             penalty = 0.1 * (unmatched / len(scores))
             quality = max(0.0, quality - penalty)
-            bt.logging.warning(f"Penalty of {penalty:.3f} applied for {unmatched} unmatched variations")
+            # bt.logging.warning(f"Penalty of {penalty:.3f} applied for {unmatched} unmatched variations")
         
         return quality
     
@@ -282,7 +282,7 @@ def calculate_part_score(
     
     # Calculate combined similarity score
     similarity_score = (phonetic_quality + orthographic_quality) / 2  # Average of both similarities
-    bt.logging.info(f"Similarity score: {similarity_score:.3f} (phonetic: {phonetic_quality:.3f}, orthographic: {orthographic_quality:.3f})")
+    # bt.logging.info(f"Similarity score: {similarity_score:.3f} (phonetic: {phonetic_quality:.3f}, orthographic: {orthographic_quality:.3f})")
     
     # Apply minimum similarity threshold to prevent gaming
     # If similarity is very low, severely reduce the score
@@ -780,9 +780,9 @@ def calculate_rule_compliance_score(
         - Compliance score (0-1)
         - Dictionary with detailed metrics
     """
-    bt.logging.info(f"\nCalculating rule compliance for '{original_name}'")
-    bt.logging.info(f"Target rules: {target_rules}")
-    bt.logging.info(f"Target percentage: {target_percentage * 100:.1f}%")
+    # bt.logging.info(f"\nCalculating rule compliance for '{original_name}'")
+    # bt.logging.info(f"Target rules: {target_rules}")
+    # bt.logging.info(f"Target percentage: {target_percentage * 100:.1f}%")
     
     if not variations or not target_rules:
         bt.logging.warning("No variations or no target rules provided for rule compliance calculation.")
@@ -821,11 +821,11 @@ def calculate_rule_compliance_score(
     overall_compliant_count = len(rules_satisfied_by_variation)
     expected_compliant_count = max(1, int(len(variations) * target_percentage))
     
-    bt.logging.info(f"Found {overall_compliant_count} unique variations complying with at least one target rule (expected ~{expected_compliant_count} based on target percentage)")
+    # bt.logging.info(f"Found {overall_compliant_count} unique variations complying with at least one target rule (expected ~{expected_compliant_count} based on target percentage)")
     
-    for rule, variations_list in compliant_variations_by_rule.items():
-        # This logging shows all rules returned by evaluate_rule_compliance, which should be the target_rules
-        bt.logging.info(f"Rule '{rule}': {len(variations_list)} variations matched")
+    # for rule, variations_list in compliant_variations_by_rule.items():
+    #     # This logging shows all rules returned by evaluate_rule_compliance, which should be the target_rules
+    #     bt.logging.info(f"Rule '{rule}': {len(variations_list)} variations matched")
     
     # Calculate the quantity-based compliance score
     ratio_of_actual_to_expected = overall_compliant_count / expected_compliant_count if expected_compliant_count > 0 else 0.0
