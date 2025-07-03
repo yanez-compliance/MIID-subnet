@@ -266,14 +266,14 @@ async def forward(self):
                 for name, variations in response.variations.items():
                     name_parts = name.split()
                     if len(name_parts) > 1:  # Multi-part name
-                        bt.logging.info(f"Validating variations for multi-part name '{name}' (first: '{name_parts[0]}', last: '{name_parts[-1]}')")
+                        #bt.logging.info(f"Validating variations for multi-part name '{name}' (first: '{name_parts[0]}', last: '{name_parts[-1]}')")
                         # Validate variation structure
                         for var in variations:
                             var_parts = var.split()
                             if len(var_parts) < 2:
                                 bt.logging.warning(f"Miner {uid} returned single-part variation '{var}' for multi-part name '{name}'")
-                    else:  # Single-part name
-                        bt.logging.info(f"Validating variations for single-part name '{name}'")
+                    #else:  # Single-part name
+                        #bt.logging.info(f"Validating variations for single-part name '{name}'")
                         
                 bt.logging.info(f"Miner {uid} returned {len(response.variations)} names with {total_variations} total variations.")
         
