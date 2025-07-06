@@ -33,14 +33,14 @@ RULE_FUNCTIONS = {
         #"add_random_leading_title", # need labels for this
         #"add_random_trailing_title" # need labels for this
     ],
-    "name_formatting": [
-        "initial_only_first_name", 
-        "shorten_name_to_initials", 
+    #"name_formatting": [
+        #"initial_only_first_name", 
+        #"shorten_name_to_initials", 
         #"shorten_name_to_abberivations" # need labels for this
-    ],
-    "structure_change": [
-        "name_parts_permutations"
-    ]
+    #],
+    #"structure_change": [
+        #"name_parts_permutations"
+    #]
 }
 
 # Map rule names to their descriptions for inclusion in queries
@@ -63,10 +63,10 @@ RULE_DESCRIPTIONS = {
     "insert_random_letter": "Insert a random letter",
     #"add_random_leading_title": "Add a title prefix (Mr., Dr., etc.)",
     #"add_random_trailing_title": "Add a title suffix (Jr., PhD, etc.)",
-    "initial_only_first_name": "Use first name initial with last name",
-    "shorten_name_to_initials": "Convert name to initials",
+    #"initial_only_first_name": "Use first name initial with last name",
+    #"shorten_name_to_initials": "Convert name to initials",
     #"shorten_name_to_abberivations": "Abbreviate name parts",
-    "name_parts_permutations": "Reorder name parts"
+    #"name_parts_permutations": "Reorder name parts"
 }
 
 def get_all_rule_categories() -> List[str]:
