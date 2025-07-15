@@ -227,14 +227,14 @@ def add_validator_args(cls, parser):
         "--neuron.sample_size",
         type=int,
         help="The number of miners to query in a single step.",
-        default=100,# MIID: 50 miners we want to query in a single step change to 100
+        default=200,# MIID: 50 miners we want to query in a single step change to 100
     )
 
     parser.add_argument(
         "--neuron.batch_size",
         type=int,
         help="The number of miners to query in a single batch.",
-        default=10, # MIID: 5 miners we want to query in a single batch change to 10
+        default=30, # MIID: 5 miners we want to query in a single batch change to 10
     )
 
     parser.add_argument(
