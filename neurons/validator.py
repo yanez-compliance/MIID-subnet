@@ -48,6 +48,7 @@ import datetime as dt
 import json
 import wandb
 import os
+import shutil
 from dotenv import load_dotenv
 
 # Load environment variables from .env file (e.g., vali.env)
@@ -191,6 +192,58 @@ class Validator(BaseValidatorNeuron):
         bt.logging.info("----------------------------------")
         time.sleep(1)
 
+    def cleanup_wandb_run_folder(self, run_id=None):
+        """Clean up the wandb run folder after the run is finished."""
+        # Check if cleanup is enabled via config
+        cleanup_enabled = getattr(self.config.wandb, 'cleanup_runs', True)
+        if not cleanup_enabled:
+            bt.logging.debug("Wandb run cleanup is disabled via config. Skipping cleanup.")
+            return
+            
+        try:
+            # Get the current wandb run directory
+            if wandb.run and hasattr(wandb.run, 'dir'):
+                run_dir = wandb.run.dir
+            elif run_id:
+                # If we have a run_id, construct the path
+                run_dir = os.path.join("wandb", f"run-{run_id}")
+            else:
+                # Try to find the most recent run directory
+                wandb_dir = "wandb"
+                if os.path.exists(wandb_dir):
+                    run_dirs = [d for d in os.listdir(wandb_dir) if d.startswith("run-")]
+                    if run_dirs:
+                        # Sort by creation time and get the most recent
+                        run_dirs.sort(key=lambda x: os.path.getctime(os.path.join(wandb_dir, x)), reverse=True)
+                        run_dir = os.path.join(wandb_dir, run_dirs[0])
+                    else:
+                        bt.logging.debug("No wandb run directories found to clean up")
+                        return
+                else:
+                    bt.logging.debug("Wandb directory not found")
+                    return
+            
+            # Check if the directory exists and is a wandb run directory
+            if os.path.exists(run_dir) and os.path.isdir(run_dir):
+                bt.logging.info(f"Cleaning up wandb run folder: {run_dir}")
+                shutil.rmtree(run_dir)
+                bt.logging.info(f"Successfully deleted wandb run folder: {run_dir}")
+                
+                # Also clean up the latest-run symlink if it exists
+                latest_run_link = os.path.join("wandb", "latest-run")
+                if os.path.islink(latest_run_link):
+                    try:
+                        os.unlink(latest_run_link)
+                        bt.logging.debug("Removed latest-run symlink")
+                    except Exception as e:
+                        bt.logging.debug(f"Could not remove latest-run symlink: {e}")
+            else:
+                bt.logging.debug(f"Wandb run directory not found or not a directory: {run_dir}")
+                
+        except Exception as e:
+            bt.logging.error(f"Error cleaning up wandb run folder: {e}")
+            bt.logging.debug(traceback.format_exc())
+
     def new_wandb_run(self):
         """Creates a new wandb run to save information to."""
         # Check if wandb is disabled
@@ -208,6 +261,8 @@ class Validator(BaseValidatorNeuron):
             try:
                 bt.logging.info("Finishing previous wandb run before creating new one")
                 self.wandb_run.finish()
+                # Clean up the previous run folder after finishing
+                self.cleanup_wandb_run_folder()
             except Exception as e:
                 bt.logging.error(f"Error finishing previous wandb run: {e}")
             finally:

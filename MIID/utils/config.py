@@ -272,7 +272,7 @@ def add_validator_args(cls, parser):
         "--wandb.project_name",
         type=str,
         help="The name of the project where you are sending the new run.",
-        default="MIID"  # for project_name MIID_v0.1 for mainnet and subnet322-test for testnet
+        default="subnet322-test"  # for project_name MIID for mainnet and subnet322-test for testnet
     )
     parser.add_argument(
         "--seed_names.sample_size",
@@ -284,7 +284,7 @@ def add_validator_args(cls, parser):
         "--wandb.entity",
         type=str,
         help="The name of the project where you are sending the new run.",
-        default="MIID-dev-test" # MIID: change to MIID-dev-test
+        default="MIID-dev-test" 
     )
     parser.add_argument(
         "--wandb.max_run_steps",
@@ -297,6 +297,12 @@ def add_validator_args(cls, parser):
         action="store_true",
         help="Disable wandb logging entirely. Useful for debugging or when wandb is unavailable.",
         default=False,
+    )
+    parser.add_argument(
+        "--wandb.cleanup_runs",
+        action="store_true",
+        help="Automatically delete wandb run folders after each run is finished. Useful for saving disk space.",
+        default=True,
     )
     parser.add_argument(
             "--neuron.ollama_url",
