@@ -48,11 +48,15 @@ You can configure your validator with the following command-line arguments:
 
 The validator automatically manages wandb run folders to prevent disk space issues:
 
-- **Automatic Cleanup**: By default, wandb run folders are automatically deleted after each run completes
+- **Automatic Cleanup**: By default, all wandb run folders are automatically deleted after each run completes
+- **Complete Cleanup**: The system removes all existing run folders, not just the most recent one
 - **Disable Cleanup**: If you want to preserve run folders for debugging, use `--wandb.cleanup_runs=false`
 - **Manual Cleanup**: You can also manually clean up old runs:
   ```bash
-  # Remove wandb runs older than 7 days
+  # Remove all wandb run folders
+  rm -rf ./wandb/run-*
+  
+  # Or remove wandb runs older than 7 days (if cleanup is disabled)
   find ./wandb -name "run-*" -type d -mtime +7 -exec rm -rf {} \;
   ```
 
