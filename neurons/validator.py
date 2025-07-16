@@ -160,39 +160,18 @@ class Validator(BaseValidatorNeuron):
         
         bt.logging.info(f"Using LLM model: {self.model_name}")
         
-        # Check if Ollama is available
-        try:
-            # Check if model exists locally first
-            models_response = ollama.list()
-            models = models_response.get('models', [])
-            bt.logging.info(f"Ollama models response: {models_response}") # Log the raw response
-            
-            # Robust check for model name
-            model_exists = False
-            if isinstance(models, list):
-                for model_info in models:
-                    # Check if model_info is a dict and has 'name'
-                    if isinstance(model_info, dict) and model_info.get('name') == self.model_name:
-                        model_exists = True
-                        break 
-            else:
-                bt.logging.warning(f"Unexpected format for ollama models list: {type(models)}")
-
-            if model_exists:
-                bt.logging.info(f"Model {self.model_name} already pulled")
-            else:
-                # Model not found locally, pull it
-                bt.logging.info(f"Pulling model {self.model_name}...")
-                ollama.pull(self.model_name)
-        except Exception as e:
-            bt.logging.error(f"Error initializing Ollama: {e}")
-            raise e
-        
         bt.logging.info("Ollama initialized")
         bt.logging.info(f"Using LLM model: {self.model_name}")
         bt.logging.info("Finished initializing Validator")
         bt.logging.info("----------------------------------")
         time.sleep(1)
+
+    def _get_model_name_from_response(self, model_data: any) -> str:
+        """Safely extract model name from ollama list response item."""
+        if isinstance(model_data, dict):
+            return model_data.get('name') or model_data.get('model')
+        # For pydantic-like objects
+        return getattr(model_data, 'name', getattr(model_data, 'model', None))
 
     def _ensure_models_are_pulled(self):
         """
@@ -212,7 +191,14 @@ class Validator(BaseValidatorNeuron):
             try:
                 bt.logging.info(f"Checking if model '{model_name}' is available locally.")
                 response = ollama.list()
-                if not any(model['name'] == model_name for model in response['models']):
+                
+                model_is_pulled = False
+                for model_data in response['models']:
+                    if self._get_model_name_from_response(model_data) == model_name:
+                        model_is_pulled = True
+                        break
+
+                if not model_is_pulled:
                     bt.logging.info(f"Model '{model_name}' not found locally. Pulling now...")
                     ollama.pull(model_name)
                     bt.logging.info(f"Successfully pulled model '{model_name}'.")
