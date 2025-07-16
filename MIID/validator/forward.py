@@ -463,8 +463,8 @@ async def forward(self):
         bt.logging.info("Finishing wandb run after completing validation cycle")
         try:
             self.wandb_run.finish()
-            # Clean up the wandb run folder after finishing
-            self.cleanup_wandb_run_folder()
+            # Clean up all wandb run folders after finishing
+            self.cleanup_all_wandb_runs()
         except Exception as e:
             bt.logging.error(f"Error finishing wandb run: {e}")
         finally:
