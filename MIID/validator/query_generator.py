@@ -75,7 +75,7 @@ class QueryGenerator:
         orthographic_similarity: Dict[str, float] = None,
         use_default: bool = False,
         rule_percentage: int = 30
-    ) -> Tuple[str, Dict[str, Any]]:
+    ) -> Tuple[str, Dict[str, Any], str, int]:
         """Generate a query template based on specified parameters"""
         # Default similarity preferences if none provided
         if phonetic_similarity is None:
@@ -107,7 +107,7 @@ class QueryGenerator:
             }
             
             bt.logging.warning(f"Use default query template: {default_template}")
-            return default_template, labels
+            return default_template, labels, None, None
         
         # Format the similarity specifications for the prompt
         phonetic_spec = ", ".join([f"{int(pct*100)}% {level}" for level, pct in phonetic_similarity.items()])
@@ -184,8 +184,8 @@ class QueryGenerator:
                             bt.logging.error(f"Template from '{model}' still invalid: {error_msg}. Trying next model/timeout.")
                             continue # Try next timeout or model
 
-                    bt.logging.info(f"Successfully generated query with model: {model}")
-                    return query_template, labels
+                    bt.logging.info(f"Successfully generated query with model: {model} and timeout: {timeout}s")
+                    return query_template, labels, model, timeout
 
                 except Exception as e:
                     bt.logging.warning(f"Failed to generate query with model: {model} and timeout: {timeout}s. Error: {e}")
@@ -198,9 +198,9 @@ class QueryGenerator:
                         break # break from timeout loop, and try next model.
             
         bt.logging.error("All models and timeouts failed. Falling back to a simple template.")
-        return simple_template, labels
+        return simple_template, labels, None, None
     
-    async def build_queries(self) -> Tuple[List[str], str, Dict[str, Any]]:
+    async def build_queries(self) -> Tuple[List[str], str, Dict[str, Any], str, int]:
         """Build challenge queries for miners"""
         try:
             bt.logging.info("Building test queries for miners")
@@ -267,7 +267,7 @@ class QueryGenerator:
             
             # Generate a complex query template
             model_name = getattr(self.config.neuron, 'ollama_model_name', "llama3.1:latest")
-            query_template, query_labels = await self.generate_complex_query(
+            query_template, query_labels, successful_model, successful_timeout = await self.generate_complex_query(
                 model_name=model_name,
                 variation_count=variation_count,
                 phonetic_similarity=phonetic_config,
@@ -320,7 +320,7 @@ class QueryGenerator:
             bt.logging.info(f"Generated {len(seed_names)} test names: {seed_names}")
             bt.logging.info(f"Query template: {query_template}")
             bt.logging.info(f"Query labels: {query_labels}")
-            return seed_names, query_template, query_labels
+            return seed_names, query_template, query_labels, successful_model, successful_timeout
             
         except Exception as e:
             bt.logging.error(f"Error building queries: {str(e)}")
@@ -373,4 +373,4 @@ class QueryGenerator:
             bt.logging.info(f"Using fallback: {len(seed_names)} test names")
             bt.logging.info(f"Query template: {query_template}")
             bt.logging.info(f"Query labels: {query_labels}")
-            return seed_names, query_template, query_labels
+            return seed_names, query_template, query_labels, None, None
