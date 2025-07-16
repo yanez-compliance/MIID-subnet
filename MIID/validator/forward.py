@@ -196,10 +196,19 @@ async def forward(self):
     
     # Use the query generator
     challenge_start_time = time.time()
-    seed_names, query_template, query_labels = await query_generator.build_queries()
+    seed_names, query_template, query_labels, successful_model, successful_timeout = await query_generator.build_queries()
     challenge_end_time = time.time()
     bt.logging.info(f"Time to generate challenges: {int(challenge_end_time - challenge_start_time)}s")
 
+    # Adapt validator's configuration if a successful model and timeout were found
+    if successful_model:
+        if self.config.neuron.ollama_model_name != successful_model:
+            bt.logging.info(f"Adapting to new successful model: '{successful_model}'")
+            self.config.neuron.ollama_model_name = successful_model
+    if successful_timeout:
+        if self.config.neuron.ollama_request_timeout != successful_timeout:
+            bt.logging.info(f"Adapting to new successful timeout: {successful_timeout}s")
+            self.config.neuron.ollama_request_timeout = successful_timeout
 
     # Calculate timeout based on the number of names and complexity
     base_timeout = self.config.neuron.timeout  # Double from 60 to 120 seconds
@@ -351,6 +360,10 @@ async def forward(self):
         "responses": {},
         "rewards": {}
     }
+    
+    # Update the model_name in the results to reflect what was actually used
+    if successful_model:
+        results["query_generation"]["model_name"] = successful_model
     
     for i, uid in enumerate(miner_uids):
         if i < len(all_responses):
