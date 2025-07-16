@@ -305,6 +305,20 @@ def add_validator_args(cls, parser):
         default=True,
     )
     parser.add_argument(
+        '--neuron.ollama_fallback_models',
+        type=str,
+        nargs='+',
+        help="A list of fallback Ollama models to try if the primary model fails.",
+        default=['llama3.2:latest', 'tinyllama:latest']
+    )
+    parser.add_argument(
+        '--neuron.ollama_fallback_timeouts',
+        type=int,
+        nargs='+',
+        help="A list of fallback timeouts (in seconds) to try for Ollama requests.",
+        default=[100, 120]
+    )
+    parser.add_argument(
             "--neuron.ollama_url",
             type=str,
             help="Url to ollama",

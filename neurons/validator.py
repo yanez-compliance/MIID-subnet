@@ -156,6 +156,8 @@ class Validator(BaseValidatorNeuron):
             self.model_name = self.DEFAULT_LLM_MODEL
             bt.logging.info(f"No model specified in config, using default model: {self.model_name}")
         
+        self._ensure_models_are_pulled()
+        
         bt.logging.info(f"Using LLM model: {self.model_name}")
         
         # Check if Ollama is available
@@ -192,6 +194,35 @@ class Validator(BaseValidatorNeuron):
         bt.logging.info("----------------------------------")
         time.sleep(1)
 
+    def _ensure_models_are_pulled(self):
+        """
+        Ensures that the primary and all fallback models are available locally.
+        """
+        bt.logging.info("Ensuring all required Ollama models are available locally.")
+        
+        # Get primary model
+        primary_model = getattr(self.config.neuron, 'ollama_model_name', "llama3.1:latest")
+        
+        # Get fallback models
+        fallback_models = getattr(self.config.neuron, 'ollama_fallback_models', ['llama3.2:latest', 'tinyllama:latest'])
+        
+        all_models = [primary_model] + fallback_models
+        
+        for model_name in all_models:
+            try:
+                bt.logging.info(f"Checking if model '{model_name}' is available locally.")
+                response = ollama.list()
+                if not any(model['name'] == model_name for model in response['models']):
+                    bt.logging.info(f"Model '{model_name}' not found locally. Pulling now...")
+                    ollama.pull(model_name)
+                    bt.logging.info(f"Successfully pulled model '{model_name}'.")
+                else:
+                    bt.logging.info(f"Model '{model_name}' is already available.")
+            except Exception as e:
+                bt.logging.error(f"Failed to check or pull model '{model_name}': {e}")
+                # We log the error and continue. The validator might still be able to run with the models it has.
+                # Consider whether to raise the exception if a model is critical.
+    
     def manual_cleanup_wandb_runs(self):
         """Manually clean up all wandb run folders. Can be called anytime for maintenance."""
         bt.logging.info("Starting manual cleanup of all wandb run folders")

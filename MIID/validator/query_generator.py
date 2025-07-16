@@ -38,8 +38,6 @@ class QueryGenerator:
             DEFAULT_QUERY
         )
         
-
-
         bt.logging.info(f"use_default_query: {self.use_default_query}#########################################")
         bt.logging.info(f"QueryGenerator initialized with use_default_query={self.use_default_query}")
     
@@ -141,59 +139,66 @@ class QueryGenerator:
         
         Example format: "Generate {variation_count} variations of the name {{name}}, ensuring phonetic similarity: {phonetic_spec}, and orthographic similarity: {orthographic_spec}, and also include {rule_percentage}% of variations that follow: {rule_template}"
         """
+        # Add a clarifying sentence at the beginning to make it clear this is the seed name
+        clarifying_prefix = "The following name is the seed name to generate variations for: {name}. "  
+        simple_template = f"{clarifying_prefix}Generate {variation_count} variations of the name {{name}}, ensuring phonetic similarity: {phonetic_spec}, and orthographic similarity: {orthographic_spec}, and also include {rule_percentage}% of variations that follow: {rule_template}"
+        bt.logging.warning(f"Simple template: {simple_template}")
+        
+        # Get the list of models to try: primary + fallbacks
+        primary_model = model_name
+        fallback_models = getattr(self.config.neuron, 'ollama_fallback_models', [])
+        models_to_try = [primary_model] + fallback_models
 
-        try:
-            # Configure the client with the timeout
-            client = ollama.Client(host=self.config.neuron.ollama_url, timeout=self.config.neuron.ollama_request_timeout)
-            
-            # Generate the query using Ollama
-            response = client.generate(model=model_name, prompt=prompt)
-            query_template = response['response'].strip()
-            
-            # Validate the generated template
-            is_valid, error_msg = self.validate_query_template(query_template)
-            if not is_valid:
-                bt.logging.warning(f"LLM generated invalid template: {error_msg}")
-                bt.logging.warning("Adding clarifying sentence to fix the template")
-                
-                # Add a clarifying sentence at the beginning to make it clear this is the seed name
-                clarifying_prefix = "The following name is the seed name to generate variations for: {name}. "
-                
-                # Check if the template already has a clarifying sentence
-                if not query_template.startswith("The following name is") and not query_template.startswith("This is the seed name"):
-                    # Add the clarifying prefix and ensure proper formatting
-                    if "{name}" in query_template:
-                        # If the template has the placeholder, add the prefix
-                        query_template = f"{clarifying_prefix}{query_template}"
-                    else:
-                        # If no placeholder, create a proper template
-                        query_template = f"{clarifying_prefix}Generate {variation_count} variations of the name {{name}}, ensuring phonetic similarity: {phonetic_spec}, and orthographic similarity: {orthographic_spec}, and also include {rule_percentage}% of variations that follow: {rule_template}."
-                
-                # Validate the fixed template
-                is_valid, error_msg = self.validate_query_template(query_template)
-                if not is_valid:
-                    bt.logging.error(f"Template still invalid after adding clarifying sentence: {error_msg}")
-                    # Final fallback with clarifying sentence
-                    query_template = f"{clarifying_prefix}Generate {variation_count} variations of the name {{name}}, ensuring phonetic similarity: {phonetic_spec}, and orthographic similarity: {orthographic_spec}, and also include {rule_percentage}% of variations that follow: {rule_template}."
-                    # Validate the final fallback template
+        # Get the list of timeouts to try
+        primary_timeout = self.config.neuron.ollama_request_timeout
+        fallback_timeouts = getattr(self.config.neuron, 'ollama_fallback_timeouts', [])
+        timeouts_to_try = [primary_timeout] + fallback_timeouts
+
+        for model in models_to_try:
+            for timeout in timeouts_to_try:
+                try:
+                    bt.logging.info(f"Attempting to generate query with model: {model} and timeout: {timeout}s")
+                    # Configure the client with the timeout
+                    client = ollama.Client(host=self.config.neuron.ollama_url, timeout=timeout)
+                    
+                    # Generate the query using Ollama
+                    response = client.generate(model=model, prompt=prompt)
+                    query_template = response['response'].strip()
+                    
+                    # Validate the generated template
                     is_valid, error_msg = self.validate_query_template(query_template)
                     if not is_valid:
-                        raise ValueError(f"Final fallback template validation failed: {error_msg}")
+                        bt.logging.warning(f"LLM '{model}' generated invalid template: {error_msg}")
+                        bt.logging.warning("Adding clarifying sentence to fix the template")
+                                
+                        # Check if the template already has a clarifying sentence
+                        if not query_template.startswith("The following name is") and not query_template.startswith("This is the seed name"):
+                            if "{name}" in query_template:
+                                query_template = f"{clarifying_prefix}{query_template}"
+                            else:
+                                query_template = simple_template
+                        
+                        # Re-validate
+                        is_valid, error_msg = self.validate_query_template(query_template)
+                        if not is_valid:
+                            bt.logging.error(f"Template from '{model}' still invalid: {error_msg}. Trying next model/timeout.")
+                            continue # Try next timeout or model
+
+                    bt.logging.info(f"Successfully generated query with model: {model}")
+                    return query_template, labels
+
+                except Exception as e:
+                    bt.logging.warning(f"Failed to generate query with model: {model} and timeout: {timeout}s. Error: {e}")
+                    if "timed out" in str(e).lower():
+                        bt.logging.warning("Timeout occurred. Trying next timeout or model.")
+                        continue # Move to next timeout
+                    else:
+                        # For other errors, we can break from the inner loop and try the next model
+                        bt.logging.warning(f"An unexpected error occurred. Trying next model.")
+                        break # break from timeout loop, and try next model.
             
-            bt.logging.warning(f"Generated query template: {query_template}")
-            bt.logging.warning(f"Generated query labels: {labels}")
-            return query_template, labels
-            
-        except Exception as e:
-            bt.logging.error(f"Error generating complex query: {str(e)}")
-            # Fallback to a query template with clarifying sentence
-            clarifying_prefix = "The following name is the seed name to generate variations for: {name}. "
-            simple_template = f"{clarifying_prefix}Generate {variation_count} variations of the name {{name}}, ensuring phonetic similarity: {phonetic_spec}, and orthographic similarity: {orthographic_spec}, and also include {rule_percentage}% of variations that follow: {rule_template}."
-            # Validate the fallback template
-            is_valid, error_msg = self.validate_query_template(simple_template)
-            if not is_valid:
-                raise ValueError(f"Fallback template validation failed: {error_msg}")
-            return simple_template, labels
+        bt.logging.error("All models and timeouts failed. Falling back to a simple template.")
+        return simple_template, labels
     
     async def build_queries(self) -> Tuple[List[str], str, Dict[str, Any]]:
         """Build challenge queries for miners"""
