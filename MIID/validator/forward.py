@@ -418,7 +418,16 @@ async def forward(self):
 
     # logging the spec_version before setting weights
     bt.logging.info(f"Spec version for setting weights: {self.spec_version}")
-    self.set_weights()
+    (success, uint_uids, uint_weights) = self.set_weights()
+    if not success:
+        bt.logging.error("Failed to set weights. Exiting.")
+    else:
+        bt.logging.info("Weights set successfully.")
+        results["weights"] = {
+            "uids": uint_uids,
+            "weights": uint_weights
+        }
+    
 
     # 9) Upload to external endpoint (moved to a separate utils function)
     # Adjust endpoint URL/hotkey if needed
@@ -433,9 +442,11 @@ async def forward(self):
     #If for some reason uploading the data fails, we should just log it and continue. Server might go down but should not be a unique point of failure for the subnet
     try:
         print(f"@@@@@@@@@@@@@@@@@@@@@@@@@@@Uploading data to: {MIID_SERVER}@@@@@@@@@@@@@@@@@@@@@@@@@@@")
-        upload_data(MIID_SERVER, hotkey, results) 
-        upload_success = True
-        bt.logging.info("Data uploaded successfully to external server")
+        upload_success = upload_data(MIID_SERVER, hotkey, results) 
+        if upload_success:
+            bt.logging.info("Data uploaded successfully to external server")
+        else:
+            bt.logging.error("Failed to upload data to external server")
     except Exception as e:
         bt.logging.error(f"Uploading data failed: {str(e)}")
         upload_success = False
