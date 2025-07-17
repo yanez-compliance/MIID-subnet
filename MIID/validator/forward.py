@@ -423,7 +423,7 @@ async def forward(self):
         "total_miners": len(self.scores),
         "scores_by_uid": {}
     }
-    
+    bt.logging.info(f"========================================Metagraph scores: {results['metagraph_scores']}=========================================")
     # Add scores for each UID in the metagraph
     for uid in range(len(self.scores)):
         results["metagraph_scores"]["scores_by_uid"][str(uid)] = {
