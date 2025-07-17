@@ -427,10 +427,16 @@ async def forward(self):
     else:
         bt.logging.info("Weights set successfully.")
         # Convert NumPy int64 to regular Python int for JSON serialization
-        results["Weights"] = {
-            "uids": [int(uid) for uid in uint_uids],
-            "weights": [int(weight) for weight in uint_weights]
-        }
+    results["Weights"] = {
+        "spec_version": self.spec_version,
+        "hotkey": self.wallet.hotkey,
+        "timestamp": timestamp,
+        "model_name": successful_model,
+        "timeout": successful_timeout,
+        "Did_it_set_weights": success,
+        "uids": [int(uid) for uid in uint_uids],
+        "weights": [int(weight) for weight in uint_weights]
+    }
     bt.logging.info(f"========================================Results: {results['Weights']}=========================================")
 
     # 9) Upload to external endpoint (moved to a separate utils function)
