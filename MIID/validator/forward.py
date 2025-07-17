@@ -419,16 +419,19 @@ async def forward(self):
     # logging the spec_version before setting weights
     bt.logging.info(f"Spec version for setting weights: {self.spec_version}")
     (success, uint_uids, uint_weights) = self.set_weights()
+    bt.logging.info(f"========================================Weights set successfully: {success}=========================================")
+    bt.logging.info(f"========================================Uids: {uint_uids}=========================================")
+    bt.logging.info(f"========================================Weights: {uint_weights}=========================================")
     if not success:
         bt.logging.error("Failed to set weights. Exiting.")
     else:
         bt.logging.info("Weights set successfully.")
         # Convert NumPy int64 to regular Python int for JSON serialization
-        results["weights"] = {
+        results["Weights"] = {
             "uids": [int(uid) for uid in uint_uids],
             "weights": [int(weight) for weight in uint_weights]
         }
-    
+    bt.logging.info(f"========================================Results: {results['Weights']}=========================================")
 
     # 9) Upload to external endpoint (moved to a separate utils function)
     # Adjust endpoint URL/hotkey if needed
