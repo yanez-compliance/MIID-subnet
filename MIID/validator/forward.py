@@ -417,6 +417,24 @@ async def forward(self):
     }
     bt.logging.info(f"========================================Results: {results['Weights']}=========================================")
     
+    # Add metagraph scores for all miners
+    results["metagraph_scores"] = {
+        "timestamp": timestamp,
+        "total_miners": len(self.scores),
+        "scores_by_uid": {}
+    }
+    
+    # Add scores for each UID in the metagraph
+    for uid in range(len(self.scores)):
+        results["metagraph_scores"]["scores_by_uid"][str(uid)] = {
+            "uid": int(uid),
+            "hotkey": str(self.metagraph.axons[uid].hotkey) if uid < len(self.metagraph.axons) else "unknown",
+            "score": float(self.scores[uid]),
+            "was_queried": uid in miner_uids
+        }
+    
+    bt.logging.info(f"========================================Metagraph scores added for {len(self.scores)} miners=========================================")
+    
     if not success:
         bt.logging.error("Failed to set weights. Exiting.")
     else:
