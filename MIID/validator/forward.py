@@ -422,22 +422,24 @@ async def forward(self):
     bt.logging.info(f"========================================Weights set successfully: {success}=========================================")
     bt.logging.info(f"========================================Uids: {uint_uids}=========================================")
     bt.logging.info(f"========================================Weights: {uint_weights}=========================================")
+    
+    # Always add weights info to results, regardless of success
+    results["Weights"] = {
+        "spec_version": self.spec_version,
+        "hotkey": str(self.wallet.hotkey.ss58_address),
+        "timestamp": timestamp,
+        "model_name": getattr(self.config.neuron, 'ollama_model_name', "llama3.1:latest"),
+        "timeout": adaptive_timeout,
+        "Did_it_set_weights": success,
+        "uids": [int(uid) for uid in uint_uids] if uint_uids else [],
+        "weights": [int(weight) for weight in uint_weights] if uint_weights else []
+    }
+    bt.logging.info(f"========================================Results: {results['Weights']}=========================================")
+    
     if not success:
         bt.logging.error("Failed to set weights. Exiting.")
     else:
         bt.logging.info("Weights set successfully.")
-        # Convert NumPy int64 to regular Python int for JSON serialization
-    results["Weights"] = {
-        "spec_version": self.spec_version,
-        "hotkey": self.wallet.hotkey,
-        "timestamp": timestamp,
-        "model_name": successful_model,
-        "timeout": successful_timeout,
-        "Did_it_set_weights": success,
-        "uids": [int(uid) for uid in uint_uids],
-        "weights": [int(weight) for weight in uint_weights]
-    }
-    bt.logging.info(f"========================================Results: {results['Weights']}=========================================")
 
     # 9) Upload to external endpoint (moved to a separate utils function)
     # Adjust endpoint URL/hotkey if needed
