@@ -397,25 +397,6 @@ async def forward(self):
             results["responses"][str(uid)] = response_data
             results["rewards"][str(uid)] = float(rewards[i]) if i < len(rewards) else 0.0
     
-    json_path = os.path.join(run_dir, f"results_{timestamp}.json")
-    with open(json_path, 'w', encoding='utf-8') as f:
-        json.dump(results, f, indent=4)
-    
-    bt.logging.info(f"Saved validator results to: {json_path}")
-
-    # Prepare extra data for wandb logging
-    wandb_extra_data = {
-        "query_template": query_template,
-        "variation_count": query_labels.get('variation_count'),
-        "seed_names_count": len(seed_names),
-        #"valid_responses": valid_responses,
-        #"total_responses": len(all_responses),
-        # Include query labels directly
-        "query_labels": query_labels,
-        # Add the path to the saved JSON results
-        #"json_results_path": json_path
-    }
-
     # logging the spec_version before setting weights
     bt.logging.info(f"Spec version for setting weights: {self.spec_version}")
     (success, uint_uids, uint_weights) = self.set_weights()
@@ -440,6 +421,26 @@ async def forward(self):
         bt.logging.error("Failed to set weights. Exiting.")
     else:
         bt.logging.info("Weights set successfully.")
+
+    # Save the query and responses to a JSON file (now including weights)
+    json_path = os.path.join(run_dir, f"results_{timestamp}.json")
+    with open(json_path, 'w', encoding='utf-8') as f:
+        json.dump(results, f, indent=4)
+    
+    bt.logging.info(f"Saved validator results to: {json_path}")
+
+    # Prepare extra data for wandb logging
+    wandb_extra_data = {
+        "query_template": query_template,
+        "variation_count": query_labels.get('variation_count'),
+        "seed_names_count": len(seed_names),
+        #"valid_responses": valid_responses,
+        #"total_responses": len(all_responses),
+        # Include query labels directly
+        "query_labels": query_labels,
+        # Add the path to the saved JSON results
+        #"json_results_path": json_path
+    }
 
     # 9) Upload to external endpoint (moved to a separate utils function)
     # Adjust endpoint URL/hotkey if needed
