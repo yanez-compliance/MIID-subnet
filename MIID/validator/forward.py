@@ -423,9 +423,10 @@ async def forward(self):
         bt.logging.error("Failed to set weights. Exiting.")
     else:
         bt.logging.info("Weights set successfully.")
+        # Convert NumPy int64 to regular Python int for JSON serialization
         results["weights"] = {
-            "uids": uint_uids,
-            "weights": uint_weights
+            "uids": [int(uid) for uid in uint_uids],
+            "weights": [int(weight) for weight in uint_weights]
         }
     
 
