@@ -647,8 +647,9 @@ def get_name_variation_rewards(
             bt.logging.warning(f"Miner {uid} returned invalid or empty response")
             rewards[i] = 0.0
             # Correctly set metrics for invalid/empty response
-            miner_metrics["completeness_multiplier"] = 0.0
+            miner_metrics["penalties"]["missing_names"] = 1.0  # All names are missing
             miner_metrics["penalties"]["total_penalty"] = 1.0 
+            miner_metrics["completeness_multiplier"] = 0.0
             miner_metrics["average_quality"] = 0.0
             miner_metrics["final_reward"] = 0.0
             detailed_metrics.append(miner_metrics)
