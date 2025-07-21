@@ -15,6 +15,8 @@ import jellyfish
 
 def is_space_replaced_with_special_chars(original: str, variation: str) -> bool:
     """Check if spaces in the original are replaced with special characters"""
+    if original == variation:
+        return False
     if ' ' not in original:
         return False
     
@@ -62,6 +64,10 @@ def is_vowel_replaced(original: str, variation: str) -> bool:
     """Check if some vowels are replaced with different vowels"""
     vowels = 'aeiou'
     
+    # Explicitly check if the variation is identical to the original
+    if original == variation:
+        return False
+
     # Check if length is the same
     if len(original) != len(variation):
         return False
@@ -84,6 +90,10 @@ def is_consonant_replaced(original: str, variation: str) -> bool:
     """Check if some consonants are replaced with different consonants"""
     vowels = 'aeiou'
     
+    # Explicitly check if the variation is identical to the original
+    if original == variation:
+        return False
+
     # Check if length is the same
     if len(original) != len(variation):
         return False
@@ -104,6 +114,8 @@ def is_consonant_replaced(original: str, variation: str) -> bool:
 
 def is_letters_swapped(original: str, variation: str) -> bool:
     """Check if some adjacent letters are swapped"""
+    if original == variation:
+        return False
     # Check if length is the same
     if len(original) != len(variation):
         return False
@@ -169,8 +181,87 @@ def is_consonant_removed(original: str, variation: str) -> bool:
     
     return False
 
+def is_special_character_replaced(original: str, variation: str) -> bool:
+    """Check if a special character is replaced with a different one"""
+    special_chars = '!@#$%^&*()_+-=[]{}|;:,.<>?'
+    
+    if original == variation:
+        return False
+    if len(original) != len(variation):
+        return False
+    
+    # Count changes in special characters
+    special_changes = 0
+    other_changes = 0
+    
+    for i in range(len(original)):
+        if original[i] != variation[i]:
+            if original[i] in special_chars and variation[i] in special_chars:
+                special_changes += 1
+            else:
+                other_changes += 1
+    
+    # Should have at least one special char change and few other changes
+    return special_changes >= 1 and other_changes <= 1
+
+def is_random_special_removed(original: str, variation: str) -> bool:
+    """Check if a special character is removed"""
+    special_chars = '!@#$%^&*()_+-=[]{}|;:,.<>?'
+    
+    # Check if variation is one character shorter
+    if len(variation) != len(original) - 1:
+        return False
+    
+    # Try removing each special char and see if we get the variation
+    for i, char in enumerate(original):
+        if char in special_chars:
+            test = original[:i] + original[i+1:]
+            if test == variation:
+                return True
+    
+    return False
+
+def is_title_removed(original: str, variation: str) -> bool:
+    """Check if a title is removed from the name"""
+    if original == variation:
+        return False
+    titles = ["Mr.", "Mrs.", "Ms.", "Mr", "Mrs", "Ms", "Miss", "Dr.", "Dr",
+              "Prof.", "Prof", "Sir", "Lady", "Lord", "Dame", "Master", "Mistress",
+              "Rev.", "Hon.", "Capt.", "Col.", "Lt.", "Sgt.", "Maj."]
+    
+    for title in titles:
+        # Check if title was removed from beginning
+        if original.startswith(title + " "):
+            test = original[len(title)+1:]
+            if test == variation:
+                return True
+        # Check with some name manipulation
+        if original.startswith(title + " ") and Levenshtein.distance(variation, original[len(title)+1:]) <= 2:
+            return True
+    
+    return False
+
+def is_name_abbreviated(original: str, variation: str) -> bool:
+    """Check if name parts are abbreviated (simple heuristic)"""
+    if original == variation:
+        return False
+    original_parts = original.split()
+    variation_parts = variation.split()
+    
+    if len(original_parts) != len(variation_parts):
+        return False
+    
+    # Check if each part is a shortened version
+    for orig, var in zip(original_parts, variation_parts):
+        if len(var) >= len(orig) or not orig.startswith(var):
+            return False
+    
+    return True
+
 def is_all_spaces_removed(original: str, variation: str) -> bool:
     """Check if all spaces are removed"""
+    if original == variation:
+        return False
     if ' ' not in original:
         return False
     
@@ -201,6 +292,8 @@ def is_random_letter_inserted(original: str, variation: str) -> bool:
 
 def is_title_added(original: str, variation: str) -> bool:
     """Check if a title is added to the name"""
+    if original == variation:
+        return False
     titles = ["Mr.", "Mrs.", "Ms.", "Mr", "Mrs", "Ms", "Miss", "Dr.", "Dr",
               "Prof.", "Prof", "Sir", "Lady", "Lord", "Dame", "Master", "Mistress",
               "Rev.", "Hon.", "Capt.", "Col.", "Lt.", "Sgt.", "Maj."]
@@ -217,6 +310,8 @@ def is_title_added(original: str, variation: str) -> bool:
 
 def is_suffix_added(original: str, variation: str) -> bool:
     """Check if a suffix is added to the name"""
+    if original == variation:
+        return False
     suffixes = ["Jr.", "Sr.", "III", "IV", "V", "PhD", "MD", "Esq.", "Jr", "Sr"]
     
     for suffix in suffixes:
@@ -231,6 +326,8 @@ def is_suffix_added(original: str, variation: str) -> bool:
 
 def is_initials_only(original: str, variation: str) -> bool:
     """Check if the name is converted to initials"""
+    if original == variation:
+        return False
     parts = original.split()
     
     if len(parts) < 2:
@@ -245,6 +342,8 @@ def is_initials_only(original: str, variation: str) -> bool:
 
 def is_name_parts_permutation(original: str, variation: str) -> bool:
     """Check if the name parts are permuted"""
+    if original == variation:
+        return True # This is a special case, a permutation of 1 is the same
     original_parts = original.split()
     variation_parts = variation.split()
     
@@ -256,6 +355,8 @@ def is_name_parts_permutation(original: str, variation: str) -> bool:
 
 def is_first_name_initial(original: str, variation: str) -> bool:
     """Check if first name is reduced to initial"""
+    if original == variation:
+        return False
     parts = original.split()
     
     if len(parts) < 2:
@@ -273,12 +374,15 @@ RULE_EVALUATORS = {
     "replace_double_letters_with_single_letter": is_double_letter_replaced,
     "replace_random_vowel_with_random_vowel": is_vowel_replaced,
     "replace_random_consonant_with_random_consonant": is_consonant_replaced,
+    "replace_random_special_character_with_random_special_character": is_special_character_replaced,
     "swap_random_letter": is_letters_swapped,
     "swap_adjacent_consonants": is_letters_swapped,  # Simplified, would need more specific check
     "swap_adjacent_syllables": is_letters_swapped,   # Simplified, would need more specific check
     "delete_random_letter": is_letter_removed,
     "remove_random_vowel": is_vowel_removed,
     "remove_random_consonant": is_consonant_removed,
+    "remove_random_special_character": is_random_special_removed,
+    "remove_title": is_title_removed,
     "remove_all_spaces": is_all_spaces_removed,
     "duplicate_random_letter_as_double_letter": is_letter_duplicated,
     "insert_random_letter": is_random_letter_inserted,
@@ -286,7 +390,8 @@ RULE_EVALUATORS = {
     "add_random_trailing_title": is_suffix_added,
     "shorten_name_to_initials": is_initials_only,
     "name_parts_permutations": is_name_parts_permutation,
-    "initial_only_first_name": is_first_name_initial
+    "initial_only_first_name": is_first_name_initial,
+    "shorten_name_to_abbreviations": is_name_abbreviated
 }
 
 def evaluate_rule_compliance(
