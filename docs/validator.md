@@ -122,10 +122,28 @@ You can configure your validator with the following command-line arguments:
 - `--neuron.sample_size`: Number of miners to query per step (default: 10)
 - `--neuron.ollama_model_name`: The Ollama model to use for verification (default: llama3.1:latest)
 - `--neuron.logging.debug`: Enable debug logging
+- `--wandb.disable`: Disable wandb logging entirely (default: False)
+- `--wandb.cleanup_runs`: Automatically delete wandb run folders after each run (default: True)
+
+### Disk Space Management
+
+The validator automatically manages wandb run folders to prevent disk space issues:
+
+- **Automatic Cleanup**: By default, all wandb run folders are automatically deleted after each run completes
+- **Complete Cleanup**: The system removes all existing run folders, not just the most recent one
+- **Disable Cleanup**: If you want to preserve run folders for debugging, use `--wandb.cleanup_runs=false`
+- **Manual Cleanup**: You can also manually clean up old runs:
+  ```bash
+  # Remove all wandb run folders
+  rm -rf ./wandb/run-*
+  
+  # Or remove wandb runs older than 7 days (if cleanup is disabled)
+  find ./wandb -name "run-*" -type d -mtime +7 -exec rm -rf {} \;
+  ```
 
 Example with custom configuration:
 ```bash
-python neurons/validator.py --netuid 54 --wallet.name your_wallet_name --wallet.hotkey your_hotkey --subtensor.network finney --neuron.timeout 180 --neuron.sample_size 15
+python neurons/validator.py --netuid 54 --wallet.name your_wallet_name --wallet.hotkey your_hotkey --subtensor.network finney --neuron.timeout 180 --neuron.sample_size 15 --wandb.cleanup_runs=false
 ```
 
 ## How It Works

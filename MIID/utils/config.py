@@ -227,14 +227,14 @@ def add_validator_args(cls, parser):
         "--neuron.sample_size",
         type=int,
         help="The number of miners to query in a single step.",
-        default=100,# MIID: 50 miners we want to query in a single step change to 100
+        default=200,# MIID: 50 miners we want to query in a single step change to 100
     )
 
     parser.add_argument(
         "--neuron.batch_size",
         type=int,
         help="The number of miners to query in a single batch.",
-        default=10, # MIID: 5 miners we want to query in a single batch change to 10
+        default=40, # MIID: 5 miners we want to query in a single batch change to 10
     )
 
     parser.add_argument(
@@ -248,7 +248,7 @@ def add_validator_args(cls, parser):
         "--neuron.moving_average_alpha",
         type=float,
         help="Moving average alpha parameter, how much to add of the new observation.",
-        default=0.1,
+        default=0.3,
     )
 
     parser.add_argument(
@@ -284,7 +284,7 @@ def add_validator_args(cls, parser):
         "--wandb.entity",
         type=str,
         help="The name of the project where you are sending the new run.",
-        default="MIID-dev-test" # MIID: change to MIID-dev-test
+        default="MIID-dev-test" 
     )
     parser.add_argument(
         "--wandb.max_run_steps",
@@ -297,6 +297,26 @@ def add_validator_args(cls, parser):
         action="store_true",
         help="Disable wandb logging entirely. Useful for debugging or when wandb is unavailable.",
         default=False,
+    )
+    parser.add_argument(
+        "--wandb.cleanup_runs",
+        action="store_true",
+        help="Automatically delete wandb run folders after each run is finished. Useful for saving disk space.",
+        default=True,
+    )
+    parser.add_argument(
+        '--neuron.ollama_fallback_models',
+        type=str,
+        nargs='+',
+        help="A list of fallback Ollama models to try if the primary model fails.",
+        default=['llama3.2:latest', 'tinyllama:latest']
+    )
+    parser.add_argument(
+        '--neuron.ollama_fallback_timeouts',
+        type=int,
+        nargs='+',
+        help="A list of fallback timeouts (in seconds) to try for Ollama requests.",
+        default=[100, 120]
     )
     parser.add_argument(
             "--neuron.ollama_url",

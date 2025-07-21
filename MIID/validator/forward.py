@@ -196,10 +196,19 @@ async def forward(self):
     
     # Use the query generator
     challenge_start_time = time.time()
-    seed_names, query_template, query_labels = await query_generator.build_queries()
+    seed_names, query_template, query_labels, successful_model, successful_timeout = await query_generator.build_queries()
     challenge_end_time = time.time()
     bt.logging.info(f"Time to generate challenges: {int(challenge_end_time - challenge_start_time)}s")
 
+    # Adapt validator's configuration if a successful model and timeout were found
+    if successful_model:
+        if self.config.neuron.ollama_model_name != successful_model:
+            bt.logging.info(f"Adapting to new successful model: '{successful_model}'")
+            self.config.neuron.ollama_model_name = successful_model
+    if successful_timeout:
+        if self.config.neuron.ollama_request_timeout != successful_timeout:
+            bt.logging.info(f"Adapting to new successful timeout: {successful_timeout}s")
+            self.config.neuron.ollama_request_timeout = successful_timeout
 
     # Calculate timeout based on the number of names and complexity
     base_timeout = self.config.neuron.timeout  # Double from 60 to 120 seconds
@@ -266,14 +275,14 @@ async def forward(self):
                 for name, variations in response.variations.items():
                     name_parts = name.split()
                     if len(name_parts) > 1:  # Multi-part name
-                        bt.logging.info(f"Validating variations for multi-part name '{name}' (first: '{name_parts[0]}', last: '{name_parts[-1]}')")
+                        #bt.logging.info(f"Validating variations for multi-part name '{name}' (first: '{name_parts[0]}', last: '{name_parts[-1]}')")
                         # Validate variation structure
                         for var in variations:
                             var_parts = var.split()
                             if len(var_parts) < 2:
                                 bt.logging.warning(f"Miner {uid} returned single-part variation '{var}' for multi-part name '{name}'")
-                    else:  # Single-part name
-                        bt.logging.info(f"Validating variations for single-part name '{name}'")
+                    #else:  # Single-part name
+                        #bt.logging.info(f"Validating variations for single-part name '{name}'")
                         
                 bt.logging.info(f"Miner {uid} returned {len(response.variations)} names with {total_variations} total variations.")
         
@@ -352,6 +361,10 @@ async def forward(self):
         "rewards": {}
     }
     
+    # Update the model_name in the results to reflect what was actually used
+    if successful_model:
+        results["query_generation"]["model_name"] = successful_model
+    
     for i, uid in enumerate(miner_uids):
         if i < len(all_responses):
             # Convert the response to a serializable format
@@ -384,6 +397,50 @@ async def forward(self):
             results["responses"][str(uid)] = response_data
             results["rewards"][str(uid)] = float(rewards[i]) if i < len(rewards) else 0.0
     
+    # logging the spec_version before setting weights
+    bt.logging.info(f"Spec version for setting weights: {self.spec_version}")
+    (success, uint_uids, uint_weights) = self.set_weights()
+    bt.logging.info(f"========================================Weights set successfully: {success}=========================================")
+    bt.logging.info(f"========================================Uids: {uint_uids}=========================================")
+    bt.logging.info(f"========================================Weights: {uint_weights}=========================================")
+    
+    # Always add weights info to results, regardless of success
+    results["Weights"] = {
+        "spec_version": self.spec_version,
+        "hotkey": str(self.wallet.hotkey.ss58_address),
+        "timestamp": timestamp,
+        "model_name": getattr(self.config.neuron, 'ollama_model_name', "llama3.1:latest"),
+        "timeout": adaptive_timeout,
+        "Did_it_set_weights": success,
+        "uids": [int(uid) for uid in uint_uids] if uint_uids else [],
+        "weights": [int(weight) for weight in uint_weights] if uint_weights else []
+    }
+    bt.logging.info(f"========================================Results: {results['Weights']}=========================================")
+    
+    # Add metagraph scores for all miners
+    results["metagraph_scores"] = {
+        "timestamp": timestamp,
+        "total_miners": len(self.scores),
+        "scores_by_uid": {}
+    }
+    bt.logging.info(f"========================================Metagraph scores: {results['metagraph_scores']}=========================================")
+    # Add scores for each UID in the metagraph
+    for uid in range(len(self.scores)):
+        results["metagraph_scores"]["scores_by_uid"][str(uid)] = {
+            "uid": int(uid),
+            "hotkey": str(self.metagraph.axons[uid].hotkey) if uid < len(self.metagraph.axons) else "unknown",
+            "score": float(self.scores[uid]),
+            "was_queried": uid in miner_uids
+        }
+    
+    bt.logging.info(f"========================================Metagraph scores added for {len(self.scores)} miners=========================================")
+    
+    if not success:
+        bt.logging.error("Failed to set weights. Exiting.")
+    else:
+        bt.logging.info("Weights set successfully.")
+
+    # Save the query and responses to a JSON file (now including weights)
     json_path = os.path.join(run_dir, f"results_{timestamp}.json")
     with open(json_path, 'w', encoding='utf-8') as f:
         json.dump(results, f, indent=4)
@@ -403,10 +460,6 @@ async def forward(self):
         #"json_results_path": json_path
     }
 
-    # logging the spec_version before setting weights
-    bt.logging.info(f"Spec version for setting weights: {self.spec_version}")
-    self.set_weights()
-
     # 9) Upload to external endpoint (moved to a separate utils function)
     # Adjust endpoint URL/hotkey if needed
     results_json_string = json.dumps(results, sort_keys=True)
@@ -420,9 +473,11 @@ async def forward(self):
     #If for some reason uploading the data fails, we should just log it and continue. Server might go down but should not be a unique point of failure for the subnet
     try:
         print(f"@@@@@@@@@@@@@@@@@@@@@@@@@@@Uploading data to: {MIID_SERVER}@@@@@@@@@@@@@@@@@@@@@@@@@@@")
-        upload_data(MIID_SERVER, hotkey, results) 
-        upload_success = True
-        bt.logging.info("Data uploaded successfully to external server")
+        upload_success = upload_data(MIID_SERVER, hotkey, results) 
+        if upload_success:
+            bt.logging.info("Data uploaded successfully to external server")
+        else:
+            bt.logging.error("Failed to upload data to external server")
     except Exception as e:
         bt.logging.error(f"Uploading data failed: {str(e)}")
         upload_success = False
@@ -463,6 +518,8 @@ async def forward(self):
         bt.logging.info("Finishing wandb run after completing validation cycle")
         try:
             self.wandb_run.finish()
+            # Clean up all wandb run folders after finishing
+            self.cleanup_all_wandb_runs()
         except Exception as e:
             bt.logging.error(f"Error finishing wandb run: {e}")
         finally:

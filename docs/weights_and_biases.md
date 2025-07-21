@@ -34,6 +34,32 @@ WANDB_API_KEY=your_api_key_here
 
 This will allow the validator to authenticate automatically without requiring the login step each time.
 
+## Configuration Options
+
+You can configure your validator with the following command-line arguments:
+
+- `--neuron.timeout`: Base timeout for miner requests in seconds (default: 120)
+- `--neuron.sample_size`: Number of miners to query per step (default: 200)
+- `--neuron.batch_size`: Number of miners to query per batch (default: 30)
+- `--wandb.disable`: Disable wandb logging entirely (default: False)
+- `--wandb.cleanup_runs`: Automatically delete wandb run folders after each run (default: True)
+
+### Disk Space Management
+
+The validator automatically manages wandb run folders to prevent disk space issues:
+
+- **Automatic Cleanup**: By default, all wandb run folders are automatically deleted after each run completes
+- **Complete Cleanup**: The system removes all existing run folders, not just the most recent one
+- **Disable Cleanup**: If you want to preserve run folders for debugging, use `--wandb.cleanup_runs=false`
+- **Manual Cleanup**: You can also manually clean up old runs:
+  ```bash
+  # Remove all wandb run folders
+  rm -rf ./wandb/run-*
+  
+  # Or remove wandb runs older than 7 days (if cleanup is disabled)
+  find ./wandb -name "run-*" -type d -mtime +7 -exec rm -rf {} \;
+  ```
+
 ## That's It!
 
 The validator code already handles all configurations for W&B, including:

@@ -48,6 +48,7 @@ import datetime as dt
 import json
 import wandb
 import os
+import shutil
 from dotenv import load_dotenv
 
 # Load environment variables from .env file (e.g., vali.env)
@@ -155,41 +156,162 @@ class Validator(BaseValidatorNeuron):
             self.model_name = self.DEFAULT_LLM_MODEL
             bt.logging.info(f"No model specified in config, using default model: {self.model_name}")
         
-        bt.logging.info(f"Using LLM model: {self.model_name}")
+        self._ensure_models_are_pulled()
         
-        # Check if Ollama is available
-        try:
-            # Check if model exists locally first
-            models_response = ollama.list()
-            models = models_response.get('models', [])
-            bt.logging.info(f"Ollama models response: {models_response}") # Log the raw response
-            
-            # Robust check for model name
-            model_exists = False
-            if isinstance(models, list):
-                for model_info in models:
-                    # Check if model_info is a dict and has 'name'
-                    if isinstance(model_info, dict) and model_info.get('name') == self.model_name:
-                        model_exists = True
-                        break 
-            else:
-                bt.logging.warning(f"Unexpected format for ollama models list: {type(models)}")
-
-            if model_exists:
-                bt.logging.info(f"Model {self.model_name} already pulled")
-            else:
-                # Model not found locally, pull it
-                bt.logging.info(f"Pulling model {self.model_name}...")
-                ollama.pull(self.model_name)
-        except Exception as e:
-            bt.logging.error(f"Error initializing Ollama: {e}")
-            raise e
+        bt.logging.info(f"Using LLM model: {self.model_name}")
         
         bt.logging.info("Ollama initialized")
         bt.logging.info(f"Using LLM model: {self.model_name}")
         bt.logging.info("Finished initializing Validator")
         bt.logging.info("----------------------------------")
         time.sleep(1)
+
+    def _get_model_name_from_response(self, model_data: any) -> str:
+        """Safely extract model name from ollama list response item."""
+        if isinstance(model_data, dict):
+            return model_data.get('name') or model_data.get('model')
+        # For pydantic-like objects
+        return getattr(model_data, 'name', getattr(model_data, 'model', None))
+
+    def _ensure_models_are_pulled(self):
+        """
+        Ensures that the primary and all fallback models are available locally.
+        """
+        bt.logging.info("Ensuring all required Ollama models are available locally.")
+        
+        # Get primary model
+        primary_model = getattr(self.config.neuron, 'ollama_model_name', "llama3.1:latest")
+        
+        # Get fallback models
+        fallback_models = getattr(self.config.neuron, 'ollama_fallback_models', ['llama3.2:latest', 'tinyllama:latest'])
+        
+        all_models = [primary_model] + fallback_models
+        
+        for model_name in all_models:
+            try:
+                bt.logging.info(f"Checking if model '{model_name}' is available locally.")
+                response = ollama.list()
+                
+                model_is_pulled = False
+                for model_data in response['models']:
+                    if self._get_model_name_from_response(model_data) == model_name:
+                        model_is_pulled = True
+                        break
+
+                if not model_is_pulled:
+                    bt.logging.info(f"Model '{model_name}' not found locally. Pulling now...")
+                    ollama.pull(model_name)
+                    bt.logging.info(f"Successfully pulled model '{model_name}'.")
+                else:
+                    bt.logging.info(f"Model '{model_name}' is already available.")
+            except Exception as e:
+                bt.logging.error(f"Failed to check or pull model '{model_name}': {e}")
+                # We log the error and continue. The validator might still be able to run with the models it has.
+                # Consider whether to raise the exception if a model is critical.
+    
+    def manual_cleanup_wandb_runs(self):
+        """Manually clean up all wandb run folders. Can be called anytime for maintenance."""
+        bt.logging.info("Starting manual cleanup of all wandb run folders")
+        self.cleanup_all_wandb_runs()
+        bt.logging.info("Manual cleanup completed")
+
+    def cleanup_all_wandb_runs(self):
+        """Clean up all wandb run folders in the wandb directory."""
+        # Check if cleanup is enabled via config
+        cleanup_enabled = getattr(self.config.wandb, 'cleanup_runs', True)
+        if not cleanup_enabled:
+            bt.logging.debug("Wandb run cleanup is disabled via config. Skipping cleanup.")
+            return
+            
+        try:
+            wandb_dir = "wandb"
+            if not os.path.exists(wandb_dir):
+                bt.logging.debug("Wandb directory not found")
+                return
+            
+            # Find all run directories
+            run_dirs = [d for d in os.listdir(wandb_dir) if d.startswith("run-")]
+            
+            if not run_dirs:
+                bt.logging.debug("No wandb run directories found to clean up")
+                return
+            
+            bt.logging.info(f"Found {len(run_dirs)} wandb run directories to clean up")
+            
+            # Delete all run directories
+            for run_dir_name in run_dirs:
+                run_dir_path = os.path.join(wandb_dir, run_dir_name)
+                if os.path.exists(run_dir_path) and os.path.isdir(run_dir_path):
+                    bt.logging.info(f"Cleaning up wandb run folder: {run_dir_path}")
+                    shutil.rmtree(run_dir_path)
+                    bt.logging.info(f"Successfully deleted wandb run folder: {run_dir_path}")
+            
+            # Also clean up the latest-run symlink if it exists
+            latest_run_link = os.path.join(wandb_dir, "latest-run")
+            if os.path.islink(latest_run_link):
+                try:
+                    os.unlink(latest_run_link)
+                    bt.logging.debug("Removed latest-run symlink")
+                except Exception as e:
+                    bt.logging.debug(f"Could not remove latest-run symlink: {e}")
+            
+            bt.logging.info(f"Successfully cleaned up all {len(run_dirs)} wandb run folders")
+                
+        except Exception as e:
+            bt.logging.error(f"Error cleaning up wandb run folders: {e}")
+            bt.logging.debug(traceback.format_exc())
+
+    def cleanup_wandb_run_folder(self, run_id=None):
+        """Clean up the wandb run folder after the run is finished."""
+        # Check if cleanup is enabled via config
+        cleanup_enabled = getattr(self.config.wandb, 'cleanup_runs', True)
+        if not cleanup_enabled:
+            bt.logging.debug("Wandb run cleanup is disabled via config. Skipping cleanup.")
+            return
+            
+        try:
+            # Get the current wandb run directory
+            if wandb.run and hasattr(wandb.run, 'dir'):
+                run_dir = wandb.run.dir
+            elif run_id:
+                # If we have a run_id, construct the path
+                run_dir = os.path.join("wandb", f"run-{run_id}")
+            else:
+                # Try to find the most recent run directory
+                wandb_dir = "wandb"
+                if os.path.exists(wandb_dir):
+                    run_dirs = [d for d in os.listdir(wandb_dir) if d.startswith("run-")]
+                    if run_dirs:
+                        # Sort by creation time and get the most recent
+                        run_dirs.sort(key=lambda x: os.path.getctime(os.path.join(wandb_dir, x)), reverse=True)
+                        run_dir = os.path.join(wandb_dir, run_dirs[0])
+                    else:
+                        bt.logging.debug("No wandb run directories found to clean up")
+                        return
+                else:
+                    bt.logging.debug("Wandb directory not found")
+                    return
+            
+            # Check if the directory exists and is a wandb run directory
+            if os.path.exists(run_dir) and os.path.isdir(run_dir):
+                bt.logging.info(f"Cleaning up wandb run folder: {run_dir}")
+                shutil.rmtree(run_dir)
+                bt.logging.info(f"Successfully deleted wandb run folder: {run_dir}")
+                
+                # Also clean up the latest-run symlink if it exists
+                latest_run_link = os.path.join("wandb", "latest-run")
+                if os.path.islink(latest_run_link):
+                    try:
+                        os.unlink(latest_run_link)
+                        bt.logging.debug("Removed latest-run symlink")
+                    except Exception as e:
+                        bt.logging.debug(f"Could not remove latest-run symlink: {e}")
+            else:
+                bt.logging.debug(f"Wandb run directory not found or not a directory: {run_dir}")
+                
+        except Exception as e:
+            bt.logging.error(f"Error cleaning up wandb run folder: {e}")
+            bt.logging.debug(traceback.format_exc())
 
     def new_wandb_run(self):
         """Creates a new wandb run to save information to."""
@@ -208,6 +330,8 @@ class Validator(BaseValidatorNeuron):
             try:
                 bt.logging.info("Finishing previous wandb run before creating new one")
                 self.wandb_run.finish()
+                # Clean up all previous run folders after finishing
+                self.cleanup_all_wandb_runs()
             except Exception as e:
                 bt.logging.error(f"Error finishing previous wandb run: {e}")
             finally:
