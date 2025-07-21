@@ -419,20 +419,29 @@ def calculate_variation_quality(
     rule_compliance_metrics = {}
     rule_compliant_variations = set()
     target_percentage = 0.0
+    effective_target_rules = []
 
     if rule_based and "selected_rules" in rule_based:
         #bt.logging.info("\nCalculating rule-based compliance score:")
         target_rules = rule_based.get("selected_rules", [])
-        target_percentage = rule_based.get("rule_percentage", 30) / 100.0  # Convert to fraction
+        
+        # Filter out rules that are impossible for the given name structure
+        for rule in target_rules:
+            if rule in ('name_parts_permutations', 'initial_only_first_name') and len(original_name.split()) < 2:
+                bt.logging.debug(f"Skipping impossible rule '{rule}' for single-part name '{original_name}'")
+                continue
+            effective_target_rules.append(rule)
 
-        rule_compliance_score, rule_compliance_metrics = calculate_rule_compliance_score(
-            original_name,
-            variations,
-            target_rules,
-            target_percentage
-        )
-        if "rules_satisfied_by_variation" in rule_compliance_metrics:
-            rule_compliant_variations = set(rule_compliance_metrics["rules_satisfied_by_variation"].keys())
+        if effective_target_rules:
+            target_percentage = rule_based.get("rule_percentage", 30) / 100.0  # Convert to fraction
+            rule_compliance_score, rule_compliance_metrics = calculate_rule_compliance_score(
+                original_name,
+                variations,
+                effective_target_rules,
+                target_percentage
+            )
+            if "rules_satisfied_by_variation" in rule_compliance_metrics:
+                rule_compliant_variations = set(rule_compliance_metrics["rules_satisfied_by_variation"].keys())
     else:
         bt.logging.info("No rule-based requirements specified")
 
@@ -526,12 +535,19 @@ def calculate_variation_quality(
         base_score = 1.0 # Or some other neutral value, 1.0 seems fair to not penalize.
     
     # Apply rule compliance to final score using weights from the global config
-    similarity_weight = MIID_REWARD_WEIGHTS["similarity_weight"]
     rule_compliance_weight = MIID_REWARD_WEIGHTS["rule_compliance_weight"]
     
+    # If rules were requested but none were applicable to this name, adjust weights
+    # to base the score entirely on similarity.
+    if rule_based and "selected_rules" in rule_based and not effective_target_rules:
+        bt.logging.debug(f"No rules applicable for '{original_name}', adjusting weights. Base score will be final score.")
+        base_weight = 1.0
+        rule_compliance_weight = 0.0
+    else:
+        base_weight = 1.0 - rule_compliance_weight
+
     # The base_score already contains the other weighted components (length, count, uniqueness)
     # So we need to scale it down to make room for the rule compliance component
-    base_weight = 1.0 - rule_compliance_weight
     final_score = (base_weight * base_score) + (rule_compliance_weight * rule_compliance_score)
 
     # Prepare detailed metrics
