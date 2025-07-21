@@ -8,7 +8,7 @@ from typing import List, Dict, Tuple, Callable, Any
 
 RULE_FUNCTIONS = {
     "character_replacement": [
-        #"replace_spaces_with_random_special_characters", # need labels for this
+        "replace_spaces_with_random_special_characters", # need labels for this
         "replace_double_letters_with_single_letter", 
         "replace_random_vowel_with_random_vowel", # nice to have labels for this
         "replace_random_consonant_with_random_consonant", # nice to have labels for this
@@ -25,22 +25,22 @@ RULE_FUNCTIONS = {
         "remove_random_consonant",
         #"remove_random_special_character", # need labels for this
         #"remove_title", # need labels for this
-        #"remove_all_spaces" # need labels for this
+        "remove_all_spaces" # need labels for this
     ],
     "character_insertion": [
         "duplicate_random_letter_as_double_letter",
         "insert_random_letter",
-        #"add_random_leading_title", # need labels for this
-        #"add_random_trailing_title" # need labels for this
+        "add_random_leading_title", # need labels for this
+        "add_random_trailing_title" # need labels for this
     ],
-    #"name_formatting": [
-        #"initial_only_first_name", 
-        #"shorten_name_to_initials", 
-        #"shorten_name_to_abberivations" # need labels for this
-    #],
-    #"structure_change": [
-        #"name_parts_permutations"
-    #]
+    "name_formatting": [
+        "initial_only_first_name", 
+        "shorten_name_to_initials", 
+        "shorten_name_to_abbreviations" # need labels for this
+    ],
+    "structure_change": [
+        "name_parts_permutations"
+    ]
 }
 
 # Map rule names to their descriptions for inclusion in queries
@@ -57,16 +57,16 @@ RULE_DESCRIPTIONS = {
     "remove_random_vowel": "Remove a random vowel",
     "remove_random_consonant": "Remove a random consonant",
     #"remove_random_special_character": "Remove a random special character",
-    #"remove_title": "Remove title (Mr., Dr., etc.)",
-    #"remove_all_spaces": "Remove all spaces",
+    "remove_title": "Remove title (Mr., Dr., etc.)",
+    "remove_all_spaces": "Remove all spaces",
     "duplicate_random_letter_as_double_letter": "Duplicate a random letter",
     "insert_random_letter": "Insert a random letter",
-    #"add_random_leading_title": "Add a title prefix (Mr., Dr., etc.)",
-    #"add_random_trailing_title": "Add a title suffix (Jr., PhD, etc.)",
-    #"initial_only_first_name": "Use first name initial with last name",
-    #"shorten_name_to_initials": "Convert name to initials",
-    #"shorten_name_to_abberivations": "Abbreviate name parts",
-    #"name_parts_permutations": "Reorder name parts"
+    "add_random_leading_title": "Add a title prefix (Mr., Dr., etc.)",
+    "add_random_trailing_title": "Add a title suffix (Jr., PhD, etc.)",
+    "initial_only_first_name": "Use first name initial with last name",
+    "shorten_name_to_initials": "Convert name to initials",
+    "shorten_name_to_abbreviations": "Abbreviate name parts",
+    "name_parts_permutations": "Reorder name parts"
 }
 
 def get_all_rule_categories() -> List[str]:

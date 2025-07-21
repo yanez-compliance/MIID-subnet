@@ -401,12 +401,39 @@ def calculate_variation_quality(
     #bt.logging.info(f"Calculating variation quality for: {original_name}")
     #bt.logging.info(f"Total variations: {len(variations)}")
     #bt.logging.info(f"Expected count: {expected_count}")
-    
+
     # Default similarity preferences if none provided
     if phonetic_similarity is None:
         phonetic_similarity = {"Medium": 1.0}
     if orthographic_similarity is None:
         orthographic_similarity = {"Medium": 1.0}
+
+    # First, calculate rule compliance to identify rule-based variations
+    rule_compliance_score = 0.0
+    rule_compliance_metrics = {}
+    rule_compliant_variations = set()
+    target_percentage = 0.0
+
+    if rule_based and "selected_rules" in rule_based:
+        #bt.logging.info("\nCalculating rule-based compliance score:")
+        target_rules = rule_based.get("selected_rules", [])
+        target_percentage = rule_based.get("rule_percentage", 30) / 100.0  # Convert to fraction
+
+        rule_compliance_score, rule_compliance_metrics = calculate_rule_compliance_score(
+            original_name,
+            variations,
+            target_rules,
+            target_percentage
+        )
+        if "rules_satisfied_by_variation" in rule_compliance_metrics:
+            rule_compliant_variations = set(rule_compliance_metrics["rules_satisfied_by_variation"].keys())
+    else:
+        bt.logging.info("No rule-based requirements specified")
+
+    # Separate variations into rule-compliant and non-rule-compliant
+    non_rule_compliant_variations = [
+        var for var in variations if var not in rule_compliant_variations
+    ]
     
     # Split the original name into first and last name
     name_parts = original_name.split()
@@ -420,11 +447,11 @@ def calculate_variation_quality(
         last_name = name_parts[-1]
         #bt.logging.info(f"Using first name: '{first_name}', last name: '{last_name}'")
     
-    # Process variations for both first and last names
+    # Process NON-RULE-COMPLIANT variations for base quality score
     first_name_variations = []
     last_name_variations = []
     
-    for variation in variations:
+    for variation in non_rule_compliant_variations:
         parts = variation.split()
         if len(parts) >= 2:
             first_name_variations.append(parts[0])
@@ -441,40 +468,45 @@ def calculate_variation_quality(
                 first_name_variations.append(parts[0])
         else:
             bt.logging.warning(f"Empty variation found for '{original_name}'")
+
+    # Adjust expected count for non-rule-compliant part
+    expected_base_count = expected_count * (1.0 - target_percentage)
+
+    #bt.logging.info(f"First name variations (non-rule): {len(first_name_variations)}")
+    #if last_name:
+    #    bt.logging.info(f"Last name variations (non-rule): {len(last_name_variations)}")
     
-    #bt.logging.info(f"First name variations: {len(first_name_variations)}")
-    # if last_name:
-    #     bt.logging.info(f"Last name variations: {len(last_name_variations)}")
-    
-    # Calculate score for first name
-    #bt.logging.info("\nCalculating first name score:")
+    # Calculate score for first name (non-rule-compliant part)
+    #bt.logging.info("\nCalculating first name score (non-rule-compliant):")
     first_name_score, first_metrics = calculate_part_score(
         first_name,
         first_name_variations,
         phonetic_similarity,
         orthographic_similarity,
-        expected_count
+        expected_base_count
     )
     
     # Calculate score for last name if available
     last_name_score = 0.0
     last_metrics = {}
     if last_name:
-        #bt.logging.info("\nCalculating last name score:")
+        #bt.logging.info("\nCalculating last name score (non-rule-compliant):")
         last_name_score, last_metrics = calculate_part_score(
             last_name,
             last_name_variations,
             phonetic_similarity,
             orthographic_similarity,
-            expected_count
+            expected_base_count
         )
         
-        # Apply penalty for missing last names in variations
-        if len(last_name_variations) < len(variations):
-            missing_ratio = (len(variations) - len(last_name_variations)) / len(variations)
+        # Apply penalty for missing last names in non-rule-compliant variations
+        if len(last_name_variations) < len(non_rule_compliant_variations):
+            missing_ratio = (len(non_rule_compliant_variations) - len(last_name_variations)) / len(non_rule_compliant_variations) if len(non_rule_compliant_variations) > 0 else 0
             last_name_score *= (1.0 - missing_ratio)
-            bt.logging.warning(f"Applied missing last name penalty: {missing_ratio:.2f}")
-        # Use dynamic weights
+            bt.logging.warning(f"Applied missing last name penalty (non-rule): {missing_ratio:.2f}")
+
+    # Combine first/last name scores for the base_score
+    if last_name:
         base_score = (
             part_weights.get("first_name_weight", MIID_REWARD_WEIGHTS["first_name_weight"]) * first_name_score +
             part_weights.get("last_name_weight", MIID_REWARD_WEIGHTS["last_name_weight"]) * last_name_score
@@ -483,26 +515,11 @@ def calculate_variation_quality(
         # If no last name, use only first name score
         base_score = first_name_score
         
-    # Calculate rule compliance score if rule-based metadata is provided
-    rule_compliance_score = 0.0
-    rule_compliance_metrics = {}
-    
-    if rule_based and "selected_rules" in rule_based:
-        #bt.logging.info("\nCalculating rule-based compliance score:")
-        target_rules = rule_based.get("selected_rules", [])
-        target_percentage = rule_based.get("rule_percentage", 30) / 100.0  # Convert to fraction
-        
-        rule_compliance_score, rule_compliance_metrics = calculate_rule_compliance_score(
-            original_name,
-            variations,
-            target_rules,
-            target_percentage
-        )
-    else:
-        bt.logging.info("No rule-based requirements specified")
+    # If no non-rule variations were expected or provided, base_score is not penalized
+    if expected_base_count == 0 or len(non_rule_compliant_variations) == 0:
+        base_score = 1.0 # Or some other neutral value, 1.0 seems fair to not penalize.
     
     # Apply rule compliance to final score using weights from the global config
-    # If no rules were specified, this component will be 0
     similarity_weight = MIID_REWARD_WEIGHTS["similarity_weight"]
     rule_compliance_weight = MIID_REWARD_WEIGHTS["rule_compliance_weight"]
     
@@ -519,7 +536,9 @@ def calculate_variation_quality(
         },
         "base_score": float(base_score),
         "final_score": float(final_score),
-        "variation_count": len(variations)
+        "variation_count": len(variations),
+        "non_rule_compliant_variations_count": len(non_rule_compliant_variations),
+        "rule_compliant_variations_count": len(rule_compliant_variations)
     }
     
     if last_name:
@@ -535,24 +554,24 @@ def calculate_variation_quality(
         }
 
     # bt.logging.info(f"\nFinal score breakdown for '{original_name}':")
-    # bt.logging.info(f"  - First name score: {first_name_score:.3f}")
+    # bt.logging.info(f"  - First name score (non-rule): {first_name_score:.3f}")
     # if last_name:
-    #     bt.logging.info(f"  - Last name score: {last_name_score:.3f}")
-    # bt.logging.info(f"  - Base similarity score: {base_score:.3f}")
+    #     bt.logging.info(f"  - Last name score (non-rule): {last_name_score:.3f}")
+    # bt.logging.info(f"  - Base similarity score (non-rule): {base_score:.3f}")
     # if rule_based:
     #     bt.logging.info(f"  - Rule compliance score: {rule_compliance_score:.3f} (weight: {rule_compliance_weight:.2f})")
     # bt.logging.info(f"  - Final score: {final_score:.3f}")
     
     if final_score == 0:
         bt.logging.warning(f"Zero final score for '{original_name}'. Possible reasons:")
-        if first_name_score == 0:
-            bt.logging.warning("  - Zero first name score")
-        if last_name and last_name_score == 0:
-            bt.logging.warning("  - Zero last name score")
+        if first_name_score == 0 and len(non_rule_compliant_variations) > 0:
+            bt.logging.warning("  - Zero first name score on non-rule variations")
+        if last_name and last_name_score == 0 and len(last_name_variations) > 0:
+            bt.logging.warning("  - Zero last name score on non-rule variations")
         if len(variations) == 0:
             bt.logging.warning("  - No variations provided")
-        if rule_based and rule_compliance_score == 0:
-            bt.logging.warning("  - Zero rule compliance score")
+        if rule_based and rule_compliance_score == 0 and len(rule_compliant_variations) > 0:
+            bt.logging.warning("  - Zero rule compliance score on rule-compliant variations")
     
     bt.logging.info(f"{'='*50}\n")
     return final_score, detailed_metrics
