@@ -255,7 +255,13 @@ def calculate_part_score(
             if target_count > 0:
                 # Calculate match quality with diminishing returns
                 match_ratio = count / target_count
-                match_quality = 1.0 - math.exp(-match_ratio)  # Smooth curve
+                #match_quality = 1.0 - math.exp(-match_ratio)  # Smooth curve
+                # Diminishing returns after target
+                # this gives 100% at target, then diminishing returns for exceeding
+                if match_ratio <= 1.0:
+                    match_quality = match_ratio  # Linear up to target
+                else:    
+                    match_quality = 1.0 - math.exp(-(match_ratio - 1.0))  
                 quality += target_percentage * match_quality
                 total_matched += count
                 
