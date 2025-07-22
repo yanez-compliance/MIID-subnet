@@ -54,16 +54,16 @@ class QueryGenerator:
         if not query_template:
             return False, "Query template is empty"
         
-        name_placeholders = query_template.count("{name}")
-        
-        if name_placeholders == 0:
-            return False, "Query template missing {name} placeholder"
-        #elif name_placeholders > 1:
-          #  return False, f"Query template contains multiple {{name}} placeholders ({name_placeholders})"
-        
-        # Check for proper formatting of the placeholder
+        # Check for {name} placeholder
         if "{name}" not in query_template:
-            return False, "Query template contains malformed name placeholder"
+            return False, "Query template is missing {name} placeholder"
+        
+        # Check for required keywords
+        required_keywords = ["phonetic", "orthographic", "rule"]
+        missing_keywords = [kw for kw in required_keywords if kw not in query_template.lower()]
+        
+        if missing_keywords:
+            return False, f"Query template missing required keywords: {', '.join(missing_keywords)}"
         
         return True, "Query template is valid"
     
@@ -98,7 +98,13 @@ class QueryGenerator:
         if use_default:
             bt.logging.warning("Using default query template (skipping complex query generation)")
             clarifying_prefix = "The following name is the seed name to generate variations for: {name}. "
-            default_template = f"{clarifying_prefix}Give me {DEFAULT_VARIATION_COUNT} comma separated alternative spellings of the name {{name}}. Include 50% of them should Medium sound similar to the original name and 50% should be Medium orthographically similar. {rule_template} Provide only the names."
+            # Ensure the default template includes the rule_percentage
+            default_template = (
+                f"{clarifying_prefix}Give me {DEFAULT_VARIATION_COUNT} comma separated alternative spellings "
+                f"of the name {{name}}. Include 50% of them should Medium sound similar to the original name and 50% "
+                f"should be Medium orthographically similar. Approximately {rule_percentage}% of the variations "
+                f"should follow these rule-based transformations: {rule_template}. Provide only the names."
+            )
             labels = {
                 "variation_count": DEFAULT_VARIATION_COUNT,
                 "phonetic_similarity": {"Medium": 0.5},
@@ -168,21 +174,8 @@ class QueryGenerator:
                     # Validate the generated template
                     is_valid, error_msg = self.validate_query_template(query_template)
                     if not is_valid:
-                        bt.logging.warning(f"LLM '{model}' generated invalid template: {error_msg}")
-                        bt.logging.warning("Adding clarifying sentence to fix the template")
-                                
-                        # Check if the template already has a clarifying sentence
-                        if not query_template.startswith("The following name is") and not query_template.startswith("This is the seed name"):
-                            if "{name}" in query_template:
-                                query_template = f"{clarifying_prefix}{query_template}"
-                            else:
-                                query_template = simple_template
-                        
-                        # Re-validate
-                        is_valid, error_msg = self.validate_query_template(query_template)
-                        if not is_valid:
-                            bt.logging.error(f"Template from '{model}' still invalid: {error_msg}. Trying next model/timeout.")
-                            continue # Try next timeout or model
+                        bt.logging.warning(f"LLM '{model}' generated invalid template: {error_msg}. Trying next model/timeout.")
+                        continue  # Try next timeout or model
 
                     bt.logging.info(f"Successfully generated query with model: {model} and timeout: {timeout}s")
                     return query_template, labels, model, timeout
