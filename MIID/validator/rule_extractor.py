@@ -45,7 +45,7 @@ RULE_FUNCTIONS = {
 
 # Map rule names to their descriptions for inclusion in queries
 RULE_DESCRIPTIONS = {
-    #"replace_spaces_with_random_special_characters": "Replace spaces with special characters",
+    "replace_spaces_with_random_special_characters": "Replace spaces with special characters",
     "replace_double_letters_with_single_letter": "Replace double letters with a single letter",
     "replace_random_vowel_with_random_vowel": "Replace random vowels with different vowels",
     "replace_random_consonant_with_random_consonant": "Replace random consonants with different consonants",
