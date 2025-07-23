@@ -143,9 +143,32 @@ class Validator(BaseValidatorNeuron):
         self.step = 0
         self.wandb_run = None # Initialize wandb_run as None
         
+        # Auto-detect testnet and set wandb project name accordingly
+        if (self.config.netuid == 322 and 
+            hasattr(self.config, 'subtensor') and 
+            hasattr(self.config.subtensor, 'network') and 
+            self.config.subtensor.network == "test" and
+            hasattr(self.config, 'subtensor') and 
+            hasattr(self.config.subtensor, 'chain_endpoint') and 
+            "test.finney.opentensor.ai" in self.config.subtensor.chain_endpoint):
+            
+            # Override wandb project name for testnet
+            if hasattr(self.config, 'wandb'):
+                original_project_name = getattr(self.config.wandb, 'project_name', 'MIID')
+                self.config.wandb.project_name = "subnet322-test"
+                bt.logging.info(f"Detected testnet configuration. Changing wandb project from '{original_project_name}' to 'subnet322-test'")
+            else:
+                bt.logging.warning("Wandb config not found, cannot set testnet project name")
+        
         # Check if wandb is disabled via config
         if hasattr(self.config, 'wandb') and hasattr(self.config.wandb, 'disable') and self.config.wandb.disable:
             bt.logging.info("Wandb is disabled via config. Skipping wandb initialization.")
+        else:
+            # Log the final wandb project name that will be used
+            if hasattr(self.config, 'wandb') and hasattr(self.config.wandb, 'project_name'):
+                bt.logging.info(f"Wandb project name set to: {self.config.wandb.project_name}")
+            else:
+                bt.logging.warning("Wandb project name not found in config")
         # else:
         #     self.new_wandb_run() # Start the first wandb run - REMOVED: Each forward pass will create its own run
 
