@@ -427,7 +427,7 @@ def calculate_variation_quality(
         
         # Filter out rules that are impossible for the given name structure
         for rule in target_rules:
-            if rule in ('name_parts_permutations', 'initial_only_first_name') and len(original_name.split()) < 2:
+            if rule in ('name_parts_permutations', 'initial_only_first_name', 'shorten_name_to_initials') and len(original_name.split()) < 2:
                 bt.logging.debug(f"Skipping impossible rule '{rule}' for single-part name '{original_name}'")
                 continue
             effective_target_rules.append(rule)
@@ -530,8 +530,9 @@ def calculate_variation_quality(
         # If no last name, use only first name score
         base_score = first_name_score
         
-    # If no non-rule variations were expected or provided, base_score is not penalized
-    if expected_base_count == 0 or len(non_rule_compliant_variations) == 0:
+    # If no non-rule variations were expected, the base_score is not penalized.
+    # This is separated from the case where they were expected but not provided.
+    if expected_base_count == 0:
         base_score = 1.0 # Or some other neutral value, 1.0 seems fair to not penalize.
     
     # Apply rule compliance to final score using weights from the global config
@@ -878,7 +879,7 @@ def calculate_rule_compliance_score(
     elif ratio_of_actual_to_expected <= 1.0:  # At or below target
         quantity_score = ratio_of_actual_to_expected
     else:  # Above target - apply a gentler penalty
-        quantity_score = max(0.0, 1.5 - 0.5 * ratio_of_actual_to_expected)
+        quantity_score = max(0.5, 1.5 - 0.5 * ratio_of_actual_to_expected)
     
     bt.logging.info(f"Overall compliance ratio vs target: {ratio_of_actual_to_expected:.2f}, Quantity-based score: {quantity_score:.2f}")
 
