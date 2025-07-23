@@ -357,6 +357,10 @@ class QueryGenerator:
                 
                 if is_full_name:
                     name = f"{fake.first_name().lower()} {fake.last_name().lower()}"
+                    # Randomly decide whether to add a title (1/10 chance)
+                    if random.choice([True] + [False] * 9):
+                        prefix = fake.prefix().replace('.', '').lower()
+                        name = f"{prefix} {name}"
                 else:
                     name = fake.first_name().lower()
                 
