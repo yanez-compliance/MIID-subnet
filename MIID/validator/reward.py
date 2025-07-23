@@ -430,6 +430,9 @@ def calculate_variation_quality(
             if rule in ('name_parts_permutations', 'initial_only_first_name', 'shorten_name_to_initials') and len(original_name.split()) < 2:
                 bt.logging.debug(f"Skipping impossible rule '{rule}' for single-part name '{original_name}'")
                 continue
+            if rule in ('replace_spaces_with_random_special_characters', 'remove_all_spaces') and ' ' not in original_name:
+                bt.logging.debug(f"Skipping impossible rule '{rule}' for name without spaces '{original_name}'")
+                continue
             effective_target_rules.append(rule)
 
         if effective_target_rules:
