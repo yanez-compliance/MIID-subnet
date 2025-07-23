@@ -350,11 +350,12 @@ async def forward(self):
         "request_synapse": {
             "names": seed_names,
             "query_template": query_template,
-            "timeout": adaptive_timeout
+            "dendrite_timeout": adaptive_timeout
         },
         "query_generation": {
             "use_default_query": query_generator.use_default_query,
             "model_name": getattr(self.config.neuron, 'ollama_model_name', "llama3.1:latest"),
+            "query_generator_timeout": successful_timeout,
             "generation_time": challenge_end_time - challenge_start_time
                             },
         "responses": {},
@@ -410,7 +411,8 @@ async def forward(self):
         "hotkey": str(self.wallet.hotkey.ss58_address),
         "timestamp": timestamp,
         "model_name": getattr(self.config.neuron, 'ollama_model_name', "llama3.1:latest"),
-        "timeout": adaptive_timeout,
+        "query_generator_timeout": successful_timeout,
+        "dendrite_timeout": adaptive_timeout,
         "Did_it_set_weights": success,
         "uids": [int(uid) for uid in uint_uids] if uint_uids else [],
         "weights": [int(weight) for weight in uint_weights] if uint_weights else []
@@ -452,6 +454,8 @@ async def forward(self):
         "query_template": query_template,
         "variation_count": query_labels.get('variation_count'),
         "seed_names_count": len(seed_names),
+        "query_generator_timeout": successful_timeout,
+        "dendrite_timeout": adaptive_timeout,
         #"valid_responses": valid_responses,
         #"total_responses": len(all_responses),
         # Include query labels directly
