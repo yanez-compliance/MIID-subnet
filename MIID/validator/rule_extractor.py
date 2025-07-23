@@ -57,7 +57,7 @@ RULE_DESCRIPTIONS = {
     "remove_random_vowel": "Remove a random vowel",
     "remove_random_consonant": "Remove a random consonant",
     #"remove_random_special_character": "Remove a random special character",
-    "remove_title": "Remove title (Mr., Dr., etc.)",
+    #"remove_title": "Remove title (Mr., Dr., etc.)",
     "remove_all_spaces": "Remove all spaces",
     "duplicate_random_letter_as_double_letter": "Duplicate a random letter",
     "insert_random_letter": "Insert a random letter",
