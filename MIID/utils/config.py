@@ -271,7 +271,7 @@ def add_validator_args(cls, parser):
     parser.add_argument(
         "--wandb.project_name",
         type=str,
-        help="The name of the project where you are sending the new run.",
+        help="The name of the project where you are sending the new run. Auto-changes to 'subnet322-test' when running on testnet (netuid 322).",
         default="MIID"  # for project_name MIID for mainnet and subnet322-test for testnet
     )
     parser.add_argument(
