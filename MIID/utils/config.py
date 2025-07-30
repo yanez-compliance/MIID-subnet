@@ -227,14 +227,14 @@ def add_validator_args(cls, parser):
         "--neuron.sample_size",
         type=int,
         help="The number of miners to query in a single step.",
-        default=200,# MIID: 50 miners we want to query in a single step change to 100
+        default=250,# MIID: 50 miners we want to query in a single step change to 100
     )
 
     parser.add_argument(
         "--neuron.batch_size",
         type=int,
         help="The number of miners to query in a single batch.",
-        default=40, # MIID: 5 miners we want to query in a single batch change to 10
+        default=150, # MIID: 5 miners we want to query in a single batch change to 10
     )
 
     parser.add_argument(
@@ -248,7 +248,7 @@ def add_validator_args(cls, parser):
         "--neuron.moving_average_alpha",
         type=float,
         help="Moving average alpha parameter, how much to add of the new observation.",
-        default=0.3,
+        default=0.15,
     )
 
     parser.add_argument(
@@ -335,6 +335,13 @@ def add_validator_args(cls, parser):
         type=int,
         help="Timeout for the Ollama request in seconds.",
         default=90, # MIID: 60 seconds is the default timeout to wait for a response from the Ollama server change to 90 seconds
+    )
+
+    parser.add_argument(
+        "--neuron.max_request_timeout",
+        type=int,
+        help="Maximum timeout for miner requests in seconds.",
+        default=900, # MIID: Maximum timeout limit for adaptive timeout calculation
     )
 
 
