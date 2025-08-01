@@ -470,7 +470,8 @@ async def forward(self):
     
     hotkey = self.wallet.hotkey
     print(f"@@@@@@@@@@@@@@@@@@@@@@@@@@@Hotkey: {hotkey}@@@@@@@@@@@@@@@@@@@@@@@@@@@")
-    signed_contents = sign_message(self.wallet, results_json_string, output_file=None)
+    message_to_sign = f"Hotkey: {hotkey} \n timestamp: {timestamp} \n query_template: {query_template} \n query_labels: {query_labels}"
+    signed_contents = sign_message(self.wallet, message_to_sign, output_file=None)
     results["signature"] = signed_contents
 
     upload_success = False

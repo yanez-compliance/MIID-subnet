@@ -603,6 +603,86 @@ def calculate_variation_quality(
     return final_score, detailed_metrics
 
 
+def _calculate_similarity_and_penalties(responses: list, uids: list, seed_names: list, detailed_metrics: list, rewards: np.ndarray) -> tuple:
+    """
+    Calculate similarity between miner responses and determine penalties for duplication.
+
+    Args:
+        responses: A list of response objects from miners.
+        uids: A list of miner UIDs.
+        seed_names: A list of seed names for which variations were requested.
+        detailed_metrics: A list of dictionaries with detailed metrics for each miner.
+        rewards: The current rewards for each miner.
+
+    Returns:
+        A tuple containing the updated rewards and detailed_metrics list.
+    """
+    num_miners = len(responses)
+    duplication_penalties = np.zeros(num_miners)
+    all_miner_variations = []
+
+    for i in range(num_miners):
+        response = responses[i]
+        if not hasattr(response, 'variations') or not response.variations:
+            all_miner_variations.append(set())
+            continue
+
+        miner_vars = set()
+        for name in seed_names:
+            if name in response.variations:
+                miner_vars.update(response.variations[name])
+        all_miner_variations.append(miner_vars)
+
+    for i in range(num_miners):
+        for j in range(i + 1, num_miners):
+            vars_i = all_miner_variations[i]
+            vars_j = all_miner_variations[j]
+
+            if not vars_i or not vars_j:
+                continue
+
+            # Use Jaccard similarity for a quick and efficient comparison
+            intersection_len = len(vars_i.intersection(vars_j))
+            union_len = len(vars_i.union(vars_j))
+
+            if union_len == 0:
+                similarity = 1.0
+            else:
+                similarity = intersection_len / union_len
+            
+            # If similarity is high, apply a penalty
+            if similarity > 0.95:
+                # Penalty is proportional to the similarity excess
+                penalty = (similarity - 0.95) / (1.0 - 0.95)
+                penalty = min(penalty, 1.0) # Cap the penalty at 100%
+
+                duplication_penalties[i] = max(duplication_penalties[i], penalty)
+                duplication_penalties[j] = max(duplication_penalties[j], penalty)
+
+    # Apply penalties and update metrics
+    updated_rewards = np.copy(rewards)
+    for i in range(num_miners):
+        if duplication_penalties[i] > 0:
+            uid = uids[i]
+            penalty_amount = duplication_penalties[i]
+            
+            bt.logging.info(f"Applying duplication penalty of {penalty_amount:.2f} to miner {uid}")
+
+            # Update the detailed metrics to reflect this penalty
+            if i < len(detailed_metrics):
+                miner_metrics = detailed_metrics[i]
+                miner_metrics.setdefault('penalties', {})
+                miner_metrics['penalties']['duplication'] = penalty_amount
+                
+                # Adjust the final reward based on the penalty
+                current_reward = updated_rewards[i]
+                penalized_reward = current_reward * (1.0 - penalty_amount)
+                updated_rewards[i] = penalized_reward
+                miner_metrics['final_reward'] = penalized_reward
+    
+    return updated_rewards, detailed_metrics
+
+
 def get_name_variation_rewards(
     self,
     seed_names: List[str],
@@ -803,6 +883,11 @@ def get_name_variation_rewards(
         bt.logging.info(f"Miner {uid} final Score: {miner_metrics['final_reward']}")
         detailed_metrics.append(miner_metrics)
         
+    # After initial rewards are calculated, apply penalties for high similarity between miners
+    rewards, detailed_metrics = _calculate_similarity_and_penalties(
+        responses, uids, seed_names, detailed_metrics, rewards
+    )
+    
     return rewards, detailed_metrics
 
 

@@ -36,4 +36,4 @@ response = requests.post(endpoint, json=signed_payload)
 
 # === STEP 5: Print response ===
 print("Status Code:", response.status_code)
-print("Response JSON:", response.json())
+#print("Response JSON:", response.json())

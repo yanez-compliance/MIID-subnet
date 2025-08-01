@@ -7,6 +7,9 @@ import os
 # Make sure this import is outside any function or conditional blocks
 from faker import Faker  # Ensure this is always imported
 
+# List of Latin-script locales to generate names from (basic Latin characters only, no accents)
+LATIN_LOCALES = ['en_US', 'en_GB', 'en_CA', 'en_AU']
+
 # Add import for rule-based functionality
 from MIID.validator.rule_extractor import get_rule_template_and_metadata
 
@@ -270,7 +273,7 @@ class QueryGenerator:
             )
             
             # Generate test names using Faker
-            fake = Faker()
+            fake = Faker(LATIN_LOCALES)
             
             # Create a list to store the generated names
             seed_names = []
@@ -345,7 +348,7 @@ class QueryGenerator:
             }
             
             # Generate fallback names with mix of single and full names
-            fake = Faker()
+            fake = Faker(LATIN_LOCALES)
             seed_names = []
             
             # Use the same sample size for fallback
