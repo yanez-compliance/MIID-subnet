@@ -29,6 +29,7 @@ ALLOWED_HOTKEYS: List[str] = [
     #"5G3wMP3g3d775hauwmAZioYFVZYnvw6eY46wkFy8hEWD5KP3", #OTF new HK >>> june 23
     "5HbUFHW4XVhbQvMbSy7WDjvhHb62nuYgP1XBsmmz9E2E2K6p", #OTF new HK
     "5GQqAhLKVHRLpdTqRg1yc3xu7y47DicJykSpggE2GuDbfs54", #Rizzo new HK June30th
+    "5CMUVyexHFz68M5wtuuD8iQCgEMb8e8U2FpvQfWmoYST6dQo", #MUV validator
 ]
 
 # Hugging Face configuration
