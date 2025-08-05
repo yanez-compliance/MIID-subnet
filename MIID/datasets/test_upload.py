@@ -2,41 +2,70 @@ import sys
 import os
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "../..")))
 
-
 import json
 import requests
 from MIID.utils.sign_message import sign_message
+from MIID.utils.misc import upload_data
 from substrateinterface import Keypair
 import bittensor
 
 # === CONFIGURATION ===
 HOTKEY = "5CnkkjPdfsA6jJDHv2U6QuiKiivDuvQpECC13ffdmSDbkgtt"  # Replace with your test hotkey
-SERVER_URL = "http://52.44.186.20:5000"  # Replace with your server IP
+MIID_SERVER = "http://52.44.186.20:5000/upload_data"  # MIID server endpoint
 MESSAGE = {"test_data": "hello from auto-signed client"}
-# Data directory configuration
-DATA_DIR = "/data/MIID_data/"
 
 # === STEP 1: Load or generate a wallet ===
-# === Load wallet using bittensor ===
+# Load wallet using bittensor
 wallet = bittensor.wallet(name='validator', hotkey='v')
-#wallet.coldkey = wallet.coldkey
-#w = wallet.hotkey
 print(f"@@@@@@@@@@@@@@@@@@@@@@@@@@@Hotkey: {wallet.hotkey}@@@@@@@@@@@@@@@@@@@@@@@@@@@")
 
-# === STEP 2: Sign the JSON payload ===
-payload_json_str = json.dumps({"results": MESSAGE})
-signature_output = sign_message(wallet, payload_json_str)
-
-# === STEP 3: Build final payload ===
-signed_payload = {
-    "results": MESSAGE,
-    "signature": signature_output
+# === STEP 2: Create test results payload ===
+# Create a results structure similar to what forward.py generates
+test_results = {
+    "timestamp": "2025-08-05_20-01-23",
+    "seed_names": ["John Doe", "Jane Smith"],
+    "query_template": "Generate variations for {name}",
+    "query_labels": {
+        "variation_count": 5,
+        "phonetic_similarity": True,
+        "orthographic_similarity": True
+    },
+    "responses": {
+        "123": {
+            "uid": 123,
+            "hotkey": HOTKEY,
+            "variations": {
+                "John Doe": ["Jon Doe", "John Doh", "J Doe"],
+                "Jane Smith": ["J Smith", "Jane S", "J. Smith"]
+            }
+        }
+    },
+    "rewards": {
+        "123": 0.85
+    },
+    "test_message": MESSAGE
 }
 
-# === STEP 4: POST the payload to Flask server ===
-endpoint = f"{SERVER_URL}/{DATA_DIR}/{HOTKEY}"
-response = requests.post(endpoint, json=signed_payload)
+# === STEP 3: Sign the message ===
+message_to_sign = f"Hotkey: {wallet.hotkey} \n timestamp: {test_results['timestamp']} \n query_template: {test_results['query_template']} \n query_labels: {test_results['query_labels']}"
+signed_contents = sign_message(wallet, message_to_sign, output_file=None)
+test_results["signature"] = signed_contents
 
-# === STEP 5: Print response ===
-print("Status Code:", response.status_code)
-#print("Response JSON:", response.json())
+# === STEP 4: Upload to external endpoint (following forward.py pattern) ===
+upload_success = False
+# If for some reason uploading the data fails, we should just log it and continue. Server might go down but should not be a unique point of failure for the subnet
+try:
+    print(f"@@@@@@@@@@@@@@@@@@@@@@@@@@@Uploading data to: {MIID_SERVER}@@@@@@@@@@@@@@@@@@@@@@@@@@@")
+    upload_success = upload_data(MIID_SERVER, wallet.hotkey, test_results) 
+    if upload_success:
+        print("Data uploaded successfully to external server")
+    else:
+        print("Failed to upload data to external server")
+except Exception as e:
+    print(f"Uploading data failed: {str(e)}")
+    upload_success = False
+
+# === STEP 5: Print final status ===
+print(f"Upload success: {upload_success}")
+if not upload_success:
+    print("You might want to reach out to the MIID team to add your hotkey to the allowlist.")
