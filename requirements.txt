@@ -4,7 +4,7 @@ rich>=13
 pytest>=8
 torch>=2
 pandas
-tdqm
+tqdm
 numpy>=1
 setuptools>=68
 faker
