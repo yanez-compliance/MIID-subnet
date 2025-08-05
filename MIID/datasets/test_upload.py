@@ -18,13 +18,14 @@ DATA_DIR = "/data/MIID_data/"
 
 # === STEP 1: Load or generate a wallet ===
 # === Load wallet using bittensor ===
-#wallet = bittensor.wallet(name='validator', hotkey='validator_default')
+wallet = bittensor.wallet(name='validator', hotkey='v')
 #wallet.coldkey = wallet.coldkey
-#wallet.hotkey = wallet.hotkey
+wallet.hotkey = wallet.hotkey
+print(f"@@@@@@@@@@@@@@@@@@@@@@@@@@@Hotkey: {wallet.hotkey}@@@@@@@@@@@@@@@@@@@@@@@@@@@")
 
 # === STEP 2: Sign the JSON payload ===
 payload_json_str = json.dumps({"results": MESSAGE})
-signature_output = sign_message('validator', payload_json_str)
+signature_output = sign_message(wallet, payload_json_str)
 
 # === STEP 3: Build final payload ===
 signed_payload = {
