@@ -10,9 +10,11 @@ from substrateinterface import Keypair
 import bittensor
 
 # === CONFIGURATION ===
-HOTKEY = "5FhCUBvS49"  # Replace with your test hotkey
-SERVER_URL = "http://20.83.176.136:5000"  # Replace with your server IP
+HOTKEY = "5CnkkjPdfsA6jJDHv2U6QuiKiivDuvQpECC13ffdmSDbkgtt"  # Replace with your test hotkey
+SERVER_URL = "http://52.44.186.20:5000"  # Replace with your server IP
 MESSAGE = {"test_data": "hello from auto-signed client"}
+# Data directory configuration
+DATA_DIR = "/data/MIID_data/"
 
 # === STEP 1: Load or generate a wallet ===
 # === Load wallet using bittensor ===
@@ -31,7 +33,7 @@ signed_payload = {
 }
 
 # === STEP 4: POST the payload to Flask server ===
-endpoint = f"{SERVER_URL}/upload_data/{HOTKEY}"
+endpoint = f"{SERVER_URL}/{DATA_DIR}/{HOTKEY}"
 response = requests.post(endpoint, json=signed_payload)
 
 # === STEP 5: Print response ===
