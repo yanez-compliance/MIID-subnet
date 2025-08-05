@@ -20,7 +20,7 @@ DATA_DIR = "/data/MIID_data/"
 # === Load wallet using bittensor ===
 wallet = bittensor.wallet(name='validator', hotkey='v')
 #wallet.coldkey = wallet.coldkey
-wallet.hotkey = wallet.hotkey
+#w = wallet.hotkey
 print(f"@@@@@@@@@@@@@@@@@@@@@@@@@@@Hotkey: {wallet.hotkey}@@@@@@@@@@@@@@@@@@@@@@@@@@@")
 
 # === STEP 2: Sign the JSON payload ===
