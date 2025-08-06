@@ -15,17 +15,14 @@ import jellyfish
 
 def is_space_replaced_with_special_chars(original: str, variation: str) -> bool:
     """Check if spaces in the original are replaced with special characters"""
+    if ' ' not in original or ' ' in variation:
+        return False
+        
     if original == variation:
         return False
-    if ' ' not in original:
-        return False
-    
+
     # Get positions of spaces in original
     space_positions = [i for i, char in enumerate(original) if char == ' ']
-    
-    # Check if variation has no spaces but has special chars at space positions
-    if ' ' in variation:
-        return False
     
     # Check if length is compatible (allowing for minor changes)
     if abs(len(variation) - len(original)) > len(space_positions):
@@ -43,140 +40,155 @@ def is_space_replaced_with_special_chars(original: str, variation: str) -> bool:
 
 def is_double_letter_replaced(original: str, variation: str) -> bool:
     """Check if a double letter in the original is replaced with a single letter"""
-    # Find double letters in original
-    double_letters = []
-    for i in range(len(original) - 1):
-        if original[i] == original[i+1]:
-            double_letters.append(original[i])
+    original_lower = original.lower()
     
-    if not double_letters:
+    # Early exit if no double letters are found
+    if not any(original_lower[i] == original_lower[i+1] for i in range(len(original_lower) - 1)):
         return False
-    
-    # Check if variation has one fewer character and is otherwise similar
-    if len(variation) != len(original) - 1:
+        
+    variation_lower = variation.lower()
+    if len(variation_lower) != len(original_lower) - 1:
         return False
-    
-    # Check if Levenshtein distance is appropriate for this transformation
-    lev_distance = Levenshtein.distance(original, variation)
-    return 1 <= lev_distance <= 2
+
+    for i in range(len(original_lower) - 1):
+        # Check for double alphabetic characters
+        if original_lower[i] == original_lower[i + 1] and original_lower[i].isalpha():
+            # Candidate string with one of the double letters removed
+            candidate = original_lower[:i] + original_lower[i+1:]
+            if candidate == variation_lower:
+                return True
+
+    return False
 
 def is_vowel_replaced(original: str, variation: str) -> bool:
     """Check if some vowels are replaced with different vowels"""
     vowels = 'aeiou'
     
-    # Explicitly check if the variation is identical to the original
-    if original == variation:
+    original_lower = original.lower()
+    if not any(char in vowels for char in original_lower):
         return False
 
-    # Check if length is the same
-    if len(original) != len(variation):
+    variation_lower = variation.lower()
+
+    if original_lower == variation_lower or len(original_lower) != len(variation_lower):
         return False
-    
-    # Count changes in vowels
+
     vowel_changes = 0
     other_changes = 0
     
-    for i in range(len(original)):
-        if original[i] != variation[i]:
-            if original[i] in vowels and variation[i] in vowels:
+    for i in range(len(original_lower)):
+        if original_lower[i] != variation_lower[i]:
+            if original_lower[i] in vowels and variation_lower[i] in vowels:
                 vowel_changes += 1
             else:
                 other_changes += 1
     
-    # Should have at least one vowel change and few other changes
     return vowel_changes >= 1 and other_changes <= 1
+
+def is_consonant(char: str) -> bool:
+    """Check if a character is a consonant (case-insensitive)"""
+    vowels = 'aeiou'
+    return char.isalpha() and char.lower() not in vowels
+
+def is_adjacent_consonants_swapped(original: str, variation: str) -> bool:
+    """Check if two adjacent consonants are swapped."""
+    original_lower = original.lower()
+
+    if not any(is_consonant(original_lower[i]) and is_consonant(original_lower[i+1]) for i in range(len(original_lower)-1)):
+        return False
+        
+    variation_lower = variation.lower()
+
+    if len(original_lower) != len(variation_lower) or original_lower == variation_lower:
+        return False
+
+    for i in range(len(original_lower) - 1):
+        if is_consonant(original_lower[i]) and is_consonant(original_lower[i+1]):
+            test_str = list(original_lower)
+            test_str[i], test_str[i+1] = test_str[i+1], test_str[i]
+            if "".join(test_str) == variation_lower:
+                return True
+    return False
 
 def is_consonant_replaced(original: str, variation: str) -> bool:
     """Check if some consonants are replaced with different consonants"""
-    vowels = 'aeiou'
-    
-    # Explicitly check if the variation is identical to the original
-    if original == variation:
+    original_lower = original.lower()
+    if not any(is_consonant(char) for char in original_lower):
         return False
 
-    # Check if length is the same
-    if len(original) != len(variation):
+    variation_lower = variation.lower()
+
+    if original_lower == variation_lower or len(original_lower) != len(variation_lower):
         return False
     
-    # Count changes in consonants
     consonant_changes = 0
     other_changes = 0
     
-    for i in range(len(original)):
-        if original[i] != variation[i]:
-            if original[i] not in vowels and variation[i] not in vowels:
+    for i in range(len(original_lower)):
+        if original_lower[i] != variation_lower[i]:
+            if is_consonant(original_lower[i]) and is_consonant(variation_lower[i]):
                 consonant_changes += 1
             else:
                 other_changes += 1
     
-    # Should have at least one consonant change and few other changes
     return consonant_changes >= 1 and other_changes <= 1
 
 def is_letters_swapped(original: str, variation: str) -> bool:
     """Check if some adjacent letters are swapped"""
-    if original == variation:
-        return False
-    # Check if length is the same
-    if len(original) != len(variation):
+    if len(original) != len(variation) or original == variation:
         return False
     
-    # Count differences and detect swaps
     diffs = []
     for i in range(len(original)):
         if original[i] != variation[i]:
             diffs.append(i)
     
-    # Should have exactly 2 differences for a swap
-    if len(diffs) != 2:
+    if len(diffs) != 2 or abs(diffs[0] - diffs[1]) != 1:
         return False
     
-    # Check if differences are adjacent
-    if abs(diffs[0] - diffs[1]) != 1:
-        return False
-    
-    # Check if it's a swap
     return (original[diffs[0]] == variation[diffs[1]] and
             original[diffs[1]] == variation[diffs[0]])
 
 def is_letter_removed(original: str, variation: str) -> bool:
     """Check if a letter is removed"""
-    # Check if variation is one character shorter
     if len(variation) != len(original) - 1:
         return False
     
-    # Use Levenshtein to check if it's a single character removal
     return Levenshtein.distance(original, variation) == 1
 
 def is_vowel_removed(original: str, variation: str) -> bool:
     """Check if a vowel is removed"""
     vowels = 'aeiou'
-    
-    # Check if variation is one character shorter
+    original_lower = original.lower()
+    if not any(c in vowels for c in original_lower):
+        return False
+
     if len(variation) != len(original) - 1:
         return False
     
-    # Try removing each vowel and see if we get the variation
-    for i, char in enumerate(original):
+    variation_lower = variation.lower()
+    for i, char in enumerate(original_lower):
         if char in vowels:
-            test = original[:i] + original[i+1:]
-            if test == variation:
+            test = original_lower[:i] + original_lower[i+1:]
+            if test == variation_lower:
                 return True
     
     return False
 
 def is_consonant_removed(original: str, variation: str) -> bool:
     """Check if a consonant is removed"""
-    vowels = 'aeiou'
-    
-    # Check if variation is one character shorter
+    original_lower = original.lower()
+    if not any(is_consonant(c) for c in original_lower):
+        return False
+
     if len(variation) != len(original) - 1:
         return False
     
-    # Try removing each consonant and see if we get the variation
-    for i, char in enumerate(original):
-        if char not in vowels and char.isalpha():
-            test = original[:i] + original[i+1:]
-            if test == variation:
+    variation_lower = variation.lower()
+    for i, char in enumerate(original_lower):
+        if is_consonant(char):
+            test = original_lower[:i] + original_lower[i+1:]
+            if test == variation_lower:
                 return True
     
     return False
@@ -184,13 +196,12 @@ def is_consonant_removed(original: str, variation: str) -> bool:
 def is_special_character_replaced(original: str, variation: str) -> bool:
     """Check if a special character is replaced with a different one"""
     special_chars = '!@#$%^&*()_+-=[]{}|;:,.<>?'
-    
-    if original == variation:
+    if not any(c in special_chars for c in original):
         return False
-    if len(original) != len(variation):
+
+    if original == variation or len(original) != len(variation):
         return False
     
-    # Count changes in special characters
     special_changes = 0
     other_changes = 0
     
@@ -201,18 +212,17 @@ def is_special_character_replaced(original: str, variation: str) -> bool:
             else:
                 other_changes += 1
     
-    # Should have at least one special char change and few other changes
     return special_changes >= 1 and other_changes <= 1
 
 def is_random_special_removed(original: str, variation: str) -> bool:
     """Check if a special character is removed"""
     special_chars = '!@#$%^&*()_+-=[]{}|;:,.<>?'
-    
-    # Check if variation is one character shorter
+    if not any(c in special_chars for c in original):
+        return False
+
     if len(variation) != len(original) - 1:
         return False
     
-    # Try removing each special char and see if we get the variation
     for i, char in enumerate(original):
         if char in special_chars:
             test = original[:i] + original[i+1:]
@@ -223,21 +233,25 @@ def is_random_special_removed(original: str, variation: str) -> bool:
 
 def is_title_removed(original: str, variation: str) -> bool:
     """Check if a title is removed from the name"""
-    if original == variation:
-        return False
     titles = ["Mr.", "Mrs.", "Ms.", "Mr", "Mrs", "Ms", "Miss", "Dr.", "Dr",
               "Prof.", "Prof", "Sir", "Lady", "Lord", "Dame", "Master", "Mistress",
               "Rev.", "Hon.", "Capt.", "Col.", "Lt.", "Sgt.", "Maj."]
     
+    original_lower = original.lower()
+    if not any(original_lower.startswith(title.lower() + " ") for title in titles):
+        return False
+    
+    variation_lower = variation.lower()
+    if original_lower == variation_lower:
+        return False
+
     for title in titles:
-        # Check if title was removed from beginning
-        if original.startswith(title + " "):
-            test = original[len(title)+1:]
-            if test == variation:
+        if original_lower.startswith(title.lower() + " "):
+            test = original_lower[len(title)+1:]
+            if test == variation_lower:
                 return True
-        # Check with some name manipulation
-        if original.startswith(title + " ") and Levenshtein.distance(variation, original[len(title)+1:]) <= 2:
-            return True
+            if Levenshtein.distance(variation_lower, test) <= 2:
+                return True
     
     return False
 
@@ -248,10 +262,9 @@ def is_name_abbreviated(original: str, variation: str) -> bool:
     original_parts = original.split()
     variation_parts = variation.split()
     
-    if len(original_parts) != len(variation_parts):
+    if len(original_parts) < 2 or len(original_parts) != len(variation_parts):
         return False
     
-    # Check if each part is a shortened version
     for orig, var in zip(original_parts, variation_parts):
         if len(var) >= len(orig) or not orig.startswith(var):
             return False
@@ -260,8 +273,6 @@ def is_name_abbreviated(original: str, variation: str) -> bool:
 
 def is_all_spaces_removed(original: str, variation: str) -> bool:
     """Check if all spaces are removed"""
-    if original == variation:
-        return False
     if ' ' not in original:
         return False
     
@@ -269,11 +280,9 @@ def is_all_spaces_removed(original: str, variation: str) -> bool:
 
 def is_letter_duplicated(original: str, variation: str) -> bool:
     """Check if a letter is duplicated"""
-    # Check if variation is one character longer
     if len(variation) != len(original) + 1:
         return False
     
-    # Try duplicating each letter and see if we get the variation
     for i, char in enumerate(original):
         test = original[:i] + char + original[i:]
         if test == variation:
@@ -283,11 +292,9 @@ def is_letter_duplicated(original: str, variation: str) -> bool:
 
 def is_random_letter_inserted(original: str, variation: str) -> bool:
     """Check if a random letter is inserted"""
-    # Check if variation is one character longer
     if len(variation) != len(original) + 1:
         return False
     
-    # Use Levenshtein to check if it's a single character insertion
     return Levenshtein.distance(original, variation) == 1
 
 def is_title_added(original: str, variation: str) -> bool:
@@ -298,13 +305,18 @@ def is_title_added(original: str, variation: str) -> bool:
               "Prof.", "Prof", "Sir", "Lady", "Lord", "Dame", "Master", "Mistress",
               "Rev.", "Hon.", "Capt.", "Col.", "Lt.", "Sgt.", "Maj."]
     
+    variation_lower = variation.lower()
+    original_lower = original.lower()
+
     for title in titles:
-        # Check if title was added at beginning
-        if variation.startswith(title + " " + original):
-            return True
-        # Check if title was added with some name manipulation
-        if variation.startswith(title + " ") and Levenshtein.distance(original, variation[len(title)+1:]) <= 2:
-            return True
+        title_lower = title.lower()
+        if variation_lower.startswith(title_lower + " "):
+             # Exact match
+            if variation_lower == (title_lower + " " + original_lower):
+                return True
+            # Match with manipulation
+            if Levenshtein.distance(original_lower, variation_lower[len(title_lower)+1:]) <= 2:
+                return True
     
     return False
 
@@ -314,12 +326,16 @@ def is_suffix_added(original: str, variation: str) -> bool:
         return False
     suffixes = ["Jr.", "Sr.", "III", "IV", "V", "PhD", "MD", "Esq.", "Jr", "Sr"]
     
+    original_lower = original.lower()
+    variation_lower = variation.lower()
+    
     for suffix in suffixes:
+        suffix_lower = suffix.lower()
         # Check if suffix was added at end
-        if variation == original + " " + suffix:
+        if variation_lower == original_lower + " " + suffix_lower:
             return True
         # Check if suffix was added with some name manipulation
-        if variation.endswith(" " + suffix) and Levenshtein.distance(original, variation[:-len(suffix)-1]) <= 2:
+        if variation_lower.endswith(" " + suffix_lower) and Levenshtein.distance(original_lower, variation_lower[:-len(suffix_lower)-1]) <= 2:
             return True
     
     return False
@@ -333,40 +349,35 @@ def is_initials_only(original: str, variation: str) -> bool:
     if len(parts) < 2:
         return False
     
-    # Check if variation consists of initials
-    initials = ".".join([p[0] for p in parts]) + "."
-    initials_spaced = ". ".join([p[0] for p in parts]) + "."
-    initials_no_dots = "".join([p[0] for p in parts])
+    variation_lower = variation.lower()
+    initials = ".".join([p[0] for p in parts]).lower() + "."
+    initials_spaced = ". ".join([p[0] for p in parts]).lower() + "."
+    initials_no_dots = "".join([p[0] for p in parts]).lower()
     
-    return variation in [initials, initials_spaced, initials_no_dots]
+    return variation_lower in [initials, initials_spaced, initials_no_dots]
 
 def is_name_parts_permutation(original: str, variation: str) -> bool:
     """Check if the name parts are permuted"""
-    if original == variation:
-        return True # This is a special case, a permutation of 1 is the same
     original_parts = original.split()
     variation_parts = variation.split()
     
-    if len(original_parts) != len(variation_parts) or len(original_parts) < 2:
+    if len(original_parts) < 2 or len(original_parts) != len(variation_parts):
         return False
-    
-    # Check if variation parts are a permutation of original parts
+
     return sorted(original_parts) == sorted(variation_parts) and original_parts != variation_parts
 
 def is_first_name_initial(original: str, variation: str) -> bool:
     """Check if first name is reduced to initial"""
-    if original == variation:
-        return False
     parts = original.split()
     
     if len(parts) < 2:
         return False
     
-    # Compare with original first name as initial
-    test_variation = parts[0][0] + ". " + " ".join(parts[1:])
-    test_variation2 = parts[0][0] + "." + " ".join(parts[1:])
+    variation_lower = variation.lower()
+    test_variation = (parts[0][0] + ". " + " ".join(parts[1:])).lower()
+    test_variation2 = (parts[0][0] + "." + " ".join(parts[1:])).lower()
     
-    return variation in [test_variation, test_variation2]
+    return variation_lower in [test_variation, test_variation2]
 
 # Map rule names to their evaluation functions
 RULE_EVALUATORS = {
@@ -376,7 +387,7 @@ RULE_EVALUATORS = {
     "replace_random_consonant_with_random_consonant": is_consonant_replaced,
     "replace_random_special_character_with_random_special_character": is_special_character_replaced,
     "swap_random_letter": is_letters_swapped,
-    "swap_adjacent_consonants": is_letters_swapped,  # Simplified, would need more specific check
+    "swap_adjacent_consonants": is_adjacent_consonants_swapped,
     "swap_adjacent_syllables": is_letters_swapped,   # Simplified, would need more specific check
     "delete_random_letter": is_letter_removed,
     "remove_random_vowel": is_vowel_removed,
@@ -433,4 +444,4 @@ def evaluate_rule_compliance(
     # Calculate the compliance ratio
     compliance_ratio = len(all_compliant_variations) / len(variations) if variations else 0.0
     
-    return compliant_variations, compliance_ratio 
+    return compliant_variations, compliance_ratio
