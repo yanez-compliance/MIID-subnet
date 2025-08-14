@@ -163,12 +163,12 @@ class QueryGenerator:
         # Mandatory LLM judge with robust fallbacks
         llm_issues = []
         neuron_cfg = getattr(self.config, 'neuron', self.config)
-        primary_judge_model = getattr(neuron_cfg, 'ollama_judge_model', 'llama3.2:latest')
-        judge_fallback_models = getattr(neuron_cfg, 'ollama_judge_fallback_models', [])
+        primary_judge_model = getattr(neuron_cfg, 'ollama_judge_model', 'llama3.1:latest')
+        judge_fallback_models = getattr(neuron_cfg, 'ollama_judge_fallback_models', ['llama3.2:latest', 'tinyllama:latest'])
         judge_models_to_try = [primary_judge_model] + judge_fallback_models
 
         primary_judge_timeout = getattr(neuron_cfg, 'ollama_judge_timeout', 60)
-        judge_fallback_timeouts = getattr(neuron_cfg, 'ollama_judge_fallback_timeouts', [])
+        judge_fallback_timeouts = getattr(neuron_cfg, 'ollama_judge_fallback_timeouts', [90,100, 120])
         judge_timeouts_to_try = [primary_judge_timeout] + judge_fallback_timeouts
 
         judge_success = False
