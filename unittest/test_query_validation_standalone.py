@@ -81,27 +81,30 @@ def validate_query_template_logic(
         rule_meta = labels.get("rule_based") or {}
         rule_pct = rule_meta.get("percentage") if isinstance(rule_meta, dict) else None
         if isinstance(rule_pct, int):
-            # Check if the percentage is mentioned at all
-            if not find_percent(query_template, rule_pct):
-                # MORE PRECISE SCENARIO CHECK: Use the specific rule descriptions from labels
-                rule_descriptions_for_this_query = rule_meta.get("rule_descriptions", {})
-                if rule_descriptions_for_this_query:
-                    actual_descriptions = [d.lower() for d in rule_descriptions_for_this_query.values()]
-                    if any(desc in lowered for desc in actual_descriptions):
-                        issues.append(
-                            f"Specify that approximately {rule_pct}% of variations should follow the listed rule-based transformations."
-                        )
-                    else:
-                        # Fallback for cases where descriptions might not be perfectly matched
-                        issues.append(f"Specify approximately {rule_pct}% to follow rule-based transformations.")
-                else:
-                    issues.append(f"Specify approximately {rule_pct}% to follow rule-based transformations.")
+            rule_descriptions_for_this_query = rule_meta.get("rule_descriptions", {}) if isinstance(rule_meta, dict) else {}
+            descriptions_list = []
+            if isinstance(rule_descriptions_for_this_query, dict):
+                descriptions_list = [d for d in rule_descriptions_for_this_query.values() if isinstance(d, str) and d]
 
-            # AMBIGUITY CHECK: If the percentage is listed multiple times
+            # Reveal the percentage if missing
+            percent_present = find_percent(query_template, rule_pct)
+            if not percent_present:
+                issues.append(f"Approximately {rule_pct}% of the variations should follow rule-based transformations.")
+
+            # Reveal labels (only the ones missing from the query) if any are missing
+            if descriptions_list:
+                missing_labels = [desc for desc in descriptions_list if desc.lower() not in lowered]
+                if missing_labels:
+                    issues.append(f"Apply these rule-based transformations: {'; '.join(missing_labels)}.")
+
+            # Duplicate percentage ambiguity -> explicit clarification
             if query_template.count(f"{rule_pct}%") > 1:
                 issues.append(
-                    f"Clarify that the {rule_pct}% applies to the total set of rule-based variations, "
-                    "with all listed rules represented across that set."
+                    (
+                        f"We want {rule_pct}% of the name variations to be rule-based. "
+                        "Each variation should have at least one transformation rule applied—some may have only one rule, while others may have multiple. "
+                        "Importantly, all listed rules must be represented across the set of rule-based name variations."
+                    )
                 )
 
     # Simulate judge LLM analysis for specific problematic patterns
@@ -325,7 +328,7 @@ Insert a random letter (e.g. 'Emily' becoming 'Emlyie') in approximately 26% of 
         print(f"  - {issue}")
     
     # Check that our specific clarification was added
-    expected_clarification = "Clarify that the 26% applies to the total set of rule-based variations"
+    expected_clarification = "We want 26% of the name variations to be rule-based"
     assert any(expected_clarification in issue for issue in issues), f"Expected clarification '{expected_clarification}' not found in issues."
 
     # Test 8: Query missing rule percentage but includes rule descriptions
@@ -358,7 +361,7 @@ Insert a random letter (e.g. 'Emily' becoming 'Emlyie') in approximately 26% of 
         print(f"  - {issue}")
     
     # Check that our specific clarification for this new scenario was added
-    expected_clarification = "Specify that approximately 40% of variations should follow the listed rule-based transformations."
+    expected_clarification = "Approximately 40% of the variations should follow rule-based transformations."
     assert any(expected_clarification in issue for issue in issues), f"Expected clarification '{expected_clarification}' not found in issues."
 
 
