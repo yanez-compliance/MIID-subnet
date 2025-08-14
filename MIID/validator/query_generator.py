@@ -3,6 +3,8 @@ import bittensor as bt
 import ollama
 from typing import Dict, Any, Tuple, List
 import os
+import re
+import json
 
 # Make sure this import is outside any function or conditional blocks
 from faker import Faker  # Ensure this is always imported
@@ -44,31 +46,157 @@ class QueryGenerator:
         bt.logging.info(f"use_default_query: {self.use_default_query}#########################################")
         bt.logging.info(f"QueryGenerator initialized with use_default_query={self.use_default_query}")
     
-    def validate_query_template(self, query_template: str) -> Tuple[bool, str]:
+    def validate_query_template(
+        self,
+        query_template: str,
+        labels: Dict[str, Any] = None,
+    ) -> Tuple[bool, str, List[str]]:
         """
-        Validate that a query template contains exactly one {name} placeholder and is properly formatted.
-        
-        Args:
-            query_template: The query template to validate
-            
+        Validate that a query template is structurally valid and semantically covers
+        required specifications from labels. Returns issues for missing/unclear parts
+        so we can append minimal clarifications to the prompt without revealing the
+        entire specification.
+
         Returns:
-            Tuple[bool, str]: (is_valid, error_message)
+            Tuple[bool, str, List[str]]: (structurally_valid, error_message, issues)
+                - structurally_valid: True only if the template is safe to use (e.g., exactly one {name})
+                - error_message: Blocking error if not structurally valid
+                - issues: Non-blocking issues (missing/unclear bits) for append-only clarifications
         """
         if not query_template:
-            return False, "Query template is empty"
-        
-        # Check for {name} placeholder
-        if "{name}" not in query_template:
-            return False, "Query template is missing {name} placeholder"
-        
-        # Check for required keywords
-        required_keywords = ["phonetic", "orthographic", "rule"]
-        missing_keywords = [kw for kw in required_keywords if kw not in query_template.lower()]
-        
-        if missing_keywords:
-            return False, f"Query template missing required keywords: {', '.join(missing_keywords)}"
-        
-        return True, "Query template is valid"
+            return False, "Query template is empty", []
+
+        # Require exactly one {name} placeholder
+        placeholder_count = query_template.count("{name}")
+        if placeholder_count != 1:
+            return False, "Query template must contain exactly one {name} placeholder", []
+
+        # Collect non-blocking issues
+        issues: List[str] = []
+
+        lowered = query_template.lower()
+        # Soft checks: absence will be treated as an issue (not a hard error)
+        if "phonetic" not in lowered:
+            issues.append("Mention phonetic similarity requirements.")
+        if "orthographic" not in lowered:
+            issues.append("Mention orthographic similarity requirements.")
+        if "rule" not in lowered and "transformation" not in lowered:
+            issues.append("Mention rule-based transformation requirement.")
+
+        # Label-aware checks to detect missing numbers/levels
+        if labels:
+            # Variation count
+            variation_count = labels.get("variation_count")
+            if isinstance(variation_count, int):
+                if str(variation_count) not in query_template:
+                    issues.append(f"Specify exact number of variations: {variation_count}.")
+
+            # Helper to verify percentages and levels
+            def compute_expected_percentages(sim_config: Dict[str, float]) -> List[Tuple[str, int]]:
+                expected: List[Tuple[str, int]] = []
+                for level, frac in sim_config.items():
+                    try:
+                        # Match how we render elsewhere: int(frac*100)
+                        pct = int(frac * 100)
+                        expected.append((level, pct))
+                    except Exception:
+                        continue
+                return expected
+
+            def find_percent(text: str, percent: int) -> bool:
+                # Look for standalone percentage tokens like "20%" (avoid matching 120% etc.)
+                return re.search(rf"(?<!\d){percent}%", text) is not None
+
+            # Phonetic similarity checks
+            phonetic_cfg = labels.get("phonetic_similarity") or {}
+            if isinstance(phonetic_cfg, dict) and phonetic_cfg:
+                for level, pct in compute_expected_percentages(phonetic_cfg):
+                    # If either the percent or level indicator is absent, request clarification
+                    if not find_percent(query_template, pct):
+                        issues.append(f"Indicate {pct}% share for phonetic '{level}'.")
+                    # Allow synonyms like 'lightly' for Light; keep it soft by only checking when level token is fully missing
+                    if level.lower() not in lowered:
+                        # Only add if not already covered by a more general phrase
+                        issues.append(f"State the phonetic level: {level}.")
+
+            # Orthographic similarity checks
+            orthographic_cfg = labels.get("orthographic_similarity") or {}
+            if isinstance(orthographic_cfg, dict) and orthographic_cfg:
+                for level, pct in compute_expected_percentages(orthographic_cfg):
+                    if not find_percent(query_template, pct):
+                        issues.append(f"Indicate {pct}% share for orthographic '{level}'.")
+                    if level.lower() not in lowered:
+                        issues.append(f"State the orthographic level: {level}.")
+
+            # Rule-based percentage
+            rule_meta = labels.get("rule_based") or {}
+            rule_pct = rule_meta.get("percentage") if isinstance(rule_meta, dict) else None
+            if isinstance(rule_pct, int):
+                if not find_percent(query_template, rule_pct):
+                    issues.append(f"Specify approximately {rule_pct}% to follow rule-based transformations.")
+
+        # Mandatory LLM judge with robust fallbacks
+        llm_issues = []
+        neuron_cfg = getattr(self.config, 'neuron', self.config)
+        primary_judge_model = getattr(neuron_cfg, 'ollama_judge_model', 'tinyllama:latest')
+        judge_fallback_models = getattr(neuron_cfg, 'ollama_judge_fallback_models', [])
+        judge_models_to_try = [primary_judge_model] + judge_fallback_models
+
+        primary_judge_timeout = getattr(neuron_cfg, 'ollama_judge_timeout', 10)
+        judge_fallback_timeouts = getattr(neuron_cfg, 'ollama_judge_fallback_timeouts', [])
+        judge_timeouts_to_try = [primary_judge_timeout] + judge_fallback_timeouts
+
+        judge_success = False
+        for judge_model in judge_models_to_try:
+            for judge_timeout in judge_timeouts_to_try:
+                try:
+                    bt.logging.info(f"Attempting judge with model: {judge_model} and timeout: {judge_timeout}s")
+                    client = ollama.Client(host=neuron_cfg.ollama_url, timeout=judge_timeout)
+                    judge_prompt = (
+                        "You are a strict validator. Given a query template and labels, return a compact JSON object with a key 'issues' that lists only the MINIMAL missing or unclear elements that must be clarified to fully cover the labels. Do not restate what is already clearly present.\n\n"
+                        f"TEMPLATE:\n{query_template}\n\n"
+                        f"LABELS (JSON):\n{json.dumps(labels or {}, ensure_ascii=False)}\n\n"
+                        "Return ONLY JSON like: {\"issues\":[\"...\"]}"
+                    )
+                    resp = client.generate(model=judge_model, prompt=judge_prompt)
+                    text = resp.get('response', '').strip()
+                    if not text.startswith('{'):
+                        match = re.search(r"\{[\s\S]*\}$", text)
+                        if match:
+                            text = match.group(0)
+                        else:
+                            raise ValueError("Invalid JSON response")
+                    parsed = json.loads(text)
+                    llm_issues = parsed.get('issues', []) if isinstance(parsed, dict) else []
+                    if isinstance(llm_issues, list):
+                        judge_success = True
+                        break
+                except Exception as e:
+                    bt.logging.warning(f"Judge failed with model: {judge_model} and timeout: {judge_timeout}s. Error: {e}")
+                    if "timed out" in str(e).lower():
+                        continue
+                    else:
+                        break
+            if judge_success:
+                break
+
+        if not judge_success:
+            bt.logging.error("All judge models and timeouts failed. Proceeding with static checks only.")
+            llm_issues = []
+
+        for it in llm_issues:
+            if isinstance(it, str) and it not in issues:
+                issues.append(it)
+
+        # Deduplicate while preserving order
+        seen = set()
+        deduped_issues: List[str] = []
+        for it in issues:
+            if it not in seen:
+                deduped_issues.append(it)
+                seen.add(it)
+
+        return True, "Query template is acceptable with clarifications", deduped_issues
     
     async def generate_complex_query(
         self,
@@ -94,7 +222,7 @@ class QueryGenerator:
             "variation_count": variation_count,
             "phonetic_similarity": phonetic_similarity,
             "orthographic_similarity": orthographic_similarity,
-            "rule_based": rule_metadata  # Add rule-based metadata
+            "rule_based": {**(rule_metadata or {}), "percentage": rule_percentage}  # include percentage for validation
         }
         
         # If use_default flag is True, skip LLM and use default template
@@ -112,8 +240,14 @@ class QueryGenerator:
                 "variation_count": DEFAULT_VARIATION_COUNT,
                 "phonetic_similarity": {"Medium": 0.5},
                 "orthographic_similarity": {"Medium": 0.5},
-                "rule_based": rule_metadata
+                "rule_based": {**(rule_metadata or {}), "percentage": rule_percentage}
             }
+
+            # Validate and minimally clarify
+            _ok, _msg, issues = self.validate_query_template(default_template, labels)
+            if issues:
+                suffix = " Hint: " + "; ".join(issues)
+                default_template = default_template + " " + suffix
             
             bt.logging.warning(f"Use default query template: {default_template}")
             return default_template, labels, None, None
@@ -174,11 +308,15 @@ class QueryGenerator:
                     response = client.generate(model=model, prompt=prompt)
                     query_template = response['response'].strip()
                     
-                    # Validate the generated template
-                    is_valid, error_msg = self.validate_query_template(query_template)
+                    # Validate and minimally clarify the generated template
+                    is_valid, error_msg, issues = self.validate_query_template(query_template, labels)
                     if not is_valid:
                         bt.logging.warning(f"LLM '{model}' generated invalid template: {error_msg}. Trying next model/timeout.")
                         continue  # Try next timeout or model
+
+                    if issues:
+                        suffix = " Hint: " + "; ".join(issues)
+                        query_template = query_template + " " + suffix
 
                     bt.logging.info(f"Successfully generated query with model: {model} and timeout: {timeout}s")
                     return query_template, labels, model, timeout
@@ -194,6 +332,10 @@ class QueryGenerator:
                         break # break from timeout loop, and try next model.
             
         bt.logging.error("All models and timeouts failed. Falling back to a simple template.")
+        # Validate and minimally clarify simple template before returning
+        _ok, _msg, issues = self.validate_query_template(simple_template, labels)
+        if issues:
+            simple_template = simple_template + " " + (" Hint: " + "; ".join(issues))
         return simple_template, labels, None, None
     
     async def build_queries(self) -> Tuple[List[str], str, Dict[str, Any], str, int]:
@@ -325,27 +467,27 @@ class QueryGenerator:
             variation_count = DEFAULT_VARIATION_COUNT
             phonetic_config = {"Medium": 0.5}
             orthographic_config = {"Medium": 0.5}
-            
+            # Fallback rule-based percentage
+            rp = 30
             # Generate rule-based template and metadata for fallback
-            rule_template, rule_metadata = get_rule_template_and_metadata(rule_percentage)
+            rule_template, rule_metadata = get_rule_template_and_metadata(rp)
             
-            # Add clarifying sentence to fallback template
-            clarifying_prefix = "The following name is the seed name to generate variations for: {name}. "
-            query_template = f"{clarifying_prefix}Generate {variation_count} variations of the name {{name}}, ensuring phonetic similarity: {phonetic_config}, and orthographic similarity: {orthographic_config}, and also include {rule_percentage}% of variations that follow: {rule_template}."
-            
-            # Validate the fallback template
-            is_valid, error_msg = self.validate_query_template(query_template)
-            if not is_valid:
-                bt.logging.error(f"Fallback template validation failed: {error_msg}")
-                # Use an absolutely basic template as last resort with clarifying sentence
-                query_template = f"{clarifying_prefix}Generate {variation_count} variations of the name {{name}}. {rule_template}"
-            
+            # Build labels first
             query_labels = {
                 "variation_count": variation_count,
                 "phonetic_similarity": phonetic_config,
                 "orthographic_similarity": orthographic_config,
-                "rule_based": rule_metadata
+                "rule_based": {**rule_metadata, "percentage": rp} if isinstance(rule_metadata, dict) else {"percentage": rp}
             }
+
+            # Add clarifying sentence to fallback template
+            clarifying_prefix = "The following name is the seed name to generate variations for: {name}. "
+            query_template = f"{clarifying_prefix}Generate {variation_count} variations of the name {{name}}, ensuring phonetic similarity: {phonetic_config}, and orthographic similarity: {orthographic_config}, and also include {rp}% of variations that follow: {rule_template}."
+            
+            # Validate and minimally clarify the fallback template
+            _ok, _msg, issues = self.validate_query_template(query_template, query_labels)
+            if issues:
+                query_template = query_template + " " + (" Hint: " + "; ".join(issues))
             
             # Generate fallback names with mix of single and full names
             fake = Faker(LATIN_LOCALES)
