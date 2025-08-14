@@ -19,10 +19,10 @@ def validate_query_template_logic(
     if not query_template:
         return False, "Query template is empty", []
 
-    # Require exactly one {name} placeholder
+    # Require at least one {name} placeholder
     placeholder_count = query_template.count("{name}")
-    if placeholder_count != 1:
-        return False, "Query template must contain exactly one {name} placeholder", []
+    if placeholder_count < 1:
+        return False, "Query template must contain at least one {name} placeholder", []
 
     # Collect non-blocking issues
     issues: List[str] = []
@@ -84,6 +84,13 @@ def validate_query_template_logic(
         if isinstance(rule_pct, int):
             if not find_percent(query_template, rule_pct):
                 issues.append(f"Specify approximately {rule_pct}% to follow rule-based transformations.")
+            
+            # AMBIGUITY CHECK: If the percentage is listed multiple times
+            if query_template.count(f"{rule_pct}%") > 1:
+                issues.append(
+                    f"Clarify that the {rule_pct}% applies to the total set of rule-based variations, "
+                    "with all listed rules represented across that set."
+                )
 
     # Simulate judge LLM analysis for specific problematic patterns
     if "additionally" in lowered:
@@ -261,8 +268,8 @@ def test_problematic_queries():
     print(f"Structurally valid: {is_valid}")
     print(f"Error: {error_msg}")
     
-    # Test 6: Query with multiple {name} placeholders
-    print("\n[TEST 6] Query with multiple {name} placeholders (should fail)")
+    # Test 6: Query with multiple {name} placeholders is now valid
+    print("\n[TEST 6] Query with multiple {name} placeholders (should now be VALID)")
     print("-"*70)
     
     query6 = "Generate variations of {name} based on {name}"
@@ -271,19 +278,45 @@ def test_problematic_queries():
     
     print(f"Query: {query6}")
     print(f"Structurally valid: {is_valid}")
-    print(f"Error: {error_msg}")
+    print(f"Issues found: {issues if issues else 'None'}")
     
-    print("\n" + "="*70)
-    print("SUMMARY")
-    print("="*70)
-    print("The validation system successfully:")
-    print("1. Identifies confusing 'Additionally' sections that need clarification")
-    print("2. Catches ambiguous percentage distributions (like 100% without levels)")
-    print("3. Detects truncated queries")
-    print("4. Validates simple queries as clear")
-    print("5. Rejects structurally invalid queries (missing/multiple {name})")
-    print("\nClarifications are appended as minimal hints without revealing the full answer.")
+    # Test 7: Query with ambiguous rule percentages
+    print("\n[TEST 7] Query with ambiguous rule percentages (should be clarified)")
+    print("-"*70)
+
+    query7 = """
+"Generate 13 execution vectors for each target identity {name}, including phonetic similarity variations:
+10% of variations should be 'Light' similarities (e.g. variants that sound similar but not identical, such as 'Smith' becoming 'Schmidt')
+30% of variations should be 'Medium' similarities (e.g. variants that are clearly related but have some differences in pronunciation, such as 'Johnson' becoming 'Jenson')
+60% of variations should be 'Far' similarities (e.g. variants that sound very different but still share some phonetic characteristics, such as 'Williams' becoming 'Villiers')
+
+Also, generate 100% of variations for orthographic similarity:
+Ensure all variations are visually similar to the original name {name}, with possible typos or slight alterations
+
+Additionally, generate variations that perform these rule-based transformations:
+Swap adjacent consonants (e.g. 'John' becoming 'Hohn') in approximately 26% of variations
+Insert a random letter (e.g. 'Emily' becoming 'Emlyie') in approximately 26% of variations"
+"""
+    labels7 = {
+        "variation_count": 13,
+        "phonetic_similarity": {"Light": 0.1, "Medium": 0.3, "Far": 0.6},
+        "orthographic_similarity": {"Light": 1.0}, # Assuming 100% Light
+        "rule_based": {"percentage": 26}
+    }
+    
+    is_valid, error_msg, issues = validate_query_template_logic(query7, labels7)
+    
+    print(f"Query excerpt: {query7[:150]}...")
+    print(f"Structurally valid: {is_valid}")
+    print(f"Issues found ({len(issues)}):")
+    for issue in issues:
+        print(f"  - {issue}")
+    
+    # Check that our specific clarification was added
+    expected_clarification = "Clarify that the 26% applies to the total set of rule-based variations"
+    assert any(expected_clarification in issue for issue in issues), f"Expected clarification '{expected_clarification}' not found in issues."
 
 
 if __name__ == "__main__":
+    # A simple way to run the new test alongside existing ones
     test_problematic_queries()
