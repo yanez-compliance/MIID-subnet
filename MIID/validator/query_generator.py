@@ -138,11 +138,11 @@ class QueryGenerator:
         # Mandatory LLM judge with robust fallbacks
         llm_issues = []
         neuron_cfg = getattr(self.config, 'neuron', self.config)
-        primary_judge_model = getattr(neuron_cfg, 'ollama_judge_model', 'tinyllama:latest')
+        primary_judge_model = getattr(neuron_cfg, 'ollama_judge_model', 'llama3.2:latest')
         judge_fallback_models = getattr(neuron_cfg, 'ollama_judge_fallback_models', [])
         judge_models_to_try = [primary_judge_model] + judge_fallback_models
 
-        primary_judge_timeout = getattr(neuron_cfg, 'ollama_judge_timeout', 10)
+        primary_judge_timeout = getattr(neuron_cfg, 'ollama_judge_timeout', 60)
         judge_fallback_timeouts = getattr(neuron_cfg, 'ollama_judge_fallback_timeouts', [])
         judge_timeouts_to_try = [primary_judge_timeout] + judge_fallback_timeouts
 
@@ -150,7 +150,7 @@ class QueryGenerator:
         for judge_model in judge_models_to_try:
             for judge_timeout in judge_timeouts_to_try:
                 try:
-                    bt.logging.info(f"Attempting judge with model: {judge_model} and timeout: {judge_timeout}s")
+                    bt.logging.info(f"🔍 Attempting judge with model: {judge_model} and timeout: {judge_timeout}s")
                     client = ollama.Client(host=neuron_cfg.ollama_url, timeout=judge_timeout)
                     judge_prompt = (
                         "You are a strict validator. Given a query template and labels, return a compact JSON object with a key 'issues' that lists only the MINIMAL missing or unclear elements that must be clarified to fully cover the labels. Do not restate what is already clearly present.\n\n"
@@ -170,18 +170,25 @@ class QueryGenerator:
                     llm_issues = parsed.get('issues', []) if isinstance(parsed, dict) else []
                     if isinstance(llm_issues, list):
                         judge_success = True
+                        bt.logging.info(f"✅ Judge succeeded with model: {judge_model} and timeout: {judge_timeout}s")
+                        if llm_issues:
+                            bt.logging.info(f"   Judge found issues: {llm_issues}")
+                        else:
+                            bt.logging.info(f"   Judge found no issues - query is clear")
                         break
                 except Exception as e:
-                    bt.logging.warning(f"Judge failed with model: {judge_model} and timeout: {judge_timeout}s. Error: {e}")
+                    bt.logging.warning(f"❌ Judge failed with model: {judge_model} and timeout: {judge_timeout}s. Error: {e}")
                     if "timed out" in str(e).lower():
+                        bt.logging.warning("⏰ Judge timeout - trying next timeout/model")
                         continue
                     else:
+                        bt.logging.error(f"💥 Judge error - trying next model")
                         break
             if judge_success:
                 break
 
         if not judge_success:
-            bt.logging.error("All judge models and timeouts failed. Proceeding with static checks only.")
+            bt.logging.error("💥 All judge models and timeouts failed. Proceeding with static checks only.")
             llm_issues = []
 
         for it in llm_issues:
@@ -195,6 +202,14 @@ class QueryGenerator:
             if it not in seen:
                 deduped_issues.append(it)
                 seen.add(it)
+
+        # Log final validation results
+        if deduped_issues:
+            bt.logging.warning(f"⚠️  Final validation found {len(deduped_issues)} issues:")
+            for i, issue in enumerate(deduped_issues, 1):
+                bt.logging.warning(f"   {i}. {issue}")
+        else:
+            bt.logging.info(f"✅ Final validation: No issues found - query is clear")
 
         return True, "Query template is acceptable with clarifications", deduped_issues
     
@@ -248,8 +263,13 @@ class QueryGenerator:
             if issues:
                 suffix = " Hint: " + "; ".join(issues)
                 default_template = default_template + " " + suffix
+                bt.logging.warning(f"⚠️  Default template has issues - added clarifications:")
+                bt.logging.warning(f"   Issues Found: {issues}")
+                bt.logging.warning(f"   Added Hints: {suffix}")
+            else:
+                bt.logging.info(f"✅ Default template is clean (no issues found)")
             
-            bt.logging.warning(f"Use default query template: {default_template}")
+            bt.logging.info(f"🔄 Using default query template: {default_template}")
             return default_template, labels, None, None
         
         # Format the similarity specifications for the prompt
@@ -311,31 +331,49 @@ class QueryGenerator:
                     # Validate and minimally clarify the generated template
                     is_valid, error_msg, issues = self.validate_query_template(query_template, labels)
                     if not is_valid:
-                        bt.logging.warning(f"LLM '{model}' generated invalid template: {error_msg}. Trying next model/timeout.")
+                        bt.logging.error(f"❌ LLM '{model}' generated INVALID template:")
+                        bt.logging.error(f"   Failed Query: {query_template}")
+                        bt.logging.error(f"   Reason: {error_msg}")
+                        bt.logging.error(f"   Trying next model/timeout.")
                         continue  # Try next timeout or model
 
                     if issues:
                         suffix = " Hint: " + "; ".join(issues)
                         query_template = query_template + " " + suffix
+                        bt.logging.warning(f"⚠️  LLM '{model}' generated query with issues - added clarifications:")
+                        bt.logging.warning(f"   Original Query: {query_template[:-len(suffix)]}")
+                        bt.logging.warning(f"   Issues Found: {issues}")
+                        bt.logging.warning(f"   Added Hints: {suffix}")
+                    else:
+                        bt.logging.info(f"✅ LLM '{model}' generated CLEAN query (no issues found)")
 
-                    bt.logging.info(f"Successfully generated query with model: {model} and timeout: {timeout}s")
+                    bt.logging.info(f"✅ Successfully generated query with model: {model} and timeout: {timeout}s")
+                    bt.logging.info(f"   Final Query: {query_template}")
                     return query_template, labels, model, timeout
 
                 except Exception as e:
-                    bt.logging.warning(f"Failed to generate query with model: {model} and timeout: {timeout}s. Error: {e}")
+                    bt.logging.error(f"❌ Failed to generate query with model: {model} and timeout: {timeout}s")
+                    bt.logging.error(f"   Error: {e}")
                     if "timed out" in str(e).lower():
-                        bt.logging.warning("Timeout occurred. Trying next timeout or model.")
+                        bt.logging.warning("⏰ Timeout occurred. Trying next timeout or model.")
                         continue # Move to next timeout
                     else:
                         # For other errors, we can break from the inner loop and try the next model
-                        bt.logging.warning(f"An unexpected error occurred. Trying next model.")
+                        bt.logging.error(f"💥 An unexpected error occurred. Trying next model.")
                         break # break from timeout loop, and try next model.
             
-        bt.logging.error("All models and timeouts failed. Falling back to a simple template.")
+        bt.logging.error("💥 All models and timeouts failed. Falling back to a simple template.")
         # Validate and minimally clarify simple template before returning
         _ok, _msg, issues = self.validate_query_template(simple_template, labels)
         if issues:
             simple_template = simple_template + " " + (" Hint: " + "; ".join(issues))
+            bt.logging.warning(f"⚠️  Simple template also has issues - added clarifications:")
+            bt.logging.warning(f"   Issues Found: {issues}")
+            bt.logging.warning(f"   Added Hints: Hint: {'; '.join(issues)}")
+        else:
+            bt.logging.info(f"✅ Simple template is clean (no issues found)")
+        
+        bt.logging.info(f"🔄 Using fallback simple template: {simple_template}")
         return simple_template, labels, None, None
     
     async def build_queries(self) -> Tuple[List[str], str, Dict[str, Any], str, int]:

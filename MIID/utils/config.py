@@ -347,15 +347,15 @@ def add_validator_args(cls, parser):
     parser.add_argument(
         '--neuron.ollama_judge_model',
         type=str,
-        help="The Ollama model to use for judging query templates (default: tinyllama:latest)",
-        default="tinyllama:latest"
+        help="The Ollama model to use for judging query templates (default: llama3.2:latest)",
+        default="llama3.2:latest"
     )
 
     parser.add_argument(
         '--neuron.ollama_judge_timeout',
         type=int,
         help="Timeout for the Ollama judge request in seconds.",
-        default=10
+        default=60
     )
 
     parser.add_argument(
@@ -363,7 +363,7 @@ def add_validator_args(cls, parser):
         type=str,
         nargs='+',
         help="A list of fallback Ollama models to try for judging if the primary fails.",
-        default=['llama3.2:latest']
+        default=['tinyllama:latest']
     )
 
     parser.add_argument(
@@ -371,7 +371,7 @@ def add_validator_args(cls, parser):
         type=int,
         nargs='+',
         help="A list of fallback timeouts (in seconds) to try for Ollama judge requests.",
-        default=[15, 20]
+        default=[100, 120]
     )
 
 
