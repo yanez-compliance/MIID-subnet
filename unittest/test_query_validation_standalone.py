@@ -7,7 +7,6 @@ handles problematic queries from miners.
 import re
 from typing import Dict, List, Tuple, Any
 
-
 def validate_query_template_logic(
     query_template: str,
     labels: Dict[str, Any] = None
@@ -82,9 +81,22 @@ def validate_query_template_logic(
         rule_meta = labels.get("rule_based") or {}
         rule_pct = rule_meta.get("percentage") if isinstance(rule_meta, dict) else None
         if isinstance(rule_pct, int):
+            # Check if the percentage is mentioned at all
             if not find_percent(query_template, rule_pct):
-                issues.append(f"Specify approximately {rule_pct}% to follow rule-based transformations.")
-            
+                # MORE PRECISE SCENARIO CHECK: Use the specific rule descriptions from labels
+                rule_descriptions_for_this_query = rule_meta.get("rule_descriptions", {})
+                if rule_descriptions_for_this_query:
+                    actual_descriptions = [d.lower() for d in rule_descriptions_for_this_query.values()]
+                    if any(desc in lowered for desc in actual_descriptions):
+                        issues.append(
+                            f"Specify that approximately {rule_pct}% of variations should follow the listed rule-based transformations."
+                        )
+                    else:
+                        # Fallback for cases where descriptions might not be perfectly matched
+                        issues.append(f"Specify approximately {rule_pct}% to follow rule-based transformations.")
+                else:
+                    issues.append(f"Specify approximately {rule_pct}% to follow rule-based transformations.")
+
             # AMBIGUITY CHECK: If the percentage is listed multiple times
             if query_template.count(f"{rule_pct}%") > 1:
                 issues.append(
@@ -316,7 +328,40 @@ Insert a random letter (e.g. 'Emily' becoming 'Emlyie') in approximately 26% of 
     expected_clarification = "Clarify that the 26% applies to the total set of rule-based variations"
     assert any(expected_clarification in issue for issue in issues), f"Expected clarification '{expected_clarification}' not found in issues."
 
+    # Test 8: Query missing rule percentage but includes rule descriptions
+    print("\n[TEST 8] Query with rule descriptions but MISSING percentage (should be clarified)")
+    print("-"*70)
+
+    query8 = """
+"Generate 6 execution vectors for each target identity {name}, ensuring phonetic similarity: 30% of variations are Light (e.g. 'Johne', 'Joane'), 70% are Medium (e.g. 'Jonas', 'Janie'), and orthographic similarity: 33% are Light (e.g. 'Johny', 'Janeo'), 34% are Medium (e.g. 'Johnson', 'Jennyson'), and 33% are Far (e.g. 'Jeanne', 'Jany'). Additionally, generate variations that perform the following rule-based transformations: Delete a random letter (e.g. 'Jo hn' becomes 'Jo h'), Replace spaces with special characters (e.g. 'John Smith' becomes 'Jon_Smith!'), and Swap adjacent syllables (e.g. 'John-Doe' becomes 'Johnd-Oe'). Include all of these requirements in the generated execution vectors for each target identity {name}."
+"""
+    labels8 = {
+        "variation_count": 6,
+        "phonetic_similarity": {"Light": 0.3, "Medium": 0.7},
+        "orthographic_similarity": {"Light": 0.33, "Medium": 0.34, "Far": 0.33},
+        "rule_based": {
+            "percentage": 40,  # The query is missing this
+            "rule_descriptions": {
+                "delete_random_letter": "Delete a random letter",
+                "replace_spaces_with_special_characters": "Replace spaces with special characters",
+                "swap_adjacent_syllables": "Swap adjacent syllables"
+            }
+        }
+    }
+    
+    is_valid, error_msg, issues = validate_query_template_logic(query8, labels8)
+    
+    print(f"Query excerpt: {query8[:150]}...")
+    print(f"Structurally valid: {is_valid}")
+    print(f"Issues found ({len(issues)}):")
+    for issue in issues:
+        print(f"  - {issue}")
+    
+    # Check that our specific clarification for this new scenario was added
+    expected_clarification = "Specify that approximately 40% of variations should follow the listed rule-based transformations."
+    assert any(expected_clarification in issue for issue in issues), f"Expected clarification '{expected_clarification}' not found in issues."
+
 
 if __name__ == "__main__":
-    # A simple way to run the new test alongside existing ones
+    # A simple way to run all tests
     test_problematic_queries()
