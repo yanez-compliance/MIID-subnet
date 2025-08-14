@@ -344,6 +344,36 @@ def add_validator_args(cls, parser):
         default=900, # MIID: Maximum timeout limit for adaptive timeout calculation
     )
 
+    parser.add_argument(
+        '--neuron.ollama_judge_model',
+        type=str,
+        help="The Ollama model to use for judging query templates (default: tinyllama:latest)",
+        default="tinyllama:latest"
+    )
+
+    parser.add_argument(
+        '--neuron.ollama_judge_timeout',
+        type=int,
+        help="Timeout for the Ollama judge request in seconds.",
+        default=10
+    )
+
+    parser.add_argument(
+        '--neuron.ollama_judge_fallback_models',
+        type=str,
+        nargs='+',
+        help="A list of fallback Ollama models to try for judging if the primary fails.",
+        default=['llama3.2:latest']
+    )
+
+    parser.add_argument(
+        '--neuron.ollama_judge_fallback_timeouts',
+        type=int,
+        nargs='+',
+        help="A list of fallback timeouts (in seconds) to try for Ollama judge requests.",
+        default=[15, 20]
+    )
+
 
 def config(cls):
     """
