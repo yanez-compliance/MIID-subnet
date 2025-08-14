@@ -241,12 +241,12 @@ class TestQueryGeneratorValidation(unittest.TestCase):
         is_valid, error_msg, issues = self.query_gen.validate_query_template(query, labels)
         
         self.assertFalse(is_valid, "Query without {name} should be invalid")
-        self.assertIn("must contain exactly one {name} placeholder", error_msg)
+        self.assertIn("must contain at least one {name} placeholder", error_msg)
         
         print(f"\n[Test 5] No placeholder - Error: {error_msg}")
     
-    def test_query_with_multiple_name_placeholders(self):
-        """Test that queries with multiple {name} placeholders are rejected"""
+    def test_query_with_multiple_name_placeholders_is_now_valid(self):
+        """Test that queries with multiple {name} placeholders are now considered valid"""
         query = "Generate variations of {name} based on {name}"  # Two {name}
         
         labels = {
@@ -256,12 +256,20 @@ class TestQueryGeneratorValidation(unittest.TestCase):
             "rule_based": {"percentage": 30}
         }
         
-        is_valid, error_msg, issues = self.query_gen.validate_query_template(query, labels)
-        
-        self.assertFalse(is_valid, "Query with multiple {name} should be invalid")
-        self.assertIn("must contain exactly one {name} placeholder", error_msg)
-        
-        print(f"\n[Test 6] Multiple placeholders - Error: {error_msg}")
+        with patch('ollama.Client') as mock_client_class:
+            mock_client = MagicMock()
+            mock_client_class.return_value = mock_client
+            
+            # Simulate judge finding no issues
+            mock_client.generate.return_value = {
+                'response': json.dumps({"issues": []})
+            }
+            
+            is_valid, error_msg, issues = self.query_gen.validate_query_template(query, labels)
+            
+            self.assertTrue(is_valid, "Query with multiple {name} should now be valid")
+            
+            print(f"\n[Test 6] Multiple placeholders now valid - Issues: {issues}")
     
     def test_clarification_appending(self):
         """Test that clarifications are properly appended to queries"""

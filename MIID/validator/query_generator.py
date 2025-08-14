@@ -66,10 +66,10 @@ class QueryGenerator:
         if not query_template:
             return False, "Query template is empty", []
 
-        # Require exactly one {name} placeholder
+        # Require at least one {name} placeholder
         placeholder_count = query_template.count("{name}")
-        if placeholder_count != 1:
-            return False, "Query template must contain exactly one {name} placeholder", []
+        if placeholder_count == 0:
+            return False, "Query template must contain at least one {name} placeholder", []
 
         # Collect non-blocking issues
         issues: List[str] = []
@@ -132,8 +132,17 @@ class QueryGenerator:
             rule_meta = labels.get("rule_based") or {}
             rule_pct = rule_meta.get("percentage") if isinstance(rule_meta, dict) else None
             if isinstance(rule_pct, int):
+                # Check if the percentage is mentioned at all
                 if not find_percent(query_template, rule_pct):
                     issues.append(f"Specify approximately {rule_pct}% to follow rule-based transformations.")
+                
+                # AMBIGUITY CHECK: If the percentage is listed multiple times, it may be confusing.
+                # This happens when the LLM applies it to each rule individually.
+                if query_template.count(f"{rule_pct}%") > 1:
+                    issues.append(
+                        f"Clarify that the {rule_pct}% applies to the total set of rule-based variations, "
+                        "with all listed rules represented across that set."
+                    )
 
         # Mandatory LLM judge with robust fallbacks
         llm_issues = []
@@ -292,15 +301,15 @@ class QueryGenerator:
         1. Generate exactly {variation_count} execution vectors (name variations) for each target identity
         2. For phonetic similarity (sound-alike names), implement: {phonetic_spec}
         3. For orthographic similarity (visually similar spellings), implement: {orthographic_spec}
-        4. IMPORTANT: Approximately {rule_percentage}% of the variations should follow these rule-based transformations: {rule_template}
+        4. IMPORTANT: Approximately {rule_percentage}% of the total variations should follow the rule-based transformations below. This percentage applies to the entire group of transformations, not to each one individually. All listed transformations must be represented across the set of rule-based variations.
+        Transformations: {rule_template}
         
         IMPORTANT FORMATTING REQUIREMENTS:
-        1. The query MUST use {{name}} as a placeholder for the target name
-        2. Use exactly one {{name}} placeholder in the query
-        3. Format as a natural language request that explicitly states all requirements
-        4. Include both the similarity requirements AND the rule-based transformation requirements in the query
+        1. The query MUST use {{name}} as a placeholder for the target name.
+        2. Format as a natural language request that explicitly states all requirements.
+        3. Include both the similarity requirements AND the rule-based transformation requirements in the query.
         
-        Example format: "Generate {variation_count} variations of the name {{name}}, ensuring phonetic similarity: {phonetic_spec}, and orthographic similarity: {orthographic_spec}, and also include {rule_percentage}% of variations that follow: {rule_template}"
+        Example format: "Generate {variation_count} variations of {{name}}, ensuring phonetic similarity ({phonetic_spec}) and orthographic similarity ({orthographic_spec}). Approximately {rule_percentage}% of the total variations should follow these rule-based transformations: {rule_template}"
         """
         # Add a clarifying sentence at the beginning to make it clear this is the seed name
         clarifying_prefix = "The following name is the seed name to generate variations for: {name}. "  
