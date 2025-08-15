@@ -606,6 +606,7 @@ def calculate_variation_quality(
 def _calculate_similarity_and_penalties(responses: list, uids: list, seed_names: list, detailed_metrics: list, rewards: np.ndarray) -> tuple:
     """
     Calculate similarity between miner responses and determine penalties for duplication.
+    Also, calculate penalties for excessive use of special characters.
 
     Args:
         responses: A list of response objects from miners.
@@ -619,10 +620,41 @@ def _calculate_similarity_and_penalties(responses: list, uids: list, seed_names:
     """
     num_miners = len(responses)
     duplication_penalties = np.zeros(num_miners)
+    special_char_penalties = np.zeros(num_miners)
+    # Track special character usage for observability
+    special_char_counts = np.zeros(num_miners, dtype=int)
+    total_variations_counts = np.zeros(num_miners, dtype=int)
+    special_char_ratios = np.zeros(num_miners)
     all_miner_variations = []
 
     for i in range(num_miners):
         response = responses[i]
+        
+        # Calculate penalty for excessive use of special characters
+        if hasattr(response, 'variations') and response.variations:
+            special_char_variations_count = 0
+            total_variations_count = 0
+            for name in response.variations:
+                name_variations = response.variations.get(name, [])
+                total_variations_count += len(name_variations)
+                for var in name_variations:
+                    if any(not c.isalnum() and not c.isspace() for c in var):
+                        special_char_variations_count += 1
+
+            if total_variations_count > 0:
+                special_char_ratio = special_char_variations_count / total_variations_count
+                special_char_counts[i] = special_char_variations_count
+                total_variations_counts[i] = total_variations_count
+                special_char_ratios[i] = special_char_ratio
+                if special_char_ratio > 0.5:
+                    penalty = (special_char_ratio - 0.5) / 0.5
+                    special_char_penalties[i] = min(penalty, 1.0) # Cap penalty at 100%
+            else:
+                # No variations
+                special_char_counts[i] = 0
+                total_variations_counts[i] = 0
+                special_char_ratios[i] = 0.0
+ 
         if not hasattr(response, 'variations') or not response.variations:
             all_miner_variations.append(set())
             continue
@@ -663,24 +695,52 @@ def _calculate_similarity_and_penalties(responses: list, uids: list, seed_names:
     # Apply penalties and update metrics
     updated_rewards = np.copy(rewards)
     for i in range(num_miners):
-        if duplication_penalties[i] > 0:
-            uid = uids[i]
-            penalty_amount = duplication_penalties[i]
-            
-            bt.logging.info(f"Applying duplication penalty of {penalty_amount:.2f} to miner {uid}")
+        uid = uids[i]
+        total_penalty = 0
 
-            # Update the detailed metrics to reflect this penalty
+        # Always record special character observability metrics
+        if i < len(detailed_metrics):
+            miner_metrics = detailed_metrics[i]
+            miner_metrics.setdefault('penalties', {})
+            miner_metrics['penalties']['special_chars_ratio'] = float(special_char_ratios[i])
+            miner_metrics['penalties']['special_char_variations_count'] = int(special_char_counts[i])
+            miner_metrics['penalties']['total_variations_count'] = int(total_variations_counts[i])
+
+        # Duplication Penalty
+        if duplication_penalties[i] > 0:
+            penalty_amount = duplication_penalties[i]
+            total_penalty += penalty_amount
+            bt.logging.info(f"Applying duplication penalty of {penalty_amount:.2f} to miner {uid}")
             if i < len(detailed_metrics):
                 miner_metrics = detailed_metrics[i]
                 miner_metrics.setdefault('penalties', {})
                 miner_metrics['penalties']['duplication'] = penalty_amount
-                
-                # Adjust the final reward based on the penalty
-                current_reward = updated_rewards[i]
-                penalized_reward = current_reward * (1.0 - penalty_amount)
-                updated_rewards[i] = penalized_reward
-                miner_metrics['final_reward'] = penalized_reward
-    
+
+        # Special Character Penalty
+        if special_char_penalties[i] > 0:
+            penalty_amount = special_char_penalties[i]
+            total_penalty += penalty_amount
+            bt.logging.info(f"Applying special character penalty of {penalty_amount:.2f} to miner {uid}")
+            if i < len(detailed_metrics):
+                miner_metrics = detailed_metrics[i]
+                miner_metrics.setdefault('penalties', {})
+                miner_metrics['penalties']['special_chars'] = penalty_amount
+
+        # Apply combined penalty
+        if total_penalty > 0:
+            total_penalty = min(total_penalty, 1.0) # Cap total penalty
+            current_reward = updated_rewards[i]
+            penalized_reward = current_reward * (1.0 - total_penalty)
+            updated_rewards[i] = penalized_reward
+            if i < len(detailed_metrics):
+                # Record post-processing penalties separately and combined with pre-penalties
+                miner_metrics = detailed_metrics[i]
+                miner_metrics.setdefault('penalties', {})
+                miner_metrics['penalties']['post_total_penalty'] = float(total_penalty)
+                pre_total_penalty = float(miner_metrics['penalties'].get('total_penalty', 0.0))
+                miner_metrics['penalties']['overall_total_penalty'] = float(min(1.0, pre_total_penalty + total_penalty))
+                detailed_metrics[i]['final_reward'] = penalized_reward
+
     return updated_rewards, detailed_metrics
 
 
@@ -809,7 +869,7 @@ def get_name_variation_rewards(
         completeness_multiplier = max(0.1, 1.0 - total_penalty)
         miner_metrics["penalties"]["total_penalty"] = float(total_penalty)
         miner_metrics["completeness_multiplier"] = float(completeness_multiplier)
-        
+
         # Add rule-based metrics fields
         if rule_based:
             miner_metrics["rule_compliance"] = {
