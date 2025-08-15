@@ -630,7 +630,8 @@ def _calculate_similarity_and_penalties(responses: list, uids: list, seed_names:
         miner_vars = set()
         for name in seed_names:
             if name in response.variations:
-                miner_vars.update(response.variations[name])
+                # Normalize variations to lowercase and remove all whitespace to catch more duplicates
+                miner_vars.update("".join(var.lower().split()) for var in response.variations[name])
         all_miner_variations.append(miner_vars)
 
     for i in range(num_miners):
