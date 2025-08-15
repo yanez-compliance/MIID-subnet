@@ -17,6 +17,8 @@ from MIID.datasets.config import (
 # Import verify_message function
 from MIID.utils.verify_message import verify_message
 
+## gunicorn MIID.datasets.app:app --bind 0.0.0.0:5000 --workers 4
+
 app = Flask(__name__)
 
 # Ensure the data directory exists
