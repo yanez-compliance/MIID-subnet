@@ -62,38 +62,52 @@ def validate_query_template_logic(
         # Phonetic similarity checks
         phonetic_cfg = labels.get("phonetic_similarity") or {}
         if isinstance(phonetic_cfg, dict) and phonetic_cfg:
-            for level, pct in compute_expected_percentages(phonetic_cfg):
-                if not find_percent(query_template, pct):
-                    issues.append(f"Indicate {pct}% share for phonetic '{level}'.")
-                if level.lower() not in lowered:
-                    issues.append(f"State the phonetic level: {level}.")
+            levels_present = all(level.lower() in lowered for level in phonetic_cfg.keys())
+            percentages_present = all(find_percent(query_template, int(frac * 100)) for frac in phonetic_cfg.values())
+            
+            if not levels_present or not percentages_present:
+                issues.append("Clarify the percentage distribution across different phonetic similarity levels (e.g., Light, Medium, Far).")
 
         # Orthographic similarity checks
         orthographic_cfg = labels.get("orthographic_similarity") or {}
         if isinstance(orthographic_cfg, dict) and orthographic_cfg:
-            for level, pct in compute_expected_percentages(orthographic_cfg):
-                if not find_percent(query_template, pct):
-                    issues.append(f"Indicate {pct}% share for orthographic '{level}'.")
-                if level.lower() not in lowered:
-                    issues.append(f"State the orthographic level: {level}.")
+            levels_present = all(level.lower() in lowered for level in orthographic_cfg.keys())
+            percentages_present = all(find_percent(query_template, int(frac * 100)) for frac in orthographic_cfg.values())
+
+            if not levels_present or not percentages_present:
+                issues.append("Clarify the percentage distribution across different orthographic similarity levels (e.g., Light, Medium, Far).")
 
         # Rule-based percentage
         rule_meta = labels.get("rule_based") or {}
         rule_pct = rule_meta.get("percentage") if isinstance(rule_meta, dict) else None
         if isinstance(rule_pct, int):
-            rule_descriptions_for_this_query = rule_meta.get("rule_descriptions", {}) if isinstance(rule_meta, dict) else {}
-            descriptions_list = []
-            if isinstance(rule_descriptions_for_this_query, dict):
-                descriptions_list = [d for d in rule_descriptions_for_this_query.values() if isinstance(d, str) and d]
-
             # Reveal the percentage if missing
             percent_present = find_percent(query_template, rule_pct)
             if not percent_present:
                 issues.append(f"Approximately {rule_pct}% of the variations should follow rule-based transformations.")
 
             # Reveal labels (only the ones missing from the query) if any are missing
+            descriptions_list = list(rule_meta.get("rule_descriptions", {}).values())
             if descriptions_list:
-                missing_labels = [desc for desc in descriptions_list if desc.lower() not in lowered]
+                def _label_present(desc: str) -> bool:
+                    """Generic check for presence of a rule label in the query text."""
+                    if not desc:
+                        return False
+                    d_low = desc.lower()
+                    canonical_core = d_low.split('(')[0].strip()
+                    if canonical_core in lowered:
+                        return True
+                    stopwords = {'a', 'an', 'the', 'of', 'in', 'with', 'for', 'to', 'is', 'are', 'etc'}
+                    canonical_words = {word for word in re.split(r'[^a-z]+', canonical_core) if word and word not in stopwords}
+                    if not canonical_words:
+                        return False
+                    query_words = set(re.split(r'[^a-z]+', lowered))
+                    for c_word in canonical_words:
+                        if not any(q_word.startswith(c_word) for q_word in query_words):
+                            return False
+                    return True
+
+                missing_labels = [desc for desc in descriptions_list if not _label_present(desc)]
                 if missing_labels:
                     issues.append(f"Apply these rule-based transformations: {'; '.join(missing_labels)}.")
 

@@ -42,6 +42,9 @@ class QueryGenerator:
             'use_default_query', 
             DEFAULT_QUERY
         )
+        # Cache last successful judge model/timeout for faster subsequent validations
+        self.last_successful_judge_model: str | None = None
+        self.last_successful_judge_timeout: int | None = None
         
         bt.logging.info(f"use_default_query: {self.use_default_query}#########################################")
         bt.logging.info(f"QueryGenerator initialized with use_default_query={self.use_default_query}")
@@ -56,7 +59,7 @@ class QueryGenerator:
         required specifications from labels. Returns issues for missing/unclear parts
         so we can append minimal clarifications to the prompt without revealing the
         entire specification.
-
+            
         Returns:
             Tuple[bool, str, List[str]]: (structurally_valid, error_message, issues)
                 - structurally_valid: True only if the template is safe to use (e.g., exactly one {name})
@@ -110,23 +113,31 @@ class QueryGenerator:
             # Phonetic similarity checks
             phonetic_cfg = labels.get("phonetic_similarity") or {}
             if isinstance(phonetic_cfg, dict) and phonetic_cfg:
+                missing_phonetic = []
                 for level, pct in compute_expected_percentages(phonetic_cfg):
                     # If either the percent or level indicator is absent, request clarification
                     if not find_percent(query_template, pct):
-                        issues.append(f"Indicate {pct}% share for phonetic '{level}'.")
+                        missing_phonetic.append(f"{pct}% {level}")
                     # Allow synonyms like 'lightly' for Light; keep it soft by only checking when level token is fully missing
-                    if level.lower() not in lowered:
+                    elif level.lower() not in lowered:
                         # Only add if not already covered by a more general phrase
-                        issues.append(f"State the phonetic level: {level}.")
+                        missing_phonetic.append(f"{pct}% {level}")
+                
+                if missing_phonetic:
+                    issues.append(f"Phonetic similarity: {', '.join(missing_phonetic)}.")
 
             # Orthographic similarity checks
             orthographic_cfg = labels.get("orthographic_similarity") or {}
             if isinstance(orthographic_cfg, dict) and orthographic_cfg:
+                missing_orthographic = []
                 for level, pct in compute_expected_percentages(orthographic_cfg):
                     if not find_percent(query_template, pct):
-                        issues.append(f"Indicate {pct}% share for orthographic '{level}'.")
-                    if level.lower() not in lowered:
-                        issues.append(f"State the orthographic level: {level}.")
+                        missing_orthographic.append(f"{pct}% {level}")
+                    elif level.lower() not in lowered:
+                        missing_orthographic.append(f"{pct}% {level}")
+                
+                if missing_orthographic:
+                    issues.append(f"Orthographic similarity: {', '.join(missing_orthographic)}.")
 
             # Rule-based percentage
             rule_meta = labels.get("rule_based") or {}
@@ -146,7 +157,36 @@ class QueryGenerator:
                 
                 # 2) If any of the specific labels are missing from the query text, add labels-only hint
                 if descriptions_list:
-                    missing_labels = [desc for desc in descriptions_list if desc.lower() not in lowered]
+                    def _label_present(desc: str) -> bool:
+                        """Generic check for presence of a rule label in the query text."""
+                        if not desc:
+                            return False
+                        d_low = desc.lower()
+                        # 1. Get the canonical core phrase (before any parentheses)
+                        canonical_core = d_low.split('(')[0].strip()
+
+                        # 2. Direct check first for performance and simple cases.
+                        if canonical_core in lowered:
+                            return True
+
+                        # 3. If direct check fails, use a more robust word-based check.
+                        stopwords = {'a', 'an', 'the', 'of', 'in', 'with', 'for', 'to', 'is', 'are', 'etc'}
+                        canonical_words = {word for word in re.split(r'[^a-z]+', canonical_core) if word and word not in stopwords}
+
+                        if not canonical_words:
+                            return False # Cannot validate on empty set of words
+
+                        # Tokenize the query once for efficiency (if not already done)
+                        query_words = set(re.split(r'[^a-z]+', lowered))
+
+                        # Check if for each canonical word, a word in the query starts with it.
+                        for c_word in canonical_words:
+                            if not any(q_word.startswith(c_word) for q_word in query_words):
+                                return False # A significant word is missing
+                        
+                        return True # All significant words were found
+
+                    missing_labels = [desc for desc in descriptions_list if not _label_present(desc)]
                     if missing_labels:
                         issues.append(f"Apply these rule-based transformations: {'; '.join(missing_labels)}.")
                 
@@ -163,13 +203,36 @@ class QueryGenerator:
         # Mandatory LLM judge with robust fallbacks
         llm_issues = []
         neuron_cfg = getattr(self.config, 'neuron', self.config)
-        primary_judge_model = getattr(neuron_cfg, 'ollama_judge_model', 'llama3.1:latest')
-        judge_fallback_models = getattr(neuron_cfg, 'ollama_judge_fallback_models', ['llama3.2:latest', 'tinyllama:latest'])
-        judge_models_to_try = [primary_judge_model] + judge_fallback_models
+        primary_judge_model = getattr(neuron_cfg, 'ollama_judge_model', 'llama3.2:latest')
+        judge_fallback_models = getattr(neuron_cfg, 'ollama_judge_fallback_models', [])
+        # Prefer cached last success first, then primary, then fallbacks (deduped)
+        candidate_models = []
+        if self.last_successful_judge_model:
+            candidate_models.append(self.last_successful_judge_model)
+        candidate_models.append(primary_judge_model)
+        candidate_models.extend(judge_fallback_models)
+        # Deduplicate while preserving order
+        seen_models = set()
+        judge_models_to_try = []
+        for m in candidate_models:
+            if m and m not in seen_models:
+                judge_models_to_try.append(m)
+                seen_models.add(m)
 
         primary_judge_timeout = getattr(neuron_cfg, 'ollama_judge_timeout', 60)
-        judge_fallback_timeouts = getattr(neuron_cfg, 'ollama_judge_fallback_timeouts', [90,100, 120])
-        judge_timeouts_to_try = [primary_judge_timeout] + judge_fallback_timeouts
+        judge_fallback_timeouts = getattr(neuron_cfg, 'ollama_judge_fallback_timeouts', [])
+        # Prefer cached last success first, then primary, then fallbacks (deduped)
+        candidate_timeouts = []
+        if isinstance(self.last_successful_judge_timeout, int):
+            candidate_timeouts.append(self.last_successful_judge_timeout)
+        candidate_timeouts.append(primary_judge_timeout)
+        candidate_timeouts.extend(judge_fallback_timeouts)
+        seen_t = set()
+        judge_timeouts_to_try = []
+        for t in candidate_timeouts:
+            if t is not None and t not in seen_t:
+                judge_timeouts_to_try.append(t)
+                seen_t.add(t)
 
         judge_success = False
         for judge_model in judge_models_to_try:
@@ -195,6 +258,10 @@ class QueryGenerator:
                     llm_issues = parsed.get('issues', []) if isinstance(parsed, dict) else []
                     if isinstance(llm_issues, list):
                         judge_success = True
+                        # Cache successful model/timeout for next time
+                        self.last_successful_judge_model = judge_model
+                        self.last_successful_judge_timeout = judge_timeout
+                        bt.logging.info(f"📌 Cached judge preference -> model: {judge_model}, timeout: {judge_timeout}s")
                         bt.logging.info(f"✅ Judge succeeded with model: {judge_model} and timeout: {judge_timeout}s")
                         if llm_issues:
                             bt.logging.info(f"   Judge found issues: {llm_issues}")
@@ -265,7 +332,6 @@ class QueryGenerator:
             "rule_based": {**(rule_metadata or {}), "percentage": rule_percentage}  # include percentage for validation
         }
         
-        # If use_default flag is True, skip LLM and use default template
         if use_default:
             bt.logging.warning("Using default query template (skipping complex query generation)")
             clarifying_prefix = "The following name is the seed name to generate variations for: {name}. "
@@ -284,6 +350,7 @@ class QueryGenerator:
             }
 
             # Validate and minimally clarify
+            bt.logging.info(f"📝 Pre-judge default template: {default_template}")
             _ok, _msg, issues = self.validate_query_template(default_template, labels)
             if issues:
                 suffix = " Hint: " + "; ".join(issues)
@@ -293,7 +360,7 @@ class QueryGenerator:
                 bt.logging.warning(f"   Added Hints: {suffix}")
             else:
                 bt.logging.info(f"✅ Default template is clean (no issues found)")
-            
+
             bt.logging.info(f"🔄 Using default query template: {default_template}")
             return default_template, labels, None, None
         
@@ -354,6 +421,7 @@ class QueryGenerator:
                     query_template = response['response'].strip()
                     
                     # Validate and minimally clarify the generated template
+                    bt.logging.info(f"📝 Pre-judge LLM-generated query: {query_template}")
                     is_valid, error_msg, issues = self.validate_query_template(query_template, labels)
                     if not is_valid:
                         bt.logging.error(f"❌ LLM '{model}' generated INVALID template:")
@@ -389,6 +457,7 @@ class QueryGenerator:
             
         bt.logging.error("💥 All models and timeouts failed. Falling back to a simple template.")
         # Validate and minimally clarify simple template before returning
+        bt.logging.info(f"📝 Pre-judge fallback simple template: {simple_template}")
         _ok, _msg, issues = self.validate_query_template(simple_template, labels)
         if issues:
             simple_template = simple_template + " " + (" Hint: " + "; ".join(issues))
