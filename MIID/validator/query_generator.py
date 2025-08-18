@@ -46,6 +46,22 @@ class QueryGenerator:
         self.last_successful_judge_model: str | None = None
         self.last_successful_judge_timeout: int | None = None
         
+        # Load sanctioned individuals
+        self.sanctioned_individuals = []
+        try:
+            # Construct the path to the JSON file relative to the current file
+            current_dir = os.path.dirname(os.path.abspath(__file__))
+            json_path = os.path.join(current_dir, 'SanctionedIndividulas.json')
+            bt.logging.info(f"Loading sanctioned individuals from: {json_path}")
+            if os.path.exists(json_path):
+                with open(json_path, 'r') as f:
+                    self.sanctioned_individuals = json.load(f)
+                bt.logging.info(f"Loaded {len(self.sanctioned_individuals)} sanctioned individuals.")
+            else:
+                bt.logging.error(f"Sanctioned individuals file not found at: {json_path}")
+        except Exception as e:
+            bt.logging.error(f"Error loading sanctioned individuals: {e}")
+
         bt.logging.info(f"use_default_query: {self.use_default_query}#########################################")
         bt.logging.info(f"QueryGenerator initialized with use_default_query={self.use_default_query}")
     
@@ -470,7 +486,7 @@ class QueryGenerator:
         bt.logging.info(f"🔄 Using fallback simple template: {simple_template}")
         return simple_template, labels, None, None
     
-    async def build_queries(self) -> Tuple[List[str], str, Dict[str, Any], str, int]:
+    async def build_queries(self) -> Tuple[List[Dict[str, Any]], str, Dict[str, Any], str, int]:
         """Build challenge queries for miners"""
         try:
             bt.logging.info("Building test queries for miners")
@@ -546,51 +562,87 @@ class QueryGenerator:
                 rule_percentage=rule_percentage
             )
             
-            # Generate test names using Faker
-            fake = Faker(LATIN_LOCALES)
+            # Generate test names using a mix of sanctioned and generated names
+            seed_names_with_labels = []
             
-            # Create a list to store the generated names
-            seed_names = []
-            
-            # Ensure seed_names config exists
-            if not hasattr(self.config, 'seed_names') or self.config.seed_names is None:
-                bt.logging.warning("seed_names config not found, creating it now")
-                self.config.seed_names = bt.config()
-                self.config.seed_names.sample_size = 15
-            
-            # Ensure sample_size exists and has a valid value. The default is 15, matching config.py.
+            # Ensure sample_size exists and has a valid value
             sample_size = getattr(self.config.seed_names, 'sample_size', 15)
             if sample_size is None:
                 sample_size = 15
-                
-            bt.logging.info(f"Using name variation sample size: {sample_size}")
             
-            # Generate names with random mix of single and full names
-            while len(seed_names) < sample_size:
-                # Randomly decide whether to generate a single name or full name
+            # Number of positive samples to take from the sanctioned list
+            positive_sample_count = 5
+            
+            # Track names to avoid duplicates across positive and negative lists
+            seen_names = set()
+
+            # 1. Add positive samples from the sanctioned list (ensure unique full names)
+            if self.sanctioned_individuals:
+                max_attempts = positive_sample_count * 10
+                attempts = 0
+                while (
+                    len([n for n in seed_names_with_labels if n["label"] == "positive"]) < positive_sample_count
+                    and attempts < max_attempts
+                ):
+                    person = random.choice(self.sanctioned_individuals)
+                    first_name = str(person.get("FirstName", "")).strip()
+                    last_name = str(person.get("LastName", "")).strip()
+                    if first_name and last_name:
+                        full_name = f"{first_name} {last_name}".lower()
+                        if full_name not in seen_names:
+                            seed_names_with_labels.append({"name": full_name, "label": "positive"})
+                            seen_names.add(full_name)
+                            bt.logging.info(f"Added positive sample: {full_name}")
+                    attempts += 1
+                current_positives = len([n for n in seed_names_with_labels if n["label"] == "positive"]) 
+                if current_positives < positive_sample_count:
+                    bt.logging.warning(
+                        f"Could not collect {positive_sample_count} unique positive samples; using {current_positives}."
+                    )
+            else:
+                bt.logging.warning("Sanctioned individuals list is empty. No positive samples will be added.")
+            
+            # 2. Add negative samples generated by Faker
+            fake = Faker(LATIN_LOCALES)
+            negative_sample_count = sample_size - len(seed_names_with_labels)
+            
+            generated_names = []
+            while len(generated_names) < negative_sample_count:
                 is_full_name = random.choice([True, False])
-                
                 if is_full_name:
-                    # Generate full name
                     first_name = fake.first_name().lower()
                     last_name = fake.last_name().lower()
                     name = f"{first_name} {last_name}"
-                    if (name not in seed_names and 
+                    if (name not in generated_names and name not in seen_names and 
                         3 <= len(first_name) <= 20 and 
                         3 <= len(last_name) <= 20):
-                        seed_names.append(name)
-                        bt.logging.info(f"Generated full name: {name}")
+                        generated_names.append(name)
+                        seen_names.add(name)
+                        bt.logging.info(f"Generated negative full name: {name}")
                 else:
-                    # Generate single name
                     name = fake.first_name().lower()
-                    if name not in seed_names and 3 <= len(name) <= 20:
-                        seed_names.append(name)
-                        bt.logging.info(f"Generated single name: {name}")
+                    if name not in generated_names and name not in seen_names and 3 <= len(name) <= 20:
+                        generated_names.append(name)
+                        seen_names.add(name)
+                        bt.logging.info(f"Generated negative single name: {name}")
             
-            bt.logging.info(f"Generated {len(seed_names)} test names: {seed_names}")
+            # Add generated names to the list with "negative" label
+            for name in generated_names:
+                seed_names_with_labels.append({"name": name, "label": "negative"})
+            
+            # Shuffle the list to mix positive and negative samples
+            random.shuffle(seed_names_with_labels)
+            
+            # Log the final list of seed names with their labels for traceability
+            log_output = [f"'{item['name']}' ({item['label']})" for item in seed_names_with_labels]
+            bt.logging.info(f"Generated {len(seed_names_with_labels)} test names: [{', '.join(log_output)}]")
+            
             bt.logging.info(f"Query template: {query_template}")
             bt.logging.info(f"Query labels: {query_labels}")
-            return seed_names, query_template, query_labels, successful_model, successful_timeout
+            
+            # The function now returns a list of dictionaries, so we extract just the names for the return
+            seed_names = [item['name'] for item in seed_names_with_labels]
+            return seed_names_with_labels, query_template, query_labels, successful_model, successful_timeout
             
         except Exception as e:
             bt.logging.error(f"Error building queries: {str(e)}")
@@ -644,7 +696,10 @@ class QueryGenerator:
                 if name not in seed_names:
                     seed_names.append(name)
             
+            # In fallback, all names are "negative"
+            seed_names_with_labels = [{"name": name, "label": "negative"} for name in seed_names]
+            
             bt.logging.info(f"Using fallback: {len(seed_names)} test names")
             bt.logging.info(f"Query template: {query_template}")
             bt.logging.info(f"Query labels: {query_labels}")
-            return seed_names, query_template, query_labels, None, None
+            return seed_names_with_labels, query_template, query_labels, None, None
