@@ -46,6 +46,10 @@ class QueryGenerator:
         self.last_successful_judge_model: str | None = None
         self.last_successful_judge_timeout: int | None = None
         
+        # Cache last successful generation model/timeout for faster query creation
+        self.last_successful_generation_model: str | None = None
+        self.last_successful_generation_timeout: int | None = None
+        
         # Load sanctioned individuals
         self.sanctioned_individuals = []
         try:
@@ -106,7 +110,7 @@ class QueryGenerator:
         self,
         query_template: str,
         labels: Dict[str, Any] = None,
-    ) -> Tuple[bool, str, List[str], str, int]:
+    ) -> Tuple[bool, str, List[str], List[str], str, int]:
         """
         Validate that a query template is structurally valid and semantically covers
         required specifications from labels. Returns issues for missing/unclear parts
@@ -124,12 +128,12 @@ class QueryGenerator:
         successful_judge_timeout: int | None = None
 
         if not query_template:
-            return False, "Query template is empty", [], successful_judge_model, successful_judge_timeout
+            return False, "Query template is empty", [], [], successful_judge_model, successful_judge_timeout
 
         # Require at least one {name} placeholder
         placeholder_count = query_template.count("{name}")
         if placeholder_count == 0:
-            return False, "Query template must contain at least one {name} placeholder", [], successful_judge_model, successful_judge_timeout
+            return False, "Query template must contain at least one {name} placeholder", [], [], successful_judge_model, successful_judge_timeout
 
         # Collect non-blocking issues
         issues: List[str] = []
@@ -262,7 +266,7 @@ class QueryGenerator:
             # Skip judge if it's disabled entirely OR if we don't require judge on static pass
             if (not self.use_judge_model) or (not getattr(self, 'judge_on_static_pass', False)):
                 bt.logging.info("✅ Static checks passed - skipping LLM judge")
-                return True, "Query template is acceptable (static checks only)", issues, None, None
+                return True, "Query template is acceptable (static checks only)", issues, [], None, None
 
         # Mandatory LLM judge with robust fallbacks
         llm_issues = []
@@ -509,9 +513,9 @@ class QueryGenerator:
             if hasattr(self, '_judge_failure_count'):
                 self._judge_failure_count = 0
 
-        for it in llm_issues:
-            if isinstance(it, str) and it not in issues:
-                issues.append(it)
+        # for it in llm_issues:
+        #     if isinstance(it, str) and it not in issues:
+        #         issues.append(it)
 
         # Deduplicate while preserving order
         seen = set()
@@ -529,7 +533,7 @@ class QueryGenerator:
         else:
             bt.logging.info(f"✅ Final validation: No issues found - query is clear")
 
-        return True, "Query template is acceptable with clarifications", deduped_issues, successful_judge_model, successful_judge_timeout
+        return True, "Query template is acceptable with clarifications", deduped_issues, llm_issues, successful_judge_model, successful_judge_timeout
     
     async def generate_complex_query(
         self,
@@ -539,7 +543,7 @@ class QueryGenerator:
         orthographic_similarity: Dict[str, float] = None,
         use_default: bool = False,
         rule_percentage: int = 30
-    ) -> Tuple[str, Dict[str, Any], str, int]:
+    ) -> Tuple[str, Dict[str, Any], str, int, str, int]:
         """Generate a query template based on specified parameters"""
         # Default similarity preferences if none provided
         if phonetic_similarity is None:
@@ -557,39 +561,6 @@ class QueryGenerator:
             "orthographic_similarity": orthographic_similarity,
             "rule_based": {**(rule_metadata or {}), "percentage": rule_percentage}  # include percentage for validation
         }
-        
-        if use_default:
-            bt.logging.warning("Using default query template (skipping complex query generation)")
-            clarifying_prefix = "The following name is the seed name to generate variations for: {name}. "
-            # Ensure the default template includes the rule_percentage
-            default_template = (
-                f"{clarifying_prefix}Give me {DEFAULT_VARIATION_COUNT} comma separated alternative spellings "
-                f"of the name {{name}}. Include 50% of them should Medium sound similar to the original name and 50% "
-                f"should be Medium orthographically similar. Approximately {rule_percentage}% of the variations "
-                f"should follow these rule-based transformations: {rule_template}. Provide only the names."
-            )
-            labels = {
-                "variation_count": DEFAULT_VARIATION_COUNT,
-                "phonetic_similarity": {"Medium": 0.5},
-                "orthographic_similarity": {"Medium": 0.5},
-                "rule_based": {**(rule_metadata or {}), "percentage": rule_percentage}
-            }
-
-            # Validate and minimally clarify
-            bt.logging.info(f"📝 Pre-judge default template: {default_template}")
-            _ok, _msg, issues, _, _ = self.validate_query_template(default_template, labels)
-            if issues:
-                suffix = " Hint: " + "; ".join(issues)
-                default_template = default_template + " " + suffix
-                bt.logging.warning(f"⚠️  Default template has issues - added clarifications:")
-                bt.logging.warning(f"   Issues Found: {issues}")
-                bt.logging.warning(f"   Added Hints: {suffix}")
-            else:
-                bt.logging.info(f"✅ Default template is clean (no issues found)")
-
-            bt.logging.info(f"🔄 Using default query template: {default_template}")
-            return default_template, labels, None, None
-        
         # Format the similarity specifications for the prompt
         phonetic_spec = ", ".join([f"{int(pct*100)}% {level}" for level, pct in phonetic_similarity.items()])
         orthographic_spec = ", ".join([f"{int(pct*100)}% {level}" for level, pct in orthographic_similarity.items()])
@@ -598,6 +569,45 @@ class QueryGenerator:
                     f"phonetic similarity: {phonetic_spec}, " +
                     f"orthographic similarity: {orthographic_spec}")
         bt.logging.info(f"Rule-based requirement: {rule_percentage}% of variations should follow: {rule_template}")
+
+        clarifying_prefix = "The following name is the seed name to generate variations for: {name}. "  
+        # Add a clarifying sentence at the beginning to make it clear this is the seed name
+        simple_template = f"{clarifying_prefix}Generate {variation_count} variations of the name {{name}}, ensuring phonetic similarity: {phonetic_spec}, and orthographic similarity: {orthographic_spec}, and also include {rule_percentage}% of variations that follow: {rule_template}"
+        bt.logging.warning(f"Simple template: {simple_template}")
+        
+        if use_default:
+            bt.logging.warning("Using default query template (skipping complex query generation)")
+            #clarifying_prefix = "The following name is the seed name to generate variations for: {name}. "
+            # Ensure the default template includes the rule_percentage
+            # default_template = (
+            #     f"{clarifying_prefix}Give me {DEFAULT_VARIATION_COUNT} comma separated alternative spellings "
+            #     f"of the name {{name}}. Include 50% of them should Medium sound similar to the original name and 50% "
+            #     f"should be Medium orthographically similar. Approximately {rule_percentage}% of the variations "
+            #     f"should follow these rule-based transformations: {rule_template}. Provide only the names."
+            # )
+            # labels = {
+            #     "variation_count": DEFAULT_VARIATION_COUNT,
+            #     "phonetic_similarity": {"Medium": 0.5},
+            #     "orthographic_similarity": {"Medium": 0.5},
+            #     "rule_based": {**(rule_metadata or {}), "percentage": rule_percentage}
+            # }
+
+            # Validate and minimally clarify
+            bt.logging.info(f"📝 Pre-judge default template: {simple_template}")
+            # _ok, _msg, issues, _, _ = self.validate_query_template(default_template, labels)
+            # if issues:
+            #     suffix = " Hint: " + "; ".join(issues)
+            #     default_template = default_template + " " + suffix
+            #     bt.logging.warning(f"⚠️  Default template has issues - added clarifications:")
+            #     bt.logging.warning(f"   Issues Found: {issues}")
+            #     bt.logging.warning(f"   Added Hints: {suffix}")
+            # else:
+            #     bt.logging.info(f"✅ Default template is clean (no issues found)")
+
+            bt.logging.info(f"🔄 Using default query template: {simple_template}")
+            return simple_template, labels, None, None, None, None
+        
+    
         
         # Define the prompt with specific parameters and security terminology
         prompt = f"""Generate a Threat Scenario generation query with these specifications:
@@ -620,23 +630,36 @@ class QueryGenerator:
         
         Example format: "Generate {variation_count} variations of {{name}}, ensuring phonetic similarity ({phonetic_spec}) and orthographic similarity ({orthographic_spec}). Approximately {rule_percentage}% of the total variations should follow these rule-based transformations: {rule_template}"
         """
-        # Add a clarifying sentence at the beginning to make it clear this is the seed name
-        clarifying_prefix = "The following name is the seed name to generate variations for: {name}. "  
-        simple_template = f"{clarifying_prefix}Generate {variation_count} variations of the name {{name}}, ensuring phonetic similarity: {phonetic_spec}, and orthographic similarity: {orthographic_spec}, and also include {rule_percentage}% of variations that follow: {rule_template}"
-        bt.logging.warning(f"Simple template: {simple_template}")
         
-        # Get the list of models to try: primary + fallbacks
+        
+        # Get the list of models to try: primary + fallbacks, prioritizing last successful
         primary_model = model_name
         fallback_models = getattr(self.config.neuron, 'ollama_fallback_models', [])
-        models_to_try = [primary_model] + fallback_models
+        candidate_models = []
+        if self.last_successful_generation_model:
+            candidate_models.append(self.last_successful_generation_model)
+        candidate_models.append(primary_model)
+        candidate_models.extend(fallback_models)
+        seen_models = set()
+        models_to_try = [m for m in candidate_models if m and not (m in seen_models or seen_models.add(m))]
 
-        # Get the list of timeouts to try
+        # Get the list of timeouts to try, prioritizing last successful
         primary_timeout = self.config.neuron.ollama_request_timeout
         fallback_timeouts = getattr(self.config.neuron, 'ollama_fallback_timeouts', [])
-        timeouts_to_try = [primary_timeout] + fallback_timeouts
+        candidate_timeouts = []
+        if self.last_successful_generation_timeout:
+            candidate_timeouts.append(self.last_successful_generation_timeout)
+        candidate_timeouts.append(primary_timeout)
+        candidate_timeouts.extend(fallback_timeouts)
+        seen_timeouts = set()
+        timeouts_to_try = [t for t in candidate_timeouts if t is not None and not (t in seen_timeouts or seen_timeouts.add(t))]
 
         # Track the last LLM-generated template to use as final fallback
         last_model_query_template: str | None = None
+        
+        # Track the last successful judge configuration from validation
+        last_successful_judge_model: str | None = None
+        last_successful_judge_timeout: int | None = None
 
         for model in models_to_try:
             for timeout in timeouts_to_try:
@@ -654,7 +677,12 @@ class QueryGenerator:
 
                     # Validate and minimally clarify the generated template
                     bt.logging.info(f"📝 Pre-judge LLM-generated query: {query_template}")
-                    is_valid, error_msg, issues, successful_judge_model, successful_judge_timeout = self.validate_query_template(query_template, labels)
+                    is_valid, error_msg, issues, llm_issues, successful_judge_model, successful_judge_timeout = self.validate_query_template(query_template, labels)
+                    
+                    # Persist the successful judge config for later returns
+                    last_successful_judge_model = successful_judge_model
+                    last_successful_judge_timeout = successful_judge_timeout
+
                     if not is_valid:
                         bt.logging.error(f"❌ LLM '{model}' generated INVALID template:")
                         bt.logging.error(f"   Failed Query: {query_template}")
@@ -664,6 +692,10 @@ class QueryGenerator:
                             try:
                                 bt.logging.info("🛠️  Attempting one-shot repair of invalid template using repair prompt")
                                 repair_client = ollama.Client(host=self.config.neuron.ollama_url, timeout=self.config.neuron.ollama_request_timeout)
+                                
+                                # Combine static and LLM-judged issues for a comprehensive repair prompt
+                                all_issues_for_repair = issues + [issue for issue in llm_issues if issue not in issues]
+                                
                                 repair_prompt = (
                                     "You are a helpful assistant. The following query template is invalid or incomplete.\n"
                                     "Given the template, labels, and detected issues, produce a corrected template that:\n"
@@ -672,19 +704,25 @@ class QueryGenerator:
                                     "- Is concise and declarative\n\n"
                                     f"TEMPLATE:\n{query_template}\n\n"
                                     f"LABELS (JSON):\n{json.dumps(labels or {}, ensure_ascii=False)}\n\n"
-                                    f"ISSUES:\n{'; '.join(issues) if issues else 'N/A'}\n\n"
+                                    f"ISSUES:\n{'; '.join(all_issues_for_repair) if all_issues_for_repair else 'N/A'}\n\n"
                                     "Return ONLY the repaired template text."
                                 )
                                 repair_resp = repair_client.generate(model=model, prompt=repair_prompt)
                                 repaired = repair_resp.get('response', '').strip()
                                 if repaired:
                                     # Validate repaired template quickly
-                                    _ok2, _msg2, issues2, _, _ = self.validate_query_template(repaired, labels)
+                                    _ok2, _msg2, issues2, _, _, _ = self.validate_query_template(repaired, labels)
                                     if issues2:
                                         repaired = repaired + " " + (" Hint: " + "; ".join(issues2))
                                         bt.logging.warning(f"⚠️  Repaired template still has issues - added clarifications")
                                     bt.logging.info("✅ Using repaired template")
-                                    return repaired, labels, model, timeout
+                                    
+                                    # Cache successful generation config
+                                    self.last_successful_generation_model = model
+                                    self.last_successful_generation_timeout = timeout
+                                    bt.logging.info(f"📌 Cached generation preference -> model: {model}, timeout: {timeout}s")
+                                    
+                                    return repaired, labels, model, timeout, last_successful_judge_model, last_successful_judge_timeout
                             except Exception as rep_e:
                                 bt.logging.error(f"Repair attempt failed: {rep_e}")
 
@@ -703,7 +741,13 @@ class QueryGenerator:
                             bt.logging.info(f"Proceeding without regeneration due to --neuron.regenerate_on_invalid=False")
                             bt.logging.info(f"✅ Successfully generated query with model: {model} and timeout: {timeout}s (proceeding despite invalid)")
                             bt.logging.info(f"   Final Query: {query_template}")
-                            return query_template, labels, model, timeout
+                            
+                            # Cache successful generation config
+                            self.last_successful_generation_model = model
+                            self.last_successful_generation_timeout = timeout
+                            bt.logging.info(f"📌 Cached generation preference -> model: {model}, timeout: {timeout}s")
+                            
+                            return query_template, labels, model, timeout, last_successful_judge_model, last_successful_judge_timeout
 
                     if issues:
                         suffix = " Hint: " + "; ".join(issues)
@@ -716,8 +760,14 @@ class QueryGenerator:
                         bt.logging.info(f"✅ LLM '{model}' generated CLEAN query (no issues found)")
 
                     bt.logging.info(f"✅ Successfully generated query with model: {model} and timeout: {timeout}s")
+                    
+                    # Cache successful generation config
+                    self.last_successful_generation_model = model
+                    self.last_successful_generation_timeout = timeout
+                    bt.logging.info(f"📌 Cached generation preference -> model: {model}, timeout: {timeout}s")
+                    
                     bt.logging.info(f"   Final Query: {query_template}")
-                    return query_template, labels, model, timeout
+                    return query_template, labels, model, timeout, last_successful_judge_model, last_successful_judge_timeout
 
                 except Exception as e:
                     bt.logging.error(f"❌ Failed to generate query with model: {model} and timeout: {timeout}s")
@@ -734,7 +784,7 @@ class QueryGenerator:
         # Prefer returning the last LLM-generated template with appended hints
         if last_model_query_template:
             bt.logging.info(f"📝 Finalizing with last LLM-generated template")
-            _ok, _msg, issues, _, _ = self.validate_query_template(last_model_query_template, labels)
+            _ok, _msg, issues, _, final_judge_model, final_judge_timeout = self.validate_query_template(last_model_query_template, labels)
             if issues:
                 last_model_query_template = last_model_query_template + " " + (" Hint: " + "; ".join(issues))
                 bt.logging.warning(f"⚠️  Final LLM template has issues - added clarifications:")
@@ -742,13 +792,13 @@ class QueryGenerator:
             else:
                 bt.logging.info(f"✅ Final LLM template is clean (no issues found)")
             bt.logging.info(f"🔄 Returning last LLM-generated template without regeneration")
-            return last_model_query_template, labels, None, None
+            return last_model_query_template, labels, None, None, final_judge_model, final_judge_timeout
         
         # If we never received an LLM template at all, fall back to simple_template
         bt.logging.warning("No LLM-generated template available; using simple fallback template")
         # Per request: do NOT validate simple_template here; just return it directly
         bt.logging.info(f"🔄 Returning simple fallback template without validation")
-        return simple_template, labels, None, None
+        return simple_template, labels, None, None, None, None
     
     async def build_queries(self) -> Tuple[List[Dict[str, Any]], str, Dict[str, Any], str, int, str, int]:
         """Build challenge queries for miners"""
@@ -817,7 +867,7 @@ class QueryGenerator:
             
             # Generate a complex query template
             model_name = getattr(self.config.neuron, 'ollama_model_name', "llama3.1:latest")
-            query_template, query_labels, successful_model, successful_timeout = await self.generate_complex_query(
+            query_template, query_labels, successful_model, successful_timeout, successful_judge_model, successful_judge_timeout = await self.generate_complex_query(
                 model_name=model_name,
                 variation_count=variation_count,
                 phonetic_similarity=phonetic_config,
@@ -827,8 +877,8 @@ class QueryGenerator:
             )
             
             # Get judge settings from the validation process
-            successful_judge_model = None
-            successful_judge_timeout = None
+            # successful_judge_model = None
+            # successful_judge_timeout = None
             
             # Generate test names using a mix of sanctioned and generated names
             seed_names_with_labels = []
@@ -937,7 +987,7 @@ class QueryGenerator:
             query_template = f"{clarifying_prefix}Generate {variation_count} variations of the name {{name}}, ensuring phonetic similarity: {phonetic_config}, and orthographic similarity: {orthographic_config}, and also include {rp}% of variations that follow: {rule_template}."
             
             # Validate and minimally clarify the fallback template
-            _ok, _msg, issues, _, _ = self.validate_query_template(query_template, query_labels)
+            _ok, _msg, issues, _, _, _ = self.validate_query_template(query_template, query_labels)
             if issues:
                 query_template = query_template + " " + (" Hint: " + "; ".join(issues))
             
