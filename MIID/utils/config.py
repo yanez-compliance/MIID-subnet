@@ -374,6 +374,13 @@ def add_validator_args(cls, parser):
         default=[90,100, 120]
     )
 
+    parser.add_argument(
+        '--neuron.use_judge_model',
+        action='store_true',
+        help="Enable LLM judge for query validation. Auto-enables if complex query generation is used.",
+        default=False
+    )
+
 
 def config(cls):
     """
