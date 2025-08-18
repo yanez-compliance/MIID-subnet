@@ -428,10 +428,10 @@ def calculate_variation_quality(
         # Filter out rules that are impossible for the given name structure
         for rule in target_rules:
             if rule in ('name_parts_permutations', 'initial_only_first_name', 'shorten_name_to_initials', 'shorten_name_to_abbreviations') and len(original_name.split()) < 2:
-                bt.logging.debug(f"Skipping impossible rule '{rule}' for single-part name '{original_name}'")
+                bt.logging.debug(f"⚠️ Skipping impossible rule '{rule}' for single-part name '{original_name}'")
                 continue
             if rule in ('replace_spaces_with_random_special_characters', 'remove_all_spaces') and ' ' not in original_name:
-                bt.logging.debug(f"Skipping impossible rule '{rule}' for name without spaces '{original_name}'")
+                bt.logging.debug(f"⚠️ Skipping impossible rule '{rule}' for name without spaces '{original_name}'")
                 continue
             effective_target_rules.append(rule)
 
@@ -544,7 +544,7 @@ def calculate_variation_quality(
     # If rules were requested but none were applicable to this name, adjust weights
     # to base the score entirely on similarity.
     if rule_based and "selected_rules" in rule_based and not effective_target_rules:
-        bt.logging.debug(f"No rules applicable for '{original_name}', adjusting weights. Base score will be final score.")
+        bt.logging.debug(f"⚖️ No rules applicable for '{original_name}', adjusting weights. Base score will be final score.")
         base_weight = 1.0
         rule_compliance_weight = 0.0
     else:
