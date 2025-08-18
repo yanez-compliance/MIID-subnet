@@ -76,6 +76,13 @@ class QueryGenerator:
             False
         )
         
+        # Whether to run judge even when static checks pass
+        self.judge_on_static_pass = getattr(
+            self.config.neuron if hasattr(self.config, 'neuron') else self.config,
+            'judge_on_static_pass',
+            False
+        )
+        
         # Judge failure threshold for auto-disable suggestion
         self.judge_failure_threshold = getattr(
             self.config.neuron if hasattr(self.config, 'neuron') else self.config,
@@ -90,7 +97,7 @@ class QueryGenerator:
             if not original_setting:
                 bt.logging.info("📊 Auto-enabling LLM judge because complex query generation is active (use_default_query=False)")
         
-        bt.logging.info(f"Use LLM judge model: {self.use_judge_model} (strict mode: {self.judge_strict_mode}, failure threshold: {self.judge_failure_threshold})")
+        bt.logging.info(f"Use LLM judge model: {self.use_judge_model} (strict mode: {self.judge_strict_mode}, judge_on_static_pass: {self.judge_on_static_pass}, failure threshold: {self.judge_failure_threshold})")
 
         bt.logging.info(f"use_default_query: {self.use_default_query}#########################################")
         bt.logging.info(f"QueryGenerator initialized with use_default_query={self.use_default_query}")
@@ -112,13 +119,17 @@ class QueryGenerator:
                 - error_message: Blocking error if not structurally valid
                 - issues: Non-blocking issues (missing/unclear bits) for append-only clarifications
         """
+        # Ensure these are always defined for all code paths
+        successful_judge_model: str | None = None
+        successful_judge_timeout: int | None = None
+
         if not query_template:
-            return False, "Query template is empty", []
+            return False, "Query template is empty", [], successful_judge_model, successful_judge_timeout
 
         # Require at least one {name} placeholder
         placeholder_count = query_template.count("{name}")
         if placeholder_count == 0:
-            return False, "Query template must contain at least one {name} placeholder", []
+            return False, "Query template must contain at least one {name} placeholder", [], successful_judge_model, successful_judge_timeout
 
         # Collect non-blocking issues
         issues: List[str] = []
@@ -246,13 +257,18 @@ class QueryGenerator:
                         )
                     )
 
-        # Early return if static checks passed and judge is disabled
-        if not issues and not self.use_judge_model:
-            bt.logging.info("✅ Static checks passed and judge disabled - skipping LLM judge")
-            return True, "Query template is acceptable (static checks only)", issues, None, None
+        # Early return if static checks passed and judge is not required
+        if not issues:
+            # Skip judge if it's disabled entirely OR if we don't require judge on static pass
+            if (not self.use_judge_model) or (not getattr(self, 'judge_on_static_pass', False)):
+                bt.logging.info("✅ Static checks passed - skipping LLM judge")
+                return True, "Query template is acceptable (static checks only)", issues, None, None
 
         # Mandatory LLM judge with robust fallbacks
         llm_issues = []
+        # Initialize successful judge tracking to safe defaults
+        successful_judge_model = None
+        successful_judge_timeout = None
         neuron_cfg = getattr(self.config, 'neuron', self.config)
         primary_judge_model = getattr(neuron_cfg, 'ollama_judge_model', 'llama3.1:latest')
         judge_fallback_models = getattr(neuron_cfg, 'ollama_judge_fallback_models', [])
@@ -413,6 +429,9 @@ class QueryGenerator:
                         # Cache successful model/timeout for next time
                         self.last_successful_judge_model = judge_model
                         self.last_successful_judge_timeout = judge_timeout
+                        # Record successful judge configuration for caller
+                        successful_judge_model = judge_model
+                        successful_judge_timeout = judge_timeout
                         bt.logging.info(f"📌 Cached judge preference -> model: {judge_model}, timeout: {judge_timeout}s")
                         bt.logging.info(f"✅ Judge succeeded with model: {judge_model} and timeout: {judge_timeout}s")
                         if llm_issues:
@@ -616,6 +635,9 @@ class QueryGenerator:
         fallback_timeouts = getattr(self.config.neuron, 'ollama_fallback_timeouts', [])
         timeouts_to_try = [primary_timeout] + fallback_timeouts
 
+        # Track the last LLM-generated template to use as final fallback
+        last_model_query_template: str | None = None
+
         for model in models_to_try:
             for timeout in timeouts_to_try:
                 try:
@@ -627,6 +649,9 @@ class QueryGenerator:
                     response = client.generate(model=model, prompt=prompt)
                     query_template = response['response'].strip()
                     
+                    # Track last attempted model template
+                    last_model_query_template = query_template
+
                     # Validate and minimally clarify the generated template
                     bt.logging.info(f"📝 Pre-judge LLM-generated query: {query_template}")
                     is_valid, error_msg, issues, successful_judge_model, successful_judge_timeout = self.validate_query_template(query_template, labels)
@@ -634,8 +659,51 @@ class QueryGenerator:
                         bt.logging.error(f"❌ LLM '{model}' generated INVALID template:")
                         bt.logging.error(f"   Failed Query: {query_template}")
                         bt.logging.error(f"   Reason: {error_msg}")
-                        bt.logging.error(f"   Trying next model/timeout.")
-                        continue  # Try next timeout or model
+                        # Optionally attempt a one-shot repair instead of regeneration
+                        if getattr(self.config.neuron, 'enable_repair_prompt', False):
+                            try:
+                                bt.logging.info("🛠️  Attempting one-shot repair of invalid template using repair prompt")
+                                repair_client = ollama.Client(host=self.config.neuron.ollama_url, timeout=self.config.neuron.ollama_request_timeout)
+                                repair_prompt = (
+                                    "You are a helpful assistant. The following query template is invalid or incomplete.\n"
+                                    "Given the template, labels, and detected issues, produce a corrected template that:\n"
+                                    "- Includes exactly one {name} placeholder\n"
+                                    "- Satisfies the labels\n"
+                                    "- Is concise and declarative\n\n"
+                                    f"TEMPLATE:\n{query_template}\n\n"
+                                    f"LABELS (JSON):\n{json.dumps(labels or {}, ensure_ascii=False)}\n\n"
+                                    f"ISSUES:\n{'; '.join(issues) if issues else 'N/A'}\n\n"
+                                    "Return ONLY the repaired template text."
+                                )
+                                repair_resp = repair_client.generate(model=model, prompt=repair_prompt)
+                                repaired = repair_resp.get('response', '').strip()
+                                if repaired:
+                                    # Validate repaired template quickly
+                                    _ok2, _msg2, issues2, _, _ = self.validate_query_template(repaired, labels)
+                                    if issues2:
+                                        repaired = repaired + " " + (" Hint: " + "; ".join(issues2))
+                                        bt.logging.warning(f"⚠️  Repaired template still has issues - added clarifications")
+                                    bt.logging.info("✅ Using repaired template")
+                                    return repaired, labels, model, timeout
+                            except Exception as rep_e:
+                                bt.logging.error(f"Repair attempt failed: {rep_e}")
+
+                        if getattr(self.config.neuron, 'regenerate_on_invalid', False):
+                            bt.logging.error(f"   Trying next model/timeout.")
+                            continue  # Try next timeout or model
+                        else:
+                            # Append available issues as hints (if any were produced before invalidation)
+                            if issues:
+                                suffix = " Hint: " + "; ".join(issues)
+                                query_template = query_template + " " + suffix
+                                bt.logging.warning(f"⚠️  Invalid template, appended clarifications and proceeding as requested")
+                                bt.logging.warning(f"   Issues Found: {issues}")
+                                bt.logging.warning(f"   Added Hints: {suffix}")
+                            # Proceed with the current (invalid) query plus hints; miner may still handle
+                            bt.logging.info(f"Proceeding without regeneration due to --neuron.regenerate_on_invalid=False")
+                            bt.logging.info(f"✅ Successfully generated query with model: {model} and timeout: {timeout}s (proceeding despite invalid)")
+                            bt.logging.info(f"   Final Query: {query_template}")
+                            return query_template, labels, model, timeout
 
                     if issues:
                         suffix = " Hint: " + "; ".join(issues)
@@ -662,19 +730,24 @@ class QueryGenerator:
                         bt.logging.error(f"💥 An unexpected error occurred. Trying next model.")
                         break # break from timeout loop, and try next model.
             
-        bt.logging.error("💥 All models and timeouts failed. Falling back to a simple template.")
-        # Validate and minimally clarify simple template before returning
-        bt.logging.info(f"📝 Pre-judge fallback simple template: {simple_template}")
-        _ok, _msg, issues, _, _ = self.validate_query_template(simple_template, labels)
-        if issues:
-            simple_template = simple_template + " " + (" Hint: " + "; ".join(issues))
-            bt.logging.warning(f"⚠️  Simple template also has issues - added clarifications:")
-            bt.logging.warning(f"   Issues Found: {issues}")
-            bt.logging.warning(f"   Added Hints: Hint: {'; '.join(issues)}")
-        else:
-            bt.logging.info(f"✅ Simple template is clean (no issues found)")
+        bt.logging.error("💥 All models and timeouts failed.")
+        # Prefer returning the last LLM-generated template with appended hints
+        if last_model_query_template:
+            bt.logging.info(f"📝 Finalizing with last LLM-generated template")
+            _ok, _msg, issues, _, _ = self.validate_query_template(last_model_query_template, labels)
+            if issues:
+                last_model_query_template = last_model_query_template + " " + (" Hint: " + "; ".join(issues))
+                bt.logging.warning(f"⚠️  Final LLM template has issues - added clarifications:")
+                bt.logging.warning(f"   Issues Found: {issues}")
+            else:
+                bt.logging.info(f"✅ Final LLM template is clean (no issues found)")
+            bt.logging.info(f"🔄 Returning last LLM-generated template without regeneration")
+            return last_model_query_template, labels, None, None
         
-        bt.logging.info(f"🔄 Using fallback simple template: {simple_template}")
+        # If we never received an LLM template at all, fall back to simple_template
+        bt.logging.warning("No LLM-generated template available; using simple fallback template")
+        # Per request: do NOT validate simple_template here; just return it directly
+        bt.logging.info(f"🔄 Returning simple fallback template without validation")
         return simple_template, labels, None, None
     
     async def build_queries(self) -> Tuple[List[Dict[str, Any]], str, Dict[str, Any], str, int, str, int]:
@@ -864,7 +937,7 @@ class QueryGenerator:
             query_template = f"{clarifying_prefix}Generate {variation_count} variations of the name {{name}}, ensuring phonetic similarity: {phonetic_config}, and orthographic similarity: {orthographic_config}, and also include {rp}% of variations that follow: {rule_template}."
             
             # Validate and minimally clarify the fallback template
-            _ok, _msg, issues = self.validate_query_template(query_template, query_labels)
+            _ok, _msg, issues, _, _ = self.validate_query_template(query_template, query_labels)
             if issues:
                 query_template = query_template + " " + (" Hint: " + "; ".join(issues))
             
