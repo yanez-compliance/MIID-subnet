@@ -263,6 +263,7 @@ class QueryGenerator:
 
         # Early return if static checks passed and judge is not required
         if not issues:
+            bt.logging.debug(f"🔍 Static checks found no issues. Judge enabled: {self.use_judge_model}, judge_on_static_pass: {getattr(self, 'judge_on_static_pass', False)}")
             # Skip judge if it's disabled entirely OR if we don't require judge on static pass
             if (not self.use_judge_model) or (not getattr(self, 'judge_on_static_pass', False)):
                 bt.logging.info("✅ Static checks passed - skipping LLM judge")
