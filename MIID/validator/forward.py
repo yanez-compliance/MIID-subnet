@@ -191,14 +191,17 @@ async def forward(self):
     miner_uids = miner_uids.tolist()
     bt.logging.info(f"######################################### Selected {len(miner_uids)} miners to query: {miner_uids}#########################################")
 
-    # 2) Initialize the query generator
-    query_generator = QueryGenerator(self.config)
+    # 2) Use the existing query generator instance
+    query_generator = self.query_generator
     
     # Use the query generator
     challenge_start_time = time.time()
-    seed_names, query_template, query_labels, successful_model, successful_timeout = await query_generator.build_queries()
+    seed_names_with_labels, query_template, query_labels, successful_model, successful_timeout = await query_generator.build_queries()
     challenge_end_time = time.time()
     bt.logging.info(f"Time to generate challenges: {int(challenge_end_time - challenge_start_time)}s")
+
+    # Extract just the names for use in existing logic
+    seed_names = [item['name'] for item in seed_names_with_labels]
 
     # Adapt validator's configuration if a successful model and timeout were found
     if successful_model:
@@ -343,6 +346,7 @@ async def forward(self):
     # Save the query and responses to a JSON file
     results = {
         "timestamp": timestamp,
+        "seed_names_with_labels": seed_names_with_labels,
         "seed_names": seed_names,
         "query_template": query_template,
         "query_labels": query_labels,
@@ -353,7 +357,7 @@ async def forward(self):
             "dendrite_timeout": adaptive_timeout
         },
         "query_generation": {
-            "use_default_query": query_generator.use_default_query,
+            "use_default_query": self.query_generator.use_default_query,
             "model_name": getattr(self.config.neuron, 'ollama_model_name', "llama3.1:latest"),
             "query_generator_timeout": successful_timeout,
             "generation_time": challenge_end_time - challenge_start_time
@@ -453,7 +457,7 @@ async def forward(self):
     wandb_extra_data = {
         "query_template": query_template,
         "variation_count": query_labels.get('variation_count'),
-        "seed_names_count": len(seed_names),
+        "seed_names_count": len(seed_names_with_labels),
         "query_generator_timeout": successful_timeout,
         "dendrite_timeout": adaptive_timeout,
         #"valid_responses": valid_responses,

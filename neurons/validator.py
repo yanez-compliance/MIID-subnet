@@ -183,6 +183,9 @@ class Validator(BaseValidatorNeuron):
         
         bt.logging.info(f"Using LLM model: {self.model_name}")
         
+        # Initialize the query generator
+        self.query_generator = QueryGenerator(self.config)
+        
         bt.logging.info("Ollama initialized")
         bt.logging.info(f"Using LLM model: {self.model_name}")
         bt.logging.info("Finished initializing Validator")
