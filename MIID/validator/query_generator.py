@@ -103,7 +103,7 @@ class QueryGenerator:
         
         bt.logging.info(f"Use LLM judge model: {self.use_judge_model} (strict mode: {self.judge_strict_mode}, judge_on_static_pass: {self.judge_on_static_pass}, failure threshold: {self.judge_failure_threshold})")
 
-        bt.logging.info(f"use_default_query: {self.use_default_query}#########################################")
+        bt.logging.debug(f"⚙️ use_default_query: {self.use_default_query}")
         bt.logging.info(f"QueryGenerator initialized with use_default_query={self.use_default_query}")
     
     def validate_query_template(
@@ -270,6 +270,53 @@ class QueryGenerator:
 
         # Mandatory LLM judge with robust fallbacks
         llm_issues = []
+
+        # Prepare structured expectations for the judge so we can reconstruct
+        # issues using the exact same phrasing as static checks.
+        soft_issue_map = {
+            "phonetic": "Mention phonetic similarity requirements.",
+            "orthographic": "Mention orthographic similarity requirements.",
+            "rule": "Mention rule-based transformation requirement.",
+        }
+
+        variation_count = labels.get("variation_count") if labels else None
+        phonetic_cfg = labels.get("phonetic_similarity") if labels else None
+        orthographic_cfg = labels.get("orthographic_similarity") if labels else None
+        rule_meta = labels.get("rule_based") if labels else None
+
+        # Expected tokens: ["60% Light", ...]
+        phonetic_expected_tokens: List[str] = []
+        orthographic_expected_tokens: List[str] = []
+        rule_pct_val: int | None = None
+        rule_descs_list: List[str] = []
+        ambiguity_sentence: str | None = None
+
+        if isinstance(phonetic_cfg, dict) and phonetic_cfg:
+            try:
+                for level, frac in phonetic_cfg.items():
+                    phonetic_expected_tokens.append(f"{int(frac * 100)}% {level}")
+            except Exception:
+                phonetic_expected_tokens = []
+
+        if isinstance(orthographic_cfg, dict) and orthographic_cfg:
+            try:
+                for level, frac in orthographic_cfg.items():
+                    orthographic_expected_tokens.append(f"{int(frac * 100)}% {level}")
+            except Exception:
+                orthographic_expected_tokens = []
+
+        if isinstance(rule_meta, dict) and rule_meta:
+            rp = rule_meta.get("percentage")
+            if isinstance(rp, int):
+                rule_pct_val = rp
+                ambiguity_sentence = (
+                    f"We want {rp}% of the name variations to be rule-based. "
+                    "Each variation should have at least one transformation rule applied—some may have only one rule, while others may have multiple. "
+                    "Importantly, all listed rules must be represented across the set of rule-based name variations."
+                )
+            rule_descriptions_for_this_query = rule_meta.get("rule_descriptions", {})
+            if isinstance(rule_descriptions_for_this_query, dict):
+                rule_descs_list = [d for d in rule_descriptions_for_this_query.values() if isinstance(d, str) and d]
         # Initialize successful judge tracking to safe defaults
         successful_judge_model = None
         successful_judge_timeout = None
@@ -312,29 +359,35 @@ class QueryGenerator:
                     bt.logging.info(f"🔍 Attempting judge with model: {judge_model} and timeout: {judge_timeout}s")
                     client = ollama.Client(host=neuron_cfg.ollama_url, timeout=judge_timeout)
                     
+                    # Provide the judge with structured expectations, asking it to mark what is missing.
                     judge_prompt = (
-                        "You are a strict validator. Analyze the query template against the provided labels and return ONLY a valid JSON object.\n\n"
+                        "You are a strict validator. Analyze the query TEMPLATE against the provided LABELS.\n\n"
+                        "From the EXPECTED fields/tokens below, identify which are missing or unclear in the TEMPLATE.\n"
+                        "Return ONLY valid JSON with shape {\"missing\": { ... }} where keys map to arrays of missing tokens.\n\n"
                         f"TEMPLATE:\n{query_template}\n\n"
                         f"LABELS (JSON):\n{json.dumps(labels or {}, ensure_ascii=False)}\n\n"
-                        "INSTRUCTIONS:\n"
-                        "1. Return ONLY a JSON object with an 'issues' array\n"
-                        "2. List only MINIMAL missing or unclear elements that need clarification\n"
-                        "3. Do not restate what is already clearly present\n"
-                        "4. If no issues found, return: {\"issues\": []}\n"
-                        "5. Do not include any text before or after the JSON\n\n"
-                        "EXAMPLE OUTPUT:\n"
-                        "{\"issues\": [\"Specify exact number of variations: 10.\", \"Mention phonetic similarity requirements.\"]}\n\n"
+                        f"EXPECTED:\n"
+                        f"- soft: {json.dumps(list(soft_issue_map.keys()), ensure_ascii=False)}\n"
+                        f"- variation_count: {json.dumps(variation_count, ensure_ascii=False)}\n"
+                        f"- phonetic_tokens: {json.dumps(phonetic_expected_tokens, ensure_ascii=False)}\n"
+                        f"- orthographic_tokens: {json.dumps(orthographic_expected_tokens, ensure_ascii=False)}\n"
+                        f"- rule_percentage: {json.dumps(rule_pct_val, ensure_ascii=False)}\n"
+                        f"- rule_descriptions: {json.dumps(rule_descs_list, ensure_ascii=False)}\n\n"
+                        "OUTPUT RULES:\n"
+                        "- Output ONLY valid JSON with this exact top-level key: 'missing'\n"
+                        "- Example shape: {\"missing\": {\"soft\": [\"phonetic\"], \"phonetic_tokens\": [\"60% Light\"]}}\n"
+                        "- If nothing is missing, return: {\"missing\": {}}\n\n"
                         "RESPONSE (JSON only):"
                     )
                     
                     # Log the prompt being sent (for debugging)
-                    bt.logging.debug(f"🔍 Judge prompt preview: {judge_prompt[:200]}...")
+                    bt.logging.debug(f"🧠 Judge prompt preview: {judge_prompt[:200]}...")
                     resp = client.generate(model=judge_model, prompt=judge_prompt)
                     text = resp.get('response', '').strip()
                     
                     # Log the raw response for debugging (truncated if too long)
                     if len(text) > 500:
-                        bt.logging.debug(f"🔍 Judge raw response (truncated): {text[:500]}...")
+                        bt.logging.debug(f"📄 Judge raw response (truncated): {text[:500]}...")
                     else:
                         bt.logging.debug(f"🔍 Judge raw response: {text}")
                     
@@ -359,9 +412,9 @@ class QueryGenerator:
                             except json.JSONDecodeError as e:
                                 extraction_debug.append(f"Strategy 2 (Markdown Code Block): FAILED - {str(e)}")
                         
-                        # Strategy 3: Find JSON object in text
+                        # Strategy 3: Find JSON object in text (expecting a 'missing' key)
                         if not parsed:
-                            json_match = re.search(r'\{[^{}]*"issues"[^{}]*\[[^\]]*\]\s*\}', text)
+                            json_match = re.search(r'\{[^{}]*"missing"[^{}]*\{[\s\S]*?\}\s*\}', text, re.DOTALL)
                             if json_match:
                                 try:
                                     parsed = json.loads(json_match.group(0))
@@ -379,7 +432,7 @@ class QueryGenerator:
                             for i, obj_str in enumerate(json_objects):
                                 try:
                                     temp_parsed = json.loads(obj_str)
-                                    if isinstance(temp_parsed, dict) and 'issues' in temp_parsed:
+                                    if isinstance(temp_parsed, dict) and 'missing' in temp_parsed:
                                         parsed = temp_parsed
                                         extraction_debug.append(f"Strategy 4 (General JSON): SUCCESS with object {i+1}")
                                         break
@@ -389,45 +442,63 @@ class QueryGenerator:
                             if not parsed:
                                 extraction_debug.append("Strategy 4 (General JSON): ALL OBJECTS FAILED")
                     
-                    # Extract issues from parsed JSON
+                    # Extract structured missing fields and map to canonical issue strings
                     if parsed and isinstance(parsed, dict):
-                        llm_issues = parsed.get('issues', [])
-                        if not isinstance(llm_issues, list):
-                            llm_issues = []
+                        missing = parsed.get('missing', {})
+                        mapped_issues: List[str] = []
+
+                        if isinstance(missing, dict):
+                            # Soft checks
+                            soft_missing = missing.get('soft', [])
+                            if isinstance(soft_missing, list):
+                                for key in soft_missing:
+                                    if isinstance(key, str) and key in soft_issue_map:
+                                        mapped_issues.append(soft_issue_map[key])
+
+                            # Variation count
+                            var_missing = missing.get('variation_count')
+                            if var_missing and isinstance(variation_count, int):
+                                mapped_issues.append(f"Specify exact number of variations: {variation_count}.")
+
+                            # Phonetic tokens
+                            phon_missing = missing.get('phonetic_tokens', [])
+                            if isinstance(phon_missing, list) and phon_missing:
+                                phonetic_expected = ", ".join(phon_missing)
+                                mapped_issues.append(f"Phonetic similarity: {phonetic_expected}.")
+
+                            # Orthographic tokens
+                            ortho_missing = missing.get('orthographic_tokens', [])
+                            if isinstance(ortho_missing, list) and ortho_missing:
+                                orthographic_expected = ", ".join(ortho_missing)
+                                mapped_issues.append(f"Orthographic similarity: {orthographic_expected}.")
+
+                            # Rule percentage
+                            rule_pct_missing = missing.get('rule_percentage')
+                            if rule_pct_missing and isinstance(rule_pct_val, int):
+                                mapped_issues.append(
+                                    f"Approximately {rule_pct_val}% of the variations should follow rule-based transformations."
+                                )
+
+                            # Rule descriptions
+                            rule_desc_missing = missing.get('rule_descriptions', [])
+                            if isinstance(rule_desc_missing, list) and rule_desc_missing:
+                                mapped_issues.append(
+                                    f"Apply these rule-based transformations: {'; '.join(rule_desc_missing)}."
+                                )
+
+                            # Ambiguity clarification (judge can signal under key 'rule_ambiguity')
+                            rule_amb_missing = missing.get('rule_ambiguity')
+                            if rule_amb_missing and isinstance(ambiguity_sentence, str):
+                                mapped_issues.append(ambiguity_sentence)
+
+                        llm_issues = mapped_issues
                     else:
-                        # If all JSON parsing failed, handle based on strict mode
+                        # If all JSON parsing failed
                         if self.judge_strict_mode:
-                            # In strict mode, fail on JSON parsing errors
                             raise ValueError(f"Invalid JSON response in strict mode: {text[:200]}...")
                         else:
-                            # In lenient mode, try to extract issues from text
-                            bt.logging.warning(f"🔧 JSON parsing failed for judge response, attempting text extraction (lenient mode)")
-                            bt.logging.info(f"🔧 Text extraction debug info:")
-                            bt.logging.info(f"   Raw text length: {len(text)} characters")
-                            bt.logging.info(f"   Text preview: {text[:200]}...")
-                            
-                            # Look for common issue patterns in the text
-                            issue_patterns = [
-                                r'(?:you should|must|need to).*?(?:\.|$)',
-                                r'(?:specify|mention|require|add|include|clarify).*?(?:\.|$)',
-                                r'(?:missing|unclear|incomplete).*?(?:\.|$)'
-                            ]
-                            extracted_issues = []
-                            for i, pattern in enumerate(issue_patterns):
-                                matches = re.findall(pattern, text, re.IGNORECASE)
-                                bt.logging.info(f"   Pattern {i+1} matches: {len(matches)}")
-                                for match in matches:
-                                    if len(match.strip()) > 10:
-                                        extracted_issues.append(match.strip())
-                                        bt.logging.info(f"     - Found: {match.strip()}")
-                            
-                            if extracted_issues:
-                                llm_issues = extracted_issues[:3]  # Limit to 3 most relevant
-                                bt.logging.info(f"🔧 Extracted {len(llm_issues)} issues from text: {llm_issues}")
-                            else:
-                                # If no issues found in text, assume no issues
-                                llm_issues = []
-                                bt.logging.info(f"🔧 No issues extracted from text, assuming query is acceptable")
+                            # Lenient mode: do not try to mine free-text; keep issues empty to avoid non-canonical phrasing
+                            llm_issues = []
                     if isinstance(llm_issues, list):
                         judge_success = True
                         # Cache successful model/timeout for next time
@@ -436,12 +507,12 @@ class QueryGenerator:
                         # Record successful judge configuration for caller
                         successful_judge_model = judge_model
                         successful_judge_timeout = judge_timeout
-                        bt.logging.info(f"📌 Cached judge preference -> model: {judge_model}, timeout: {judge_timeout}s")
-                        bt.logging.info(f"✅ Judge succeeded with model: {judge_model} and timeout: {judge_timeout}s")
+                        bt.logging.debug(f"💾 Cached judge preference -> model: {judge_model}, timeout: {judge_timeout}s")
+                        bt.logging.info(f"Judge succeeded with model: {judge_model} and timeout: {judge_timeout}s")
                         if llm_issues:
-                            bt.logging.info(f"   Judge found issues: {llm_issues}")
+                            bt.logging.debug(f"⚠️ Judge found issues: {llm_issues}")
                         else:
-                            bt.logging.info(f"   Judge found no issues - query is clear")
+                            bt.logging.debug(f"✅ Judge found no issues - query is clear")
                         break
                 except Exception as e:
                     error_msg = str(e)
@@ -517,10 +588,14 @@ class QueryGenerator:
         #     if isinstance(it, str) and it not in issues:
         #         issues.append(it)
 
-        # Deduplicate while preserving order
+        # Merge static and judge issues, deduplicate while preserving order
+        merged_for_dedup = []
+        merged_for_dedup.extend(issues or [])
+        merged_for_dedup.extend(llm_issues or [])
+
         seen = set()
         deduped_issues: List[str] = []
-        for it in issues:
+        for it in merged_for_dedup:
             if it not in seen:
                 deduped_issues.append(it)
                 seen.add(it)
@@ -565,18 +640,18 @@ class QueryGenerator:
         phonetic_spec = ", ".join([f"{int(pct*100)}% {level}" for level, pct in phonetic_similarity.items()])
         orthographic_spec = ", ".join([f"{int(pct*100)}% {level}" for level, pct in orthographic_similarity.items()])
         
-        bt.logging.info(f"Generating query with: {variation_count} variations, " +
+        bt.logging.debug(f"🤖 Generating query with: {variation_count} variations, " +
                     f"phonetic similarity: {phonetic_spec}, " +
                     f"orthographic similarity: {orthographic_spec}")
-        bt.logging.info(f"Rule-based requirement: {rule_percentage}% of variations should follow: {rule_template}")
+        bt.logging.debug(f"⚖️ Rule-based requirement: {rule_percentage}% of variations should follow: {rule_template}")
 
         clarifying_prefix = "The following name is the seed name to generate variations for: {name}. "  
         # Add a clarifying sentence at the beginning to make it clear this is the seed name
         simple_template = f"{clarifying_prefix}Generate {variation_count} variations of the name {{name}}, ensuring phonetic similarity: {phonetic_spec}, and orthographic similarity: {orthographic_spec}, and also include {rule_percentage}% of variations that follow: {rule_template}"
-        bt.logging.warning(f"Simple template: {simple_template}")
+        bt.logging.debug(f"📝 Simple template: {simple_template}")
         
         if use_default:
-            bt.logging.warning("Using default query template (skipping complex query generation)")
+            bt.logging.info("Using default query template (skipping complex query generation)")
             #clarifying_prefix = "The following name is the seed name to generate variations for: {name}. "
             # Ensure the default template includes the rule_percentage
             # default_template = (
@@ -604,7 +679,7 @@ class QueryGenerator:
             # else:
             #     bt.logging.info(f"✅ Default template is clean (no issues found)")
 
-            bt.logging.info(f"🔄 Using default query template: {simple_template}")
+            bt.logging.debug(f"📄 Using default query template: {simple_template}")
             return simple_template, labels, None, None, None, None
         
     
@@ -664,7 +739,7 @@ class QueryGenerator:
         for model in models_to_try:
             for timeout in timeouts_to_try:
                 try:
-                    bt.logging.info(f"Attempting to generate query with model: {model} and timeout: {timeout}s")
+                    bt.logging.debug(f"🤖 Attempting to generate query with model: {model} and timeout: {timeout}s")
                     # Configure the client with the timeout
                     client = ollama.Client(host=self.config.neuron.ollama_url, timeout=timeout)
                     
@@ -676,7 +751,7 @@ class QueryGenerator:
                     last_model_query_template = query_template
 
                     # Validate and minimally clarify the generated template
-                    bt.logging.info(f"📝 Pre-judge LLM-generated query: {query_template}")
+                    bt.logging.debug(f"📝 Pre-judge LLM-generated query: {query_template}")
                     is_valid, error_msg, issues, llm_issues, successful_judge_model, successful_judge_timeout = self.validate_query_template(query_template, labels)
                     
                     # Persist the successful judge config for later returns
@@ -759,14 +834,14 @@ class QueryGenerator:
                     else:
                         bt.logging.info(f"✅ LLM '{model}' generated CLEAN query (no issues found)")
 
-                    bt.logging.info(f"✅ Successfully generated query with model: {model} and timeout: {timeout}s")
+                    bt.logging.info(f"Successfully generated query with model: {model} and timeout: {timeout}s")
                     
                     # Cache successful generation config
                     self.last_successful_generation_model = model
                     self.last_successful_generation_timeout = timeout
-                    bt.logging.info(f"📌 Cached generation preference -> model: {model}, timeout: {timeout}s")
+                    bt.logging.debug(f"💾 Cached generation preference -> model: {model}, timeout: {timeout}s")
                     
-                    bt.logging.info(f"   Final Query: {query_template}")
+                    bt.logging.debug(f"📄 Final Query: {query_template}")
                     return query_template, labels, model, timeout, last_successful_judge_model, last_successful_judge_timeout
 
                 except Exception as e:
@@ -803,7 +878,7 @@ class QueryGenerator:
     async def build_queries(self) -> Tuple[List[Dict[str, Any]], str, Dict[str, Any], str, int, str, int]:
         """Build challenge queries for miners"""
         try:
-            bt.logging.info("Building test queries for miners")
+            bt.logging.debug("🔄 Building test queries for miners")
             
             # Set up query parameters - randomly select different configurations
             # for each validation round to test miners on various tasks
@@ -936,13 +1011,13 @@ class QueryGenerator:
                         3 <= len(last_name) <= 20):
                         generated_names.append(name)
                         seen_names.add(name)
-                        bt.logging.info(f"Generated negative full name: {name}")
+                        bt.logging.debug(f"📝 Generated negative full name: {name}")
                 else:
                     name = fake.first_name().lower()
                     if name not in generated_names and name not in seen_names and 3 <= len(name) <= 20:
                         generated_names.append(name)
                         seen_names.add(name)
-                        bt.logging.info(f"Generated negative single name: {name}")
+                        bt.logging.debug(f"📝 Generated negative single name: {name}")
             
             # Add generated names to the list with "negative" label
             for name in generated_names:
@@ -953,10 +1028,10 @@ class QueryGenerator:
             
             # Log the final list of seed names with their labels for traceability
             log_output = [f"'{item['name']}' ({item['label']})" for item in seed_names_with_labels]
-            bt.logging.info(f"Generated {len(seed_names_with_labels)} test names: [{', '.join(log_output)}]")
+            bt.logging.debug(f"📋 Generated {len(seed_names_with_labels)} test names: [{', '.join(log_output)}]")
             
-            bt.logging.info(f"Query template: {query_template}")
-            bt.logging.info(f"Query labels: {query_labels}")
+            bt.logging.debug(f"📄 Query template: {query_template}")
+            bt.logging.debug(f"📋 Query labels: {query_labels}")
             
             # The function now returns a list of dictionaries, so we extract just the names for the return
             seed_names = [item['name'] for item in seed_names_with_labels]
@@ -1018,6 +1093,6 @@ class QueryGenerator:
             seed_names_with_labels = [{"name": name, "label": "negative"} for name in seed_names]
             
             bt.logging.info(f"Using fallback: {len(seed_names)} test names")
-            bt.logging.info(f"Query template: {query_template}")
-            bt.logging.info(f"Query labels: {query_labels}")
+            bt.logging.debug(f"📄 Query template: {query_template}")
+            bt.logging.debug(f"📋 Query labels: {query_labels}")
             return seed_names_with_labels, query_template, query_labels, None, None, None, None

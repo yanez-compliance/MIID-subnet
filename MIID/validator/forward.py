@@ -42,7 +42,6 @@ import json
 import os
 import random
 import asyncio
-import numpy as np
 from typing import List, Dict, Any, Tuple
 from datetime import datetime
 
@@ -139,7 +138,7 @@ async def dendrite_with_retries(dendrite: bt.dendrite, axons: list, synapse: Ide
         
         idx = new_idx
         axons_for_retry = new_axons
-        time.sleep(5 * (attempt + 1))
+        await asyncio.sleep(5 * (attempt + 1))
     
     # Fill any remaining None
     for i, r in enumerate(res):
@@ -184,12 +183,12 @@ async def forward(self):
     miner_uids = get_random_uids(self, k=miner_selection_size)
     axons = [self.metagraph.axons[uid] for uid in miner_uids]
 
-    bt.logging.info(f"######################################### Miner axons: {axons}#########################################")
-    bt.logging.info(f"######################################### Miner selection size: {miner_selection_size}#########################################")
-    bt.logging.info(f"######################################### Available axon size: {available_axon_size}#########################################")
+    bt.logging.debug(f"🔧 Miner axons: {axons}")
+    bt.logging.debug(f"⚙️ Miner selection size: {miner_selection_size}")
+    bt.logging.debug(f"📋 Available axon size: {available_axon_size}")
 
     miner_uids = miner_uids.tolist()
-    bt.logging.info(f"######################################### Selected {len(miner_uids)} miners to query: {miner_uids}#########################################")
+    bt.logging.info(f"Selected {len(miner_uids)} miners to query: {miner_uids}")
 
     # 2) Use the existing query generator instance
     query_generator = self.query_generator
@@ -223,8 +222,8 @@ async def forward(self):
     else:
         bt.logging.info(f"Querying {len(miner_uids)} miners with complex query")
 
-    bt.logging.info(f"#########################################Request synapse: {request_synapse}#########################################")
-    time.sleep(3)
+    bt.logging.debug(f"📄 Request synapse: {request_synapse}")
+    await asyncio.sleep(3)
 
     # 6) Query the network in batches
     start_time = time.time()
@@ -236,8 +235,8 @@ async def forward(self):
         batch_uids = miner_uids[i:i+batch_size]
         batch_axons = [self.metagraph.axons[uid] for uid in batch_uids]
         
-        bt.logging.info(f"#########################################Batch uids: {batch_uids}#########################################")
-        time.sleep(3)  # Large sleep; adjust as desired
+        bt.logging.debug(f"🔄 Batch uids: {batch_uids}")
+        await asyncio.sleep(3)  # Large sleep; adjust as desired
 
         bt.logging.info(f"Processing batch {i//batch_size + 1}/{total_batches} with {len(batch_uids)} miners")
         batch_start_time = time.time()
@@ -395,9 +394,9 @@ async def forward(self):
     # logging the spec_version before setting weights
     bt.logging.info(f"Spec version for setting weights: {self.spec_version}")
     (success, uint_uids, uint_weights) = self.set_weights()
-    bt.logging.info(f"========================================Weights set successfully: {success}=========================================")
-    bt.logging.info(f"========================================Uids: {uint_uids}=========================================")
-    bt.logging.info(f"========================================Weights: {uint_weights}=========================================")
+    bt.logging.info(f"Weights set successfully: {success}")
+    bt.logging.debug(f"📊 Uids: {uint_uids}")
+    bt.logging.debug(f"⚖️ Weights: {uint_weights}")
     
     # Always add weights info to results, regardless of success
     results["Weights"] = {
@@ -411,7 +410,7 @@ async def forward(self):
         "uids": [int(uid) for uid in uint_uids] if uint_uids else [],
         "weights": [int(weight) for weight in uint_weights] if uint_weights else []
     }
-    bt.logging.info(f"========================================Results: {results['Weights']}=========================================")
+    bt.logging.debug(f"📈 Results: {results['Weights']}")
     
     # Add metagraph scores for all miners
     results["metagraph_scores"] = {
@@ -419,7 +418,7 @@ async def forward(self):
         "total_miners": len(self.scores),
         "scores_by_uid": {}
     }
-    bt.logging.info(f"========================================Metagraph scores: {results['metagraph_scores']}=========================================")
+    bt.logging.debug(f"📊 Metagraph scores: {results['metagraph_scores']}")
     # Add scores for each UID in the metagraph
     for uid in range(len(self.scores)):
         results["metagraph_scores"]["scores_by_uid"][str(uid)] = {
@@ -429,7 +428,7 @@ async def forward(self):
             "was_queried": uid in miner_uids
         }
     
-    bt.logging.info(f"========================================Metagraph scores added for {len(self.scores)} miners=========================================")
+    bt.logging.debug(f"📋 Metagraph scores added for {len(self.scores)} miners")
     
     if not success:
         bt.logging.error("Failed to set weights. Exiting.")
@@ -463,7 +462,7 @@ async def forward(self):
     results_json_string = json.dumps(results, sort_keys=True)
     
     hotkey = self.wallet.hotkey
-    print(f"@@@@@@@@@@@@@@@@@@@@@@@@@@@Hotkey: {hotkey}@@@@@@@@@@@@@@@@@@@@@@@@@@@")
+    bt.logging.debug(f"🔑 Hotkey: {hotkey}")
     message_to_sign = f"Hotkey: {hotkey} \n timestamp: {timestamp} \n query_template: {query_template} \n query_labels: {query_labels}"
     signed_contents = sign_message(self.wallet, message_to_sign, output_file=None)
     results["signature"] = signed_contents
@@ -471,7 +470,7 @@ async def forward(self):
     upload_success = False
     #If for some reason uploading the data fails, we should just log it and continue. Server might go down but should not be a unique point of failure for the subnet
     try:
-        print(f"@@@@@@@@@@@@@@@@@@@@@@@@@@@Uploading data to: {MIID_SERVER}@@@@@@@@@@@@@@@@@@@@@@@@@@@")
+        bt.logging.info(f"Uploading data to: {MIID_SERVER}")
         upload_success = upload_data(MIID_SERVER, hotkey, results) 
         if upload_success:
             bt.logging.info("Data uploaded successfully to external server")
@@ -530,7 +529,7 @@ async def forward(self):
     request_end = time.time()
     if request_end - request_start < EPOCH_MIN_TIME:
         bt.logging.info(f"Finished quickly; sleeping for {EPOCH_MIN_TIME - (request_end - request_start)}s")
-        time.sleep(EPOCH_MIN_TIME - (request_end - request_start))
+        await asyncio.sleep(EPOCH_MIN_TIME - (request_end - request_start))
 
     bt.logging.info("All batches processed, waiting 30 more seconds...")
     await asyncio.sleep(5)
