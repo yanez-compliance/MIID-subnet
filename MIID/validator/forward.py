@@ -203,26 +203,6 @@ async def forward(self):
     # Extract just the names for use in existing logic
     seed_names = [item['name'] for item in seed_names_with_labels]
 
-    # Adapt validator's configuration if a successful model and timeout were found
-    if successful_model:
-        if self.config.neuron.ollama_model_name != successful_model:
-            bt.logging.info(f"Adapting to new successful model: '{successful_model}'")
-            self.config.neuron.ollama_model_name = successful_model
-    if successful_timeout:
-        if self.config.neuron.ollama_request_timeout != successful_timeout:
-            bt.logging.info(f"Adapting to new successful timeout: {successful_timeout}s")
-            self.config.neuron.ollama_request_timeout = successful_timeout
-
-    # Adapt validator's configuration if successful judge model and timeout were found
-    if successful_judge_model:
-        if self.config.neuron.ollama_judge_model != successful_judge_model:
-            bt.logging.info(f"Adapting to new successful judge model: '{successful_judge_model}'")
-            self.config.neuron.ollama_judge_model = successful_judge_model
-    if successful_judge_timeout:
-        if self.config.neuron.ollama_judge_timeout != successful_judge_timeout:
-            bt.logging.info(f"Adapting to new successful judge timeout: {successful_judge_timeout}s")
-            self.config.neuron.ollama_judge_timeout = successful_judge_timeout
-
     # Calculate timeout based on the number of names and complexity
     base_timeout = self.config.neuron.timeout  # Double from 60 to 120 seconds
     # More generous allocation - especially for LLM operations
