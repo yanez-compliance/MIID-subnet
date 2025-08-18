@@ -381,6 +381,20 @@ def add_validator_args(cls, parser):
         default=False
     )
 
+    parser.add_argument(
+        '--neuron.judge_strict_mode',
+        action='store_true',
+        help="Enable strict mode for LLM judge (fails on JSON parsing errors). Default is lenient mode.",
+        default=False
+    )
+
+    parser.add_argument(
+        '--neuron.judge_failure_threshold',
+        type=int,
+        help="Number of consecutive judge failures before suggesting to disable judge (default: 10).",
+        default=10
+    )
+
 
 def config(cls):
     """
