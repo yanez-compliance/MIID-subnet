@@ -69,6 +69,20 @@ class QueryGenerator:
             False
         )
         
+        # Judge strict mode (default is lenient)
+        self.judge_strict_mode = getattr(
+            self.config.neuron if hasattr(self.config, 'neuron') else self.config,
+            'judge_strict_mode',
+            False
+        )
+        
+        # Judge failure threshold for auto-disable suggestion
+        self.judge_failure_threshold = getattr(
+            self.config.neuron if hasattr(self.config, 'neuron') else self.config,
+            'judge_failure_threshold',
+            10
+        )
+        
         # Auto-enable judge for complex query generation (when not using default query)
         if not self.use_default_query:
             original_setting = self.use_judge_model
@@ -76,7 +90,7 @@ class QueryGenerator:
             if not original_setting:
                 bt.logging.info("📊 Auto-enabling LLM judge because complex query generation is active (use_default_query=False)")
         
-        bt.logging.info(f"Use LLM judge model: {self.use_judge_model}")
+        bt.logging.info(f"Use LLM judge model: {self.use_judge_model} (strict mode: {self.judge_strict_mode}, failure threshold: {self.judge_failure_threshold})")
 
         bt.logging.info(f"use_default_query: {self.use_default_query}#########################################")
         bt.logging.info(f"QueryGenerator initialized with use_default_query={self.use_default_query}")
@@ -277,22 +291,123 @@ class QueryGenerator:
                 try:
                     bt.logging.info(f"🔍 Attempting judge with model: {judge_model} and timeout: {judge_timeout}s")
                     client = ollama.Client(host=neuron_cfg.ollama_url, timeout=judge_timeout)
+                    
                     judge_prompt = (
-                        "You are a strict validator. Given a query template and labels, return a compact JSON object with a key 'issues' that lists only the MINIMAL missing or unclear elements that must be clarified to fully cover the labels. Do not restate what is already clearly present.\n\n"
+                        "You are a strict validator. Analyze the query template against the provided labels and return ONLY a valid JSON object.\n\n"
                         f"TEMPLATE:\n{query_template}\n\n"
                         f"LABELS (JSON):\n{json.dumps(labels or {}, ensure_ascii=False)}\n\n"
-                        "Return ONLY JSON like: {\"issues\":[\"...\"]}"
+                        "INSTRUCTIONS:\n"
+                        "1. Return ONLY a JSON object with an 'issues' array\n"
+                        "2. List only MINIMAL missing or unclear elements that need clarification\n"
+                        "3. Do not restate what is already clearly present\n"
+                        "4. If no issues found, return: {\"issues\": []}\n"
+                        "5. Do not include any text before or after the JSON\n\n"
+                        "EXAMPLE OUTPUT:\n"
+                        "{\"issues\": [\"Specify exact number of variations: 10.\", \"Mention phonetic similarity requirements.\"]}\n\n"
+                        "RESPONSE (JSON only):"
                     )
+                    
+                    # Log the prompt being sent (for debugging)
+                    bt.logging.debug(f"🔍 Judge prompt preview: {judge_prompt[:200]}...")
                     resp = client.generate(model=judge_model, prompt=judge_prompt)
                     text = resp.get('response', '').strip()
-                    if not text.startswith('{'):
-                        match = re.search(r"\{[\s\S]*\}$", text)
-                        if match:
-                            text = match.group(0)
+                    
+                    # Log the raw response for debugging (truncated if too long)
+                    if len(text) > 500:
+                        bt.logging.debug(f"🔍 Judge raw response (truncated): {text[:500]}...")
+                    else:
+                        bt.logging.debug(f"🔍 Judge raw response: {text}")
+                    
+                    # Try multiple JSON extraction strategies
+                    parsed = None
+                    llm_issues = []
+                    extraction_debug = []
+                    
+                    # Strategy 1: Direct JSON parsing
+                    try:
+                        parsed = json.loads(text)
+                        extraction_debug.append("Strategy 1 (Direct JSON): SUCCESS")
+                    except json.JSONDecodeError as e:
+                        extraction_debug.append(f"Strategy 1 (Direct JSON): FAILED - {str(e)}")
+                        
+                        # Strategy 2: Extract JSON from markdown code blocks
+                        code_block_match = re.search(r'```(?:json)?\s*(\{.*?\})\s*```', text, re.DOTALL)
+                        if code_block_match:
+                            try:
+                                parsed = json.loads(code_block_match.group(1))
+                                extraction_debug.append("Strategy 2 (Markdown Code Block): SUCCESS")
+                            except json.JSONDecodeError as e:
+                                extraction_debug.append(f"Strategy 2 (Markdown Code Block): FAILED - {str(e)}")
+                        
+                        # Strategy 3: Find JSON object in text
+                        if not parsed:
+                            json_match = re.search(r'\{[^{}]*"issues"[^{}]*\[[^\]]*\]\s*\}', text)
+                            if json_match:
+                                try:
+                                    parsed = json.loads(json_match.group(0))
+                                    extraction_debug.append("Strategy 3 (Pattern Match): SUCCESS")
+                                except json.JSONDecodeError as e:
+                                    extraction_debug.append(f"Strategy 3 (Pattern Match): FAILED - {str(e)}")
+                            else:
+                                extraction_debug.append("Strategy 3 (Pattern Match): NO MATCH FOUND")
+                        
+                        # Strategy 4: Last resort - try to extract any JSON-like structure
+                        if not parsed:
+                            # Look for any JSON object that might contain issues
+                            json_objects = re.findall(r'\{[^{}]*(?:\{[^{}]*\}[^{}]*)*\}', text)
+                            extraction_debug.append(f"Strategy 4 (General JSON): Found {len(json_objects)} potential JSON objects")
+                            for i, obj_str in enumerate(json_objects):
+                                try:
+                                    temp_parsed = json.loads(obj_str)
+                                    if isinstance(temp_parsed, dict) and 'issues' in temp_parsed:
+                                        parsed = temp_parsed
+                                        extraction_debug.append(f"Strategy 4 (General JSON): SUCCESS with object {i+1}")
+                                        break
+                                except json.JSONDecodeError as e:
+                                    extraction_debug.append(f"Strategy 4 (General JSON): Object {i+1} FAILED - {str(e)}")
+                                    continue
+                            if not parsed:
+                                extraction_debug.append("Strategy 4 (General JSON): ALL OBJECTS FAILED")
+                    
+                    # Extract issues from parsed JSON
+                    if parsed and isinstance(parsed, dict):
+                        llm_issues = parsed.get('issues', [])
+                        if not isinstance(llm_issues, list):
+                            llm_issues = []
+                    else:
+                        # If all JSON parsing failed, handle based on strict mode
+                        if self.judge_strict_mode:
+                            # In strict mode, fail on JSON parsing errors
+                            raise ValueError(f"Invalid JSON response in strict mode: {text[:200]}...")
                         else:
-                            raise ValueError("Invalid JSON response")
-                    parsed = json.loads(text)
-                    llm_issues = parsed.get('issues', []) if isinstance(parsed, dict) else []
+                            # In lenient mode, try to extract issues from text
+                            bt.logging.warning(f"🔧 JSON parsing failed for judge response, attempting text extraction (lenient mode)")
+                            bt.logging.info(f"🔧 Text extraction debug info:")
+                            bt.logging.info(f"   Raw text length: {len(text)} characters")
+                            bt.logging.info(f"   Text preview: {text[:200]}...")
+                            
+                            # Look for common issue patterns in the text
+                            issue_patterns = [
+                                r'(?:you should|must|need to).*?(?:\.|$)',
+                                r'(?:specify|mention|require|add|include|clarify).*?(?:\.|$)',
+                                r'(?:missing|unclear|incomplete).*?(?:\.|$)'
+                            ]
+                            extracted_issues = []
+                            for i, pattern in enumerate(issue_patterns):
+                                matches = re.findall(pattern, text, re.IGNORECASE)
+                                bt.logging.info(f"   Pattern {i+1} matches: {len(matches)}")
+                                for match in matches:
+                                    if len(match.strip()) > 10:
+                                        extracted_issues.append(match.strip())
+                                        bt.logging.info(f"     - Found: {match.strip()}")
+                            
+                            if extracted_issues:
+                                llm_issues = extracted_issues[:3]  # Limit to 3 most relevant
+                                bt.logging.info(f"🔧 Extracted {len(llm_issues)} issues from text: {llm_issues}")
+                            else:
+                                # If no issues found in text, assume no issues
+                                llm_issues = []
+                                bt.logging.info(f"🔧 No issues extracted from text, assuming query is acceptable")
                     if isinstance(llm_issues, list):
                         judge_success = True
                         # Cache successful model/timeout for next time
@@ -306,8 +421,48 @@ class QueryGenerator:
                             bt.logging.info(f"   Judge found no issues - query is clear")
                         break
                 except Exception as e:
-                    bt.logging.warning(f"❌ Judge failed with model: {judge_model} and timeout: {judge_timeout}s. Error: {e}")
-                    if "timed out" in str(e).lower():
+                    error_msg = str(e)
+                    bt.logging.warning(f"❌ Judge failed with model: {judge_model} and timeout: {judge_timeout}s. Error: {error_msg}")
+                    
+                    # Enhanced error logging for JSON parsing issues
+                    if "invalid json" in error_msg.lower() or "jsondecodeerror" in error_msg.lower():
+                        bt.logging.error(f"🔍 JSON Parsing Debug Info:")
+                        bt.logging.error(f"   Raw response length: {len(text)} characters")
+                        bt.logging.error(f"   Response preview: {text[:300]}...")
+                        if len(text) > 300:
+                            bt.logging.error(f"   Response end: ...{text[-100:]}")
+                        
+                        # Show what parsing strategies were attempted
+                        bt.logging.error(f"   JSON extraction attempts:")
+                        for debug_line in extraction_debug:
+                            bt.logging.error(f"     - {debug_line}")
+                        
+                        # Check if response contains JSON-like content
+                        if '{' in text and '}' in text:
+                            bt.logging.error(f"     - Contains JSON brackets: YES")
+                            # Try to find where the JSON might be
+                            brace_positions = []
+                            for i, char in enumerate(text):
+                                if char == '{':
+                                    brace_positions.append(f"opening at pos {i}")
+                                elif char == '}':
+                                    brace_positions.append(f"closing at pos {i}")
+                            if brace_positions:
+                                bt.logging.error(f"     - Brace positions: {brace_positions[:10]}...")
+                        else:
+                            bt.logging.error(f"     - Contains JSON brackets: NO")
+                        
+                        # Check for common LLM response patterns
+                        if text.lower().startswith('i apologize') or text.lower().startswith('sorry'):
+                            bt.logging.error(f"     - Response type: APOLOGY (model may be refusing task)")
+                        elif '```' in text:
+                            bt.logging.error(f"     - Response type: MARKDOWN CODE BLOCK")
+                        elif text.strip().startswith('{'):
+                            bt.logging.error(f"     - Response type: STARTS WITH JSON")
+                        else:
+                            bt.logging.error(f"     - Response type: NATURAL LANGUAGE")
+                    
+                    if "timed out" in error_msg.lower():
                         bt.logging.warning("⏰ Judge timeout - trying next timeout/model")
                         continue
                     else:
@@ -321,6 +476,19 @@ class QueryGenerator:
             llm_issues = []
             successful_judge_model = None
             successful_judge_timeout = None
+            
+            # If judge consistently fails, consider disabling it for future runs
+            if not hasattr(self, '_judge_failure_count'):
+                self._judge_failure_count = 0
+            self._judge_failure_count += 1
+            
+            # After threshold consecutive failures, suggest disabling judge
+            if self._judge_failure_count >= self.judge_failure_threshold:
+                bt.logging.warning(f"⚠️  Judge has failed {self._judge_failure_count} times consecutively (threshold: {self.judge_failure_threshold}). Consider setting --neuron.use_judge_model=False to disable LLM judge validation.")
+        else:
+            # Reset failure count on success
+            if hasattr(self, '_judge_failure_count'):
+                self._judge_failure_count = 0
 
         for it in llm_issues:
             if isinstance(it, str) and it not in issues:
