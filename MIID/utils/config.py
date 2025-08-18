@@ -389,10 +389,31 @@ def add_validator_args(cls, parser):
     )
 
     parser.add_argument(
+        '--neuron.judge_on_static_pass',
+        action='store_true',
+        help="Run LLM judge even when static checks pass (default: disabled)",
+        default=False
+    )
+
+    parser.add_argument(
         '--neuron.judge_failure_threshold',
         type=int,
         help="Number of consecutive judge failures before suggesting to disable judge (default: 10).",
         default=10
+    )
+
+    parser.add_argument(
+        '--neuron.regenerate_on_invalid',
+        action='store_true',
+        help="When a generated query is structurally invalid (e.g., missing {name}), try next model/timeout. Default: False (append hints to the current query and proceed).",
+        default=False
+    )
+
+    parser.add_argument(
+        '--neuron.enable_repair_prompt',
+        action='store_true',
+        help="Attempt to repair an invalid query template by prompting the LLM with the issues and labels (default: False).",
+        default=False
     )
 
 
