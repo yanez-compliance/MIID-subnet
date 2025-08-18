@@ -62,6 +62,22 @@ class QueryGenerator:
         except Exception as e:
             bt.logging.error(f"Error loading sanctioned individuals: {e}")
 
+        # Flag to control whether to use the LLM judge (default False, but auto-enables for complex queries)
+        self.use_judge_model = getattr(
+            self.config.neuron if hasattr(self.config, 'neuron') else self.config,
+            'use_judge_model',
+            False
+        )
+        
+        # Auto-enable judge for complex query generation (when not using default query)
+        if not self.use_default_query:
+            original_setting = self.use_judge_model
+            self.use_judge_model = True
+            if not original_setting:
+                bt.logging.info("📊 Auto-enabling LLM judge because complex query generation is active (use_default_query=False)")
+        
+        bt.logging.info(f"Use LLM judge model: {self.use_judge_model}")
+
         bt.logging.info(f"use_default_query: {self.use_default_query}#########################################")
         bt.logging.info(f"QueryGenerator initialized with use_default_query={self.use_default_query}")
     
@@ -69,7 +85,7 @@ class QueryGenerator:
         self,
         query_template: str,
         labels: Dict[str, Any] = None,
-    ) -> Tuple[bool, str, List[str]]:
+    ) -> Tuple[bool, str, List[str], str, int]:
         """
         Validate that a query template is structurally valid and semantically covers
         required specifications from labels. Returns issues for missing/unclear parts
@@ -216,6 +232,11 @@ class QueryGenerator:
                         )
                     )
 
+        # Early return if static checks passed and judge is disabled
+        if not issues and not self.use_judge_model:
+            bt.logging.info("✅ Static checks passed and judge disabled - skipping LLM judge")
+            return True, "Query template is acceptable (static checks only)", issues, None, None
+
         # Mandatory LLM judge with robust fallbacks
         llm_issues = []
         neuron_cfg = getattr(self.config, 'neuron', self.config)
@@ -298,6 +319,8 @@ class QueryGenerator:
         if not judge_success:
             bt.logging.error("💥 All judge models and timeouts failed. Proceeding with static checks only.")
             llm_issues = []
+            successful_judge_model = None
+            successful_judge_timeout = None
 
         for it in llm_issues:
             if isinstance(it, str) and it not in issues:
@@ -319,7 +342,7 @@ class QueryGenerator:
         else:
             bt.logging.info(f"✅ Final validation: No issues found - query is clear")
 
-        return True, "Query template is acceptable with clarifications", deduped_issues
+        return True, "Query template is acceptable with clarifications", deduped_issues, successful_judge_model, successful_judge_timeout
     
     async def generate_complex_query(
         self,
@@ -367,7 +390,7 @@ class QueryGenerator:
 
             # Validate and minimally clarify
             bt.logging.info(f"📝 Pre-judge default template: {default_template}")
-            _ok, _msg, issues = self.validate_query_template(default_template, labels)
+            _ok, _msg, issues, _, _ = self.validate_query_template(default_template, labels)
             if issues:
                 suffix = " Hint: " + "; ".join(issues)
                 default_template = default_template + " " + suffix
@@ -438,7 +461,7 @@ class QueryGenerator:
                     
                     # Validate and minimally clarify the generated template
                     bt.logging.info(f"📝 Pre-judge LLM-generated query: {query_template}")
-                    is_valid, error_msg, issues = self.validate_query_template(query_template, labels)
+                    is_valid, error_msg, issues, successful_judge_model, successful_judge_timeout = self.validate_query_template(query_template, labels)
                     if not is_valid:
                         bt.logging.error(f"❌ LLM '{model}' generated INVALID template:")
                         bt.logging.error(f"   Failed Query: {query_template}")
@@ -474,7 +497,7 @@ class QueryGenerator:
         bt.logging.error("💥 All models and timeouts failed. Falling back to a simple template.")
         # Validate and minimally clarify simple template before returning
         bt.logging.info(f"📝 Pre-judge fallback simple template: {simple_template}")
-        _ok, _msg, issues = self.validate_query_template(simple_template, labels)
+        _ok, _msg, issues, _, _ = self.validate_query_template(simple_template, labels)
         if issues:
             simple_template = simple_template + " " + (" Hint: " + "; ".join(issues))
             bt.logging.warning(f"⚠️  Simple template also has issues - added clarifications:")
@@ -486,7 +509,7 @@ class QueryGenerator:
         bt.logging.info(f"🔄 Using fallback simple template: {simple_template}")
         return simple_template, labels, None, None
     
-    async def build_queries(self) -> Tuple[List[Dict[str, Any]], str, Dict[str, Any], str, int]:
+    async def build_queries(self) -> Tuple[List[Dict[str, Any]], str, Dict[str, Any], str, int, str, int]:
         """Build challenge queries for miners"""
         try:
             bt.logging.info("Building test queries for miners")
@@ -561,6 +584,10 @@ class QueryGenerator:
                 use_default=self.use_default_query,
                 rule_percentage=rule_percentage
             )
+            
+            # Get judge settings from the validation process
+            successful_judge_model = None
+            successful_judge_timeout = None
             
             # Generate test names using a mix of sanctioned and generated names
             seed_names_with_labels = []
@@ -642,7 +669,7 @@ class QueryGenerator:
             
             # The function now returns a list of dictionaries, so we extract just the names for the return
             seed_names = [item['name'] for item in seed_names_with_labels]
-            return seed_names_with_labels, query_template, query_labels, successful_model, successful_timeout
+            return seed_names_with_labels, query_template, query_labels, successful_model, successful_timeout, successful_judge_model, successful_judge_timeout
             
         except Exception as e:
             bt.logging.error(f"Error building queries: {str(e)}")
@@ -702,4 +729,4 @@ class QueryGenerator:
             bt.logging.info(f"Using fallback: {len(seed_names)} test names")
             bt.logging.info(f"Query template: {query_template}")
             bt.logging.info(f"Query labels: {query_labels}")
-            return seed_names_with_labels, query_template, query_labels, None, None
+            return seed_names_with_labels, query_template, query_labels, None, None, None, None
