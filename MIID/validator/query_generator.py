@@ -139,13 +139,6 @@ class QueryGenerator:
         issues: List[str] = []
 
         lowered = query_template.lower()
-        # Soft checks: absence will be treated as an issue (not a hard error)
-        if "phonetic" not in lowered:
-            issues.append("Mention phonetic similarity requirements.")
-        if "orthographic" not in lowered:
-            issues.append("Mention orthographic similarity requirements.")
-        if "rule" not in lowered and "transformation" not in lowered:
-            issues.append("Mention rule-based transformation requirement.")
 
         # Label-aware checks to detect missing numbers/levels
         if labels:
@@ -174,31 +167,30 @@ class QueryGenerator:
             # Phonetic similarity checks
             phonetic_cfg = labels.get("phonetic_similarity") or {}
             if isinstance(phonetic_cfg, dict) and phonetic_cfg:
-                missing_phonetic = []
+                expected_phonetic_tokens = []
+                all_present = True
                 for level, pct in compute_expected_percentages(phonetic_cfg):
-                    # If either the percent or level indicator is absent, request clarification
-                    if not find_percent(query_template, pct):
-                        missing_phonetic.append(f"{pct}% {level}")
-                    # Allow synonyms like 'lightly' for Light; keep it soft by only checking when level token is fully missing
-                    elif level.lower() not in lowered:
-                        # Only add if not already covered by a more general phrase
-                        missing_phonetic.append(f"{pct}% {level}")
-                
-                if missing_phonetic:
-                    issues.append(f"Phonetic similarity: {', '.join(missing_phonetic)}.")
+                    token = f"{int(pct)}% {level}"
+                    expected_phonetic_tokens.append(token)
+                    if not find_percent(query_template, int(pct)) or level.lower() not in lowered:
+                        all_present = False
+                # If any expected token is missing OR the template doesn't mention phonetic at all, add a precise hint
+                if (not all_present) or ("phonetic" not in lowered):
+                    issues.append(f"Phonetic similarity: {', '.join(expected_phonetic_tokens)}.")
 
             # Orthographic similarity checks
             orthographic_cfg = labels.get("orthographic_similarity") or {}
             if isinstance(orthographic_cfg, dict) and orthographic_cfg:
-                missing_orthographic = []
+                expected_orthographic_tokens = []
+                all_present = True
                 for level, pct in compute_expected_percentages(orthographic_cfg):
-                    if not find_percent(query_template, pct):
-                        missing_orthographic.append(f"{pct}% {level}")
-                    elif level.lower() not in lowered:
-                        missing_orthographic.append(f"{pct}% {level}")
-                
-                if missing_orthographic:
-                    issues.append(f"Orthographic similarity: {', '.join(missing_orthographic)}.")
+                    token = f"{int(pct)}% {level}"
+                    expected_orthographic_tokens.append(token)
+                    if not find_percent(query_template, int(pct)) or level.lower() not in lowered:
+                        all_present = False
+                # If any expected token is missing OR the template doesn't mention orthographic at all, add a precise hint
+                if (not all_present) or ("orthographic" not in lowered):
+                    issues.append(f"Orthographic similarity: {', '.join(expected_orthographic_tokens)}.")
 
             # Rule-based percentage
             rule_meta = labels.get("rule_based") or {}
@@ -273,7 +265,7 @@ class QueryGenerator:
         llm_issues = []
 
         # Prepare structured expectations for the judge so we can reconstruct
-        # issues using the exact same phrasing as static checks.
+        # issues using canonical phrasing (explicit expected specs rather than generic mentions).
         soft_issue_map = {
             "phonetic": "Mention phonetic similarity requirements.",
             "orthographic": "Mention orthographic similarity requirements.",
@@ -453,11 +445,21 @@ class QueryGenerator:
                         mapped_issues: List[str] = []
 
                         if isinstance(present, dict):
-                            # Soft checks
+                            # Soft checks -> map to explicit expected hints when possible
                             present_soft = set(present.get('soft', []))
                             expected_soft = set(soft_issue_map.keys())
                             for key in expected_soft - present_soft:
-                                mapped_issues.append(soft_issue_map[key])
+                                if key == 'phonetic' and phonetic_expected_tokens:
+                                    mapped_issues.append(f"Phonetic similarity: {', '.join(sorted(list(phonetic_expected_tokens)))}.")
+                                elif key == 'orthographic' and orthographic_expected_tokens:
+                                    mapped_issues.append(f"Orthographic similarity: {', '.join(sorted(list(orthographic_expected_tokens)))}.")
+                                elif key == 'rule':
+                                    if isinstance(rule_pct_val, int):
+                                        mapped_issues.append(
+                                            f"Approximately {rule_pct_val}% of the variations should follow rule-based transformations."
+                                        )
+                                    else:
+                                        mapped_issues.append(soft_issue_map[key])
 
                             # Variation count
                             present_vc = present.get('variation_count')
@@ -469,7 +471,7 @@ class QueryGenerator:
                             expected_phon = set(phonetic_expected_tokens)
                             missing_phon_tokens = expected_phon - present_phon
                             if missing_phon_tokens:
-                                phonetic_expected_str = ", ".join(sorted(list(missing_phon_tokens)))
+                                phonetic_expected_str = ", ".join(sorted(list(expected_phon)))
                                 mapped_issues.append(f"Phonetic similarity: {phonetic_expected_str}.")
                             
                             # Orthographic tokens
@@ -477,7 +479,7 @@ class QueryGenerator:
                             expected_ortho = set(orthographic_expected_tokens)
                             missing_ortho_tokens = expected_ortho - present_ortho
                             if missing_ortho_tokens:
-                                orthographic_expected_str = ", ".join(sorted(list(missing_ortho_tokens)))
+                                orthographic_expected_str = ", ".join(sorted(list(expected_ortho)))
                                 mapped_issues.append(f"Orthographic similarity: {orthographic_expected_str}.")
 
                             # Rule percentage
@@ -686,15 +688,16 @@ class QueryGenerator:
 
             # Validate and minimally clarify
             bt.logging.info(f"📝 Pre-judge default template: {simple_template}")
-            # _ok, _msg, issues, _, _ = self.validate_query_template(default_template, labels)
-            # if issues:
-            #     suffix = " Hint: " + "; ".join(issues)
-            #     default_template = default_template + " " + suffix
-            #     bt.logging.warning(f"⚠️  Default template has issues - added clarifications:")
-            #     bt.logging.warning(f"   Issues Found: {issues}")
-            #     bt.logging.warning(f"   Added Hints: {suffix}")
-            # else:
-            #     bt.logging.info(f"✅ Default template is clean (no issues found)")
+            # Validate and minimally clarify the default template too
+            _ok, _msg, issues, _llm_issues, successful_judge_model, successful_judge_timeout, validation_details = self.validate_query_template(simple_template, labels)
+            if issues:
+                suffix = " Hint: " + "; ".join(issues)
+                simple_template = simple_template + " " + suffix
+                bt.logging.warning(f"⚠️  Default template has issues - added clarifications:")
+                bt.logging.warning(f"   Issues Found: {issues}")
+                bt.logging.warning(f"   Added Hints: {suffix}")
+            else:
+                bt.logging.info(f"✅ Default template is clean (no issues found)")
 
             bt.logging.debug(f"📄 Using default query template: {simple_template}")
             
@@ -702,8 +705,9 @@ class QueryGenerator:
                 "decision": "Used default query as configured.",
                 "final_template": simple_template,
                 "labels": labels,
+                "validation": validation_details
             }
-            return simple_template, labels, None, None, None, None, generation_log
+            return simple_template, labels, None, None, successful_judge_model, successful_judge_timeout, generation_log
         
     
         
