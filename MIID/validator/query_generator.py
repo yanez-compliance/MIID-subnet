@@ -31,6 +31,19 @@ def _append_hint_section(template: str, tag: str, items: List[str]) -> str:
         return template
     return template + section
 
+def _get_keywords_from_rule_desc(description: str) -> List[str]:
+    """Extracts keywords from a rule description for flexible matching."""
+    # Lowercase, remove punctuation and parentheses content
+    processed = description.lower()
+    processed = re.sub(r'\(.*?\)', '', processed) # remove content in parens
+    processed = re.sub(r'[^\w\s]', '', processed)  # remove punctuation
+    
+    # Define simple stopwords, can be expanded if needed
+    stopwords = {'a', 'an', 'the', 'to', 'of', 'and', 'with', 'etc'}
+    
+    keywords = [word for word in processed.split() if word not in stopwords]
+    return keywords
+
 # List of Latin-script locales to generate names from (basic Latin characters only, no accents)
 LATIN_LOCALES = ['en_US', 'en_GB', 'en_CA', 'en_AU']
 
@@ -389,13 +402,14 @@ class QueryGenerator:
                 if f"{rule_pct}%" not in query_template:
                     rule_issues.append(f"Approximately {rule_pct}% of the variations should follow rule-based transformations.")
                 
-                # 2) Check if the exact rule descriptions are present (case-insensitive)
+                # 2) Check if the rule descriptions are semantically present using keyword matching
                 if descriptions_list:
                     missing_rules = []
                     query_lower = query_template.lower()
                     for desc in descriptions_list:
-                        # Check if the rule description is in the query (case-insensitive)
-                        if desc.lower() not in query_lower:
+                        keywords = _get_keywords_from_rule_desc(desc)
+                        # Check if all keywords are present in the query
+                        if not all(keyword in query_lower for keyword in keywords):
                             missing_rules.append(desc)
                     
                     if missing_rules:
