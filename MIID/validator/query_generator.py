@@ -352,6 +352,9 @@ class QueryGenerator:
             if t is not None and t not in seen_t:
                 judge_timeouts_to_try.append(t)
                 seen_t.add(t)
+        
+        # Debug the selection order for judge attempts (last-success-first, then primary, then fallbacks)
+        bt.logging.debug(f"🧪 Judge selection order -> models: {judge_models_to_try}, timeouts: {judge_timeouts_to_try}")
 
         judge_success = False
         for judge_model in judge_models_to_try:
@@ -748,6 +751,8 @@ class QueryGenerator:
         candidate_timeouts.extend(fallback_timeouts)
         seen_timeouts = set()
         timeouts_to_try = [t for t in candidate_timeouts if t is not None and not (t in seen_timeouts or seen_timeouts.add(t))]
+        # Debug the selection order for generation attempts (last-success-first, then primary, then fallbacks)
+        bt.logging.debug(f"🧪 Generation selection order -> models: {models_to_try}, timeouts: {timeouts_to_try}")
 
         # Track the last LLM-generated template to use as final fallback
         last_model_query_template: str | None = None
