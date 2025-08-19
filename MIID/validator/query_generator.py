@@ -22,6 +22,148 @@ DEFAULT_ORTHOGRAPHIC_SIMILARITY = "Light"
 DEFAULT_PHONETIC_SIMILARITY = "Light"
 DEFAULT_QUERY = False  # Use simple default query instead of complex LLM-generated one
 
+def _run_judge_model(
+    client: ollama.Client, 
+    model: str, 
+    prompt: str,
+    strict_mode: bool,
+    # Pass context instead of relying on scope
+    soft_issue_map: Dict[str, str],
+    phonetic_expected_tokens: List[str],
+    orthographic_expected_tokens: List[str],
+    variation_count: int,
+    rule_pct_val: int,
+    rule_descs_list: List[str],
+    ambiguity_sentence: str
+) -> Tuple[List[str], Dict[str, Any]]:
+    """Helper to run a single judge model call and parse the output."""
+    text = ""
+    parsed = None
+    llm_issues = []
+    
+    resp = client.generate(model=model, prompt=prompt)
+    text = resp.get('response', '').strip()
+    
+    # Try multiple JSON extraction strategies
+    try:
+        parsed = json.loads(text)
+        llm_issues.append("Strategy 1 (Direct JSON): SUCCESS")
+    except json.JSONDecodeError as e:
+        llm_issues.append(f"Strategy 1 (Direct JSON): FAILED - {str(e)}")
+        
+        # Strategy 2: Extract JSON from markdown code blocks
+        code_block_match = re.search(r'```(?:json)?\s*(\{.*?\})\s*```', text, re.DOTALL)
+        if code_block_match:
+            try:
+                parsed = json.loads(code_block_match.group(1))
+                llm_issues.append("Strategy 2 (Markdown Code Block): SUCCESS")
+            except json.JSONDecodeError as e:
+                llm_issues.append(f"Strategy 2 (Markdown Code Block): FAILED - {str(e)}")
+        
+        # Strategy 3: Find JSON object in text (expecting a 'present' key)
+        if not parsed:
+            json_match = re.search(r'\{[^{}]*"present"[^{}]*\{[\s\S]*?\}\s*\}', text, re.DOTALL)
+            if json_match:
+                try:
+                    parsed = json.loads(json_match.group(0))
+                    llm_issues.append("Strategy 3 (Pattern Match): SUCCESS")
+                except json.JSONDecodeError as e:
+                    llm_issues.append(f"Strategy 3 (Pattern Match): FAILED - {str(e)}")
+            else:
+                llm_issues.append("Strategy 3 (Pattern Match): NO MATCH FOUND")
+        
+        # Strategy 4: Last resort - try to extract any JSON-like structure
+        if not parsed:
+            # Look for any JSON object that might contain issues
+            json_objects = re.findall(r'\{[^{}]*(?:\{[^{}]*\}[^{}]*)*\}', text)
+            llm_issues.append(f"Strategy 4 (General JSON): Found {len(json_objects)} potential JSON objects")
+            for i, obj_str in enumerate(json_objects):
+                try:
+                    temp_parsed = json.loads(obj_str)
+                    if isinstance(temp_parsed, dict) and 'present' in temp_parsed:
+                        parsed = temp_parsed
+                        llm_issues.append(f"Strategy 4 (General JSON): SUCCESS with object {i+1}")
+                        break
+                except json.JSONDecodeError as e:
+                    llm_issues.append(f"Strategy 4 (General JSON): Object {i+1} FAILED - {str(e)}")
+                    continue
+            if not parsed:
+                llm_issues.append("Strategy 4 (General JSON): ALL OBJECTS FAILED")
+    
+    # Extract structured missing fields and map to canonical issue strings
+    if parsed and isinstance(parsed, dict):
+        present = parsed.get('present', {})
+        mapped_issues: List[str] = []
+
+        if isinstance(present, dict):
+            # Soft checks -> map to explicit expected hints when possible
+            present_soft = set(present.get('soft', []))
+            expected_soft = set(soft_issue_map.keys())
+            for key in expected_soft - present_soft:
+                if key == 'phonetic' and phonetic_expected_tokens:
+                    mapped_issues.append(f"Phonetic similarity: {', '.join(sorted(list(phonetic_expected_tokens)))}.")
+                elif key == 'orthographic' and orthographic_expected_tokens:
+                    mapped_issues.append(f"Orthographic similarity: {', '.join(sorted(list(orthographic_expected_tokens)))}.")
+                elif key == 'rule':
+                    if isinstance(rule_pct_val, int):
+                        mapped_issues.append(
+                            f"Approximately {rule_pct_val}% of the variations should follow rule-based transformations."
+                        )
+                    else:
+                        mapped_issues.append(soft_issue_map[key])
+
+            # Variation count
+            present_vc = present.get('variation_count')
+            if isinstance(variation_count, int) and present_vc != variation_count:
+                mapped_issues.append(f"Specify exact number of variations: {variation_count}.")
+            
+            # Phonetic tokens
+            present_phon = set(present.get('phonetic_tokens', []))
+            expected_phon = set(phonetic_expected_tokens)
+            missing_phon_tokens = expected_phon - present_phon
+            if missing_phon_tokens:
+                phonetic_expected_str = ", ".join(sorted(list(expected_phon)))
+                mapped_issues.append(f"Phonetic similarity: {phonetic_expected_str}.")
+            
+            # Orthographic tokens
+            present_ortho = set(present.get('orthographic_tokens', []))
+            expected_ortho = set(orthographic_expected_tokens)
+            missing_ortho_tokens = expected_ortho - present_ortho
+            if missing_ortho_tokens:
+                orthographic_expected_str = ", ".join(sorted(list(expected_ortho)))
+                mapped_issues.append(f"Orthographic similarity: {orthographic_expected_str}.")
+
+            # Rule percentage
+            present_rp = present.get('rule_percentage')
+            if isinstance(rule_pct_val, int) and present_rp != rule_pct_val:
+                mapped_issues.append(
+                    f"Approximately {rule_pct_val}% of the variations should follow rule-based transformations."
+                )
+
+            # Rule descriptions
+            present_rd = set(present.get('rule_descriptions', []))
+            expected_rd = set(rule_descs_list)
+            missing_rd = expected_rd - present_rd
+            if missing_rd:
+                mapped_issues.append(
+                    f"Apply these rule-based transformations: {'; '.join(sorted(list(missing_rd)))}."
+                )
+            
+            # Ambiguity clarification (judge can signal under key 'rule_ambiguity')
+            if present.get('rule_ambiguity') and isinstance(ambiguity_sentence, str):
+                mapped_issues.append(ambiguity_sentence)
+
+        llm_issues = mapped_issues
+    else:
+        # If all JSON parsing failed
+        if strict_mode:
+            raise ValueError(f"Invalid JSON response in strict mode: {text[:200]}...")
+        else:
+            # Lenient mode: do not try to mine free-text; keep issues empty to avoid non-canonical phrasing
+            llm_issues = []
+    return llm_issues, parsed
+
+
 class QueryGenerator:
     """
     Responsible for generating queries and challenges for the name variation validator.
@@ -105,7 +247,7 @@ class QueryGenerator:
 
         bt.logging.debug(f"⚙️ use_default_query: {self.use_default_query}")
         bt.logging.info(f"QueryGenerator initialized with use_default_query={self.use_default_query}")
-    
+
     def validate_query_template(
         self,
         query_template: str,
@@ -310,6 +452,7 @@ class QueryGenerator:
             rule_descriptions_for_this_query = rule_meta.get("rule_descriptions", {})
             if isinstance(rule_descriptions_for_this_query, dict):
                 rule_descs_list = [d for d in rule_descriptions_for_this_query.values() if isinstance(d, str) and d]
+        
         # Initialize successful judge tracking to safe defaults
         successful_judge_model = None
         successful_judge_timeout = None
@@ -344,261 +487,92 @@ class QueryGenerator:
             if t is not None and t not in seen_t:
                 judge_timeouts_to_try.append(t)
                 seen_t.add(t)
+        judge_timeouts_to_try.sort()
         
-        # Debug the selection order for judge attempts (last-success-first, then primary, then fallbacks)
         bt.logging.debug(f"🧪 Judge selection order -> models: {judge_models_to_try}, timeouts: {judge_timeouts_to_try}")
 
         judge_success = False
-        for judge_model in judge_models_to_try:
-            for judge_timeout in judge_timeouts_to_try:
-                try:
-                    bt.logging.info(f"🔍 Attempting judge with model: {judge_model} and timeout: {judge_timeout}s")
-                    client = ollama.Client(host=neuron_cfg.ollama_url, timeout=judge_timeout)
-                    
-                    # Provide the judge with structured expectations, asking it to mark what is missing.
-                    judge_prompt = (
-                        "You are a strict validator. Your task is to check which of the required SPECIFICATIONS are met by the query TEMPLATE.\n\n"
-                        "Return ONLY a valid JSON object with a single key 'present', containing a dictionary that maps each specification category to a list of the specifications that were found and are clearly stated in the template.\n\n"
-                        f"TEMPLATE:\n{query_template}\n\n"
-                        f"SPECIFICATIONS:\n"
-                        f"- soft: {json.dumps(list(soft_issue_map.keys()), ensure_ascii=False)}\n"
-                        f"- variation_count: {json.dumps(variation_count, ensure_ascii=False)}\n"
-                        f"- phonetic_tokens: {json.dumps(phonetic_expected_tokens, ensure_ascii=False)}\n"
-                        f"- orthographic_tokens: {json.dumps(orthographic_expected_tokens, ensure_ascii=False)}\n"
-                        f"- rule_percentage: {json.dumps(rule_pct_val, ensure_ascii=False)}\n"
-                        f"- rule_descriptions: {json.dumps(rule_descs_list, ensure_ascii=False)}\n\n"
-                        "OUTPUT RULES:\n"
-                        "- Output ONLY valid JSON with shape: {\"present\": { ... }}\n"
-                        "- For each key in SPECIFICATIONS, list the items that are clearly present in the TEMPLATE.\n"
-                        "- For 'variation_count' and 'rule_percentage', if present, return the number itself, not a boolean.\n"
-                        "- Match rule_descriptions semantically. The wording in the template can be natural language.\n"
-                        "- Example: {\"present\": {\"soft\": [\"phonetic\", \"rule\"], \"variation_count\": 10, \"phonetic_tokens\": [\"60% Light\"]}}\n"
-                        "- If nothing is present for a category, you can omit the key or provide an empty list/null.\n\n"
-                        "RESPONSE (JSON only):"
-                    )
-                    
-                    # Log the prompt being sent (for debugging)
-                    bt.logging.debug(f"🧠 Judge prompt preview: {judge_prompt[:200]}...")
-                    resp = client.generate(model=judge_model, prompt=judge_prompt)
-                    text = resp.get('response', '').strip()
-                    
-                    # Log the raw response for debugging (truncated if too long)
-                    if len(text) > 500:
-                        bt.logging.debug(f"📄 Judge raw response (truncated): {text[:500]}...")
-                    else:
-                        bt.logging.debug(f"🔍 Judge raw response: {text}")
-                    
-                    # Try multiple JSON extraction strategies
-                    parsed = None
-                    llm_issues = []
-                    extraction_debug = []
-                    
-                    # Strategy 1: Direct JSON parsing
-                    try:
-                        parsed = json.loads(text)
-                        extraction_debug.append("Strategy 1 (Direct JSON): SUCCESS")
-                    except json.JSONDecodeError as e:
-                        extraction_debug.append(f"Strategy 1 (Direct JSON): FAILED - {str(e)}")
-                        
-                        # Strategy 2: Extract JSON from markdown code blocks
-                        code_block_match = re.search(r'```(?:json)?\s*(\{.*?\})\s*```', text, re.DOTALL)
-                        if code_block_match:
-                            try:
-                                parsed = json.loads(code_block_match.group(1))
-                                extraction_debug.append("Strategy 2 (Markdown Code Block): SUCCESS")
-                            except json.JSONDecodeError as e:
-                                extraction_debug.append(f"Strategy 2 (Markdown Code Block): FAILED - {str(e)}")
-                        
-                        # Strategy 3: Find JSON object in text (expecting a 'present' key)
-                        if not parsed:
-                            json_match = re.search(r'\{[^{}]*"present"[^{}]*\{[\s\S]*?\}\s*\}', text, re.DOTALL)
-                            if json_match:
-                                try:
-                                    parsed = json.loads(json_match.group(0))
-                                    extraction_debug.append("Strategy 3 (Pattern Match): SUCCESS")
-                                except json.JSONDecodeError as e:
-                                    extraction_debug.append(f"Strategy 3 (Pattern Match): FAILED - {str(e)}")
-                            else:
-                                extraction_debug.append("Strategy 3 (Pattern Match): NO MATCH FOUND")
-                        
-                        # Strategy 4: Last resort - try to extract any JSON-like structure
-                        if not parsed:
-                            # Look for any JSON object that might contain issues
-                            json_objects = re.findall(r'\{[^{}]*(?:\{[^{}]*\}[^{}]*)*\}', text)
-                            extraction_debug.append(f"Strategy 4 (General JSON): Found {len(json_objects)} potential JSON objects")
-                            for i, obj_str in enumerate(json_objects):
-                                try:
-                                    temp_parsed = json.loads(obj_str)
-                                    if isinstance(temp_parsed, dict) and 'present' in temp_parsed:
-                                        parsed = temp_parsed
-                                        extraction_debug.append(f"Strategy 4 (General JSON): SUCCESS with object {i+1}")
-                                        break
-                                except json.JSONDecodeError as e:
-                                    extraction_debug.append(f"Strategy 4 (General JSON): Object {i+1} FAILED - {str(e)}")
-                                    continue
-                            if not parsed:
-                                extraction_debug.append("Strategy 4 (General JSON): ALL OBJECTS FAILED")
-                    
-                    # Extract structured missing fields and map to canonical issue strings
-                    if parsed and isinstance(parsed, dict):
-                        present = parsed.get('present', {})
-                        mapped_issues: List[str] = []
+        llm_issues = [] # Ensure llm_issues is defined
+        
+        processed_models = set()
 
-                        if isinstance(present, dict):
-                            # Soft checks -> map to explicit expected hints when possible
-                            present_soft = set(present.get('soft', []))
-                            expected_soft = set(soft_issue_map.keys())
-                            for key in expected_soft - present_soft:
-                                if key == 'phonetic' and phonetic_expected_tokens:
-                                    mapped_issues.append(f"Phonetic similarity: {', '.join(sorted(list(phonetic_expected_tokens)))}.")
-                                elif key == 'orthographic' and orthographic_expected_tokens:
-                                    mapped_issues.append(f"Orthographic similarity: {', '.join(sorted(list(orthographic_expected_tokens)))}.")
-                                elif key == 'rule':
-                                    if isinstance(rule_pct_val, int):
-                                        mapped_issues.append(
-                                            f"Approximately {rule_pct_val}% of the variations should follow rule-based transformations."
-                                        )
-                                    else:
-                                        mapped_issues.append(soft_issue_map[key])
+        def attempt_judge(model, timeout):
+            nonlocal judge_success, llm_issues, successful_judge_model, successful_judge_timeout
+            try:
+                bt.logging.info(f"🔍 Attempting judge with model: {model} and timeout: {timeout}s")
+                client = ollama.Client(host=neuron_cfg.ollama_url, timeout=timeout)
+                
+                # Provide the judge with structured expectations, asking it to mark what is missing.
+                judge_prompt = (
+                    "You are a strict validator. Your task is to check which of the required SPECIFICATIONS are met by the query TEMPLATE.\n\n"
+                    "Return ONLY a valid JSON object with a single key 'present', containing a dictionary that maps each specification category to a list of the specifications that were found and are clearly stated in the template.\n\n"
+                    f"TEMPLATE:\n{query_template}\n\n"
+                    f"SPECIFICATIONS:\n"
+                    f"- soft: {json.dumps(list(soft_issue_map.keys()), ensure_ascii=False)}\n"
+                    f"- variation_count: {json.dumps(variation_count, ensure_ascii=False)}\n"
+                    f"- phonetic_tokens: {json.dumps(phonetic_expected_tokens, ensure_ascii=False)}\n"
+                    f"- orthographic_tokens: {json.dumps(orthographic_expected_tokens, ensure_ascii=False)}\n"
+                    f"- rule_percentage: {json.dumps(rule_pct_val, ensure_ascii=False)}\n"
+                    f"- rule_descriptions: {json.dumps(rule_descs_list, ensure_ascii=False)}\n\n"
+                    "OUTPUT RULES:\n"
+                    "- Output ONLY valid JSON with shape: {\"present\": { ... }}\n"
+                    "- For each key in SPECIFICATIONS, list the items that are clearly present in the TEMPLATE.\n"
+                    "- For 'variation_count' and 'rule_percentage', if present, return the number itself, not a boolean.\n"
+                    "- Match rule_descriptions semantically. The wording in the template can be natural language.\n"
+                    "- Example: {\"present\": {\"soft\": [\"phonetic\", \"rule\"], \"variation_count\": 10, \"phonetic_tokens\": [\"60% Light\"]}}\n"
+                    "- If nothing is present for a category, you can omit the key or provide an empty list/null.\n\n"
+                    "RESPONSE (JSON only):"
+                )
+                
+                issues, _ = _run_judge_model(
+                    client, model, judge_prompt, self.judge_strict_mode,
+                    soft_issue_map, phonetic_expected_tokens, orthographic_expected_tokens,
+                    variation_count, rule_pct_val, rule_descs_list, ambiguity_sentence
+                )
+                
+                llm_issues = issues
+                judge_success = True
+                self.last_successful_judge_model = model
+                self.last_successful_judge_timeout = timeout
+                successful_judge_model = model
+                successful_judge_timeout = timeout
+                bt.logging.info(f"✅ Judge succeeded with model: {model}, timeout: {timeout}s")
+                return "SUCCESS"
+            except Exception as e:
+                bt.logging.warning(f"❌ Judge failed: model={model}, timeout={timeout}s, error={e}")
+                if "timed out" in str(e).lower():
+                    return "TIMEOUT"
+                return "FATAL"
 
-                            # Variation count
-                            present_vc = present.get('variation_count')
-                            if isinstance(variation_count, int) and present_vc != variation_count:
-                                mapped_issues.append(f"Specify exact number of variations: {variation_count}.")
-                            
-                            # Phonetic tokens
-                            present_phon = set(present.get('phonetic_tokens', []))
-                            expected_phon = set(phonetic_expected_tokens)
-                            missing_phon_tokens = expected_phon - present_phon
-                            if missing_phon_tokens:
-                                phonetic_expected_str = ", ".join(sorted(list(expected_phon)))
-                                mapped_issues.append(f"Phonetic similarity: {phonetic_expected_str}.")
-                            
-                            # Orthographic tokens
-                            present_ortho = set(present.get('orthographic_tokens', []))
-                            expected_ortho = set(orthographic_expected_tokens)
-                            missing_ortho_tokens = expected_ortho - present_ortho
-                            if missing_ortho_tokens:
-                                orthographic_expected_str = ", ".join(sorted(list(expected_ortho)))
-                                mapped_issues.append(f"Orthographic similarity: {orthographic_expected_str}.")
-
-                            # Rule percentage
-                            present_rp = present.get('rule_percentage')
-                            if isinstance(rule_pct_val, int) and present_rp != rule_pct_val:
-                                mapped_issues.append(
-                                    f"Approximately {rule_pct_val}% of the variations should follow rule-based transformations."
-                                )
-
-                            # Rule descriptions
-                            present_rd = set(present.get('rule_descriptions', []))
-                            expected_rd = set(rule_descs_list)
-                            missing_rd = expected_rd - present_rd
-                            if missing_rd:
-                                mapped_issues.append(
-                                    f"Apply these rule-based transformations: {'; '.join(sorted(list(missing_rd)))}."
-                                )
-                            
-                            # Ambiguity clarification (judge can signal under key 'rule_ambiguity')
-                            if present.get('rule_ambiguity') and isinstance(ambiguity_sentence, str):
-                                mapped_issues.append(ambiguity_sentence)
-
-                        llm_issues = mapped_issues
-                    else:
-                        # If all JSON parsing failed
-                        if self.judge_strict_mode:
-                            raise ValueError(f"Invalid JSON response in strict mode: {text[:200]}...")
-                        else:
-                            # Lenient mode: do not try to mine free-text; keep issues empty to avoid non-canonical phrasing
-                            llm_issues = []
-                    if isinstance(llm_issues, list):
-                        judge_success = True
-                        # Cache successful model/timeout for next time
-                        self.last_successful_judge_model = judge_model
-                        self.last_successful_judge_timeout = judge_timeout
-                        # Record successful judge configuration for caller
-                        successful_judge_model = judge_model
-                        successful_judge_timeout = judge_timeout
-                        bt.logging.debug(f"💾 Cached judge preference -> model: {judge_model}, timeout: {judge_timeout}s")
-                        bt.logging.info(f"Judge succeeded with model: {judge_model} and timeout: {judge_timeout}s")
-                        if llm_issues:
-                            bt.logging.debug(f"⚠️  Judge found issues: {llm_issues}")
-                        else:
-                            bt.logging.debug(f"✅ Judge found no issues - query is clear")
-                        break
-                except Exception as e:
-                    error_msg = str(e)
-                    bt.logging.warning(f"❌ Judge failed with model: {judge_model} and timeout: {judge_timeout}s. Error: {error_msg}")
-                    
-                    # Enhanced error logging for JSON parsing issues
-                    if "invalid json" in error_msg.lower() or "jsondecodeerror" in error_msg.lower():
-                        bt.logging.error(f"🔍 JSON Parsing Debug Info:")
-                        bt.logging.error(f"   Raw response length: {len(text)} characters")
-                        bt.logging.error(f"   Response preview: {text[:300]}...")
-                        if len(text) > 300:
-                            bt.logging.error(f"   Response end: ...{text[-100:]}")
-                        
-                        # Show what parsing strategies were attempted
-                        bt.logging.error(f"   JSON extraction attempts:")
-                        for debug_line in extraction_debug:
-                            bt.logging.error(f"     - {debug_line}")
-                        
-                        # Check if response contains JSON-like content
-                        if '{' in text and '}' in text:
-                            bt.logging.error(f"     - Contains JSON brackets: YES")
-                            # Try to find where the JSON might be
-                            brace_positions = []
-                            for i, char in enumerate(text):
-                                if char == '{':
-                                    brace_positions.append(f"opening at pos {i}")
-                                elif char == '}':
-                                    brace_positions.append(f"closing at pos {i}")
-                            if brace_positions:
-                                bt.logging.error(f"     - Brace positions: {brace_positions[:10]}...")
-                        else:
-                            bt.logging.error(f"     - Contains JSON brackets: NO")
-                        
-                        # Check for common LLM response patterns
-                        if text.lower().startswith('i apologize') or text.lower().startswith('sorry'):
-                            bt.logging.error(f"     - Response type: APOLOGY (model may be refusing task)")
-                        elif '```' in text:
-                            bt.logging.error(f"     - Response type: MARKDOWN CODE BLOCK")
-                        elif text.strip().startswith('{'):
-                            bt.logging.error(f"     - Response type: STARTS WITH JSON")
-                        else:
-                            bt.logging.error(f"     - Response type: NATURAL LANGUAGE")
-                    
-                    if "timed out" in error_msg.lower():
-                        bt.logging.warning("⏰ Judge timeout - trying next timeout/model")
-                        continue
-                    else:
-                        bt.logging.error(f"💥 Judge error - trying next model")
-                        break
+        # Step 1: Try cached model with forward-only timeouts
+        if self.last_successful_judge_model in judge_models_to_try:
+            model = self.last_successful_judge_model
+            processed_models.add(model)
+            
+            start_timeout = self.last_successful_judge_timeout or 0
+            timeouts = [t for t in judge_timeouts_to_try if t >= start_timeout]
+            
+            for timeout in timeouts:
+                result = attempt_judge(model, timeout)
+                if result == "SUCCESS":
+                    break
+                if result == "FATAL":
+                    break 
             if judge_success:
-                break
+                 pass # It will skip the next loop
 
+        # Step 2: Try other models
         if not judge_success:
-            bt.logging.error("💥 All judge models and timeouts failed. Proceeding with static checks only.")
-            llm_issues = []
-            successful_judge_model = None
-            successful_judge_timeout = None
-            
-            # If judge consistently fails, consider disabling it for future runs
-            if not hasattr(self, '_judge_failure_count'):
-                self._judge_failure_count = 0
-            self._judge_failure_count += 1
-            
-            # After threshold consecutive failures, suggest disabling judge
-            if self._judge_failure_count >= self.judge_failure_threshold:
-                bt.logging.warning(f"⚠️  Judge has failed {self._judge_failure_count} times consecutively (threshold: {self.judge_failure_threshold}). Consider setting --neuron.use_judge_model=False to disable LLM judge validation.")
-        else:
-            # Reset failure count on success
-            if hasattr(self, '_judge_failure_count'):
-                self._judge_failure_count = 0
-
-        # for it in llm_issues:
-        #     if isinstance(it, str) and it not in issues:
-        #         issues.append(it)
-
+            for model in [m for m in judge_models_to_try if m not in processed_models]:
+                for timeout in judge_timeouts_to_try:
+                    result = attempt_judge(model, timeout)
+                    if result == "SUCCESS":
+                        break
+                    if result == "FATAL":
+                        break 
+                if judge_success:
+                    break
+        
         # Merge static and judge issues, deduplicate while preserving order
         merged_for_dedup = []
         merged_for_dedup.extend(issues or [])
@@ -755,25 +729,23 @@ class QueryGenerator:
         candidate_timeouts.extend(fallback_timeouts)
         seen_timeouts = set()
         timeouts_to_try = [t for t in candidate_timeouts if t is not None and not (t in seen_timeouts or seen_timeouts.add(t))]
-        # Debug the selection order for generation attempts (last-success-first, then primary, then fallbacks)
+        timeouts_to_try.sort()
         bt.logging.debug(f"🧪 Generation selection order -> models: {models_to_try}, timeouts: {timeouts_to_try}")
 
-        # Track the last LLM-generated template to use as final fallback
         last_model_query_template: str | None = None
-        
-        # Track the last successful judge configuration from validation
         last_successful_judge_model: str | None = None
         last_successful_judge_timeout: int | None = None
+        generation_log = { "attempts": [], "decision": "No successful generation.", "final_template": None, "labels": labels }
+        
+        processed_models = set()
 
-        generation_log = {
-            "attempts": [],
-            "decision": "No successful generation.",
-            "final_template": None,
-            "labels": labels
-        }
-
+        # Iterate models; enforce forward-only timeouts for cached model
         for model in models_to_try:
-            for timeout in timeouts_to_try:
+            if self.last_successful_generation_model and model == self.last_successful_generation_model and isinstance(self.last_successful_generation_timeout, int):
+                current_timeouts = [t for t in timeouts_to_try if t >= self.last_successful_generation_timeout]
+            else:
+                current_timeouts = timeouts_to_try
+            for timeout in current_timeouts:
                 attempt_log = {
                     "model": model,
                     "timeout": timeout,
@@ -786,11 +758,9 @@ class QueryGenerator:
                     bt.logging.debug(f"🤖 Attempting to generate query with model: {model} and timeout: {timeout}s")
                     # Configure the client with the timeout
                     client = ollama.Client(host=self.config.neuron.ollama_url, timeout=timeout)
-                    
                     # Generate the query using Ollama
                     response = client.generate(model=model, prompt=prompt)
                     query_template = response['response'].strip()
-                    
                     # Track last attempted model template
                     last_model_query_template = query_template
                     attempt_log["raw_template"] = query_template
@@ -799,7 +769,7 @@ class QueryGenerator:
                     bt.logging.debug(f"📝 Pre-judge LLM-generated query: {query_template}")
                     is_valid, error_msg, issues, llm_issues, successful_judge_model, successful_judge_timeout, validation_details = self.validate_query_template(query_template, labels)
                     attempt_log["validation"] = validation_details
-                    
+
                     # Persist the successful judge config for later returns
                     last_successful_judge_model = successful_judge_model
                     last_successful_judge_timeout = successful_judge_timeout
@@ -917,18 +887,17 @@ class QueryGenerator:
                     bt.logging.error(f"❌ Failed to generate query with model: {model} and timeout: {timeout}s")
                     bt.logging.error(f"   Error: {e}")
                     if "timed out" in str(e).lower():
-                        bt.logging.warning("⏰ Timeout occurred. Trying next timeout or model.")
+                        bt.logging.warning("⏰ Timeout occurred. Trying next timeout for this model.")
                         attempt_log["status"] = f"failed_with_timeout: {e}"
+                        generation_log["attempts"].append(attempt_log)
                         continue # Move to next timeout
                     else:
-                        # For other errors, we can break from the inner loop and try the next model
                         bt.logging.error(f"💥 An unexpected error occurred. Trying next model.")
                         attempt_log["status"] = f"failed_with_error: {e}"
-                        break # break from timeout loop, and try next model.
-                finally:
-                    if attempt_log["status"].startswith("failed"):
                         generation_log["attempts"].append(attempt_log)
-
+                        break # break from timeout loop, and try next model.
+        
+        # Fallback logic remains the same
         bt.logging.error("💥 All models and timeouts failed.")
         # Prefer returning the last LLM-generated template with appended hints
         if last_model_query_template:
