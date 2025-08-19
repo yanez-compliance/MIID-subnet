@@ -362,12 +362,10 @@ class QueryGenerator:
                     
                     # Provide the judge with structured expectations, asking it to mark what is missing.
                     judge_prompt = (
-                        "You are a strict validator. Analyze the query TEMPLATE against the provided LABELS.\n\n"
-                        "From the EXPECTED fields/tokens below, identify which are missing or unclear in the TEMPLATE.\n"
-                        "Return ONLY valid JSON with shape {\"missing\": { ... }} where keys map to arrays of missing tokens.\n\n"
+                        "You are a strict validator. Your task is to check which of the required SPECIFICATIONS are met by the query TEMPLATE.\n\n"
+                        "Return ONLY a valid JSON object with a single key 'present', containing a dictionary that maps each specification category to a list of the specifications that were found and are clearly stated in the template.\n\n"
                         f"TEMPLATE:\n{query_template}\n\n"
-                        f"LABELS (JSON):\n{json.dumps(labels or {}, ensure_ascii=False)}\n\n"
-                        f"EXPECTED:\n"
+                        f"SPECIFICATIONS:\n"
                         f"- soft: {json.dumps(list(soft_issue_map.keys()), ensure_ascii=False)}\n"
                         f"- variation_count: {json.dumps(variation_count, ensure_ascii=False)}\n"
                         f"- phonetic_tokens: {json.dumps(phonetic_expected_tokens, ensure_ascii=False)}\n"
@@ -375,9 +373,12 @@ class QueryGenerator:
                         f"- rule_percentage: {json.dumps(rule_pct_val, ensure_ascii=False)}\n"
                         f"- rule_descriptions: {json.dumps(rule_descs_list, ensure_ascii=False)}\n\n"
                         "OUTPUT RULES:\n"
-                        "- Output ONLY valid JSON with this exact top-level key: 'missing'\n"
-                        "- Example shape: {\"missing\": {\"soft\": [\"phonetic\"], \"phonetic_tokens\": [\"60% Light\"]}}\n"
-                        "- If nothing is missing, return: {\"missing\": {}}\n\n"
+                        "- Output ONLY valid JSON with shape: {\"present\": { ... }}\n"
+                        "- For each key in SPECIFICATIONS, list the items that are clearly present in the TEMPLATE.\n"
+                        "- For 'variation_count' and 'rule_percentage', if present, return the number itself, not a boolean.\n"
+                        "- Match rule_descriptions semantically. The wording in the template can be natural language.\n"
+                        "- Example: {\"present\": {\"soft\": [\"phonetic\", \"rule\"], \"variation_count\": 10, \"phonetic_tokens\": [\"60% Light\"]}}\n"
+                        "- If nothing is present for a category, you can omit the key or provide an empty list/null.\n\n"
                         "RESPONSE (JSON only):"
                     )
                     
@@ -413,9 +414,9 @@ class QueryGenerator:
                             except json.JSONDecodeError as e:
                                 extraction_debug.append(f"Strategy 2 (Markdown Code Block): FAILED - {str(e)}")
                         
-                        # Strategy 3: Find JSON object in text (expecting a 'missing' key)
+                        # Strategy 3: Find JSON object in text (expecting a 'present' key)
                         if not parsed:
-                            json_match = re.search(r'\{[^{}]*"missing"[^{}]*\{[\s\S]*?\}\s*\}', text, re.DOTALL)
+                            json_match = re.search(r'\{[^{}]*"present"[^{}]*\{[\s\S]*?\}\s*\}', text, re.DOTALL)
                             if json_match:
                                 try:
                                     parsed = json.loads(json_match.group(0))
@@ -433,7 +434,7 @@ class QueryGenerator:
                             for i, obj_str in enumerate(json_objects):
                                 try:
                                     temp_parsed = json.loads(obj_str)
-                                    if isinstance(temp_parsed, dict) and 'missing' in temp_parsed:
+                                    if isinstance(temp_parsed, dict) and 'present' in temp_parsed:
                                         parsed = temp_parsed
                                         extraction_debug.append(f"Strategy 4 (General JSON): SUCCESS with object {i+1}")
                                         break
@@ -445,51 +446,55 @@ class QueryGenerator:
                     
                     # Extract structured missing fields and map to canonical issue strings
                     if parsed and isinstance(parsed, dict):
-                        missing = parsed.get('missing', {})
+                        present = parsed.get('present', {})
                         mapped_issues: List[str] = []
 
-                        if isinstance(missing, dict):
+                        if isinstance(present, dict):
                             # Soft checks
-                            soft_missing = missing.get('soft', [])
-                            if isinstance(soft_missing, list):
-                                for key in soft_missing:
-                                    if isinstance(key, str) and key in soft_issue_map:
-                                        mapped_issues.append(soft_issue_map[key])
+                            present_soft = set(present.get('soft', []))
+                            expected_soft = set(soft_issue_map.keys())
+                            for key in expected_soft - present_soft:
+                                mapped_issues.append(soft_issue_map[key])
 
                             # Variation count
-                            var_missing = missing.get('variation_count')
-                            if var_missing and isinstance(variation_count, int):
+                            present_vc = present.get('variation_count')
+                            if isinstance(variation_count, int) and present_vc != variation_count:
                                 mapped_issues.append(f"Specify exact number of variations: {variation_count}.")
-
+                            
                             # Phonetic tokens
-                            phon_missing = missing.get('phonetic_tokens', [])
-                            if isinstance(phon_missing, list) and phon_missing:
-                                phonetic_expected = ", ".join(phon_missing)
-                                mapped_issues.append(f"Phonetic similarity: {phonetic_expected}.")
-
+                            present_phon = set(present.get('phonetic_tokens', []))
+                            expected_phon = set(phonetic_expected_tokens)
+                            missing_phon_tokens = expected_phon - present_phon
+                            if missing_phon_tokens:
+                                phonetic_expected_str = ", ".join(sorted(list(missing_phon_tokens)))
+                                mapped_issues.append(f"Phonetic similarity: {phonetic_expected_str}.")
+                            
                             # Orthographic tokens
-                            ortho_missing = missing.get('orthographic_tokens', [])
-                            if isinstance(ortho_missing, list) and ortho_missing:
-                                orthographic_expected = ", ".join(ortho_missing)
-                                mapped_issues.append(f"Orthographic similarity: {orthographic_expected}.")
+                            present_ortho = set(present.get('orthographic_tokens', []))
+                            expected_ortho = set(orthographic_expected_tokens)
+                            missing_ortho_tokens = expected_ortho - present_ortho
+                            if missing_ortho_tokens:
+                                orthographic_expected_str = ", ".join(sorted(list(missing_ortho_tokens)))
+                                mapped_issues.append(f"Orthographic similarity: {orthographic_expected_str}.")
 
                             # Rule percentage
-                            rule_pct_missing = missing.get('rule_percentage')
-                            if rule_pct_missing and isinstance(rule_pct_val, int):
+                            present_rp = present.get('rule_percentage')
+                            if isinstance(rule_pct_val, int) and present_rp != rule_pct_val:
                                 mapped_issues.append(
                                     f"Approximately {rule_pct_val}% of the variations should follow rule-based transformations."
                                 )
 
                             # Rule descriptions
-                            rule_desc_missing = missing.get('rule_descriptions', [])
-                            if isinstance(rule_desc_missing, list) and rule_desc_missing:
+                            present_rd = set(present.get('rule_descriptions', []))
+                            expected_rd = set(rule_descs_list)
+                            missing_rd = expected_rd - present_rd
+                            if missing_rd:
                                 mapped_issues.append(
-                                    f"Apply these rule-based transformations: {'; '.join(rule_desc_missing)}."
+                                    f"Apply these rule-based transformations: {'; '.join(sorted(list(missing_rd)))}."
                                 )
-
+                            
                             # Ambiguity clarification (judge can signal under key 'rule_ambiguity')
-                            rule_amb_missing = missing.get('rule_ambiguity')
-                            if rule_amb_missing and isinstance(ambiguity_sentence, str):
+                            if present.get('rule_ambiguity') and isinstance(ambiguity_sentence, str):
                                 mapped_issues.append(ambiguity_sentence)
 
                         llm_issues = mapped_issues
@@ -511,7 +516,7 @@ class QueryGenerator:
                         bt.logging.debug(f"💾 Cached judge preference -> model: {judge_model}, timeout: {judge_timeout}s")
                         bt.logging.info(f"Judge succeeded with model: {judge_model} and timeout: {judge_timeout}s")
                         if llm_issues:
-                            bt.logging.debug(f"⚠️ Judge found issues: {llm_issues}")
+                            bt.logging.debug(f"⚠️  Judge found issues: {llm_issues}")
                         else:
                             bt.logging.debug(f"✅ Judge found no issues - query is clear")
                         break
