@@ -140,10 +140,18 @@ def _run_judge_model(
                 elif key == 'orthographic' and orthographic_expected_tokens:
                     mapped_issues.append(f"Orthographic similarity: {', '.join(sorted(list(orthographic_expected_tokens)))}.")
                 elif key == 'rule':
+                    # Only add rule soft check if we don't have a specific rule percentage check
+                    # This prevents duplicate rule percentage issues
                     if isinstance(rule_pct_val, int):
-                        mapped_issues.append(
-                            f"Approximately {rule_pct_val}% of the variations should follow rule-based transformations."
-                        )
+                        # Check if rule percentage is already missing (will be checked later)
+                        present_rp = present.get('rule_percentage')
+                        if present_rp != rule_pct_val:
+                            # Rule percentage is missing, so don't add the generic soft rule issue
+                            # The specific rule percentage issue will be added later
+                            pass
+                        else:
+                            # Rule percentage is present, so add the generic soft rule issue
+                            mapped_issues.append(soft_issue_map[key])
                     else:
                         mapped_issues.append(soft_issue_map[key])
 
@@ -188,7 +196,15 @@ def _run_judge_model(
             if present.get('rule_ambiguity') and isinstance(ambiguity_sentence, str):
                 mapped_issues.append(ambiguity_sentence)
 
-        llm_issues = mapped_issues
+        # Final deduplication within the judge model to prevent any remaining duplicates
+        seen_issues = set()
+        deduped_mapped_issues = []
+        for issue in mapped_issues:
+            if issue not in seen_issues:
+                deduped_mapped_issues.append(issue)
+                seen_issues.add(issue)
+        
+        llm_issues = deduped_mapped_issues
     else:
         # If all JSON parsing failed
         if strict_mode:
@@ -398,8 +414,19 @@ class QueryGenerator:
                 
                 rule_issues = []
                 
-                # 1) Check if the exact percentage is present
-                if f"{rule_pct}%" not in query_template:
+                # 1) Check if the exact percentage is present in rule-based context
+                # Look for the percentage in contexts that indicate rule-based transformations
+                rule_context_patterns = [
+                    f"{rule_pct}%",
+                    f"approximately {rule_pct}%",
+                    f"about {rule_pct}%",
+                    f"{rule_pct}% of",
+                    f"{rule_pct}% should",
+                    f"{rule_pct}% will"
+                ]
+                rule_pct_found = any(pattern in query_template.lower() for pattern in rule_context_patterns)
+                
+                if not rule_pct_found:
                     rule_issues.append(f"Approximately {rule_pct}% of the variations should follow rule-based transformations.")
                 
                 # 2) Check if the rule descriptions are semantically present using keyword matching
@@ -418,13 +445,27 @@ class QueryGenerator:
                 if rule_issues:
                     rule_hint = " ".join(rule_issues)
                 
-                # 3) Ambiguity: percentage mentioned multiple times (e.g., per-rule). Add explicit clarification
-                if query_template.count(f"{rule_pct}%") > 1:
-                    ambiguity_hint = (
-                        f"We want {rule_pct}% of the name variations to be rule-based. "
-                        "Each variation should have at least one transformation rule applied—some may have only one rule, while others may have multiple. "
-                        "Importantly, all listed rules must be represented across the set of rule-based name variations."
-                    )
+                # 3) Ambiguity: percentage mentioned multiple times in potentially confusing contexts (e.g., per-rule). Add explicit clarification
+                # Only trigger if percentage appears in contexts that could be ambiguous (not just in clarification text)
+                rule_pct_occurrences = query_template.count(f"{rule_pct}%")
+                if rule_pct_occurrences > 1:
+                    # Check if the multiple occurrences are in potentially confusing contexts
+                    # Look for patterns like "X% per rule" or "X% for each transformation" which could be ambiguous
+                    confusing_patterns = [
+                        f"{rule_pct}% per",
+                        f"{rule_pct}% for each",
+                        f"{rule_pct}% of each",
+                        f"{rule_pct}% per rule",
+                        f"{rule_pct}% per transformation"
+                    ]
+                    has_confusing_context = any(pattern in query_template.lower() for pattern in confusing_patterns)
+                    
+                    if has_confusing_context:
+                        ambiguity_hint = (
+                            f"We want {rule_pct}% of the name variations to be rule-based. "
+                            "Each variation should have at least one transformation rule applied—some may have only one rule, while others may have multiple. "
+                            "Importantly, all listed rules must be represented across the set of rule-based name variations."
+                        )
             
             # Add hints to issues list if they are not None
             if variation_count_hint: static_issues.append(variation_count_hint)
@@ -569,6 +610,8 @@ class QueryGenerator:
                     "- For `rule_descriptions`, the TEMPLATE may list transformations with extra details or different phrasing. Match them semantically to the descriptions provided in SPECIFICATIONS.\n"
                     "- For 'variation_count', if the TEMPLATE says 'Generate X' or contains the number X, return X as the variation_count.\n"
                     "- For 'rule_percentage', if the TEMPLATE mentions 'X%' or 'approximately X%' or 'about X%' in the context of rule-based transformations, return X as the rule_percentage.\n"
+                    "- IMPORTANT: For rule_percentage, look for phrases like 'X% of variations following rule-based transformations', 'X% should follow rule-based transformations', 'X% of the total variations following these rule-based transformations', etc.\n"
+                    "- For the 'soft' category, only mark 'rule' as present if the TEMPLATE explicitly mentions rule-based transformation requirements (not just the percentage).\n"
                     "- Example: If TEMPLATE says \"make 10 variations... 60% should be Lightly similar in sound\", your output for `variation_count` should be `10` and `phonetic_tokens` should include `\"60% Light\"`.\n"
                     "- Example: If TEMPLATE says \"Generate 13 execution vectors... Approximately 58% should follow rule-based transformations\", your output for `variation_count` should be `13` and `rule_percentage` should be `58`.\n"
                     "- If nothing is present for a category, you can omit the key or provide an empty list/null.\n\n"
@@ -632,7 +675,23 @@ class QueryGenerator:
         seen = set()
         deduped_issues: List[str] = []
         for it in merged_for_dedup:
-            if it not in seen:
+            # Check for semantic duplicates, especially for rule percentage issues
+            is_duplicate = False
+            
+            # Check exact match first
+            if it in seen:
+                is_duplicate = True
+            else:
+                # Check for semantic duplicates of rule percentage issues
+                if "rule-based" in it.lower() and "%" in it:
+                    # Look for other rule percentage issues that are semantically the same
+                    for existing in deduped_issues:
+                        if ("rule-based" in existing.lower() and "%" in existing and 
+                            any(str(pct) in it for pct in [rule_pct_val] if rule_pct_val is not None)):
+                            is_duplicate = True
+                            break
+            
+            if not is_duplicate:
                 deduped_issues.append(it)
                 seen.add(it)
 
