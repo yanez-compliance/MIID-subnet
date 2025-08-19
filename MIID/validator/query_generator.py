@@ -291,11 +291,13 @@ class QueryGenerator:
             ambiguity_hint = None
             variation_count_hint = None
             
-            # Variation count
+            # Variation count - just check if the exact number is present
             variation_count = labels.get("variation_count")
             if isinstance(variation_count, int):
-                if str(variation_count) not in query_template:
-                    variation_count_hint = f"Specify exact number of variations: {variation_count}."
+                variation_count_str = str(variation_count)
+                # Simply check if the exact number appears in the query
+                if variation_count_str not in query_template:
+                    variation_count_hint = f"Exact number of variations: {variation_count}."
 
             # Helper to verify percentages and levels
             def compute_expected_percentages(sim_config: Dict[str, float]) -> List[Tuple[str, int]]:
@@ -313,35 +315,43 @@ class QueryGenerator:
                 # Look for standalone percentage tokens like "20%" (avoid matching 120% etc.)
                 return re.search(rf"(?<!\d){percent}%", text) is not None
 
-            # Phonetic similarity checks
+            # Phonetic similarity checks - just check for exact percentages and levels
             phonetic_cfg = labels.get("phonetic_similarity") or {}
             if isinstance(phonetic_cfg, dict) and phonetic_cfg:
                 expected_phonetic_tokens = []
-                all_present = True
-                for level, pct in compute_expected_percentages(phonetic_cfg):
-                    token = f"{int(pct)}% {level}"
+                missing_items = []
+                for level, frac in phonetic_cfg.items():
+                    pct = int(frac * 100)
+                    token = f"{pct}% {level}"
                     expected_phonetic_tokens.append(token)
-                    if not find_percent(query_template, int(pct)) or level.lower() not in lowered:
-                        all_present = False
-                # If any expected token is missing OR the template doesn't mention phonetic at all, add a precise hint
-                if (not all_present) or ("phonetic" not in lowered):
+                    # Check for exact percentage and exact level name
+                    if f"{pct}%" not in query_template:
+                        missing_items.append(f"{pct}%")
+                    if level not in query_template:
+                        missing_items.append(level)
+                
+                if missing_items:
                     phonetic_hint = f"Phonetic similarity: {', '.join(expected_phonetic_tokens)}."
 
-            # Orthographic similarity checks
+            # Orthographic similarity checks - just check for exact percentages and levels
             orthographic_cfg = labels.get("orthographic_similarity") or {}
             if isinstance(orthographic_cfg, dict) and orthographic_cfg:
                 expected_orthographic_tokens = []
-                all_present = True
-                for level, pct in compute_expected_percentages(orthographic_cfg):
-                    token = f"{int(pct)}% {level}"
+                missing_items = []
+                for level, frac in orthographic_cfg.items():
+                    pct = int(frac * 100)
+                    token = f"{pct}% {level}"
                     expected_orthographic_tokens.append(token)
-                    if not find_percent(query_template, int(pct)) or level.lower() not in lowered:
-                        all_present = False
-                # If any expected token is missing OR the template doesn't mention orthographic at all, add a precise hint
-                if (not all_present) or ("orthographic" not in lowered):
+                    # Check for exact percentage and exact level name
+                    if f"{pct}%" not in query_template:
+                        missing_items.append(f"{pct}%")
+                    if level not in query_template:
+                        missing_items.append(level)
+                
+                if missing_items:
                     orthographic_hint = f"Orthographic similarity: {', '.join(expected_orthographic_tokens)}."
 
-            # Rule-based percentage
+            # Rule-based checks - check for exact percentage and exact rule descriptions
             rule_meta = labels.get("rule_based") or {}
             rule_pct = rule_meta.get("percentage") if isinstance(rule_meta, dict) else None
             if isinstance(rule_pct, int):
@@ -350,48 +360,22 @@ class QueryGenerator:
                 if isinstance(rule_descriptions_for_this_query, dict):
                     descriptions_list = [d for d in rule_descriptions_for_this_query.values() if isinstance(d, str) and d]
                 
-                # Detect presence of percentage token in the query
-                percent_present = find_percent(query_template, rule_pct)
-                
-                # 1) If percentage is missing, reveal the percentage explicitly
                 rule_issues = []
-                if not percent_present:
+                
+                # 1) Check if the exact percentage is present
+                if f"{rule_pct}%" not in query_template:
                     rule_issues.append(f"Approximately {rule_pct}% of the variations should follow rule-based transformations.")
                 
-                # 2) If any of the specific labels are missing from the query text, add labels-only hint
+                # 2) Check if the exact rule descriptions are present
                 if descriptions_list:
-                    def _label_present(desc: str) -> bool:
-                        """Generic check for presence of a rule label in the query text."""
-                        if not desc:
-                            return False
-                        d_low = desc.lower()
-                        # 1. Get the canonical core phrase (before any parentheses)
-                        canonical_core = d_low.split('(')[0].strip()
-
-                        # 2. Direct check first for performance and simple cases.
-                        if canonical_core in lowered:
-                            return True
-
-                        # 3. If direct check fails, use a more robust word-based check.
-                        stopwords = {'a', 'an', 'the', 'of', 'in', 'with', 'for', 'to', 'is', 'are', 'etc'}
-                        canonical_words = {word for word in re.split(r'[^a-z]+', canonical_core) if word and word not in stopwords}
-
-                        if not canonical_words:
-                            return False # Cannot validate on empty set of words
-
-                        # Tokenize the query once for efficiency (if not already done)
-                        query_words = set(re.split(r'[^a-z]+', lowered))
-
-                        # Check if for each canonical word, a word in the query starts with it.
-                        for c_word in canonical_words:
-                            if not any(q_word.startswith(c_word) for q_word in query_words):
-                                return False # A significant word is missing
-                        
-                        return True # All significant words were found
-
-                    missing_labels = [desc for desc in descriptions_list if not _label_present(desc)]
-                    if missing_labels:
-                        rule_issues.append(f"Apply these rule-based transformations: {'; '.join(missing_labels)}.")
+                    missing_rules = []
+                    for desc in descriptions_list:
+                        # Just check if the exact rule description text is in the query
+                        if desc not in query_template:
+                            missing_rules.append(desc)
+                    
+                    if missing_rules:
+                        rule_issues.append(f"Apply these rule-based transformations: {'; '.join(missing_rules)}.")
 
                 if rule_issues:
                     rule_hint = " ".join(rule_issues)
@@ -545,8 +529,10 @@ class QueryGenerator:
                     "- For each key in SPECIFICATIONS, list the items that are clearly present in the TEMPLATE.\n"
                     "- For `phonetic_tokens` and `orthographic_tokens`, the TEMPLATE might express them in natural language. Find each percentage and its associated level (e.g., 'Light', 'Medium', 'Far') and return them in the format 'XX% Level'. The order does not matter.\n"
                     "- For `rule_descriptions`, the TEMPLATE may list transformations with extra details or different phrasing. Match them semantically to the descriptions provided in SPECIFICATIONS.\n"
-                    "- For 'variation_count' and 'rule_percentage', if present, return the number itself, not a boolean.\n"
+                    "- For 'variation_count', if the TEMPLATE says 'Generate X' or contains the number X, return X as the variation_count.\n"
+                    "- For 'rule_percentage', if the TEMPLATE mentions 'X%' or 'approximately X%' or 'about X%' in the context of rule-based transformations, return X as the rule_percentage.\n"
                     "- Example: If TEMPLATE says \"make 10 variations... 60% should be Lightly similar in sound\", your output for `variation_count` should be `10` and `phonetic_tokens` should include `\"60% Light\"`.\n"
+                    "- Example: If TEMPLATE says \"Generate 13 execution vectors... Approximately 58% should follow rule-based transformations\", your output for `variation_count` should be `13` and `rule_percentage` should be `58`.\n"
                     "- If nothing is present for a category, you can omit the key or provide an empty list/null.\n\n"
                     "RESPONSE (JSON only):"
                 )
