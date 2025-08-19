@@ -347,18 +347,23 @@ async def forward(self):
         },
         "query_generation": {
             "use_default_query": self.query_generator.use_default_query,
-            "model_name": getattr(self.config.neuron, 'ollama_model_name', "llama3.1:latest"),
+            "configured_model": getattr(self.config.neuron, 'ollama_model_name', "llama3.1:latest"),
+            "model_used": successful_model,  # Actual model that succeeded
+            "timeout_used": successful_timeout,  # Actual timeout that succeeded
             "generation_time": challenge_end_time - challenge_start_time,
             "generation_log": generation_log
-                            },
+        },
+        "query_validation": {
+            "judge_enabled": self.query_generator.use_judge_model,
+            "judge_model_used": successful_judge_model,  # Judge model that succeeded (if any)
+            "judge_timeout_used": successful_judge_timeout,  # Judge timeout that succeeded (if any)
+            "judge_strict_mode": self.query_generator.judge_strict_mode,
+            "judge_on_static_pass": self.query_generator.judge_on_static_pass
+        },
         "responses": {},
         "rewards": {}
     }
-    
-    # Update the model_name in the results to reflect what was actually used
-    if successful_model:
-        results["query_generation"]["model_name"] = successful_model
-    
+
     for i, uid in enumerate(miner_uids):
         if i < len(all_responses):
             # Convert the response to a serializable format
@@ -403,8 +408,10 @@ async def forward(self):
         "spec_version": self.spec_version,
         "hotkey": str(self.wallet.hotkey.ss58_address),
         "timestamp": timestamp,
-        "model_name": getattr(self.config.neuron, 'ollama_model_name', "llama3.1:latest"),
+        "model_name": successful_model or getattr(self.config.neuron, 'ollama_model_name', "llama3.1:latest"),
         "query_generator_timeout": successful_timeout,
+        "judge_model": successful_judge_model,
+        "judge_timeout": successful_judge_timeout,
         "dendrite_timeout": adaptive_timeout,
         "Did_it_set_weights": success,
         "uids": [int(uid) for uid in uint_uids] if uint_uids else [],
@@ -447,7 +454,11 @@ async def forward(self):
         "query_template": query_template,
         "variation_count": query_labels.get('variation_count'),
         "seed_names_count": len(seed_names_with_labels),
+        "query_generation_model": successful_model,
         "query_generator_timeout": successful_timeout,
+        "judge_model": successful_judge_model,
+        "judge_timeout": successful_judge_timeout,
+        "judge_enabled": self.query_generator.use_judge_model,
         "dendrite_timeout": adaptive_timeout,
         #"valid_responses": valid_responses,
         #"total_responses": len(all_responses),

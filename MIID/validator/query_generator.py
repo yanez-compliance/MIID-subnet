@@ -408,7 +408,7 @@ class QueryGenerator:
         # If static checks found issues, create a temporary template with hints for the judge.
         template_for_judge = query_template
         if issues:
-            hint_suffix = " Hint: " + "; ".join(issues)
+            hint_suffix = "\n[STATIC VALIDATION HINTS]: " + "; ".join(issues)
             template_for_judge = query_template + hint_suffix
             bt.logging.info("🕵️‍♀️ Static analysis found issues. Appending hints before sending to judge.")
             bt.logging.debug(f"   Original template: {query_template}")
@@ -679,10 +679,24 @@ class QueryGenerator:
             # Validate and minimally clarify the default template too
             _ok, _msg, issues, _llm_issues, successful_judge_model, successful_judge_timeout, validation_details = self.validate_query_template(simple_template, labels)
             if issues:
-                suffix = " Hint: " + "; ".join(issues)
-                simple_template = simple_template + " " + suffix
+                # Organize hints by source for default template
+                final_hints = []
+                static_issues = [i for i in issues if i not in _llm_issues]
+                judge_only_issues = [i for i in _llm_issues if i not in issues] if _llm_issues else []
+                
+                if static_issues:
+                    final_hints.append("\n[STATIC VALIDATION HINTS]: " + "; ".join(static_issues))
+                if judge_only_issues:
+                    final_hints.append("\n[JUDGE MODEL HINTS]: " + "; ".join(judge_only_issues))
+                
+                suffix = "".join(final_hints) if final_hints else "\n[VALIDATION HINTS]: " + "; ".join(issues)
+                simple_template = simple_template + suffix
+                
                 bt.logging.warning(f"⚠️  Default template has issues - added clarifications:")
-                bt.logging.warning(f"   Issues Found: {issues}")
+                if static_issues:
+                    bt.logging.warning(f"   Static Issues Found: {static_issues}")
+                if judge_only_issues:
+                    bt.logging.warning(f"   Judge Issues Found: {judge_only_issues}")
                 bt.logging.warning(f"   Added Hints: {suffix}")
             else:
                 bt.logging.info(f"✅ Default template is clean (no issues found)")
@@ -819,10 +833,13 @@ class QueryGenerator:
                                 repair_log["repaired_template"] = repaired
                                 if repaired:
                                     # Validate repaired template quickly
-                                    _ok2, _msg2, issues2, _, _, _, _ = self.validate_query_template(repaired, labels)
+                                    _ok2, _msg2, issues2, _llm_issues2, _, _, _ = self.validate_query_template(repaired, labels)
                                     if issues2:
-                                        repaired = repaired + " " + (" Hint: " + "; ".join(issues2))
+                                        # Organize hints for repaired template
+                                        repair_suffix = "\n[POST-REPAIR VALIDATION HINTS]: " + "; ".join(issues2)
+                                        repaired = repaired + repair_suffix
                                         bt.logging.warning(f"⚠️  Repaired template still has issues - added clarifications")
+                                        bt.logging.warning(f"   Post-Repair Issues: {issues2}")
                                     bt.logging.info("✅ Using repaired template")
                                     repair_log["status"] = "success"
                                     
@@ -851,10 +868,24 @@ class QueryGenerator:
                         else:
                             # Append available issues as hints (if any were produced before invalidation)
                             if issues:
-                                suffix = " Hint: " + "; ".join(issues)
-                                query_template = query_template + " " + suffix
+                                # Organize hints for invalid template
+                                invalid_hints = []
+                                static_issues = [i for i in issues if i not in llm_issues]
+                                judge_only_issues = [i for i in llm_issues if i not in issues]
+                                
+                                if static_issues:
+                                    invalid_hints.append("\n[STATIC VALIDATION HINTS]: " + "; ".join(static_issues))
+                                if judge_only_issues:
+                                    invalid_hints.append("\n[JUDGE MODEL HINTS]: " + "; ".join(judge_only_issues))
+                                
+                                suffix = "".join(invalid_hints) if invalid_hints else "\n[VALIDATION HINTS]: " + "; ".join(issues)
+                                query_template = query_template + suffix
+                                
                                 bt.logging.warning(f"⚠️  Invalid template, appended clarifications and proceeding as requested")
-                                bt.logging.warning(f"   Issues Found: {issues}")
+                                if static_issues:
+                                    bt.logging.warning(f"   Static Issues Found: {static_issues}")
+                                if judge_only_issues:
+                                    bt.logging.warning(f"   Judge Issues Found: {judge_only_issues}")
                                 bt.logging.warning(f"   Added Hints: {suffix}")
                             # Proceed with the current (invalid) query plus hints; miner may still handle
                             bt.logging.info(f"Proceeding without regeneration due to --neuron.regenerate_on_invalid=False")
@@ -873,11 +904,27 @@ class QueryGenerator:
                             return query_template, labels, model, timeout, last_successful_judge_model, last_successful_judge_timeout, generation_log
 
                     if issues:
-                        suffix = " Hint: " + "; ".join(issues)
-                        query_template = query_template + " " + suffix
+                        # Organize hints by source
+                        final_hints = []
+                        
+                        # Separate static issues from judge issues
+                        static_issues = [i for i in issues if i not in llm_issues]
+                        judge_only_issues = [i for i in llm_issues if i not in issues]
+                        
+                        if static_issues:
+                            final_hints.append("\n[STATIC VALIDATION HINTS]: " + "; ".join(static_issues))
+                        if judge_only_issues:
+                            final_hints.append("\n[JUDGE MODEL HINTS]: " + "; ".join(judge_only_issues))
+                        
+                        suffix = "".join(final_hints)
+                        query_template = query_template + suffix
+                        
                         bt.logging.warning(f"⚠️  LLM '{model}' generated query with issues - added clarifications:")
-                        bt.logging.warning(f"   Original Query: {query_template[:-len(suffix)]}")
-                        bt.logging.warning(f"   Issues Found: {issues}")
+                        bt.logging.warning(f"   Original Query: {query_template[:len(query_template)-len(suffix)]}")
+                        if static_issues:
+                            bt.logging.warning(f"   Static Issues Found: {static_issues}")
+                        if judge_only_issues:
+                            bt.logging.warning(f"   Judge Issues Found: {judge_only_issues}")
                         bt.logging.warning(f"   Added Hints: {suffix}")
                     else:
                         bt.logging.info(f"✅ LLM '{model}' generated CLEAN query (no issues found)")
@@ -916,11 +963,26 @@ class QueryGenerator:
         # Prefer returning the last LLM-generated template with appended hints
         if last_model_query_template:
             bt.logging.info(f"📝 Finalizing with last LLM-generated template")
-            _ok, _msg, issues, _, final_judge_model, final_judge_timeout, _ = self.validate_query_template(last_model_query_template, labels)
+            _ok, _msg, issues, _llm_issues, final_judge_model, final_judge_timeout, _ = self.validate_query_template(last_model_query_template, labels)
             if issues:
-                last_model_query_template = last_model_query_template + " " + (" Hint: " + "; ".join(issues))
+                # Organize hints for fallback template
+                fallback_hints = []
+                static_issues = [i for i in issues if i not in _llm_issues] if _llm_issues else issues
+                judge_only_issues = [i for i in _llm_issues if i not in issues] if _llm_issues else []
+                
+                if static_issues:
+                    fallback_hints.append("\n[FALLBACK STATIC HINTS]: " + "; ".join(static_issues))
+                if judge_only_issues:
+                    fallback_hints.append("\n[FALLBACK JUDGE HINTS]: " + "; ".join(judge_only_issues))
+                
+                suffix = "".join(fallback_hints) if fallback_hints else "\n[FALLBACK VALIDATION HINTS]: " + "; ".join(issues)
+                last_model_query_template = last_model_query_template + suffix
+                
                 bt.logging.warning(f"⚠️  Final LLM template has issues - added clarifications:")
-                bt.logging.warning(f"   Issues Found: {issues}")
+                if static_issues:
+                    bt.logging.warning(f"   Static Issues Found: {static_issues}")
+                if judge_only_issues:
+                    bt.logging.warning(f"   Judge Issues Found: {judge_only_issues}")
             else:
                 bt.logging.info(f"✅ Final LLM template is clean (no issues found)")
             bt.logging.info(f"🔄 Returning last LLM-generated template without regeneration")
@@ -1122,10 +1184,21 @@ class QueryGenerator:
             clarifying_prefix = "The following name is the seed name to generate variations for: {name}. "
             query_template = f"{clarifying_prefix}Generate {variation_count} variations of the name {{name}}, ensuring phonetic similarity: {phonetic_config}, and orthographic similarity: {orthographic_config}, and also include {rp}% of variations that follow: {rule_template}."
             
-            # Validate and minimally clarify the fallback template
-            _ok, _msg, issues, _, _, _, _ = self.validate_query_template(query_template, query_labels)
-            if issues:
-                query_template = query_template + " " + (" Hint: " + "; ".join(issues))
+            # # Validate and minimally clarify the fallback template
+            # _ok, _msg, issues, _llm_issues, _, _, _ = self.validate_query_template(query_template, query_labels)
+            # if issues:
+            #     # Organize hints for exception fallback
+            #     exception_hints = []
+            #     static_issues = [i for i in issues if i not in _llm_issues] if _llm_issues else issues
+            #     judge_only_issues = [i for i in _llm_issues if i not in issues] if _llm_issues else []
+                
+            #     if static_issues:
+            #         exception_hints.append("\n[EXCEPTION FALLBACK STATIC HINTS]: " + "; ".join(static_issues))
+            #     if judge_only_issues:
+            #         exception_hints.append("\n[EXCEPTION FALLBACK JUDGE HINTS]: " + "; ".join(judge_only_issues))
+                
+            #     suffix = "".join(exception_hints) if exception_hints else "\n[EXCEPTION FALLBACK HINTS]: " + "; ".join(issues)
+            #     query_template = query_template + suffix
             
             # Generate fallback names with mix of single and full names
             fake = Faker(LATIN_LOCALES)
