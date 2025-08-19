@@ -149,7 +149,7 @@ def _run_judge_model(
                     f"Apply these rule-based transformations: {'; '.join(sorted(list(missing_rd)))}."
                 )
             
-            # Ambiguity clarification (judge can signal under key 'rule_ambiguity')
+            # # Ambiguity clarification (judge can signal under key 'rule_ambiguity')
             if present.get('rule_ambiguity') and isinstance(ambiguity_sentence, str):
                 mapped_issues.append(ambiguity_sentence)
 
@@ -284,11 +284,18 @@ class QueryGenerator:
 
         # Label-aware checks to detect missing numbers/levels
         if labels:
+            # Combined hint generation for cleaner output
+            phonetic_hint = None
+            orthographic_hint = None
+            rule_hint = None
+            ambiguity_hint = None
+            variation_count_hint = None
+            
             # Variation count
             variation_count = labels.get("variation_count")
             if isinstance(variation_count, int):
                 if str(variation_count) not in query_template:
-                    issues.append(f"Specify exact number of variations: {variation_count}.")
+                    variation_count_hint = f"Specify exact number of variations: {variation_count}."
 
             # Helper to verify percentages and levels
             def compute_expected_percentages(sim_config: Dict[str, float]) -> List[Tuple[str, int]]:
@@ -318,7 +325,7 @@ class QueryGenerator:
                         all_present = False
                 # If any expected token is missing OR the template doesn't mention phonetic at all, add a precise hint
                 if (not all_present) or ("phonetic" not in lowered):
-                    issues.append(f"Phonetic similarity: {', '.join(expected_phonetic_tokens)}.")
+                    phonetic_hint = f"Phonetic similarity: {', '.join(expected_phonetic_tokens)}."
 
             # Orthographic similarity checks
             orthographic_cfg = labels.get("orthographic_similarity") or {}
@@ -332,7 +339,7 @@ class QueryGenerator:
                         all_present = False
                 # If any expected token is missing OR the template doesn't mention orthographic at all, add a precise hint
                 if (not all_present) or ("orthographic" not in lowered):
-                    issues.append(f"Orthographic similarity: {', '.join(expected_orthographic_tokens)}.")
+                    orthographic_hint = f"Orthographic similarity: {', '.join(expected_orthographic_tokens)}."
 
             # Rule-based percentage
             rule_meta = labels.get("rule_based") or {}
@@ -347,8 +354,9 @@ class QueryGenerator:
                 percent_present = find_percent(query_template, rule_pct)
                 
                 # 1) If percentage is missing, reveal the percentage explicitly
+                rule_issues = []
                 if not percent_present:
-                    issues.append(f"Approximately {rule_pct}% of the variations should follow rule-based transformations.")
+                    rule_issues.append(f"Approximately {rule_pct}% of the variations should follow rule-based transformations.")
                 
                 # 2) If any of the specific labels are missing from the query text, add labels-only hint
                 if descriptions_list:
@@ -383,17 +391,26 @@ class QueryGenerator:
 
                     missing_labels = [desc for desc in descriptions_list if not _label_present(desc)]
                     if missing_labels:
-                        issues.append(f"Apply these rule-based transformations: {'; '.join(missing_labels)}.")
+                        rule_issues.append(f"Apply these rule-based transformations: {'; '.join(missing_labels)}.")
+
+                if rule_issues:
+                    rule_hint = " ".join(rule_issues)
                 
                 # 3) Ambiguity: percentage mentioned multiple times (e.g., per-rule). Add explicit clarification
                 if query_template.count(f"{rule_pct}%") > 1:
-                    issues.append(
-                        (
-                            f"We want {rule_pct}% of the name variations to be rule-based. "
-                            "Each variation should have at least one transformation rule applied—some may have only one rule, while others may have multiple. "
-                            "Importantly, all listed rules must be represented across the set of rule-based name variations."
-                        )
+                    ambiguity_hint = (
+                        f"We want {rule_pct}% of the name variations to be rule-based. "
+                        "Each variation should have at least one transformation rule applied—some may have only one rule, while others may have multiple. "
+                        "Importantly, all listed rules must be represented across the set of rule-based name variations."
                     )
+            
+            # Add hints to issues list if they are not None
+            if variation_count_hint: issues.append(variation_count_hint)
+            if phonetic_hint: issues.append(phonetic_hint)
+            if orthographic_hint: issues.append(orthographic_hint)
+            if rule_hint: issues.append(rule_hint)
+            if ambiguity_hint: issues.append(ambiguity_hint)
+
 
         # Early return if static checks passed and judge is not required
         if not issues:
@@ -402,6 +419,15 @@ class QueryGenerator:
             if (not self.use_judge_model) or (not getattr(self, 'judge_on_static_pass', False)):
                 bt.logging.info("✅ Static checks passed - skipping LLM judge")
                 return True, "Query template is acceptable (static checks only)", issues, [], None, None, {}
+
+        # If static checks found issues, create a temporary template with hints for the judge.
+        template_for_judge = query_template
+        if issues:
+            hint_suffix = " Hint: " + "; ".join(issues)
+            template_for_judge = query_template + hint_suffix
+            bt.logging.info("🕵️‍♀️ Static analysis found issues. Appending hints before sending to judge.")
+            bt.logging.debug(f"   Original template: {query_template}")
+            bt.logging.debug(f"   Template for judge: {template_for_judge}")
 
         # Mandatory LLM judge with robust fallbacks
         llm_issues = []
@@ -504,9 +530,9 @@ class QueryGenerator:
                 
                 # Provide the judge with structured expectations, asking it to mark what is missing.
                 judge_prompt = (
-                    "You are a strict validator. Your task is to check which of the required SPECIFICATIONS are met by the query TEMPLATE.\n\n"
-                    "Return ONLY a valid JSON object with a single key 'present', containing a dictionary that maps each specification category to a list of the specifications that were found and are clearly stated in the template.\n\n"
-                    f"TEMPLATE:\n{query_template}\n\n"
+                    "You are a strict but intelligent validator. Your task is to check which of the required SPECIFICATIONS are met by the query TEMPLATE. You must analyze the TEMPLATE semantically.\n\n"
+                    "Return ONLY a valid JSON object with a single key 'present', containing a dictionary that maps each specification category to the specifications that were found.\n\n"
+                    f"TEMPLATE:\n{template_for_judge}\n\n"
                     f"SPECIFICATIONS:\n"
                     f"- soft: {json.dumps(list(soft_issue_map.keys()), ensure_ascii=False)}\n"
                     f"- variation_count: {json.dumps(variation_count, ensure_ascii=False)}\n"
@@ -515,11 +541,12 @@ class QueryGenerator:
                     f"- rule_percentage: {json.dumps(rule_pct_val, ensure_ascii=False)}\n"
                     f"- rule_descriptions: {json.dumps(rule_descs_list, ensure_ascii=False)}\n\n"
                     "OUTPUT RULES:\n"
-                    "- Output ONLY valid JSON with shape: {\"present\": { ... }}\n"
+                    "- Output ONLY valid JSON with shape: {\"present\": { ... }}.\n"
                     "- For each key in SPECIFICATIONS, list the items that are clearly present in the TEMPLATE.\n"
+                    "- For `phonetic_tokens` and `orthographic_tokens`, the TEMPLATE might express them in natural language. Find each percentage and its associated level (e.g., 'Light', 'Medium', 'Far') and return them in the format 'XX% Level'. The order does not matter.\n"
+                    "- For `rule_descriptions`, the TEMPLATE may list transformations with extra details or different phrasing. Match them semantically to the descriptions provided in SPECIFICATIONS.\n"
                     "- For 'variation_count' and 'rule_percentage', if present, return the number itself, not a boolean.\n"
-                    "- Match rule_descriptions semantically. The wording in the template can be natural language.\n"
-                    "- Example: {\"present\": {\"soft\": [\"phonetic\", \"rule\"], \"variation_count\": 10, \"phonetic_tokens\": [\"60% Light\"]}}\n"
+                    "- Example: If TEMPLATE says \"make 10 variations... 60% should be Lightly similar in sound\", your output for `variation_count` should be `10` and `phonetic_tokens` should include `\"60% Light\"`.\n"
                     "- If nothing is present for a category, you can omit the key or provide an empty list/null.\n\n"
                     "RESPONSE (JSON only):"
                 )
