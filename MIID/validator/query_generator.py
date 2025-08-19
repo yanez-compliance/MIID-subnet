@@ -252,7 +252,7 @@ class QueryGenerator:
         self,
         query_template: str,
         labels: Dict[str, Any] = None,
-    ) -> Tuple[bool, str, List[str], List[str], str, int, Dict[str, Any]]:
+    ) -> Tuple[bool, str, List[str], List[str], List[str], str, int, Dict[str, Any]]:
         """
         Validate that a query template is structurally valid and semantically covers
         required specifications from labels. Returns issues for missing/unclear parts
@@ -268,17 +268,18 @@ class QueryGenerator:
         # Ensure these are always defined for all code paths
         successful_judge_model: str | None = None
         successful_judge_timeout: int | None = None
+        llm_issues: List[str] = []
 
         if not query_template:
-            return False, "Query template is empty", [], [], successful_judge_model, successful_judge_timeout, {}
+            return False, "Query template is empty", [], [], [], successful_judge_model, successful_judge_timeout, {}
 
         # Require at least one {name} placeholder
         placeholder_count = query_template.count("{name}")
         if placeholder_count == 0:
-            return False, "Query template must contain at least one {name} placeholder", [], [], successful_judge_model, successful_judge_timeout, {}
+            return False, "Query template must contain at least one {name} placeholder", [], [], [], successful_judge_model, successful_judge_timeout, {}
 
         # Collect non-blocking issues
-        issues: List[str] = []
+        static_issues: List[str] = []
 
         lowered = query_template.lower()
 
@@ -390,25 +391,25 @@ class QueryGenerator:
                     )
             
             # Add hints to issues list if they are not None
-            if variation_count_hint: issues.append(variation_count_hint)
-            if phonetic_hint: issues.append(phonetic_hint)
-            if orthographic_hint: issues.append(orthographic_hint)
-            if rule_hint: issues.append(rule_hint)
-            if ambiguity_hint: issues.append(ambiguity_hint)
+            if variation_count_hint: static_issues.append(variation_count_hint)
+            if phonetic_hint: static_issues.append(phonetic_hint)
+            if orthographic_hint: static_issues.append(orthographic_hint)
+            if rule_hint: static_issues.append(rule_hint)
+            if ambiguity_hint: static_issues.append(ambiguity_hint)
 
 
         # Early return if static checks passed and judge is not required
-        if not issues:
+        if not static_issues:
             bt.logging.debug(f"🔍 Static checks found no issues. Judge enabled: {self.use_judge_model}, judge_on_static_pass: {getattr(self, 'judge_on_static_pass', False)}")
             # Skip judge if it's disabled entirely OR if we don't require judge on static pass
             if (not self.use_judge_model) or (not getattr(self, 'judge_on_static_pass', False)):
                 bt.logging.info("✅ Static checks passed - skipping LLM judge")
-                return True, "Query template is acceptable (static checks only)", issues, [], None, None, {}
+                return True, "Query template is acceptable (static checks only)", static_issues, static_issues, [], None, None, {}
 
         # If static checks found issues, create a temporary template with hints for the judge.
         template_for_judge = query_template
-        if issues:
-            hint_suffix = "\n[STATIC VALIDATION HINTS]: " + "; ".join(issues)
+        if static_issues:
+            hint_suffix = "\n[STATIC VALIDATION HINTS]: " + "; ".join(static_issues)
             template_for_judge = query_template + hint_suffix
             bt.logging.info("🕵️‍♀️ Static analysis found issues. Appending hints before sending to judge.")
             bt.logging.debug(f"   Original template: {query_template}")
@@ -589,7 +590,7 @@ class QueryGenerator:
         
         # Merge static and judge issues, deduplicate while preserving order
         merged_for_dedup = []
-        merged_for_dedup.extend(issues or [])
+        merged_for_dedup.extend(static_issues or [])
         merged_for_dedup.extend(llm_issues or [])
 
         seen = set()
@@ -608,14 +609,14 @@ class QueryGenerator:
             bt.logging.info(f"✅ Final validation: No issues found - query is clear")
 
         validation_details = {
-            "static_issues": issues,
+            "static_issues": static_issues,
             "judge_model": successful_judge_model,
             "judge_timeout": successful_judge_timeout,
             "judge_issues": llm_issues,
             "final_issues": deduped_issues,
         }
 
-        return True, "Query template is acceptable with clarifications", deduped_issues, llm_issues, successful_judge_model, successful_judge_timeout, validation_details
+        return True, "Query template is acceptable with clarifications", deduped_issues, static_issues, llm_issues, successful_judge_model, successful_judge_timeout, validation_details
     
     async def generate_complex_query(
         self,
@@ -677,24 +678,23 @@ class QueryGenerator:
             # Validate and minimally clarify
             bt.logging.info(f"📝 Pre-judge default template: {simple_template}")
             # Validate and minimally clarify the default template too
-            _ok, _msg, issues, _llm_issues, successful_judge_model, successful_judge_timeout, validation_details = self.validate_query_template(simple_template, labels)
-            if issues:
+            _ok, _msg, deduped_issues, static_issues_from_val, llm_issues_from_val, successful_judge_model, successful_judge_timeout, validation_details = self.validate_query_template(simple_template, labels)
+            if deduped_issues:
                 # Organize hints by source for default template
                 final_hints = []
-                static_issues = [i for i in issues if i not in _llm_issues]
-                judge_only_issues = [i for i in _llm_issues if i not in issues] if _llm_issues else []
+                judge_only_issues = [i for i in llm_issues_from_val if i not in static_issues_from_val] if llm_issues_from_val else []
                 
-                if static_issues:
-                    final_hints.append("\n[STATIC VALIDATION HINTS]: " + "; ".join(static_issues))
+                if static_issues_from_val:
+                    final_hints.append("\n[STATIC VALIDATION HINTS]: " + "; ".join(static_issues_from_val))
                 if judge_only_issues:
                     final_hints.append("\n[JUDGE MODEL HINTS]: " + "; ".join(judge_only_issues))
                 
-                suffix = "".join(final_hints) if final_hints else "\n[VALIDATION HINTS]: " + "; ".join(issues)
+                suffix = "".join(final_hints) if final_hints else "\n[VALIDATION HINTS]: " + "; ".join(deduped_issues)
                 simple_template = simple_template + suffix
                 
                 bt.logging.warning(f"⚠️  Default template has issues - added clarifications:")
-                if static_issues:
-                    bt.logging.warning(f"   Static Issues Found: {static_issues}")
+                if static_issues_from_val:
+                    bt.logging.warning(f"   Static Issues Found: {static_issues_from_val}")
                 if judge_only_issues:
                     bt.logging.warning(f"   Judge Issues Found: {judge_only_issues}")
                 bt.logging.warning(f"   Added Hints: {suffix}")
@@ -795,7 +795,7 @@ class QueryGenerator:
 
                     # Validate and minimally clarify the generated template
                     bt.logging.debug(f"📝 Pre-judge LLM-generated query: {query_template}")
-                    is_valid, error_msg, issues, llm_issues, successful_judge_model, successful_judge_timeout, validation_details = self.validate_query_template(query_template, labels)
+                    is_valid, error_msg, deduped_issues, static_issues_from_val, llm_issues_from_val, successful_judge_model, successful_judge_timeout, validation_details = self.validate_query_template(query_template, labels)
                     attempt_log["validation"] = validation_details
 
                     # Persist the successful judge config for later returns
@@ -813,7 +813,7 @@ class QueryGenerator:
                                 repair_client = ollama.Client(host=self.config.neuron.ollama_url, timeout=self.config.neuron.ollama_request_timeout)
                                 
                                 # Combine static and LLM-judged issues for a comprehensive repair prompt
-                                all_issues_for_repair = issues + [issue for issue in llm_issues if issue not in issues]
+                                all_issues_for_repair = deduped_issues
                                 
                                 repair_log = { "attempted": True, "prompt_issues": all_issues_for_repair, "repaired_template": None, "status": "failed" }
 
@@ -833,7 +833,7 @@ class QueryGenerator:
                                 repair_log["repaired_template"] = repaired
                                 if repaired:
                                     # Validate repaired template quickly
-                                    _ok2, _msg2, issues2, _llm_issues2, _, _, _ = self.validate_query_template(repaired, labels)
+                                    _ok2, _msg2, issues2, _static_issues2, _llm_issues2, _, _, _ = self.validate_query_template(repaired, labels)
                                     if issues2:
                                         # Organize hints for repaired template
                                         repair_suffix = "\n[POST-REPAIR VALIDATION HINTS]: " + "; ".join(issues2)
@@ -867,23 +867,22 @@ class QueryGenerator:
                             continue  # Try next timeout or model
                         else:
                             # Append available issues as hints (if any were produced before invalidation)
-                            if issues:
+                            if deduped_issues:
                                 # Organize hints for invalid template
                                 invalid_hints = []
-                                static_issues = [i for i in issues if i not in llm_issues]
-                                judge_only_issues = [i for i in llm_issues if i not in issues]
+                                judge_only_issues = [i for i in llm_issues_from_val if i not in static_issues_from_val]
                                 
-                                if static_issues:
-                                    invalid_hints.append("\n[STATIC VALIDATION HINTS]: " + "; ".join(static_issues))
+                                if static_issues_from_val:
+                                    invalid_hints.append("\n[STATIC VALIDATION HINTS]: " + "; ".join(static_issues_from_val))
                                 if judge_only_issues:
                                     invalid_hints.append("\n[JUDGE MODEL HINTS]: " + "; ".join(judge_only_issues))
                                 
-                                suffix = "".join(invalid_hints) if invalid_hints else "\n[VALIDATION HINTS]: " + "; ".join(issues)
+                                suffix = "".join(invalid_hints) if invalid_hints else "\n[VALIDATION HINTS]: " + "; ".join(deduped_issues)
                                 query_template = query_template + suffix
                                 
                                 bt.logging.warning(f"⚠️  Invalid template, appended clarifications and proceeding as requested")
-                                if static_issues:
-                                    bt.logging.warning(f"   Static Issues Found: {static_issues}")
+                                if static_issues_from_val:
+                                    bt.logging.warning(f"   Static Issues Found: {static_issues_from_val}")
                                 if judge_only_issues:
                                     bt.logging.warning(f"   Judge Issues Found: {judge_only_issues}")
                                 bt.logging.warning(f"   Added Hints: {suffix}")
@@ -903,26 +902,25 @@ class QueryGenerator:
                             generation_log["final_template"] = query_template
                             return query_template, labels, model, timeout, last_successful_judge_model, last_successful_judge_timeout, generation_log
 
-                    if issues:
+                    if deduped_issues:
                         # Organize hints by source
                         final_hints = []
                         
                         # Separate static issues from judge issues
-                        static_issues = [i for i in issues if i not in llm_issues]
-                        judge_only_issues = [i for i in llm_issues if i not in issues]
+                        judge_only_issues = [i for i in llm_issues_from_val if i not in static_issues_from_val]
                         
-                        if static_issues:
-                            final_hints.append("\n[STATIC VALIDATION HINTS]: " + "; ".join(static_issues))
+                        if static_issues_from_val:
+                            final_hints.append("\n[STATIC VALIDATION HINTS]: " + "; ".join(static_issues_from_val))
                         if judge_only_issues:
                             final_hints.append("\n[JUDGE MODEL HINTS]: " + "; ".join(judge_only_issues))
                         
-                        suffix = "".join(final_hints)
+                        suffix = "".join(final_hints) if final_hints else "\n[VALIDATION HINTS]: " + "; ".join(deduped_issues)
                         query_template = query_template + suffix
                         
                         bt.logging.warning(f"⚠️  LLM '{model}' generated query with issues - added clarifications:")
                         bt.logging.warning(f"   Original Query: {query_template[:len(query_template)-len(suffix)]}")
-                        if static_issues:
-                            bt.logging.warning(f"   Static Issues Found: {static_issues}")
+                        if static_issues_from_val:
+                            bt.logging.warning(f"   Static Issues Found: {static_issues_from_val}")
                         if judge_only_issues:
                             bt.logging.warning(f"   Judge Issues Found: {judge_only_issues}")
                         bt.logging.warning(f"   Added Hints: {suffix}")
@@ -963,24 +961,23 @@ class QueryGenerator:
         # Prefer returning the last LLM-generated template with appended hints
         if last_model_query_template:
             bt.logging.info(f"📝 Finalizing with last LLM-generated template")
-            _ok, _msg, issues, _llm_issues, final_judge_model, final_judge_timeout, _ = self.validate_query_template(last_model_query_template, labels)
-            if issues:
+            _ok, _msg, deduped_issues, static_issues_from_val, llm_issues_from_val, final_judge_model, final_judge_timeout, _ = self.validate_query_template(last_model_query_template, labels)
+            if deduped_issues:
                 # Organize hints for fallback template
                 fallback_hints = []
-                static_issues = [i for i in issues if i not in _llm_issues] if _llm_issues else issues
-                judge_only_issues = [i for i in _llm_issues if i not in issues] if _llm_issues else []
+                judge_only_issues = [i for i in llm_issues_from_val if i not in static_issues_from_val] if llm_issues_from_val else []
                 
-                if static_issues:
-                    fallback_hints.append("\n[FALLBACK STATIC HINTS]: " + "; ".join(static_issues))
+                if static_issues_from_val:
+                    fallback_hints.append("\n[FALLBACK STATIC HINTS]: " + "; ".join(static_issues_from_val))
                 if judge_only_issues:
                     fallback_hints.append("\n[FALLBACK JUDGE HINTS]: " + "; ".join(judge_only_issues))
                 
-                suffix = "".join(fallback_hints) if fallback_hints else "\n[FALLBACK VALIDATION HINTS]: " + "; ".join(issues)
+                suffix = "".join(fallback_hints) if fallback_hints else "\n[FALLBACK VALIDATION HINTS]: " + "; ".join(deduped_issues)
                 last_model_query_template = last_model_query_template + suffix
                 
                 bt.logging.warning(f"⚠️  Final LLM template has issues - added clarifications:")
-                if static_issues:
-                    bt.logging.warning(f"   Static Issues Found: {static_issues}")
+                if static_issues_from_val:
+                    bt.logging.warning(f"   Static Issues Found: {static_issues_from_val}")
                 if judge_only_issues:
                     bt.logging.warning(f"   Judge Issues Found: {judge_only_issues}")
             else:
