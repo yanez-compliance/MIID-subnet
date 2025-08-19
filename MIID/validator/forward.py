@@ -195,7 +195,7 @@ async def forward(self):
     
     # Use the query generator
     challenge_start_time = time.time()
-    seed_names_with_labels, query_template, query_labels, successful_model, successful_timeout, successful_judge_model, successful_judge_timeout = await query_generator.build_queries()
+    seed_names_with_labels, query_template, query_labels, successful_model, successful_timeout, successful_judge_model, successful_judge_timeout, generation_log = await query_generator.build_queries()
     challenge_end_time = time.time()
     bt.logging.info(f"Time to generate challenges: {int(challenge_end_time - challenge_start_time)}s")
 
@@ -348,8 +348,8 @@ async def forward(self):
         "query_generation": {
             "use_default_query": self.query_generator.use_default_query,
             "model_name": getattr(self.config.neuron, 'ollama_model_name', "llama3.1:latest"),
-            "query_generator_timeout": successful_timeout,
-            "generation_time": challenge_end_time - challenge_start_time
+            "generation_time": challenge_end_time - challenge_start_time,
+            "generation_log": generation_log
                             },
         "responses": {},
         "rewards": {}
