@@ -392,7 +392,7 @@ def add_validator_args(cls, parser):
         '--neuron.judge_on_static_pass',
         action='store_true',
         help="Run LLM judge even when static checks pass (default: disabled)",
-        default=False
+        default=True
     )
 
     parser.add_argument(
