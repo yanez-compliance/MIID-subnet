@@ -110,7 +110,7 @@ class QueryGenerator:
         self,
         query_template: str,
         labels: Dict[str, Any] = None,
-    ) -> Tuple[bool, str, List[str], List[str], str, int]:
+    ) -> Tuple[bool, str, List[str], List[str], str, int, Dict[str, Any]]:
         """
         Validate that a query template is structurally valid and semantically covers
         required specifications from labels. Returns issues for missing/unclear parts
@@ -128,12 +128,12 @@ class QueryGenerator:
         successful_judge_timeout: int | None = None
 
         if not query_template:
-            return False, "Query template is empty", [], [], successful_judge_model, successful_judge_timeout
+            return False, "Query template is empty", [], [], successful_judge_model, successful_judge_timeout, {}
 
         # Require at least one {name} placeholder
         placeholder_count = query_template.count("{name}")
         if placeholder_count == 0:
-            return False, "Query template must contain at least one {name} placeholder", [], [], successful_judge_model, successful_judge_timeout
+            return False, "Query template must contain at least one {name} placeholder", [], [], successful_judge_model, successful_judge_timeout, {}
 
         # Collect non-blocking issues
         issues: List[str] = []
@@ -267,7 +267,7 @@ class QueryGenerator:
             # Skip judge if it's disabled entirely OR if we don't require judge on static pass
             if (not self.use_judge_model) or (not getattr(self, 'judge_on_static_pass', False)):
                 bt.logging.info("✅ Static checks passed - skipping LLM judge")
-                return True, "Query template is acceptable (static checks only)", issues, [], None, None
+                return True, "Query template is acceptable (static checks only)", issues, [], None, None, {}
 
         # Mandatory LLM judge with robust fallbacks
         llm_issues = []
@@ -614,7 +614,15 @@ class QueryGenerator:
         else:
             bt.logging.info(f"✅ Final validation: No issues found - query is clear")
 
-        return True, "Query template is acceptable with clarifications", deduped_issues, llm_issues, successful_judge_model, successful_judge_timeout
+        validation_details = {
+            "static_issues": issues,
+            "judge_model": successful_judge_model,
+            "judge_timeout": successful_judge_timeout,
+            "judge_issues": llm_issues,
+            "final_issues": deduped_issues,
+        }
+
+        return True, "Query template is acceptable with clarifications", deduped_issues, llm_issues, successful_judge_model, successful_judge_timeout, validation_details
     
     async def generate_complex_query(
         self,
@@ -624,7 +632,7 @@ class QueryGenerator:
         orthographic_similarity: Dict[str, float] = None,
         use_default: bool = False,
         rule_percentage: int = 30
-    ) -> Tuple[str, Dict[str, Any], str, int, str, int]:
+    ) -> Tuple[str, Dict[str, Any], str, int, str, int, Dict[str, Any]]:
         """Generate a query template based on specified parameters"""
         # Default similarity preferences if none provided
         if phonetic_similarity is None:
@@ -686,7 +694,13 @@ class QueryGenerator:
             #     bt.logging.info(f"✅ Default template is clean (no issues found)")
 
             bt.logging.debug(f"📄 Using default query template: {simple_template}")
-            return simple_template, labels, None, None, None, None
+            
+            generation_log = {
+                "decision": "Used default query as configured.",
+                "final_template": simple_template,
+                "labels": labels,
+            }
+            return simple_template, labels, None, None, None, None, generation_log
         
     
         
@@ -742,8 +756,23 @@ class QueryGenerator:
         last_successful_judge_model: str | None = None
         last_successful_judge_timeout: int | None = None
 
+        generation_log = {
+            "attempts": [],
+            "decision": "No successful generation.",
+            "final_template": None,
+            "labels": labels
+        }
+
         for model in models_to_try:
             for timeout in timeouts_to_try:
+                attempt_log = {
+                    "model": model,
+                    "timeout": timeout,
+                    "status": "failed",
+                    "raw_template": None,
+                    "validation": None,
+                    "repair_attempt": None
+                }
                 try:
                     bt.logging.debug(f"🤖 Attempting to generate query with model: {model} and timeout: {timeout}s")
                     # Configure the client with the timeout
@@ -755,10 +784,12 @@ class QueryGenerator:
                     
                     # Track last attempted model template
                     last_model_query_template = query_template
+                    attempt_log["raw_template"] = query_template
 
                     # Validate and minimally clarify the generated template
                     bt.logging.debug(f"📝 Pre-judge LLM-generated query: {query_template}")
-                    is_valid, error_msg, issues, llm_issues, successful_judge_model, successful_judge_timeout = self.validate_query_template(query_template, labels)
+                    is_valid, error_msg, issues, llm_issues, successful_judge_model, successful_judge_timeout, validation_details = self.validate_query_template(query_template, labels)
+                    attempt_log["validation"] = validation_details
                     
                     # Persist the successful judge config for later returns
                     last_successful_judge_model = successful_judge_model
@@ -777,6 +808,8 @@ class QueryGenerator:
                                 # Combine static and LLM-judged issues for a comprehensive repair prompt
                                 all_issues_for_repair = issues + [issue for issue in llm_issues if issue not in issues]
                                 
+                                repair_log = { "attempted": True, "prompt_issues": all_issues_for_repair, "repaired_template": None, "status": "failed" }
+
                                 repair_prompt = (
                                     "You are a helpful assistant. The following query template is invalid or incomplete.\n"
                                     "Given the template, labels, and detected issues, produce a corrected template that:\n"
@@ -790,25 +823,37 @@ class QueryGenerator:
                                 )
                                 repair_resp = repair_client.generate(model=model, prompt=repair_prompt)
                                 repaired = repair_resp.get('response', '').strip()
+                                repair_log["repaired_template"] = repaired
                                 if repaired:
                                     # Validate repaired template quickly
-                                    _ok2, _msg2, issues2, _, _, _ = self.validate_query_template(repaired, labels)
+                                    _ok2, _msg2, issues2, _, _, _, _ = self.validate_query_template(repaired, labels)
                                     if issues2:
                                         repaired = repaired + " " + (" Hint: " + "; ".join(issues2))
                                         bt.logging.warning(f"⚠️  Repaired template still has issues - added clarifications")
                                     bt.logging.info("✅ Using repaired template")
+                                    repair_log["status"] = "success"
                                     
                                     # Cache successful generation config
                                     self.last_successful_generation_model = model
                                     self.last_successful_generation_timeout = timeout
                                     bt.logging.info(f"📌 Cached generation preference -> model: {model}, timeout: {timeout}s")
                                     
-                                    return repaired, labels, model, timeout, last_successful_judge_model, last_successful_judge_timeout
+                                    attempt_log["status"] = "success_after_repair"
+                                    attempt_log["repair_attempt"] = repair_log
+                                    generation_log["attempts"].append(attempt_log)
+                                    generation_log["decision"] = "Used repaired template from this attempt."
+                                    generation_log["final_template"] = repaired
+                                    return repaired, labels, model, timeout, last_successful_judge_model, last_successful_judge_timeout, generation_log
                             except Exception as rep_e:
                                 bt.logging.error(f"Repair attempt failed: {rep_e}")
+                                repair_log["status"] = f"failed_with_error: {rep_e}"
+                            
+                            attempt_log["repair_attempt"] = repair_log
 
                         if getattr(self.config.neuron, 'regenerate_on_invalid', False):
                             bt.logging.error(f"   Trying next model/timeout.")
+                            attempt_log["status"] = "failed_invalid_template"
+                            generation_log["attempts"].append(attempt_log)
                             continue  # Try next timeout or model
                         else:
                             # Append available issues as hints (if any were produced before invalidation)
@@ -828,7 +873,11 @@ class QueryGenerator:
                             self.last_successful_generation_timeout = timeout
                             bt.logging.info(f"📌 Cached generation preference -> model: {model}, timeout: {timeout}s")
                             
-                            return query_template, labels, model, timeout, last_successful_judge_model, last_successful_judge_timeout
+                            attempt_log["status"] = "proceeded_with_invalid_template"
+                            generation_log["attempts"].append(attempt_log)
+                            generation_log["decision"] = "Proceeded with invalid template from this attempt after adding hints."
+                            generation_log["final_template"] = query_template
+                            return query_template, labels, model, timeout, last_successful_judge_model, last_successful_judge_timeout, generation_log
 
                     if issues:
                         suffix = " Hint: " + "; ".join(issues)
@@ -848,24 +897,34 @@ class QueryGenerator:
                     bt.logging.debug(f"💾 Cached generation preference -> model: {model}, timeout: {timeout}s")
                     
                     bt.logging.debug(f"📄 Final Query: {query_template}")
-                    return query_template, labels, model, timeout, last_successful_judge_model, last_successful_judge_timeout
+                    
+                    attempt_log["status"] = "success"
+                    generation_log["attempts"].append(attempt_log)
+                    generation_log["decision"] = "Used template from this attempt."
+                    generation_log["final_template"] = query_template
+                    return query_template, labels, model, timeout, last_successful_judge_model, last_successful_judge_timeout, generation_log
 
                 except Exception as e:
                     bt.logging.error(f"❌ Failed to generate query with model: {model} and timeout: {timeout}s")
                     bt.logging.error(f"   Error: {e}")
                     if "timed out" in str(e).lower():
                         bt.logging.warning("⏰ Timeout occurred. Trying next timeout or model.")
+                        attempt_log["status"] = f"failed_with_timeout: {e}"
                         continue # Move to next timeout
                     else:
                         # For other errors, we can break from the inner loop and try the next model
                         bt.logging.error(f"💥 An unexpected error occurred. Trying next model.")
+                        attempt_log["status"] = f"failed_with_error: {e}"
                         break # break from timeout loop, and try next model.
-            
+                finally:
+                    if attempt_log["status"].startswith("failed"):
+                        generation_log["attempts"].append(attempt_log)
+
         bt.logging.error("💥 All models and timeouts failed.")
         # Prefer returning the last LLM-generated template with appended hints
         if last_model_query_template:
             bt.logging.info(f"📝 Finalizing with last LLM-generated template")
-            _ok, _msg, issues, _, final_judge_model, final_judge_timeout = self.validate_query_template(last_model_query_template, labels)
+            _ok, _msg, issues, _, final_judge_model, final_judge_timeout, _ = self.validate_query_template(last_model_query_template, labels)
             if issues:
                 last_model_query_template = last_model_query_template + " " + (" Hint: " + "; ".join(issues))
                 bt.logging.warning(f"⚠️  Final LLM template has issues - added clarifications:")
@@ -873,15 +932,19 @@ class QueryGenerator:
             else:
                 bt.logging.info(f"✅ Final LLM template is clean (no issues found)")
             bt.logging.info(f"🔄 Returning last LLM-generated template without regeneration")
-            return last_model_query_template, labels, None, None, final_judge_model, final_judge_timeout
+            generation_log["decision"] = "Used last successfully generated (but unvalidated) template as a fallback."
+            generation_log["final_template"] = last_model_query_template
+            return last_model_query_template, labels, None, None, final_judge_model, final_judge_timeout, generation_log
         
         # If we never received an LLM template at all, fall back to simple_template
         bt.logging.warning("No LLM-generated template available; using simple fallback template")
         # Per request: do NOT validate simple_template here; just return it directly
         bt.logging.info(f"🔄 Returning simple fallback template without validation")
-        return simple_template, labels, None, None, None, None
+        generation_log["decision"] = "Fell back to simple template after all LLM generation attempts failed."
+        generation_log["final_template"] = simple_template
+        return simple_template, labels, None, None, None, None, generation_log
     
-    async def build_queries(self) -> Tuple[List[Dict[str, Any]], str, Dict[str, Any], str, int, str, int]:
+    async def build_queries(self) -> Tuple[List[Dict[str, Any]], str, Dict[str, Any], str, int, str, int, Dict[str, Any]]:
         """Build challenge queries for miners"""
         try:
             bt.logging.debug("🔄 Building test queries for miners")
@@ -948,7 +1011,7 @@ class QueryGenerator:
             
             # Generate a complex query template
             model_name = getattr(self.config.neuron, 'ollama_model_name', "llama3.1:latest")
-            query_template, query_labels, successful_model, successful_timeout, successful_judge_model, successful_judge_timeout = await self.generate_complex_query(
+            query_template, query_labels, successful_model, successful_timeout, successful_judge_model, successful_judge_timeout, generation_log = await self.generate_complex_query(
                 model_name=model_name,
                 variation_count=variation_count,
                 phonetic_similarity=phonetic_config,
@@ -1041,7 +1104,7 @@ class QueryGenerator:
             
             # The function now returns a list of dictionaries, so we extract just the names for the return
             seed_names = [item['name'] for item in seed_names_with_labels]
-            return seed_names_with_labels, query_template, query_labels, successful_model, successful_timeout, successful_judge_model, successful_judge_timeout
+            return seed_names_with_labels, query_template, query_labels, successful_model, successful_timeout, successful_judge_model, successful_judge_timeout, generation_log
             
         except Exception as e:
             bt.logging.error(f"Error building queries: {str(e)}")
@@ -1068,7 +1131,7 @@ class QueryGenerator:
             query_template = f"{clarifying_prefix}Generate {variation_count} variations of the name {{name}}, ensuring phonetic similarity: {phonetic_config}, and orthographic similarity: {orthographic_config}, and also include {rp}% of variations that follow: {rule_template}."
             
             # Validate and minimally clarify the fallback template
-            _ok, _msg, issues, _, _, _ = self.validate_query_template(query_template, query_labels)
+            _ok, _msg, issues, _, _, _, _ = self.validate_query_template(query_template, query_labels)
             if issues:
                 query_template = query_template + " " + (" Hint: " + "; ".join(issues))
             
@@ -1101,4 +1164,11 @@ class QueryGenerator:
             bt.logging.info(f"Using fallback: {len(seed_names)} test names")
             bt.logging.debug(f"📄 Query template: {query_template}")
             bt.logging.debug(f"📋 Query labels: {query_labels}")
-            return seed_names_with_labels, query_template, query_labels, None, None, None, None
+            
+            fallback_log = {
+                "decision": "Used fallback query generation due to an exception.",
+                "error": str(e),
+                "final_template": query_template,
+                "labels": query_labels,
+            }
+            return seed_names_with_labels, query_template, query_labels, None, None, None, None, fallback_log
