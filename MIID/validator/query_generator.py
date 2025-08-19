@@ -366,12 +366,13 @@ class QueryGenerator:
                 if f"{rule_pct}%" not in query_template:
                     rule_issues.append(f"Approximately {rule_pct}% of the variations should follow rule-based transformations.")
                 
-                # 2) Check if the exact rule descriptions are present
+                # 2) Check if the exact rule descriptions are present (case-insensitive)
                 if descriptions_list:
                     missing_rules = []
+                    query_lower = query_template.lower()
                     for desc in descriptions_list:
-                        # Just check if the exact rule description text is in the query
-                        if desc not in query_template:
+                        # Check if the rule description is in the query (case-insensitive)
+                        if desc.lower() not in query_lower:
                             missing_rules.append(desc)
                     
                     if missing_rules:
