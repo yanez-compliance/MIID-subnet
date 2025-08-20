@@ -43,9 +43,6 @@ def get_random_uids(self, k: int, exclude: List[int] = None) -> np.ndarray:
     bt.logging.warning(f"#########################################Metagraph n: {self.metagraph.n.item()}#########################################")
     bt.logging.warning(f"#########################################Metagraph axons: {self.metagraph.axons}#########################################")
     bt.logging.warning(f"#########################################Metagraph axons type: {type(self.metagraph.axons)}#########################################")
-    bt.logging.warning(f"#########################################Metagraph axons[uid]: {self.metagraph.axons[uid]}#########################################")
-    bt.logging.warning(f"#########################################Metagraph axons[uid] type: {type(self.metagraph.axons[uid])}#########################################")
-    bt.logging.warning(f"#########################################Metagraph axons[uid] is serving: {self.metagraph.axons[uid].is_serving}#########################################")
 
     for uid in range(self.metagraph.n.item()):
         uid_is_available = check_uid_availability(
