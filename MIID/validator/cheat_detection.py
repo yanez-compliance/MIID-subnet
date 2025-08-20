@@ -1,7 +1,9 @@
 import re
 import json
-from typing import Dict, List, Set, Tuple
+import logging
+from typing import Dict, List, Set, Tuple, Any
 from pathlib import Path
+import numpy as np
 
 
 _LEET_MAP = str.maketrans({
@@ -246,5 +248,180 @@ def pairwise_similarity_metrics(
         results[i] = (max_avg_overlap, max_avg_jaccard)
         
     return results
+
+
+def detect_cheating_patterns(
+    responses: List[Any],
+    uids: List[int],
+    rewards: np.ndarray,
+    seed_names: List[str],
+) -> Dict[str, np.ndarray]:
+    """
+    Analyzes miner responses to detect cheating patterns like collusion, copying, and excessive special characters.
+
+    Returns a dictionary of numpy arrays, each with length equal to number of miners:
+    - duplication_penalties
+    - signature_penalties
+    - collusion_penalties
+    - special_char_penalties
+    - special_char_counts
+    - total_variations_counts
+    - special_char_ratios
+    """
+    num_miners = len(responses)
+    duplication_penalties = np.zeros(num_miners)
+    special_char_penalties = np.zeros(num_miners)
+    signature_penalties = np.zeros(num_miners)
+    collusion_penalties = np.zeros(num_miners)
+    special_char_counts = np.zeros(num_miners, dtype=int)
+    total_variations_counts = np.zeros(num_miners, dtype=int)
+    special_char_ratios = np.zeros(num_miners)
+    all_normalized_sets = []
+    all_signatures = []
+
+    for i in range(num_miners):
+        response = responses[i]
+        
+        variations = getattr(response, 'variations', response if isinstance(response, dict) else None)
+
+        if variations:
+            special_char_variations_count = 0
+            total_variations_count = 0
+            for name in variations:
+                name_variations = variations.get(name, [])
+                total_variations_count += len(name_variations)
+                for var in name_variations:
+                    if any(not c.isalnum() and not c.isspace() for c in var):
+                        special_char_variations_count += 1
+
+            if total_variations_count > 0:
+                special_char_ratio = special_char_variations_count / total_variations_count
+                special_char_counts[i] = special_char_variations_count
+                total_variations_counts[i] = total_variations_count
+                special_char_ratios[i] = special_char_ratio
+                if special_char_ratio > 0.5:
+                    penalty = (special_char_ratio - 0.5) / 0.5
+                    special_char_penalties[i] = min(penalty, 1.0)
+        
+        if not variations:
+            all_normalized_sets.append(None)
+            all_signatures.append(None)
+            continue
+
+        miner_normalized_sets: Dict[str, Set[str]] = {}
+        miner_map_for_signature: Dict[str, list] = {}
+        has_any_variations = False
+        
+        for name in seed_names:
+            if name in variations and variations[name]:
+                has_any_variations = True
+                canon_list = [var for var in variations.get(name, [])]
+                miner_map_for_signature[name] = canon_list
+                miner_normalized_sets[name] = build_normalized_set(canon_list)
+
+        if not has_any_variations:
+            all_normalized_sets.append(None)
+            all_signatures.append(None)
+            continue
+        
+        all_normalized_sets.append(miner_normalized_sets)
+        all_signatures.append(hash_signature(miner_map_for_signature))
+
+    fmt15 = [f"{r:.15f}" for r in rewards]
+    buckets_exact: Dict[str, List[int]] = {}
+    for idx, key in enumerate(fmt15):
+        if rewards[idx] > 0.0:
+            buckets_exact.setdefault(key, []).append(idx)
+
+    buckets_near: Dict[int, List[int]] = {}
+    for idx, r in enumerate(rewards):
+        if r > 0.0:
+            key = int(round(r * 10000))
+            buckets_near.setdefault(key, []).append(idx)
+
+    COLLUSION_GROUP_SIZE_THRESHOLD = 5
+    for bucket_indices in buckets_exact.values():
+        if len(bucket_indices) > COLLUSION_GROUP_SIZE_THRESHOLD:
+            if rewards[bucket_indices[0]] < 0.95:
+                logging.warning(f"Large collusion group detected with {len(bucket_indices)} members with score < 0.95. Applying direct penalty.")
+                penalty_value = 0.75
+                for i in bucket_indices:
+                    collusion_penalties[i] = max(collusion_penalties[i], penalty_value)
+
+    def penalize_group(indices: List[int], strict: bool) -> None:
+        if len(indices) < 2:
+            return
+        
+        valid_indices = [i for i in indices if all_normalized_sets[i] is not None]
+        if len(valid_indices) < 2:
+            return
+
+        group_sets = [all_normalized_sets[i] for i in valid_indices]
+        metrics_local = pairwise_similarity_metrics(group_sets)
+        
+        for k, (max_avg_overlap, max_avg_jaccard) in enumerate(metrics_local):
+            i = valid_indices[k]
+            if strict:
+                thr_overlap, thr_jacc = 0.75, 0.70
+            else:
+                thr_overlap, thr_jacc = 0.80, 0.70
+            
+            if max_avg_overlap > thr_overlap or max_avg_jaccard > thr_jacc:
+                overlap_pen = max(0.0, (max_avg_overlap - thr_overlap) / max(1e-6, 1.0 - thr_overlap))
+                jaccard_pen = max(0.0, (max_avg_jaccard - thr_jacc) / max(1e-6, 1.0 - thr_jacc))
+                penalty = min(1.0, max(overlap_pen, jaccard_pen))
+                duplication_penalties[i] = max(duplication_penalties[i], penalty)
+
+    sig_to_indices: Dict[str, List[int]] = {}
+    for idx, sig in enumerate(all_signatures):
+        if not sig:
+            continue
+        sig_to_indices.setdefault(sig, []).append(idx)
+    for indices in sig_to_indices.values():
+        if len(indices) > 1:
+            # Only penalize miners with a reward greater than 0
+            valid_indices = [idx for idx in indices if rewards[idx] > 0]
+            if len(valid_indices) > 1:
+                for idx in valid_indices:
+                    signature_penalties[idx] = max(signature_penalties[idx], 0.8)
+
+    for idxs in buckets_exact.values():
+        penalize_group(idxs, strict=True)
+    for idxs in buckets_near.values():
+        penalize_group(idxs, strict=False)
+
+    logging.info("Performing cross-group similarity check on all valid miners.")
+    valid_indices = [i for i, s in enumerate(all_normalized_sets) if isinstance(s, dict) and s]
+    for i in range(len(valid_indices)):
+        for j in range(i + 1, len(valid_indices)):
+            idx1 = valid_indices[i]
+            idx2 = valid_indices[j]
+            set1 = all_normalized_sets[idx1]
+            set2 = all_normalized_sets[idx2]
+
+            common_names = set1.keys() & set2.keys()
+            if not common_names:
+                overlap = 0.0
+                jac = 0.0
+            else:
+                overlap_scores = [overlap_coefficient(set1[name], set2[name]) for name in common_names]
+                jaccard_scores = [jaccard(set1[name], set2[name]) for name in common_names]
+                overlap = sum(overlap_scores) / len(overlap_scores)
+                jac = sum(jaccard_scores) / len(jaccard_scores)
+
+            if overlap > 0.95 or jac > 0.90:
+                penalty = 0.5
+                duplication_penalties[idx1] = max(duplication_penalties[idx1], penalty)
+                duplication_penalties[idx2] = max(duplication_penalties[idx2], penalty)
+
+    return {
+        "duplication_penalties": duplication_penalties,
+        "signature_penalties": signature_penalties,
+        "collusion_penalties": collusion_penalties,
+        "special_char_penalties": special_char_penalties,
+        "special_char_counts": special_char_counts,
+        "total_variations_counts": total_variations_counts,
+        "special_char_ratios": special_char_ratios,
+    }
 
 
