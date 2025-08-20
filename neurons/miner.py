@@ -63,6 +63,8 @@ from MIID.protocol import IdentitySynapse
 # import base miner class which takes care of most of the boilerplate
 from MIID.base.miner import BaseMinerNeuron
 
+from bittensor.core.errors import NotVerifiedException
+
 
 class Miner(BaseMinerNeuron):
     """
@@ -85,6 +87,15 @@ class Miner(BaseMinerNeuron):
     - model_name: The Ollama model to use (default: 'tinyllama:latest')
     - output_path: Directory for saving mining results (default: logging_dir/mining_results)
     """
+    WHITELISTED_VALIDATORS = {
+        "5C4qiYkqKjqGDSvzpf6YXCcnBgM6punh8BQJRP78bqMGsn54": "RoundTable21",
+        "5DUB7kNLvvx8Dj7D8tn54N1C7Xok6GodNPQE2WECCaL9Wgpr": "Yanez", 
+        "5GWzXSra6cBM337nuUU7YTjZQ6ewT2VakDpMj8Pw2i8v8PVs": "Yuma",
+        "5HbUFHW4XVhbQvMbSy7WDjvhHb62nuYgP1XBsmmz9E2E2K6p": "OpenTensor",
+        "5GQqAhLKVHRLpdTqRg1yc3xu7y47DicJykSpggE2GuDbfs54": "Rizzo",
+        "5GuPvuyKBJAWQbEGAkMbfRpG5qDqqhML8uDVSWoFjqcKKvDU": "Testnet_omar",
+        "5CnkkjPdfsA6jJDHv2U6QuiKiivDuvQpECC13ffdmSDbkgtt": "Testnet_asem"
+    }
 
     def __init__(self, config=None):
         """
@@ -133,6 +144,51 @@ class Miner(BaseMinerNeuron):
         self.output_path = os.path.join(self.config.logging.logging_dir, "mining_results")
         os.makedirs(self.output_path, exist_ok=True)
         bt.logging.info(f"Mining results will be saved to: {self.output_path}")
+        self.axon.verify_fns[IdentitySynapse.__name__] = self._verify_validator_request
+
+    async def _verify_validator_request(self, synapse: IdentitySynapse) -> None:
+        """
+        Rejects any RPC that is not cryptographically proven to come from
+        one of the whitelisted validator hotkeys.
+
+        Signature *must* be present and valid.  If anything is missing or
+        incorrect we raise `NotVerifiedException`, which the Axon middleware
+        converts into a 401 reply.
+        """
+        # ----------  basic sanity checks  ----------
+        if synapse.dendrite is None:
+            raise NotVerifiedException("Missing dendrite terminal in request")
+
+        hotkey    = synapse.dendrite.hotkey
+        # signature = synapse.dendrite.signature
+        nonce     = synapse.dendrite.nonce
+        uuid      = synapse.dendrite.uuid
+        body_hash = synapse.computed_body_hash
+
+        # 1 — is the sender even on our allow‑list?
+        if hotkey not in self.WHITELISTED_VALIDATORS:
+            raise NotVerifiedException(f"{hotkey} is not a whitelisted validator")
+
+        # 3 — run all the standard Bittensor checks (nonce window, replay,
+        #     timeout, signature, …).  This *does not* insist on a signature,
+        #     so we still do step 4 afterwards.
+        message = (
+            f"nonce: {nonce}. "
+            f"hotkey {hotkey}. "
+            f"self hotkey {self.wallet.hotkey.ss58_address}. "
+            f"uuid {uuid}. "
+            f"body hash {body_hash} "
+        )
+        bt.logging.info(
+            f"Verifying message: {message}"
+        )
+
+        await self.axon.default_verify(synapse)
+
+        # 5 — all good ➜ let the middleware continue
+        bt.logging.info(
+            f"Verified call from {self.WHITELISTED_VALIDATORS[hotkey]} ({hotkey})"
+        )
 
     async def forward(self, synapse: IdentitySynapse) -> IdentitySynapse:
         """
@@ -639,8 +695,7 @@ Remember: Only provide the name variations in a clean, comma-separated format.
         This function implements security checks to ensure that only authorized
         validators can query this miner. It verifies:
         1. Whether the request has a valid dendrite and hotkey
-        2. Whether the hotkey is registered in the metagraph
-        3. Whether the hotkey has validator permissions (if required)
+        2. Whether the hotkey is one of the ones on the white list
         
         Args:
             synapse: A IdentitySynapse object constructed from the incoming request.
@@ -657,28 +712,11 @@ Remember: Only provide the name variations in a clean, comma-separated format.
             )
             return True, "Missing dendrite or hotkey"
 
-        # Get the UID of the sender
-        uid = self.metagraph.hotkeys.index(synapse.dendrite.hotkey)
-        
-        # Check if the hotkey is registered in the metagraph
-        if (
-            not self.config.blacklist.allow_non_registered
-            and synapse.dendrite.hotkey not in self.metagraph.hotkeys
-        ):
-            # Ignore requests from un-registered entities.
+        if synapse.dendrite.hotkey not in self.WHITELISTED_VALIDATORS:
             bt.logging.trace(
                 f"Blacklisting un-registered hotkey {synapse.dendrite.hotkey}"
             )
             return True, "Unrecognized hotkey"
-
-        # Check if the hotkey has validator permissions (if required)
-        if self.config.blacklist.force_validator_permit:
-            # If the config is set to force validator permit, then we should only allow requests from validators.
-            if not self.metagraph.validator_permit[uid]:
-                bt.logging.warning(
-                    f"Blacklisting a request from non-validator hotkey {synapse.dendrite.hotkey}"
-                )
-                return True, "Non-validator hotkey"
 
         # If all checks pass, allow the request
         bt.logging.trace(
