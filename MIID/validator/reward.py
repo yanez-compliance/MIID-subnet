@@ -17,7 +17,7 @@
 # OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
 # DEALINGS IN THE SOFTWARE.
 import numpy as np
-from typing import List, Dict, Tuple, Any
+from typing import List, Dict, Tuple, Any, Set
 import bittensor as bt
 import Levenshtein
 import jellyfish
@@ -30,6 +30,13 @@ import random
 
 # Import rule_evaluator for rule-based compliance checking
 from MIID.validator.rule_evaluator import evaluate_rule_compliance
+from MIID.validator.cheat_detection import (
+    build_normalized_set,
+    pairwise_similarity_metrics,
+    hash_signature,
+    overlap_coefficient,
+    jaccard,
+)
 
 # Define the reward component weights globally
 MIID_REWARD_WEIGHTS = {
@@ -215,7 +222,7 @@ def calculate_part_score(
         #     )
     
     length_score = sum(length_scores) / len(length_scores) if length_scores else 0
-    #bt.logging.info(f"Average length score: {length_score:.3f}")
+    bt.logging.info(f"Average length score: {length_score:.3f}")
     
     # Calculate similarity scores with improved distribution analysis
     phonetic_scores = []
@@ -288,7 +295,7 @@ def calculate_part_score(
     
     # Calculate combined similarity score
     similarity_score = (phonetic_quality + orthographic_quality) / 2  # Average of both similarities
-    # bt.logging.info(f"Similarity score: {similarity_score:.3f} (phonetic: {phonetic_quality:.3f}, orthographic: {orthographic_quality:.3f})")
+    bt.logging.info(f"Similarity score: {similarity_score:.3f} (phonetic: {phonetic_quality:.3f}, orthographic: {orthographic_quality:.3f})")
     
     # Apply minimum similarity threshold to prevent gaming
     # If similarity is very low, severely reduce the score
@@ -314,16 +321,14 @@ def calculate_part_score(
         length_weight * length_score
     )
     
-    # Detailed logging of final score components
-    # bt.logging.info(f"\nFinal score breakdown for '{original_part}':")
-    # bt.logging.info(f"  - Similarity ({similarity_weight*100:.0f}%):")
-    # bt.logging.info(f"    * Phonetic: {phonetic_quality:.3f}")
-    # bt.logging.info(f"    * Orthographic: {orthographic_quality:.3f}")
-    # bt.logging.info(f"    * Combined: {similarity_score:.3f}")
-    # bt.logging.info(f"  - Count ({count_weight*100:.0f}%): {count_score:.3f}")
-    # bt.logging.info(f"  - Uniqueness ({uniqueness_weight*100:.0f}%): {uniqueness_score:.3f}")
-    # bt.logging.info(f"  - Length ({length_weight*100:.0f}%): {length_score:.3f}")
-    # bt.logging.info(f"  - Total score: {final_score:.3f}")
+    # DETAILED LOGGING FOR DEBUGGING 0.0 SCORES
+    bt.logging.info(f"--- DETAILED SCORE CALCULATION FOR '{original_part}' ---")
+    bt.logging.info(f"Similarity Score: {similarity_score:.4f} (Weight: {similarity_weight}) -> Contributes: {similarity_weight * similarity_score:.4f}")
+    bt.logging.info(f"Count Score: {count_score:.4f} (Weight: {count_weight}) -> Contributes: {count_weight * count_score:.4f}")
+    bt.logging.info(f"Uniqueness Score: {uniqueness_score:.4f} (Weight: {uniqueness_weight}) -> Contributes: {uniqueness_weight * uniqueness_score:.4f}")
+    bt.logging.info(f"Length Score: {length_score:.4f} (Weight: {length_weight}) -> Contributes: {length_weight * length_score:.4f}")
+    bt.logging.info(f"FINAL PART SCORE for '{original_part}': {final_score:.4f}")
+    bt.logging.info(f"--- END DETAILED CALCULATION ---")
     
     if final_score == 0:
         bt.logging.warning(f"Zero score for '{original_part}'. Possible reasons:")
@@ -621,11 +626,16 @@ def _calculate_similarity_and_penalties(responses: list, uids: list, seed_names:
     num_miners = len(responses)
     duplication_penalties = np.zeros(num_miners)
     special_char_penalties = np.zeros(num_miners)
+    signature_penalties = np.zeros(num_miners)
+    collusion_penalties = np.zeros(num_miners)  # New penalty for collusion
     # Track special character usage for observability
     special_char_counts = np.zeros(num_miners, dtype=int)
     total_variations_counts = np.zeros(num_miners, dtype=int)
     special_char_ratios = np.zeros(num_miners)
     all_miner_variations = []
+    all_normalized_sets = []
+    all_signatures = []
+
 
     for i in range(num_miners):
         response = responses[i]
@@ -657,40 +667,117 @@ def _calculate_similarity_and_penalties(responses: list, uids: list, seed_names:
  
         if not hasattr(response, 'variations') or not response.variations:
             all_miner_variations.append(set())
+            all_normalized_sets.append(set())
+            all_signatures.append("")
             continue
 
-        miner_vars = set()
+        # Build per-name normalized sets for this miner
+        miner_normalized_sets: Dict[str, Set[str]] = {}
+        miner_map_for_signature: Dict[str, list] = {}
+        has_any_variations = False
+        
         for name in seed_names:
-            if name in response.variations:
-                # Normalize variations to lowercase and remove all whitespace to catch more duplicates
-                miner_vars.update("".join(var.lower().split()) for var in response.variations[name])
-        all_miner_variations.append(miner_vars)
+            if name in response.variations and response.variations[name]:
+                has_any_variations = True
+                canon_list = [var for var in response.variations.get(name, [])]
+                miner_map_for_signature[name] = canon_list
+                miner_normalized_sets[name] = build_normalized_set(canon_list)
 
-    for i in range(num_miners):
-        for j in range(i + 1, num_miners):
-            vars_i = all_miner_variations[i]
-            vars_j = all_miner_variations[j]
+        if not has_any_variations:
+            all_normalized_sets.append(None)
+            all_signatures.append(None)
+            continue
+        
+        all_normalized_sets.append(miner_normalized_sets)
+        all_signatures.append(hash_signature(miner_map_for_signature))
 
-            if not vars_i or not vars_j:
-                continue
+    # Build groups by reward closeness
+    # 1) Exact same up to 15 decimals
+    fmt15 = [f"{r:.15f}" for r in rewards]
+    buckets_exact: Dict[str, List[int]] = {}
+    for idx, key in enumerate(fmt15):
+        buckets_exact.setdefault(key, []).append(idx)
+    # 2) Near-equal within 0.001 (more precise)
+    buckets_near: Dict[int, List[int]] = {}
+    for idx, r in enumerate(rewards):
+        key = int(round(r * 1000))  # bucket by 0.001
+        buckets_near.setdefault(key, []).append(idx)
 
-            # Use Jaccard similarity for a quick and efficient comparison
-            intersection_len = len(vars_i.intersection(vars_j))
-            union_len = len(vars_i.union(vars_j))
+    # NEW: Direct penalty for large collusion groups based on identical scores
+    COLLUSION_GROUP_SIZE_THRESHOLD = 5
+    for bucket_indices in buckets_exact.values():
+        if len(bucket_indices) > COLLUSION_GROUP_SIZE_THRESHOLD:
+            bt.logging.warning(f"Large collusion group detected with {len(bucket_indices)} members. Applying direct penalty.")
+            penalty_value = 0.75  # A very strong penalty for blatant collusion
+            for i in bucket_indices:
+                collusion_penalties[i] = max(collusion_penalties[i], penalty_value)
 
-            if union_len == 0:
-                similarity = 1.0
+    # Helper to apply duplication penalties for a set of indices using strict thresholds
+    def penalize_group(indices: List[int], strict: bool) -> None:
+        if len(indices) < 2:
+            return
+        
+        # Filter out invalid miners from this group
+        valid_indices = [i for i in indices if all_normalized_sets[i] is not None]
+        if len(valid_indices) < 2:
+            return
+
+        # Pass the list of per-name dictionaries to the new function
+        group_sets = [all_normalized_sets[i] for i in valid_indices]
+        metrics_local = pairwise_similarity_metrics(group_sets)
+        
+        for k, (max_avg_overlap, max_avg_jaccard) in enumerate(metrics_local):
+            i = valid_indices[k]
+            if strict:
+                # AGGRESSIVE thresholds for IDENTICAL scores
+                thr_overlap, thr_jacc = 0.70, 0.65
             else:
-                similarity = intersection_len / union_len
+                # Looser for near-equal rewards (lowered threshold)
+                thr_overlap, thr_jacc = 0.80, 0.70
             
-            # If similarity is high, apply a penalty
-            if similarity > 0.95:
-                # Penalty is proportional to the similarity excess
-                penalty = (similarity - 0.95) / (1.0 - 0.95)
-                penalty = min(penalty, 1.0) # Cap the penalty at 100%
-
+            if max_avg_overlap > thr_overlap or max_avg_jaccard > thr_jacc:
+                overlap_pen = max(0.0, (max_avg_overlap - thr_overlap) / max(1e-6, 1.0 - thr_overlap))
+                jaccard_pen = max(0.0, (max_avg_jaccard - thr_jacc) / max(1e-6, 1.0 - thr_jacc))
+                penalty = min(1.0, max(overlap_pen, jaccard_pen))
                 duplication_penalties[i] = max(duplication_penalties[i], penalty)
-                duplication_penalties[j] = max(duplication_penalties[j], penalty)
+
+    # Exact-copy signature detection only within same-score buckets
+    sig_to_indices: Dict[str, List[int]] = {}
+    for idx, sig in enumerate(all_signatures):
+        if not sig:
+            continue
+        sig_to_indices.setdefault(sig, []).append(idx)
+    for indices in sig_to_indices.values():
+        if len(indices) > 1:
+            for idx in indices:
+                signature_penalties[idx] = max(signature_penalties[idx], 0.8)
+
+    # Apply penalties for exact-equal reward buckets
+    for idxs in buckets_exact.values():
+        penalize_group(idxs, strict=True)
+    # Apply penalties for near-equal reward buckets
+    for idxs in buckets_near.values():
+        penalize_group(idxs, strict=False)
+
+    # Add a cross-group similarity check for all valid miners to catch blatant copying
+    bt.logging.info("Performing cross-group similarity check on all valid miners.")
+    valid_indices = [i for i, s in enumerate(all_normalized_sets) if s is not None]
+    for i in range(len(valid_indices)):
+        for j in range(i + 1, len(valid_indices)):
+            idx1 = valid_indices[i]
+            idx2 = valid_indices[j]
+            set1 = all_normalized_sets[idx1]
+            set2 = all_normalized_sets[idx2]
+
+            overlap = overlap_coefficient(set1, set2)
+            jac = jaccard(set1, set2)
+
+            # High threshold for blatant copying
+            if overlap > 0.95 or jac > 0.90:
+                bt.logging.warning(f"High cross-group similarity found between miner {uids[idx1]} and {uids[idx2]}. Overlap: {overlap:.2f}, Jaccard: {jac:.2f}")
+                penalty = 0.5  # Significant penalty
+                duplication_penalties[idx1] = max(duplication_penalties[idx1], penalty)
+                duplication_penalties[idx2] = max(duplication_penalties[idx2], penalty)
 
     # Apply penalties and update metrics
     updated_rewards = np.copy(rewards)
@@ -706,6 +793,16 @@ def _calculate_similarity_and_penalties(responses: list, uids: list, seed_names:
             miner_metrics['penalties']['special_char_variations_count'] = int(special_char_counts[i])
             miner_metrics['penalties']['total_variations_count'] = int(total_variations_counts[i])
 
+        # Collusion Penalty
+        if collusion_penalties[i] > 0:
+            penalty_amount = collusion_penalties[i]
+            total_penalty += penalty_amount
+            bt.logging.info(f"Applying collusion penalty of {penalty_amount:.2f} to miner {uid}")
+            if i < len(detailed_metrics):
+                miner_metrics = detailed_metrics[i]
+                miner_metrics.setdefault('penalties', {})
+                miner_metrics['penalties']['collusion'] = penalty_amount
+
         # Duplication Penalty
         if duplication_penalties[i] > 0:
             penalty_amount = duplication_penalties[i]
@@ -716,6 +813,16 @@ def _calculate_similarity_and_penalties(responses: list, uids: list, seed_names:
                 miner_metrics.setdefault('penalties', {})
                 miner_metrics['penalties']['duplication'] = penalty_amount
 
+        # Signature (exact-copy) Penalty
+        if signature_penalties[i] > 0:
+            penalty_amount = signature_penalties[i]
+            total_penalty += penalty_amount
+            bt.logging.info(f"Applying signature-copy penalty of {penalty_amount:.2f} to miner {uid}")
+            if i < len(detailed_metrics):
+                miner_metrics = detailed_metrics[i]
+                miner_metrics.setdefault('penalties', {})
+                miner_metrics['penalties']['signature_copy'] = penalty_amount
+
         # Special Character Penalty
         if special_char_penalties[i] > 0:
             penalty_amount = special_char_penalties[i]
@@ -725,6 +832,7 @@ def _calculate_similarity_and_penalties(responses: list, uids: list, seed_names:
                 miner_metrics = detailed_metrics[i]
                 miner_metrics.setdefault('penalties', {})
                 miner_metrics['penalties']['special_chars'] = penalty_amount
+
 
         # Apply combined penalty
         if total_penalty > 0:
@@ -829,7 +937,10 @@ def get_name_variation_rewards(
             "missing_names": []
         }
         
-        if not hasattr(response, 'variations') or not response.variations:
+        # Correctly access the variations from the response object
+        variations = response.variations if hasattr(response, 'variations') else {}
+        
+        if not variations:
             bt.logging.warning(f"Miner {uid} returned invalid or empty response")
             rewards[i] = 0.0
             # Correctly set metrics for invalid/empty response
@@ -841,7 +952,6 @@ def get_name_variation_rewards(
             detailed_metrics.append(miner_metrics)
             continue
             
-        variations = response.variations
         quality_scores = []
         
         # Calculate penalty for unexpected names (extra variations)
@@ -935,9 +1045,21 @@ def get_name_variation_rewards(
             miner_metrics["average_quality"] = 0.0
             miner_metrics["final_reward"] = 0.0
         
+        # ADD DETAILED LOGGING HERE to debug 0.0 scores
+        bt.logging.info(f"--- DEBUGGING REWARD FOR MINER {uid} ---")
+        bt.logging.info(f"Seed names with variations: {[name for name in seed_names if name in variations and variations[name]]}")
+        bt.logging.info(f"Quality scores per name: {quality_scores}")
+        bt.logging.info(f"Average quality score: {miner_metrics['average_quality']:.4f}")
+        bt.logging.info(f"Completeness multiplier (1.0 - penalty): {completeness_multiplier:.4f}")
+        bt.logging.info(f"Final reward (avg_quality * completeness_multiplier): {rewards[i]:.4f}")
+        bt.logging.info(f"--- END DEBUGGING REWARD FOR MINER {uid} ---")
+        
         #bt.logging.info(f"Miner {uid} final Score: {rewards[i]}")
         #bt.logging.info(f"Miner {uid} penalties: {miner_metrics['penalties']}")
-        bt.logging.info(f"Miner {uid} rule compliance: {miner_metrics['rule_compliance']['overall_score']}")
+        if 'rule_compliance' in miner_metrics:
+            bt.logging.info(f"Miner {uid} rule compliance: {miner_metrics['rule_compliance']['overall_score']}")
+        else:
+            bt.logging.info(f"Miner {uid} rule compliance: 0.0")
         bt.logging.info(f"Miner {uid} Base quality scores: {quality_scores}")
         bt.logging.info(f"Miner {uid} average quality: {miner_metrics['average_quality']}")
         bt.logging.info(f"Miner {uid} completeness multiplier: {miner_metrics['completeness_multiplier']}")
