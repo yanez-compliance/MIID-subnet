@@ -140,18 +140,12 @@ def _run_judge_model(
                 elif key == 'orthographic' and orthographic_expected_tokens:
                     mapped_issues.append(f"Orthographic similarity: {', '.join(sorted(list(orthographic_expected_tokens)))}.")
                 elif key == 'rule':
-                    # Only add rule soft check if we don't have a specific rule percentage check
-                    # This prevents duplicate rule percentage issues
-                    if isinstance(rule_pct_val, int):
-                        # Check if rule percentage is already missing (will be checked later)
-                        present_rp = present.get('rule_percentage')
-                        if present_rp != rule_pct_val:
-                            # Rule percentage is missing, so don't add the generic soft rule issue
-                            # The specific rule percentage issue will be added later
-                            pass
-                        else:
-                            # Rule percentage is present, so add the generic soft rule issue
-                            mapped_issues.append(soft_issue_map[key])
+                    # Only add rule soft check if neither the specific rule percentage nor any rule descriptions are detected
+                    present_rp = present.get('rule_percentage')
+                    present_rd = present.get('rule_descriptions', [])
+                    if (isinstance(rule_pct_val, int) and present_rp == rule_pct_val) or (isinstance(present_rd, list) and len(present_rd) > 0):
+                        # Treat 'rule' as implicitly satisfied via other fields; do not add a generic soft issue
+                        pass
                     else:
                         mapped_issues.append(soft_issue_map[key])
 
@@ -604,20 +598,30 @@ class QueryGenerator:
                     f"- rule_percentage: {json.dumps(rule_pct_val, ensure_ascii=False)}\n"
                     f"- rule_descriptions: {json.dumps(rule_descs_list, ensure_ascii=False)}\n\n"
                     "OUTPUT RULES:\n"
-                    "- Output ONLY valid JSON with shape: {\"present\": { ... }}.\n"
-                    "- For each key in SPECIFICATIONS, list the items that are clearly present in the TEMPLATE.\n"
-                    "- The TEMPLATE might contain a [STATIC VALIDATION HINTS] section. Consider the information in this section as part of the template when checking for the presence of SPECIFICATIONS.\n"
-                    "- For `phonetic_tokens` and `orthographic_tokens`, the TEMPLATE might express them in natural language. Find each percentage and its associated level (e.g., 'Light', 'Medium', 'Far') and return them in the format 'XX% Level'. The order does not matter.\n"
-                    "- For `rule_descriptions`, the TEMPLATE may list transformations with extra details or different phrasing. Match them semantically to the descriptions provided in SPECIFICATIONS.\n"
-                    "- For 'variation_count', if the TEMPLATE says 'Generate X' or contains the number X, return X as the variation_count.\n"
-                    "- For 'rule_percentage', if the TEMPLATE mentions 'X%' or 'approximately X%' or 'about X%' in the context of rule-based transformations, return X as the rule_percentage.\n"
-                    "- IMPORTANT: For rule_percentage, look for phrases like 'X% of variations following rule-based transformations', 'X% should follow rule-based transformations', 'X% of the total variations following these rule-based transformations', etc.\n"
-                    "- For the 'soft' category, mark 'rule' as present if the TEMPLATE contains any of these: 'rule-based transformations', 'transformation rules', 'transformations:', or specific transformation instructions like 'Replace spaces with', 'Replace double letters', etc.\n"
-                    "- Example: If TEMPLATE says \"make 10 variations... 60% should be Lightly similar in sound\", your output for `variation_count` should be `10` and `phonetic_tokens` should include `\"60% Light\"`.\n"
-                    "- Example: If TEMPLATE says \"Generate 13 execution vectors... Approximately 58% should follow rule-based transformations\", your output for `variation_count` should be `13` and `rule_percentage` should be `58`.\n"
-                    "- Example: If TEMPLATE says \"rule-based transformations: Replace spaces with special characters\", mark 'rule' as present in the 'soft' category.\n"
-                    "- If nothing is present for a category, you can omit the key or provide an empty list/null.\n\n"
-                    "RESPONSE (JSON only):"
+                    "1. First, think step-by-step. For each key in SPECIFICATIONS, analyze the TEMPLATE and write down whether the requirement is met and the evidence you found.\n"
+                    "2. After your step-by-step analysis, provide the final JSON object. Your analysis and reasoning should come before the JSON, not inside it.\n"
+                    "3. The final output MUST contain a single, valid JSON object with the shape: {\"present\": { ... }}. This JSON block must be the very last part of your response.\n\n"
+                    "EXAMPLE OF FULL RESPONSE (REASONING + JSON):\n"
+                    "Step 1: `variation_count`. The TEMPLATE asks for '9 variations'. The specification is 9. This is present.\n"
+                    "Step 2: `phonetic_tokens`. The TEMPLATE specifies 'phonetic similarity (70% Light, 30% Medium)'. This matches the specification. This is present.\n"
+                    "Step 3: `orthographic_tokens`. The TEMPLATE does not mention orthographic similarity. This is not present.\n"
+                    "Step 4: `rule_percentage`. The TEMPLATE mentions 'Approximately 27%'. This is present.\n"
+                    "Step 5: `rule_descriptions`. The TEMPLATE lists three specific transformations. This is present.\n\n"
+                    "```json\n"
+                    "{\n"
+                    "  \"present\": {\n"
+                    "    \"variation_count\": 9,\n"
+                    "    \"phonetic_tokens\": [\"70% Light\", \"30% Medium\"],\n"
+                    "    \"rule_percentage\": 27,\n"
+                    "    \"rule_descriptions\": [\n"
+                    "      \"Replace random consonants with different consonants.\",\n"
+                    "      \"Convert {name} to initials.\",\n"
+                    "      \"Add a title suffix (Jr., PhD, etc.).\"\n"
+                    "    ]\n"
+                    "  }\n"
+                    "}\n"
+                    "```\n\n"
+                    "YOUR RESPONSE (start with step-by-step reasoning, then end with the final JSON block):"
                 )
                 
                 issues, _ = _run_judge_model(
