@@ -614,7 +614,7 @@ class QueryGenerator:
                 # Provide the judge with structured expectations, asking it to mark what is missing.
                 judge_prompt = (
                     "You are a strict but intelligent validator. Your task is to check which of the required SPECIFICATIONS are met by the query TEMPLATE. You must analyze the TEMPLATE semantically.\n\n"
-                    "Return ONLY a valid JSON object with a single key 'present', containing a dictionary that maps each specification category to the specifications that were found.\n\n"
+                    "CRITICAL: When you find a specification in the TEMPLATE, you MUST return it EXACTLY as it appears in the SPECIFICATIONS list below.\n\n"
                     f"TEMPLATE:\n{template_for_judge}\n\n"
                     f"SPECIFICATIONS:\n"
                     f"- soft: {json.dumps(list(soft_issue_map.keys()), ensure_ascii=False)}\n"
@@ -624,26 +624,22 @@ class QueryGenerator:
                     f"- rule_percentage: {json.dumps(rule_pct_val, ensure_ascii=False)}\n"
                     f"- rule_descriptions: {json.dumps(rule_descs_list, ensure_ascii=False)}\n\n"
                     "OUTPUT RULES:\n"
-                    "1. First, think step-by-step. For each key in SPECIFICATIONS, analyze the TEMPLATE and write down whether the requirement is met and the evidence you found.\n"
-                    "2. After your step-by-step analysis, provide the final JSON object. Your analysis and reasoning should come before the JSON, not inside it.\n"
-                    "3. The final output MUST contain a single, valid JSON object with the shape: {\"present\": { ... }}. This JSON block must be the very last part of your response.\n\n"
-                    "EXAMPLE OF FULL RESPONSE (REASONING + JSON):\n"
-                    "Step 1: `variation_count`. The TEMPLATE asks for '9 variations'. The specification is 9. This is present.\n"
-                    "Step 2: `phonetic_tokens`. The TEMPLATE specifies 'phonetic similarity (70% Light, 30% Medium)'. This matches the specification. This is present.\n"
-                    "Step 3: `orthographic_tokens`. The TEMPLATE does not mention orthographic similarity. This is not present.\n"
-                    "Step 4: `rule_percentage`. The TEMPLATE mentions 'Approximately 27%'. This is present.\n"
-                    "Step 5: `rule_descriptions`. The TEMPLATE lists three specific transformations. This is present.\n\n"
+                    "1. For each specification, check if it's semantically present in the TEMPLATE.\n"
+                    "2. If present, include it in your JSON response EXACTLY as shown in SPECIFICATIONS.\n"
+                    "3. For phonetic_tokens and orthographic_tokens: if the TEMPLATE mentions these requirements (even with different wording), return ALL tokens from the SPECIFICATIONS list.\n"
+                    "4. Example: If SPECIFICATIONS has phonetic_tokens: [\"100% Light\"] and the TEMPLATE mentions \"100% Light phonetic similarity\", return phonetic_tokens: [\"100% Light\"] in your response.\n\n"
+                    "EXAMPLE OF FULL RESPONSE:\n"
+                    "Step 1: variation_count - The TEMPLATE asks for 12 variations. Specification is 12. PRESENT.\n"
+                    "Step 2: phonetic_tokens - The TEMPLATE mentions \"100% Light\" phonetic. Specification has [\"100% Light\"]. PRESENT.\n"
+                    "Step 3: orthographic_tokens - The TEMPLATE mentions \"33% Far, 33% Light, 34% Medium\". Specifications match. PRESENT.\n\n"
                     "```json\n"
                     "{\n"
                     "  \"present\": {\n"
-                    "    \"variation_count\": 9,\n"
-                    "    \"phonetic_tokens\": [\"70% Light\", \"30% Medium\"],\n"
-                    "    \"rule_percentage\": 27,\n"
-                    "    \"rule_descriptions\": [\n"
-                    "      \"Replace random consonants with different consonants.\",\n"
-                    "      \"Convert {name} to initials.\",\n"
-                    "      \"Add a title suffix (Jr., PhD, etc.).\"\n"
-                    "    ]\n"
+                    "    \"variation_count\": 12,\n"
+                    "    \"phonetic_tokens\": [\"100% Light\"],\n"
+                    "    \"orthographic_tokens\": [\"33% Far\", \"33% Light\", \"34% Medium\"],\n"
+                    "    \"rule_percentage\": 34,\n"
+                    "    \"rule_descriptions\": [\"Replace spaces in {name} with special characters\"]\n"
                     "  }\n"
                     "}\n"
                     "```\n\n"
@@ -852,8 +848,11 @@ class QueryGenerator:
         2. Format as a natural language request that explicitly states all requirements.
         3. Include both the similarity requirements (phonetic and orthographic) AND the rule-based transformation requirements in the query.
         
+        CRITICAL: Return ONLY the query template text. Do not include any explanations, analysis, or commentary about the query. Do not say "this query meets requirements" or similar phrases. Just return the actual query template that miners will receive.
+        
         Example format: "Generate {variation_count} variations of {{name}}, ensuring phonetic similarity ({phonetic_spec}) and orthographic similarity ({orthographic_spec}). Approximately {rule_percentage}% of the total variations should follow these rule-based transformations: {rule_template}"
-        """
+        
+        YOUR RESPONSE (query template only):"""
         
         
         # Get the list of models to try: primary + fallbacks, prioritizing last successful
