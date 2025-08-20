@@ -36,6 +36,7 @@ from MIID.validator.cheat_detection import (
     hash_signature,
     overlap_coefficient,
     jaccard,
+    detect_cheating_patterns,
 )
 
 # Define the reward component weights globally
@@ -622,166 +623,20 @@ def _calculate_similarity_and_penalties(responses: list, uids: list, seed_names:
     Returns:
         A tuple containing the updated rewards and detailed_metrics list.
     """
-    num_miners = len(responses)
-    duplication_penalties = np.zeros(num_miners)
-    special_char_penalties = np.zeros(num_miners)
-    signature_penalties = np.zeros(num_miners)
-    collusion_penalties = np.zeros(num_miners)  # New penalty for collusion
-    # Track special character usage for observability
-    special_char_counts = np.zeros(num_miners, dtype=int)
-    total_variations_counts = np.zeros(num_miners, dtype=int)
-    special_char_ratios = np.zeros(num_miners)
-    all_miner_variations = []
-    all_normalized_sets = []
-    all_signatures = []
+    
+    cheating_results = detect_cheating_patterns(responses, uids, rewards, seed_names)
 
-
-    for i in range(num_miners):
-        response = responses[i]
-        
-        # Calculate penalty for excessive use of special characters
-        if hasattr(response, 'variations') and response.variations:
-            special_char_variations_count = 0
-            total_variations_count = 0
-            for name in response.variations:
-                name_variations = response.variations.get(name, [])
-                total_variations_count += len(name_variations)
-                for var in name_variations:
-                    if any(not c.isalnum() and not c.isspace() for c in var):
-                        special_char_variations_count += 1
-
-            if total_variations_count > 0:
-                special_char_ratio = special_char_variations_count / total_variations_count
-                special_char_counts[i] = special_char_variations_count
-                total_variations_counts[i] = total_variations_count
-                special_char_ratios[i] = special_char_ratio
-                if special_char_ratio > 0.5:
-                    penalty = (special_char_ratio - 0.5) / 0.5
-                    special_char_penalties[i] = min(penalty, 1.0) # Cap penalty at 100%
-            else:
-                # No variations
-                special_char_counts[i] = 0
-                total_variations_counts[i] = 0
-                special_char_ratios[i] = 0.0
- 
-        if not hasattr(response, 'variations') or not response.variations:
-            all_miner_variations.append(set())
-            all_normalized_sets.append(set())
-            all_signatures.append("")
-            continue
-
-        # Build per-name normalized sets for this miner
-        miner_normalized_sets: Dict[str, Set[str]] = {}
-        miner_map_for_signature: Dict[str, list] = {}
-        has_any_variations = False
-        
-        for name in seed_names:
-            if name in response.variations and response.variations[name]:
-                has_any_variations = True
-                canon_list = [var for var in response.variations.get(name, [])]
-                miner_map_for_signature[name] = canon_list
-                miner_normalized_sets[name] = build_normalized_set(canon_list)
-
-        if not has_any_variations:
-            all_normalized_sets.append(None)
-            all_signatures.append(None)
-            continue
-        
-        all_normalized_sets.append(miner_normalized_sets)
-        all_signatures.append(hash_signature(miner_map_for_signature))
-
-    # Build groups by reward closeness
-    # 1) Exact same up to 15 decimals
-    fmt15 = [f"{r:.15f}" for r in rewards]
-    buckets_exact: Dict[str, List[int]] = {}
-    for idx, key in enumerate(fmt15):
-        buckets_exact.setdefault(key, []).append(idx)
-    # 2) Near-equal within 0.0001
-    buckets_near: Dict[int, List[int]] = {}
-    for idx, r in enumerate(rewards):
-        key = int(round(r * 10000))  # bucket by 0.0001
-        buckets_near.setdefault(key, []).append(idx)
-
-    # NEW: Direct penalty for large collusion groups based on identical scores
-    COLLUSION_GROUP_SIZE_THRESHOLD = 5
-    for bucket_indices in buckets_exact.values():
-        if len(bucket_indices) > COLLUSION_GROUP_SIZE_THRESHOLD:
-            # Only apply collusion penalty for scores less than 0.95
-            if rewards[bucket_indices[0]] < 0.95:
-                bt.logging.warning(f"Large collusion group detected with {len(bucket_indices)} members with score < 0.95. Applying direct penalty.")
-                penalty_value = 0.75  # A very strong penalty for blatant collusion
-                for i in bucket_indices:
-                    collusion_penalties[i] = max(collusion_penalties[i], penalty_value)
-
-    # Helper to apply duplication penalties for a set of indices using strict thresholds
-    def penalize_group(indices: List[int], strict: bool) -> None:
-        if len(indices) < 2:
-            return
-        
-        # Filter out invalid miners from this group
-        valid_indices = [i for i in indices if all_normalized_sets[i] is not None]
-        if len(valid_indices) < 2:
-            return
-
-        # Pass the list of per-name dictionaries to the new function
-        group_sets = [all_normalized_sets[i] for i in valid_indices]
-        metrics_local = pairwise_similarity_metrics(group_sets)
-        
-        for k, (max_avg_overlap, max_avg_jaccard) in enumerate(metrics_local):
-            i = valid_indices[k]
-            if strict:
-                # AGGRESSIVE thresholds for IDENTICAL scores
-                thr_overlap, thr_jacc = 0.75, 0.70
-            else:
-                # Looser thresholds for near-equal rewards
-                thr_overlap, thr_jacc = 0.80, 0.70
-            
-            if max_avg_overlap > thr_overlap or max_avg_jaccard > thr_jacc:
-                overlap_pen = max(0.0, (max_avg_overlap - thr_overlap) / max(1e-6, 1.0 - thr_overlap))
-                jaccard_pen = max(0.0, (max_avg_jaccard - thr_jacc) / max(1e-6, 1.0 - thr_jacc))
-                penalty = min(1.0, max(overlap_pen, jaccard_pen))
-                duplication_penalties[i] = max(duplication_penalties[i], penalty)
-
-    # Exact-copy signature detection only within same-score buckets
-    sig_to_indices: Dict[str, List[int]] = {}
-    for idx, sig in enumerate(all_signatures):
-        if not sig:
-            continue
-        sig_to_indices.setdefault(sig, []).append(idx)
-    for indices in sig_to_indices.values():
-        if len(indices) > 1:
-            for idx in indices:
-                signature_penalties[idx] = max(signature_penalties[idx], 0.8)
-
-    # Apply penalties for exact-equal reward buckets
-    for idxs in buckets_exact.values():
-        penalize_group(idxs, strict=True)
-    # Apply penalties for near-equal reward buckets
-    for idxs in buckets_near.values():
-        penalize_group(idxs, strict=False)
-
-    # Add a cross-group similarity check for all valid miners to catch blatant copying
-    bt.logging.info("Performing cross-group similarity check on all valid miners.")
-    valid_indices = [i for i, s in enumerate(all_normalized_sets) if s is not None]
-    for i in range(len(valid_indices)):
-        for j in range(i + 1, len(valid_indices)):
-            idx1 = valid_indices[i]
-            idx2 = valid_indices[j]
-            set1 = all_normalized_sets[idx1]
-            set2 = all_normalized_sets[idx2]
-
-            overlap = overlap_coefficient(set1, set2)
-            jac = jaccard(set1, set2)
-
-            # High threshold for blatant copying
-            if overlap > 0.95 or jac > 0.90:
-                bt.logging.warning(f"High cross-group similarity found between miner {uids[idx1]} and {uids[idx2]}. Overlap: {overlap:.2f}, Jaccard: {jac:.2f}")
-                penalty = 0.5  # Significant penalty
-                duplication_penalties[idx1] = max(duplication_penalties[idx1], penalty)
-                duplication_penalties[idx2] = max(duplication_penalties[idx2], penalty)
-
+    duplication_penalties = cheating_results["duplication_penalties"]
+    signature_penalties = cheating_results["signature_penalties"]
+    collusion_penalties = cheating_results["collusion_penalties"]
+    special_char_penalties = cheating_results["special_char_penalties"]
+    special_char_ratios = cheating_results["special_char_ratios"]
+    special_char_counts = cheating_results["special_char_counts"]
+    total_variations_counts = cheating_results["total_variations_counts"]
+    
     # Apply penalties and update metrics
     updated_rewards = np.copy(rewards)
+    num_miners = len(responses)
     for i in range(num_miners):
         uid = uids[i]
         total_penalty = 0
