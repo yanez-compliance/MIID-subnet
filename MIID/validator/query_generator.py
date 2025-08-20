@@ -147,7 +147,18 @@ def _run_judge_model(
                         # Treat 'rule' as implicitly satisfied via other fields; do not add a generic soft issue
                         pass
                     else:
-                        mapped_issues.append(soft_issue_map[key])
+                        # Provide more specific rule information when available
+                        if isinstance(rule_pct_val, int) and rule_descs_list:
+                            mapped_issues.append(f"Specify rule-based transformations: {rule_pct_val}% of variations should follow these rules: {'; '.join(rule_descs_list)}.")
+                        elif isinstance(rule_pct_val, int):
+                            mapped_issues.append(f"Specify rule-based transformations: {rule_pct_val}% of variations should follow transformation rules.")
+                        elif rule_descs_list:
+                            mapped_issues.append(f"Specify rule-based transformations: Apply these rules: {'; '.join(rule_descs_list)}.")
+                        else:
+                            mapped_issues.append(soft_issue_map[key])
+                else:
+                    # Fallback to generic message only when no specific data is available
+                    mapped_issues.append(soft_issue_map[key])
 
             # Variation count
             present_vc = present.get('variation_count')
@@ -518,9 +529,9 @@ class QueryGenerator:
         # Prepare structured expectations for the judge so we can reconstruct
         # issues using canonical phrasing (explicit expected specs rather than generic mentions).
         soft_issue_map = {
-            "phonetic": "Mention phonetic similarity requirements.",
-            "orthographic": "Mention orthographic similarity requirements.",
-            "rule": "Mention rule-based transformation requirement.",
+            "phonetic": "Specify phonetic similarity requirements.",
+            "orthographic": "Specify orthographic similarity requirements.",
+            "rule": "Specify rule-based transformation requirements.",
         }
 
         variation_count = labels.get("variation_count") if labels else None
