@@ -15,15 +15,6 @@ def check_uid_availability(
     Returns:
         bool: True if uid is available, False otherwise
     """
-    # Filter non serving axons.
-    bt.logging.warning(f"#########################################Metagraph: {metagraph}#########################################")
-    bt.logging.warning(f"#########################################Metagraph type: {type(metagraph)}#########################################")
-    bt.logging.warning(f"#########################################Metagraph n: {metagraph.n.item()}#########################################")
-    bt.logging.warning(f"#########################################Metagraph axons: {metagraph.axons}#########################################")
-    bt.logging.warning(f"#########################################Metagraph axons type: {type(metagraph.axons)}#########################################")
-    bt.logging.warning(f"#########################################Metagraph axons[uid]: {metagraph.axons[uid]}#########################################")
-    bt.logging.warning(f"#########################################Metagraph axons[uid] type: {type(metagraph.axons[uid])}#########################################")
-    bt.logging.warning(f"#########################################Metagraph axons[uid] is serving: {metagraph.axons[uid].is_serving}#########################################")
     if not metagraph.axons[uid].is_serving:
         return False
     # Filter validator permit > 1024 stake.
@@ -46,6 +37,15 @@ def get_random_uids(self, k: int, exclude: List[int] = None) -> np.ndarray:
     """
     candidate_uids = []
     avail_uids = []
+    # Filter non serving axons.
+    bt.logging.warning(f"#########################################Metagraph: {metagraph}#########################################")
+    bt.logging.warning(f"#########################################Metagraph type: {type(metagraph)}#########################################")
+    bt.logging.warning(f"#########################################Metagraph n: {metagraph.n.item()}#########################################")
+    bt.logging.warning(f"#########################################Metagraph axons: {metagraph.axons}#########################################")
+    bt.logging.warning(f"#########################################Metagraph axons type: {type(metagraph.axons)}#########################################")
+    bt.logging.warning(f"#########################################Metagraph axons[uid]: {metagraph.axons[uid]}#########################################")
+    bt.logging.warning(f"#########################################Metagraph axons[uid] type: {type(metagraph.axons[uid])}#########################################")
+    bt.logging.warning(f"#########################################Metagraph axons[uid] is serving: {metagraph.axons[uid].is_serving}#########################################")
 
     for uid in range(self.metagraph.n.item()):
         uid_is_available = check_uid_availability(
