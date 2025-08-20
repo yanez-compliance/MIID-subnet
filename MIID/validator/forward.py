@@ -351,14 +351,35 @@ async def forward(self):
             "model_used": successful_model,  # Actual model that succeeded
             "timeout_used": successful_timeout,  # Actual timeout that succeeded
             "generation_time": challenge_end_time - challenge_start_time,
-            "generation_log": generation_log
+            "generation_log": generation_log,
+            # Enhanced generation details
+            "generation_attempts": generation_log.get("attempts", []),
+            "generation_decision": generation_log.get("decision", "unknown"),
+            "final_template": generation_log.get("final_template", query_template),
+            "total_attempts": len(generation_log.get("attempts", [])),
+            "successful_attempt_index": next((i for i, attempt in enumerate(generation_log.get("attempts", [])) 
+                                           if attempt.get("status") in ["success", "success_after_repair", "proceeded_with_invalid_template"]), None)
         },
         "query_validation": {
             "judge_enabled": self.query_generator.use_judge_model,
             "judge_model_used": successful_judge_model,  # Judge model that succeeded (if any)
             "judge_timeout_used": successful_judge_timeout,  # Judge timeout that succeeded (if any)
             "judge_strict_mode": self.query_generator.judge_strict_mode,
-            "judge_on_static_pass": self.query_generator.judge_on_static_pass
+            "judge_on_static_pass": self.query_generator.judge_on_static_pass,
+            # Enhanced validation details from generation_log
+            "validation_details": generation_log.get("validation", {}),
+            "static_issues": generation_log.get("validation", {}).get("static_issues", []),
+            "judge_issues": generation_log.get("validation", {}).get("judge_issues", []),
+            "final_issues": generation_log.get("validation", {}).get("final_issues", []),
+            "validation_decision": generation_log.get("validation", {}).get("decision", "unknown"),
+            # Validation summary for quick insights
+            "validation_summary": {
+                "static_checks_passed": len(generation_log.get("validation", {}).get("static_issues", [])) == 0,
+                "judge_was_used": successful_judge_model is not None,
+                "judge_found_issues": len(generation_log.get("validation", {}).get("judge_issues", [])) > 0,
+                "final_issues_count": len(generation_log.get("validation", {}).get("final_issues", [])),
+                "template_has_hints": "[VALIDATION HINTS]" in query_template if query_template else False
+            }
         },
         "responses": {},
         "rewards": {}

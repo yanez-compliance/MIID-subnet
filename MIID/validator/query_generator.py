@@ -822,7 +822,8 @@ class QueryGenerator:
                 "decision": "Used default query as configured.",
                 "final_template": simple_template,
                 "labels": labels,
-                "validation": validation_details
+                "validation": validation_details,
+                "attempts": []  # No attempts for default query
             }
             return simple_template, labels, None, None, successful_judge_model, successful_judge_timeout, generation_log
         
@@ -967,6 +968,8 @@ class QueryGenerator:
                                     generation_log["attempts"].append(attempt_log)
                                     generation_log["decision"] = "Used repaired template from this attempt."
                                     generation_log["final_template"] = repaired
+                                    # Add validation details to generation_log for consistency
+                                    generation_log["validation"] = validation_details
                                     return repaired, labels, model, timeout, last_successful_judge_model, last_successful_judge_timeout, generation_log
                             except Exception as rep_e:
                                 bt.logging.error(f"Repair attempt failed: {rep_e}")
@@ -1002,6 +1005,8 @@ class QueryGenerator:
                             generation_log["attempts"].append(attempt_log)
                             generation_log["decision"] = "Proceeded with invalid template from this attempt after adding hints."
                             generation_log["final_template"] = query_template
+                            # Add validation details to generation_log for consistency
+                            generation_log["validation"] = validation_details
                             return query_template, labels, model, timeout, last_successful_judge_model, last_successful_judge_timeout, generation_log
 
                     if deduped_issues:
@@ -1030,6 +1035,8 @@ class QueryGenerator:
                     generation_log["attempts"].append(attempt_log)
                     generation_log["decision"] = "Used template from this attempt."
                     generation_log["final_template"] = query_template
+                    # Add validation details to generation_log for consistency
+                    generation_log["validation"] = validation_details
                     return query_template, labels, model, timeout, last_successful_judge_model, last_successful_judge_timeout, generation_log
 
                 except Exception as e:
@@ -1065,6 +1072,15 @@ class QueryGenerator:
             bt.logging.info(f"🔄 Returning last LLM-generated template without regeneration")
             generation_log["decision"] = "Used last successfully generated (but unvalidated) template as a fallback."
             generation_log["final_template"] = last_model_query_template
+            # Create validation details for fallback case
+            fallback_validation = {
+                "static_issues": static_issues_from_val or [],
+                "judge_model": final_judge_model,
+                "judge_timeout": final_judge_timeout,
+                "judge_issues": llm_issues_from_val or [],
+                "final_issues": deduped_issues or []
+            }
+            generation_log["validation"] = fallback_validation
             return last_model_query_template, labels, None, None, final_judge_model, final_judge_timeout, generation_log
         
         # If we never received an LLM template at all, fall back to simple_template, but validate and append hints
@@ -1076,6 +1092,15 @@ class QueryGenerator:
             simple_template = _append_hint_section(simple_template, "VALIDATION HINTS", deduped_issues)
         generation_log["decision"] = "Fell back to simple template after all LLM generation attempts failed."
         generation_log["final_template"] = simple_template
+        # Create validation details for simple fallback case
+        simple_fallback_validation = {
+            "static_issues": static_issues_from_val or [],
+            "judge_model": final_judge_model,
+            "judge_timeout": final_judge_timeout,
+            "judge_issues": llm_issues_from_val or [],
+            "final_issues": deduped_issues or []
+        }
+        generation_log["validation"] = simple_fallback_validation
         return simple_template, labels, None, None, final_judge_model, final_judge_timeout, generation_log
     
     async def build_queries(self) -> Tuple[List[Dict[str, Any]], str, Dict[str, Any], str, int, str, int, Dict[str, Any]]:
