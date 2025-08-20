@@ -211,7 +211,15 @@ class Validator(BaseValidatorNeuron):
         # Get fallback models
         fallback_models = getattr(self.config.neuron, 'ollama_fallback_models', ['llama3.2:latest', 'tinyllama:latest'])
         
-        all_models = [primary_model] + fallback_models
+        # Also include judge model(s)
+        primary_judge_model = getattr(self.config.neuron, 'ollama_judge_model', 'gemma3:latest')
+        judge_fallback_models = getattr(self.config.neuron, 'ollama_judge_fallback_models', ['llama3.2:latest', 'tinyllama:latest'])
+
+        # Build unique ordered list
+        all_models = []
+        for m in [primary_model, *fallback_models, primary_judge_model, *judge_fallback_models]:
+            if m and m not in all_models:
+                all_models.append(m)
         
         for model_name in all_models:
             try:
