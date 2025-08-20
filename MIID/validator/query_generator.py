@@ -361,40 +361,64 @@ class QueryGenerator:
                 # Look for standalone percentage tokens like "20%" (avoid matching 120% etc.)
                 return re.search(rf"(?<!\d){percent}%", text) is not None
 
-            # Phonetic similarity checks - just check for exact percentages and levels
+            # Phonetic similarity checks - flexible pattern matching
             phonetic_cfg = labels.get("phonetic_similarity") or {}
             if isinstance(phonetic_cfg, dict) and phonetic_cfg:
                 expected_phonetic_tokens = []
-                missing_items = []
+                all_found = True
                 for level, frac in phonetic_cfg.items():
                     pct = int(frac * 100)
                     token = f"{pct}% {level}"
                     expected_phonetic_tokens.append(token)
-                    # Check for exact percentage and exact level name
-                    if f"{pct}%" not in query_template:
-                        missing_items.append(f"{pct}%")
-                    if level not in query_template:
-                        missing_items.append(level)
+                    
+                    # More flexible checking - look for percentage and level in proximity
+                    # Check if both percentage and level appear in the query (case-insensitive for level)
+                    pct_found = f"{pct}%" in query_template
+                    level_found = level.lower() in query_template.lower()
+                    
+                    # Also check for patterns like "70% Light variations" or "incorporating 70% Light"
+                    pattern_found = any([
+                        f"{pct}% {level}" in query_template,
+                        f"{pct}% {level.lower()}" in query_template.lower(),
+                        f"incorporating {pct}% {level}" in query_template,
+                        f"{pct}% {level} variation" in query_template.lower(),
+                    ])
+                    
+                    if not (pct_found and level_found) and not pattern_found:
+                        all_found = False
+                        break
                 
-                if missing_items:
+                if not all_found:
                     phonetic_hint = f"Phonetic similarity: {', '.join(expected_phonetic_tokens)}."
 
-            # Orthographic similarity checks - just check for exact percentages and levels
+            # Orthographic similarity checks - flexible pattern matching
             orthographic_cfg = labels.get("orthographic_similarity") or {}
             if isinstance(orthographic_cfg, dict) and orthographic_cfg:
                 expected_orthographic_tokens = []
-                missing_items = []
+                all_found = True
                 for level, frac in orthographic_cfg.items():
                     pct = int(frac * 100)
                     token = f"{pct}% {level}"
                     expected_orthographic_tokens.append(token)
-                    # Check for exact percentage and exact level name
-                    if f"{pct}%" not in query_template:
-                        missing_items.append(f"{pct}%")
-                    if level not in query_template:
-                        missing_items.append(level)
+                    
+                    # More flexible checking - look for percentage and level in proximity
+                    # Check if both percentage and level appear in the query (case-insensitive for level)
+                    pct_found = f"{pct}%" in query_template
+                    level_found = level.lower() in query_template.lower()
+                    
+                    # Also check for patterns like "70% Light variations" or "incorporating 70% Light"
+                    pattern_found = any([
+                        f"{pct}% {level}" in query_template,
+                        f"{pct}% {level.lower()}" in query_template.lower(),
+                        f"incorporating {pct}% {level}" in query_template,
+                        f"{pct}% {level} variation" in query_template.lower(),
+                    ])
+                    
+                    if not (pct_found and level_found) and not pattern_found:
+                        all_found = False
+                        break
                 
-                if missing_items:
+                if not all_found:
                     orthographic_hint = f"Orthographic similarity: {', '.join(expected_orthographic_tokens)}."
 
             # Rule-based checks - check for exact percentage and exact rule descriptions
