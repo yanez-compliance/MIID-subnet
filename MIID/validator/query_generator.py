@@ -850,7 +850,7 @@ class QueryGenerator:
         IMPORTANT FORMATTING REQUIREMENTS:
         1. The query MUST use {{name}} as a placeholder for the target name.
         2. Format as a natural language request that explicitly states all requirements.
-        3. Include both the similarity requirements AND the rule-based transformation requirements in the query.
+        3. Include both the similarity requirements (phonetic and orthographic) AND the rule-based transformation requirements in the query.
         
         Example format: "Generate {variation_count} variations of {{name}}, ensuring phonetic similarity ({phonetic_spec}) and orthographic similarity ({orthographic_spec}). Approximately {rule_percentage}% of the total variations should follow these rule-based transformations: {rule_template}"
         """

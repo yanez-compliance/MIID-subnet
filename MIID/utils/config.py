@@ -348,7 +348,7 @@ def add_validator_args(cls, parser):
         '--neuron.ollama_judge_model',
         type=str,
         help="The Ollama model to use for judging query templates (default: llama3.2:latest)",
-        default="gemma3:latest"
+        default="mistral:latest"
     )
 
     parser.add_argument(
