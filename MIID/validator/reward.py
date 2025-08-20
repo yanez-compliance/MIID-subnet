@@ -696,7 +696,7 @@ def _calculate_similarity_and_penalties(responses: list, uids: list, seed_names:
     buckets_exact: Dict[str, List[int]] = {}
     for idx, key in enumerate(fmt15):
         buckets_exact.setdefault(key, []).append(idx)
-    # 2) Near-equal within 0.0001 (more precise)
+    # 2) Near-equal within 0.0001
     buckets_near: Dict[int, List[int]] = {}
     for idx, r in enumerate(rewards):
         key = int(round(r * 10000))  # bucket by 0.0001
