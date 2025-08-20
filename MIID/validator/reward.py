@@ -624,6 +624,11 @@ def _calculate_similarity_and_penalties(responses: list, uids: list, seed_names:
         A tuple containing the updated rewards and detailed_metrics list.
     """
     
+    bt.logging.info(f"\n{'='*60}")
+    bt.logging.info(f"🔍 CHEATING DETECTION ANALYSIS")
+    bt.logging.info(f"{'='*60}")
+    bt.logging.info(f"Analyzing {len(uids)} miners for cheating patterns...")
+    
     cheating_results = detect_cheating_patterns(responses, uids, rewards, seed_names)
 
     duplication_penalties = cheating_results["duplication_penalties"]
@@ -633,6 +638,75 @@ def _calculate_similarity_and_penalties(responses: list, uids: list, seed_names:
     special_char_ratios = cheating_results["special_char_ratios"]
     special_char_counts = cheating_results["special_char_counts"]
     total_variations_counts = cheating_results["total_variations_counts"]
+    
+    # Analyze penalty patterns for summary
+    penalized_miners = []
+    collusion_groups = []
+    duplication_pairs = []
+    signature_duplicates = []
+    special_char_offenders = []
+    
+    # Collect penalty statistics
+    for i, uid in enumerate(uids):
+        total_penalty = 0
+        penalties_applied = []
+        
+        if collusion_penalties[i] > 0:
+            total_penalty += collusion_penalties[i]
+            penalties_applied.append(f"collusion({collusion_penalties[i]:.2f})")
+            collusion_groups.append(uid)
+            
+        if duplication_penalties[i] > 0:
+            total_penalty += duplication_penalties[i]
+            penalties_applied.append(f"duplication({duplication_penalties[i]:.2f})")
+            duplication_pairs.append(uid)
+            
+        if signature_penalties[i] > 0:
+            total_penalty += signature_penalties[i]
+            penalties_applied.append(f"signature({signature_penalties[i]:.2f})")
+            signature_duplicates.append(uid)
+            
+        if special_char_penalties[i] > 0:
+            total_penalty += special_char_penalties[i]
+            penalties_applied.append(f"special_chars({special_char_penalties[i]:.2f})")
+            special_char_offenders.append(uid)
+            
+        if total_penalty > 0:
+            penalized_miners.append((uid, total_penalty, penalties_applied))
+    
+    # Log summary of findings
+    bt.logging.info(f"\n📊 CHEATING DETECTION SUMMARY:")
+    bt.logging.info(f"  • Total miners analyzed: {len(uids)}")
+    bt.logging.info(f"  • Miners with penalties: {len(penalized_miners)}")
+    bt.logging.info(f"  • Honest miners: {len(uids) - len(penalized_miners)}")
+    
+    if penalized_miners:
+        bt.logging.info(f"\n🚨 CHEATING PATTERNS DETECTED:")
+        
+        if collusion_groups:
+            bt.logging.info(f"  • Collusion groups: {len(collusion_groups)} miners")
+            bt.logging.info(f"    Miners: {', '.join(str(uid) for uid in collusion_groups)}")
+            
+        if duplication_pairs:
+            bt.logging.info(f"  • Duplication pairs: {len(duplication_pairs)} miners")
+            bt.logging.info(f"    Miners: {', '.join(str(uid) for uid in duplication_pairs)}")
+            
+        if signature_duplicates:
+            bt.logging.info(f"  • Signature duplicates: {len(signature_duplicates)} miners")
+            bt.logging.info(f"    Miners: {', '.join(str(uid) for uid in signature_duplicates)}")
+            
+        if special_char_offenders:
+            bt.logging.info(f"  • Special character abuse: {len(special_char_offenders)} miners")
+            bt.logging.info(f"    Miners: {', '.join(str(uid) for uid in special_char_offenders)}")
+            
+        bt.logging.info(f"\n⚠️  PENALTY BREAKDOWN:")
+        for uid, total_penalty, penalties in penalized_miners:
+            bt.logging.info(f"  • Miner {uid}: {total_penalty:.3f} total penalty [{', '.join(penalties)}]")
+    else:
+        bt.logging.info(f"\n✅ NO CHEATING DETECTED")
+        bt.logging.info(f"  All {len(uids)} miners appear to be honest")
+    
+    bt.logging.info(f"\n{'='*60}")
     
     # Apply penalties and update metrics
     updated_rewards = np.copy(rewards)
@@ -653,7 +727,6 @@ def _calculate_similarity_and_penalties(responses: list, uids: list, seed_names:
         if collusion_penalties[i] > 0:
             penalty_amount = collusion_penalties[i]
             total_penalty += penalty_amount
-            bt.logging.info(f"Applying collusion penalty of {penalty_amount:.2f} to miner {uid}")
             if i < len(detailed_metrics):
                 miner_metrics = detailed_metrics[i]
                 miner_metrics.setdefault('penalties', {})
@@ -663,7 +736,6 @@ def _calculate_similarity_and_penalties(responses: list, uids: list, seed_names:
         if duplication_penalties[i] > 0:
             penalty_amount = duplication_penalties[i]
             total_penalty += penalty_amount
-            bt.logging.info(f"Applying duplication penalty of {penalty_amount:.2f} to miner {uid}")
             if i < len(detailed_metrics):
                 miner_metrics = detailed_metrics[i]
                 miner_metrics.setdefault('penalties', {})
@@ -673,7 +745,6 @@ def _calculate_similarity_and_penalties(responses: list, uids: list, seed_names:
         if signature_penalties[i] > 0:
             penalty_amount = signature_penalties[i]
             total_penalty += penalty_amount
-            bt.logging.info(f"Applying signature-copy penalty of {penalty_amount:.2f} to miner {uid}")
             if i < len(detailed_metrics):
                 miner_metrics = detailed_metrics[i]
                 miner_metrics.setdefault('penalties', {})
@@ -683,7 +754,6 @@ def _calculate_similarity_and_penalties(responses: list, uids: list, seed_names:
         if special_char_penalties[i] > 0:
             penalty_amount = special_char_penalties[i]
             total_penalty += penalty_amount
-            bt.logging.info(f"Applying special character penalty of {penalty_amount:.2f} to miner {uid}")
             if i < len(detailed_metrics):
                 miner_metrics = detailed_metrics[i]
                 miner_metrics.setdefault('penalties', {})
@@ -705,6 +775,9 @@ def _calculate_similarity_and_penalties(responses: list, uids: list, seed_names:
                 miner_metrics['penalties']['overall_total_penalty'] = float(min(1.0, pre_total_penalty + total_penalty))
                 detailed_metrics[i]['final_reward'] = penalized_reward
 
+    bt.logging.info(f"✅ Cheating detection and penalty application completed")
+    bt.logging.info(f"{'='*60}\n")
+    
     return updated_rewards, detailed_metrics
 
 
