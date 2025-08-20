@@ -348,7 +348,7 @@ def add_validator_args(cls, parser):
         '--neuron.ollama_judge_model',
         type=str,
         help="The Ollama model to use for judging query templates (default: llama3.2:latest)",
-        default="llama3.1:latest"
+        default="gemma3:latest"
     )
 
     parser.add_argument(
@@ -392,7 +392,7 @@ def add_validator_args(cls, parser):
         '--neuron.judge_on_static_pass',
         action='store_true',
         help="Run LLM judge even when static checks pass (default: disabled)",
-        default=False
+        default=True
     )
 
     parser.add_argument(
