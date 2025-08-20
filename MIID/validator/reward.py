@@ -706,10 +706,12 @@ def _calculate_similarity_and_penalties(responses: list, uids: list, seed_names:
     COLLUSION_GROUP_SIZE_THRESHOLD = 5
     for bucket_indices in buckets_exact.values():
         if len(bucket_indices) > COLLUSION_GROUP_SIZE_THRESHOLD:
-            bt.logging.warning(f"Large collusion group detected with {len(bucket_indices)} members. Applying direct penalty.")
-            penalty_value = 0.75  # A very strong penalty for blatant collusion
-            for i in bucket_indices:
-                collusion_penalties[i] = max(collusion_penalties[i], penalty_value)
+            # Only apply collusion penalty for scores less than 0.95
+            if rewards[bucket_indices[0]] < 0.95:
+                bt.logging.warning(f"Large collusion group detected with {len(bucket_indices)} members with score < 0.95. Applying direct penalty.")
+                penalty_value = 0.75  # A very strong penalty for blatant collusion
+                for i in bucket_indices:
+                    collusion_penalties[i] = max(collusion_penalties[i], penalty_value)
 
     # Helper to apply duplication penalties for a set of indices using strict thresholds
     def penalize_group(indices: List[int], strict: bool) -> None:
@@ -729,9 +731,9 @@ def _calculate_similarity_and_penalties(responses: list, uids: list, seed_names:
             i = valid_indices[k]
             if strict:
                 # AGGRESSIVE thresholds for IDENTICAL scores
-                thr_overlap, thr_jacc = 0.70, 0.65
+                thr_overlap, thr_jacc = 0.75, 0.70
             else:
-                # Looser for near-equal rewards (lowered threshold)
+                # Looser thresholds for near-equal rewards
                 thr_overlap, thr_jacc = 0.80, 0.70
             
             if max_avg_overlap > thr_overlap or max_avg_jaccard > thr_jacc:

@@ -46,9 +46,7 @@ def get_random_uids(self, k: int, exclude: List[int] = None) -> np.ndarray:
     """
     candidate_uids = []
     avail_uids = []
-    bt.logging.info(f"#########################################Metagraph: {self.metagraph}#########################################")
-    bt.logging.info(f"#########################################Metagraph type: {type(self.metagraph)}#########################################")
-    bt.logging.info(f"#########################################Metagraph n: {self.metagraph.n.item()}#########################################")
+
     for uid in range(self.metagraph.n.item()):
         uid_is_available = check_uid_availability(
             self.metagraph, uid, self.config.neuron.vpermit_tao_limit
@@ -60,20 +58,15 @@ def get_random_uids(self, k: int, exclude: List[int] = None) -> np.ndarray:
             avail_uids.append(uid)
             if uid_is_not_excluded:
                 candidate_uids.append(uid)
-    bt.logging.info(f"#########################################Candidate uids: {candidate_uids}#########################################")
-    bt.logging.info(f"#########################################Available uids: {avail_uids}#########################################")
+
     # If k is larger than the number of available uids, set k to the number of available uids.
     k = min(k, len(avail_uids))
-    bt.logging.info(f"#########################################K: {k}#########################################")
     # Check if candidate_uids contain enough for querying, if not grab all avaliable uids
     available_uids = candidate_uids
-    bt.logging.info(f"#########################################Available uids: {available_uids}#########################################")
     if len(candidate_uids) < k:
         available_uids += random.sample(
             [uid for uid in avail_uids if uid not in candidate_uids],
             k - len(candidate_uids),
         )
-    bt.logging.info(f"#########################################Available uids: {available_uids}#########################################")
     uids = np.array(random.sample(available_uids, k))
-    bt.logging.info(f"#########################################Uids: {uids}#########################################")
     return uids
