@@ -328,14 +328,14 @@ def calculate_part_score(
         length_weight * length_score
     )
     
-    # DETAILED LOGGING FOR DEBUGGING 0.0 SCORES
-    bt.logging.info(f"--- DETAILED SCORE CALCULATION FOR '{original_part}' ---")
-    bt.logging.info(f"Similarity Score: {similarity_score:.4f} (Weight: {similarity_weight}) -> Contributes: {similarity_weight * similarity_score:.4f}")
-    bt.logging.info(f"Count Score: {count_score:.4f} (Weight: {count_weight}) -> Contributes: {count_weight * count_score:.4f}")
-    bt.logging.info(f"Uniqueness Score: {uniqueness_score:.4f} (Weight: {uniqueness_weight}) -> Contributes: {uniqueness_weight * uniqueness_score:.4f}")
-    bt.logging.info(f"Length Score: {length_score:.4f} (Weight: {length_weight}) -> Contributes: {length_weight * length_score:.4f}")
-    bt.logging.info(f"FINAL PART SCORE for '{original_part}': {final_score:.4f}")
-    bt.logging.info(f"--- END DETAILED CALCULATION ---")
+    # # DETAILED LOGGING FOR DEBUGGING 0.0 SCORES
+    # bt.logging.info(f"--- DETAILED SCORE CALCULATION FOR '{original_part}' ---")
+    # bt.logging.info(f"Similarity Score: {similarity_score:.4f} (Weight: {similarity_weight}) -> Contributes: {similarity_weight * similarity_score:.4f}")
+    # bt.logging.info(f"Count Score: {count_score:.4f} (Weight: {count_weight}) -> Contributes: {count_weight * count_score:.4f}")
+    # bt.logging.info(f"Uniqueness Score: {uniqueness_score:.4f} (Weight: {uniqueness_weight}) -> Contributes: {uniqueness_weight * uniqueness_score:.4f}")
+    # bt.logging.info(f"Length Score: {length_score:.4f} (Weight: {length_weight}) -> Contributes: {length_weight * length_score:.4f}")
+    # bt.logging.info(f"FINAL PART SCORE for '{original_part}': {final_score:.4f}")
+    # bt.logging.info(f"--- END DETAILED CALCULATION ---")
     
     if final_score == 0:
         bt.logging.warning(f"Zero score for '{original_part}'. Possible reasons:")
@@ -923,9 +923,15 @@ def get_name_variation_rewards(
         detailed_metrics.append(miner_metrics)
         
     # After initial rewards are calculated, apply penalties for high similarity between miners
-    rewards, detailed_metrics = _calculate_similarity_and_penalties(
-        responses, uids, seed_names, detailed_metrics, rewards
-    )
+    try:
+        rewards, detailed_metrics = _calculate_similarity_and_penalties(
+            responses, uids, seed_names, detailed_metrics, rewards
+        )
+    except Exception as e:
+        bt.logging.error(f"Error in similarity and penalty calculation: {str(e)}")
+        bt.logging.warning("Using rewards without similarity penalties as fallback")
+        # Keep the original rewards without applying similarity penalties
+        # detailed_metrics would remain as calculated before the penalty step
     
     return rewards, detailed_metrics
 
