@@ -150,30 +150,36 @@ def calculate_part_score(
     }
     
     # 1. Check if count matches expected count with adaptive tolerance
-    # Tolerance increases with expected count to be more forgiving for larger sets
-    base_tolerance = 0.2  # 20% base tolerance
-    tolerance = base_tolerance + (0.05 * (expected_count // 10))  # Add 5% per 10 expected variations
-    tolerance = min(tolerance, 0.4)  # Cap at 40% maximum tolerance
-    
-    tolerance_range = expected_count * tolerance
-    actual_count = len(variations)
-    lower_bound = max(1, expected_count - tolerance_range)  # Ensure at least 1 variation required
-    upper_bound = expected_count + tolerance_range
-    
-    if lower_bound <= actual_count <= upper_bound:
+    # Handle case where expected_count is 0 (100% rule-based scenario)
+    if expected_count == 0:
+        # If no variations are expected for non-rule-compliant part, give full score
         count_score = 1.0
-        #bt.logging.info(f"Count score: 1.0 (within tolerance range: {lower_bound:.1f}-{upper_bound:.1f})")
+        bt.logging.info(f"Count score: 1.0 (no non-rule variations expected)")
     else:
-        if actual_count < lower_bound:
-            deviation = lower_bound - actual_count
-            #bt.logging.warning(f"Too few variations: {actual_count} < {lower_bound:.1f}")
-        else:
-            deviation = actual_count - upper_bound
-            #bt.logging.warning(f"Too many variations: {actual_count} > {upper_bound:.1f}")
+        # Tolerance increases with expected count to be more forgiving for larger sets
+        base_tolerance = 0.2  # 20% base tolerance
+        tolerance = base_tolerance + (0.05 * (expected_count // 10))  # Add 5% per 10 expected variations
+        tolerance = min(tolerance, 0.4)  # Cap at 40% maximum tolerance
         
-        # Smoother penalty curve using exponential decay
-        count_score = math.exp(-deviation / expected_count)
-        #bt.logging.info(f"Count score: {count_score:.3f} (penalty for deviation: {deviation})")
+        tolerance_range = expected_count * tolerance
+        actual_count = len(variations)
+        lower_bound = max(1, expected_count - tolerance_range)  # Ensure at least 1 variation required
+        upper_bound = expected_count + tolerance_range
+        
+        if lower_bound <= actual_count <= upper_bound:
+            count_score = 1.0
+            #bt.logging.info(f"Count score: 1.0 (within tolerance range: {lower_bound:.1f}-{upper_bound:.1f})")
+        else:
+            if actual_count < lower_bound:
+                deviation = lower_bound - actual_count
+                #bt.logging.warning(f"Too few variations: {actual_count} < {lower_bound:.1f}")
+            else:
+                deviation = actual_count - upper_bound
+                #bt.logging.warning(f"Too many variations: {actual_count} > {upper_bound:.1f}")
+            
+            # Smoother penalty curve using exponential decay
+            count_score = math.exp(-deviation / expected_count)
+            #bt.logging.info(f"Count score: {count_score:.3f} (penalty for deviation: {deviation})")
     
     # 2. Enhanced uniqueness check with similarity clustering
     unique_variations = []
@@ -430,15 +436,8 @@ def calculate_variation_quality(
         #bt.logging.info("\nCalculating rule-based compliance score:")
         target_rules = rule_based.get("selected_rules", [])
         
-        # Filter out rules that are impossible for the given name structure
-        for rule in target_rules:
-            if rule in ('name_parts_permutations', 'initial_only_first_name', 'shorten_name_to_initials', 'shorten_name_to_abbreviations') and len(original_name.split()) < 2:
-                bt.logging.debug(f"⚠️ Skipping impossible rule '{rule}' for single-part name '{original_name}'")
-                continue
-            if rule in ('replace_spaces_with_random_special_characters', 'remove_all_spaces') and ' ' not in original_name:
-                bt.logging.debug(f"⚠️ Skipping impossible rule '{rule}' for name without spaces '{original_name}'")
-                continue
-            effective_target_rules.append(rule)
+        # The pre-filtering logic has been moved to evaluate_rule_compliance
+        effective_target_rules = target_rules
 
         if effective_target_rules:
             target_percentage = rule_based.get("rule_percentage", 30) / 100.0  # Convert to fraction
