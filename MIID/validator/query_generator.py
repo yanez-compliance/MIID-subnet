@@ -293,6 +293,8 @@ class QueryGenerator:
         bt.logging.debug(f"⚙️ use_default_query: {self.use_default_query}")
         bt.logging.info(f"QueryGenerator initialized with use_default_query={self.use_default_query}")
 
+        # Validator will ensure Ollama models are available. No local pulls here.
+
     def validate_query_template(
         self,
         query_template: str,
@@ -742,6 +744,8 @@ class QueryGenerator:
         }
 
         return True, "Query template is acceptable with clarifications", deduped_issues, static_issues, llm_issues, successful_judge_model, successful_judge_timeout, validation_details
+
+    # Model pulling is centralized in the validator. No duplicate logic here.
     
     async def generate_complex_query(
         self,
