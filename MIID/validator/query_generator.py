@@ -566,7 +566,7 @@ class QueryGenerator:
         successful_judge_model = None
         successful_judge_timeout = None
         neuron_cfg = getattr(self.config, 'neuron', self.config)
-        primary_judge_model = getattr(neuron_cfg, 'ollama_judge_model', 'llama3.2:latest')
+        primary_judge_model = getattr(neuron_cfg, 'ollama_judge_model', 'mistral:latest')
         judge_fallback_models = getattr(neuron_cfg, 'ollama_judge_fallback_models', [])
         # Prefer cached last success first, then primary, then fallbacks (deduped)
         candidate_models = []
