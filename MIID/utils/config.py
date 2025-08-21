@@ -344,6 +344,78 @@ def add_validator_args(cls, parser):
         default=900, # MIID: Maximum timeout limit for adaptive timeout calculation
     )
 
+    parser.add_argument(
+        '--neuron.ollama_judge_model',
+        type=str,
+        help="The Ollama model to use for judging query templates (default: llama3.2:latest)",
+        default="mistral:latest"
+    )
+
+    parser.add_argument(
+        '--neuron.ollama_judge_timeout',
+        type=int,
+        help="Timeout for the Ollama judge request in seconds.",
+        default=60
+    )
+
+    parser.add_argument(
+        '--neuron.ollama_judge_fallback_models',
+        type=str,
+        nargs='+',
+        help="A list of fallback Ollama models to try for judging if the primary fails.",
+        default=['llama3.2:latest','tinyllama:latest']
+    )
+
+    parser.add_argument(
+        '--neuron.ollama_judge_fallback_timeouts',
+        type=int,
+        nargs='+',
+        help="A list of fallback timeouts (in seconds) to try for Ollama judge requests.",
+        default=[90,100, 120]
+    )
+
+    parser.add_argument(
+        '--neuron.use_judge_model',
+        action='store_true',
+        help="Enable LLM judge for query validation. Auto-enables if complex query generation is used.",
+        default=True
+    )
+
+    parser.add_argument(
+        '--neuron.judge_strict_mode',
+        action='store_true',
+        help="Enable strict mode for LLM judge (fails on JSON parsing errors). Default is lenient mode.",
+        default=False
+    )
+
+    parser.add_argument(
+        '--neuron.judge_on_static_pass',
+        action='store_true',
+        help="Run LLM judge even when static checks pass (default: disabled)",
+        default=False
+    )
+
+    parser.add_argument(
+        '--neuron.judge_failure_threshold',
+        type=int,
+        help="Number of consecutive judge failures before suggesting to disable judge (default: 10).",
+        default=10
+    )
+
+    parser.add_argument(
+        '--neuron.regenerate_on_invalid',
+        action='store_true',
+        help="When a generated query is structurally invalid (e.g., missing {name}), try next model/timeout. Default: False (append hints to the current query and proceed).",
+        default=False
+    )
+
+    parser.add_argument(
+        '--neuron.enable_repair_prompt',
+        action='store_true',
+        help="Attempt to repair an invalid query template by prompting the LLM with the issues and labels (default: False).",
+        default=False
+    )
+
 
 def config(cls):
     """
