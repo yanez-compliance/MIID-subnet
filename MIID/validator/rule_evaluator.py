@@ -459,19 +459,19 @@ def evaluate_rule_compliance(
     for rule in rules:
         # Rule: Name parts permutations / initials (require multi-part name)
         if rule in ('name_parts_permutations', 'initial_only_first_name', 'shorten_name_to_initials', 'shorten_name_to_abbreviations') and len(original_name.split()) < 2:
-            bt.logging.debug(f"⚠️ Skipping impossible rule '{rule}' for single-part name '{original_name}'")
+            #bt.logging.debug(f"⚠️ Skipping impossible rule '{rule}' for single-part name '{original_name}'")
             continue
         # Rule: Space removal/replacement (requires a space)
         if rule in ('replace_spaces_with_random_special_characters', 'remove_all_spaces') and ' ' not in original_name:
-            bt.logging.debug(f"⚠️ Skipping impossible rule '{rule}' for name without spaces '{original_name}'")
+            #bt.logging.debug(f"⚠️ Skipping impossible rule '{rule}' for name without spaces '{original_name}'")
             continue
         # Rule: Double letter replacement (requires double letters)
         if rule == 'replace_double_letters_with_single_letter' and not has_double_letters(original_name):
-            bt.logging.debug(f"⚠️ Skipping impossible rule '{rule}' for name without double letters '{original_name}'")
+            #bt.logging.debug(f"⚠️ Skipping impossible rule '{rule}' for name without double letters '{original_name}'")
             continue
         # Rule: Adjacent consonant swap (requires swappable adjacent consonants)
         if rule == 'swap_adjacent_consonants' and not has_diff_adjacent_consonants(original_name):
-            bt.logging.debug(f"⚠️ Skipping impossible rule '{rule}' for names with non swappable consonants '{original_name}'")
+            #bt.logging.debug(f"⚠️ Skipping impossible rule '{rule}' for names with non swappable consonants '{original_name}'")
             continue
         effective_rules.append(rule)
 
