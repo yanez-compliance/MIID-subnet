@@ -49,6 +49,7 @@ import json
 import wandb
 import os
 import shutil
+import copy
 from dotenv import load_dotenv
 
 # Load environment variables from .env file (e.g., vali.env)
@@ -183,6 +184,9 @@ class Validator(BaseValidatorNeuron):
         
         bt.logging.info(f"Using LLM model: {self.model_name}")
         
+        # Initialize the query generator
+        self.query_generator = QueryGenerator(self.config)
+        
         bt.logging.info("Ollama initialized")
         bt.logging.info(f"Using LLM model: {self.model_name}")
         bt.logging.info("Finished initializing Validator")
@@ -208,7 +212,15 @@ class Validator(BaseValidatorNeuron):
         # Get fallback models
         fallback_models = getattr(self.config.neuron, 'ollama_fallback_models', ['llama3.2:latest', 'tinyllama:latest'])
         
-        all_models = [primary_model] + fallback_models
+        # Also include judge model(s)
+        primary_judge_model = getattr(self.config.neuron, 'ollama_judge_model', 'gemma3:latest')
+        judge_fallback_models = getattr(self.config.neuron, 'ollama_judge_fallback_models', ['llama3.2:latest', 'tinyllama:latest'])
+
+        # Build unique ordered list
+        all_models = []
+        for m in [primary_model, *fallback_models, primary_judge_model, *judge_fallback_models]:
+            if m and m not in all_models:
+                all_models.append(m)
         
         for model_name in all_models:
             try:
@@ -425,6 +437,18 @@ class Validator(BaseValidatorNeuron):
         # Increment step count
         self.step += 1
 
+        # Create a deep copy of metrics to avoid modifying the original object, which is used elsewhere
+        metrics_for_wandb = copy.deepcopy(metrics)
+
+        # Remove the verbose 'variations' list from the metrics copy to reduce log size
+        for miner_metrics in metrics_for_wandb:
+            if isinstance(miner_metrics, dict) and 'name_metrics' in miner_metrics:
+                for name, name_data in miner_metrics['name_metrics'].items():
+                    if isinstance(name_data, dict) and 'first_name' in name_data and isinstance(name_data.get('first_name'), dict) and 'metrics' in name_data['first_name']:
+                        name_data['first_name']['metrics'].pop('variations', None)
+                    if isinstance(name_data, dict) and 'last_name' in name_data and isinstance(name_data.get('last_name'), dict) and 'metrics' in name_data['last_name']:
+                        name_data['last_name']['metrics'].pop('variations', None)
+
         # NOTE: Commented out automatic wandb run creation based on max_run_steps
         # since we now explicitly manage wandb runs to end after weights are set
         # # If we have already completed max_run_steps then we will complete the current wandb run and make a new one.
@@ -452,8 +476,8 @@ class Validator(BaseValidatorNeuron):
                 "reward": float(rewards[i]) if i < len(rewards) else 0.0
             }
             # Add detailed metrics if available and correctly structured
-            if i < len(metrics) and isinstance(metrics[i], dict):
-                 step_log["uid_metrics"][uid_str].update(metrics[i])
+            if i < len(metrics_for_wandb) and isinstance(metrics_for_wandb[i], dict):
+                 step_log["uid_metrics"][uid_str].update(metrics_for_wandb[i])
             else:
                  # Log placeholder if metrics structure is unexpected
                  step_log["uid_metrics"][uid_str]["detailed_metrics_error"] = "Metrics structure invalid or missing"

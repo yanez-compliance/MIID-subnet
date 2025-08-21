@@ -38,6 +38,14 @@ def is_space_replaced_with_special_chars(original: str, variation: str) -> bool:
     # Allow some flexibility: each space can be replaced by a special char
     return lev_distance <= len(space_positions) + 1
 
+def has_double_letters(name: str) -> bool:
+    """Check if a name has any double letters."""
+    name_lower = name.lower()
+    for i in range(len(name_lower) - 1):
+        if name_lower[i] == name_lower[i+1]:
+            return True
+    return False
+
 def is_double_letter_replaced(original: str, variation: str) -> bool:
     """Check if a double letter in the original is replaced with a single letter"""
     original_lower = original.lower()
@@ -89,6 +97,18 @@ def is_consonant(char: str) -> bool:
     """Check if a character is a consonant (case-insensitive)"""
     vowels = 'aeiou'
     return char.isalpha() and char.lower() not in vowels
+
+def has_diff_adjacent_consonants(name: str) -> bool:
+    """Check if a name has different adjacent consonants that can be swapped."""
+    vowels = "aeiou"
+    name = name.lower()
+
+    for i in range(len(name) - 1):
+        if (name[i].isalpha() and name[i] not in vowels and
+            name[i+1].isalpha() and name[i+1] not in vowels and
+            name[i] != name[i+1]):
+            return True
+    return False
 
 def is_adjacent_consonants_swapped(original: str, variation: str) -> bool:
     """Check if two adjacent consonants are swapped."""
@@ -262,6 +282,16 @@ def is_name_abbreviated(original: str, variation: str) -> bool:
     original_parts = original.split()
     variation_parts = variation.split()
     
+    # Handle single-part names (abbreviate the single word)
+    if len(original_parts) == 1:
+        if len(variation_parts) != 1:
+            return False
+        orig = original_parts[0]
+        var = variation_parts[0]
+        # Check if variation is a proper abbreviation (shorter and starts with original)
+        return len(var) < len(orig) and orig.lower().startswith(var.lower())
+    
+    # Handle multi-part names (existing logic)
     if len(original_parts) < 2 or len(original_parts) != len(variation_parts):
         return False
     
@@ -411,7 +441,8 @@ def evaluate_rule_compliance(
     rules: List[str]
 ) -> Tuple[Dict[str, List[str]], float]:
     """
-    Evaluate which variations comply with which rules
+    Evaluate which variations comply with which rules.
+    This function also filters out rules that are impossible for the given name structure.
     
     Args:
         original_name: The original name
@@ -423,16 +454,37 @@ def evaluate_rule_compliance(
         - Dictionary mapping rules to lists of compliant variations
         - Compliance ratio (compliant variations / total variations)
     """
-    if not variations or not rules:
+    # Pre-filter rules to exclude those that are impossible for the given name structure.
+    effective_rules = []
+    for rule in rules:
+        # Rule: Name parts permutations / initials (require multi-part name)
+        if rule in ('name_parts_permutations', 'initial_only_first_name', 'shorten_name_to_initials', 'shorten_name_to_abbreviations') and len(original_name.split()) < 2:
+            #bt.logging.debug(f"⚠️ Skipping impossible rule '{rule}' for single-part name '{original_name}'")
+            continue
+        # Rule: Space removal/replacement (requires a space)
+        if rule in ('replace_spaces_with_random_special_characters', 'remove_all_spaces') and ' ' not in original_name:
+            #bt.logging.debug(f"⚠️ Skipping impossible rule '{rule}' for name without spaces '{original_name}'")
+            continue
+        # Rule: Double letter replacement (requires double letters)
+        if rule == 'replace_double_letters_with_single_letter' and not has_double_letters(original_name):
+            #bt.logging.debug(f"⚠️ Skipping impossible rule '{rule}' for name without double letters '{original_name}'")
+            continue
+        # Rule: Adjacent consonant swap (requires swappable adjacent consonants)
+        if rule == 'swap_adjacent_consonants' and not has_diff_adjacent_consonants(original_name):
+            #bt.logging.debug(f"⚠️ Skipping impossible rule '{rule}' for names with non swappable consonants '{original_name}'")
+            continue
+        effective_rules.append(rule)
+
+    if not variations or not effective_rules:
         return {}, 0.0
 
     # Initialize the result dictionary
-    compliant_variations = {rule: [] for rule in rules}
+    compliant_variations = {rule: [] for rule in effective_rules}
     all_compliant_variations = set()
     
-    # For each variation, check if it complies with any of the rules
+    # For each variation, check if it complies with any of the effective rules
     for variation in variations:
-        for rule in rules:
+        for rule in effective_rules:
             if rule in RULE_EVALUATORS:
                 try:
                     if RULE_EVALUATORS[rule](original_name, variation):

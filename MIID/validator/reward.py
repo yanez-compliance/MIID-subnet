@@ -17,7 +17,7 @@
 # OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
 # DEALINGS IN THE SOFTWARE.
 import numpy as np
-from typing import List, Dict, Tuple, Any
+from typing import List, Dict, Tuple, Any, Set
 import bittensor as bt
 import Levenshtein
 import jellyfish
@@ -30,6 +30,14 @@ import random
 
 # Import rule_evaluator for rule-based compliance checking
 from MIID.validator.rule_evaluator import evaluate_rule_compliance
+from MIID.validator.cheat_detection import (
+    build_normalized_set,
+    pairwise_similarity_metrics,
+    hash_signature,
+    overlap_coefficient,
+    jaccard,
+    detect_cheating_patterns,
+)
 
 # Define the reward component weights globally
 MIID_REWARD_WEIGHTS = {
@@ -143,30 +151,36 @@ def calculate_part_score(
     }
     
     # 1. Check if count matches expected count with adaptive tolerance
-    # Tolerance increases with expected count to be more forgiving for larger sets
-    base_tolerance = 0.2  # 20% base tolerance
-    tolerance = base_tolerance + (0.05 * (expected_count // 10))  # Add 5% per 10 expected variations
-    tolerance = min(tolerance, 0.4)  # Cap at 40% maximum tolerance
-    
-    tolerance_range = expected_count * tolerance
-    actual_count = len(variations)
-    lower_bound = max(1, expected_count - tolerance_range)  # Ensure at least 1 variation required
-    upper_bound = expected_count + tolerance_range
-    
-    if lower_bound <= actual_count <= upper_bound:
+    # Handle case where expected_count is 0 (100% rule-based scenario)
+    if expected_count == 0:
+        # If no variations are expected for non-rule-compliant part, give full score
         count_score = 1.0
-        #bt.logging.info(f"Count score: 1.0 (within tolerance range: {lower_bound:.1f}-{upper_bound:.1f})")
+        bt.logging.info(f"Count score: 1.0 (no non-rule variations expected)")
     else:
-        if actual_count < lower_bound:
-            deviation = lower_bound - actual_count
-            #bt.logging.warning(f"Too few variations: {actual_count} < {lower_bound:.1f}")
-        else:
-            deviation = actual_count - upper_bound
-            #bt.logging.warning(f"Too many variations: {actual_count} > {upper_bound:.1f}")
+        # Tolerance increases with expected count to be more forgiving for larger sets
+        base_tolerance = 0.2  # 20% base tolerance
+        tolerance = base_tolerance + (0.05 * (expected_count // 10))  # Add 5% per 10 expected variations
+        tolerance = min(tolerance, 0.4)  # Cap at 40% maximum tolerance
         
-        # Smoother penalty curve using exponential decay
-        count_score = math.exp(-deviation / expected_count)
-        #bt.logging.info(f"Count score: {count_score:.3f} (penalty for deviation: {deviation})")
+        tolerance_range = expected_count * tolerance
+        actual_count = len(variations)
+        lower_bound = max(1, expected_count - tolerance_range)  # Ensure at least 1 variation required
+        upper_bound = expected_count + tolerance_range
+        
+        if lower_bound <= actual_count <= upper_bound:
+            count_score = 1.0
+            #bt.logging.info(f"Count score: 1.0 (within tolerance range: {lower_bound:.1f}-{upper_bound:.1f})")
+        else:
+            if actual_count < lower_bound:
+                deviation = lower_bound - actual_count
+                #bt.logging.warning(f"Too few variations: {actual_count} < {lower_bound:.1f}")
+            else:
+                deviation = actual_count - upper_bound
+                #bt.logging.warning(f"Too many variations: {actual_count} > {upper_bound:.1f}")
+            
+            # Smoother penalty curve using exponential decay
+            count_score = math.exp(-deviation / expected_count)
+            #bt.logging.info(f"Count score: {count_score:.3f} (penalty for deviation: {deviation})")
     
     # 2. Enhanced uniqueness check with similarity clustering
     unique_variations = []
@@ -228,11 +242,11 @@ def calculate_part_score(
         phonetic_scores.append(p_score)
         orthographic_scores.append(o_score)
         
-        if p_score < 0.3 and o_score < 0.3:
-            bt.logging.warning(
-                f"Very low similarity for variation '{variation}': "
-                f"phonetic={p_score:.3f}, orthographic={o_score:.3f}"
-            )
+        # if p_score < 0.3 and o_score < 0.3:
+        #     bt.logging.warning(
+        #         f"Very low similarity for variation '{variation}': "
+        #         f"phonetic={p_score:.3f}, orthographic={o_score:.3f}"
+        #     )
     
     # Sort scores for distribution analysis
     phonetic_scores.sort()
@@ -288,7 +302,7 @@ def calculate_part_score(
     
     # Calculate combined similarity score
     similarity_score = (phonetic_quality + orthographic_quality) / 2  # Average of both similarities
-    # bt.logging.info(f"Similarity score: {similarity_score:.3f} (phonetic: {phonetic_quality:.3f}, orthographic: {orthographic_quality:.3f})")
+    #bt.logging.info(f"Similarity score: {similarity_score:.3f} (phonetic: {phonetic_quality:.3f}, orthographic: {orthographic_quality:.3f})")
     
     # Apply minimum similarity threshold to prevent gaming
     # If similarity is very low, severely reduce the score
@@ -314,16 +328,14 @@ def calculate_part_score(
         length_weight * length_score
     )
     
-    # Detailed logging of final score components
-    # bt.logging.info(f"\nFinal score breakdown for '{original_part}':")
-    # bt.logging.info(f"  - Similarity ({similarity_weight*100:.0f}%):")
-    # bt.logging.info(f"    * Phonetic: {phonetic_quality:.3f}")
-    # bt.logging.info(f"    * Orthographic: {orthographic_quality:.3f}")
-    # bt.logging.info(f"    * Combined: {similarity_score:.3f}")
-    # bt.logging.info(f"  - Count ({count_weight*100:.0f}%): {count_score:.3f}")
-    # bt.logging.info(f"  - Uniqueness ({uniqueness_weight*100:.0f}%): {uniqueness_score:.3f}")
-    # bt.logging.info(f"  - Length ({length_weight*100:.0f}%): {length_score:.3f}")
-    # bt.logging.info(f"  - Total score: {final_score:.3f}")
+    # # DETAILED LOGGING FOR DEBUGGING 0.0 SCORES
+    # bt.logging.info(f"--- DETAILED SCORE CALCULATION FOR '{original_part}' ---")
+    # bt.logging.info(f"Similarity Score: {similarity_score:.4f} (Weight: {similarity_weight}) -> Contributes: {similarity_weight * similarity_score:.4f}")
+    # bt.logging.info(f"Count Score: {count_score:.4f} (Weight: {count_weight}) -> Contributes: {count_weight * count_score:.4f}")
+    # bt.logging.info(f"Uniqueness Score: {uniqueness_score:.4f} (Weight: {uniqueness_weight}) -> Contributes: {uniqueness_weight * uniqueness_score:.4f}")
+    # bt.logging.info(f"Length Score: {length_score:.4f} (Weight: {length_weight}) -> Contributes: {length_weight * length_score:.4f}")
+    # bt.logging.info(f"FINAL PART SCORE for '{original_part}': {final_score:.4f}")
+    # bt.logging.info(f"--- END DETAILED CALCULATION ---")
     
     if final_score == 0:
         bt.logging.warning(f"Zero score for '{original_part}'. Possible reasons:")
@@ -425,15 +437,8 @@ def calculate_variation_quality(
         #bt.logging.info("\nCalculating rule-based compliance score:")
         target_rules = rule_based.get("selected_rules", [])
         
-        # Filter out rules that are impossible for the given name structure
-        for rule in target_rules:
-            if rule in ('name_parts_permutations', 'initial_only_first_name', 'shorten_name_to_initials', 'shorten_name_to_abbreviations') and len(original_name.split()) < 2:
-                bt.logging.debug(f"Skipping impossible rule '{rule}' for single-part name '{original_name}'")
-                continue
-            if rule in ('replace_spaces_with_random_special_characters', 'remove_all_spaces') and ' ' not in original_name:
-                bt.logging.debug(f"Skipping impossible rule '{rule}' for name without spaces '{original_name}'")
-                continue
-            effective_target_rules.append(rule)
+        # The pre-filtering logic has been moved to evaluate_rule_compliance
+        effective_target_rules = target_rules
 
         if effective_target_rules:
             target_percentage = rule_based.get("rule_percentage", 30) / 100.0  # Convert to fraction
@@ -544,7 +549,7 @@ def calculate_variation_quality(
     # If rules were requested but none were applicable to this name, adjust weights
     # to base the score entirely on similarity.
     if rule_based and "selected_rules" in rule_based and not effective_target_rules:
-        bt.logging.debug(f"No rules applicable for '{original_name}', adjusting weights. Base score will be final score.")
+        bt.logging.debug(f"⚖️ No rules applicable for '{original_name}', adjusting weights. Base score will be final score.")
         base_weight = 1.0
         rule_compliance_weight = 0.0
     else:
@@ -599,13 +604,14 @@ def calculate_variation_quality(
         if rule_based and rule_compliance_score == 0 and len(rule_compliant_variations) > 0:
             bt.logging.warning("  - Zero rule compliance score on rule-compliant variations")
     
-    bt.logging.info(f"{'='*50}\n")
+    #bt.logging.info(f"{'='*50}\n")
     return final_score, detailed_metrics
 
 
 def _calculate_similarity_and_penalties(responses: list, uids: list, seed_names: list, detailed_metrics: list, rewards: np.ndarray) -> tuple:
     """
     Calculate similarity between miner responses and determine penalties for duplication.
+    Also, calculate penalties for excessive use of special characters.
 
     Args:
         responses: A list of response objects from miners.
@@ -617,69 +623,160 @@ def _calculate_similarity_and_penalties(responses: list, uids: list, seed_names:
     Returns:
         A tuple containing the updated rewards and detailed_metrics list.
     """
-    num_miners = len(responses)
-    duplication_penalties = np.zeros(num_miners)
-    all_miner_variations = []
+    
+    bt.logging.info(f"\n{'='*60}")
+    bt.logging.info(f"🔍 CHEATING DETECTION ANALYSIS")
+    bt.logging.info(f"{'='*60}")
+    bt.logging.info(f"Analyzing {len(uids)} miners for cheating patterns...")
+    
+    cheating_results = detect_cheating_patterns(responses, uids, rewards, seed_names)
 
-    for i in range(num_miners):
-        response = responses[i]
-        if not hasattr(response, 'variations') or not response.variations:
-            all_miner_variations.append(set())
-            continue
-
-        miner_vars = set()
-        for name in seed_names:
-            if name in response.variations:
-                # Normalize variations to lowercase and remove all whitespace to catch more duplicates
-                miner_vars.update("".join(var.lower().split()) for var in response.variations[name])
-        all_miner_variations.append(miner_vars)
-
-    for i in range(num_miners):
-        for j in range(i + 1, num_miners):
-            vars_i = all_miner_variations[i]
-            vars_j = all_miner_variations[j]
-
-            if not vars_i or not vars_j:
-                continue
-
-            # Use Jaccard similarity for a quick and efficient comparison
-            intersection_len = len(vars_i.intersection(vars_j))
-            union_len = len(vars_i.union(vars_j))
-
-            if union_len == 0:
-                similarity = 1.0
-            else:
-                similarity = intersection_len / union_len
+    duplication_penalties = cheating_results["duplication_penalties"]
+    signature_penalties = cheating_results["signature_penalties"]
+    collusion_penalties = cheating_results["collusion_penalties"]
+    special_char_penalties = cheating_results["special_char_penalties"]
+    special_char_ratios = cheating_results["special_char_ratios"]
+    special_char_counts = cheating_results["special_char_counts"]
+    total_variations_counts = cheating_results["total_variations_counts"]
+    
+    # Analyze penalty patterns for summary
+    penalized_miners = []
+    collusion_groups = []
+    duplication_pairs = []
+    signature_duplicates = []
+    special_char_offenders = []
+    
+    # Collect penalty statistics
+    for i, uid in enumerate(uids):
+        total_penalty = 0
+        penalties_applied = []
+        
+        if collusion_penalties[i] > 0:
+            total_penalty += collusion_penalties[i]
+            penalties_applied.append(f"collusion({collusion_penalties[i]:.2f})")
+            collusion_groups.append(uid)
             
-            # If similarity is high, apply a penalty
-            if similarity > 0.95:
-                # Penalty is proportional to the similarity excess
-                penalty = (similarity - 0.95) / (1.0 - 0.95)
-                penalty = min(penalty, 1.0) # Cap the penalty at 100%
-
-                duplication_penalties[i] = max(duplication_penalties[i], penalty)
-                duplication_penalties[j] = max(duplication_penalties[j], penalty)
-
+        if duplication_penalties[i] > 0:
+            total_penalty += duplication_penalties[i]
+            penalties_applied.append(f"duplication({duplication_penalties[i]:.2f})")
+            duplication_pairs.append(uid)
+            
+        if signature_penalties[i] > 0:
+            total_penalty += signature_penalties[i]
+            penalties_applied.append(f"signature({signature_penalties[i]:.2f})")
+            signature_duplicates.append(uid)
+            
+        if special_char_penalties[i] > 0:
+            total_penalty += special_char_penalties[i]
+            penalties_applied.append(f"special_chars({special_char_penalties[i]:.2f})")
+            special_char_offenders.append(uid)
+            
+        if total_penalty > 0:
+            penalized_miners.append((uid, total_penalty, penalties_applied))
+    
+    # Log summary of findings
+    bt.logging.info(f"\n📊 CHEATING DETECTION SUMMARY:")
+    bt.logging.info(f"  • Total miners analyzed: {len(uids)}")
+    bt.logging.info(f"  • Miners with penalties: {len(penalized_miners)}")
+    bt.logging.info(f"  • Honest miners: {len(uids) - len(penalized_miners)}")
+    
+    if penalized_miners:
+        bt.logging.info(f"\n🚨 CHEATING PATTERNS DETECTED:")
+        
+        if collusion_groups:
+            bt.logging.info(f"  • Collusion groups: {len(collusion_groups)} miners")
+            bt.logging.info(f"    Miners: {', '.join(str(uid) for uid in collusion_groups)}")
+            
+        if duplication_pairs:
+            bt.logging.info(f"  • Duplication pairs: {len(duplication_pairs)} miners")
+            bt.logging.info(f"    Miners: {', '.join(str(uid) for uid in duplication_pairs)}")
+            
+        if signature_duplicates:
+            bt.logging.info(f"  • Signature duplicates: {len(signature_duplicates)} miners")
+            bt.logging.info(f"    Miners: {', '.join(str(uid) for uid in signature_duplicates)}")
+            
+        if special_char_offenders:
+            bt.logging.info(f"  • Special character abuse: {len(special_char_offenders)} miners")
+            bt.logging.info(f"    Miners: {', '.join(str(uid) for uid in special_char_offenders)}")
+            
+        bt.logging.info(f"\n⚠️  PENALTY BREAKDOWN:")
+        for uid, total_penalty, penalties in penalized_miners:
+            bt.logging.info(f"  • Miner {uid}: {total_penalty:.3f} total penalty [{', '.join(penalties)}]")
+    else:
+        bt.logging.info(f"\n✅ NO CHEATING DETECTED")
+        bt.logging.info(f"  All {len(uids)} miners appear to be honest")
+    
+    bt.logging.info(f"\n{'='*60}")
+    
     # Apply penalties and update metrics
     updated_rewards = np.copy(rewards)
+    num_miners = len(responses)
     for i in range(num_miners):
-        if duplication_penalties[i] > 0:
-            uid = uids[i]
-            penalty_amount = duplication_penalties[i]
-            
-            bt.logging.info(f"Applying duplication penalty of {penalty_amount:.2f} to miner {uid}")
+        uid = uids[i]
+        total_penalty = 0
 
-            # Update the detailed metrics to reflect this penalty
+        # Always record special character observability metrics
+        if i < len(detailed_metrics):
+            miner_metrics = detailed_metrics[i]
+            miner_metrics.setdefault('penalties', {})
+            miner_metrics['penalties']['special_chars_ratio'] = float(special_char_ratios[i])
+            miner_metrics['penalties']['special_char_variations_count'] = int(special_char_counts[i])
+            miner_metrics['penalties']['total_variations_count'] = int(total_variations_counts[i])
+
+        # Collusion Penalty
+        if collusion_penalties[i] > 0:
+            penalty_amount = collusion_penalties[i]
+            total_penalty += penalty_amount
+            if i < len(detailed_metrics):
+                miner_metrics = detailed_metrics[i]
+                miner_metrics.setdefault('penalties', {})
+                miner_metrics['penalties']['collusion'] = penalty_amount
+
+        # Duplication Penalty
+        if duplication_penalties[i] > 0:
+            penalty_amount = duplication_penalties[i]
+            total_penalty += penalty_amount
             if i < len(detailed_metrics):
                 miner_metrics = detailed_metrics[i]
                 miner_metrics.setdefault('penalties', {})
                 miner_metrics['penalties']['duplication'] = penalty_amount
-                
-                # Adjust the final reward based on the penalty
-                current_reward = updated_rewards[i]
-                penalized_reward = current_reward * (1.0 - penalty_amount)
-                updated_rewards[i] = penalized_reward
-                miner_metrics['final_reward'] = penalized_reward
+
+        # Signature (exact-copy) Penalty
+        if signature_penalties[i] > 0:
+            penalty_amount = signature_penalties[i]
+            total_penalty += penalty_amount
+            if i < len(detailed_metrics):
+                miner_metrics = detailed_metrics[i]
+                miner_metrics.setdefault('penalties', {})
+                miner_metrics['penalties']['signature_copy'] = penalty_amount
+
+        # Special Character Penalty
+        if special_char_penalties[i] > 0:
+            penalty_amount = special_char_penalties[i]
+            total_penalty += penalty_amount
+            if i < len(detailed_metrics):
+                miner_metrics = detailed_metrics[i]
+                miner_metrics.setdefault('penalties', {})
+                miner_metrics['penalties']['special_chars'] = penalty_amount
+
+
+        # Apply combined penalty
+        if total_penalty > 0:
+            total_penalty = min(total_penalty, 1.0) # Cap total penalty
+            current_reward = updated_rewards[i]
+            penalized_reward = current_reward * (1.0 - total_penalty)
+            updated_rewards[i] = penalized_reward
+            if i < len(detailed_metrics):
+                # Record post-processing penalties separately and combined with pre-penalties
+                miner_metrics = detailed_metrics[i]
+                miner_metrics.setdefault('penalties', {})
+                miner_metrics['penalties']['post_total_penalty'] = float(total_penalty)
+                pre_total_penalty = float(miner_metrics['penalties'].get('total_penalty', 0.0))
+                miner_metrics['penalties']['overall_total_penalty'] = float(min(1.0, pre_total_penalty + total_penalty))
+                detailed_metrics[i]['final_reward'] = penalized_reward
+
+    bt.logging.info(f"✅ Cheating detection and penalty application completed")
+    bt.logging.info(f"{'='*60}\n")
     
     return updated_rewards, detailed_metrics
 
@@ -743,17 +840,18 @@ def get_name_variation_rewards(
     detailed_metrics = []  # Store detailed metrics for each miner
     
     # Log rule-based requirements if provided
-    if rule_based:
-        bt.logging.info(f"Rule-based requirements: {rule_based}")
-        bt.logging.info(f"Target rules: {rule_based.get('selected_rules', [])}")
-        bt.logging.info(f"Target rule-based percentage: {rule_based.get('rule_percentage', 30)}%")
-    else:
-        bt.logging.info("No rule-based requirements specified")
+    # if rule_based:
+    #     #bt.logging.info(f"Rule-based requirements: {rule_based}")
+    #     #bt.logging.info(f"Target rules: {rule_based.get('selected_rules', [])}")
+    #     #bt.logging.info(f"Target rule-based percentage: {rule_based.get('rule_percentage', 30)}%")
+    # else:
+    #     #bt.logging.info("No rule-based requirements specified")
+    #     pass
     
     # Process each miner's response
     for i, (response, uid) in enumerate(zip(responses, uids)):
-        bt.logging.info(f"\n{'='*50}")
-        bt.logging.info(f"Processing miner {uid}")
+        #bt.logging.info(f"\n{'='*50}")
+        #bt.logging.info(f"Processing miner {uid}")
         
         # Initialize metrics dictionary for this miner
         miner_metrics = {
@@ -769,7 +867,10 @@ def get_name_variation_rewards(
             "missing_names": []
         }
         
-        if not hasattr(response, 'variations') or not response.variations:
+        # Correctly access the variations from the response object
+        variations = response.variations if hasattr(response, 'variations') else {}
+        
+        if not variations:
             bt.logging.warning(f"Miner {uid} returned invalid or empty response")
             rewards[i] = 0.0
             # Correctly set metrics for invalid/empty response
@@ -781,7 +882,6 @@ def get_name_variation_rewards(
             detailed_metrics.append(miner_metrics)
             continue
             
-        variations = response.variations
         quality_scores = []
         
         # Calculate penalty for unexpected names (extra variations)
@@ -800,7 +900,7 @@ def get_name_variation_rewards(
             bt.logging.warning(f"Miner {uid} missing variations for names: {missing_names}")
             # 20% penalty per missing name, up to 90% max
             missing_penalty = min(0.9, len(missing_names) * 0.2)
-            bt.logging.info(f"Missing penalty: {missing_penalty}")
+            #bt.logging.info(f"Missing penalty: {missing_penalty}")
             miner_metrics["penalties"]["missing_names"] = float(missing_penalty)
             miner_metrics["missing_names"] = list(missing_names)
         
@@ -809,7 +909,7 @@ def get_name_variation_rewards(
         completeness_multiplier = max(0.1, 1.0 - total_penalty)
         miner_metrics["penalties"]["total_penalty"] = float(total_penalty)
         miner_metrics["completeness_multiplier"] = float(completeness_multiplier)
-        
+
         # Add rule-based metrics fields
         if rule_based:
             miner_metrics["rule_compliance"] = {
@@ -875,19 +975,37 @@ def get_name_variation_rewards(
             miner_metrics["average_quality"] = 0.0
             miner_metrics["final_reward"] = 0.0
         
-        #bt.logging.info(f"Miner {uid} final Score: {rewards[i]}")
-        #bt.logging.info(f"Miner {uid} penalties: {miner_metrics['penalties']}")
-        bt.logging.info(f"Miner {uid} rule compliance: {miner_metrics['rule_compliance']['overall_score']}")
-        bt.logging.info(f"Miner {uid} Base quality scores: {quality_scores}")
-        bt.logging.info(f"Miner {uid} average quality: {miner_metrics['average_quality']}")
-        bt.logging.info(f"Miner {uid} completeness multiplier: {miner_metrics['completeness_multiplier']}")
-        bt.logging.info(f"Miner {uid} final Score: {miner_metrics['final_reward']}")
+        # # # ADD DETAILED LOGGING HERE to debug 0.0 scores
+        # # bt.logging.info(f"--- DEBUGGING REWARD FOR MINER {uid} ---")
+        # # bt.logging.info(f"Seed names with variations: {[name for name in seed_names if name in variations and variations[name]]}")
+        # # bt.logging.info(f"Quality scores per name: {quality_scores}")
+        # # bt.logging.info(f"Average quality score: {miner_metrics['average_quality']:.4f}")
+        # # bt.logging.info(f"Completeness multiplier (1.0 - penalty): {completeness_multiplier:.4f}")
+        # # bt.logging.info(f"Final reward (avg_quality * completeness_multiplier): {rewards[i]:.4f}")
+        # # bt.logging.info(f"--- END DEBUGGING REWARD FOR MINER {uid} ---")
+        
+        # #bt.logging.info(f"Miner {uid} final Score: {rewards[i]}")
+        # #bt.logging.info(f"Miner {uid} penalties: {miner_metrics['penalties']}")
+        # if 'rule_compliance' in miner_metrics:
+        #     bt.logging.info(f"Miner {uid} rule compliance: {miner_metrics['rule_compliance']['overall_score']}")
+        # else:
+        #     bt.logging.info(f"Miner {uid} rule compliance: 0.0")
+        # bt.logging.info(f"Miner {uid} Base quality scores: {quality_scores}")
+        # bt.logging.info(f"Miner {uid} average quality: {miner_metrics['average_quality']}")
+        # bt.logging.info(f"Miner {uid} completeness multiplier: {miner_metrics['completeness_multiplier']}")
+        # bt.logging.info(f"Miner {uid} final Score: {miner_metrics['final_reward']}")
         detailed_metrics.append(miner_metrics)
         
     # After initial rewards are calculated, apply penalties for high similarity between miners
-    rewards, detailed_metrics = _calculate_similarity_and_penalties(
-        responses, uids, seed_names, detailed_metrics, rewards
-    )
+    try:
+        rewards, detailed_metrics = _calculate_similarity_and_penalties(
+            responses, uids, seed_names, detailed_metrics, rewards
+        )
+    except Exception as e:
+        bt.logging.error(f"Error in similarity and penalty calculation: {str(e)}")
+        bt.logging.warning("Using rewards without similarity penalties as fallback")
+        # Keep the original rewards without applying similarity penalties
+        # detailed_metrics would remain as calculated before the penalty step
     
     return rewards, detailed_metrics
 
@@ -970,7 +1088,7 @@ def calculate_rule_compliance_score(
     else:  # Above target - apply a gentler penalty
         quantity_score = max(0.5, 1.5 - 0.5 * ratio_of_actual_to_expected)
     
-    bt.logging.info(f"Overall compliance ratio vs target: {ratio_of_actual_to_expected:.2f}, Quantity-based score: {quantity_score:.2f}")
+    #bt.logging.info(f"Overall compliance ratio vs target: {ratio_of_actual_to_expected:.2f}, Quantity-based score: {quantity_score:.2f}")
 
     # Calculate rule diversity factor
     num_target_rules_met = 0
@@ -991,11 +1109,11 @@ def calculate_rule_compliance_score(
         num_target_rules_met = len(satisfied_target_rules)
         rule_diversity_factor = num_target_rules_met / len(target_rules) if len(target_rules) > 0 else 1.0
 
-    bt.logging.info(f"Met {num_target_rules_met} out of {len(target_rules)} target rules. Rule diversity factor: {rule_diversity_factor:.2f}")
+    #bt.logging.info(f"Met {num_target_rules_met} out of {len(target_rules)} target rules. Rule diversity factor: {rule_diversity_factor:.2f}")
 
     # Final score combines quantity and diversity
     final_score = quantity_score * rule_diversity_factor
-    bt.logging.info(f"Final rule compliance score (quantity * diversity): {final_score:.2f}")
+    #bt.logging.info(f"Final rule compliance score (quantity * diversity): {final_score:.2f}")
     
     return final_score, {
         "compliant_variations_by_rule": compliant_variations_by_rule,
