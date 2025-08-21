@@ -230,3 +230,7 @@ Wights_miner_report_1h_summary_*.txt
 output/
 announcements/
 .DS_Store
+unittest/analyze_real_logs.py
+unittest/bug_analysis_report.md
+unittest/cheat_analysis_summary.md
+unittest/test_cheat_detection.py
