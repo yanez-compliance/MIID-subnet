@@ -229,7 +229,7 @@ def calculate_part_score(
         #     )
     
     length_score = sum(length_scores) / len(length_scores) if length_scores else 0
-    bt.logging.info(f"Average length score: {length_score:.3f}")
+    #bt.logging.info(f"Average length score: {length_score:.3f}")
     
     # Calculate similarity scores with improved distribution analysis
     phonetic_scores = []
@@ -302,7 +302,7 @@ def calculate_part_score(
     
     # Calculate combined similarity score
     similarity_score = (phonetic_quality + orthographic_quality) / 2  # Average of both similarities
-    bt.logging.info(f"Similarity score: {similarity_score:.3f} (phonetic: {phonetic_quality:.3f}, orthographic: {orthographic_quality:.3f})")
+    #bt.logging.info(f"Similarity score: {similarity_score:.3f} (phonetic: {phonetic_quality:.3f}, orthographic: {orthographic_quality:.3f})")
     
     # Apply minimum similarity threshold to prevent gaming
     # If similarity is very low, severely reduce the score
@@ -604,7 +604,7 @@ def calculate_variation_quality(
         if rule_based and rule_compliance_score == 0 and len(rule_compliant_variations) > 0:
             bt.logging.warning("  - Zero rule compliance score on rule-compliant variations")
     
-    bt.logging.info(f"{'='*50}\n")
+    #bt.logging.info(f"{'='*50}\n")
     return final_score, detailed_metrics
 
 
@@ -840,17 +840,18 @@ def get_name_variation_rewards(
     detailed_metrics = []  # Store detailed metrics for each miner
     
     # Log rule-based requirements if provided
-    if rule_based:
-        bt.logging.info(f"Rule-based requirements: {rule_based}")
-        bt.logging.info(f"Target rules: {rule_based.get('selected_rules', [])}")
-        bt.logging.info(f"Target rule-based percentage: {rule_based.get('rule_percentage', 30)}%")
-    else:
-        bt.logging.info("No rule-based requirements specified")
+    # if rule_based:
+    #     #bt.logging.info(f"Rule-based requirements: {rule_based}")
+    #     #bt.logging.info(f"Target rules: {rule_based.get('selected_rules', [])}")
+    #     #bt.logging.info(f"Target rule-based percentage: {rule_based.get('rule_percentage', 30)}%")
+    # else:
+    #     #bt.logging.info("No rule-based requirements specified")
+    #     pass
     
     # Process each miner's response
     for i, (response, uid) in enumerate(zip(responses, uids)):
-        bt.logging.info(f"\n{'='*50}")
-        bt.logging.info(f"Processing miner {uid}")
+        #bt.logging.info(f"\n{'='*50}")
+        #bt.logging.info(f"Processing miner {uid}")
         
         # Initialize metrics dictionary for this miner
         miner_metrics = {
@@ -899,7 +900,7 @@ def get_name_variation_rewards(
             bt.logging.warning(f"Miner {uid} missing variations for names: {missing_names}")
             # 20% penalty per missing name, up to 90% max
             missing_penalty = min(0.9, len(missing_names) * 0.2)
-            bt.logging.info(f"Missing penalty: {missing_penalty}")
+            #bt.logging.info(f"Missing penalty: {missing_penalty}")
             miner_metrics["penalties"]["missing_names"] = float(missing_penalty)
             miner_metrics["missing_names"] = list(missing_names)
         
@@ -974,25 +975,25 @@ def get_name_variation_rewards(
             miner_metrics["average_quality"] = 0.0
             miner_metrics["final_reward"] = 0.0
         
-        # ADD DETAILED LOGGING HERE to debug 0.0 scores
-        bt.logging.info(f"--- DEBUGGING REWARD FOR MINER {uid} ---")
-        bt.logging.info(f"Seed names with variations: {[name for name in seed_names if name in variations and variations[name]]}")
-        bt.logging.info(f"Quality scores per name: {quality_scores}")
-        bt.logging.info(f"Average quality score: {miner_metrics['average_quality']:.4f}")
-        bt.logging.info(f"Completeness multiplier (1.0 - penalty): {completeness_multiplier:.4f}")
-        bt.logging.info(f"Final reward (avg_quality * completeness_multiplier): {rewards[i]:.4f}")
-        bt.logging.info(f"--- END DEBUGGING REWARD FOR MINER {uid} ---")
+        # # # ADD DETAILED LOGGING HERE to debug 0.0 scores
+        # # bt.logging.info(f"--- DEBUGGING REWARD FOR MINER {uid} ---")
+        # # bt.logging.info(f"Seed names with variations: {[name for name in seed_names if name in variations and variations[name]]}")
+        # # bt.logging.info(f"Quality scores per name: {quality_scores}")
+        # # bt.logging.info(f"Average quality score: {miner_metrics['average_quality']:.4f}")
+        # # bt.logging.info(f"Completeness multiplier (1.0 - penalty): {completeness_multiplier:.4f}")
+        # # bt.logging.info(f"Final reward (avg_quality * completeness_multiplier): {rewards[i]:.4f}")
+        # # bt.logging.info(f"--- END DEBUGGING REWARD FOR MINER {uid} ---")
         
-        #bt.logging.info(f"Miner {uid} final Score: {rewards[i]}")
-        #bt.logging.info(f"Miner {uid} penalties: {miner_metrics['penalties']}")
-        if 'rule_compliance' in miner_metrics:
-            bt.logging.info(f"Miner {uid} rule compliance: {miner_metrics['rule_compliance']['overall_score']}")
-        else:
-            bt.logging.info(f"Miner {uid} rule compliance: 0.0")
-        bt.logging.info(f"Miner {uid} Base quality scores: {quality_scores}")
-        bt.logging.info(f"Miner {uid} average quality: {miner_metrics['average_quality']}")
-        bt.logging.info(f"Miner {uid} completeness multiplier: {miner_metrics['completeness_multiplier']}")
-        bt.logging.info(f"Miner {uid} final Score: {miner_metrics['final_reward']}")
+        # #bt.logging.info(f"Miner {uid} final Score: {rewards[i]}")
+        # #bt.logging.info(f"Miner {uid} penalties: {miner_metrics['penalties']}")
+        # if 'rule_compliance' in miner_metrics:
+        #     bt.logging.info(f"Miner {uid} rule compliance: {miner_metrics['rule_compliance']['overall_score']}")
+        # else:
+        #     bt.logging.info(f"Miner {uid} rule compliance: 0.0")
+        # bt.logging.info(f"Miner {uid} Base quality scores: {quality_scores}")
+        # bt.logging.info(f"Miner {uid} average quality: {miner_metrics['average_quality']}")
+        # bt.logging.info(f"Miner {uid} completeness multiplier: {miner_metrics['completeness_multiplier']}")
+        # bt.logging.info(f"Miner {uid} final Score: {miner_metrics['final_reward']}")
         detailed_metrics.append(miner_metrics)
         
     # After initial rewards are calculated, apply penalties for high similarity between miners
@@ -1087,7 +1088,7 @@ def calculate_rule_compliance_score(
     else:  # Above target - apply a gentler penalty
         quantity_score = max(0.5, 1.5 - 0.5 * ratio_of_actual_to_expected)
     
-    bt.logging.info(f"Overall compliance ratio vs target: {ratio_of_actual_to_expected:.2f}, Quantity-based score: {quantity_score:.2f}")
+    #bt.logging.info(f"Overall compliance ratio vs target: {ratio_of_actual_to_expected:.2f}, Quantity-based score: {quantity_score:.2f}")
 
     # Calculate rule diversity factor
     num_target_rules_met = 0
@@ -1108,11 +1109,11 @@ def calculate_rule_compliance_score(
         num_target_rules_met = len(satisfied_target_rules)
         rule_diversity_factor = num_target_rules_met / len(target_rules) if len(target_rules) > 0 else 1.0
 
-    bt.logging.info(f"Met {num_target_rules_met} out of {len(target_rules)} target rules. Rule diversity factor: {rule_diversity_factor:.2f}")
+    #bt.logging.info(f"Met {num_target_rules_met} out of {len(target_rules)} target rules. Rule diversity factor: {rule_diversity_factor:.2f}")
 
     # Final score combines quantity and diversity
     final_score = quantity_score * rule_diversity_factor
-    bt.logging.info(f"Final rule compliance score (quantity * diversity): {final_score:.2f}")
+    #bt.logging.info(f"Final rule compliance score (quantity * diversity): {final_score:.2f}")
     
     return final_score, {
         "compliant_variations_by_rule": compliant_variations_by_rule,
