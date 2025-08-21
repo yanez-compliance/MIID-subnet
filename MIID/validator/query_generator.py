@@ -44,6 +44,8 @@ def _get_keywords_from_rule_desc(description: str) -> List[str]:
     keywords = [word for word in processed.split() if word not in stopwords]
     return keywords
 
+
+
 # List of Latin-script locales to generate names from (basic Latin characters only, no accents)
 LATIN_LOCALES = ['en_US', 'en_GB', 'en_CA', 'en_AU']
 
@@ -149,11 +151,11 @@ def _run_judge_model(
                     else:
                         # Provide more specific rule information when available
                         if isinstance(rule_pct_val, int) and rule_descs_list:
-                            mapped_issues.append(f"Specify rule-based transformations: {rule_pct_val}% of variations should follow these rules: {'; '.join(rule_descs_list)}.")
+                            mapped_issues.append(f"Apply these rule-based transformations: {'; '.join(rule_descs_list)}.")
                         elif isinstance(rule_pct_val, int):
-                            mapped_issues.append(f"Specify rule-based transformations: {rule_pct_val}% of variations should follow transformation rules.")
+                            mapped_issues.append(f"Approximately {rule_pct_val}% of the variations should follow rule-based transformations.")
                         elif rule_descs_list:
-                            mapped_issues.append(f"Specify rule-based transformations: Apply these rules: {'; '.join(rule_descs_list)}.")
+                            mapped_issues.append(f"Apply these rule-based transformations: {'; '.join(rule_descs_list)}.")
                         else:
                             mapped_issues.append(soft_issue_map[key])
                 else:
@@ -163,7 +165,7 @@ def _run_judge_model(
             # Variation count
             present_vc = present.get('variation_count')
             if isinstance(variation_count, int) and present_vc != variation_count:
-                mapped_issues.append(f"Specify exact number of variations: {variation_count}.")
+                mapped_issues.append(f"Exact number of variations: {variation_count}.")
             
             # Phonetic tokens
             present_phon = set(present.get('phonetic_tokens', []))
@@ -334,7 +336,9 @@ class QueryGenerator:
         # Require at least one {name} placeholder
         placeholder_count = query_template.count("{name}")
         if placeholder_count == 0:
-            return False, "Query template must contain at least one {name} placeholder", [], [], [], successful_judge_model, successful_judge_timeout, {}
+            # Add a direct hint for missing {name} placeholder
+            static_issues = ["Here is the name that you should generate variations of: {name}"]
+            return False, "Query template must contain at least one {name} placeholder", static_issues, static_issues, [], successful_judge_model, successful_judge_timeout, {}
 
         # Collect non-blocking issues
         static_issues: List[str] = []
@@ -714,25 +718,15 @@ class QueryGenerator:
         seen = set()
         deduped_issues: List[str] = []
         for it in merged_for_dedup:
-            # Check for semantic duplicates, especially for rule percentage issues
-            is_duplicate = False
-            
-            # Check exact match first
-            if it in seen:
-                is_duplicate = True
-            else:
-                # Check for semantic duplicates of rule percentage issues
-                if "rule-based" in it.lower() and "%" in it:
-                    # Look for other rule percentage issues that are semantically the same
-                    for existing in deduped_issues:
-                        if ("rule-based" in existing.lower() and "%" in existing and 
-                            any(str(pct) in it for pct in [rule_pct_val] if rule_pct_val is not None)):
-                            is_duplicate = True
-                            break
-            
-            if not is_duplicate:
+            if it not in seen:
                 deduped_issues.append(it)
                 seen.add(it)
+
+        # Log deduplication results for debugging
+        if static_issues or llm_issues:
+            bt.logging.debug(f"🔍 Deduplication: {len(static_issues or [])} static issues + {len(llm_issues or [])} judge issues = {len(deduped_issues)} final issues")
+            if len(static_issues or []) + len(llm_issues or []) != len(deduped_issues):
+                bt.logging.info(f"🎯 Deduplication removed {len(static_issues or []) + len(llm_issues or []) - len(deduped_issues)} duplicate issues")
 
         # Log final validation results
         if deduped_issues:
@@ -811,23 +805,23 @@ class QueryGenerator:
             #     "rule_based": {**(rule_metadata or {}), "percentage": rule_percentage}
             # }
 
-            # Validate and minimally clarify
-            bt.logging.info(f"📝 Pre-judge default template: {simple_template}")
-            # Validate and minimally clarify the default template too
-            _ok, _msg, deduped_issues, static_issues_from_val, llm_issues_from_val, successful_judge_model, successful_judge_timeout, validation_details = self.validate_query_template(simple_template, labels)
-            if deduped_issues:
-                # Append a single combined validation hint section in the query text
-                simple_template = _append_hint_section(simple_template, "VALIDATION HINTS", deduped_issues)
+            # # Validate and minimally clarify
+            # bt.logging.info(f"📝 Pre-judge default template: {simple_template}")
+            # # Validate and minimally clarify the default template too
+            # _ok, _msg, deduped_issues, static_issues_from_val, llm_issues_from_val, successful_judge_model, successful_judge_timeout, validation_details = self.validate_query_template(simple_template, labels)
+            # if deduped_issues:
+            #     # Append a single combined validation hint section in the query text
+            #     simple_template = _append_hint_section(simple_template, "VALIDATION HINTS", deduped_issues)
                 
-                bt.logging.warning(f"⚠️  Default template has issues - added clarifications:")
-                if static_issues_from_val:
-                    bt.logging.warning(f"   Static Issues Found: {static_issues_from_val}")
-                if llm_issues_from_val:
-                    bt.logging.warning(f"   Judge Issues Found: {llm_issues_from_val}")
-            else:
-                bt.logging.info(f"✅ Default template is clean (no issues found)")
+            #     bt.logging.warning(f"⚠️  Default template has issues - added clarifications:")
+            #     if static_issues_from_val:
+            #         bt.logging.warning(f"   Static Issues Found: {static_issues_from_val}")
+            #     if llm_issues_from_val:
+            #         bt.logging.warning(f"   Judge Issues Found: {llm_issues_from_val}")
+            # else:
+            #     bt.logging.info(f"✅ Default template is clean (no issues found)")
 
-            bt.logging.debug(f"📄 Using default query template: {simple_template}")
+            # bt.logging.debug(f"📄 Using default query template: {simple_template}")
             
             generation_log = {
                 "decision": "Used default query as configured.",
@@ -1128,49 +1122,58 @@ class QueryGenerator:
             # 1. Determine variation count (between 5-DEFAULT_VARIATION_COUNT)
             variation_count = random.randint(5, DEFAULT_VARIATION_COUNT)
             
-            # 2. Set up phonetic similarity distribution
-            phonetic_config = random.choice([
-                # Balanced distribution
-                {"Light": 0.33, "Medium": 0.34, "Far": 0.33},
-                # Focus on Light similarity
-                {"Light": 0.6, "Medium": 0.3, "Far": 0.1},
-                # Focus on Medium similarity
-                {"Light": 0.2, "Medium": 0.6, "Far": 0.2},
-                # Focus on Far similarity
-                {"Light": 0.1, "Medium": 0.3, "Far": 0.6},
-                # Only Light similarity
-                {"Light": 1.0},
-                # Only Medium similarity
-                {"Medium": 1.0},
-                # 50% Light, 50% Medium (no Far)
-                {"Light": 0.5, "Medium": 0.5},
-                # 70% Light, 30% Medium (no Far)
-                {"Light": 0.7, "Medium": 0.3},
-                # 30% Light, 70% Medium (no Far)
-                {"Light": 0.3, "Medium": 0.7},
-            ])
+            # 2. Set up phonetic similarity distribution with weighted selection
+            phonetic_configs_with_weights = [
+                # Balanced distribution - high weight for balanced testing
+                ({"Light": 0.3, "Medium": 0.4, "Far": 0.3}, 0.25),
+                # Focus on Medium similarity - most common real-world scenario
+                ({"Light": 0.2, "Medium": 0.6, "Far": 0.2}, 0.20),
+                # Focus on Far similarity - important for edge cases
+                ({"Light": 0.1, "Medium": 0.3, "Far": 0.6}, 0.15),
+                # Light-Medium mix - moderate weight
+                ({"Light": 0.5, "Medium": 0.5}, 0.12),
+                # Medium-Far mix - moderate weight
+                ({"Light": 0.1, "Medium": 0.5, "Far": 0.4}, 0.10),
+                # Only Medium similarity - common case
+                ({"Medium": 1.0}, 0.08),
+                # High Light but not 100% - reduced frequency
+                ({"Light": 0.7, "Medium": 0.3}, 0.05),
+                # Only Far similarity - edge case
+                ({"Far": 1.0}, 0.03),
+                # Only Light similarity - reduced frequency
+                ({"Light": 1.0}, 0.02),
+            ]
             
-            # 3. Set up orthographic similarity distribution
-            orthographic_config = random.choice([
-                # Balanced distribution
-                {"Light": 0.33, "Medium": 0.34, "Far": 0.33},
-                # Focus on Light similarity
-                {"Light": 0.6, "Medium": 0.3, "Far": 0.1},
-                # Focus on Medium similarity
-                {"Light": 0.2, "Medium": 0.6, "Far": 0.2},
-                # Focus on Far similarity
-                {"Light": 0.1, "Medium": 0.3, "Far": 0.6},
-                # Only Light similarity
-                {"Light": 1.0},
-                # Only Medium similarity
-                {"Medium": 1.0},
-                # 50% Light, 50% Medium (no Far)
-                {"Light": 0.5, "Medium": 0.5},
-                # 70% Light, 30% Medium (no Far)
-                {"Light": 0.7, "Medium": 0.3},
-                # 30% Light, 70% Medium (no Far)
-                {"Light": 0.3, "Medium": 0.7},
-            ])
+            # 3. Set up orthographic similarity distribution with weighted selection
+            orthographic_configs_with_weights = [
+                # Balanced distribution - high weight for balanced testing
+                ({"Light": 0.3, "Medium": 0.4, "Far": 0.3}, 0.25),
+                # Focus on Medium similarity - most common real-world scenario
+                ({"Light": 0.2, "Medium": 0.6, "Far": 0.2}, 0.20),
+                # Focus on Far similarity - important for edge cases
+                ({"Light": 0.1, "Medium": 0.3, "Far": 0.6}, 0.15),
+                # Light-Medium mix - moderate weight
+                ({"Light": 0.5, "Medium": 0.5}, 0.12),
+                # Medium-Far mix - moderate weight
+                ({"Light": 0.1, "Medium": 0.5, "Far": 0.4}, 0.10),
+                # Only Medium similarity - common case
+                ({"Medium": 1.0}, 0.08),
+                # High Light but not 100% - reduced frequency
+                ({"Light": 0.7, "Medium": 0.3}, 0.05),
+                # Only Far similarity - edge case
+                ({"Far": 1.0}, 0.03),
+                # Only Light similarity - reduced frequency
+                ({"Light": 1.0}, 0.02),
+            ]
+            
+            # Helper function for weighted random selection
+            def weighted_random_choice(configs_with_weights):
+                configs, weights = zip(*configs_with_weights)
+                return random.choices(configs, weights=weights, k=1)[0]
+            
+            # Select configurations using weighted random selection
+            phonetic_config = weighted_random_choice(phonetic_configs_with_weights)
+            orthographic_config = weighted_random_choice(orthographic_configs_with_weights)
             
             # 4. Randomly choose rule_percentage for this query (e.g. 10-60%)
             rule_percentage = random.randint(10, 60)
