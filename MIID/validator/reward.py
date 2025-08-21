@@ -27,6 +27,7 @@ import time
 import traceback
 import math
 import random
+import hashlib
 
 # Import rule_evaluator for rule-based compliance checking
 from MIID.validator.rule_evaluator import evaluate_rule_compliance
@@ -68,6 +69,11 @@ def reward(query: int, response: int) -> float:
     return 1.0 if response == query * 2 else 0
 
 
+def stable_hash(value: str) -> int:
+    """Return a deterministic integer hash for a string."""
+    return int(hashlib.sha256(value.encode("utf-8")).hexdigest(), 16)
+
+
 def calculate_phonetic_similarity(original_name: str, variation: str) -> float:
     """
     Calculate phonetic similarity between two strings using a randomized subset of phonetic algorithms.
@@ -83,7 +89,8 @@ def calculate_phonetic_similarity(original_name: str, variation: str) -> float:
     }
 
     # Deterministically seed the random selection based on the original name
-    random.seed(hash(original_name) % 10000)
+    seed = stable_hash(original_name) % (2**32)
+    random.seed(seed)
     selected_algorithms = random.sample(list(algorithms.keys()), k=min(3, len(algorithms)))
 
     # Generate random weights that sum to 1.0
