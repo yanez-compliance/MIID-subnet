@@ -552,6 +552,12 @@ def calculate_variation_quality(
         bt.logging.debug(f"⚖️ No rules applicable for '{original_name}', adjusting weights. Base score will be final score.")
         base_weight = 1.0
         rule_compliance_weight = 0.0
+    # If rules were requested but no variations complied (possibly because no rules were possible),
+    # also adjust weights to avoid penalizing the miner unfairly
+    elif rule_based and "selected_rules" in rule_based and rule_compliance_score == 0.0 and len(rule_compliant_variations) == 0:
+        bt.logging.debug(f"⚖️ No rule-compliant variations found for '{original_name}', adjusting weights. Base score will be final score.")
+        base_weight = 1.0
+        rule_compliance_weight = 0.0
     else:
         base_weight = 1.0 - rule_compliance_weight
 
@@ -1057,6 +1063,24 @@ def calculate_rule_compliance_score(
         target_rules
     )
     
+    # Check if no rules were possible for this name structure
+    # If target_rules were provided but evaluate_rule_compliance returned empty results,
+    # it means no rules were applicable to this name structure
+    if target_rules and not compliant_variations_by_rule:
+        bt.logging.debug(f"⚠️ No rules were applicable for '{original_name}' with target rules: {target_rules}")
+        return 1.0, {
+            "compliant_variations_by_rule": {},
+            "rules_satisfied_by_variation": {},
+            "compliance_ratio_overall_variations": 0.0,
+            "overall_compliant_unique_variations_count": 0,
+            "expected_compliant_variations_count": 0,
+            "quantity_score": 1.0,
+            "rule_diversity_factor": 1.0,
+            "num_target_rules_met": 0,
+            "total_target_rules": len(target_rules),
+            "score": 1.0
+        }
+    
     # Create a dictionary to map each compliant variation to the list of rules it satisfied
     rules_satisfied_by_variation = {}
     for rule, rule_compliant_variations_list in compliant_variations_by_rule.items():
@@ -1097,6 +1121,7 @@ def calculate_rule_compliance_score(
     if not target_rules: # No specific rules targeted, so diversity is maximal or not applicable.
         rule_diversity_factor = 1.0
     elif overall_compliant_count == 0: # No variations complied with any target rule.
+        # This case should have been handled earlier, but just in case
         rule_diversity_factor = 0.0
         num_target_rules_met = 0
     else:
