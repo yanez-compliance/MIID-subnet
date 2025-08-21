@@ -1216,7 +1216,7 @@ class QueryGenerator:
                 max_attempts = positive_sample_count * 10
                 attempts = 0
                 while (
-                    len([n for n in seed_names_with_labels if n["label"] == "positive"]) < positive_sample_count
+                    len([n for n in seed_names_with_labels if isinstance(n, dict) and n.get("label") == "positive"]) < positive_sample_count
                     and attempts < max_attempts
                 ):
                     person = random.choice(self.sanctioned_individuals)
@@ -1229,7 +1229,7 @@ class QueryGenerator:
                             seen_names.add(full_name)
                             bt.logging.info(f"Added positive sample: {full_name}")
                     attempts += 1
-                current_positives = len([n for n in seed_names_with_labels if n["label"] == "positive"]) 
+                current_positives = len([n for n in seed_names_with_labels if isinstance(n, dict) and n.get("label") == "positive"]) 
                 if current_positives < positive_sample_count:
                     bt.logging.warning(
                         f"Could not collect {positive_sample_count} unique positive samples; using {current_positives}."
@@ -1324,9 +1324,10 @@ class QueryGenerator:
                 name = f"{first_name} {last_name}"
                 
                 # Randomly decide whether to add a title (1/10 chance)
-                if random.choice([True] + [False] * 9):
-                    prefix = fake.prefix().replace('.', '').lower()
-                    name = f"{prefix} {name}"
+                # TODO: add title to the query template in V1.2
+                # if random.choice([True] + [False] * 9):
+                #     prefix = fake.prefix().replace('.', '').lower()
+                #     name = f"{prefix} {name}"
                 
                 if name not in seed_names:
                     seed_names.append(name)
