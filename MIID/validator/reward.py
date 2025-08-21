@@ -1125,16 +1125,24 @@ def calculate_rule_compliance_score(
         rule_diversity_factor = 0.0
         num_target_rules_met = 0
     else:
-        # Count how many of the *target_rules* were satisfied by at least one variation.
-        # compliant_variations_by_rule.keys() should be a subset of target_rules if evaluate_rule_compliance is strict.
-        satisfied_target_rules = set()
+        # Count how many of the *effective_rules* were satisfied by at least one variation.
+        # compliant_variations_by_rule.keys() contains only the rules that were actually evaluated
+        # (after filtering out impossible rules in evaluate_rule_compliance)
+        satisfied_effective_rules = set()
         for rule_name, compliant_vars_for_rule_list in compliant_variations_by_rule.items():
-            if rule_name in target_rules and compliant_vars_for_rule_list:
-                satisfied_target_rules.add(rule_name)
-        num_target_rules_met = len(satisfied_target_rules)
-        rule_diversity_factor = num_target_rules_met / len(target_rules) if len(target_rules) > 0 else 1.0
+            if compliant_vars_for_rule_list:  # Rule was satisfied by at least one variation
+                satisfied_effective_rules.add(rule_name)
+        num_target_rules_met = len(satisfied_effective_rules)
+        
+        # Calculate diversity based on effective rules (rules that were actually possible to apply)
+        effective_rules_count = len(compliant_variations_by_rule)
+        if effective_rules_count > 0:
+            rule_diversity_factor = num_target_rules_met / effective_rules_count
+        else:
+            # No effective rules means no rules were possible for this name structure
+            rule_diversity_factor = 1.0
 
-    #bt.logging.info(f"Met {num_target_rules_met} out of {len(target_rules)} target rules. Rule diversity factor: {rule_diversity_factor:.2f}")
+    #bt.logging.info(f"Met {num_target_rules_met} out of {len(compliant_variations_by_rule)} effective rules. Rule diversity factor: {rule_diversity_factor:.2f}")
 
     # Final score combines quantity and diversity
     final_score = quantity_score * rule_diversity_factor
