@@ -242,11 +242,11 @@ def calculate_part_score(
         phonetic_scores.append(p_score)
         orthographic_scores.append(o_score)
         
-        if p_score < 0.3 and o_score < 0.3:
-            bt.logging.warning(
-                f"Very low similarity for variation '{variation}': "
-                f"phonetic={p_score:.3f}, orthographic={o_score:.3f}"
-            )
+        # if p_score < 0.3 and o_score < 0.3:
+        #     bt.logging.warning(
+        #         f"Very low similarity for variation '{variation}': "
+        #         f"phonetic={p_score:.3f}, orthographic={o_score:.3f}"
+        #     )
     
     # Sort scores for distribution analysis
     phonetic_scores.sort()
