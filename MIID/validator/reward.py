@@ -73,6 +73,17 @@ def calculate_phonetic_similarity(original_name: str, variation: str) -> float:
     Calculate phonetic similarity between two strings using a randomized subset of phonetic algorithms.
     This makes it harder for miners to game the system by not knowing which algorithms will be used.
     The selection and weighting are deterministic for each original_name.
+
+    We randomize the subset and weights of multiple phonetic algorithms (Soundex, Metaphone, NYSIIS)
+    to reduce overfitting to any single encoding. Randomness is deterministically seeded per interpreter
+    session using Python’s salted hash of `original_name`, which yields:
+      • Reproducibility for the same name within a single run (same selection/weights each time)
+      • Variation across different runs (fresh selections/weights after interpreter restart)
+
+    This per-run determinism and cross-run variability are intentional to balance auditability and
+    anti-gaming. If strict cross-run reproducibility becomes a requirement, we can switch to a stable
+    digest (e.g., SHA-256) and/or a local RNG seeded from that digest.
+
     """
     # Define available phonetic algorithms
     algorithms = {
