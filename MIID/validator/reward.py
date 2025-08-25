@@ -563,12 +563,6 @@ def calculate_variation_quality(
         bt.logging.debug(f"⚖️ No rules applicable for '{original_name}', adjusting weights. Base score will be final score.")
         base_weight = 1.0
         rule_compliance_weight = 0.0
-    # If rules were requested but no variations complied (possibly because no rules were possible),
-    # also adjust weights to avoid penalizing the miner unfairly
-    elif rule_based and "selected_rules" in rule_based and rule_compliance_score == 0.0 and len(rule_compliant_variations) == 0:
-        bt.logging.debug(f"⚖️ No rule-compliant variations found for '{original_name}', adjusting weights. Base score will be final score.")
-        base_weight = 1.0
-        rule_compliance_weight = 0.0
     else:
         base_weight = 1.0 - rule_compliance_weight
 
