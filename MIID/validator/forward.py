@@ -102,7 +102,7 @@ async def dendrite_with_retries(dendrite: bt.dendrite, axons: list, synapse: Ide
         for i, response in enumerate(responses):
             round_trip = time.time() - send_time  # how long this miner took
             response_times[idx[i]] = round_trip
-            #bt.logging.info(f"#########################################Response {i}: {response}#########################################")
+            bt.logging.info(f"#########################################Response_time {i}: {round_trip}#########################################")
             #bt.logging.info(f"#########################################Response type: {type(response)}#########################################")
             
             if isinstance(response, dict):
