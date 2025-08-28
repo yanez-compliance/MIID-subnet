@@ -58,6 +58,7 @@ from MIID.utils.misc import upload_data
 EPOCH_MIN_TIME = 360  # seconds
 MIID_SERVER = "http://52.44.186.20:5000/upload_data" ## MIID server
 
+
 async def dendrite_with_retries(dendrite: bt.dendrite, axons: list, synapse: IdentitySynapse,
                                 deserialize: bool, timeout: float, cnt_attempts=3):
     """
@@ -87,25 +88,29 @@ async def dendrite_with_retries(dendrite: bt.dendrite, axons: list, synapse: Ide
             variations={}
         )
     
+    async def timed_request(axon, synapse, deserialize, attempt):
+        start = time.time()
+        try:
+            response = await dendrite([axon], synapse=synapse, deserialize=deserialize, timeout=timeout * (1 + attempt * 1.0))
+            response_time = time.time() - start
+            return response[0], response_time
+        except Exception:
+            return None, None
+    
     for attempt in range(cnt_attempts):
-        send_time = time.time()  # time query sent
-        responses = await dendrite(
-            axons=axons_for_retry,
-            synapse=synapse,
-            deserialize=deserialize,
-            timeout=timeout * (1 + attempt * 1.0)
-        )
+        tasks = [timed_request(axon, synapse, deserialize, attempt) for axon in axons]
+        results = await asyncio.gather(*tasks)
         
         new_idx = []
         new_axons = []
         
-        for i, response in enumerate(responses):
-            round_trip = time.time() - send_time  # how long this miner took
-            response_times[idx[i]] = round_trip
+        for i, (response, response_time) in enumerate(results):
+            res[i] = response
+            response_times[idx[i]] = response_time
             bt.logging.info(f"#########################################Trying to find time is here#########################################")
             bt.logging.info(f"#########################################Response {i}: {response}#########################################")
             bt.logging.info(f"#########################################Response type: {type(response)}#########################################")
-            bt.logging.info(f"#########################################Miner {i}: respones time {round_trip}#########################################")
+            bt.logging.info(f"#########################################Miner {i}: respones time {response_time}#########################################")
             
             if isinstance(response, dict):
                 # Got the variations dictionary directly
