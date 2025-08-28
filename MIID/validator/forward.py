@@ -93,6 +93,8 @@ async def dendrite_with_retries(dendrite: bt.dendrite, axons: list, synapse: Ide
         try:
             response = await dendrite([axon], synapse=synapse, deserialize=deserialize, timeout=timeout * (1 + attempt * 1.0))
             response_time = time.time() - start
+            if response[0] == {}:
+                response_time = 0.0
             return response[0], response_time
         except Exception:
             return None, None
@@ -107,11 +109,7 @@ async def dendrite_with_retries(dendrite: bt.dendrite, axons: list, synapse: Ide
         for i, (response, response_time) in enumerate(results):
             res[i] = response
             response_times[idx[i]] = response_time
-            bt.logging.info(f"#########################################Trying to find time is here#########################################")
-            bt.logging.info(f"#########################################Response {i}: {response}#########################################")
-            bt.logging.info(f"#########################################Response type: {type(response)}#########################################")
-            bt.logging.info(f"#########################################Miner {i}: respones time {response_time}#########################################")
-            
+        
             if isinstance(response, dict):
                 # Got the variations dictionary directly
                 complete_response = IdentitySynapse(
@@ -268,6 +266,7 @@ async def forward(self):
         for idx_resp, response in enumerate(batch_responses):
             uid = batch_uids[idx_resp]
             response_time = batch_times[idx_resp] if batch_times[idx_resp] else None
+            bt.logging.info(f"#########################################Miner {idx_resp}: respones time {response_time}#########################################")
             # bt.logging.info(f"#########################################Miner {idx_resp}: respones time {response_time}#########################################")
             if not hasattr(response, 'variations'):
                 bt.logging.warning(f"Miner {uid} returned response without 'variations' attribute.")
