@@ -102,7 +102,7 @@ async def dendrite_with_retries(dendrite: bt.dendrite, axons: list, synapse: Ide
         for i, response in enumerate(responses):
             round_trip = time.time() - send_time  # how long this miner took
             response_times[idx[i]] = round_trip
-            bt.logging.info(f"#########################################Response_time {i}: {round_trip}#########################################")
+            #bt.logging.info(f"#########################################Response {i}: {response}#########################################")
             #bt.logging.info(f"#########################################Response type: {type(response)}#########################################")
             
             if isinstance(response, dict):
@@ -261,6 +261,7 @@ async def forward(self):
         for idx_resp, response in enumerate(batch_responses):
             uid = batch_uids[idx_resp]
             response_time = batch_times[idx_resp] if batch_times[idx_resp] else None
+            bt.logging.info(f"#########################################Miner {idx_resp}: respones time {response_time}#########################################")
             if not hasattr(response, 'variations'):
                 bt.logging.warning(f"Miner {uid} returned response without 'variations' attribute.")
             elif response.variations is None:
