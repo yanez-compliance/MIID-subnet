@@ -73,8 +73,10 @@ async def dendrite_with_retries(dendrite: bt.dendrite, axons: list, synapse: Ide
         
     Returns:
         List of responses from miners
+        List of response times of miners
     """
     res = [None] * len(axons)
+    response_times = [None] * len(axons)   # <-- store per-miner times
     idx = list(range(len(axons)))
     axons_for_retry = axons.copy()
     
@@ -86,6 +88,7 @@ async def dendrite_with_retries(dendrite: bt.dendrite, axons: list, synapse: Ide
         )
     
     for attempt in range(cnt_attempts):
+        send_time = time.time()  # time query sent
         responses = await dendrite(
             axons=axons_for_retry,
             synapse=synapse,
@@ -97,6 +100,8 @@ async def dendrite_with_retries(dendrite: bt.dendrite, axons: list, synapse: Ide
         new_axons = []
         
         for i, response in enumerate(responses):
+            round_trip = time.time() - send_time  # how long this miner took
+            response_times[idx[i]] = round_trip
             #bt.logging.info(f"#########################################Response {i}: {response}#########################################")
             #bt.logging.info(f"#########################################Response type: {type(response)}#########################################")
             
@@ -145,7 +150,7 @@ async def dendrite_with_retries(dendrite: bt.dendrite, axons: list, synapse: Ide
         if r is None:
             res[i] = create_default_response()
     
-    return res
+    return res, response_times
 
 
 async def forward(self):
@@ -241,7 +246,7 @@ async def forward(self):
         bt.logging.info(f"Processing batch {i//batch_size + 1}/{total_batches} with {len(batch_uids)} miners")
         batch_start_time = time.time()
         
-        batch_responses = await dendrite_with_retries(
+        batch_responses, batch_times = await dendrite_with_retries(
             dendrite=self.dendrite,
             axons=batch_axons,
             synapse=request_synapse,
@@ -255,6 +260,7 @@ async def forward(self):
 
         for idx_resp, response in enumerate(batch_responses):
             uid = batch_uids[idx_resp]
+            response_time = batch_times[idx_resp] if batch_times[idx_resp] else None
             if not hasattr(response, 'variations'):
                 bt.logging.warning(f"Miner {uid} returned response without 'variations' attribute.")
             elif response.variations is None:
@@ -391,7 +397,7 @@ async def forward(self):
             response_data = {
                 "uid": int(uid),
                 "hotkey": str(self.metagraph.axons[uid].hotkey),
-                "response_time": time.time(),  # When we processed this response
+                "response_time": response_time,  # Miner it took the miners
                 "variations": {},
                 "error": None,
                 "scoring_details": detailed_metrics[i] if i < len(detailed_metrics) else {}
