@@ -266,7 +266,7 @@ async def forward(self):
         for idx_resp, response in enumerate(batch_responses):
             uid = batch_uids[idx_resp]
             response_time = batch_times[idx_resp] if batch_times[idx_resp] else 0.0
-            bt.logging.info(f"#########################################Miner {idx_resp}: respones time {response_time}#########################################")
+            bt.logging.info(f"######################################### Miner UID {uid}: response time {response_time:.2f}s #########################################")
             # bt.logging.info(f"#########################################Miner {idx_resp}: respones time {response_time}#########################################")
             if not hasattr(response, 'variations'):
                 bt.logging.warning(f"Miner {uid} returned response without 'variations' attribute.")
