@@ -100,7 +100,7 @@ async def dendrite_with_retries(dendrite: bt.dendrite, axons: list, synapse: Ide
             return None, None
     
     for attempt in range(cnt_attempts):
-        tasks = [timed_request(axon, synapse, deserialize, attempt) for axon in axons]
+        tasks = [timed_request(axon, synapse, deserialize, attempt) for axon in axons_for_retry]
         results = await asyncio.gather(*tasks)
         
         new_idx = []
