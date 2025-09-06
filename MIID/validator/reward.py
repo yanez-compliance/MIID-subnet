@@ -904,7 +904,7 @@ def get_name_variation_rewards(
             bt.logging.info(f"Extra penalty: {extra_penalty}")
             miner_metrics["penalties"]["extra_names"] = float(extra_penalty)
             miner_metrics["invalid_names"] = list(invalid_names)
-            
+
         # Calculate penalty for missing names
         missing_names = set(seed_names) - set(variations.keys())
         if missing_names:
@@ -1140,8 +1140,11 @@ def calculate_rule_compliance_score(
         num_target_rules_met = len(satisfied_effective_rules)
         
         # Calculate diversity based on effective rules (rules that were actually possible to apply)
-        # effective_rules_count = len(compliant_variations_by_rule)
-        effective_rules_count = min(len(compliant_variations_by_rule), expected_compliant_count)
+        effective_rules_count = len(compliant_variations_by_rule)
+        # rare case of wanting more rule types then ratio with rules
+        if compliant_variations_by_rule > expected_compliant_count:
+            effective_rules_count = expected_compliant_count
+
         if effective_rules_count > 0:
             rule_diversity_factor = num_target_rules_met / effective_rules_count
         else:
