@@ -60,6 +60,7 @@ class IdentitySynapse(bt.Synapse):
     
     # Optional request output, filled by receiving axon
     variations: Optional[Dict[str, List[str]]] = None
+    process_time: Optional[float] = None  # <-- add this
     
     def deserialize(self) -> Dict[str, List[str]]:
         """
