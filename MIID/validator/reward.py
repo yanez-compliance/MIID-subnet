@@ -1163,13 +1163,8 @@ def calculate_rule_compliance_score(
         
         # Calculate diversity based on effective rules (rules that were actually possible to apply)
         effective_rules_count = len(compliant_variations_by_rule)
-        # rare case of wanting more rule types then ratio with rules
-        if effective_rules_count > expected_compliant_count:
-            effective_rules_count = expected_compliant_count
         if effective_rules_count > 0:
             rule_diversity_factor = num_target_rules_met / effective_rules_count
-            # if there is variation that satisfys more rule it can go over then one 
-            rule_diversity_factor = min(rule_diversity_factor, 1.0)
         else:
             # No effective rules means no rules were possible for this name structure
             rule_diversity_factor = 1.0
