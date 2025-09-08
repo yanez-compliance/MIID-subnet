@@ -1162,7 +1162,7 @@ def calculate_rule_compliance_score(
         num_target_rules_met = len(satisfied_effective_rules)
         
         # Calculate diversity based on effective rules (rules that were actually possible to apply)
-        # effective_rules_count = len(compliant_variations_by_rule)
+        effective_rules_count = len(compliant_variations_by_rule)
         # rare case of wanting more rule types then ratio with rules
         if compliant_variations_by_rule > expected_compliant_count:
             effective_rules_count = expected_compliant_count
