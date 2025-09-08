@@ -100,12 +100,20 @@ async def dendrite_with_retries(dendrite: bt.dendrite, axons: list, synapse: Ide
             #bt.logging.info(f"#########################################Response {i}: {response}#########################################")
             #bt.logging.info(f"#########################################Response type: {type(response)}#########################################")
             
+            process_time = None
+            if hasattr(response, "dendrite") and hasattr(response.dendrite, "process_time"):
+                try:
+                    process_time = float(response.dendrite.process_time)
+                except (ValueError, TypeError):
+                    process_time = None
+                        
             if isinstance(response, dict):
                 # Got the variations dictionary directly
                 complete_response = IdentitySynapse(
                     names=synapse.names,
                     query_template=synapse.query_template,
-                    variations=response
+                    variations=response,
+                    process_time=process_time
                 )
                 res[idx[i]] = complete_response
             
@@ -119,16 +127,19 @@ async def dendrite_with_retries(dendrite: bt.dendrite, axons: list, synapse: Ide
                         new_idx.append(idx[i])
                         new_axons.append(axons_for_retry[i])
                 else:
+                    response.process_time = process_time  # <-- attach it
                     res[idx[i]] = response
             
             else:
                 # If the response has variations attribute, treat it as a valid response
                 if hasattr(response, 'variations'):
+                    response.process_time = process_time  # <-- attach it
                     res[idx[i]] = response
                 else:
                     # Retry or assign default
                     if attempt == cnt_attempts - 1:
                         res[idx[i]] = create_default_response()
+                        default_response.process_time = process_time
                     else:
                         new_idx.append(idx[i])
                         new_axons.append(axons_for_retry[i])
@@ -245,7 +256,7 @@ async def forward(self):
             dendrite=self.dendrite,
             axons=batch_axons,
             synapse=request_synapse,
-            deserialize=True,
+            deserialize=False,
             timeout=adaptive_timeout,
             cnt_attempts=7
         )
@@ -387,11 +398,13 @@ async def forward(self):
 
     for i, uid in enumerate(miner_uids):
         if i < len(all_responses):
+            bt.logging.info(f"#########################################Response Time miner {uid}: {all_responses[i].process_time}#########################################")
+
             # Convert the response to a serializable format
             response_data = {
                 "uid": int(uid),
                 "hotkey": str(self.metagraph.axons[uid].hotkey),
-                "response_time": time.time(),  # When we processed this response
+                "response_time": all_responses[i].process_time,  # When we processed this response
                 "variations": {},
                 "error": None,
                 "scoring_details": detailed_metrics[i] if i < len(detailed_metrics) else {}
