@@ -783,7 +783,7 @@ def _calculate_similarity_and_penalties(responses: list, uids: list, seed_names:
                 miner_metrics.setdefault('penalties', {})
                 miner_metrics['penalties']['post_total_penalty'] = float(total_penalty)
                 pre_total_penalty = float(miner_metrics['penalties'].get('total_penalty', 0.0))
-                miner_metrics['penalties']['overall_total_penalty'] = float(min(1.0, pre_total_penalty + total_penalty))
+                miner_metrics['penalties']['overall_total_penalty'] = (1.0 - pre_total_penalty) * (1.0 - total_penalty)
                 detailed_metrics[i]['final_reward'] = penalized_reward
 
     bt.logging.info(f"✅ Cheating detection and penalty application completed")
