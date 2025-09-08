@@ -909,7 +909,7 @@ def get_name_variation_rewards(
         # Penalty for too many variations per name
         for name, vars_list in variations.items():
             if variation_count > 0:
-                allowed_with_grace = int(variation_count * 1.2)  # 20% grace, rounded down
+                allowed_with_grace = int(variation_count * 1.6)  # 60% grace, rounded down
                 if len(vars_list) > allowed_with_grace:
                     too_many = len(vars_list) - allowed_with_grace
                     penalty_too_many = too_many * 0.05  # 5% per extra
