@@ -894,7 +894,8 @@ def get_name_variation_rewards(
             continue
             
         quality_scores = []
-        
+        extra_names_penalty = 0.0
+
         # Calculate penalty for unexpected names (extra variations)
         invalid_names = set(variations.keys()) - set(seed_names)
         if invalid_names:
@@ -902,9 +903,30 @@ def get_name_variation_rewards(
             # 10% penalty per extra name, up to 70% max
             extra_penalty = min(0.7, len(invalid_names) * 0.1)
             bt.logging.info(f"Extra penalty: {extra_penalty}")
-            miner_metrics["penalties"]["extra_names"] = float(extra_penalty)
+            extra_names_penalty = float(extra_penalty)
             miner_metrics["invalid_names"] = list(invalid_names)
+        
+        # Penalty for too many variations per name
+        for name, vars_list in variations.items():
+            if variation_count > 0:
+                allowed_with_grace = int(variation_count * 1.2)  # 20% grace, rounded down
+                if len(vars_list) > allowed_with_grace:
+                    too_many = len(vars_list) - allowed_with_grace
+                    penalty_too_many = too_many * 0.05  # 5% per extra
+                    # bt.logging.info(f"Too many variations for {name}: {too_many} extra → penalty {penalty_too_many}")
+                    extra_names_penalty += penalty_too_many
+        
+            # Penalty for duplicate variations
+            duplicates = len(vars_list) - len(set(vars_list))
+            if duplicates > 0:
+                penalty_duplicates = duplicates * 0.05  # e.g. 5% penalty per duplicate
+                # bt.logging.info(f"Duplicate variations for {name}: {duplicates} duplicates → penalty {penalty_duplicates}")
+                extra_names_penalty += penalty_duplicates
 
+        # Optionally cap at 1.0 total
+        extra_names_penalty = min(extra_names_penalty, 1.0)
+        miner_metrics["penalties"]["extra_names"] = extra_names_penalty
+    
         # Calculate penalty for missing names
         missing_names = set(seed_names) - set(variations.keys())
         if missing_names:
@@ -1144,7 +1166,6 @@ def calculate_rule_compliance_score(
         # rare case of wanting more rule types then ratio with rules
         if compliant_variations_by_rule > expected_compliant_count:
             effective_rules_count = expected_compliant_count
-
         if effective_rules_count > 0:
             rule_diversity_factor = num_target_rules_met / effective_rules_count
         else:
