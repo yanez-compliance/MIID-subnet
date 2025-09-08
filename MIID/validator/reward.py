@@ -908,11 +908,13 @@ def get_name_variation_rewards(
         
         # Penalty for too many variations per name
         for name, vars_list in variations.items():
-            if variation_count > 0 and len(vars_list) > variation_count:
-                too_many = len(vars_list) - variation_count
-                penalty_too_many = too_many * 0.05  # e.g. 5% penalty per extra variation
-                # bt.logging.info(f"Too many variations for {name}: {too_many} extra → penalty {penalty_too_many}")
-                extra_names_penalty += penalty_too_many
+            if variation_count > 0:
+                allowed_with_grace = int(variation_count * 1.2)  # 20% grace, rounded down
+                if len(vars_list) > allowed_with_grace:
+                    too_many = len(vars_list) - allowed_with_grace
+                    penalty_too_many = too_many * 0.05  # 5% per extra
+                    # bt.logging.info(f"Too many variations for {name}: {too_many} extra → penalty {penalty_too_many}")
+                    extra_names_penalty += penalty_too_many
         
             # Penalty for duplicate variations
             duplicates = len(vars_list) - len(set(vars_list))
@@ -1161,7 +1163,9 @@ def calculate_rule_compliance_score(
         
         # Calculate diversity based on effective rules (rules that were actually possible to apply)
         # effective_rules_count = len(compliant_variations_by_rule)
-        effective_rules_count = min(len(compliant_variations_by_rule), expected_compliant_count)
+        # rare case of wanting more rule types then ratio with rules
+        if compliant_variations_by_rule > expected_compliant_count:
+            effective_rules_count = expected_compliant_count
         if effective_rules_count > 0:
             rule_diversity_factor = num_target_rules_met / effective_rules_count
         else:
