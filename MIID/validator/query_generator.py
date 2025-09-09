@@ -852,7 +852,7 @@ class QueryGenerator:
         1. The query MUST use {{name}} as a placeholder for the target name.
         2. Format as a natural language request that explicitly states all requirements.
         3. Include both the similarity requirements (phonetic and orthographic) AND the rule-based transformation requirements in the query.
-        4. Do not write SQL queries
+        4. Do not write any SQL queries or any code. Return text only.
         
         CRITICAL: Return ONLY the query template text. Do not include any explanations, analysis, or commentary about the query. Do not say "this query meets requirements" or similar phrases. Just return the actual query template that miners will receive.
         
