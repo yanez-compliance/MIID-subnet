@@ -111,22 +111,22 @@ MIID is not just another AI dataset—it's a **live, evolving system** that **ch
 ---
 ## 🛣️ Roadmap
 
-### Phase 1: Initial Launch & Name-Based Threat Scenarios (May 2025) [Read more details here](docs/Yanez%20Identity%20Generation%20Bittensor%20Subnet%20-%20Phase%201_v1_1.pdf)
+### Phase 1: Initial Launch & Name-Based Threat Scenarios (June 2025) [Read more details here](docs/Yanez%20Identity%20Generation%20Bittensor%20Subnet%20-%20Phase%201_v1_1.pdf)
 - Deploy MIID subnet on Bittensor mainnet. 
 - Enable validators to test known threat scenarios against miner responses.
 - Introduce name-based execution vectors: phonetic, orthographic, and rule-based variations.
 
-### Phase 2: Miner-Contributed Threat Scenarios (June 2025)
+### Phase 2: Miner-Contributed Threat Scenarios (Q4 2025)
 - Expand Threat Scenario Query System to allow miners to propose unknown threat scenarios.
 - Introduce a **Post-Evaluation System** to systematically validate and assess new miner-submitted threat scenarios.
 - Support new evasion tactics, including nickname-based threats, transliteration-based alterations, and middle name manipulations.
 - Improve validator scoring and introduce penalties for repetitive or low-value submissions.
 
-### Phase 3: Location-Based Threat Scenarios (August 2025)
+### Phase 3: Location-Based Threat Scenarios (Q4 2025)
 - Add support for location obfuscation via IP, region, and geographic manipulation.
 - Support organic queries to detect evasion tied to high-risk regions.
 
-### Phase 4: AML Ecosystem Integration (September 2025)
+### Phase 4: AML Ecosystem Integration (Q4 2025)
 - Open subnet to external institutions and regulators.
 - Enable real-world compliance queries and expand validated execution vectors.
 
