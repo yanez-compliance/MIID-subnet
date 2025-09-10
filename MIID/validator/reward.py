@@ -1023,10 +1023,10 @@ def get_name_variation_rewards(
         #     bt.logging.info(f"Miner {uid} rule compliance: {miner_metrics['rule_compliance']['overall_score']}")
         # else:
         #     bt.logging.info(f"Miner {uid} rule compliance: 0.0")
-        # bt.logging.info(f"Miner {uid} Base quality scores: {quality_scores}")
-        # bt.logging.info(f"Miner {uid} average quality: {miner_metrics['average_quality']}")
-        # bt.logging.info(f"Miner {uid} completeness multiplier: {miner_metrics['completeness_multiplier']}")
-        # bt.logging.info(f"Miner {uid} final Score: {miner_metrics['final_reward']}")
+        bt.logging.info(f"Miner {uid} Base quality scores: {quality_scores}")
+        bt.logging.info(f"Miner {uid} average quality: {miner_metrics['average_quality']}")
+        bt.logging.info(f"Miner {uid} completeness multiplier: {miner_metrics['completeness_multiplier']}")
+        bt.logging.info(f"Miner {uid} final Score: {miner_metrics['final_reward']}")
         detailed_metrics.append(miner_metrics)
         
     # After initial rewards are calculated, apply penalties for high similarity between miners
@@ -1122,7 +1122,7 @@ def calculate_rule_compliance_score(
     overall_compliant_count = len(rules_satisfied_by_variation)
     expected_compliant_count = max(1, int(len(variations) * target_percentage))
     
-    # bt.logging.info(f"Found {overall_compliant_count} unique variations complying with at least one target rule (expected ~{expected_compliant_count} based on target percentage)")
+    bt.logging.info(f"Found {overall_compliant_count} unique variations complying with at least one target rule (expected ~{expected_compliant_count} based on target percentage)")
     
     # for rule, variations_list in compliant_variations_by_rule.items():
     #     # This logging shows all rules returned by evaluate_rule_compliance, which should be the target_rules
@@ -1172,11 +1172,11 @@ def calculate_rule_compliance_score(
             # No effective rules means no rules were possible for this name structure
             rule_diversity_factor = 1.0
 
-    #bt.logging.info(f"Met {num_target_rules_met} out of {len(compliant_variations_by_rule)} effective rules. Rule diversity factor: {rule_diversity_factor:.2f}")
+    bt.logging.info(f"Met {num_target_rules_met} out of {len(compliant_variations_by_rule)} effective rules. Rule diversity factor: {rule_diversity_factor:.2f}")
 
     # Final score combines quantity and diversity
     final_score = quantity_score * rule_diversity_factor
-    #bt.logging.info(f"Final rule compliance score (quantity * diversity): {final_score:.2f}")
+    bt.logging.info(f"Final rule compliance score (quantity * diversity): {final_score:.2f}")
     
     return final_score, {
         "compliant_variations_by_rule": compliant_variations_by_rule,
