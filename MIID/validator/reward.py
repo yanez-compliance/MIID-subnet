@@ -616,7 +616,7 @@ def calculate_variation_quality(
             bt.logging.warning("  - Zero rule compliance score on rule-compliant variations")
     
     #bt.logging.info(f"{'='*50}\n")
-    return final_score, detailed_metrics
+    return final_score, base_score, detailed_metrics
 
 
 def _calculate_similarity_and_penalties(responses: list, uids: list, seed_names: list, detailed_metrics: list, rewards: np.ndarray) -> tuple:
@@ -894,6 +894,7 @@ def get_name_variation_rewards(
             continue
             
         quality_scores = []
+        base_scores = []
         extra_names_penalty = 0.0
 
         # Calculate penalty for unexpected names (extra variations)
@@ -969,7 +970,7 @@ def get_name_variation_rewards(
             
             # Calculate quality score
             try:
-                quality, name_detailed_metrics = calculate_variation_quality(
+                quality, base_score, name_detailed_metrics = calculate_variation_quality(
                     name,
                     name_variations,
                     phonetic_similarity=phonetic_similarity,
@@ -978,6 +979,7 @@ def get_name_variation_rewards(
                     rule_based=rule_based  # Pass rule-based metadata
                 )
                 quality_scores.append(quality)
+                base_scores.append(base_score)
                 miner_metrics["name_metrics"][name] = name_detailed_metrics
                 
                 # Extract rule compliance metrics if available
@@ -1000,7 +1002,9 @@ def get_name_variation_rewards(
         # Calculate final reward
         if quality_scores:
             avg_quality = sum(quality_scores) / len(quality_scores)
+            avg_base_score = sum(base_scores) / len(base_scores)
             rewards[i] = avg_quality * completeness_multiplier
+            miner_metrics["average_base_score"] = float(avg_base_score)
             miner_metrics["average_quality"] = float(avg_quality)
             miner_metrics["final_reward"] = float(rewards[i])
         else:
