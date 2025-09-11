@@ -139,7 +139,7 @@ async def dendrite_with_retries(dendrite: bt.dendrite, axons: list, synapse: Ide
                     # Retry or assign default
                     if attempt == cnt_attempts - 1:
                         res[idx[i]] = create_default_response()
-                        default_response.process_time = process_time
+                        response.process_time = process_time
                     else:
                         new_idx.append(idx[i])
                         new_axons.append(axons_for_retry[i])
