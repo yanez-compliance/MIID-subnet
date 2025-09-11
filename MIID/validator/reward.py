@@ -151,14 +151,14 @@ def calculate_part_score(
     # Define the boundaries for each similarity level with no overlaps
     phonetic_boundaries = {
         "Light": (0.80, 1.00),   # High similarity range
-        "Medium": (0.60, 0.79),  # Moderate similarity range
-        "Far": (0.30, 0.59)      # Low similarity range
+        "Medium": (0.60, 0.80),  # Moderate similarity range
+        "Far": (0.30, 0.60)      # Low similarity range
     }
     
     orthographic_boundaries = {
         "Light": (0.70, 1.00),   # High similarity range
-        "Medium": (0.50, 0.69),  # Moderate similarity range
-        "Far": (0.20, 0.49)      # Low similarity range
+        "Medium": (0.50, 0.70),  # Moderate similarity range
+        "Far": (0.20, 0.50)      # Low similarity range
     }
     
     # 1. Check if count matches expected count with adaptive tolerance
