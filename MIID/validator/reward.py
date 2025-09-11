@@ -149,6 +149,7 @@ def calculate_part_score(
         return 0.0, {}
     
     # Define the boundaries for each similarity level with no overlaps
+    # There is a gap so no code can be in 2 different bounds
     phonetic_boundaries = {
         "Light": (0.80, 1.00),   # High similarity range
         "Medium": (0.60, 0.79),  # Moderate similarity range
@@ -616,7 +617,7 @@ def calculate_variation_quality(
             bt.logging.warning("  - Zero rule compliance score on rule-compliant variations")
     
     #bt.logging.info(f"{'='*50}\n")
-    return final_score, detailed_metrics
+    return final_score, base_score, detailed_metrics
 
 
 def _calculate_similarity_and_penalties(responses: list, uids: list, seed_names: list, detailed_metrics: list, rewards: np.ndarray) -> tuple:
@@ -894,6 +895,7 @@ def get_name_variation_rewards(
             continue
             
         quality_scores = []
+        base_scores = []
         extra_names_penalty = 0.0
 
         # Calculate penalty for unexpected names (extra variations)
@@ -969,7 +971,7 @@ def get_name_variation_rewards(
             
             # Calculate quality score
             try:
-                quality, name_detailed_metrics = calculate_variation_quality(
+                quality, base_score, name_detailed_metrics = calculate_variation_quality(
                     name,
                     name_variations,
                     phonetic_similarity=phonetic_similarity,
@@ -978,6 +980,7 @@ def get_name_variation_rewards(
                     rule_based=rule_based  # Pass rule-based metadata
                 )
                 quality_scores.append(quality)
+                base_scores.append(base_score)
                 miner_metrics["name_metrics"][name] = name_detailed_metrics
                 
                 # Extract rule compliance metrics if available
@@ -1000,7 +1003,9 @@ def get_name_variation_rewards(
         # Calculate final reward
         if quality_scores:
             avg_quality = sum(quality_scores) / len(quality_scores)
+            avg_base_score = sum(base_scores) / len(base_scores)
             rewards[i] = avg_quality * completeness_multiplier
+            miner_metrics["average_base_score"] = float(avg_base_score)
             miner_metrics["average_quality"] = float(avg_quality)
             miner_metrics["final_reward"] = float(rewards[i])
         else:
@@ -1023,10 +1028,10 @@ def get_name_variation_rewards(
         #     bt.logging.info(f"Miner {uid} rule compliance: {miner_metrics['rule_compliance']['overall_score']}")
         # else:
         #     bt.logging.info(f"Miner {uid} rule compliance: 0.0")
-        # bt.logging.info(f"Miner {uid} Base quality scores: {quality_scores}")
-        # bt.logging.info(f"Miner {uid} average quality: {miner_metrics['average_quality']}")
-        # bt.logging.info(f"Miner {uid} completeness multiplier: {miner_metrics['completeness_multiplier']}")
-        # bt.logging.info(f"Miner {uid} final Score: {miner_metrics['final_reward']}")
+        bt.logging.info(f"Miner {uid} Base quality scores: {quality_scores}")
+        bt.logging.info(f"Miner {uid} average quality: {miner_metrics['average_quality']}")
+        bt.logging.info(f"Miner {uid} completeness multiplier: {miner_metrics['completeness_multiplier']}")
+        bt.logging.info(f"Miner {uid} final Score: {miner_metrics['final_reward']}")
         detailed_metrics.append(miner_metrics)
         
     # After initial rewards are calculated, apply penalties for high similarity between miners
@@ -1122,7 +1127,7 @@ def calculate_rule_compliance_score(
     overall_compliant_count = len(rules_satisfied_by_variation)
     expected_compliant_count = max(1, int(len(variations) * target_percentage))
     
-    # bt.logging.info(f"Found {overall_compliant_count} unique variations complying with at least one target rule (expected ~{expected_compliant_count} based on target percentage)")
+    bt.logging.info(f"Found {overall_compliant_count} unique variations complying with at least one target rule (expected ~{expected_compliant_count} based on target percentage)")
     
     # for rule, variations_list in compliant_variations_by_rule.items():
     #     # This logging shows all rules returned by evaluate_rule_compliance, which should be the target_rules
@@ -1169,11 +1174,11 @@ def calculate_rule_compliance_score(
             # No effective rules means no rules were possible for this name structure
             rule_diversity_factor = 1.0
 
-    #bt.logging.info(f"Met {num_target_rules_met} out of {len(compliant_variations_by_rule)} effective rules. Rule diversity factor: {rule_diversity_factor:.2f}")
+    bt.logging.info(f"Met {num_target_rules_met} out of {len(compliant_variations_by_rule)} effective rules. Rule diversity factor: {rule_diversity_factor:.2f}")
 
     # Final score combines quantity and diversity
     final_score = quantity_score * rule_diversity_factor
-    #bt.logging.info(f"Final rule compliance score (quantity * diversity): {final_score:.2f}")
+    bt.logging.info(f"Final rule compliance score (quantity * diversity): {final_score:.2f}")
     
     return final_score, {
         "compliant_variations_by_rule": compliant_variations_by_rule,

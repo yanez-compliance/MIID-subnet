@@ -374,6 +374,15 @@ class Validator(BaseValidatorNeuron):
 
         try:
             # Create the wandb run with connection to servers
+            settings = wandb.Settings(
+                # Prevent capturing the overall summary on run end
+                x_server_side_derived_summary=True,
+                # Suppress console logs if you'd like less noise
+                silent=False,
+                show_info=True,
+                show_warnings=True,
+                show_errors=True,
+            )
             self.wandb_run = wandb.init(
                 name=wandb_name,
                 project=self.config.wandb.project_name,
@@ -395,7 +404,8 @@ class Validator(BaseValidatorNeuron):
                     #"logging_dir": getattr(self.config.logging, 'logging_dir', None),
                 },
                 allow_val_change=True,
-                reinit=True # Allows reinitializing runs, useful with max_run_steps config
+                reinit=True, # Allows reinitializing runs, useful with max_run_steps config
+                settings=settings
             )
 
             bt.logging.info(f"Started new wandb run for forward pass: {wandb_name}")
