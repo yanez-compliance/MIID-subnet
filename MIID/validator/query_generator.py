@@ -524,8 +524,8 @@ class QueryGenerator:
             hint_suffix = "\n[STATIC VALIDATION HINTS]: " + "; ".join(static_issues)
             template_for_judge = query_template + hint_suffix
             bt.logging.info("🕵️‍♀️ Static analysis found issues. Appending hints before sending to judge.")
-            bt.logging.debug(f"   Original template: {query_template}")
-            bt.logging.debug(f"   Template for judge: {template_for_judge}")
+            # bt.logging.debug(f"   Original template: {query_template}")
+            # bt.logging.debug(f"   Template for judge: {template_for_judge}")
 
         # Mandatory LLM judge with robust fallbacks
         llm_issues = []
@@ -778,15 +778,15 @@ class QueryGenerator:
         phonetic_spec = ", ".join([f"{int(pct*100)}% {level}" for level, pct in phonetic_similarity.items()])
         orthographic_spec = ", ".join([f"{int(pct*100)}% {level}" for level, pct in orthographic_similarity.items()])
         
-        bt.logging.debug(f"🤖 Generating query with: {variation_count} variations, " +
-                    f"phonetic similarity: {phonetic_spec}, " +
-                    f"orthographic similarity: {orthographic_spec}")
-        bt.logging.debug(f"⚖️ Rule-based requirement: {rule_percentage}% of variations should follow: {rule_template}")
+        # bt.logging.debug(f"🤖 Generating query with: {variation_count} variations, " +
+        #             f"phonetic similarity: {phonetic_spec}, " +
+        #             f"orthographic similarity: {orthographic_spec}")
+        # bt.logging.debug(f"⚖️ Rule-based requirement: {rule_percentage}% of variations should follow: {rule_template}")
 
         clarifying_prefix = "The following name is the seed name to generate variations for: {name}. "  
         # Add a clarifying sentence at the beginning to make it clear this is the seed name
         simple_template = f"{clarifying_prefix}Generate {variation_count} variations of the name {{name}}, ensuring phonetic similarity: {phonetic_spec}, and orthographic similarity: {orthographic_spec}, and also include {rule_percentage}% of variations that follow: {rule_template}"
-        bt.logging.debug(f"📝 Simple template: {simple_template}")
+        # bt.logging.debug(f"📝 Simple template: {simple_template}")
         
         if use_default:
             bt.logging.info("Using default query template (skipping complex query generation)")
@@ -919,7 +919,7 @@ class QueryGenerator:
                     attempt_log["raw_template"] = query_template
 
                     # Validate and minimally clarify the generated template
-                    bt.logging.debug(f"📝 Pre-judge LLM-generated query: {query_template}")
+                    # bt.logging.debug(f"📝 Pre-judge LLM-generated query: {query_template}")
                     is_valid, error_msg, deduped_issues, static_issues_from_val, llm_issues_from_val, successful_judge_model, successful_judge_timeout, validation_details = self.validate_query_template(query_template, labels)
                     attempt_log["validation"] = validation_details
 
@@ -929,8 +929,8 @@ class QueryGenerator:
 
                     if not is_valid:
                         bt.logging.error(f"❌ LLM '{model}' generated INVALID template:")
-                        bt.logging.error(f"   Failed Query: {query_template}")
-                        bt.logging.error(f"   Reason: {error_msg}")
+                        # bt.logging.error(f"   Failed Query: {query_template}")
+                        # bt.logging.error(f"   Reason: {error_msg}")
                         # Optionally attempt a one-shot repair instead of regeneration
                         if getattr(self.config.neuron, 'enable_repair_prompt', False):
                             try:
@@ -1002,8 +1002,8 @@ class QueryGenerator:
                                     bt.logging.warning(f"   Judge Issues Found: {llm_issues_from_val}")
                             # Proceed with the current (invalid) query plus hints; miner may still handle
                             bt.logging.info(f"Proceeding without regeneration due to --neuron.regenerate_on_invalid=False")
-                            bt.logging.info(f"✅ Successfully generated query with model: {model} and timeout: {timeout}s (proceeding despite invalid)")
-                            bt.logging.info(f"   Final Query: {query_template}")
+                            # bt.logging.info(f"✅ Successfully generated query with model: {model} and timeout: {timeout}s (proceeding despite invalid)")
+                            # bt.logging.info(f"   Final Query: {query_template}")
                             
                             # Cache successful generation config
                             self.last_successful_generation_model = model
@@ -1038,7 +1038,7 @@ class QueryGenerator:
                     self.last_successful_generation_timeout = timeout
                     bt.logging.debug(f"💾 Cached generation preference -> model: {model}, timeout: {timeout}s")
                     
-                    bt.logging.debug(f"📄 Final Query: {query_template}")
+                    # bt.logging.debug(f"📄 Final Query: {query_template}")
                     
                     attempt_log["status"] = "success"
                     generation_log["attempts"].append(attempt_log)
@@ -1231,7 +1231,7 @@ class QueryGenerator:
                         if full_name not in seen_names:
                             seed_names_with_labels.append({"name": full_name, "label": "positive"})
                             seen_names.add(full_name)
-                            bt.logging.info(f"Added positive sample: {full_name}")
+                            # bt.logging.info(f"Added positive sample: {full_name}")
                     attempts += 1
                 current_positives = len([n for n in seed_names_with_labels if isinstance(n, dict) and n.get("label") == "positive"]) 
                 if current_positives < positive_sample_count:
@@ -1255,7 +1255,7 @@ class QueryGenerator:
                     3 <= len(last_name) <= 20):
                     generated_names.append(name)
                     seen_names.add(name)
-                    bt.logging.debug(f"📝 Generated negative two-part name: {name}")
+                    # bt.logging.debug(f"📝 Generated negative two-part name: {name}")
             
             # Add generated names to the list with "negative" label
             for name in generated_names:
@@ -1266,10 +1266,10 @@ class QueryGenerator:
             
             # Log the final list of seed names with their labels for traceability
             log_output = [f"'{item['name']}' ({item['label']})" for item in seed_names_with_labels]
-            bt.logging.debug(f"📋 Generated {len(seed_names_with_labels)} test names: [{', '.join(log_output)}]")
+            # bt.logging.debug(f"📋 Generated {len(seed_names_with_labels)} test names: [{', '.join(log_output)}]")
             
-            bt.logging.debug(f"📄 Query template: {query_template}")
-            bt.logging.debug(f"📋 Query labels: {query_labels}")
+            # bt.logging.debug(f"📄 Query template: {query_template}")
+            # bt.logging.debug(f"📋 Query labels: {query_labels}")
             
             # The function now returns a list of dictionaries, so we extract just the names for the return
             seed_names = [item['name'] for item in seed_names_with_labels]
@@ -1339,9 +1339,9 @@ class QueryGenerator:
             # In fallback, all names are "negative"
             seed_names_with_labels = [{"name": name, "label": "negative"} for name in seed_names]
             
-            bt.logging.info(f"Using fallback: {len(seed_names)} test names")
-            bt.logging.debug(f"📄 Query template: {query_template}")
-            bt.logging.debug(f"📋 Query labels: {query_labels}")
+            # bt.logging.info(f"Using fallback: {len(seed_names)} test names")
+            # bt.logging.debug(f"📄 Query template: {query_template}")
+            # bt.logging.debug(f"📋 Query labels: {query_labels}")
             
             fallback_log = {
                 "decision": "Used fallback query generation due to an exception.",
