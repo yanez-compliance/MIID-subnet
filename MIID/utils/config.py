@@ -296,7 +296,7 @@ def add_validator_args(cls, parser):
         "--wandb.disable",
         action="store_true",
         help="Disable wandb logging entirely. Useful for debugging or when wandb is unavailable.",
-        default=False,
+        default=True,
     )
     parser.add_argument(
         "--wandb.cleanup_runs",
