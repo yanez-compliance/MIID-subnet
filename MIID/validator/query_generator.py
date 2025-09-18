@@ -255,7 +255,7 @@ class QueryGenerator:
         try:
             # Construct the path to the JSON file relative to the current file
             current_dir = os.path.dirname(os.path.abspath(__file__))
-            json_path = os.path.join(current_dir, 'SanctionedIndividulas.json')
+            json_path = os.path.join(current_dir, 'Sanc_I_DOB_address.json')
             bt.logging.info(f"Loading sanctioned individuals from: {json_path}")
             if os.path.exists(json_path):
                 with open(json_path, 'r') as f:
@@ -265,6 +265,23 @@ class QueryGenerator:
                 bt.logging.error(f"Sanctioned individuals file not found at: {json_path}")
         except Exception as e:
             bt.logging.error(f"Error loading sanctioned individuals: {e}")
+
+        # Load sanctioned countries
+        self.sanctioned_countries = []
+        try:
+            # Construct the path to the JSON file relative to the current file
+            current_dir = os.path.dirname(os.path.abspath(__file__))
+            json_path = os.path.join(current_dir, 'SanctionedCountries.json')
+            bt.logging.info(f"Loading sanctioned countries from: {json_path}")
+            if os.path.exists(json_path):
+                with open(json_path, 'r') as f:
+                    self.sanctioned_countries = json.load(f)
+                    self.sanctioned_countries = self.sanctioned_countries["sanctionedCountries"]
+                bt.logging.info(f"Loaded {len(self.sanctioned_countries)} sanctioned countries.")
+            else:
+                bt.logging.error(f"Sanctioned countries file not found at: {json_path}")
+        except Exception as e:
+            bt.logging.error(f"Error loading sanctioned countries: {e}")
 
         # Flag to control whether to use the LLM judge (default False, but auto-enables for complex queries)
         self.use_judge_model = getattr(
@@ -1202,15 +1219,13 @@ class QueryGenerator:
             # successful_judge_timeout = None
             
             # Generate test names using a mix of sanctioned and generated names
-            seed_names_with_labels = []
+            seed_identities_with_labels = []
             
             # Ensure sample_size exists and has a valid value
             sample_size = getattr(self.config.seed_names, 'sample_size', 15)
-            if sample_size is None:
-                sample_size = 15
-            
-            # Number of positive samples to take from the sanctioned list
-            positive_sample_count = 5
+
+            # Number of positive samples to take from the sanctioned list: 1/3 of sample_size, rounded down
+            positive_sample_count = sample_size // 3
             
             # Track names to avoid duplicates across positive and negative lists
             seen_names = set()
@@ -1220,20 +1235,22 @@ class QueryGenerator:
                 max_attempts = positive_sample_count * 10
                 attempts = 0
                 while (
-                    len([n for n in seed_names_with_labels if isinstance(n, dict) and n.get("label") == "positive"]) < positive_sample_count
+                    len([n for n in seed_identities_with_labels if isinstance(n, dict) and n.get("label") == "positive"]) < positive_sample_count
                     and attempts < max_attempts
                 ):
                     person = random.choice(self.sanctioned_individuals)
                     first_name = str(person.get("FirstName", "")).strip()
                     last_name = str(person.get("LastName", "")).strip()
+                    dob = str(person.get("DOB", "")).strip()
+                    address = str(person.get("Country_Residence", ""))
                     if first_name and last_name:
                         full_name = f"{first_name} {last_name}".lower()
                         if full_name not in seen_names:
-                            seed_names_with_labels.append({"name": full_name, "label": "positive"})
+                            seed_identities_with_labels.append({"name": full_name, "dob": dob, "address": address, "label": "positive"})
                             seen_names.add(full_name)
                             # bt.logging.info(f"Added positive sample: {full_name}")
                     attempts += 1
-                current_positives = len([n for n in seed_names_with_labels if isinstance(n, dict) and n.get("label") == "positive"]) 
+                current_positives = len([n for n in seed_identities_with_labels if isinstance(n, dict) and n.get("label") == "positive"]) 
                 if current_positives < positive_sample_count:
                     bt.logging.warning(
                         f"Could not collect {positive_sample_count} unique positive samples; using {current_positives}."
@@ -1241,14 +1258,47 @@ class QueryGenerator:
             else:
                 bt.logging.warning("Sanctioned individuals list is empty. No positive samples will be added.")
             
-            # 2. Add negative samples generated by Faker (always two-part names)
+
+            # 2. Add high risk samples from the sanctioned Countries list
+
+            # Number of positive samples to take from the sanctioned list: 1/3 of sample_size, rounded down
+            high_risk_sample_count = sample_size // 3
             fake = Faker(LATIN_LOCALES)
-            negative_sample_count = sample_size - len(seed_names_with_labels)
+
+
+            generated_names_high_risk = []
+            while len(generated_names_high_risk) < high_risk_sample_count:
+                first_name = fake.first_name().lower()
+                last_name = fake.last_name().lower()
+                dob = fake.date_of_birth(minimum_age=18, maximum_age=100).strftime("%Y-%m-%d")
+                address = random.choice(self.sanctioned_countries)
+                name = f"{first_name} {last_name}"
+                if (name not in generated_names_high_risk and name not in seen_names and 
+                    3 <= len(first_name) <= 20 and 
+                    3 <= len(last_name) <= 20):
+                    generated_names_high_risk.append(name)
+                    seen_names.add(name)
+                    # bt.logging.debug(f"📝 Generated negative two-part name: {name}")
+            
+            # Add generated names to the list with "negative" label
+            for name in generated_names_high_risk:
+                seed_identities_with_labels.append({"name": name, "dob": dob, "address": address, "label": "High Risk"})
+            
+        
+            
+            # 3. Add negative samples generated by Faker (always two-part names)
+            negative_sample_count = sample_size - len(seed_identities_with_labels)
             
             generated_names = []
             while len(generated_names) < negative_sample_count:
                 first_name = fake.first_name().lower()
                 last_name = fake.last_name().lower()
+                dob = fake.date_of_birth(minimum_age=18, maximum_age=100).strftime("%Y-%m-%d")
+                
+                address = fake.country()
+                while address not in self.sanctioned_countries:
+                    address = fake.country()
+
                 name = f"{first_name} {last_name}"
                 if (name not in generated_names and name not in seen_names and 
                     3 <= len(first_name) <= 20 and 
@@ -1259,21 +1309,21 @@ class QueryGenerator:
             
             # Add generated names to the list with "negative" label
             for name in generated_names:
-                seed_names_with_labels.append({"name": name, "label": "negative"})
+                seed_identities_with_labels.append({"name": name, "dob": dob, "address": address, "label": "negative"})
             
             # Shuffle the list to mix positive and negative samples
-            random.shuffle(seed_names_with_labels)
+            random.shuffle(seed_identities_with_labels)
             
             # Log the final list of seed names with their labels for traceability
-            log_output = [f"'{item['name']}' ({item['label']})" for item in seed_names_with_labels]
-            # bt.logging.debug(f"📋 Generated {len(seed_names_with_labels)} test names: [{', '.join(log_output)}]")
+            log_output = [f"'{item['name']}' ({item['label']})" for item in seed_identities_with_labels]
+            # bt.logging.debug(f"📋 Generated {len(seed_identities_with_labels)} test names: [{', '.join(log_output)}]")
             
             # bt.logging.debug(f"📄 Query template: {query_template}")
             # bt.logging.debug(f"📋 Query labels: {query_labels}")
             
             # The function now returns a list of dictionaries, so we extract just the names for the return
-            seed_names = [item['name'] for item in seed_names_with_labels]
-            return seed_names_with_labels, query_template, query_labels, successful_model, successful_timeout, successful_judge_model, successful_judge_timeout, generation_log
+            seed_names = [item['name'] for item in seed_identities_with_labels]
+            return seed_identities_with_labels, query_template, query_labels, successful_model, successful_timeout, successful_judge_model, successful_judge_timeout, generation_log
             
         except Exception as e:
             bt.logging.error(f"Error building queries: {str(e)}")
