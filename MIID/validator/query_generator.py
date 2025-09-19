@@ -271,7 +271,7 @@ class QueryGenerator:
         try:
             # Construct the path to the JSON file relative to the current file
             current_dir = os.path.dirname(os.path.abspath(__file__))
-            json_path = os.path.join(current_dir, 'SanctionedCountries.json')
+            json_path = os.path.join(current_dir, 'sanctioned_countries.json')
             bt.logging.info(f"Loading sanctioned countries from: {json_path}")
             if os.path.exists(json_path):
                 with open(json_path, 'r') as f:
