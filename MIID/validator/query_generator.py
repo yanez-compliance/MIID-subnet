@@ -771,8 +771,11 @@ class QueryGenerator:
         variation_count: int = 10,
         phonetic_similarity: Dict[str, float] = None,
         orthographic_similarity: Dict[str, float] = None,
+        dob_similarity: Dict[str, float] = None,
         use_default: bool = False,
-        rule_percentage: int = 30
+        rule_percentage: int = 30,
+        address: str = None,
+        dob: str = None
     ) -> Tuple[str, Dict[str, Any], str, int, str, int, Dict[str, Any]]:
         """Generate a query template based on specified parameters"""
         # Default similarity preferences if none provided
@@ -780,6 +783,8 @@ class QueryGenerator:
             phonetic_similarity = {"Medium": 1.0}
         if orthographic_similarity is None:
             orthographic_similarity = {"Medium": 1.0}
+        if dob_similarity is None:
+            dob_similarity = {"year+month only": 1.0}
         
         # Generate rule-based template and metadata
         rule_template, rule_metadata = get_rule_template_and_metadata(rule_percentage)
@@ -789,12 +794,15 @@ class QueryGenerator:
             "variation_count": variation_count,
             "phonetic_similarity": phonetic_similarity,
             "orthographic_similarity": orthographic_similarity,
-            "rule_based": {**(rule_metadata or {}), "percentage": rule_percentage}  # include percentage for validation
+            "dob_similarity": dob_similarity,
+            "rule_based": {**(rule_metadata or {}), "percentage": rule_percentage},  # include percentage for validation
+            "address": address,
+            "dob": dob
         }
         # Format the similarity specifications for the prompt
         phonetic_spec = ", ".join([f"{int(pct*100)}% {level}" for level, pct in phonetic_similarity.items()])
         orthographic_spec = ", ".join([f"{int(pct*100)}% {level}" for level, pct in orthographic_similarity.items()])
-        
+        dob_spec = ", ".join([f"{int(pct*100)}% {level}" for level, pct in dob_similarity.items()])
         # bt.logging.debug(f"🤖 Generating query with: {variation_count} variations, " +
         #             f"phonetic similarity: {phonetic_spec}, " +
         #             f"orthographic similarity: {orthographic_spec}")
@@ -804,6 +812,15 @@ class QueryGenerator:
         # Add a clarifying sentence at the beginning to make it clear this is the seed name
         simple_template = f"{clarifying_prefix}Generate {variation_count} variations of the name {{name}}, ensuring phonetic similarity: {phonetic_spec}, and orthographic similarity: {orthographic_spec}, and also include {rule_percentage}% of variations that follow: {rule_template}"
         # bt.logging.debug(f"📝 Simple template: {simple_template}")
+        
+        # Add address and DOB requirements if provided
+        if address:
+            address_prefix = f" The following address is the seed country/city to generate address variations for: {address}. Generate unique real addresses within the specified country/city for each variation. "
+            simple_template = simple_template + address_prefix
+        
+        if dob:
+            dob_prefix = f" The following date of birth is the seed DOB to generate variations for: {dob}. Generate DOB variations with phonetic similarity patterns: {dob_spec}"
+            simple_template = simple_template + dob_prefix
         
         if use_default:
             bt.logging.info("Using default query template (skipping complex query generation)")
@@ -852,6 +869,31 @@ class QueryGenerator:
     
         
         # Define the prompt with specific parameters and security terminology
+        address_requirement = ""
+        dob_requirement = ""
+        
+        if address:
+            address_requirement = f"""
+        5. ADDRESS REQUIREMENTS: The following address is the seed country/city to generate address variations for: {address}. Generate unique real addresses within the specified country/city for each variation. Each variation must have a different, realistic address within the same country/city."""
+        
+        if dob:
+            dob_requirement = f"""
+        6. DOB REQUIREMENTS: The following date of birth is the seed DOB to generate variations for: {dob}. Generate DOB variations with these patterns: {dob_spec}"""
+
+        # Only include address/dob in example if they exist
+        example_parts = [
+            f"Generate {variation_count} variations of {{name}}",
+            f"ensuring phonetic similarity ({phonetic_spec}) and orthographic similarity ({orthographic_spec})",
+            f"Approximately {rule_percentage}% of the total variations should follow these rule-based transformations: {rule_template}"
+        ]
+
+        if address:
+            example_parts.append(f"Address variations for: {address}")
+        if dob:
+            example_parts.append(f"DOB variations for: {dob}")
+
+        example_format = ". ".join(example_parts) + "."
+        
         prompt = f"""Generate a Threat Scenario generation query with these specifications:
 
         THREAT SCENARIO CONTEXT:
@@ -862,8 +904,9 @@ class QueryGenerator:
         1. Generate exactly {variation_count} execution vectors (name variations) for each target identity
         2. For phonetic similarity (sound-alike names), implement: {phonetic_spec}
         3. For orthographic similarity (visually similar spellings), implement: {orthographic_spec}
-        4. IMPORTANT: Approximately {rule_percentage}% of the total variations should follow the rule-based transformations below. This percentage applies to the entire group of transformations, not to each one individually. All listed transformations must be represented across the set of rule-based variations.
-        Transformations: {rule_template}
+        4. For DOB similarity (date of birth variations), implement: {dob_spec}
+        5. IMPORTANT: Approximately {rule_percentage}% of the total variations should follow the rule-based transformations below. This percentage applies to the entire group of transformations, not to each one individually. All listed transformations must be represented across the set of rule-based variations.
+        Transformations: {rule_template}{address_requirement}{dob_requirement}
         
         IMPORTANT FORMATTING REQUIREMENTS:
         1. The query MUST use {{name}} as a placeholder for the target name.
@@ -873,7 +916,7 @@ class QueryGenerator:
         
         CRITICAL: Return ONLY the query template text. Do not include any explanations, analysis, or commentary about the query. Do not say "this query meets requirements" or similar phrases. Just return the actual query template that miners will receive.
         
-        Example format: "Generate {variation_count} variations of {{name}}, ensuring phonetic similarity ({phonetic_spec}) and orthographic similarity ({orthographic_spec}). Approximately {rule_percentage}% of the total variations should follow these rule-based transformations: {rule_template}"
+        Example format: {example_format}
         
         YOUR RESPONSE (query template only):"""
         
@@ -1183,6 +1226,27 @@ class QueryGenerator:
                 # Only Light similarity - reduced frequency
                 ({"Light": 1.0}, 0.02),
             ]
+
+            # 4. Set up DOB similarity distribution with weighted selection
+            # Update lines 1217-1236 to match the prompt specification:
+            DOB_configs_with_weights = [
+                # Balanced distribution
+                ({"±1 day": 0.2, "±3 days": 0.2, "±30 days": 0.2, "±90 days": 0.2, "±365 days": 0.1, "year+month only": 0.1}, 0.25),
+                # Focus on close variations
+                ({"±1 day": 0.3, "±3 days": 0.3, "±30 days": 0.2, "±90 days": 0.1, "±365 days": 0.05, "year+month only": 0.05}, 0.20),
+                # Focus on medium variations
+                ({"±1 day": 0.1, "±3 days": 0.2, "±30 days": 0.3, "±90 days": 0.2, "±365 days": 0.15, "year+month only": 0.05}, 0.15),
+                # Focus on far variations
+                ({"±1 day": 0.05, "±3 days": 0.1, "±30 days": 0.2, "±90 days": 0.3, "±365 days": 0.3, "year+month only": 0.05}, 0.15),
+                # Only close variations
+                ({"±1 day": 0.5, "±3 days": 0.5}, 0.10),
+                # Only medium variations
+                ({"±30 days": 0.5, "±90 days": 0.5}, 0.08),
+                # Only far variations
+                ({"±365 days": 0.7, "year+month only": 0.3}, 0.05),
+                # Year+month only
+                ({"year+month only": 1.0}, 0.02),
+            ]
             
             # Helper function for weighted random selection
             def weighted_random_choice(configs_with_weights):
@@ -1192,6 +1256,7 @@ class QueryGenerator:
             # Select configurations using weighted random selection
             phonetic_config = weighted_random_choice(phonetic_configs_with_weights)
             orthographic_config = weighted_random_choice(orthographic_configs_with_weights)
+            dob_config = weighted_random_choice(DOB_configs_with_weights)
             
             # 4. Randomly choose rule_percentage for this query (e.g. 10-60%)
             rule_percentage = random.randint(10, 60)
@@ -1201,6 +1266,7 @@ class QueryGenerator:
                 variation_count = 10
                 phonetic_config = {"Medium": 0.5}
                 orthographic_config = {"Medium": 0.5}
+                dob_config = {"year+month only": 0.5}
                 rule_percentage = 30  # fallback for default
             
             # Generate a complex query template
@@ -1210,8 +1276,11 @@ class QueryGenerator:
                 variation_count=variation_count,
                 phonetic_similarity=phonetic_config,
                 orthographic_similarity=orthographic_config,
+                dob_similarity=dob_config,
                 use_default=self.use_default_query,
-                rule_percentage=rule_percentage
+                rule_percentage=rule_percentage,
+                address=None,  # Will be set per identity
+                dob=None       # Will be set per identity
             )
             
             # Get judge settings from the validation process
