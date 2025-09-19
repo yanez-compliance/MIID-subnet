@@ -212,6 +212,8 @@ async def forward(self):
 
     # Extract just the names for use in existing logic
     seed_names = [item['name'] for item in seed_names_with_labels]
+    seed_addresses = [item['address'] for item in seed_names_with_labels]
+    seed_dob = [item['dob'] for item in seed_names_with_labels]
 
     # Calculate timeout based on the number of names and complexity
     base_timeout = self.config.neuron.timeout  # Double from 60 to 120 seconds
@@ -348,6 +350,8 @@ async def forward(self):
         "timestamp": timestamp,
         "seed_names_with_labels": seed_names_with_labels,
         "seed_names": seed_names,
+        "seed_addresses": seed_addresses,
+        "seed_dob": seed_dob,
         "query_template": query_template,
         "query_labels": query_labels,
         "formatted_queries": formatted_queries,  # Add the formatted queries
