@@ -827,7 +827,6 @@ class QueryGenerator:
         
         phonetic_spec = ", ".join([f"{int(pct*100)}% {level}" for level, pct in phonetic_similarity.items()])
         orthographic_spec = ", ".join([f"{int(pct*100)}% {level}" for level, pct in orthographic_similarity.items()])
-        dob_spec = ", ".join([f"{int(pct*100)}% {level}" for level, pct in dob_similarity.items()])
         # bt.logging.debug(f"🤖 Generating query with: {variation_count} variations, " +
         #             f"phonetic similarity: {phonetic_spec}, " +
         #             f"orthographic similarity: {orthographic_spec}")
@@ -1445,18 +1444,25 @@ class QueryGenerator:
             # ============================================================================
             
             # Add address and DOB information as strings at the end of the query template
-            # This provides context for miners without including placeholders in the main query
-            address_dob_context = "\n\n[ADDITIONAL CONTEXT]:"
-            address_dob_context += "\n- Address information will be provided separately for each identity"
-            address_dob_context += "\n- Date of birth (DOB) information will be provided separately for each identity"
-            address_dob_context += "\n- Focus on generating name variations as specified in the main query above"
+            # Add address and DOB requirements to fallback template
+            address_requirement = f" The following address is the seed country/city to generate address variations for: {{address}}. Generate unique real addresses within the specified country/city for each variation. "
+            query_template = query_template + address_requirement
+        
+            # Create DOB specification for fallback (using default DOB config)
+            dob_spec = ", ".join([f"{int(pct*100)}% {level}" for level, pct in dob_config.items()])
+            dob_requirement = f" The following date of birth is the seed DOB to generate variations for: {{dob}}. Generate Date of Birth variations with patterns: {dob_spec}"
+            query_template = query_template + dob_requirement
             
-            # Append the context to the query template
-            query_template_with_context = query_template + address_dob_context
+            # Add additional context after the query
+            address_dob_context = "\n\n[ADDITIONAL CONTEXT]:"
+            address_dob_context += "\n- Address variations should be realistic addresses within the specified country/city"
+            address_dob_context += "\n- DOB variations should follow the specified similarity patterns"
+            address_dob_context += "\n- Each variation must have a different, realistic address and DOB"
+            query_template = query_template + address_dob_context
             
             # The function now returns a list of dictionaries, so we extract just the names for the return
             seed_names = [item['name'] for item in seed_identities_with_labels]
-            return seed_identities_with_labels, query_template_with_context, query_labels, successful_model, successful_timeout, successful_judge_model, successful_judge_timeout, generation_log
+            return seed_identities_with_labels, query_template, query_labels, successful_model, successful_timeout, successful_judge_model, successful_judge_timeout, generation_log
             
         except Exception as e:
             bt.logging.error(f"Error building queries: {str(e)}")
@@ -1482,11 +1488,20 @@ class QueryGenerator:
             clarifying_prefix = "The following name is the seed name to generate variations for: {name}. "
             query_template = f"{clarifying_prefix}Generate {variation_count} variations of the name {{name}}, ensuring phonetic similarity: {phonetic_config}, and orthographic similarity: {orthographic_config}, and also include {rp}% of variations that follow: {rule_template}."
             
-            # Add address and DOB context to fallback template as well
+            # Add address and DOB requirements to fallback template
+            address_requirement = f" The following address is the seed country/city to generate address variations for: {{address}}. Generate unique real addresses within the specified country/city for each variation. "
+            query_template = query_template + address_requirement
+        
+            # Create DOB specification for fallback (using default DOB config)
+            dob_spec = ", ".join([f"{int(pct*100)}% {level}" for level, pct in dob_config.items()])
+            dob_requirement = f" The following date of birth is the seed DOB to generate variations for: {{dob}}. Generate Date of Birth variations with patterns: {dob_spec}"
+            query_template = query_template + dob_requirement
+            
+            # Add additional context after the query
             address_dob_context = "\n\n[ADDITIONAL CONTEXT]:"
-            address_dob_context += "\n- Address information will be provided separately for each identity"
-            address_dob_context += "\n- Date of birth (DOB) information will be provided separately for each identity"
-            address_dob_context += "\n- Focus on generating name variations as specified in the main query above"
+            address_dob_context += "\n- Address variations should be realistic addresses within the specified country/city"
+            address_dob_context += "\n- DOB variations should follow the specified similarity patterns"
+            address_dob_context += "\n- Each variation must have a different, realistic address and DOB"
             query_template = query_template + address_dob_context
             
             # # Validate and minimally clarify the fallback template
