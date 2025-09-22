@@ -775,8 +775,30 @@ class QueryGenerator:
         use_default: bool = False,
         rule_percentage: int = 30
     ) -> Tuple[str, Dict[str, Any], str, int, str, int, Dict[str, Any]]:
-        """Generate a query template based on specified parameters"""
-        # Default similarity preferences if none provided
+        """
+        Generate a query template based on specified parameters.
+        
+        This method creates query templates for miners to generate name variations.
+        The query focuses on name variations only - address and DOB information
+        are provided as context strings at the end, not as placeholders in the query.
+        
+        Args:
+            model_name: The LLM model to use for query generation
+            variation_count: Number of name variations to generate
+            phonetic_similarity: Distribution of phonetic similarity levels
+            orthographic_similarity: Distribution of orthographic similarity levels
+            dob_similarity: Distribution of DOB similarity patterns (for context only)
+            use_default: Whether to use a simple default template
+            rule_percentage: Percentage of variations that should follow rule-based transformations
+            
+        Returns:
+            Tuple containing: (query_template, labels, model, timeout, judge_model, judge_timeout, generation_log)
+        """
+        # ============================================================================
+        # STEP 1: Set up default parameters and validate inputs
+        # ============================================================================
+        
+        # Set default similarity preferences if none provided
         if phonetic_similarity is None:
             phonetic_similarity = {"Medium": 1.0}
         if orthographic_similarity is None:
@@ -784,18 +806,25 @@ class QueryGenerator:
         if dob_similarity is None:
             dob_similarity = {"year+month only": 1.0}
         
-        # Generate rule-based template and metadata
+        # Generate rule-based template and metadata for transformations
         rule_template, rule_metadata = get_rule_template_and_metadata(rule_percentage)
         
-        # Create the labels dictionary from the parameters
+        # ============================================================================
+        # STEP 2: Create labels dictionary for validation and tracking
+        # ============================================================================
+        
         labels = {
             "variation_count": variation_count,
             "phonetic_similarity": phonetic_similarity,
             "orthographic_similarity": orthographic_similarity,
-            "dob_similarity": dob_similarity,
-            "rule_based": {**(rule_metadata or {}), "percentage": rule_percentage},  # include percentage for validation
+            "dob_similarity": dob_similarity,  # Note: Used for context only, not in query template
+            "rule_based": {**(rule_metadata or {}), "percentage": rule_percentage},
         }
-        # Format the similarity specifications for the prompt
+        
+        # ============================================================================
+        # STEP 3: Format similarity specifications for human-readable prompts
+        # ============================================================================
+        
         phonetic_spec = ", ".join([f"{int(pct*100)}% {level}" for level, pct in phonetic_similarity.items()])
         orthographic_spec = ", ".join([f"{int(pct*100)}% {level}" for level, pct in orthographic_similarity.items()])
         dob_spec = ", ".join([f"{int(pct*100)}% {level}" for level, pct in dob_similarity.items()])
@@ -809,12 +838,8 @@ class QueryGenerator:
         simple_template = f"{clarifying_prefix}Generate {variation_count} variations of the name {{name}}, ensuring phonetic similarity: {phonetic_spec}, and orthographic similarity: {orthographic_spec}, and also include {rule_percentage}% of variations that follow: {rule_template}"
         # bt.logging.debug(f"📝 Simple template: {simple_template}")
         
-        # Add address and DOB requirements if provided
-        address_prefix = f" The following address is the seed country/city to generate address variations for: {{address}}. Generate unique real addresses within the specified country/city for each variation. "
-        simple_template = simple_template + address_prefix
-    
-        dob_prefix = f" The following date of birth is the seed DOB to generate variations for: {{dob}}. Generate DOB variations with phonetic similarity patterns: {dob_spec}"
-        simple_template = simple_template + dob_prefix
+        # Note: Address and DOB are no longer part of the query template
+        # They will be added as context strings at the end after LLM responses
         
         if use_default:
             bt.logging.info("Using default query template (skipping complex query generation)")
@@ -862,25 +887,19 @@ class QueryGenerator:
         
     
         
-        # Define the prompt with specific parameters and security terminology
-        address_requirement = ""
-        dob_requirement = ""
+        # ============================================================================
+        # STEP 5: Build complex query generation prompt (when use_default=False)
+        # ============================================================================
         
-        address_requirement = f"""
-    5. ADDRESS REQUIREMENTS: The following address is the seed country/city to generate address variations for: {{address}}. Generate unique real addresses within the specified country/city for each variation. Each variation must have a different, realistic address within the same country/city."""
-        
-        dob_requirement = f"""
-    6. DOB REQUIREMENTS: The following date of birth is the seed DOB to generate variations for: {{dob}}. Generate DOB variations with these patterns: {dob_spec}"""
+        # Note: Address and DOB requirements removed from query template
+        # They will be added as context strings at the end after LLM responses
 
-        # Only include address/dob in example if they exist
+        # Build example format without address/DOB placeholders
         example_parts = [
             f"Generate {variation_count} variations of {{name}}",
             f"ensuring phonetic similarity ({phonetic_spec}) and orthographic similarity ({orthographic_spec})",
             f"Approximately {rule_percentage}% of the total variations should follow these rule-based transformations: {rule_template}"
         ]
-
-        example_parts.append(f"Address variations for: {{address}}")
-        example_parts.append(f"DOB variations for: {{dob}}")
 
         example_format = ". ".join(example_parts) + "."
         
@@ -894,9 +913,8 @@ class QueryGenerator:
         1. Generate exactly {variation_count} execution vectors (name variations) for each target identity
         2. For phonetic similarity (sound-alike names), implement: {phonetic_spec}
         3. For orthographic similarity (visually similar spellings), implement: {orthographic_spec}
-        4. For DOB similarity (date of birth variations), implement: {dob_spec}
-        5. IMPORTANT: Approximately {rule_percentage}% of the total variations should follow the rule-based transformations below. This percentage applies to the entire group of transformations, not to each one individually. All listed transformations must be represented across the set of rule-based variations.
-        Transformations: {rule_template}{address_requirement}{dob_requirement}
+        4. IMPORTANT: Approximately {rule_percentage}% of the total variations should follow the rule-based transformations below. This percentage applies to the entire group of transformations, not to each one individually. All listed transformations must be represented across the set of rule-based variations.
+        Transformations: {rule_template}
         
         IMPORTANT FORMATTING REQUIREMENTS:
         1. The query MUST use {{name}} as a placeholder for the target name.
@@ -910,6 +928,10 @@ class QueryGenerator:
         
         YOUR RESPONSE (query template only):"""
         
+        
+        # ============================================================================
+        # STEP 6: Set up model and timeout selection with fallback strategy
+        # ============================================================================
         
         # Get the list of models to try: primary + fallbacks, prioritizing last successful
         primary_model = model_name
@@ -935,6 +957,10 @@ class QueryGenerator:
         timeouts_to_try.sort()
         bt.logging.debug(f"🧪 Generation selection order -> models: {models_to_try}, timeouts: {timeouts_to_try}")
 
+        # ============================================================================
+        # STEP 7: Initialize tracking variables for generation attempts
+        # ============================================================================
+        
         last_model_query_template: str | None = None
         last_successful_judge_model: str | None = None
         last_successful_judge_timeout: int | None = None
@@ -942,6 +968,10 @@ class QueryGenerator:
         
         processed_models = set()
 
+        # ============================================================================
+        # STEP 8: Main generation loop - try models and timeouts with fallback strategy
+        # ============================================================================
+        
         # Iterate models; enforce forward-only timeouts for cached model
         for model in models_to_try:
             if self.last_successful_generation_model and model == self.last_successful_generation_model and isinstance(self.last_successful_generation_timeout, int):
@@ -1112,7 +1142,10 @@ class QueryGenerator:
                         generation_log["attempts"].append(attempt_log)
                         break # break from timeout loop, and try next model.
         
-        # Fallback logic remains the same
+        # ============================================================================
+        # STEP 9: Fallback logic - handle cases where all models/timeouts failed
+        # ============================================================================
+        
         bt.logging.error("💥 All models and timeouts failed.")
         # Prefer returning the last LLM-generated template with appended hints
         if last_model_query_template:
@@ -1142,6 +1175,10 @@ class QueryGenerator:
             generation_log["validation"] = fallback_validation
             return last_model_query_template, labels, None, None, final_judge_model, final_judge_timeout, generation_log
         
+        # ============================================================================
+        # STEP 10: Final fallback - use simple template if no LLM generation succeeded
+        # ============================================================================
+        
         # If we never received an LLM template at all, fall back to simple_template, but validate and append hints
         bt.logging.warning("No LLM-generated template available; using simple fallback template")
         bt.logging.info(f"🔄 Validating simple fallback template")
@@ -1163,9 +1200,26 @@ class QueryGenerator:
         return simple_template, labels, None, None, final_judge_model, final_judge_timeout, generation_log
     
     async def build_queries(self) -> Tuple[List[Dict[str, Any]], str, Dict[str, Any], str, int, str, int, Dict[str, Any]]:
-        """Build challenge queries for miners"""
+        """
+        Build challenge queries for miners.
+        
+        This method:
+        1. Generates random query parameters (variation counts, similarity levels, etc.)
+        2. Creates a query template using either default or complex LLM generation
+        3. Generates test identities (sanctioned individuals, high-risk, and negative samples)
+        4. Adds address and DOB context as strings at the end of the query template
+        
+        Returns:
+            Tuple containing: (seed_identities_with_labels, query_template, query_labels, 
+                             successful_model, successful_timeout, successful_judge_model, 
+                             successful_judge_timeout, generation_log)
+        """
         try:
             bt.logging.debug("🔄 Building test queries for miners")
+            
+            # ============================================================================
+            # STEP 1: Set up random query parameters for varied testing
+            # ============================================================================
             
             # Set up query parameters - randomly select different configurations
             # for each validation round to test miners on various tasks
@@ -1259,6 +1313,10 @@ class QueryGenerator:
                 dob_config = {"year+month only": 0.5}
                 rule_percentage = 30  # fallback for default
             
+            # ============================================================================
+            # STEP 2: Generate query template using LLM or default method
+            # ============================================================================
+            
             # Generate a complex query template
             model_name = getattr(self.config.neuron, 'ollama_model_name', "llama3.1:latest")
             query_template, query_labels, successful_model, successful_timeout, successful_judge_model, successful_judge_timeout, generation_log = await self.generate_complex_query(
@@ -1274,6 +1332,10 @@ class QueryGenerator:
             # Get judge settings from the validation process
             # successful_judge_model = None
             # successful_judge_timeout = None
+            
+            # ============================================================================
+            # STEP 3: Generate test identities (sanctioned, high-risk, and negative samples)
+            # ============================================================================
             
             # Generate test names using a mix of sanctioned and generated names
             seed_identities_with_labels = []
@@ -1378,9 +1440,23 @@ class QueryGenerator:
             # bt.logging.debug(f"📄 Query template: {query_template}")
             # bt.logging.debug(f"📋 Query labels: {query_labels}")
             
+            # ============================================================================
+            # STEP 4: Add address and DOB context as strings at the end of query template
+            # ============================================================================
+            
+            # Add address and DOB information as strings at the end of the query template
+            # This provides context for miners without including placeholders in the main query
+            address_dob_context = "\n\n[ADDITIONAL CONTEXT]:"
+            address_dob_context += "\n- Address information will be provided separately for each identity"
+            address_dob_context += "\n- Date of birth (DOB) information will be provided separately for each identity"
+            address_dob_context += "\n- Focus on generating name variations as specified in the main query above"
+            
+            # Append the context to the query template
+            query_template_with_context = query_template + address_dob_context
+            
             # The function now returns a list of dictionaries, so we extract just the names for the return
             seed_names = [item['name'] for item in seed_identities_with_labels]
-            return seed_identities_with_labels, query_template, query_labels, successful_model, successful_timeout, successful_judge_model, successful_judge_timeout, generation_log
+            return seed_identities_with_labels, query_template_with_context, query_labels, successful_model, successful_timeout, successful_judge_model, successful_judge_timeout, generation_log
             
         except Exception as e:
             bt.logging.error(f"Error building queries: {str(e)}")
@@ -1405,6 +1481,13 @@ class QueryGenerator:
             # Add clarifying sentence to fallback template
             clarifying_prefix = "The following name is the seed name to generate variations for: {name}. "
             query_template = f"{clarifying_prefix}Generate {variation_count} variations of the name {{name}}, ensuring phonetic similarity: {phonetic_config}, and orthographic similarity: {orthographic_config}, and also include {rp}% of variations that follow: {rule_template}."
+            
+            # Add address and DOB context to fallback template as well
+            address_dob_context = "\n\n[ADDITIONAL CONTEXT]:"
+            address_dob_context += "\n- Address information will be provided separately for each identity"
+            address_dob_context += "\n- Date of birth (DOB) information will be provided separately for each identity"
+            address_dob_context += "\n- Focus on generating name variations as specified in the main query above"
+            query_template = query_template + address_dob_context
             
             # # Validate and minimally clarify the fallback template
             # _ok, _msg, issues, _llm_issues, _, _, _ = self.validate_query_template(query_template, query_labels)
