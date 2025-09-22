@@ -773,9 +773,7 @@ class QueryGenerator:
         orthographic_similarity: Dict[str, float] = None,
         dob_similarity: Dict[str, float] = None,
         use_default: bool = False,
-        rule_percentage: int = 30,
-        address: str = None,
-        dob: str = None
+        rule_percentage: int = 30
     ) -> Tuple[str, Dict[str, Any], str, int, str, int, Dict[str, Any]]:
         """Generate a query template based on specified parameters"""
         # Default similarity preferences if none provided
@@ -796,8 +794,6 @@ class QueryGenerator:
             "orthographic_similarity": orthographic_similarity,
             "dob_similarity": dob_similarity,
             "rule_based": {**(rule_metadata or {}), "percentage": rule_percentage},  # include percentage for validation
-            "address": address,
-            "dob": dob
         }
         # Format the similarity specifications for the prompt
         phonetic_spec = ", ".join([f"{int(pct*100)}% {level}" for level, pct in phonetic_similarity.items()])
@@ -814,13 +810,11 @@ class QueryGenerator:
         # bt.logging.debug(f"📝 Simple template: {simple_template}")
         
         # Add address and DOB requirements if provided
-        if address:
-            address_prefix = f" The following address is the seed country/city to generate address variations for: {address}. Generate unique real addresses within the specified country/city for each variation. "
-            simple_template = simple_template + address_prefix
-        
-        if dob:
-            dob_prefix = f" The following date of birth is the seed DOB to generate variations for: {dob}. Generate DOB variations with phonetic similarity patterns: {dob_spec}"
-            simple_template = simple_template + dob_prefix
+        address_prefix = f" The following address is the seed country/city to generate address variations for: {{address}}. Generate unique real addresses within the specified country/city for each variation. "
+        simple_template = simple_template + address_prefix
+    
+        dob_prefix = f" The following date of birth is the seed DOB to generate variations for: {{dob}}. Generate DOB variations with phonetic similarity patterns: {dob_spec}"
+        simple_template = simple_template + dob_prefix
         
         if use_default:
             bt.logging.info("Using default query template (skipping complex query generation)")
@@ -872,13 +866,11 @@ class QueryGenerator:
         address_requirement = ""
         dob_requirement = ""
         
-        if address:
-            address_requirement = f"""
-        5. ADDRESS REQUIREMENTS: The following address is the seed country/city to generate address variations for: {address}. Generate unique real addresses within the specified country/city for each variation. Each variation must have a different, realistic address within the same country/city."""
+        address_requirement = f"""
+    5. ADDRESS REQUIREMENTS: The following address is the seed country/city to generate address variations for: {address}. Generate unique real addresses within the specified country/city for each variation. Each variation must have a different, realistic address within the same country/city."""
         
-        if dob:
-            dob_requirement = f"""
-        6. DOB REQUIREMENTS: The following date of birth is the seed DOB to generate variations for: {dob}. Generate DOB variations with these patterns: {dob_spec}"""
+        dob_requirement = f"""
+    6. DOB REQUIREMENTS: The following date of birth is the seed DOB to generate variations for: {dob}. Generate DOB variations with these patterns: {dob_spec}"""
 
         # Only include address/dob in example if they exist
         example_parts = [
@@ -887,10 +879,8 @@ class QueryGenerator:
             f"Approximately {rule_percentage}% of the total variations should follow these rule-based transformations: {rule_template}"
         ]
 
-        if address:
-            example_parts.append(f"Address variations for: {address}")
-        if dob:
-            example_parts.append(f"DOB variations for: {dob}")
+        example_parts.append(f"Address variations for: {{address}}")
+        example_parts.append(f"DOB variations for: {{dob}}")
 
         example_format = ". ".join(example_parts) + "."
         
@@ -1278,9 +1268,7 @@ class QueryGenerator:
                 orthographic_similarity=orthographic_config,
                 dob_similarity=dob_config,
                 use_default=self.use_default_query,
-                rule_percentage=rule_percentage,
-                address=None,  # Will be set per identity
-                dob=None       # Will be set per identity
+                rule_percentage=rule_percentage
             )
             
             # Get judge settings from the validation process
