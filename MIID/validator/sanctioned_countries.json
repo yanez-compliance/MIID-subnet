@@ -1,6 +1,6 @@
 {
     "latin": [
-        {"country": "Cuba", "faker_locale": "en_US"},
+        {"country": "Cuba", "faker_locale": "es_ES"},
         {"country": "Venezuela", "faker_locale": "es_VE"},
         {"country": "South Sudan", "faker_locale": "en_US"},
         {"country": "Central African Republic", "faker_locale": "fr_FR"},
@@ -33,12 +33,11 @@
         {"country": "Algeria", "faker_locale": "ar_DZ"},
         {"country": "Syria", "faker_locale": "ar_SY"}
     ],
-    "chinese": [
-        {"country": "North Korea", "faker_locale": "ko_KR"},
-        {"country": "Myanmar (Burma)", "faker_locale": "my_MM"},
-        {"country": "Lao PDR", "faker_locale": "lo_LA"},
-        {"country": "Nepal", "faker_locale": "ne_NP"},
-        {"country": "Vietnam", "faker_locale": "vi_VN"}
+    "cjk": [
+        {"country": "China", "faker_locale": "zh_CN"},
+        {"country": "Taiwan", "faker_locale": "zh_TW"},
+        {"country": "Japan", "faker_locale": "ja_JP"},
+        {"country": "Korea (South/North)", "faker_locale": "ko_KR"}
     ],
     "cyrillic": [
         {"country": "Russia", "faker_locale": "ru_RU"},
@@ -47,5 +46,17 @@
         {"country": "Luhansk", "faker_locale": "ru_RU"},
         {"country": "Belarus", "faker_locale": "be_BY"},
         {"country": "Bulgaria", "faker_locale": "bg_BG"}
+    ],
+    "other_scripts": [
+        {"country": "Myanmar (Burma)", "faker_locale": "my_MM"},
+        {"country": "Lao PDR", "faker_locale": "lo_LA"},
+        {"country": "Nepal", "faker_locale": "ne_NP"},
+        {"country": "Vietnam", "faker_locale": "vi_VN"},
+        {"country": "India (Hindi)", "faker_locale": "hi_IN"},
+        {"country": "Thailand", "faker_locale": "th_TH"},
+        {"country": "Israel", "faker_locale": "he_IL"},
+        {"country": "Greece", "faker_locale": "el_GR"},
+        {"country": "Georgia", "faker_locale": "ka_GE"},
+        {"country": "Armenia", "faker_locale": "NULL"}
     ]
 }
