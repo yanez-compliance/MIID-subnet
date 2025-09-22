@@ -80,7 +80,7 @@ async def dendrite_with_retries(dendrite: bt.dendrite, axons: list, synapse: Ide
     
     def create_default_response():
         return IdentitySynapse(
-            names=synapse.names,
+            identity=synapse.identity,
             query_template=synapse.query_template,
             variations={},
             process_time=process_time
@@ -111,7 +111,7 @@ async def dendrite_with_retries(dendrite: bt.dendrite, axons: list, synapse: Ide
             if isinstance(response, dict):
                 # Got the variations dictionary directly
                 complete_response = IdentitySynapse(
-                    names=synapse.names,
+                    identity=synapse.identity,
                     query_template=synapse.query_template,
                     variations=response,
                     process_time=process_time
@@ -210,10 +210,13 @@ async def forward(self):
     challenge_end_time = time.time()
     bt.logging.info(f"Time to generate challenges: {int(challenge_end_time - challenge_start_time)}s")
 
-    # Extract just the names for use in existing logic
+    # Extract the names, addresses, and DOBs for use in existing logic
     seed_names = [item['name'] for item in seed_names_with_labels]
     seed_addresses = [item['address'] for item in seed_names_with_labels]
     seed_dob = [item['dob'] for item in seed_names_with_labels]
+    
+    # Create identity list with [name, dob, address] arrays
+    identity_list = [[item['name'], item['dob'], item['address']] for item in seed_names_with_labels]
 
     # Calculate timeout based on the number of names and complexity
     base_timeout = self.config.neuron.timeout  # Double from 60 to 120 seconds
@@ -224,7 +227,7 @@ async def forward(self):
 
     # 5) Prepare the synapse
     request_synapse = IdentitySynapse(
-        names=seed_names,
+        identity=identity_list,
         query_template=query_template,
         variations={},
         timeout=adaptive_timeout
@@ -356,7 +359,7 @@ async def forward(self):
         "query_labels": query_labels,
         "formatted_queries": formatted_queries,  # Add the formatted queries
         "request_synapse": {
-            "names": seed_names,
+            "identity": identity_list,
             "query_template": query_template,
             "dendrite_timeout": adaptive_timeout
         },
