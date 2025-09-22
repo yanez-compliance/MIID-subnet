@@ -48,7 +48,29 @@ def _get_keywords_from_rule_desc(description: str) -> List[str]:
 
 # List of Latin-script locales to generate names from (basic Latin characters only, no accents)
 LATIN_LOCALES = ['en_US', 'en_GB', 'en_CA', 'en_AU']
+NON_Latin_Locales = [
+    # Arabic script
+    "ar_AA",  # Generic Arabic
+    "ar_EG", "ar_JO", "ar_PS", "ar_SA",  # Arabic
+    "fa_IR",  # Persian (Farsi)
+    "ur_PK",  # Urdu (Pakistan)
+    "ps_AF",  # Pashto (Afghanistan)
 
+    # Cyrillic script
+    "bg_BG",  # Bulgarian
+    "ru_RU",  # Russian
+    "uk_UA",  # Ukrainian
+    "kk_KZ",  # Kazakh
+    "ky_KG",  # Kyrgyz
+    "sr_RS",  # Serbian (Cyrillic)
+    "mn_MN",  # Mongolian (Cyrillic)
+
+    # CJK scripts (Chinese, Japanese, Korean)
+    "zh_CN",  # Simplified Chinese
+    "zh_TW",  # Traditional Chinese
+    "ja_JP",  # Japanese
+    "ko_KR"   # Korean
+]
 # Add import for rule-based functionality
 from MIID.validator.rule_extractor import get_rule_template_and_metadata
 
@@ -250,12 +272,26 @@ class QueryGenerator:
         self.last_successful_generation_model: str | None = None
         self.last_successful_generation_timeout: int | None = None
         
-        # Load sanctioned individuals
+        # Load sanctioned individuals from transliteration file (for one positive with script)
+        self.sanctioned_transliteration = []
+        try:
+            current_dir = os.path.dirname(os.path.abspath(__file__))
+            json_path = os.path.join(current_dir, 'Sanctioned_Transliteration.json')
+            bt.logging.info(f"Loading sanctioned transliteration from: {json_path}")
+            if os.path.exists(json_path):
+                with open(json_path, 'r') as f:
+                    self.sanctioned_transliteration = json.load(f)
+                bt.logging.info(f"Loaded {len(self.sanctioned_transliteration)} sanctioned transliteration entries.")
+            else:
+                bt.logging.error(f"Sanctioned transliteration file not found at: {json_path}")
+        except Exception as e:
+            bt.logging.error(f"Error loading sanctioned transliteration: {e}")
+
+        # Load sanctioned individuals from main list (for remaining positives with Latin script)
         self.sanctioned_individuals = []
         try:
-            # Construct the path to the JSON file relative to the current file
             current_dir = os.path.dirname(os.path.abspath(__file__))
-            json_path = os.path.join(current_dir, 'Sanc_I_DOB_address.json')
+            json_path = os.path.join(current_dir, 'Sanctioned_list.json')
             bt.logging.info(f"Loading sanctioned individuals from: {json_path}")
             if os.path.exists(json_path):
                 with open(json_path, 'r') as f:
@@ -266,8 +302,9 @@ class QueryGenerator:
         except Exception as e:
             bt.logging.error(f"Error loading sanctioned individuals: {e}")
 
-        # Load sanctioned countries
+        # Load sanctioned countries with script support
         self.sanctioned_countries = []
+        self.sanctioned_countries_by_script = {}
         try:
             # Construct the path to the JSON file relative to the current file
             current_dir = os.path.dirname(os.path.abspath(__file__))
@@ -275,9 +312,19 @@ class QueryGenerator:
             bt.logging.info(f"Loading sanctioned countries from: {json_path}")
             if os.path.exists(json_path):
                 with open(json_path, 'r') as f:
-                    self.sanctioned_countries = json.load(f)
-                    self.sanctioned_countries = self.sanctioned_countries["sanctionedCountries"]
-                bt.logging.info(f"Loaded {len(self.sanctioned_countries)} sanctioned countries.")
+                    countries_data = json.load(f)
+                
+                # Store countries by script for different generation methods
+                self.sanctioned_countries_by_script = countries_data
+                
+                # Flatten all countries for backward compatibility
+                for script, countries in countries_data.items():
+                    for country_info in countries:
+                        self.sanctioned_countries.append(country_info['country'])
+                
+                total_countries = sum(len(countries) for countries in countries_data.values())
+                bt.logging.info(f"Loaded {total_countries} sanctioned countries across {len(countries_data)} scripts.")
+                bt.logging.info(f"Scripts available: {list(countries_data.keys())}")
             else:
                 bt.logging.error(f"Sanctioned countries file not found at: {json_path}")
         except Exception as e:
@@ -1348,9 +1395,25 @@ class QueryGenerator:
             # Track names to avoid duplicates across positive and negative lists
             seen_names = set()
 
-            # 1. Add positive samples from the sanctioned list (ensure unique full names)
-            if self.sanctioned_individuals:
-                max_attempts = positive_sample_count * 10
+            # 1. Add one positive sample from transliteration list with script annotation
+            if self.sanctioned_transliteration and positive_sample_count > 0:
+                person = random.choice(self.sanctioned_transliteration)
+                first_name = str(person.get("FirstName", "")).strip()
+                last_name = str(person.get("LastName", "")).strip()
+                dob = str(person.get("DOB", "")).strip()
+                address = str(person.get("Country_Residence", ""))
+                script = str(person.get("Script", "latin")).strip()
+                if first_name and last_name:
+                    full_name = f"{first_name} {last_name} ({script})"
+                    if full_name not in seen_names:
+                        seed_identities_with_labels.append({"name": full_name, "dob": dob, "address": address, "label": "positive", "script": script})
+                        seen_names.add(full_name)
+                        # bt.logging.info(f"Added transliterated positive sample: {full_name}")
+
+            # 2. Add remaining positive samples from main sanctioned list (Latin script)
+            remaining_positives = positive_sample_count - len([n for n in seed_identities_with_labels if isinstance(n, dict) and n.get("label") == "positive"])
+            if self.sanctioned_individuals and remaining_positives > 0:
+                max_attempts = remaining_positives * 10
                 attempts = 0
                 while (
                     len([n for n in seed_identities_with_labels if isinstance(n, dict) and n.get("label") == "positive"]) < positive_sample_count
@@ -1361,10 +1424,12 @@ class QueryGenerator:
                     last_name = str(person.get("LastName", "")).strip()
                     dob = str(person.get("DOB", "")).strip()
                     address = str(person.get("Country_Residence", ""))
+                    # All main list names are Latin script
+                    script = "latin"
                     if first_name and last_name:
-                        full_name = f"{first_name} {last_name}".lower()
+                        full_name = f"{first_name} {last_name} ({script})"
                         if full_name not in seen_names:
-                            seed_identities_with_labels.append({"name": full_name, "dob": dob, "address": address, "label": "positive"})
+                            seed_identities_with_labels.append({"name": full_name, "dob": dob, "address": address, "label": "positive", "script": script})
                             seen_names.add(full_name)
                             # bt.logging.info(f"Added positive sample: {full_name}")
                     attempts += 1
@@ -1377,30 +1442,100 @@ class QueryGenerator:
                 bt.logging.warning("Sanctioned individuals list is empty. No positive samples will be added.")
             
 
-            # 2. Add high risk samples from the sanctioned Countries list
+            # 2. Add high risk samples using different scripts from sanctioned countries
 
-            # Number of positive samples to take from the sanctioned list: 1/3 of sample_size, rounded down
+            # Number of high risk samples: 1/3 of sample_size, rounded down
             high_risk_sample_count = sample_size // 3
-            fake = Faker(LATIN_LOCALES)
-
-
             generated_names_high_risk = []
-            while len(generated_names_high_risk) < high_risk_sample_count:
-                first_name = fake.first_name().lower()
-                last_name = fake.last_name().lower()
-                dob = fake.date_of_birth(minimum_age=18, maximum_age=100).strftime("%Y-%m-%d")
-                address = random.choice(self.sanctioned_countries)
-                name = f"{first_name} {last_name}"
-                if (name not in generated_names_high_risk and name not in seen_names and 
-                    3 <= len(first_name) <= 20 and 
-                    3 <= len(last_name) <= 20):
-                    generated_names_high_risk.append(name)
-                    seen_names.add(name)
-                    # bt.logging.debug(f"📝 Generated negative two-part name: {name}")
             
-            # Add generated names to the list with "negative" label
-            for name in generated_names_high_risk:
-                seed_identities_with_labels.append({"name": name, "dob": dob, "address": address, "label": "High Risk"})
+            # Generate ONE non-Latin high-risk individual
+            if high_risk_sample_count > 0:
+                # Select a random non-Latin script
+                non_latin_scripts = ['arabic', 'chinese', 'cyrillic']
+                available_non_latin = [script for script in non_latin_scripts if script in self.sanctioned_countries_by_script]
+                
+                if available_non_latin:
+                    selected_script = random.choice(available_non_latin)
+                    script_countries = self.sanctioned_countries_by_script[selected_script]
+                    country_info = random.choice(script_countries)
+                    country_name = country_info['country']
+                    faker_locale = country_info['faker_locale']
+                    
+                    try:
+                        fake = Faker(faker_locale)
+                        first_name = fake.first_name().lower()
+                        last_name = fake.last_name().lower()
+                        dob = fake.date_of_birth(minimum_age=18, maximum_age=100).strftime("%Y-%m-%d")
+                        name = f"{first_name} {last_name}"
+                        
+                        if (3 <= len(first_name) <= 20 and 3 <= len(last_name) <= 20):
+                            generated_names_high_risk.append({
+                                "name": name, 
+                                "dob": dob, 
+                                "address": country_name, 
+                                "label": "High Risk",
+                                "script": selected_script
+                            })
+                            seen_names.add(name)
+                            bt.logging.debug(f"📝 Generated non-Latin high-risk name: {name} from {country_name} ({selected_script})")
+                    except Exception as e:
+                        bt.logging.warning(f"Error generating non-Latin name for {selected_script} with locale {faker_locale}: {e}")
+            
+            # Generate remaining high-risk individuals from Latin countries using their specific locales
+            latin_countries = self.sanctioned_countries_by_script.get('latin', [])
+            remaining_count = high_risk_sample_count - len(generated_names_high_risk)
+            
+            while len(generated_names_high_risk) < high_risk_sample_count and remaining_count > 0:
+                # Select a random Latin country with its specific locale
+                country_info = random.choice(latin_countries)
+                country_name = country_info['country']
+                faker_locale = country_info['faker_locale']
+                
+                try:
+                    fake = Faker(faker_locale)
+                    first_name = fake.first_name().lower()
+                    last_name = fake.last_name().lower()
+                    dob = fake.date_of_birth(minimum_age=18, maximum_age=100).strftime("%Y-%m-%d")
+                    name = f"{first_name} {last_name}"
+                    
+                    if (name not in generated_names_high_risk and name not in seen_names and 
+                        3 <= len(first_name) <= 20 and 
+                        3 <= len(last_name) <= 20):
+                        generated_names_high_risk.append({
+                            "name": name, 
+                            "dob": dob, 
+                            "address": country_name, 
+                            "label": "High Risk",
+                            "script": "latin"
+                        })
+                        seen_names.add(name)
+                        # bt.logging.debug(f"📝 Generated Latin high-risk name: {name} from {country_name}")
+                except Exception as e:
+                    bt.logging.warning(f"Error generating Latin name for {country_name} with locale {faker_locale}: {e}")
+                    # Fallback to basic Latin if specific locale fails
+                    fake = Faker('en_US')
+                    first_name = fake.first_name().lower()
+                    last_name = fake.last_name().lower()
+                    dob = fake.date_of_birth(minimum_age=18, maximum_age=100).strftime("%Y-%m-%d")
+                    name = f"{first_name} {last_name}"
+                    
+                    if (name not in generated_names_high_risk and name not in seen_names and 
+                        3 <= len(first_name) <= 20 and 
+                        3 <= len(last_name) <= 20):
+                        generated_names_high_risk.append({
+                            "name": name, 
+                            "dob": dob, 
+                            "address": country_name, 
+                            "label": "High Risk",
+                            "script": "latin_fallback"
+                        })
+                        seen_names.add(name)
+                
+                remaining_count -= 1
+            
+            # Add generated names to the list with "High Risk" label
+            for identity in generated_names_high_risk:
+                seed_identities_with_labels.append(identity)
             
         
             
@@ -1408,6 +1543,47 @@ class QueryGenerator:
             negative_sample_count = sample_size - len(seed_identities_with_labels)
             
             generated_names = []
+            
+            # Generate ONE negative name using non-Latin locale
+            if negative_sample_count > 0 and NON_Latin_Locales:
+                try:
+                    non_latin_locale = random.choice(NON_Latin_Locales)
+                    fake_non_latin = Faker(non_latin_locale)
+                    first_name = fake_non_latin.first_name().lower()
+                    last_name = fake_non_latin.last_name().lower()
+                    dob = fake_non_latin.date_of_birth(minimum_age=18, maximum_age=100).strftime("%Y-%m-%d")
+                    
+                    address = fake_non_latin.country()
+                    while address not in self.sanctioned_countries:
+                        address = fake_non_latin.country()
+
+                    # Determine the actual script type based on locale
+                    script_type = "latin"  # default fallback
+                    if non_latin_locale.startswith(("ar_", "fa_", "ur_", "ps_")):
+                        script_type = "arabic"
+                    elif non_latin_locale.startswith(("bg_", "ru_", "uk_", "kk_", "ky_", "sr_", "mn_")):
+                        script_type = "cyrillic"
+                    elif non_latin_locale.startswith(("zh_", "ja_", "ko_")):
+                        script_type = "chinese"
+
+                    name = f"{first_name} {last_name}"
+                    if (name not in generated_names and name not in seen_names and 
+                        3 <= len(first_name) <= 20 and 
+                        3 <= len(last_name) <= 20):
+                        generated_names.append({
+                            "name": name, 
+                            "dob": dob, 
+                            "address": address, 
+                            "label": "negative",
+                            "script": script_type
+                        })
+                        seen_names.add(name)
+                        bt.logging.debug(f"📝 Generated {script_type} negative name: {name} using locale {non_latin_locale}")
+                except Exception as e:
+                    bt.logging.warning(f"Error generating non-Latin negative name with locale {non_latin_locale}: {e}")
+            
+            # Generate remaining negative names using Latin locales
+            remaining_negative_count = negative_sample_count - len(generated_names)
             while len(generated_names) < negative_sample_count:
                 first_name = fake.first_name().lower()
                 last_name = fake.last_name().lower()
@@ -1421,13 +1597,19 @@ class QueryGenerator:
                 if (name not in generated_names and name not in seen_names and 
                     3 <= len(first_name) <= 20 and 
                     3 <= len(last_name) <= 20):
-                    generated_names.append(name)
+                    generated_names.append({
+                        "name": name, 
+                        "dob": dob, 
+                        "address": address, 
+                        "label": "negative",
+                        "script": "latin"
+                    })
                     seen_names.add(name)
-                    # bt.logging.debug(f"📝 Generated negative two-part name: {name}")
+                    # bt.logging.debug(f"📝 Generated Latin negative name: {name}")
             
-            # Add generated names to the list with "negative" label
-            for name in generated_names:
-                seed_identities_with_labels.append({"name": name, "dob": dob, "address": address, "label": "negative"})
+            # Add generated names to the list
+            for identity in generated_names:
+                seed_identities_with_labels.append(identity)
             
             # Shuffle the list to mix positive and negative samples
             random.shuffle(seed_identities_with_labels)
@@ -1460,7 +1642,7 @@ class QueryGenerator:
             address_dob_context += "\n- the year+month the exact DOB without day"
             address_dob_context += "\n- Each variation must have a different, realistic address and DOB"
             query_template = query_template + address_dob_context
-            
+
             # The function now returns a list of dictionaries, so we extract just the names for the return
             seed_names = [item['name'] for item in seed_identities_with_labels]
             return seed_identities_with_labels, query_template, query_labels, successful_model, successful_timeout, successful_judge_model, successful_judge_timeout, generation_log
@@ -1542,8 +1724,8 @@ class QueryGenerator:
                 if name not in seed_names:
                     seed_names.append(name)
             
-            # In fallback, all names are "negative"
-            seed_names_with_labels = [{"name": name, "label": "negative"} for name in seed_names]
+            # In fallback, all names are "negative" with script annotation
+            seed_names_with_labels = [{"name": name, "label": "negative", "script": "latin"} for name in seed_names]
             
             # bt.logging.info(f"Using fallback: {len(seed_names)} test names")
             # bt.logging.debug(f"📄 Query template: {query_template}")
