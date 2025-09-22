@@ -1457,6 +1457,7 @@ class QueryGenerator:
             address_dob_context = "\n\n[ADDITIONAL CONTEXT]:"
             address_dob_context += "\n- Address variations should be realistic addresses within the specified country/city"
             address_dob_context += "\n- DOB variations should follow the specified similarity patterns"
+            address_dob_context += "\n- the year+month the exact DOB without day"
             address_dob_context += "\n- Each variation must have a different, realistic address and DOB"
             query_template = query_template + address_dob_context
             
