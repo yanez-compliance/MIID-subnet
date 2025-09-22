@@ -867,10 +867,10 @@ class QueryGenerator:
         dob_requirement = ""
         
         address_requirement = f"""
-    5. ADDRESS REQUIREMENTS: The following address is the seed country/city to generate address variations for: {address}. Generate unique real addresses within the specified country/city for each variation. Each variation must have a different, realistic address within the same country/city."""
+    5. ADDRESS REQUIREMENTS: The following address is the seed country/city to generate address variations for: {{address}}. Generate unique real addresses within the specified country/city for each variation. Each variation must have a different, realistic address within the same country/city."""
         
         dob_requirement = f"""
-    6. DOB REQUIREMENTS: The following date of birth is the seed DOB to generate variations for: {dob}. Generate DOB variations with these patterns: {dob_spec}"""
+    6. DOB REQUIREMENTS: The following date of birth is the seed DOB to generate variations for: {{dob}}. Generate DOB variations with these patterns: {dob_spec}"""
 
         # Only include address/dob in example if they exist
         example_parts = [
