@@ -53,17 +53,11 @@ NON_Latin_Locales = [
     "ar_AA",  # Generic Arabic
     "ar_EG", "ar_JO", "ar_PS", "ar_SA",  # Arabic
     "fa_IR",  # Persian (Farsi)
-    "ur_PK",  # Urdu (Pakistan)
-    "ps_AF",  # Pashto (Afghanistan)
 
     # Cyrillic script
     "bg_BG",  # Bulgarian
     "ru_RU",  # Russian
     "uk_UA",  # Ukrainian
-    "kk_KZ",  # Kazakh
-    "ky_KG",  # Kyrgyz
-    "sr_RS",  # Serbian (Cyrillic)
-    "mn_MN",  # Mongolian (Cyrillic)
 
     # CJK scripts (Chinese, Japanese, Korean)
     "zh_CN",  # Simplified Chinese
@@ -818,7 +812,6 @@ class QueryGenerator:
         variation_count: int = 10,
         phonetic_similarity: Dict[str, float] = None,
         orthographic_similarity: Dict[str, float] = None,
-        dob_similarity: Dict[str, float] = None,
         use_default: bool = False,
         rule_percentage: int = 30
     ) -> Tuple[str, Dict[str, Any], str, int, str, int, Dict[str, Any]]:
@@ -850,8 +843,6 @@ class QueryGenerator:
             phonetic_similarity = {"Medium": 1.0}
         if orthographic_similarity is None:
             orthographic_similarity = {"Medium": 1.0}
-        if dob_similarity is None:
-            dob_similarity = {"year+month only": 1.0}
         
         # Generate rule-based template and metadata for transformations
         rule_template, rule_metadata = get_rule_template_and_metadata(rule_percentage)
@@ -864,7 +855,6 @@ class QueryGenerator:
             "variation_count": variation_count,
             "phonetic_similarity": phonetic_similarity,
             "orthographic_similarity": orthographic_similarity,
-            "dob_similarity": dob_similarity,  # Note: Used for context only, not in query template
             "rule_based": {**(rule_metadata or {}), "percentage": rule_percentage},
         }
         
@@ -1319,24 +1309,7 @@ class QueryGenerator:
 
             # 4. Set up DOB similarity distribution with weighted selection
             # Update lines 1217-1236 to match the prompt specification:
-            DOB_configs_with_weights = [
-                # Balanced distribution
-                ({"±1 day": 0.2, "±3 days": 0.2, "±30 days": 0.2, "±90 days": 0.2, "±365 days": 0.1, "year+month only": 0.1}, 0.25),
-                # Focus on close variations
-                ({"±1 day": 0.3, "±3 days": 0.3, "±30 days": 0.2, "±90 days": 0.1, "±365 days": 0.05, "year+month only": 0.05}, 0.20),
-                # Focus on medium variations
-                ({"±1 day": 0.1, "±3 days": 0.2, "±30 days": 0.3, "±90 days": 0.2, "±365 days": 0.15, "year+month only": 0.05}, 0.15),
-                # Focus on far variations
-                ({"±1 day": 0.05, "±3 days": 0.1, "±30 days": 0.2, "±90 days": 0.3, "±365 days": 0.3, "year+month only": 0.05}, 0.15),
-                # Only close variations
-                ({"±1 day": 0.5, "±3 days": 0.5}, 0.10),
-                # Only medium variations
-                ({"±30 days": 0.5, "±90 days": 0.5}, 0.08),
-                # Only far variations
-                ({"±365 days": 0.7, "year+month only": 0.3}, 0.05),
-                # Year+month only
-                ({"year+month only": 1.0}, 0.02),
-            ]
+
             
             # Helper function for weighted random selection
             def weighted_random_choice(configs_with_weights):
@@ -1346,7 +1319,6 @@ class QueryGenerator:
             # Select configurations using weighted random selection
             phonetic_config = weighted_random_choice(phonetic_configs_with_weights)
             orthographic_config = weighted_random_choice(orthographic_configs_with_weights)
-            dob_config = weighted_random_choice(DOB_configs_with_weights)
             
             # 4. Randomly choose rule_percentage for this query (e.g. 10-60%)
             rule_percentage = random.randint(10, 60)
@@ -1356,7 +1328,6 @@ class QueryGenerator:
                 variation_count = 10
                 phonetic_config = {"Medium": 0.5}
                 orthographic_config = {"Medium": 0.5}
-                dob_config = {"year+month only": 0.5}
                 rule_percentage = 30  # fallback for default
             
             # ============================================================================
@@ -1370,7 +1341,6 @@ class QueryGenerator:
                 variation_count=variation_count,
                 phonetic_similarity=phonetic_config,
                 orthographic_similarity=orthographic_config,
-                dob_similarity=dob_config,
                 use_default=self.use_default_query,
                 rule_percentage=rule_percentage
             )
@@ -1460,26 +1430,32 @@ class QueryGenerator:
                     country_info = random.choice(script_countries)
                     country_name = country_info['country']
                     faker_locale = country_info['faker_locale']
+                    count = 10
+
                     
-                    try:
-                        fake = Faker(faker_locale)
-                        first_name = fake.first_name().lower()
-                        last_name = fake.last_name().lower()
-                        dob = fake.date_of_birth(minimum_age=18, maximum_age=100).strftime("%Y-%m-%d")
-                        name = f"{first_name} {last_name}"
-                        
-                        if (3 <= len(first_name) <= 20 and 3 <= len(last_name) <= 20):
-                            generated_names_high_risk.append({
-                                "name": name, 
-                                "dob": dob, 
-                                "address": country_name, 
-                                "label": "High Risk",
-                                "script": selected_script
-                            })
-                            seen_names.add(name)
-                            bt.logging.debug(f"📝 Generated non-Latin high-risk name: {name} from {country_name} ({selected_script})")
-                    except Exception as e:
-                        bt.logging.warning(f"Error generating non-Latin name for {selected_script} with locale {faker_locale}: {e}")
+                    while count != 0:
+                        try:
+                            fake = Faker(faker_locale)
+                            first_name = fake.first_name().lower()
+                            last_name = fake.last_name().lower()
+                            dob = fake.date_of_birth(minimum_age=18, maximum_age=100).strftime("%Y-%m-%d")
+                            name = f"{first_name} {last_name}"
+                            
+                            if (3 <= len(first_name) <= 20 and 3 <= len(last_name) <= 20):
+                                full_name = f"{first_name} {last_name} ({selected_script})"
+                                if full_name not in seen_names:
+                                    generated_names_high_risk.append({"name": full_name, "dob": dob, "address": country_name, "label": "High Risk", "script": selected_script})
+                                    seen_names.add(full_name)
+                                    break
+                            else:
+                                count -= 1
+                                continue
+                        except Exception as e:
+                            bt.logging.warning(f"Error generating non-Latin name for {selected_script} with locale {faker_locale}: {e}")
+                            count -= 1
+            
+            for identity in generated_names_high_risk:
+                seed_identities_with_labels.append(identity)
             
             # Generate remaining high-risk individuals from Latin countries using their specific locales
             latin_countries = self.sanctioned_countries_by_script.get('latin', [])
@@ -1499,16 +1475,11 @@ class QueryGenerator:
                     name = f"{first_name} {last_name}"
                     
                     if (name not in generated_names_high_risk and name not in seen_names and 
-                        3 <= len(first_name) <= 20 and 
-                        3 <= len(last_name) <= 20):
-                        generated_names_high_risk.append({
-                            "name": name, 
-                            "dob": dob, 
-                            "address": country_name, 
-                            "label": "High Risk",
-                            "script": "latin"
-                        })
-                        seen_names.add(name)
+                        3 <= len(first_name) <= 20 and 3 <= len(last_name) <= 20):
+                                full_name = f"{first_name} {last_name} ({selected_script})"
+                                if full_name not in seen_names:
+                                    generated_names_high_risk.append({"name": full_name, "dob": dob, "address": country_name, "label": "High Risk", "script": selected_script})
+                                    seen_names.add(full_name)
                         # bt.logging.debug(f"📝 Generated Latin high-risk name: {name} from {country_name}")
                 except Exception as e:
                     bt.logging.warning(f"Error generating Latin name for {country_name} with locale {faker_locale}: {e}")
@@ -1517,27 +1488,18 @@ class QueryGenerator:
                     first_name = fake.first_name().lower()
                     last_name = fake.last_name().lower()
                     dob = fake.date_of_birth(minimum_age=18, maximum_age=100).strftime("%Y-%m-%d")
-                    name = f"{first_name} {last_name}"
+                    name = f"{first_name} {last_name} ({selected_script})"
                     
                     if (name not in generated_names_high_risk and name not in seen_names and 
-                        3 <= len(first_name) <= 20 and 
-                        3 <= len(last_name) <= 20):
-                        generated_names_high_risk.append({
-                            "name": name, 
-                            "dob": dob, 
-                            "address": country_name, 
-                            "label": "High Risk",
-                            "script": "latin_fallback"
-                        })
-                        seen_names.add(name)
-                
+                        3 <= len(first_name) <= 20 and 3 <= len(last_name) <= 20):
+                            full_name = f"{first_name} {last_name} ({selected_script})"
+                            if full_name not in seen_names:
+                                generated_names_high_risk.append({"name": full_name, "dob": dob, "address": country_name, "label": "High Risk", "script": selected_script})
+                                seen_names.add(full_name)
                 remaining_count -= 1
             
-            # Add generated names to the list with "High Risk" label
             for identity in generated_names_high_risk:
                 seed_identities_with_labels.append(identity)
-            
-        
             
             # 3. Add negative samples generated by Faker (always two-part names)
             negative_sample_count = sample_size - len(seed_identities_with_labels)
@@ -1566,7 +1528,7 @@ class QueryGenerator:
                     elif non_latin_locale.startswith(("zh_", "ja_", "ko_")):
                         script_type = "chinese"
 
-                    name = f"{first_name} {last_name}"
+                    name = f"{first_name} {last_name} ({script_type})"
                     if (name not in generated_names and name not in seen_names and 
                         3 <= len(first_name) <= 20 and 
                         3 <= len(last_name) <= 20):
@@ -1593,7 +1555,7 @@ class QueryGenerator:
                 while address not in self.sanctioned_countries:
                     address = fake.country()
 
-                name = f"{first_name} {last_name}"
+                name = f"{first_name} {last_name} ({script_type})"
                 if (name not in generated_names and name not in seen_names and 
                     3 <= len(first_name) <= 20 and 
                     3 <= len(last_name) <= 20):
@@ -1631,16 +1593,16 @@ class QueryGenerator:
             query_template = query_template + address_requirement
         
             # Create DOB specification for fallback (using default DOB config)
-            dob_spec = ", ".join([f"{int(pct*100)}% {level}" for level, pct in dob_config.items()])
-            dob_requirement = f" The following date of birth is the seed DOB to generate variations for: {{dob}}. Generate Date of Birth variations with patterns: {dob_spec}"
+            dob_requirement = f" The following date of birth is the seed DOB to generate variations for: {{dob}}."
             query_template = query_template + dob_requirement
             
             # Add additional context after the query
             address_dob_context = "\n\n[ADDITIONAL CONTEXT]:"
             address_dob_context += "\n- Address variations should be realistic addresses within the specified country/city"
-            address_dob_context += "\n- DOB variations should follow the specified similarity patterns"
-            address_dob_context += "\n- the year+month the exact DOB without day"
+            address_dob_context += "\n- DOB variations ATLEAST one in each category (±1 day, ±3 days, ±30 days, ±90 days, ±365 days, year+month only)"
+            address_dob_context += "\n- For year+month, generate the exact DOB without day"
             address_dob_context += "\n- Each variation must have a different, realistic address and DOB"
+            address_dob_context += "\n- There are around 3 non-Latin individuals in the list, your task is to transliterate them to Latin script and generate variations for them, only graded on phonetic similarity for these individuals"
             query_template = query_template + address_dob_context
 
             # The function now returns a list of dictionaries, so we extract just the names for the return
@@ -1676,14 +1638,14 @@ class QueryGenerator:
             query_template = query_template + address_requirement
         
             # Create DOB specification for fallback (using default DOB config)
-            dob_spec = ", ".join([f"{int(pct*100)}% {level}" for level, pct in dob_config.items()])
-            dob_requirement = f" The following date of birth is the seed DOB to generate variations for: {{dob}}. Generate Date of Birth variations with patterns: {dob_spec}"
+
+            dob_requirement = f" The following date of birth is the seed DOB to generate variations for: {{dob}}."
             query_template = query_template + dob_requirement
             
             # Add additional context after the query
             address_dob_context = "\n\n[ADDITIONAL CONTEXT]:"
             address_dob_context += "\n- Address variations should be realistic addresses within the specified country/city"
-            address_dob_context += "\n- DOB variations should follow the specified similarity patterns"
+            address_dob_context += "\n- DOB variations ATLEAST one in each category (±1 day, ±3 days, ±30 days, ±90 days, ±365 days, year+month only)"
             address_dob_context += "\n- Each variation must have a different, realistic address and DOB"
             query_template = query_template + address_dob_context
             
