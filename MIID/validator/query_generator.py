@@ -1476,9 +1476,9 @@ class QueryGenerator:
                     
                     if (name not in generated_names_high_risk and name not in seen_names and 
                         3 <= len(first_name) <= 20 and 3 <= len(last_name) <= 20):
-                                full_name = f"{first_name} {last_name} ({selected_script})"
+                                full_name = f"{first_name} {last_name} (latin)"
                                 if full_name not in seen_names:
-                                    generated_names_high_risk.append({"name": full_name, "dob": dob, "address": country_name, "label": "High Risk", "script": selected_script})
+                                    generated_names_high_risk.append({"name": full_name, "dob": dob, "address": country_name, "label": "High Risk", "script": 'latin'})
                                     seen_names.add(full_name)
                         # bt.logging.debug(f"📝 Generated Latin high-risk name: {name} from {country_name}")
                 except Exception as e:
@@ -1555,7 +1555,7 @@ class QueryGenerator:
                 while address not in self.sanctioned_countries:
                     address = fake.country()
 
-                name = f"{first_name} {last_name} ({script_type})"
+                name = f"{first_name} {last_name} (latin)"
                 if (name not in generated_names and name not in seen_names and 
                     3 <= len(first_name) <= 20 and 
                     3 <= len(last_name) <= 20):
