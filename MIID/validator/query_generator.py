@@ -51,7 +51,7 @@ LATIN_LOCALES = ['en_US', 'en_GB', 'en_CA', 'en_AU']
 NON_Latin_Locales = [
     # Arabic script
     "ar_AA",  # Generic Arabic
-    "ar_EG", "ar_JO", "ar_PS", "ar_SA",  # Arabic
+    "ar_PS", "ar_SA",  # Arabic
     "fa_IR",  # Persian (Farsi)
 
     # Cyrillic script
