@@ -1639,7 +1639,6 @@ class QueryGenerator:
             address_dob_context += "\n- DOB variations ATLEAST one in each category (±1 day, ±3 days, ±30 days, ±90 days, ±365 days, year+month only)"
             address_dob_context += "\n- For year+month, generate the exact DOB without day"
             address_dob_context += "\n- Each variation must have a different, realistic address and DOB"
-            address_dob_context += "\n- There are around 3 non-Latin individuals in the list, your task is to transliterate them to Latin script and generate variations for them, only graded on phonetic similarity for these individuals"
             query_template = query_template + address_dob_context
 
             # The function now returns a list of dictionaries, so we extract just the names for the return

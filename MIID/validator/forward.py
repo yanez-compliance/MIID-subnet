@@ -225,10 +225,21 @@ async def forward(self):
     adaptive_timeout = min(self.config.neuron.max_request_timeout, max(120, adaptive_timeout))  # clamp [120, max_request_timeout]
     bt.logging.info(f"Using adaptive timeout of {adaptive_timeout} seconds for {len(seed_names)} names")
 
+    latin_identity_list = [[item['name'], item['dob'], item['address']] for item in seed_names_with_labels if item['script'] == 'latin']
+    non_latin_identity_list = [[item['name'], item['dob'], item['address']] for item in seed_names_with_labels if item['script'] != 'latin']
+
+    non_latin_query_template = f"For {name} script, Generate ONLY phonetic variations (transliterate to Latin script first), 80% close, 10% medium, 10% far, and ignore orthographic similarity and rule-based transformations."
+    
     # 5) Prepare the synapse
     request_synapse = IdentitySynapse(
-        identity=identity_list,
+        identity=latin_identity_list,
         query_template=query_template,
+        variations={},
+        timeout=adaptive_timeout
+    )
+    request_synapse = request_synapse + IdentitySynapse(
+        identity=non_latin_identity_list,
+        query_template=non_latin_query_template,
         variations={},
         timeout=adaptive_timeout
     )
