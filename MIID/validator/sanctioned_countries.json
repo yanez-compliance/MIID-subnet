@@ -1,22 +1,37 @@
 {
     "latin": [
         {"country": "Cuba", "faker_locale": "es_ES"},
-        {"country": "South Sudan", "faker_locale": "en_US"},
-        {"country": "Central African Republic", "faker_locale": "fr_FR"},
-        {"country": "Democratic Republic of Congo", "faker_locale": "fr_FR"},
-        {"country": "Mali", "faker_locale": "fr_FR"},
-        {"country": "Burkina Faso", "faker_locale": "fr_FR"},
-        {"country": "Cameroon", "faker_locale": "fr_FR"},
-        {"country": "Côte d'Ivoire", "faker_locale": "fr_FR"},
-        {"country": "British Virgin Islands", "faker_locale": "en_US"},
+        {"country": "Venezuela", "faker_locale": "es_ES"},
+        {"country": "South Sudan", "faker_locale": "en_US"}, 
+        {"country": "Central African Republic", "faker_locale": "fr_FR"}, 
+        {"country": "Democratic Republic of Congo", "faker_locale": "fr_FR"}, 
+        {"country": "Mali", "faker_locale": "fr_FR"}, 
+        {"country": "Nicaragua", "faker_locale": "es_ES"},
+        {"country": "Angola", "faker_locale": "pt_PT"},
+        {"country": "Bolivia", "faker_locale": "es_ES"},
+        {"country": "Burkina Faso", "faker_locale": "fr_FR"}, 
+        {"country": "Cameroon", "faker_locale": "fr_FR"}, 
+        {"country": "Côte d'Ivoire", "faker_locale": "fr_FR"}, 
+        {"country": "British Virgin Islands", "faker_locale": "en_US"},  
+        {"country": "Haiti", "faker_locale": "fr_FR"},
+        {"country": "Kenya", "faker_locale": "en_US"},
         {"country": "Monaco", "faker_locale": "fr_FR"},
         {"country": "Mozambique", "faker_locale": "pt_PT"},
-        {"country": "Namibia", "faker_locale": "en_US"}
+        {"country": "Namibia", "faker_locale": "en_US"},
+        {"country": "Nigeria", "faker_locale": "en_US"},
+        {"country": "South Africa", "faker_locale": "en_US"}
     ],
     "arabic": [
-        {"country": "Iran", "faker_locale": "fa_IR"},
-        {"country": "Sudan", "faker_locale": "ar_EG"},
-        {"country": "Somalia", "faker_locale": "ar_EG"}
+        {"country": "Iran", "faker_locale": "fa_IR"}, 
+        {"country": "Afghanistan", "faker_locale": "fa_IR"},
+        {"country": "Sudan", "faker_locale": "ar_PS"},
+        {"country": "Iraq", "faker_locale": "ar_PS"},
+        {"country": "Lebanon", "faker_locale": "ar_PS"},
+        {"country": "Libya", "faker_locale": "ar_PS"},
+        {"country": "Somalia", "faker_locale": "ar_PS"},
+        {"country": "Yemen", "faker_locale": "ar_PS"},
+        {"country": "Algeria", "faker_locale": "ar_PS"},
+        {"country": "Syria", "faker_locale": "ar_PS"}
     ],
     "cjk": [
         {"country": "China", "faker_locale": "zh_CN"},
@@ -29,16 +44,19 @@
         {"country": "Crimea", "faker_locale": "ru_RU"},
         {"country": "Donetsk", "faker_locale": "ru_RU"},
         {"country": "Luhansk", "faker_locale": "ru_RU"},
-        {"country": "Bulgaria", "faker_locale": "bg_BG"}
+        {"country": "Belarus", "faker_locale": "ru_RU"},
+        {"country": "Bulgaria", "faker_locale": "bg_BG"}, 
+        {"country": "Armenia", "faker_locale": "ru_RU"}
     ],
     "other_scripts": [
-        {"country": "Nepal", "faker_locale": "ne_NP"},
-        {"country": "Vietnam", "faker_locale": "vi_VN"},
+        {"country": "Myanmar (Burma)", "faker_locale": "th_TH"}, 
+        {"country": "Lao PDR", "faker_locale": "th_TH"},
+        {"country": "Nepal", "faker_locale": "ne_NP"}, 
+        {"country": "Vietnam", "faker_locale": "vi_VN"}, 
         {"country": "India (Hindi)", "faker_locale": "hi_IN"},
-        {"country": "Thailand", "faker_locale": "th_TH"},
-        {"country": "Israel", "faker_locale": "he_IL"},
-        {"country": "Greece", "faker_locale": "el_GR"},
-        {"country": "Georgia", "faker_locale": "ka_GE"},
-        {"country": "Armenia", "faker_locale": "NULL"}
+        {"country": "Thailand", "faker_locale": "th_TH"},  
+        {"country": "Israel", "faker_locale": "he_IL"},  
+        {"country": "Greece", "faker_locale": "el_GR"}, 
+        {"country": "Georgia", "faker_locale": "ka_GE"}
     ]
 }
