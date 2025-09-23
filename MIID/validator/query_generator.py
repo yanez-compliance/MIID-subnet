@@ -1508,41 +1508,68 @@ class QueryGenerator:
             
             # Generate ONE negative name using non-Latin locale
             if negative_sample_count > 0 and NON_Latin_Locales:
-                try:
-                    non_latin_locale = random.choice(NON_Latin_Locales)
-                    fake_non_latin = Faker(non_latin_locale)
-                    first_name = fake_non_latin.first_name().lower()
-                    last_name = fake_non_latin.last_name().lower()
-                    dob = fake_non_latin.date_of_birth(minimum_age=18, maximum_age=100).strftime("%Y-%m-%d")
-                    
-                    address = fake_non_latin.country()
-                    while address not in self.sanctioned_countries:
-                        address = fake_non_latin.country()
+                max_attempts = 5  # Limit attempts to avoid infinite loops
+                attempts = 0
+                success = False
+                
+                while attempts < max_attempts and not success:
+                    try:
+                        non_latin_locale = random.choice(NON_Latin_Locales)
+                        fake_non_latin = Faker(non_latin_locale)
+                        first_name = fake_non_latin.first_name().lower()
+                        last_name = fake_non_latin.last_name().lower()
+                        dob = fake_non_latin.date_of_birth(minimum_age=18, maximum_age=100).strftime("%Y-%m-%d")
+                        
+                        # Try to find a valid country with limited attempts
+                        address = None
+                        country_attempts = 0
+                        max_country_attempts = 20  # Limit country selection attempts
+                        
+                        while country_attempts < max_country_attempts:
+                            potential_address = fake_non_latin.country()
+                            if potential_address not in self.sanctioned_countries:
+                                address = potential_address
+                                break
+                            country_attempts += 1
+                        
+                        # If we couldn't find a valid country for this locale, try again
+                        if address is None:
+                            bt.logging.debug(f"🔄 No valid country found for locale {non_latin_locale} after {max_country_attempts} attempts. Trying different locale...")
+                            attempts += 1
+                            continue
 
-                    # Determine the actual script type based on locale
-                    script_type = "latin"  # default fallback
-                    if non_latin_locale.startswith(("ar_", "fa_", "ur_", "ps_")):
-                        script_type = "arabic"
-                    elif non_latin_locale.startswith(("bg_", "ru_", "uk_", "kk_", "ky_", "sr_", "mn_")):
-                        script_type = "cyrillic"
-                    elif non_latin_locale.startswith(("zh_", "ja_", "ko_")):
-                        script_type = "chinese"
+                        # Determine the actual script type based on locale
+                        script_type = "latin"  # default fallback
+                        if non_latin_locale.startswith(("ar_", "fa_", "ur_", "ps_")):
+                            script_type = "arabic"
+                        elif non_latin_locale.startswith(("bg_", "ru_", "uk_", "kk_", "ky_", "sr_", "mn_")):
+                            script_type = "cyrillic"
+                        elif non_latin_locale.startswith(("zh_", "ja_", "ko_")):
+                            script_type = "chinese"
 
-                    name = f"{first_name} {last_name} ({script_type})"
-                    if (name not in generated_names and name not in seen_names and 
-                        3 <= len(first_name) <= 20 and 
-                        3 <= len(last_name) <= 20):
-                        generated_names.append({
-                            "name": name, 
-                            "dob": dob, 
-                            "address": address, 
-                            "label": "negative",
-                            "script": script_type
-                        })
-                        seen_names.add(name)
-                        bt.logging.debug(f"📝 Generated {script_type} negative name: {name} using locale {non_latin_locale}")
-                except Exception as e:
-                    bt.logging.warning(f"Error generating non-Latin negative name with locale {non_latin_locale}: {e}")
+                        name = f"{first_name} {last_name} ({script_type})"
+                        if (name not in generated_names and name not in seen_names and 
+                            3 <= len(first_name) <= 20 and 
+                            3 <= len(last_name) <= 20):
+                            generated_names.append({
+                                "name": name, 
+                                "dob": dob, 
+                                "address": address, 
+                                "label": "negative",
+                                "script": script_type
+                            })
+                            seen_names.add(name)
+                            success = True
+                            bt.logging.debug(f"📝 Generated {script_type} negative name: {name} using locale {non_latin_locale}")
+                        else:
+                            attempts += 1
+                            
+                    except Exception as e:
+                        attempts += 1
+                        bt.logging.warning(f"Error generating non-Latin negative name with locale {non_latin_locale}: {e}")
+                
+                if not success:
+                    bt.logging.warning(f"Failed to generate non-Latin name after {max_attempts} attempts. Falling back to Latin.")
             
             # Generate remaining negative names using Latin locales
             remaining_negative_count = negative_sample_count - len(generated_names)
@@ -1551,9 +1578,22 @@ class QueryGenerator:
                 last_name = fake.last_name().lower()
                 dob = fake.date_of_birth(minimum_age=18, maximum_age=100).strftime("%Y-%m-%d")
                 
-                address = fake.country()
-                while address not in self.sanctioned_countries:
-                    address = fake.country()
+                # Try to find a valid country with limited attempts
+                address = None
+                country_attempts = 0
+                max_country_attempts = 20  # Limit country selection attempts
+                
+                while country_attempts < max_country_attempts:
+                    potential_address = fake.country()
+                    if potential_address not in self.sanctioned_countries:
+                        address = potential_address
+                        break
+                    country_attempts += 1
+                
+                # If we couldn't find a valid country, skip this attempt
+                if address is None:
+                    bt.logging.debug(f"🔄 No valid country found for Latin locale after {max_country_attempts} attempts. Skipping this attempt.")
+                    continue
 
                 name = f"{first_name} {last_name} (latin)"
                 if (name not in generated_names and name not in seen_names and 
