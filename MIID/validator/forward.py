@@ -228,7 +228,8 @@ async def forward(self):
     latin_identity_list = [[item['name'], item['dob'], item['address']] for item in seed_names_with_labels if item['script'] == 'latin']
     non_latin_identity_list = [[item['name'], item['dob'], item['address']] for item in seed_names_with_labels if item['script'] != 'latin']
 
-    non_latin_query_template = f"For {name} script, Generate ONLY phonetic variations (transliterate to Latin script first), 80% close, 10% medium, 10% far, and ignore orthographic similarity and rule-based transformations."
+    # Create separate query templates for Latin and non-Latin identities
+    non_latin_query_template = f"Generate 5 execution vectors for each target identity, {{name}}, for non-Latin script, Generate ONLY phonetic variations (transliterate to Latin script first), 80% close, 10% medium, 10% far, and ignore orthographic similarity and rule-based transformations. The following address is the seed country/city to generate address variations for: {{address}}. Generate unique real addresses within the specified country/city for each variation. The following date of birth is the seed DOB to generate variations for: {{dob}}. [ADDITIONAL CONTEXT]: - Address variations should be realistic addresses within the specified country/city - DOB variations ATLEAST one in each category (±1 day, ±3 days, ±30 days, ±90 days, ±365 days, year+month only) - For year+month, generate the exact DOB without day - Each variation must have a different, realistic address and DOB"
     
     # 5) Prepare the synapse
     request_synapse = IdentitySynapse(
@@ -237,7 +238,7 @@ async def forward(self):
         variations={},
         timeout=adaptive_timeout
     )
-    request_synapse = request_synapse + IdentitySynapse(
+    request_synapse_non_latin = IdentitySynapse(
         identity=non_latin_identity_list,
         query_template=non_latin_query_template,
         variations={},
@@ -271,7 +272,7 @@ async def forward(self):
         batch_responses = await dendrite_with_retries(
             dendrite=self.dendrite,
             axons=batch_axons,
-            synapse=request_synapse,
+            synapse=request_synapse + request_synapse_non_latin,
             deserialize=False,
             timeout=adaptive_timeout,
             cnt_attempts=7
