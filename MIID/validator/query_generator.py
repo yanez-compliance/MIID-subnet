@@ -1485,11 +1485,11 @@ class QueryGenerator:
                     first_name = fake.first_name().lower()
                     last_name = fake.last_name().lower()
                     dob = fake.date_of_birth(minimum_age=18, maximum_age=100).strftime("%Y-%m-%d")
-                    name = f"{first_name} {last_name} (Latin)"
+                    name = f"{first_name} {last_name} (latin)"
                     
                     if (name not in generated_names_high_risk and name not in seen_names and 
                         3 <= len(first_name) <= 20 and 3 <= len(last_name) <= 20):
-                            full_name = f"{first_name} {last_name} (Latin)"
+                            full_name = f"{first_name} {last_name} (latin)"
                             if full_name not in seen_names:
                                 generated_names_high_risk.append({"name": full_name, "dob": dob, "address": country_name, "label": "High Risk", "script": 'Latin'})
                                 seen_names.add(full_name)
