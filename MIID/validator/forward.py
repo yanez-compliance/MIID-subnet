@@ -218,12 +218,12 @@ async def forward(self):
     # Create identity list with [name, dob, address] arrays
     identity_list = [[item['name'], item['dob'], item['address']] for item in seed_names_with_labels]
 
-    # Calculate timeout based on the number of names and complexity
+    # Calculate timeout based on the number of identities and complexity
     base_timeout = self.config.neuron.timeout  # Double from 60 to 120 seconds
     # More generous allocation - especially for LLM operations
     adaptive_timeout = base_timeout + (len(seed_names) * 20) + (query_labels['variation_count'] * 10)
     adaptive_timeout = min(self.config.neuron.max_request_timeout, max(120, adaptive_timeout))  # clamp [120, max_request_timeout]
-    bt.logging.info(f"Using adaptive timeout of {adaptive_timeout} seconds for {len(seed_names)} names")
+    bt.logging.info(f"Using adaptive timeout of {adaptive_timeout} seconds for {len(seed_names)} identities")
     
     # 5) Prepare the synapse
     request_synapse = IdentitySynapse(
@@ -292,7 +292,7 @@ async def forward(self):
                 #     # #else:  # Single-part name
                 #     #     #bt.logging.info(f"Validating variations for single-part name '{name}'")
                         
-                bt.logging.info(f"Miner {uid} returned {len(response.variations)} names with {total_variations} total variations.")
+                bt.logging.info(f"Miner {uid} returned {len(response.variations)} identity variations with {total_variations} total variations.")
         
         all_responses.extend(batch_responses)
         
@@ -305,7 +305,7 @@ async def forward(self):
     bt.logging.info(f"Query completed in {end_time - start_time:.2f} seconds")
 
     # 7) Compute rewards
-    bt.logging.info(f"Received name variation responses for {len(all_responses)} miners")
+    bt.logging.info(f"Received identity variation responses for {len(all_responses)} miners")
     valid_responses = 0
     for i, response in enumerate(all_responses):
         if hasattr(response, 'variations') and response.variations:
@@ -337,16 +337,28 @@ async def forward(self):
     run_dir = os.path.join(results_dir, f"run_{timestamp}")
     os.makedirs(run_dir, exist_ok=True)
     
-    # Format example queries with actual names to show what was sent to miners
+    # Format example queries with actual identities to show what was sent to miners
     formatted_queries = {}
-    for name in seed_names:
+    for identity in seed_names_with_labels:
         try:
-            # Format the query template with the actual name
-            formatted_query = query_template.replace("{name}", name)
-            formatted_queries[name] = formatted_query
+            # Format the query template with the actual identity name
+            formatted_query = query_template.replace("{name}", identity['name'])
+            formatted_queries[identity['name']] = {
+                "query": formatted_query,
+                "identity": {
+                    "name": identity['name'],
+                    "dob": identity['dob'],
+                    "address": identity['address'],
+                    "label": identity['label'],
+                    "script": identity.get('script', 'unknown')
+                }
+            }
         except Exception as e:
-            bt.logging.error(f"Error formatting query for name '{name}': {str(e)}")
-            formatted_queries[name] = f"Error formatting query: {str(e)}"
+            bt.logging.error(f"Error formatting query for identity '{identity.get('name', 'unknown')}': {str(e)}")
+            formatted_queries[identity.get('name', 'unknown')] = {
+                "query": f"Error formatting query: {str(e)}",
+                "identity": identity
+            }
     
     # Save the query and responses to a JSON file
     results = {
