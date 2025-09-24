@@ -796,6 +796,8 @@ def _calculate_similarity_and_penalties(responses: list, uids: list, seed_names:
 def get_name_variation_rewards(
     self,
     seed_names: List[str],
+    seed_dob: List[str],
+    seed_addresses: List[str],
     responses: List[Dict[str, List[str]]],
     uids: List[int],
     variation_count: int = 10,

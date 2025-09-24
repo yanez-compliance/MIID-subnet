@@ -318,6 +318,8 @@ async def forward(self):
     rewards, detailed_metrics = get_name_variation_rewards(
         self, 
         seed_names,
+        seed_dob,
+        seed_addresses,
         all_responses, 
         miner_uids,
         variation_count=query_labels['variation_count'],
