@@ -27,6 +27,12 @@ import time
 import traceback
 import math
 import random
+import ollama
+from datetime import datetime, timedelta
+import re
+import requests
+import pycountry
+from unidecode import unidecode
 
 # Import rule_evaluator for rule-based compliance checking
 from MIID.validator.rule_evaluator import evaluate_rule_compliance
@@ -38,6 +44,59 @@ from MIID.validator.cheat_detection import (
     jaccard,
     detect_cheating_patterns,
 )
+
+def clean_transliteration_output(raw_response: str) -> str:
+    """
+    Extracts the transliterated name from LLM output, removes appended scripts, instructions,
+    and any leading/trailing punctuation like '-'.
+    """
+    lines = raw_response.splitlines()
+    transliterated = ""
+    
+    for line in lines:
+        line = line.strip()
+        if not line:
+            continue
+        # Skip instruction/meta lines
+        if any(keyword in line.lower() for keyword in [
+            "output only", "do not", "end of output", "input", "latin script"
+        ]):
+            continue
+        if re.search(r"[A-Za-zÀ-ÿ]", line):
+            transliterated = line
+            break
+
+    # Remove known script words
+    for word in ["latin", "cyrillic", "arabic", "chinese"]:
+        transliterated = transliterated.replace(word, "")
+
+    # Remove unwanted characters, keep letters, hyphens, apostrophes, spaces
+    transliterated = re.sub(r"[^A-Za-zÀ-ÿ\s\-\']", "", transliterated)
+
+    # Strip leading/trailing punctuation (like '-')
+    transliterated = transliterated.strip(" -")
+
+    # Collapse multiple spaces
+    transliterated = re.sub(r"\s+", " ", transliterated).strip()
+    
+    return transliterated
+
+
+def translate_unidecode(original_name):
+    """
+    Fallback transliteration function using unidecode.
+    Removes parentheses content and converts to ASCII.
+    
+    Args:
+        original_name: The original name to transliterate
+        
+    Returns:
+        The transliterated name in ASCII
+    """
+    cleaned_str = re.sub(r"\s*\(.*?\)", "", original_name)
+    english_name = unidecode(cleaned_str)
+    return english_name
+
 
 # Define the reward component weights globally
 MIID_REWARD_WEIGHTS = {
@@ -131,6 +190,135 @@ def calculate_orthographic_similarity(original_name: str, variation: str) -> flo
     except Exception as e:
         bt.logging.warning(f"Error calculating orthographic score: {str(e)}")
         return 0.0
+
+def looks_like_address(address: str) -> bool:
+    address = address.strip().lower()
+    if len(address) < 10:
+        return False
+    if re.match(r"^[^a-zA-Z]*$", address):  # no letters at all
+        return False
+    if len(set(address)) < 5:  # all chars basically the same
+        return False
+    
+    # Has at least one digit (street number)
+    if not re.search(r"\d", address):
+        return False
+    
+    # Contains common address words
+    common_words = ["st", "street", "rd", "road", "ave", "avenue", "blvd", "drive", "ln", "lane", "plaza", "city"]
+    if not any(word in address for word in common_words):
+        return False
+    
+    return True
+
+def check_with_nominatim(address: str) -> bool:
+    try:
+        url = "https://nominatim.openstreetmap.org/search"
+        params = {"q": address, "format": "json"}
+        response = requests.get(url, params=params, headers={"User-Agent": "address-checker"}, timeout=5)
+        return len(response.json()) > 0
+    except requests.exceptions.Timeout:
+        bt.logging.warning(f"API timeout for address: {address}")
+        return "TIMEOUT"
+    except:
+        return False
+
+def validate_addresses(addresses):
+    good, bad, checked = [], [], []
+    last_call_time = 0
+    
+    for i, addr in enumerate(addresses):
+        if looks_like_address(addr):
+            # Calculate time since last API call
+            current_time = time.time()
+            time_since_last_call = current_time - last_call_time
+            
+            # If less than 1 second has passed, wait for the remainder
+            if i > 0 and time_since_last_call < 1.0:
+                sleep_time = 1.0 - time_since_last_call
+                time.sleep(sleep_time)
+            
+            # Make the API call
+            if check_with_nominatim(addr):
+                good.append(addr)
+            else:
+                bad.append(addr)
+            checked.append(addr)
+            
+            # Update last call time
+            last_call_time = time.time()
+        else:
+            bad.append(addr)
+    
+    return good, bad, checked
+
+def transliterate_name_with_llm(original_name: str, model_name: str = "tinyllama:latest") -> str:
+    """
+    Use LLM to transliterate a non-Latin name to Latin script for phonetic comparison.
+    Tries tinyllama first, then falls back to llama3.1:latest.
+    
+    Args:
+        original_name: The original non-Latin name to transliterate
+        model_name: The Ollama model to use for transliteration (if specified, uses that first)
+        
+    Returns:
+        The transliterated name in Latin script, or fallback transliteration if all models fail
+    """
+    llama_models = [
+        "tinyllama:latest",
+        "llama3.1:latest",
+    ]
+
+    if model_name in llama_models:
+        models_to_try = [model_name] + [m for m in llama_models if m != model_name]
+    else:
+        models_to_try = llama_models
+
+    for current_model in models_to_try:
+        attempts = 0
+        while attempts < 5:
+            try:
+                script = "unknown"
+                if "(" in original_name and ")" in original_name:
+                    script = original_name.split("(")[-1].rstrip(")")
+
+                prompt = f"Transliterate this {script} name to Latin script, output only the name:\n{original_name}"
+
+                response = ollama.generate(
+                    model=current_model,
+                    prompt=prompt,
+                    options={
+                        'temperature': 0.1,
+                        'top_p': 0.9,
+                        'max_tokens': 50,
+                        'timeout': 30
+                    }
+                )
+
+                raw_output = response['response'].strip()
+
+                transliterated = clean_transliteration_output(raw_output)
+
+                # Validate transliteration: must contain at least one letter
+                if transliterated and re.match(r"^[A-Za-zÀ-ÿ\s\-\']+$", transliterated):
+                    bt.logging.info(f"Successfully transliterated '{original_name}' to '{transliterated}' using {current_model}")
+                    return transliterated
+                else:
+                    bt.logging.warning(f"Invalid transliteration result for '{original_name}' with {current_model}, attempt {attempts + 1}/5")
+                    attempts += 1
+
+            except Exception as e:
+                bt.logging.error(f"Error in LLM transliteration for '{original_name}' with {current_model}, attempt {attempts + 1}/5: {str(e)}")
+                attempts += 1
+
+        bt.logging.warning(f"Model {current_model} failed 5 times for '{original_name}', trying next model")
+
+    # Fallback
+    bt.logging.info(f"All LLM attempts failed for '{original_name}', using fallback transliteration")
+    fallback_result = translate_unidecode(original_name)
+    bt.logging.info(f"Fallback transliteration result for '{original_name}': '{fallback_result}'")
+    return fallback_result
+
 
 def calculate_part_score(
     original_part: str,
@@ -388,6 +576,209 @@ def calculate_part_score(
     
     return final_score, detailed_metrics
 
+
+def calculate_part_score_phonetic_only(
+    original_part: str,
+    variations: List[str],
+    phonetic_similarity: Dict[str, float],
+    expected_count: int
+) -> Tuple[float, Dict]:
+    """Calculate score and detailed metrics for a single part (first or last name) using only phonetic similarity"""
+    
+    if not variations:
+        bt.logging.warning("No variations provided")
+        return 0.0, {}
+    
+    # Define the boundaries for phonetic similarity levels with no overlaps
+    # There is a gap so no code can be in 2 different bounds
+    phonetic_boundaries = {
+        "Light": (0.80, 1.00),   # High similarity range
+        "Medium": (0.60, 0.79),  # Moderate similarity range
+        "Far": (0.30, 0.59)      # Low similarity range
+    }
+    
+    # 1. Check if count matches expected count with adaptive tolerance
+    # Handle case where expected_count is 0 (100% rule-based scenario)
+    if expected_count == 0:
+        # If no variations are expected for non-rule-compliant part, give full score
+        count_score = 1.0
+        bt.logging.info(f"Count score: 1.0 (no non-rule variations expected)")
+    else:
+        # Tolerance increases with expected count to be more forgiving for larger sets
+        base_tolerance = 0.2  # 20% base tolerance
+        tolerance = base_tolerance + (0.05 * (expected_count // 10))  # Add 5% per 10 expected variations
+        tolerance = min(tolerance, 0.4)  # Cap at 40% maximum tolerance
+        
+        tolerance_range = expected_count * tolerance
+        actual_count = len(variations)
+        lower_bound = max(1, expected_count - tolerance_range)  # Ensure at least 1 variation required
+        upper_bound = expected_count + tolerance_range
+        
+        if lower_bound <= actual_count <= upper_bound:
+            count_score = 1.0
+            #bt.logging.info(f"Count score: 1.0 (within tolerance range: {lower_bound:.1f}-{upper_bound:.1f})")
+        else:
+            if actual_count < lower_bound:
+                deviation = lower_bound - actual_count
+                #bt.logging.warning(f"Too few variations: {actual_count} < {lower_bound:.1f}")
+            else:
+                deviation = actual_count - upper_bound
+                #bt.logging.warning(f"Too many variations: {actual_count} > {upper_bound:.1f}")
+            
+            # Smoother penalty curve using exponential decay
+            count_score = math.exp(-deviation / expected_count)
+            #bt.logging.info(f"Count score: {count_score:.3f} (penalty for deviation: {deviation})")
+    
+    # 2. Enhanced uniqueness check with phonetic similarity clustering
+    unique_variations = []
+    for var in variations:
+        # Check if this variation is too similar to any existing unique variation
+        is_unique = True
+        for unique_var in unique_variations:
+            phonetic_sim = calculate_phonetic_similarity(var, unique_var)
+            if phonetic_sim > 0.99:  # Very high similarity threshold
+                is_unique = False
+                #bt.logging.warning(f"Variation '{var}' is too similar to existing variation '{unique_var}'")
+                break
+        if is_unique:
+            unique_variations.append(var)
+    
+    uniqueness_score = len(unique_variations) / len(variations) if variations else 0
+    
+    # 3. Improved length reasonableness with adaptive thresholds
+    length_scores = []
+    for var in unique_variations:
+        original_len = len(original_part)
+        var_len = len(var)
+        
+        # Adaptive threshold based on original name length
+        min_ratio = 0.6 if original_len <= 5 else 0.7  # More forgiving for short names
+        
+        # Consider both absolute and relative length differences
+        length_ratio = min(var_len / original_len, original_len / var_len)
+        absolute_diff = abs(var_len - original_len)
+        
+        # Combine both metrics with smooth transition
+        length_score = length_ratio * (1.0 - min(1.0, absolute_diff / original_len))
+        length_scores.append(length_score)
+        
+    
+    length_score = sum(length_scores) / len(length_scores) if length_scores else 0
+    #bt.logging.info(f"Average length score: {length_score:.3f}")
+    
+    # Calculate phonetic similarity scores with improved distribution analysis
+    phonetic_scores = []
+    
+    for variation in unique_variations:
+        p_score = calculate_phonetic_similarity(original_part, variation)
+        phonetic_scores.append(p_score)
+        
+    # Sort scores for distribution analysis
+    phonetic_scores.sort()
+    
+    # Calculate quality scores with improved distribution matching
+    def calculate_distribution_quality(scores, boundaries, targets):
+        quality = 0.0
+        total_matched = 0
+        
+        for level, (lower, upper) in boundaries.items():
+            target_percentage = targets.get(level, 0.0)
+            if target_percentage == 0.0:
+                continue
+                
+            # Count scores in this range
+            count = sum(1 for score in scores if lower <= score <= upper)
+            target_count = int(target_percentage * len(scores))
+            
+            if target_count > 0:
+                # Calculate match quality with diminishing returns
+                match_ratio = count / target_count
+                #match_quality = 1.0 - math.exp(-match_ratio)  # Smooth curve
+                # Diminishing returns after target
+                # this gives 100% at target, then diminishing returns for exceeding
+                if match_ratio <= 1.0:
+                    match_quality = match_ratio  # Linear up to target
+                else:    
+                    match_quality = 1.0 - math.exp(-(match_ratio - 1.0))  
+                quality += target_percentage * match_quality
+                total_matched += count
+                
+                # bt.logging.info(
+                #     f"{level} similarity: {count}/{target_count} variations "
+                #     f"({match_quality:.3f} quality)"
+                # )
+        
+        # Penalize unmatched variations
+        unmatched = len(scores) - total_matched
+        if unmatched > 0:
+            penalty = 0.1 * (unmatched / len(scores))
+            quality = max(0.0, quality - penalty)
+            # bt.logging.warning(f"Penalty of {penalty:.3f} applied for {unmatched} unmatched variations")
+        
+        return quality
+    
+    phonetic_quality = calculate_distribution_quality(
+        phonetic_scores, phonetic_boundaries, phonetic_similarity
+    )
+    
+    # Use only phonetic similarity score
+    similarity_score = phonetic_quality
+    
+    # Apply minimum similarity threshold to prevent gaming
+    # If similarity is very low, severely reduce the score
+    min_similarity_threshold = 0.2
+    if similarity_score < min_similarity_threshold:
+        similarity_score *= 0.1  # Keep only 10% of the similarity score
+
+    similarity_weight = MIID_REWARD_WEIGHTS["similarity_weight"]
+    count_weight = MIID_REWARD_WEIGHTS["count_weight"]
+    uniqueness_weight = MIID_REWARD_WEIGHTS["uniqueness_weight"]
+    length_weight = MIID_REWARD_WEIGHTS["length_weight"]
+    
+    final_score = (
+        similarity_weight * similarity_score +
+        count_weight * count_score +
+        uniqueness_weight * uniqueness_score +
+        length_weight * length_score
+    )
+    if final_score == 0:
+        bt.logging.warning(f"Zero score for '{original_part}'. Possible reasons:")
+        if len(variations) == 0:
+            bt.logging.warning("  - No variations provided")
+        if similarity_score == 0:
+            bt.logging.warning("  - All variations had very low phonetic similarity scores")
+        if uniqueness_score == 0:
+            bt.logging.warning("  - All variations were too similar to each other")
+    
+    # Just before returning the final_score, prepare the detailed metrics
+    detailed_metrics = {
+        "similarity": {
+            "phonetic": float(phonetic_quality),
+            "combined": float(similarity_score)
+        },
+        "count": {
+            "actual": actual_count,
+            "expected": expected_count,
+            "score": float(count_score)
+        },
+        "uniqueness": {
+            "unique_count": len(unique_variations),
+            "total_count": len(variations),
+            "score": float(uniqueness_score)
+        },
+        "length": {
+            "score": float(length_score)
+        },
+        "variations": [{
+            "variation": var,
+            "phonetic_score": float(calculate_phonetic_similarity(original_part, var)),
+            "length_ratio": float(len(var)) / float(len(original_part))
+        } for var in variations]
+    }
+    
+    return final_score, detailed_metrics
+
+
 def get_name_part_weights(name: str) -> dict:
     """Generate weights for different name parts based on name characteristics, with randomness."""
     random.seed(hash(name) % 10000)
@@ -403,17 +794,11 @@ def get_name_part_weights(name: str) -> dict:
         weights.append(randomized_weight)
     total_weight = sum(weights)
     normalized_weights = [w / total_weight for w in weights]
-    if len(name_parts) > 2:
-        return {
-            "first_name_weight": normalized_weights[0],
-            "middle_name_weight": sum(normalized_weights[1:-1]),
-            "last_name_weight": normalized_weights[-1]
-        }
-    else:
-        return {
-            "first_name_weight": normalized_weights[0],
-            "last_name_weight": normalized_weights[1]
-        }
+
+    return {
+        "first_name_weight": normalized_weights[0],
+        "last_name_weight": normalized_weights[1]
+    }
 
 def calculate_variation_quality(
     original_name: str,  # Full name as a string
@@ -620,6 +1005,121 @@ def calculate_variation_quality(
     return final_score, base_score, detailed_metrics
 
 
+def calculate_variation_quality_phonetic_only(
+    original_name: str,  # Full name as a string
+    variations: List[str],
+    phonetic_similarity: Dict[str, float] = None,
+    expected_count: int = 10
+) -> Tuple[float, float, Dict]:
+    """
+    Calculate the quality of execution vectors (name variations) using ONLY phonetic similarity.
+    No rule-based scoring, no orthographic similarity - just phonetic similarity for both first and last names.
+    """
+
+    # Default phonetic similarity preferences if none provided
+    if phonetic_similarity is None:
+        phonetic_similarity = {"Medium": 1.0}
+
+    # Split the original name into first and last name
+    name_parts = original_name.split()
+    part_weights = get_name_part_weights(original_name)
+    if len(name_parts) < 2:
+        first_name = original_name
+        last_name = None
+    else:
+        first_name = name_parts[0]
+        last_name = name_parts[-1]
+    
+    # Process ALL variations for phonetic-only scoring
+    first_name_variations = []
+    last_name_variations = []
+    
+    for variation in variations:
+        parts = variation.split()
+        if len(parts) >= 2:
+            first_name_variations.append(parts[0])
+            last_name_variations.append(parts[-1])
+        elif len(parts) == 1:
+            # If variation is a single word and we expect two names,
+            # this should be considered a lower quality variation
+            if last_name:
+                bt.logging.warning(f"Single word variation '{variation}' for full name '{original_name}'")
+                # Only use it for first name with a penalty
+                first_name_variations.append(parts[0])
+            else:
+                # If original is also single word, use normally
+                first_name_variations.append(parts[0])
+        else:
+            bt.logging.warning(f"Empty variation found for '{original_name}'")
+
+    # Calculate phonetic-only score for first name
+    first_name_score, first_metrics = calculate_part_score_phonetic_only(
+        first_name,
+        first_name_variations,
+        phonetic_similarity,
+        expected_count
+    )
+    
+    # Calculate phonetic-only score for last name if available
+    last_name_score = 0.0
+    last_metrics = {}
+    if last_name:
+        #bt.logging.info("\nCalculating last name score (phonetic-only):")
+        last_name_score, last_metrics = calculate_part_score_phonetic_only(
+            last_name,
+            last_name_variations,
+            phonetic_similarity,
+            expected_count
+        )
+        
+        # Apply penalty for missing last names in variations
+        if len(last_name_variations) < len(variations):
+            missing_ratio = (len(variations) - len(last_name_variations)) / len(variations) if len(variations) > 0 else 0
+            last_name_score *= (1.0 - missing_ratio)
+            bt.logging.warning(f"Applied missing last name penalty: {missing_ratio:.2f}")
+
+    # Combine first/last name scores for the final score
+    if last_name:
+        final_score = (
+            part_weights.get("first_name_weight", MIID_REWARD_WEIGHTS["first_name_weight"]) * first_name_score +
+            part_weights.get("last_name_weight", MIID_REWARD_WEIGHTS["last_name_weight"]) * last_name_score
+        )
+        base_score = final_score  # Same as final score since no rule compliance
+    else:
+        # If no last name, use only first name score
+        final_score = first_name_score
+        base_score = final_score
+
+    # Prepare detailed metrics
+    detailed_metrics = {
+        "first_name": {
+            "score": float(first_name_score),
+            "metrics": first_metrics
+        },
+        "final_score": float(final_score),
+        "base_score": float(base_score),
+        "variation_count": len(variations),
+        "scoring_method": "phonetic_only"
+    }
+    
+    if last_name:
+        detailed_metrics["last_name"] = {
+            "score": float(last_name_score),
+            "metrics": last_metrics
+        }
+    
+    if final_score == 0:
+        bt.logging.warning(f"Zero final score for '{original_name}'. Possible reasons:")
+        if first_name_score == 0 and len(first_name_variations) > 0:
+            bt.logging.warning("  - Zero first name phonetic score")
+        if last_name and last_name_score == 0 and len(last_name_variations) > 0:
+            bt.logging.warning("  - Zero last name phonetic score")
+        if len(variations) == 0:
+            bt.logging.warning("  - No variations provided")
+
+    return final_score, base_score, detailed_metrics
+
+
 def _calculate_similarity_and_penalties(responses: list, uids: list, seed_names: list, detailed_metrics: list, rewards: np.ndarray) -> tuple:
     """
     Calculate similarity between miner responses and determine penalties for duplication.
@@ -647,6 +1147,7 @@ def _calculate_similarity_and_penalties(responses: list, uids: list, seed_names:
     signature_penalties = cheating_results["signature_penalties"]
     collusion_penalties = cheating_results["collusion_penalties"]
     special_char_penalties = cheating_results["special_char_penalties"]
+    address_duplication_penalties = cheating_results["address_duplication_penalties"]
     special_char_ratios = cheating_results["special_char_ratios"]
     special_char_counts = cheating_results["special_char_counts"]
     total_variations_counts = cheating_results["total_variations_counts"]
@@ -657,6 +1158,7 @@ def _calculate_similarity_and_penalties(responses: list, uids: list, seed_names:
     duplication_pairs = []
     signature_duplicates = []
     special_char_offenders = []
+    address_duplication_offenders = []
     
     # Collect penalty statistics
     for i, uid in enumerate(uids):
@@ -682,6 +1184,11 @@ def _calculate_similarity_and_penalties(responses: list, uids: list, seed_names:
             total_penalty += special_char_penalties[i]
             penalties_applied.append(f"special_chars({special_char_penalties[i]:.2f})")
             special_char_offenders.append(uid)
+            
+        if address_duplication_penalties[i] > 0:
+            total_penalty += address_duplication_penalties[i]
+            penalties_applied.append(f"address_duplication({address_duplication_penalties[i]:.2f})")
+            address_duplication_offenders.append(uid)
             
         if total_penalty > 0:
             penalized_miners.append((uid, total_penalty, penalties_applied))
@@ -771,6 +1278,14 @@ def _calculate_similarity_and_penalties(responses: list, uids: list, seed_names:
                 miner_metrics.setdefault('penalties', {})
                 miner_metrics['penalties']['special_chars'] = penalty_amount
 
+        # Address Duplication Penalty
+        if address_duplication_penalties[i] > 0:
+            penalty_amount = address_duplication_penalties[i]
+            total_penalty += penalty_amount
+            if i < len(detailed_metrics):
+                miner_metrics = detailed_metrics[i]
+                miner_metrics.setdefault('penalties', {})
+                miner_metrics['penalties']['address_duplication'] = penalty_amount
 
         # Apply combined penalty
         if total_penalty > 0:
@@ -793,12 +1308,139 @@ def _calculate_similarity_and_penalties(responses: list, uids: list, seed_names:
     return updated_rewards, detailed_metrics
 
 
+def _grade_dob_variations(self, variations: Dict[str, List[List[str]]], seed_dob: List[str], miner_metrics: Dict[str, Any]) -> Dict[str, Any]:
+    """
+    Grade DOB variations based on the required criteria.
+    Checks if variations fall within the required day ranges.
+    """
+    
+    # Required day ranges (max days for each category)
+    ranges = [1, 3, 30, 90, 365]  # ±1, ±3, ±30, ±90, ±365 days
+    found_ranges = set()
+    duplicate_penalty = 0.0
+    total_variations = 0
+    
+    for name_idx, name in enumerate(variations.keys()):
+        if name not in variations or len(variations[name]) < 2 or name_idx >= len(seed_dob):
+            continue
+            
+        dob_variations = variations[name][1]  # DOB variations are at index 1
+        if not dob_variations or not seed_dob[name_idx]:
+            continue
+            
+        # Check for duplicates within this name's DOB variations
+        unique_dobs = set()
+        duplicates_in_name = 0
+        for dob_var in dob_variations:
+            if dob_var and dob_var in unique_dobs:
+                duplicates_in_name += 1
+            elif dob_var:
+                unique_dobs.add(dob_var)
+        
+        # Apply penalty for duplicates (5% per duplicate)
+        duplicate_penalty += duplicates_in_name * 0.05
+        total_variations += len(dob_variations)
+            
+        try:
+            # Parse seed DOB
+            seed_date = datetime.strptime(seed_dob[name_idx], "%Y-%m-%d")
+            
+            # Check each DOB variation
+            for dob_var in dob_variations:
+                if not dob_var:
+                    continue
+                    
+                try:
+                    # Try full date format first
+                    var_date = datetime.strptime(dob_var, "%Y-%m-%d")
+                    day_diff = abs((var_date - seed_date).days)
+                    
+                    # Check if it falls within any required range
+                    if day_diff <= 1:
+                        found_ranges.add(1)
+                    elif day_diff <= 3:
+                        found_ranges.add(3)
+                    elif day_diff <= 30:
+                        found_ranges.add(30)
+                    elif day_diff <= 90:
+                        found_ranges.add(90)
+                    elif day_diff <= 365:
+                        found_ranges.add(365)
+                        
+                except ValueError:
+                    # Try year-month only format (e.g., "1990-05")
+                    try:
+                        year_month = datetime.strptime(dob_var, "%Y-%m")
+                        if (seed_date.year == year_month.year and 
+                            seed_date.month == year_month.month):
+                            found_ranges.add("year_month")
+                    except ValueError:
+                        continue
+                    
+        except ValueError:
+            continue
+    
+    # Calculate base score based on found ranges
+    total_ranges = len(ranges) + 1  # +1 for year_month
+    base_score = len(found_ranges) / total_ranges if total_ranges > 0 else 0.0
+    
+    # Apply duplicate penalty
+    final_score = max(0.0, base_score - duplicate_penalty)
+    
+    return {
+        "overall_score": final_score,
+        "base_score": base_score,
+        "duplicate_penalty": duplicate_penalty,
+        "found_ranges": list(found_ranges),
+        "total_ranges": total_ranges
+    }
+
+def _grade_address_variations(self, variations: Dict[str, List[List[str]]], seed_addresses: List[str], miner_metrics: Dict[str, Any]) -> Dict[str, Any]:
+    """Grade address variations - check all with heuristics, one random with API."""
+    if not seed_addresses or not any(seed_addresses):
+        return {"overall_score": 1.0}
+    
+    # Collect all addresses
+    all_addresses = []
+    for name_idx, name in enumerate(variations.keys()):
+        if name in variations and len(variations[name]) >= 3 and name_idx < len(seed_addresses):
+            address_variations = variations[name][2]  # Address variations at index 2
+            if address_variations and seed_addresses[name_idx]:
+                valid_addrs = [addr for addr in address_variations if addr and addr.strip()]
+                all_addresses.extend(valid_addrs)
+    
+    if not all_addresses:
+        return {"overall_score": 0.0}
+    
+    # Check all addresses with heuristics - must be 100%
+    heuristic_good = [addr for addr in all_addresses if looks_like_address(addr)]
+    heuristic_perfect = len(heuristic_good) == len(all_addresses)
+    
+    # Check one random address with API - must pass
+    api_result = False
+    if heuristic_good:
+        random_addr = random.choice(heuristic_good)
+        api_result = check_with_nominatim(random_addr)
+    
+    # Scoring with timeout handling
+    if not heuristic_perfect:
+        final_score = 0.0  # Heuristics failed
+    elif api_result == "TIMEOUT":
+        final_score = 0.3  # 30% for timeout
+    elif api_result == True:
+        final_score = 1.0  # Perfect
+    else:
+        final_score = 0.0  # API failed
+    
+    return {"overall_score": final_score}
+
+
 def get_name_variation_rewards(
     self,
     seed_names: List[str],
     seed_dob: List[str],
     seed_addresses: List[str],
-    responses: List[Dict[str, List[str]]],
+    responses: List[Dict[str, List[List[str]]]],
     uids: List[int],
     variation_count: int = 10,
     phonetic_similarity: Dict[str, float] = None,
@@ -814,6 +1456,7 @@ def get_name_variation_rewards(
     2. Quality and diversity of execution vectors
     3. Effectiveness as potential bypass methods based on similarity metrics
     4. Compliance with requested rule-based transformations
+    5. Compliance with requested DOB and address variations
     
     Args:
         seed_names: Original identity names to generate variations for
@@ -910,22 +1553,71 @@ def get_name_variation_rewards(
             extra_names_penalty = float(extra_penalty)
             miner_metrics["invalid_names"] = list(invalid_names)
         
+        # Safety check: ensure all variations have at least 3 elements (names, dob, addresses)
+        for name, vars_list in variations.items():
+            if len(vars_list) < 3:
+                bt.logging.warning(f"Miner {uid} provided incomplete variations for {name}: expected 3 lists (names, dob, addresses), got {len(vars_list)}")
+                # Pad with empty lists if needed - this modifies the actual variations dictionary
+                while len(vars_list) < 3:
+                    vars_list.append([])
+        
         # Penalty for too many variations per name
         for name, vars_list in variations.items():
+            
             if variation_count > 0:
                 allowed_with_grace = int(variation_count * 1.2)  # 20% grace, rounded down
-                if len(vars_list) > allowed_with_grace:
-                    too_many = len(vars_list) - allowed_with_grace
+                if len(vars_list[0]) > allowed_with_grace:  # Only check names for variation count
+                    too_many = len(vars_list[0]) - allowed_with_grace
                     penalty_too_many = too_many * 0.05  # 5% per extra
                     # bt.logging.info(f"Too many variations for {name}: {too_many} extra → penalty {penalty_too_many}")
                     extra_names_penalty += penalty_too_many
         
-            # Penalty for duplicate variations
-            duplicates = len(vars_list) - len(set(vars_list))
-            if duplicates > 0:
-                penalty_duplicates = duplicates * 0.05  # e.g. 5% penalty per duplicate
+            # Normalize DOB variations for duplicate detection
+            def normalize_dob(dob_str):
+                """Normalize DOB string by removing extra spaces and standardizing format"""
+                if not dob_str:
+                    return ""
+                # Remove all spaces and convert to lowercase
+                normalized = dob_str.replace(" ", "").replace("-", "").replace("/", "").replace(".", "").lower()
+                return normalized
+            
+            # Normalize address variations for duplicate detection
+            def normalize_address(addr_str):
+                """Normalize address string by removing extra spaces and standardizing format"""
+                if not addr_str:
+                    return ""
+                # Remove extra spaces, convert to lowercase, and standardize common separators
+                normalized = " ".join(addr_str.split()).lower()
+                # Replace common separators with spaces
+                normalized = normalized.replace(",", " ").replace(";", " ").replace("-", " ")
+                # Remove multiple spaces
+                normalized = " ".join(normalized.split())
+                return normalized
+            
+            # Penalty for duplicate variations - names
+            duplicates_names = len(vars_list[0]) - len(set(vars_list[0]))
+            if duplicates_names > 0:
+                penalty_duplicates = duplicates_names * 0.05  # e.g. 5% penalty per duplicate
                 # bt.logging.info(f"Duplicate variations for {name}: {duplicates} duplicates → penalty {penalty_duplicates}")
                 extra_names_penalty += penalty_duplicates
+            
+            # Penalty for duplicate variations - DOB (with normalization)
+            if len(vars_list) > 1 and vars_list[1]:  # Check if DOB list exists and is not empty
+                normalized_dobs = [normalize_dob(dob) for dob in vars_list[1] if dob]  # Filter out empty strings
+                duplicates_dob = len(normalized_dobs) - len(set(normalized_dobs))
+                if duplicates_dob > 0:
+                    penalty_duplicates = duplicates_dob * 0.05  # e.g. 5% penalty per duplicate
+                    # bt.logging.info(f"Duplicate DOB variations for {name}: {duplicates_dob} duplicates → penalty {penalty_duplicates}")
+                    extra_names_penalty += penalty_duplicates
+            
+            # Penalty for duplicate variations - addresses (with normalization)
+            if len(vars_list) > 2 and vars_list[2]:  # Check if address list exists and is not empty
+                normalized_addresses = [normalize_address(addr) for addr in vars_list[2] if addr]  # Filter out empty strings
+                duplicates_addresses = len(normalized_addresses) - len(set(normalized_addresses))
+                if duplicates_addresses > 0:
+                    penalty_duplicates = duplicates_addresses * 0.05  # e.g. 5% penalty per duplicate
+                    # bt.logging.info(f"Duplicate address variations for {name}: {duplicates_addresses} duplicates → penalty {penalty_duplicates}")
+                    extra_names_penalty += penalty_duplicates
 
         # Optionally cap at 1.0 total
         extra_names_penalty = min(extra_names_penalty, 1.0)
@@ -958,9 +1650,20 @@ def get_name_variation_rewards(
         for name in seed_names:
             if name not in variations or not variations[name]:
                 continue
+            
+            # Skip non-Latin names - they will have their own judging part
+            # Names are in format: "first_name last_name (script_type)"
+            if not name.endswith("(latin)"):
+                bt.logging.info(f"Skipping non-Latin name: {name}")
+                continue
+            else:
+                # Remove the " (latin)" suffix if present
+                if name.endswith("(latin)"):
+                    name = name[:-7].rstrip()
                 
+            
             # Get variations for this name
-            name_variations = variations[name]
+            name_variations = variations[name][0]
             name_metrics = {
                 "variations": [],
                 "quality_score": 0.0,
@@ -991,6 +1694,48 @@ def get_name_variation_rewards(
             except Exception as e:
                 bt.logging.error(f"Error calculating quality for miner {uid}, name '{name}': {str(e)}")
                 traceback.print_exc()
+
+        # Process each non-Latin seed name using phonetic-only scoring with LLM transliteration
+        for name in seed_names:
+            if name not in variations or not variations[name]:
+                continue
+
+            if name.endswith("(latin)"):
+                continue
+                
+            # Get variations for this name
+            name_variations = variations[name][0]
+            
+            # Use LLM to transliterate the non-Latin name to Latin script
+            bt.logging.info(f"Transliterating non-Latin name: '{name}'")
+            transliterated_name = transliterate_name_with_llm(name)
+            
+            bt.logging.info(f"Transliterated '{name}' to '{transliterated_name}'")
+            # Use phonetic-only scoring on transliterated name
+            try:
+                quality, base_score, name_detailed_metrics = calculate_variation_quality_phonetic_only(
+                    transliterated_name,
+                    name_variations,
+                    phonetic_similarity=phonetic_similarity,
+                    expected_count=variation_count
+                )
+                # Add transliteration info to metrics
+                name_detailed_metrics["transliteration"] = {
+                    "original_name": name,
+                    "transliterated_name": transliterated_name,
+                    "transliteration_success": True
+                }
+            except Exception as e:
+                bt.logging.error(f"Error calculating phonetic-only quality for miner {uid}, name '{name}': {str(e)}")
+                traceback.print_exc()
+                continue
+            
+            # Add scoring method info to metrics
+            name_detailed_metrics["scoring_method"] = "phonetic_only_with_llm_transliteration"
+            
+            quality_scores.append(quality)
+            base_scores.append(base_score)
+            miner_metrics["name_metrics"][name] = name_detailed_metrics
         
         # Calculate overall rule compliance score if applicable
         if rule_based and quality_scores and any("rule_compliance" in miner_metrics["name_metrics"].get(name, {}) for name in seed_names):
@@ -1002,17 +1747,51 @@ def get_name_variation_rewards(
                 miner_metrics["rule_compliance"]["overall_score"] = float(sum(rule_scores) / len(rule_scores))
                 #bt.logging.info(f"Overall rule compliance score: {miner_metrics['rule_compliance']['overall_score']:.3f}")
         
-        # Calculate final reward
+        # Grade DOB variations before final reward calculation
+        dob_grading_score = self._grade_dob_variations(variations, seed_dob, miner_metrics)
+        miner_metrics["dob_grading"] = dob_grading_score
+        
+        # Grade address variations before final reward calculation
+        address_grading_score = self._grade_address_variations(variations, seed_addresses, miner_metrics)
+        miner_metrics["address_grading"] = address_grading_score
+        
+        # Calculate final reward incorporating DOB and address grading
         if quality_scores:
             avg_quality = sum(quality_scores) / len(quality_scores)
             avg_base_score = sum(base_scores) / len(base_scores)
-            rewards[i] = avg_quality * completeness_multiplier
+            
+            # Separate weights for each component
+            quality_weight = 0.7
+            dob_weight = 0.2
+            address_weight = 0.1
+            
+            # Calculate each component separately
+            quality_component = avg_quality * quality_weight
+            
+            # DOB component
+            if dob_grading_score["overall_score"] == 0.0 and any(seed_dob):
+                dob_component = 0.0  # 0 points for missing DOB variations
+            else:
+                dob_component = dob_grading_score["overall_score"] * dob_weight
+            
+            # Address component
+            if address_grading_score["overall_score"] == 0.0 and any(seed_addresses):
+                address_component = 0.0  # 0 points for missing address variations
+            else:
+                address_component = address_grading_score["overall_score"] * address_weight
+            
+            # Final quality is sum of all components
+            final_quality = quality_component + dob_component + address_component
+            
+            rewards[i] = final_quality * completeness_multiplier
             miner_metrics["average_base_score"] = float(avg_base_score)
             miner_metrics["average_quality"] = float(avg_quality)
+            miner_metrics["dob_adjusted_quality"] = float(final_quality)
             miner_metrics["final_reward"] = float(rewards[i])
         else:
             rewards[i] = 0.0
             miner_metrics["average_quality"] = 0.0
+            miner_metrics["dob_adjusted_quality"] = 0.0
             miner_metrics["final_reward"] = 0.0
         
         # # # ADD DETAILED LOGGING HERE to debug 0.0 scores
@@ -1033,13 +1812,45 @@ def get_name_variation_rewards(
         bt.logging.info(f"Miner {uid} Base quality scores: {quality_scores}")
         bt.logging.info(f"Miner {uid} average quality: {miner_metrics['average_quality']}")
         bt.logging.info(f"Miner {uid} completeness multiplier: {miner_metrics['completeness_multiplier']}")
+        bt.logging.info(f"Miner {uid} DOB score: {miner_metrics.get('dob_grading', {}).get('overall_score', 0.0)}")
+        bt.logging.info(f"Miner {uid} Address score: {miner_metrics.get('address_grading', {}).get('overall_score', 0.0)}")
         bt.logging.info(f"Miner {uid} final Score: {miner_metrics['final_reward']}")
         detailed_metrics.append(miner_metrics)
         
     # After initial rewards are calculated, apply penalties for high similarity between miners
+    # Process seed names to remove script type suffixes for cheating detection
+    # Remove suffixes like "(latin)", "(arabic)", "(chinese)", "(cyrillic)", etc.
+    processed_seed_names = []
+    for name in seed_names:
+        if not name.endswith("(latin)"):
+            # Get the LLM-provided transliterated name for this seed name, if available
+            transliterated_name = None
+            if name in miner_metrics.get("name_metrics", {}) and "transliteration" in miner_metrics["name_metrics"][name]:
+                transliterated_name = miner_metrics["name_metrics"][name]["transliteration"].get("transliterated_name")
+            if transliterated_name:
+                processed_seed_names.append(transliterated_name)
+            else:
+                processed_seed_names.append(name)
+            continue
+        # Check for script type suffixes in parentheses at the end
+        if "(" in name and name.endswith(")"):
+            # Find the last opening parenthesis
+            last_paren = name.rfind("(")
+            if last_paren > 0:
+                # Remove the suffix and any trailing whitespace
+                processed_name = name[:last_paren].rstrip()
+                processed_seed_names.append(processed_name)
+            else:
+                processed_seed_names.append(name)
+        else:
+            # No suffix, use as-is
+            processed_seed_names.append(name)
+    
+    bt.logging.info(f"Processed seed names for cheating detection: {processed_seed_names}")
+    
     try:
         rewards, detailed_metrics = _calculate_similarity_and_penalties(
-            responses, uids, seed_names, detailed_metrics, rewards
+            responses, uids, processed_seed_names, detailed_metrics, rewards
         )
     except Exception as e:
         bt.logging.error(f"Error in similarity and penalty calculation: {str(e)}")
