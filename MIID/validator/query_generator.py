@@ -1261,7 +1261,7 @@ class QueryGenerator:
             # for each validation round to test miners on various tasks
             
             # 1. Determine variation count (between 5-DEFAULT_VARIATION_COUNT)
-            variation_count = random.randint(5, DEFAULT_VARIATION_COUNT)
+            variation_count = random.randint(6, DEFAULT_VARIATION_COUNT)
             
             # 2. Set up phonetic similarity distribution with weighted selection
             phonetic_configs_with_weights = [
