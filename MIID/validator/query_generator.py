@@ -934,7 +934,7 @@ class QueryGenerator:
         example_parts = [
             f"Generate {variation_count} variations of {{name}}",
             f"ensuring phonetic similarity ({phonetic_spec}) and orthographic similarity ({orthographic_spec})",
-            f"Approximately {rule_percentage}% of the total variations should follow these rule-based transformations: {rule_template}"
+            f"Approximately {rule_percentage}% of the total {variation_count} variations should follow these rule-based transformations: {rule_template}"
         ]
 
         example_format = ". ".join(example_parts) + "."
@@ -957,6 +957,8 @@ class QueryGenerator:
         2. Format as a natural language request that explicitly states all requirements.
         3. Include both the similarity requirements (phonetic and orthographic) AND the rule-based transformation requirements in the query.
         4. Do not write any SQL queries or any code. Return text only.
+        5. Do NOT calculate totals, percentages, or counts beyond what is explicitly given.
+        6. Do NOT add extra rules, suffixes, prefixes, or transformations not listed in the given rule set.
         
         CRITICAL: Return ONLY the query template text. Do not include any explanations, analysis, or commentary about the query. Do not say "this query meets requirements" or similar phrases. Just return the actual query template that miners will receive.
         
