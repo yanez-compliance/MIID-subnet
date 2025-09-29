@@ -31,8 +31,8 @@ import ollama
 from datetime import datetime, timedelta
 import re
 import requests
-import pycountry
 from unidecode import unidecode
+import geonamescache
 
 # Import rule_evaluator for rule-based compliance checking
 from MIID.validator.rule_evaluator import evaluate_rule_compliance
@@ -195,6 +195,8 @@ def looks_like_address(address: str) -> bool:
     address = address.strip().lower()
     if len(address) < 10:
         return False
+    if len(address) > 200:  # maximum length check
+        return False
     if re.match(r"^[^a-zA-Z]*$", address):  # no letters at all
         return False
     if len(set(address)) < 5:  # all chars basically the same
@@ -204,10 +206,14 @@ def looks_like_address(address: str) -> bool:
     if not re.search(r"\d", address):
         return False
     
-    # Contains common address words
-    common_words = ["st", "street", "rd", "road", "ave", "avenue", "blvd", "drive", "ln", "lane", "plaza", "city"]
-    if not any(word in address for word in common_words):
-        return False
+    # # Contains common address words or patterns
+    # common_words = ["st", "street", "rd", "road", "ave", "avenue", "blvd", "boulevard", "drive", "ln", "lane", "plaza", "city", "platz", "straße", "straße", "way", "place", "square", "allee", "allee", "gasse", "gasse"]
+    # # Also check for common patterns like "1-1-1" (Japanese addresses) or "Unter den" (German)
+    # has_common_word = any(word in address for word in common_words)
+    # has_address_pattern = re.search(r'\d+-\d+-\d+', address) or re.search(r'unter den|marienplatz|champs|place de', address)
+    
+    # if not (has_common_word or has_address_pattern):
+    #     return False
     
     return True
 
@@ -251,6 +257,163 @@ def validate_addresses(addresses):
             bad.append(addr)
     
     return good, bad, checked
+
+
+def extract_city_country(address: str) -> tuple:
+    """
+    Extract city and country from an address.
+    Country is always the last part.
+    City is the last part (before country) that doesn't contain numbers.
+    
+    Examples:
+    - "115 New Cavendish Street, London W1T 5DU, United Kingdom" -> ("London", "United Kingdom")
+    - "223 William Street, Melbourne VIC 3000, Australia" -> ("Melbourne", "Australia")
+    - "Rosenthaler Straße 1, 10119 Berlin, Germany" -> ("Berlin", "Germany")
+    - "3 Upper Alma Road, Rosebank, Cape Town, 7700, South Africa" -> ("Cape Town", "South Africa")
+    
+    Args:
+        address: The address to extract from
+        
+    Returns:
+        Tuple of (city, country) - both strings, empty if not found
+    """
+    if not address:
+        return "", ""
+
+    address = address.lower()
+    
+    parts = [p.strip() for p in address.split(",")]
+    if len(parts) < 2:
+        return "", ""
+    
+    country = parts[-1]
+
+    # Check second-to-last, then third-to-last if needed
+    for i in range(2, len(parts) + 1):
+        candidate_index = -i
+        if abs(candidate_index) > len(parts):
+            break
+        
+        candidate_part = parts[candidate_index]
+        words = candidate_part.split()
+        
+        # Filter: remove words with numbers and 2-letter words
+        valid_words = [
+            w for w in words
+            if not any(ch.isdigit() for ch in w) and len(w) > 2
+        ]
+        
+        if valid_words:
+            # Take only the last 2 words at most
+            city = " ".join(valid_words[-2:])
+            return city, country
+
+    return "", country
+
+def city_in_country(city_name: str, country_name: str) -> bool:
+    """
+    Check if a city is actually in the specified country using geonamescache.
+    
+    Args:
+        city_name: Name of the city
+        country_name: Name of the country
+        
+    Returns:
+        True if city is in country, False otherwise
+    """
+    if not city_name or not country_name:
+        return False
+    
+    try:
+        gc = geonamescache.GeonamesCache()
+        cities = gc.get_cities()
+        countries = gc.get_countries()
+        
+        city_name_lower = city_name.lower()
+        country_name_lower = country_name.lower()
+        
+        # Find country code
+        country_code = None
+        for code, data in countries.items():
+            if data.get('name', '').lower() == country_name_lower:
+                country_code = code
+                break
+        
+        if not country_code:
+            return False
+        
+        # Only check cities that are actually in the specified country
+        city_words = city_name_lower.split()
+        
+        for city_id, city_data in cities.items():
+            # Skip cities not in the target country
+            if city_data.get("countrycode", "") != country_code:
+                continue
+                
+            city_data_name = city_data.get("name", "").lower()
+            
+            # Check exact match first
+            if city_data_name == city_name_lower:
+                return True
+            # Check first word match
+            elif len(city_words) >= 2 and city_data_name.startswith(city_words[0]):
+                return True
+            # Check second word match
+            elif len(city_words) >= 2 and city_words[1] in city_data_name:
+                return True
+        
+        return False
+        
+    except Exception as e:
+        bt.logging.warning(f"Error checking city '{city_name}' in country '{country_name}': {str(e)}")
+        return False
+
+def validate_address_region(generated_address: str, seed_address: str) -> bool:
+    """
+    Validate that generated address has correct region from seed address.
+    
+    Args:
+        generated_address: The generated address to validate
+        seed_address: The seed address to match against
+        
+    Returns:
+        True if region is valid, False otherwise
+    """
+    if not generated_address or not seed_address:
+        return False
+    
+    # Extract city and country from both addresses
+    gen_city, gen_country = extract_city_country(generated_address)
+    seed_city, seed_country = seed_address.lower(), seed_address.lower()
+    
+    # Check if either city or country matches
+    city_match = False
+    if gen_city and seed_city:
+        gen_words = gen_city.split()
+        
+        # Check exact match first
+        if gen_city == seed_city:
+            city_match = True
+        # Check first word match
+        elif len(gen_words) >= 1 and gen_words[0] in seed_city:
+            city_match = True
+        # Check second word match
+        elif len(gen_words) >= 2 and gen_words[1] in seed_city:
+            city_match = True
+        # Check both words together
+        elif len(gen_words) >= 2 and gen_words[0] in seed_city and gen_words[1] in seed_city:
+            city_match = True
+    
+    country_match = gen_country and seed_country and gen_country == seed_country
+    
+    if not (city_match or country_match):
+        return False
+    
+    # If we have both city and country, validate city is in country
+    if gen_city and gen_country:
+        return city_in_country(gen_city, gen_country)
+    
+    return True
 
 def transliterate_name_with_llm(original_name: str, model_name: str = "tinyllama:latest") -> str:
     """
@@ -1396,18 +1559,22 @@ def _grade_dob_variations(self, variations: Dict[str, List[List[str]]], seed_dob
     }
 
 def _grade_address_variations(self, variations: Dict[str, List[List[str]]], seed_addresses: List[str], miner_metrics: Dict[str, Any]) -> Dict[str, Any]:
-    """Grade address variations - check all with heuristics, one random with API."""
+    """Grade address variations - check all with heuristics, one random with API, and region validation."""
     if not seed_addresses or not any(seed_addresses):
         return {"overall_score": 1.0}
     
-    # Collect all addresses
+    # Collect all addresses with their corresponding seed addresses
     all_addresses = []
+    address_seed_mapping = []
     for name_idx, name in enumerate(variations.keys()):
         if name in variations and len(variations[name]) >= 3 and name_idx < len(seed_addresses):
             address_variations = variations[name][2]  # Address variations at index 2
             if address_variations and seed_addresses[name_idx]:
                 valid_addrs = [addr for addr in address_variations if addr and addr.strip()]
                 all_addresses.extend(valid_addrs)
+                # Map each address to its corresponding seed address
+                seed_addr = seed_addresses[name_idx]
+                address_seed_mapping.extend([seed_addr] * len(valid_addrs))
     
     if not all_addresses:
         return {"overall_score": 0.0}
@@ -1416,23 +1583,50 @@ def _grade_address_variations(self, variations: Dict[str, List[List[str]]], seed
     heuristic_good = [addr for addr in all_addresses if looks_like_address(addr)]
     heuristic_perfect = len(heuristic_good) == len(all_addresses)
     
-    # Check one random address with API - must pass
+    # Strict validation in order:
+    # 1. If looks_like_address is false -> return 0
+    # 2. If country or city are not in seed -> return 0  
+    # 3. If API passes -> full score
+    
+    region_matches = 0
+    api_validated_addresses = []  # Store addresses that passed first 2 checks
+    
+    for addr, seed_addr in zip(all_addresses, address_seed_mapping):
+        # Step 1: Check if looks like address
+        if not looks_like_address(addr):
+            continue  # Skip this address (counts as 0)
+        
+        # Step 2: Check if country or city matches seed
+        if not validate_address_region(addr, seed_addr):
+            continue  # Skip this address (counts as 0)
+        
+        # If we get here, address passed first 2 checks
+        api_validated_addresses.append(addr)
+        region_matches += 1
+    
+    # Step 3: Only call API for addresses that passed first 2 checks
     api_result = False
-    if heuristic_good:
-        random_addr = random.choice(heuristic_good)
+    if api_validated_addresses:
+        random_addr = random.choice(api_validated_addresses)
         api_result = check_with_nominatim(random_addr)
     
-    # Scoring with timeout handling
+    # All-or-nothing scoring based on API result
     if not heuristic_perfect:
         final_score = 0.0  # Heuristics failed
     elif api_result == "TIMEOUT":
         final_score = 0.3  # 30% for timeout
     elif api_result == True:
-        final_score = 1.0  # Perfect
+        final_score = 1.0  # Perfect - all addresses passed and API validated
     else:
         final_score = 0.0  # API failed
     
-    return {"overall_score": final_score}
+    return {
+        "overall_score": final_score,
+        "heuristic_perfect": heuristic_perfect,
+        "api_result": api_result,
+        "region_matches": region_matches,
+        "total_addresses": len(all_addresses)
+    }
 
 
 def get_name_variation_rewards(
