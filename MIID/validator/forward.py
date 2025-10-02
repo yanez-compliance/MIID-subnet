@@ -42,6 +42,7 @@ import json
 import os
 import random
 import asyncio
+import numpy as np
 from typing import List, Dict, Any, Tuple
 from datetime import datetime
 
@@ -350,9 +351,7 @@ async def forward(self):
                 "identity": {
                     "name": identity['name'],
                     "dob": identity['dob'],
-                    "address": identity['address'],
-                    "label": identity['label'],
-                    "script": identity.get('script', 'unknown')
+                    "address": identity['address']
                 }
             }
         except Exception as e:
