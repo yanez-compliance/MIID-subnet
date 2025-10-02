@@ -1912,15 +1912,31 @@ def get_name_variation_rewards(
                 while len(vars_list) < 3:
                     vars_list.append([])
         
-        # Penalty for too many variations per name
+        # Penalty for too many variations per name, DOB, and addresses
         for name, vars_list in variations.items():
             
             if variation_count > 0:
                 allowed_with_grace = int(variation_count * 1.2)  # 20% grace, rounded down
-                if len(vars_list[0]) > allowed_with_grace:  # Only check names for variation count
+                
+                # Check names for variation count
+                if len(vars_list[0]) > allowed_with_grace:
                     too_many = len(vars_list[0]) - allowed_with_grace
                     penalty_too_many = too_many * 0.05  # 5% per extra
-                    # bt.logging.info(f"Too many variations for {name}: {too_many} extra → penalty {penalty_too_many}")
+                    # bt.logging.info(f"Too many name variations for {name}: {too_many} extra → penalty {penalty_too_many}")
+                    extra_names_penalty += penalty_too_many
+                
+                # Check DOB for variation count
+                if len(vars_list) > 1 and len(vars_list[1]) > allowed_with_grace:
+                    too_many = len(vars_list[1]) - allowed_with_grace
+                    penalty_too_many = too_many * 0.05  # 5% per extra
+                    # bt.logging.info(f"Too many DOB variations for {name}: {too_many} extra → penalty {penalty_too_many}")
+                    extra_names_penalty += penalty_too_many
+                
+                # Check addresses for variation count
+                if len(vars_list) > 2 and len(vars_list[2]) > allowed_with_grace:
+                    too_many = len(vars_list[2]) - allowed_with_grace
+                    penalty_too_many = too_many * 0.05  # 5% per extra
+                    # bt.logging.info(f"Too many address variations for {name}: {too_many} extra → penalty {penalty_too_many}")
                     extra_names_penalty += penalty_too_many
         
             # Normalize DOB variations for duplicate detection
@@ -1984,8 +2000,56 @@ def get_name_variation_rewards(
             miner_metrics["penalties"]["missing_names"] = float(missing_penalty)
             miner_metrics["missing_names"] = list(missing_names)
         
+        # Calculate penalty for insufficient address variations
+        insufficient_addresses_penalty = 0.0
+        insufficient_addresses = []
+        
+        if variation_count > 0:
+            min_required = max(1, int(variation_count * 0.8))  # At least 80% of expected variations
+            
+            for name, vars_list in variations.items():
+                if len(vars_list) > 2:  # Check if address list exists
+                    address_count = len([addr for addr in vars_list[2] if addr])  # Count non-empty addresses
+                    if address_count < min_required:
+                        insufficient_count = min_required - address_count
+                        insufficient_addresses.append(f"{name}: {address_count}/{min_required}")
+                        # 10% penalty per missing address variation, up to 50% max per name
+                        penalty_per_name = min(0.5, insufficient_count * 0.1)
+                        insufficient_addresses_penalty += penalty_per_name
+                        bt.logging.warning(f"Miner {uid} insufficient address variations for {name}: {address_count}/{min_required} → penalty {penalty_per_name}")
+        
+        # Cap the insufficient addresses penalty
+        insufficient_addresses_penalty = min(insufficient_addresses_penalty, 0.7)  # Max 70% penalty
+        miner_metrics["penalties"]["insufficient_addresses"] = float(insufficient_addresses_penalty)
+        if insufficient_addresses:
+            miner_metrics["insufficient_addresses"] = insufficient_addresses
+        
+        # Calculate penalty for insufficient DOB variations
+        insufficient_dob_penalty = 0.0
+        insufficient_dob = []
+        
+        if variation_count > 0:
+            min_required = max(1, int(variation_count * 0.8))  # At least 80% of expected variations
+            
+            for name, vars_list in variations.items():
+                if len(vars_list) > 1:  # Check if DOB list exists
+                    dob_count = len([dob for dob in vars_list[1] if dob])  # Count non-empty DOBs
+                    if dob_count < min_required:
+                        insufficient_count = min_required - dob_count
+                        insufficient_dob.append(f"{name}: {dob_count}/{min_required}")
+                        # 10% penalty per missing DOB variation, up to 50% max per name
+                        penalty_per_name = min(0.5, insufficient_count * 0.1)
+                        insufficient_dob_penalty += penalty_per_name
+                        bt.logging.warning(f"Miner {uid} insufficient DOB variations for {name}: {dob_count}/{min_required} → penalty {penalty_per_name}")
+        
+        # Cap the insufficient DOB penalty
+        insufficient_dob_penalty = min(insufficient_dob_penalty, 0.7)  # Max 70% penalty
+        miner_metrics["penalties"]["insufficient_dob"] = float(insufficient_dob_penalty)
+        if insufficient_dob:
+            miner_metrics["insufficient_dob"] = insufficient_dob
+        
         # Calculate total penalty and completeness multiplier
-        total_penalty = min(0.9, miner_metrics["penalties"]["extra_names"] + miner_metrics["penalties"]["missing_names"])
+        total_penalty = min(0.9, miner_metrics["penalties"]["extra_names"] + miner_metrics["penalties"]["missing_names"] + miner_metrics["penalties"]["insufficient_addresses"] + miner_metrics["penalties"]["insufficient_dob"])
         completeness_multiplier = max(0.1, 1.0 - total_penalty)
         miner_metrics["penalties"]["total_penalty"] = float(total_penalty)
         miner_metrics["completeness_multiplier"] = float(completeness_multiplier)
@@ -2013,7 +2077,9 @@ def get_name_variation_rewards(
                     base_name = name[:-7].rstrip()
                 else:
                     base_name = name
-                
+
+            # Convert base name to lowercase, only grading lowercase names
+            base_name = base_name.lower()
             
             # Get variations for this name (use original name as key)
             # variations[name] is a list of [name_var, dob_var, address_var] arrays
