@@ -212,11 +212,11 @@ class Miner(BaseMinerNeuron):
         """
         # Generate a unique run ID using timestamp
         run_id = int(time.time())
-        bt.logging.info(f"Starting run {run_id} for {len(synapse.names)} names")
+        bt.logging.info(f"Starting run {run_id} for {len(synapse.identity)} names")
         
         # Get timeout from synapse (default to 120s if not specified)
         timeout = getattr(synapse, 'timeout', 120.0)
-        bt.logging.info(f"Request timeout: {timeout:.1f}s for {len(synapse.names)} names")
+        bt.logging.info(f"Request timeout: {timeout:.1f}s for {len(synapse.identity)} names")
         start_time = time.time()
         
         # Create a run-specific directory
@@ -297,7 +297,7 @@ class Miner(BaseMinerNeuron):
         total_time = time.time() - start_time
         bt.logging.info(
             f"Request completed in {total_time:.2f}s of {timeout:.1f}s allowed. "
-            f"Processed {len(processed_names)}/{len(synapse.names)} names."
+            f"Processed {len(processed_names)}/{len(synapse.identity)} names."
         )
         
         bt.logging.info(f"======== SYNAPSE VARIATIONS===============================================: {synapse.variations}")
