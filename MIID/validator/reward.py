@@ -1591,11 +1591,17 @@ def _grade_dob_variations(variations: Dict[str, List[List[str]]], seed_dob: List
             name_score = len(name_found_ranges) / total_ranges if total_ranges > 0 else 0.0
             name_scores.append(name_score)
             
-            # Store category classifications
-            detailed_breakdown["category_classifications"][name] = categories
+            # Store category classifications and score
+            detailed_breakdown["category_classifications"][name] = {
+                "categories": categories,
+                "score": name_score
+            }
                 
         except ValueError:
-            detailed_breakdown["category_classifications"][name] = {"error": "Invalid seed DOB format"}
+            detailed_breakdown["category_classifications"][name] = {
+                "error": "Invalid seed DOB format",
+                "score": 0.0
+            }
             # Add 0 score for invalid seed DOB
             name_scores.append(0.0)
     
