@@ -1486,13 +1486,12 @@ def _calculate_similarity_and_penalties(responses: list, uids: list, seed_names:
 def _grade_dob_variations(variations: Dict[str, List[List[str]]], seed_dob: List[str], miner_metrics: Dict[str, Any]) -> Dict[str, Any]:
     """
     Grade DOB variations based on the required criteria.
-    Checks if variations fall within the required day ranges.
+    Each seed name gets its own score based on variations found, then scores are averaged.
     """
     
     # Required day ranges (max days for each category)
     ranges = [1, 3, 30, 90, 365]  # ±1, ±3, ±30, ±90, ±365 days
-    found_ranges = set()
-    total_variations = 0
+    total_ranges = len(ranges) + 1  # +1 for year_month
     
     # Store detailed breakdown in results (do the work once)
     detailed_breakdown = {
@@ -1500,6 +1499,10 @@ def _grade_dob_variations(variations: Dict[str, List[List[str]]], seed_dob: List
         "variations_by_name": {},
         "category_classifications": {}
     }
+    
+    # Track individual scores for each name
+    name_scores = []
+    all_found_ranges = set()
     
     for name_idx, name in enumerate(variations.keys()):
         if name not in variations or len(variations[name]) < 1 or name_idx >= len(seed_dob):
@@ -1527,9 +1530,8 @@ def _grade_dob_variations(variations: Dict[str, List[List[str]]], seed_dob: List
             elif dob_var:
                 unique_dobs.add(dob_var)
         
-        total_variations += len(dob_variations)
-        
         # Category classification for this name (do the work once)
+        name_found_ranges = set()
         try:
             seed_date = datetime.strptime(seed_dob[name_idx], "%Y-%m-%d")
             categories = {}
@@ -1546,19 +1548,24 @@ def _grade_dob_variations(variations: Dict[str, List[List[str]]], seed_dob: List
                     # Classify this variation
                     if day_diff <= 1:
                         category = "±1 day"
-                        found_ranges.add(1)
+                        name_found_ranges.add(1)
+                        all_found_ranges.add(1)
                     elif day_diff <= 3:
                         category = "±3 days"
-                        found_ranges.add(3)
+                        name_found_ranges.add(3)
+                        all_found_ranges.add(3)
                     elif day_diff <= 30:
                         category = "±30 days"
-                        found_ranges.add(30)
+                        name_found_ranges.add(30)
+                        all_found_ranges.add(30)
                     elif day_diff <= 90:
                         category = "±90 days"
-                        found_ranges.add(90)
+                        name_found_ranges.add(90)
+                        all_found_ranges.add(90)
                     elif day_diff <= 365:
                         category = "±365 days"
-                        found_ranges.add(365)
+                        name_found_ranges.add(365)
+                        all_found_ranges.add(365)
                     else:
                         category = "Outside range"
                         
@@ -1569,7 +1576,8 @@ def _grade_dob_variations(variations: Dict[str, List[List[str]]], seed_dob: List
                         if (seed_date.year == year_month.year and 
                             seed_date.month == year_month.month):
                             category = "Year+Month only"
-                            found_ranges.add("year_month")
+                            name_found_ranges.add("year_month")
+                            all_found_ranges.add("year_month")
                         else:
                             category = "Invalid year-month"
                     except ValueError:
@@ -1579,19 +1587,27 @@ def _grade_dob_variations(variations: Dict[str, List[List[str]]], seed_dob: List
                     categories[category] = []
                 categories[category].append(dob_var)
             
+            # Calculate individual score for this name based on variations found
+            name_score = len(name_found_ranges) / total_ranges if total_ranges > 0 else 0.0
+            name_scores.append(name_score)
+            
             # Store category classifications
             detailed_breakdown["category_classifications"][name] = categories
                 
         except ValueError:
             detailed_breakdown["category_classifications"][name] = {"error": "Invalid seed DOB format"}
+            # Add 0 score for invalid seed DOB
+            name_scores.append(0.0)
     
-    # Calculate base score based on found ranges
-    total_ranges = len(ranges) + 1  # +1 for year_month
-    base_score = len(found_ranges) / total_ranges if total_ranges > 0 else 0.0
+    # Calculate overall score as average of individual name scores
+    if name_scores:
+        overall_score = sum(name_scores) / len(name_scores)
+    else:
+        overall_score = 0.0
     
     return {
-        "overall_score": base_score,
-        "found_ranges": list(found_ranges),
+        "overall_score": overall_score,
+        "found_ranges": list(all_found_ranges),
         "total_ranges": total_ranges,
         "detailed_breakdown": detailed_breakdown
     }
