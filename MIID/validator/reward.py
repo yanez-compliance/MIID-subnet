@@ -1304,7 +1304,15 @@ def _calculate_similarity_and_penalties(responses: list, uids: list, seed_names:
     bt.logging.info(f"{'='*60}")
     bt.logging.info(f"Analyzing {len(uids)} miners for cheating patterns...")
     
-    cheating_results = detect_cheating_patterns(responses, uids, rewards, seed_names)
+    # Convert IdentitySynapse objects to dictionaries for cheat detection
+    response_dicts = []
+    for response in responses:
+        if hasattr(response, 'variations') and response.variations:
+            response_dicts.append(response.variations)
+        else:
+            response_dicts.append({})
+    
+    cheating_results = detect_cheating_patterns(response_dicts, uids, rewards, seed_names)
 
     duplication_penalties = cheating_results["duplication_penalties"]
     signature_penalties = cheating_results["signature_penalties"]
@@ -1380,6 +1388,10 @@ def _calculate_similarity_and_penalties(responses: list, uids: list, seed_names:
         if special_char_offenders:
             bt.logging.info(f"  • Special character abuse: {len(special_char_offenders)} miners")
             bt.logging.info(f"    Miners: {', '.join(str(uid) for uid in special_char_offenders)}")
+            
+        if address_duplication_offenders:
+            bt.logging.info(f"  • Address duplication: {len(address_duplication_offenders)} miners")
+            bt.logging.info(f"    Miners: {', '.join(str(uid) for uid in address_duplication_offenders)}")
             
         bt.logging.info(f"\n⚠️  PENALTY BREAKDOWN:")
         for uid, total_penalty, penalties in penalized_miners:
@@ -1471,7 +1483,7 @@ def _calculate_similarity_and_penalties(responses: list, uids: list, seed_names:
     return updated_rewards, detailed_metrics
 
 
-def _grade_dob_variations(self, variations: Dict[str, List[List[str]]], seed_dob: List[str], miner_metrics: Dict[str, Any]) -> Dict[str, Any]:
+def _grade_dob_variations(variations: Dict[str, List[List[str]]], seed_dob: List[str], miner_metrics: Dict[str, Any]) -> Dict[str, Any]:
     """
     Grade DOB variations based on the required criteria.
     Checks if variations fall within the required day ranges.
@@ -1480,35 +1492,48 @@ def _grade_dob_variations(self, variations: Dict[str, List[List[str]]], seed_dob
     # Required day ranges (max days for each category)
     ranges = [1, 3, 30, 90, 365]  # ±1, ±3, ±30, ±90, ±365 days
     found_ranges = set()
-    duplicate_penalty = 0.0
     total_variations = 0
     
+    # Store detailed breakdown in results (do the work once)
+    detailed_breakdown = {
+        "seed_dobs": [],
+        "variations_by_name": {},
+        "category_classifications": {}
+    }
+    
     for name_idx, name in enumerate(variations.keys()):
-        if name not in variations or len(variations[name]) < 2 or name_idx >= len(seed_dob):
+        if name not in variations or len(variations[name]) < 1 or name_idx >= len(seed_dob):
             continue
             
-        dob_variations = variations[name][1]  # DOB variations are at index 1
-        if not dob_variations or not seed_dob[name_idx]:
+        if not seed_dob[name_idx]:
             continue
             
+        # Extract DOB variations for this name
+        all_variations = variations[name]
+        dob_variations = [var[1] for var in all_variations if len(var) > 1 and var[1]]
+        
+        if not dob_variations:
+            continue
+        
         # Check for duplicates within this name's DOB variations
         unique_dobs = set()
         duplicates_in_name = 0
+        duplicate_details = []
+        
         for dob_var in dob_variations:
             if dob_var and dob_var in unique_dobs:
                 duplicates_in_name += 1
+                duplicate_details.append(dob_var)
             elif dob_var:
                 unique_dobs.add(dob_var)
         
-        # Apply penalty for duplicates (5% per duplicate)
-        duplicate_penalty += duplicates_in_name * 0.05
         total_variations += len(dob_variations)
-            
+        
+        # Category classification for this name (do the work once)
         try:
-            # Parse seed DOB
             seed_date = datetime.strptime(seed_dob[name_idx], "%Y-%m-%d")
+            categories = {}
             
-            # Check each DOB variation
             for dob_var in dob_variations:
                 if not dob_var:
                     continue
@@ -1518,47 +1543,60 @@ def _grade_dob_variations(self, variations: Dict[str, List[List[str]]], seed_dob
                     var_date = datetime.strptime(dob_var, "%Y-%m-%d")
                     day_diff = abs((var_date - seed_date).days)
                     
-                    # Check if it falls within any required range
+                    # Classify this variation
                     if day_diff <= 1:
+                        category = "±1 day"
                         found_ranges.add(1)
                     elif day_diff <= 3:
+                        category = "±3 days"
                         found_ranges.add(3)
                     elif day_diff <= 30:
+                        category = "±30 days"
                         found_ranges.add(30)
                     elif day_diff <= 90:
+                        category = "±90 days"
                         found_ranges.add(90)
                     elif day_diff <= 365:
+                        category = "±365 days"
                         found_ranges.add(365)
+                    else:
+                        category = "Outside range"
                         
                 except ValueError:
-                    # Try year-month only format (e.g., "1990-05")
+                    # Try year-month only format
                     try:
                         year_month = datetime.strptime(dob_var, "%Y-%m")
                         if (seed_date.year == year_month.year and 
                             seed_date.month == year_month.month):
+                            category = "Year+Month only"
                             found_ranges.add("year_month")
+                        else:
+                            category = "Invalid year-month"
                     except ValueError:
-                        continue
-                    
+                        category = "Invalid format"
+                
+                if category not in categories:
+                    categories[category] = []
+                categories[category].append(dob_var)
+            
+            # Store category classifications
+            detailed_breakdown["category_classifications"][name] = categories
+                
         except ValueError:
-            continue
+            detailed_breakdown["category_classifications"][name] = {"error": "Invalid seed DOB format"}
     
     # Calculate base score based on found ranges
     total_ranges = len(ranges) + 1  # +1 for year_month
     base_score = len(found_ranges) / total_ranges if total_ranges > 0 else 0.0
     
-    # Apply duplicate penalty
-    final_score = max(0.0, base_score - duplicate_penalty)
-    
     return {
-        "overall_score": final_score,
-        "base_score": base_score,
-        "duplicate_penalty": duplicate_penalty,
+        "overall_score": base_score,
         "found_ranges": list(found_ranges),
-        "total_ranges": total_ranges
+        "total_ranges": total_ranges,
+        "detailed_breakdown": detailed_breakdown
     }
 
-def _grade_address_variations(self, variations: Dict[str, List[List[str]]], seed_addresses: List[str], miner_metrics: Dict[str, Any]) -> Dict[str, Any]:
+def _grade_address_variations(variations: Dict[str, List[List[str]]], seed_addresses: List[str], miner_metrics: Dict[str, Any]) -> Dict[str, Any]:
     """Grade address variations - check all with heuristics, one random with API, and region validation."""
     if not seed_addresses or not any(seed_addresses):
         return {"overall_score": 1.0}
@@ -1567,8 +1605,10 @@ def _grade_address_variations(self, variations: Dict[str, List[List[str]]], seed
     all_addresses = []
     address_seed_mapping = []
     for name_idx, name in enumerate(variations.keys()):
-        if name in variations and len(variations[name]) >= 3 and name_idx < len(seed_addresses):
-            address_variations = variations[name][2]  # Address variations at index 2
+        if name in variations and len(variations[name]) >= 1 and name_idx < len(seed_addresses):
+            # Extract address variations (index 2 of each [name_var, dob_var, address_var] array)
+            all_variations = variations[name]
+            address_variations = [var[2] for var in all_variations if len(var) > 2 and var[2]]
             if address_variations and seed_addresses[name_idx]:
                 valid_addrs = [addr for addr in address_variations if addr and addr.strip()]
                 all_addresses.extend(valid_addrs)
@@ -1579,53 +1619,154 @@ def _grade_address_variations(self, variations: Dict[str, List[List[str]]], seed
     if not all_addresses:
         return {"overall_score": 0.0}
     
-    # Check all addresses with heuristics - must be 100%
-    heuristic_good = [addr for addr in all_addresses if looks_like_address(addr)]
-    heuristic_perfect = len(heuristic_good) == len(all_addresses)
+    # Store detailed breakdown in results (do the work once)
+    address_breakdown = {
+        "seed_addresses": [],
+        "variations_by_name": {},
+        "validation_results": {},
+        "api_validation": {}
+    }
     
     # Strict validation in order:
     # 1. If looks_like_address is false -> return 0
     # 2. If country or city are not in seed -> return 0  
     # 3. If API passes -> full score
     
+    # Process each name and validate addresses (do the work once)
+    heuristic_perfect = True
     region_matches = 0
-    api_validated_addresses = []  # Store addresses that passed first 2 checks
+    api_validated_addresses = []
     
-    for addr, seed_addr in zip(all_addresses, address_seed_mapping):
-        # Step 1: Check if looks like address
-        if not looks_like_address(addr):
-            continue  # Skip this address (counts as 0)
+    for name_idx, name in enumerate(variations.keys()):
+        if name not in variations or len(variations[name]) < 1 or name_idx >= len(seed_addresses):
+            continue
+            
+        if not seed_addresses[name_idx]:
+            continue
+            
+        # Extract address variations for this name
+        all_variations = variations[name]
+        address_variations = [var[2] for var in all_variations if len(var) > 2 and var[2]]
         
-        # Step 2: Check if country or city matches seed
-        if not validate_address_region(addr, seed_addr):
-            continue  # Skip this address (counts as 0)
+        if not address_variations:
+            continue
         
-        # If we get here, address passed first 2 checks
-        api_validated_addresses.append(addr)
-        region_matches += 1
+        # Store validation results for each address (do the work once)
+        validation_results = []
+        for i, addr in enumerate(address_variations):
+            if not addr or not addr.strip():
+                validation_results.append({
+                    "address": addr,
+                    "looks_like_address": False,
+                    "region_match": False,
+                    "passed_validation": False,
+                    "status": "EMPTY/INVALID"
+                })
+                heuristic_perfect = False
+                continue
+                
+            # Step 1: Check if looks like address
+            looks_like = looks_like_address(addr)
+            
+            # Step 2: Check if country or city matches seed
+            region_match = False
+            if looks_like:
+                region_match = validate_address_region(addr, seed_addresses[name_idx])
+            
+            # Track validation results
+            passed_validation = looks_like and region_match
+            if not looks_like or not region_match:
+                heuristic_perfect = False
+            
+            if passed_validation:
+                api_validated_addresses.append(addr)
+                region_matches += 1
+            
+            validation_results.append({
+                "address": addr,
+                "looks_like_address": looks_like,
+                "region_match": region_match,
+                "passed_validation": passed_validation,
+                "status": "PASSED" if passed_validation else "FAILED"
+            })
+        
+        address_breakdown["validation_results"][name] = validation_results
     
-    # Step 3: Only call API for addresses that passed first 2 checks
-    api_result = False
-    if api_validated_addresses:
-        random_addr = random.choice(api_validated_addresses)
-        api_result = check_with_nominatim(random_addr)
-    
-    # All-or-nothing scoring based on API result
+    # If first 2 steps fail, return 0 immediately (no API call needed)
     if not heuristic_perfect:
-        final_score = 0.0  # Heuristics failed
-    elif api_result == "TIMEOUT":
-        final_score = 0.3  # 30% for timeout
+        address_breakdown["api_validation"] = {
+            "api_result": False,
+            "total_eligible_addresses": 0,
+            "api_attempts": [],
+            "reason": "Heuristic validation failed - no API call made"
+        }
+        
+        return {
+            "overall_score": 0.0,
+            "heuristic_perfect": False,
+            "api_result": False,
+            "region_matches": region_matches,
+            "total_addresses": len(all_addresses),
+            "base_score": 0.0,
+            "detailed_breakdown": address_breakdown
+        }
+    
+    # Only call API if all addresses passed first 2 checks
+    api_result = False
+    api_attempts = []
+    if api_validated_addresses:
+        # Randomly choose 2 different addresses for API validation
+        if len(api_validated_addresses) >= 2:
+            chosen_addresses = random.sample(api_validated_addresses, 2)
+        else:
+            chosen_addresses = api_validated_addresses
+        
+        # Try first address
+        first_addr = chosen_addresses[0]
+        first_result = check_with_nominatim(first_addr)
+        api_attempts.append({
+            "address": first_addr,
+            "result": first_result,
+            "attempt": 1
+        })
+        
+        if first_result == True:
+            api_result = True
+        elif len(chosen_addresses) > 1:
+            # Try second address if first failed
+            second_addr = chosen_addresses[1]
+            second_result = check_with_nominatim(second_addr)
+            api_attempts.append({
+                "address": second_addr,
+                "result": second_result,
+                "attempt": 2
+            })
+            api_result = second_result
+        else:
+            api_result = first_result
+    
+    # All-or-nothing scoring based on API result, with address duplication penalty
+    if api_result == "TIMEOUT":
+        base_score = 0.3  # 30% for timeout
     elif api_result == True:
-        final_score = 1.0  # Perfect - all addresses passed and API validated
+        base_score = 1.0  # Perfect - all addresses passed and API validated
     else:
-        final_score = 0.0  # API failed
+        base_score = 0.0  # API failed
+    
+    # Store API validation results
+    address_breakdown["api_validation"] = {
+        "api_result": api_result,
+        "total_eligible_addresses": len(api_validated_addresses),
+        "api_attempts": api_attempts
+    }
     
     return {
-        "overall_score": final_score,
+        "overall_score": base_score,
         "heuristic_perfect": heuristic_perfect,
         "api_result": api_result,
         "region_matches": region_matches,
-        "total_addresses": len(all_addresses)
+        "total_addresses": len(all_addresses),
+        "detailed_breakdown": address_breakdown
     }
 
 
@@ -1853,11 +1994,16 @@ def get_name_variation_rewards(
             else:
                 # Remove the " (latin)" suffix if present
                 if name.endswith("(latin)"):
-                    name = name[:-7].rstrip()
+                    base_name = name[:-7].rstrip()
+                else:
+                    base_name = name
                 
             
-            # Get variations for this name
-            name_variations = variations[name][0]
+            # Get variations for this name (use original name as key)
+            # variations[name] is a list of [name_var, dob_var, address_var] arrays
+            # We need to extract just the name variations (index 0 of each array)
+            all_variations = variations[name]
+            name_variations = [var[0] for var in all_variations if len(var) > 0 and var[0]]
             name_metrics = {
                 "variations": [],
                 "quality_score": 0.0,
@@ -1871,7 +2017,7 @@ def get_name_variation_rewards(
             # Calculate quality score
             try:
                 quality, base_score, name_detailed_metrics = calculate_variation_quality(
-                    name,
+                    base_name,
                     name_variations,
                     phonetic_similarity=phonetic_similarity,
                     orthographic_similarity=orthographic_similarity,
@@ -1880,13 +2026,13 @@ def get_name_variation_rewards(
                 )
                 quality_scores.append(quality)
                 base_scores.append(base_score)
-                miner_metrics["name_metrics"][name] = name_detailed_metrics
+                miner_metrics["name_metrics"][base_name] = name_detailed_metrics
                 
                 # Extract rule compliance metrics if available
                 if rule_based and "rule_compliance" in name_detailed_metrics:
-                    miner_metrics["rule_compliance"]["by_name"][name] = name_detailed_metrics["rule_compliance"]
+                    miner_metrics["rule_compliance"]["by_name"][base_name] = name_detailed_metrics["rule_compliance"]
             except Exception as e:
-                bt.logging.error(f"Error calculating quality for miner {uid}, name '{name}': {str(e)}")
+                bt.logging.error(f"Error calculating quality for miner {uid}, name '{base_name}': {str(e)}")
                 traceback.print_exc()
 
         # Process each non-Latin seed name using phonetic-only scoring with LLM transliteration
@@ -1898,7 +2044,10 @@ def get_name_variation_rewards(
                 continue
                 
             # Get variations for this name
-            name_variations = variations[name][0]
+            # variations[name] is a list of [name_var, dob_var, address_var] arrays
+            # We need to extract just the name variations (index 0 of each array)
+            all_variations = variations[name]
+            name_variations = [var[0] for var in all_variations if len(var) > 0 and var[0]]
             
             # Use LLM to transliterate the non-Latin name to Latin script
             bt.logging.info(f"Transliterating non-Latin name: '{name}'")
@@ -1942,11 +2091,11 @@ def get_name_variation_rewards(
                 #bt.logging.info(f"Overall rule compliance score: {miner_metrics['rule_compliance']['overall_score']:.3f}")
         
         # Grade DOB variations before final reward calculation
-        dob_grading_score = self._grade_dob_variations(variations, seed_dob, miner_metrics)
+        dob_grading_score = _grade_dob_variations(variations, seed_dob, miner_metrics)
         miner_metrics["dob_grading"] = dob_grading_score
         
         # Grade address variations before final reward calculation
-        address_grading_score = self._grade_address_variations(variations, seed_addresses, miner_metrics)
+        address_grading_score = _grade_address_variations(variations, seed_addresses, miner_metrics)
         miner_metrics["address_grading"] = address_grading_score
         
         # Calculate final reward incorporating DOB and address grading
@@ -1955,9 +2104,9 @@ def get_name_variation_rewards(
             avg_base_score = sum(base_scores) / len(base_scores)
             
             # Separate weights for each component
-            quality_weight = 0.6
+            quality_weight = 0.7
             dob_weight = 0.1
-            address_weight = 0.3
+            address_weight = 0.2
             
             # Calculate each component separately
             quality_component = avg_quality * quality_weight
