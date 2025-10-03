@@ -1369,18 +1369,29 @@ class QueryGenerator:
 
             # 1. Add one positive sample from transliteration list with script annotation
             if self.sanctioned_transliteration and positive_sample_count > 0:
-                person = random.choice(self.sanctioned_transliteration)
-                first_name = str(person.get("FirstName", "")).strip()
-                last_name = str(person.get("LastName", "")).strip()
-                dob = str(person.get("DOB", "")).strip()
-                address = str(person.get("Country_Residence", ""))
-                script = str(person.get("Script", "latin")).strip()
-                if first_name and last_name:
-                    full_name = f"{first_name} {last_name} ({script})"
-                    if full_name not in seen_names:
-                        seed_identities_with_labels.append({"name": full_name, "dob": dob, "address": address, "label": "positive", "script": script})
-                        seen_names.add(full_name)
-                        # bt.logging.info(f"Added transliterated positive sample: {full_name}")
+                max_attempts = 50  # Limit attempts to avoid infinite loops
+                attempts = 0
+                while attempts < max_attempts:
+                    person = random.choice(self.sanctioned_transliteration)
+                    first_name = str(person.get("FirstName", "")).strip()
+                    last_name = str(person.get("LastName", "")).strip()
+                    dob = str(person.get("DOB", "")).strip()
+                    address = str(person.get("Country_Residence", ""))
+                    script = str(person.get("Script", "latin")).strip()
+                    
+                    # Skip if first_name or last_name contains spaces (multi-part names)
+                    if " " in first_name or " " in last_name:
+                        attempts += 1
+                        continue
+                    
+                    if first_name and last_name:
+                        full_name = f"{first_name} {last_name} ({script})"
+                        if full_name not in seen_names:
+                            seed_identities_with_labels.append({"name": full_name, "dob": dob, "address": address, "label": "positive", "script": script})
+                            seen_names.add(full_name)
+                            # bt.logging.info(f"Added transliterated positive sample: {full_name}")
+                            break
+                    attempts += 1
 
             # 2. Add remaining positive samples from main sanctioned list (Latin script)
             remaining_positives = positive_sample_count - len([n for n in seed_identities_with_labels if isinstance(n, dict) and n.get("label") == "positive"])
@@ -1398,6 +1409,12 @@ class QueryGenerator:
                     address = str(person.get("Country_Residence", ""))
                     # All main list names are Latin script
                     script = "latin"
+                    
+                    # Skip if first_name or last_name contains spaces (multi-part names)
+                    if " " in first_name or " " in last_name:
+                        attempts += 1
+                        continue
+                    
                     if first_name and last_name:
                         full_name = f"{first_name} {last_name} ({script})"
                         if full_name not in seen_names:
