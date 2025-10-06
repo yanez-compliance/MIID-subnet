@@ -56,58 +56,6 @@ from MIID.validator.query_generator import QueryGenerator
 # Import your new upload_data function here
 from MIID.utils.misc import upload_data
 
-def normalize_variations_format(variations: Dict[str, Any]) -> Dict[str, List[List[str]]]:
-    """
-    Normalize variations to the new format [name, dob, address] arrays.
-    
-    Handles both old format (list of strings) and new format (list of [name, dob, address] arrays).
-    
-    Args:
-        variations: Dictionary mapping names to their variations
-        
-    Returns:
-        Dictionary with normalized variations in the format:
-        {
-            "name": [
-                ["name_var", "dob_var", "address_var"],
-                ["name_var", "dob_var", "address_var"],
-                ...
-            ]
-        }
-    """
-    if not variations:
-        return {}
-        
-    normalized = {}
-    
-    for name, vars_list in variations.items():
-        if not vars_list:
-            normalized[name] = []
-            continue
-            
-        normalized_vars = []
-        
-        for var in vars_list:
-            if isinstance(var, (list, tuple)) and len(var) >= 3:
-                # New format: [name, dob, address] or longer
-                normalized_vars.append([str(var[0]) if var[0] else "", 
-                                      str(var[1]) if len(var) > 1 and var[1] else "", 
-                                      str(var[2]) if len(var) > 2 and var[2] else ""])
-            elif isinstance(var, (list, tuple)) and len(var) < 3:
-                # Partial new format: pad with empty strings
-                padded_var = [str(var[0]) if var[0] else ""]
-                while len(padded_var) < 3:
-                    padded_var.append("")
-                normalized_vars.append(padded_var)
-            else:
-                # Old format: just a string variation
-                # We'll use the original name as the base and create empty DOB/address
-                normalized_vars.append([str(var) if var else "", "", ""])
-        
-        normalized[name] = normalized_vars
-    
-    return normalized
-
 EPOCH_MIN_TIME = 360  # seconds
 MIID_SERVER = "http://52.44.186.20:5000/upload_data" ## MIID server
 
@@ -162,12 +110,11 @@ async def dendrite_with_retries(dendrite: bt.dendrite, axons: list, synapse: Ide
                     process_time = None
                         
             if isinstance(response, dict):
-                # Got the variations dictionary directly - normalize to new format
-                normalized_variations = normalize_variations_format(response)
+                # Got the variations dictionary directly
                 complete_response = IdentitySynapse(
                     identity=synapse.identity,
                     query_template=synapse.query_template,
-                    variations=normalized_variations,
+                    variations=response,
                     process_time=process_time
                 )
                 res[idx[i]] = complete_response
@@ -188,8 +135,6 @@ async def dendrite_with_retries(dendrite: bt.dendrite, axons: list, synapse: Ide
             else:
                 # If the response has variations attribute, treat it as a valid response
                 if hasattr(response, 'variations'):
-                    if response.variations:
-                        response.variations = normalize_variations_format(response.variations)
                     response.process_time = process_time  # <-- attach it
                     res[idx[i]] = response
                 else:
