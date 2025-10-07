@@ -2145,7 +2145,7 @@ def get_name_variation_rewards(
             
             # Use LLM to transliterate the non-Latin name to Latin script
             bt.logging.info(f"Transliterating non-Latin name: '{name}'")
-            transliterated_name = transliterate_name_with_llm(name)
+            transliterated_name = transliterate_name_with_llm(name, script)
             
             bt.logging.info(f"Transliterated '{name}' to '{transliterated_name}'")
             # Use phonetic-only scoring on transliterated name
