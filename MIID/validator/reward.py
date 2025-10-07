@@ -1846,7 +1846,7 @@ def get_name_variation_rewards(
     
     # Run ID is now managed at the forward pass level, not in reward function
     
-    rewards = np.zeros(len(responses))
+    rewards = np.zeros(len(uids))
     detailed_metrics = []  # Store detailed metrics for each miner
     
     # Log rule-based requirements if provided
@@ -1859,7 +1859,7 @@ def get_name_variation_rewards(
     #     pass
     
     # Process each miner's response
-    for i, (response, uid) in enumerate(zip(responses, uids)):
+    for i, uid in enumerate(uids):
         #bt.logging.info(f"\n{'='*50}")
         #bt.logging.info(f"Processing miner {uid}")
         
@@ -1877,11 +1877,21 @@ def get_name_variation_rewards(
             "missing_names": []
         }
         
-        # Correctly access the variations from the response object
-        variations = response.variations if hasattr(response, 'variations') else {}
+        # Get response for this miner if available
+        if i < len(responses):
+            response = responses[i]
+            # Correctly access the variations from the response object
+            variations = response.variations if hasattr(response, 'variations') else {}
+        else:
+            # No response received for this miner
+            response = None
+            variations = {}
         
         if not variations:
-            bt.logging.warning(f"Miner {uid} returned invalid or empty response")
+            if response is None:
+                bt.logging.warning(f"Miner {uid} did not respond")
+            else:
+                bt.logging.warning(f"Miner {uid} returned invalid or empty response")
             rewards[i] = 0.0
             # Correctly set metrics for invalid/empty response
             miner_metrics["penalties"]["missing_names"] = 1.0  # All names are missing
