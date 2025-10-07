@@ -316,11 +316,13 @@ async def forward(self):
     
     bt.logging.info(f"Received {valid_responses} valid responses out of {len(all_responses)}")
 
+    seed_script = [item['script'] for item in seed_names_with_labels]
     rewards, detailed_metrics = get_name_variation_rewards(
         self, 
         seed_names,
         seed_dob,
         seed_addresses,
+        seed_script,
         all_responses, 
         miner_uids,
         variation_count=query_labels['variation_count'],

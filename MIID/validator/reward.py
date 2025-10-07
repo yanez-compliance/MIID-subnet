@@ -47,7 +47,7 @@ from MIID.validator.cheat_detection import (
 
 def clean_transliteration_output(raw_response: str) -> str:
     """
-    Extracts the transliterated name from LLM output, removes appended scripts, instructions,
+    Extracts the transliterated name from LLM output, removes appended instructions,
     and any leading/trailing punctuation like '-'.
     """
     lines = raw_response.splitlines()
@@ -85,7 +85,7 @@ def clean_transliteration_output(raw_response: str) -> str:
 def translate_unidecode(original_name):
     """
     Fallback transliteration function using unidecode.
-    Removes parentheses content and converts to ASCII.
+    Converts to ASCII.
     
     Args:
         original_name: The original name to transliterate
@@ -93,8 +93,7 @@ def translate_unidecode(original_name):
     Returns:
         The transliterated name in ASCII
     """
-    cleaned_str = re.sub(r"\s*\(.*?\)", "", original_name)
-    english_name = unidecode(cleaned_str)
+    english_name = unidecode(original_name)
     return english_name
 
 
@@ -415,7 +414,7 @@ def validate_address_region(generated_address: str, seed_address: str) -> bool:
     
     return True
 
-def transliterate_name_with_llm(original_name: str, model_name: str = "tinyllama:latest") -> str:
+def transliterate_name_with_llm(original_name: str, script: str, model_name: str = "tinyllama:latest") -> str:
     """
     Use LLM to transliterate a non-Latin name to Latin script for phonetic comparison.
     Tries tinyllama first, then falls back to llama3.1:latest.
@@ -441,10 +440,6 @@ def transliterate_name_with_llm(original_name: str, model_name: str = "tinyllama
         attempts = 0
         while attempts < 5:
             try:
-                script = "unknown"
-                if "(" in original_name and ")" in original_name:
-                    script = original_name.split("(")[-1].rstrip(")")
-
                 prompt = f"Transliterate this {script} name to Latin script, output only the name:\n{original_name}"
 
                 response = ollama.generate(
@@ -1797,6 +1792,7 @@ def get_name_variation_rewards(
     seed_names: List[str],
     seed_dob: List[str],
     seed_addresses: List[str],
+    seed_script: List[str],
     responses: List[Dict[str, List[List[str]]]],
     uids: List[int],
     variation_count: int = 10,
@@ -2086,24 +2082,16 @@ def get_name_variation_rewards(
             }
         
         # Process each seed name
-        for name in seed_names:
+        for name, script in zip(seed_names, seed_script):
             if name not in variations or not variations[name]:
                 continue
             
             # Skip non-Latin names - they will have their own judging part
-            # Names are in format: "first_name last_name (script_type)"
-            if not name.endswith("(latin)"):
-                bt.logging.info(f"Skipping non-Latin name: {name}")
+            if script != "latin":
                 continue
-            else:
-                # Remove the " (latin)" suffix if present
-                if name.endswith("(latin)"):
-                    base_name = name[:-7].rstrip()
-                else:
-                    base_name = name
 
             # Convert base name to lowercase, only grading lowercase names
-            base_name = base_name.lower()
+            base_name = name.lower()
             
             # Get variations for this name (use original name as key)
             # variations[name] is a list of [name_var, dob_var, address_var] arrays
@@ -2132,21 +2120,21 @@ def get_name_variation_rewards(
                 )
                 quality_scores.append(quality)
                 base_scores.append(base_score)
-                miner_metrics["name_metrics"][base_name] = name_detailed_metrics
+                miner_metrics["name_metrics"][name] = name_detailed_metrics
                 
                 # Extract rule compliance metrics if available
                 if rule_based and "rule_compliance" in name_detailed_metrics:
-                    miner_metrics["rule_compliance"]["by_name"][base_name] = name_detailed_metrics["rule_compliance"]
+                    miner_metrics["rule_compliance"]["by_name"][name] = name_detailed_metrics["rule_compliance"]
             except Exception as e:
                 bt.logging.error(f"Error calculating quality for miner {uid}, name '{base_name}': {str(e)}")
                 traceback.print_exc()
 
         # Process each non-Latin seed name using phonetic-only scoring with LLM transliteration
-        for name in seed_names:
+        for name, script in zip(seed_names, seed_script):
             if name not in variations or not variations[name]:
                 continue
 
-            if name.endswith("(latin)"):
+            if script == "latin":
                 continue
                 
             # Get variations for this name
@@ -2267,11 +2255,10 @@ def get_name_variation_rewards(
         detailed_metrics.append(miner_metrics)
         
     # After initial rewards are calculated, apply penalties for high similarity between miners
-    # Process seed names to remove script type suffixes for cheating detection
-    # Remove suffixes like "(latin)", "(arabic)", "(chinese)", "(cyrillic)", etc.
+    # Process seed names for cheating detection
     processed_seed_names = []
-    for name in seed_names:
-        if not name.endswith("(latin)"):
+    for name, script in zip(seed_names, seed_script):
+        if script != "latin":
             # Get the LLM-provided transliterated name for this seed name, if available
             transliterated_name = None
             if name in miner_metrics.get("name_metrics", {}) and "transliteration" in miner_metrics["name_metrics"][name]:
@@ -2281,19 +2268,8 @@ def get_name_variation_rewards(
             else:
                 processed_seed_names.append(name)
             continue
-        # Check for script type suffixes in parentheses at the end
-        if "(" in name and name.endswith(")"):
-            # Find the last opening parenthesis
-            last_paren = name.rfind("(")
-            if last_paren > 0:
-                # Remove the suffix and any trailing whitespace
-                processed_name = name[:last_paren].rstrip()
-                processed_seed_names.append(processed_name)
-            else:
-                processed_seed_names.append(name)
-        else:
-            # No suffix, use as-is
-            processed_seed_names.append(name)
+        # Use name as-is without script suffix processing
+        processed_seed_names.append(name)
     
     bt.logging.info(f"Processed seed names for cheating detection: {processed_seed_names}")
     
