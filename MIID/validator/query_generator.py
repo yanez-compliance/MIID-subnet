@@ -48,7 +48,23 @@ def _get_keywords_from_rule_desc(description: str) -> List[str]:
 
 # List of Latin-script locales to generate names from (basic Latin characters only, no accents)
 LATIN_LOCALES = ['en_US', 'en_GB', 'en_CA', 'en_AU']
+NON_Latin_Locales = [
+    # Arabic script
+    "ar_AA",  # Generic Arabic
+    "ar_PS", "ar_SA",  # Arabic
+    "fa_IR",  # Persian (Farsi)
 
+    # Cyrillic script
+    "bg_BG",  # Bulgarian
+    "ru_RU",  # Russian
+    "uk_UA",  # Ukrainian
+
+    # CJK scripts (Chinese, Japanese, Korean)
+    "zh_CN",  # Simplified Chinese
+    "zh_TW",  # Traditional Chinese
+    "ja_JP",  # Japanese
+    "ko_KR"   # Korean
+]
 # Add import for rule-based functionality
 from MIID.validator.rule_extractor import get_rule_template_and_metadata
 
@@ -250,12 +266,26 @@ class QueryGenerator:
         self.last_successful_generation_model: str | None = None
         self.last_successful_generation_timeout: int | None = None
         
-        # Load sanctioned individuals
+        # Load sanctioned individuals from transliteration file (for one positive with script)
+        self.sanctioned_transliteration = []
+        try:
+            current_dir = os.path.dirname(os.path.abspath(__file__))
+            json_path = os.path.join(current_dir, 'Sanctioned_Transliteration.json')
+            bt.logging.info(f"Loading sanctioned transliteration from: {json_path}")
+            if os.path.exists(json_path):
+                with open(json_path, 'r') as f:
+                    self.sanctioned_transliteration = json.load(f)
+                bt.logging.info(f"Loaded {len(self.sanctioned_transliteration)} sanctioned transliteration entries.")
+            else:
+                bt.logging.error(f"Sanctioned transliteration file not found at: {json_path}")
+        except Exception as e:
+            bt.logging.error(f"Error loading sanctioned transliteration: {e}")
+
+        # Load sanctioned individuals from main list (for remaining positives with Latin script)
         self.sanctioned_individuals = []
         try:
-            # Construct the path to the JSON file relative to the current file
             current_dir = os.path.dirname(os.path.abspath(__file__))
-            json_path = os.path.join(current_dir, 'SanctionedIndividulas.json')
+            json_path = os.path.join(current_dir, 'Sanctioned_list.json')
             bt.logging.info(f"Loading sanctioned individuals from: {json_path}")
             if os.path.exists(json_path):
                 with open(json_path, 'r') as f:
@@ -265,6 +295,34 @@ class QueryGenerator:
                 bt.logging.error(f"Sanctioned individuals file not found at: {json_path}")
         except Exception as e:
             bt.logging.error(f"Error loading sanctioned individuals: {e}")
+
+        # Load sanctioned countries with script support
+        self.sanctioned_countries = []
+        self.sanctioned_countries_by_script = {}
+        try:
+            # Construct the path to the JSON file relative to the current file
+            current_dir = os.path.dirname(os.path.abspath(__file__))
+            json_path = os.path.join(current_dir, 'sanctioned_countries.json')
+            bt.logging.info(f"Loading sanctioned countries from: {json_path}")
+            if os.path.exists(json_path):
+                with open(json_path, 'r') as f:
+                    countries_data = json.load(f)
+                
+                # Store countries by script for different generation methods
+                self.sanctioned_countries_by_script = countries_data
+                
+                # Flatten all countries for backward compatibility
+                for script, countries in countries_data.items():
+                    for country_info in countries:
+                        self.sanctioned_countries.append(country_info['country'])
+                
+                total_countries = sum(len(countries) for countries in countries_data.values())
+                bt.logging.info(f"Loaded {total_countries} sanctioned countries across {len(countries_data)} scripts.")
+                bt.logging.info(f"Scripts available: {list(countries_data.keys())}")
+            else:
+                bt.logging.error(f"Sanctioned countries file not found at: {json_path}")
+        except Exception as e:
+            bt.logging.error(f"Error loading sanctioned countries: {e}")
 
         # Flag to control whether to use the LLM judge (default False, but auto-enables for complex queries)
         self.use_judge_model = getattr(
@@ -757,27 +815,55 @@ class QueryGenerator:
         use_default: bool = False,
         rule_percentage: int = 30
     ) -> Tuple[str, Dict[str, Any], str, int, str, int, Dict[str, Any]]:
-        """Generate a query template based on specified parameters"""
-        # Default similarity preferences if none provided
+        """
+        Generate a query template based on specified parameters.
+        
+        This method creates query templates for miners to generate name variations.
+        The query focuses on name variations only - address and DOB information
+        are provided as context strings at the end, not as placeholders in the query.
+        
+        Args:
+            model_name: The LLM model to use for query generation
+            variation_count: Number of name variations to generate
+            phonetic_similarity: Distribution of phonetic similarity levels
+            orthographic_similarity: Distribution of orthographic similarity levels
+            dob_similarity: Distribution of DOB similarity patterns (for context only)
+            use_default: Whether to use a simple default template
+            rule_percentage: Percentage of variations that should follow rule-based transformations
+            
+        Returns:
+            Tuple containing: (query_template, labels, model, timeout, judge_model, judge_timeout, generation_log)
+        """
+        # ============================================================================
+        # STEP 1: Set up default parameters and validate inputs
+        # ============================================================================
+        
+        # Set default similarity preferences if none provided
         if phonetic_similarity is None:
             phonetic_similarity = {"Medium": 1.0}
         if orthographic_similarity is None:
             orthographic_similarity = {"Medium": 1.0}
         
-        # Generate rule-based template and metadata
+        # Generate rule-based template and metadata for transformations
         rule_template, rule_metadata = get_rule_template_and_metadata(rule_percentage)
         
-        # Create the labels dictionary from the parameters
+        # ============================================================================
+        # STEP 2: Create labels dictionary for validation and tracking
+        # ============================================================================
+        
         labels = {
             "variation_count": variation_count,
             "phonetic_similarity": phonetic_similarity,
             "orthographic_similarity": orthographic_similarity,
-            "rule_based": {**(rule_metadata or {}), "percentage": rule_percentage}  # include percentage for validation
+            "rule_based": {**(rule_metadata or {}), "percentage": rule_percentage},
         }
-        # Format the similarity specifications for the prompt
+        
+        # ============================================================================
+        # STEP 3: Format similarity specifications for human-readable prompts
+        # ============================================================================
+        
         phonetic_spec = ", ".join([f"{int(pct*100)}% {level}" for level, pct in phonetic_similarity.items()])
         orthographic_spec = ", ".join([f"{int(pct*100)}% {level}" for level, pct in orthographic_similarity.items()])
-        
         # bt.logging.debug(f"🤖 Generating query with: {variation_count} variations, " +
         #             f"phonetic similarity: {phonetic_spec}, " +
         #             f"orthographic similarity: {orthographic_spec}")
@@ -787,6 +873,9 @@ class QueryGenerator:
         # Add a clarifying sentence at the beginning to make it clear this is the seed name
         simple_template = f"{clarifying_prefix}Generate {variation_count} variations of the name {{name}}, ensuring phonetic similarity: {phonetic_spec}, and orthographic similarity: {orthographic_spec}, and also include {rule_percentage}% of variations that follow: {rule_template}"
         # bt.logging.debug(f"📝 Simple template: {simple_template}")
+        
+        # Note: Address and DOB are no longer part of the query template
+        # They will be added as context strings at the end after LLM responses
         
         if use_default:
             bt.logging.info("Using default query template (skipping complex query generation)")
@@ -834,7 +923,22 @@ class QueryGenerator:
         
     
         
-        # Define the prompt with specific parameters and security terminology
+        # ============================================================================
+        # STEP 5: Build complex query generation prompt (when use_default=False)
+        # ============================================================================
+        
+        # Note: Address and DOB requirements removed from query template
+        # They will be added as context strings at the end after LLM responses
+
+        # Build example format without address/DOB placeholders
+        example_parts = [
+            f"Generate {variation_count} variations of {{name}}",
+            f"ensuring phonetic similarity ({phonetic_spec}) and orthographic similarity ({orthographic_spec})",
+            f"Approximately {rule_percentage}% of the total {variation_count} variations should follow these rule-based transformations: {rule_template}"
+        ]
+
+        example_format = ". ".join(example_parts) + "."
+        
         prompt = f"""Generate a Threat Scenario generation query with these specifications:
 
         THREAT SCENARIO CONTEXT:
@@ -853,13 +957,19 @@ class QueryGenerator:
         2. Format as a natural language request that explicitly states all requirements.
         3. Include both the similarity requirements (phonetic and orthographic) AND the rule-based transformation requirements in the query.
         4. Do not write any SQL queries or any code. Return text only.
+        5. Do NOT calculate totals, percentages, or counts beyond what is explicitly given.
+        6. Do NOT add extra rules, suffixes, prefixes, or transformations not listed in the given rule set.
         
         CRITICAL: Return ONLY the query template text. Do not include any explanations, analysis, or commentary about the query. Do not say "this query meets requirements" or similar phrases. Just return the actual query template that miners will receive.
         
-        Example format: "Generate {variation_count} variations of {{name}}, ensuring phonetic similarity ({phonetic_spec}) and orthographic similarity ({orthographic_spec}). Approximately {rule_percentage}% of the total variations should follow these rule-based transformations: {rule_template}"
+        Example format: {example_format}
         
         YOUR RESPONSE (query template only):"""
         
+        
+        # ============================================================================
+        # STEP 6: Set up model and timeout selection with fallback strategy
+        # ============================================================================
         
         # Get the list of models to try: primary + fallbacks, prioritizing last successful
         primary_model = model_name
@@ -885,6 +995,10 @@ class QueryGenerator:
         timeouts_to_try.sort()
         bt.logging.debug(f"🧪 Generation selection order -> models: {models_to_try}, timeouts: {timeouts_to_try}")
 
+        # ============================================================================
+        # STEP 7: Initialize tracking variables for generation attempts
+        # ============================================================================
+        
         last_model_query_template: str | None = None
         last_successful_judge_model: str | None = None
         last_successful_judge_timeout: int | None = None
@@ -892,6 +1006,10 @@ class QueryGenerator:
         
         processed_models = set()
 
+        # ============================================================================
+        # STEP 8: Main generation loop - try models and timeouts with fallback strategy
+        # ============================================================================
+        
         # Iterate models; enforce forward-only timeouts for cached model
         for model in models_to_try:
             if self.last_successful_generation_model and model == self.last_successful_generation_model and isinstance(self.last_successful_generation_timeout, int):
@@ -1062,7 +1180,10 @@ class QueryGenerator:
                         generation_log["attempts"].append(attempt_log)
                         break # break from timeout loop, and try next model.
         
-        # Fallback logic remains the same
+        # ============================================================================
+        # STEP 9: Fallback logic - handle cases where all models/timeouts failed
+        # ============================================================================
+        
         bt.logging.error("💥 All models and timeouts failed.")
         # Prefer returning the last LLM-generated template with appended hints
         if last_model_query_template:
@@ -1092,6 +1213,10 @@ class QueryGenerator:
             generation_log["validation"] = fallback_validation
             return last_model_query_template, labels, None, None, final_judge_model, final_judge_timeout, generation_log
         
+        # ============================================================================
+        # STEP 10: Final fallback - use simple template if no LLM generation succeeded
+        # ============================================================================
+        
         # If we never received an LLM template at all, fall back to simple_template, but validate and append hints
         bt.logging.warning("No LLM-generated template available; using simple fallback template")
         bt.logging.info(f"🔄 Validating simple fallback template")
@@ -1113,15 +1238,32 @@ class QueryGenerator:
         return simple_template, labels, None, None, final_judge_model, final_judge_timeout, generation_log
     
     async def build_queries(self) -> Tuple[List[Dict[str, Any]], str, Dict[str, Any], str, int, str, int, Dict[str, Any]]:
-        """Build challenge queries for miners"""
+        """
+        Build challenge queries for miners.
+        
+        This method:
+        1. Generates random query parameters (variation counts, similarity levels, etc.)
+        2. Creates a query template using either default or complex LLM generation
+        3. Generates test identities (sanctioned individuals, high-risk, and negative samples)
+        4. Adds address and DOB context as strings at the end of the query template
+        
+        Returns:
+            Tuple containing: (seed_identities_with_labels, query_template, query_labels, 
+                             successful_model, successful_timeout, successful_judge_model, 
+                             successful_judge_timeout, generation_log)
+        """
         try:
             bt.logging.debug("🔄 Building test queries for miners")
+            
+            # ============================================================================
+            # STEP 1: Set up random query parameters for varied testing
+            # ============================================================================
             
             # Set up query parameters - randomly select different configurations
             # for each validation round to test miners on various tasks
             
             # 1. Determine variation count (between 5-DEFAULT_VARIATION_COUNT)
-            variation_count = random.randint(5, DEFAULT_VARIATION_COUNT)
+            variation_count = random.randint(6, DEFAULT_VARIATION_COUNT)
             
             # 2. Set up phonetic similarity distribution with weighted selection
             phonetic_configs_with_weights = [
@@ -1166,6 +1308,10 @@ class QueryGenerator:
                 # Only Light similarity - reduced frequency
                 ({"Light": 1.0}, 0.02),
             ]
+
+            # 4. Set up DOB similarity distribution with weighted selection
+            # Update lines 1217-1236 to match the prompt specification:
+
             
             # Helper function for weighted random selection
             def weighted_random_choice(configs_with_weights):
@@ -1186,6 +1332,10 @@ class QueryGenerator:
                 orthographic_config = {"Medium": 0.5}
                 rule_percentage = 30  # fallback for default
             
+            # ============================================================================
+            # STEP 2: Generate query template using LLM or default method
+            # ============================================================================
+            
             # Generate a complex query template
             model_name = getattr(self.config.neuron, 'ollama_model_name', "llama3.1:latest")
             query_template, query_labels, successful_model, successful_timeout, successful_judge_model, successful_judge_timeout, generation_log = await self.generate_complex_query(
@@ -1201,39 +1351,78 @@ class QueryGenerator:
             # successful_judge_model = None
             # successful_judge_timeout = None
             
+            # ============================================================================
+            # STEP 3: Generate test identities (sanctioned, high-risk, and negative samples)
+            # ============================================================================
+            
             # Generate test names using a mix of sanctioned and generated names
-            seed_names_with_labels = []
+            seed_identities_with_labels = []
             
             # Ensure sample_size exists and has a valid value
             sample_size = getattr(self.config.seed_names, 'sample_size', 15)
-            if sample_size is None:
-                sample_size = 15
-            
-            # Number of positive samples to take from the sanctioned list
-            positive_sample_count = 5
+
+            # Number of positive samples to take from the sanctioned list: 1/3 of sample_size, rounded down
+            positive_sample_count = sample_size // 3
             
             # Track names to avoid duplicates across positive and negative lists
             seen_names = set()
 
-            # 1. Add positive samples from the sanctioned list (ensure unique full names)
-            if self.sanctioned_individuals:
-                max_attempts = positive_sample_count * 10
+            # 1. Add one positive sample from transliteration list with script annotation
+            if self.sanctioned_transliteration and positive_sample_count > 0:
+                max_attempts = 50  # Limit attempts to avoid infinite loops
+                attempts = 0
+                while attempts < max_attempts:
+                    person = random.choice(self.sanctioned_transliteration)
+                    first_name = str(person.get("FirstName", "")).strip()
+                    last_name = str(person.get("LastName", "")).strip()
+                    dob = str(person.get("DOB", "")).strip()
+                    address = str(person.get("Country_Residence", ""))
+                    script = str(person.get("Script", "latin")).strip()
+                    
+                    # Skip if first_name or last_name contains spaces (multi-part names)
+                    if " " in first_name or " " in last_name:
+                        attempts += 1
+                        continue
+                    
+                    if first_name and last_name:
+                        full_name = f"{first_name} {last_name}"
+                        if full_name not in seen_names:
+                            seed_identities_with_labels.append({"name": full_name, "dob": dob, "address": address, "label": "positive", "script": script})
+                            seen_names.add(full_name)
+                            # bt.logging.info(f"Added transliterated positive sample: {full_name}")
+                            break
+                    attempts += 1
+
+            # 2. Add remaining positive samples from main sanctioned list (Latin script)
+            remaining_positives = positive_sample_count - len([n for n in seed_identities_with_labels if isinstance(n, dict) and n.get("label") == "positive"])
+            if self.sanctioned_individuals and remaining_positives > 0:
+                max_attempts = remaining_positives * 10
                 attempts = 0
                 while (
-                    len([n for n in seed_names_with_labels if isinstance(n, dict) and n.get("label") == "positive"]) < positive_sample_count
+                    len([n for n in seed_identities_with_labels if isinstance(n, dict) and n.get("label") == "positive"]) < positive_sample_count
                     and attempts < max_attempts
                 ):
                     person = random.choice(self.sanctioned_individuals)
                     first_name = str(person.get("FirstName", "")).strip()
                     last_name = str(person.get("LastName", "")).strip()
+                    dob = str(person.get("DOB", "")).strip()
+                    address = str(person.get("Country_Residence", ""))
+                    # All main list names are Latin script
+                    script = "latin"
+                    
+                    # Skip if first_name or last_name contains spaces (multi-part names)
+                    if " " in first_name or " " in last_name:
+                        attempts += 1
+                        continue
+                    
                     if first_name and last_name:
-                        full_name = f"{first_name} {last_name}".lower()
+                        full_name = f"{first_name} {last_name}"
                         if full_name not in seen_names:
-                            seed_names_with_labels.append({"name": full_name, "label": "positive"})
+                            seed_identities_with_labels.append({"name": full_name, "dob": dob, "address": address, "label": "positive", "script": script})
                             seen_names.add(full_name)
                             # bt.logging.info(f"Added positive sample: {full_name}")
                     attempts += 1
-                current_positives = len([n for n in seed_names_with_labels if isinstance(n, dict) and n.get("label") == "positive"]) 
+                current_positives = len([n for n in seed_identities_with_labels if isinstance(n, dict) and n.get("label") == "positive"]) 
                 if current_positives < positive_sample_count:
                     bt.logging.warning(
                         f"Could not collect {positive_sample_count} unique positive samples; using {current_positives}."
@@ -1241,39 +1430,241 @@ class QueryGenerator:
             else:
                 bt.logging.warning("Sanctioned individuals list is empty. No positive samples will be added.")
             
-            # 2. Add negative samples generated by Faker (always two-part names)
-            fake = Faker(LATIN_LOCALES)
-            negative_sample_count = sample_size - len(seed_names_with_labels)
+
+            # 3. Add high risk samples using different scripts from sanctioned countries
+
+            # Number of high risk samples: 1/3 of sample_size, rounded down
+            high_risk_sample_count = sample_size // 3
+            generated_names_high_risk = []
             
+            # Generate ONE non-Latin high-risk individual
+            if high_risk_sample_count > 0:
+                # Select a random non-Latin script
+                non_latin_scripts = ['arabic', 'chinese', 'cyrillic']
+                available_non_latin = [script for script in non_latin_scripts if script in self.sanctioned_countries_by_script]
+                
+                if available_non_latin:
+                    selected_script = random.choice(available_non_latin)
+                    script_countries = self.sanctioned_countries_by_script[selected_script]
+                    country_info = random.choice(script_countries)
+                    country_name = country_info['country']
+                    faker_locale = country_info['faker_locale']
+                    count = 10
+
+                    
+                    while count != 0:
+                        try:
+                            fake = Faker(faker_locale)
+                            first_name = fake.first_name().lower()
+                            last_name = fake.last_name().lower()
+                            dob = fake.date_of_birth(minimum_age=18, maximum_age=100).strftime("%Y-%m-%d")
+                            name = f"{first_name} {last_name}"
+                            
+                            if (3 <= len(first_name) <= 20 and 3 <= len(last_name) <= 20 and " " not in first_name and " " not in last_name):
+                                full_name = f"{first_name} {last_name}"
+                                if full_name not in seen_names:
+                                    generated_names_high_risk.append({"name": full_name, "dob": dob, "address": country_name, "label": "High Risk", "script": selected_script})
+                                    seen_names.add(full_name)
+                                    break
+                            else:
+                                count -= 1
+                                continue
+                        except Exception as e:
+                            bt.logging.warning(f"Error generating non-Latin name for {selected_script} with locale {faker_locale}: {e}")
+                            count -= 1
+            
+            # Generate remaining high-risk individuals from Latin countries using their specific locales
+            latin_countries = self.sanctioned_countries_by_script.get('latin', [])
+            remaining_count = high_risk_sample_count - len(generated_names_high_risk)
+            
+            while len(generated_names_high_risk) < high_risk_sample_count and remaining_count > 0:
+                # Select a random Latin country with its specific locale
+                country_info = random.choice(latin_countries)
+                country_name = country_info['country']
+                faker_locale = country_info['faker_locale']
+                
+                try:
+                    fake = Faker(faker_locale)
+                    first_name = fake.first_name().lower()
+                    last_name = fake.last_name().lower()
+                    dob = fake.date_of_birth(minimum_age=18, maximum_age=100).strftime("%Y-%m-%d")
+                    name = f"{first_name} {last_name}"
+                    
+                    if (name not in generated_names_high_risk and name not in seen_names and 
+                        3 <= len(first_name) <= 20 and 3 <= len(last_name) <= 20 and " " not in first_name and " " not in last_name):
+                                full_name = f"{first_name} {last_name}"
+                                if full_name not in seen_names:
+                                    generated_names_high_risk.append({"name": full_name, "dob": dob, "address": country_name, "label": "High Risk", "script": 'latin'})
+                                    seen_names.add(full_name)
+                        # bt.logging.debug(f"📝 Generated Latin high-risk name: {name} from {country_name}")
+                except Exception as e:
+                    bt.logging.warning(f"Error generating Latin name for {country_name} with locale {faker_locale}: {e}")
+                    # Fallback to basic Latin if specific locale fails
+                    fake = Faker('en_US')
+                    first_name = fake.first_name().lower()
+                    last_name = fake.last_name().lower()
+                    dob = fake.date_of_birth(minimum_age=18, maximum_age=100).strftime("%Y-%m-%d")
+                    name = f"{first_name} {last_name}"
+                    
+                    if (name not in generated_names_high_risk and name not in seen_names and 
+                        3 <= len(first_name) <= 20 and 3 <= len(last_name) <= 20 and " " not in first_name and " " not in last_name):
+                            full_name = f"{first_name} {last_name}"
+                            if full_name not in seen_names:
+                                generated_names_high_risk.append({"name": full_name, "dob": dob, "address": country_name, "label": "High Risk", "script": 'Latin'})
+                                seen_names.add(full_name)
+                remaining_count -= 1
+            
+            for identity in generated_names_high_risk:
+                seed_identities_with_labels.append(identity)
+            
+            # 4. Add negative samples generated by Faker (always two-part names)
+            negative_sample_count = sample_size - len(seed_identities_with_labels)
+            
+            # Initialize fake for Latin country names
+            fake_country = Faker(LATIN_LOCALES)
             generated_names = []
+            
+            # Generate ONE negative name using non-Latin locale
+            if negative_sample_count > 0 and NON_Latin_Locales:
+                max_attempts = 5  # Limit attempts to avoid infinite loops
+                attempts = 0
+                success = False
+                
+                while attempts < max_attempts and not success:
+                    try:
+                        non_latin_locale = random.choice(NON_Latin_Locales)
+                        fake_non_latin = Faker(non_latin_locale)
+                        first_name = fake_non_latin.first_name().lower()
+                        last_name = fake_non_latin.last_name().lower()
+                        dob = fake_non_latin.date_of_birth(minimum_age=18, maximum_age=100).strftime("%Y-%m-%d")
+                        
+                        # Try to find a valid country with limited attempts (always use Latin for country)
+                        address = None
+                        country_attempts = 0
+                        max_country_attempts = 20  # Limit country selection attempts
+                        
+                        while country_attempts < max_country_attempts:
+                            potential_address = fake_country.country()  # Use Latin fake for country names
+                            if potential_address not in self.sanctioned_countries:
+                                address = potential_address
+                                break
+                            country_attempts += 1
+                        
+                        # If we couldn't find a valid country for this locale, try again
+                        if address is None:
+                            bt.logging.debug(f"🔄 No valid country found for locale {non_latin_locale} after {max_country_attempts} attempts. Trying different locale...")
+                            attempts += 1
+                            continue
+
+                        # Determine the actual script type based on locale
+                        script_type = "latin"  # default fallback
+                        if non_latin_locale.startswith(("ar_", "fa_", "ur_", "ps_")):
+                            script_type = "arabic"
+                        elif non_latin_locale.startswith(("bg_", "ru_", "uk_", "kk_", "ky_", "sr_", "mn_")):
+                            script_type = "cyrillic"
+                        elif non_latin_locale.startswith(("zh_", "ja_", "ko_")):
+                            script_type = "chinese"
+
+                        name = f"{first_name} {last_name}"
+                        if (name not in generated_names and name not in seen_names and 
+                            3 <= len(first_name) <= 20 and 
+                            3 <= len(last_name) <= 20 and " " not in first_name and " " not in last_name):
+                            generated_names.append({
+                                "name": name, 
+                                "dob": dob, 
+                                "address": address, 
+                                "label": "negative",
+                                "script": script_type
+                            })
+                            seen_names.add(name)
+                            success = True
+                            # bt.logging.debug(f"📝 Generated {script_type} negative name: {name} using locale {non_latin_locale}")
+                        else:
+                            attempts += 1
+                            
+                    except Exception as e:
+                        attempts += 1
+                        bt.logging.warning(f"Error generating non-Latin negative name with locale {non_latin_locale}: {e}")
+                
+                if not success:
+                    bt.logging.warning(f"Failed to generate non-Latin name after {max_attempts} attempts. Falling back to Latin.")
+            
+            # 5. Generate remaining negative names using Latin locales
+            remaining_negative_count = negative_sample_count - len(generated_names)
             while len(generated_names) < negative_sample_count:
                 first_name = fake.first_name().lower()
                 last_name = fake.last_name().lower()
+                dob = fake.date_of_birth(minimum_age=18, maximum_age=100).strftime("%Y-%m-%d")
+                
+                # Try to find a valid country with limited attempts
+                address = None
+                country_attempts = 0
+                max_country_attempts = 20  # Limit country selection attempts
+                
+                while country_attempts < max_country_attempts:
+                    potential_address = fake.country()
+                    if potential_address not in self.sanctioned_countries:
+                        address = potential_address
+                        break
+                    country_attempts += 1
+                
+                # If we couldn't find a valid country, skip this attempt
+                if address is None:
+                    bt.logging.debug(f"🔄 No valid country found for Latin locale after {max_country_attempts} attempts. Skipping this attempt.")
+                    continue
+
                 name = f"{first_name} {last_name}"
                 if (name not in generated_names and name not in seen_names and 
                     3 <= len(first_name) <= 20 and 
-                    3 <= len(last_name) <= 20):
-                    generated_names.append(name)
+                    3 <= len(last_name) <= 20 and " " not in first_name and " " not in last_name):
+                    generated_names.append({
+                        "name": name, 
+                        "dob": dob, 
+                        "address": address, 
+                        "label": "negative",
+                        "script": "latin"
+                    })
                     seen_names.add(name)
-                    # bt.logging.debug(f"📝 Generated negative two-part name: {name}")
+                    # bt.logging.debug(f"📝 Generated Latin negative name: {name}")
             
-            # Add generated names to the list with "negative" label
-            for name in generated_names:
-                seed_names_with_labels.append({"name": name, "label": "negative"})
+            # Add generated names to the list
+            for identity in generated_names:
+                seed_identities_with_labels.append(identity)
             
             # Shuffle the list to mix positive and negative samples
-            random.shuffle(seed_names_with_labels)
+            random.shuffle(seed_identities_with_labels)
             
             # Log the final list of seed names with their labels for traceability
-            log_output = [f"'{item['name']}' ({item['label']})" for item in seed_names_with_labels]
-            # bt.logging.debug(f"📋 Generated {len(seed_names_with_labels)} test names: [{', '.join(log_output)}]")
+            log_output = [f"'{item['name']}' ({item['label']})" for item in seed_identities_with_labels]
+            # bt.logging.debug(f"📋 Generated {len(seed_identities_with_labels)} test names: [{', '.join(log_output)}]")
             
             # bt.logging.debug(f"📄 Query template: {query_template}")
             # bt.logging.debug(f"📋 Query labels: {query_labels}")
             
+            # ============================================================================
+            # STEP 4: Add address and DOB context as strings at the end of query template
+            # ============================================================================
+            
+            # Add address and DOB information as strings at the end of the query template
+            # Add address and DOB requirements to fallback template
+            address_requirement = f" The following address is the seed country/city to generate address variations for: {{address}}. Generate unique real addresses within the specified country/city for each variation. "
+            query_template = query_template + address_requirement
+        
+            # Create DOB specification for fallback (using default DOB config)
+            dob_requirement = f" The following date of birth is the seed DOB to generate variations for: {{dob}}."
+            query_template = query_template + dob_requirement
+            
+            # Add additional context after the query
+            address_dob_context = "\n\n[ADDITIONAL CONTEXT]:"
+            address_dob_context += "\n- Address variations should be realistic addresses within the specified country/city"
+            address_dob_context += "\n- DOB variations ATLEAST one in each category (±1 day, ±3 days, ±30 days, ±90 days, ±365 days, year+month only)"
+            address_dob_context += "\n- For year+month, generate the exact DOB without day"
+            address_dob_context += "\n- Each variation must have a different, realistic address and DOB"
+            query_template = query_template + address_dob_context
+
             # The function now returns a list of dictionaries, so we extract just the names for the return
-            seed_names = [item['name'] for item in seed_names_with_labels]
-            return seed_names_with_labels, query_template, query_labels, successful_model, successful_timeout, successful_judge_model, successful_judge_timeout, generation_log
+            seed_names = [item['name'] for item in seed_identities_with_labels]
+            return seed_identities_with_labels, query_template, query_labels, successful_model, successful_timeout, successful_judge_model, successful_judge_timeout, generation_log
             
         except Exception as e:
             bt.logging.error(f"Error building queries: {str(e)}")
@@ -1298,6 +1689,22 @@ class QueryGenerator:
             # Add clarifying sentence to fallback template
             clarifying_prefix = "The following name is the seed name to generate variations for: {name}. "
             query_template = f"{clarifying_prefix}Generate {variation_count} variations of the name {{name}}, ensuring phonetic similarity: {phonetic_config}, and orthographic similarity: {orthographic_config}, and also include {rp}% of variations that follow: {rule_template}."
+            
+            # Add address and DOB requirements to fallback template
+            address_requirement = f" The following address is the seed country/city to generate address variations for: {{address}}. Generate unique real addresses within the specified country/city for each variation. "
+            query_template = query_template + address_requirement
+        
+            # Create DOB specification for fallback (using default DOB config)
+
+            dob_requirement = f" The following date of birth is the seed DOB to generate variations for: {{dob}}."
+            query_template = query_template + dob_requirement
+            
+            # Add additional context after the query
+            address_dob_context = "\n\n[ADDITIONAL CONTEXT]:"
+            address_dob_context += "\n- Address variations should be realistic addresses within the specified country/city"
+            address_dob_context += "\n- DOB variations ATLEAST one in each category (±1 day, ±3 days, ±30 days, ±90 days, ±365 days, year+month only)"
+            address_dob_context += "\n- Each variation must have a different, realistic address and DOB"
+            query_template = query_template + address_dob_context
             
             # # Validate and minimally clarify the fallback template
             # _ok, _msg, issues, _llm_issues, _, _, _ = self.validate_query_template(query_template, query_labels)
@@ -1325,6 +1732,8 @@ class QueryGenerator:
             while len(seed_names) < fallback_sample_size:
                 first_name = fake.first_name().lower()
                 last_name = fake.last_name().lower()
+                if " " in first_name or " " in last_name:
+                    continue
                 name = f"{first_name} {last_name}"
                 
                 # Randomly decide whether to add a title (1/10 chance)
@@ -1336,8 +1745,8 @@ class QueryGenerator:
                 if name not in seed_names:
                     seed_names.append(name)
             
-            # In fallback, all names are "negative"
-            seed_names_with_labels = [{"name": name, "label": "negative"} for name in seed_names]
+            # In fallback, all names are "negative" with script annotation
+            seed_names_with_labels = [{"name": name, "label": "negative", "script": "latin"} for name in seed_names]
             
             # bt.logging.info(f"Using fallback: {len(seed_names)} test names")
             # bt.logging.debug(f"📄 Query template: {query_template}")

@@ -47,26 +47,27 @@ class IdentitySynapse(bt.Synapse):
     Protocol for requesting identity variations from miners.
     
     Attributes:
-    - names: List of seed names to generate variations for
+    - identity: List of identity arrays, each containing [name, dob, address]
     - query_template: Template string for the LLM prompt with {name} placeholder
     - variations: Optional dictionary containing the generated variations for each name
+                 Each name maps to a list of [name_variation, dob_variation, address_variation] arrays
     """
     
     # Required request input, filled by sending dendrite caller
-    names: List[str]
+    identity: List[List[str]]  # Each inner list contains [name, dob, address]
     query_template: str
 
     timeout: float = 120.0
     
     # Optional request output, filled by receiving axon
-    variations: Optional[Dict[str, List[str]]] = None
+    variations: Optional[Dict[str, List[List[str]]]] = None
     process_time: Optional[float] = None  # <-- add this
     
-    def deserialize(self) -> Dict[str, List[str]]:
+    def deserialize(self) -> Dict[str, List[List[str]]]:
         """
         Deserialize the variations output.
         
         Returns:
-        - Dict[str, List[str]]: Dictionary mapping each name to its list of variations
+        - Dict[str, List[List[str]]]: Dictionary mapping each name to its list of [name, dob, address] variations
         """
         return self.variations

@@ -251,7 +251,7 @@ def pairwise_similarity_metrics(
 
 
 def detect_cheating_patterns(
-    responses: List[Any],
+    responses: List[Dict[str, List[List[str]]]],  # List of dictionaries with variations
     uids: List[int],
     rewards: np.ndarray,
     seed_names: List[str],
@@ -264,6 +264,7 @@ def detect_cheating_patterns(
     - signature_penalties
     - collusion_penalties
     - special_char_penalties
+    - address_duplication_penalties
     - special_char_counts
     - total_variations_counts
     - special_char_ratios
@@ -273,6 +274,7 @@ def detect_cheating_patterns(
     special_char_penalties = np.zeros(num_miners)
     signature_penalties = np.zeros(num_miners)
     collusion_penalties = np.zeros(num_miners)
+    address_duplication_penalties = np.zeros(num_miners)
     special_char_counts = np.zeros(num_miners, dtype=int)
     total_variations_counts = np.zeros(num_miners, dtype=int)
     special_char_ratios = np.zeros(num_miners)
@@ -280,19 +282,21 @@ def detect_cheating_patterns(
     all_signatures = []
 
     for i in range(num_miners):
-        response = responses[i]
-        
-        variations = getattr(response, 'variations', response if isinstance(response, dict) else None)
+        variations = responses[i]  # Each response is already a dictionary
 
         if variations:
             special_char_variations_count = 0
             total_variations_count = 0
             for name in variations:
                 name_variations = variations.get(name, [])
-                total_variations_count += len(name_variations)
-                for var in name_variations:
-                    if any(not c.isalnum() and not c.isspace() for c in var):
-                        special_char_variations_count += 1
+                if name_variations and len(name_variations) > 0:
+                    # name_variations is a list of [name_var, dob_var, address_var] arrays
+                    # We want the name variations (index 0 of each array)
+                    name_vars = [var[0] for var in name_variations if len(var) > 0 and var[0]]
+                    total_variations_count += len(name_vars)
+                    for var in name_vars:
+                        if any(not c.isalnum() and not c.isspace() for c in var):
+                            special_char_variations_count += 1
 
             if total_variations_count > 0:
                 special_char_ratio = special_char_variations_count / total_variations_count
@@ -302,6 +306,27 @@ def detect_cheating_patterns(
                 if special_char_ratio > 0.5:
                     penalty = (special_char_ratio - 0.5) / 0.5
                     special_char_penalties[i] = min(penalty, 1.0)
+            
+            # Check for address duplication within this miner's variations
+            all_addresses = []
+            for name in variations:
+                name_variations = variations.get(name, [])
+                if name_variations and len(name_variations) > 0:
+                    # Extract address variations (index 2 of each [name_var, dob_var, address_var] array)
+                    address_vars = [var[2] for var in name_variations if len(var) > 2 and var[2]]
+                    all_addresses.extend([
+                        addr.strip().replace(" ", "").replace(",", "").lower()
+                        for addr in address_vars if addr and addr.strip()
+                    ])
+            
+            # Count duplicates within this miner's addresses
+            if all_addresses:
+                unique_addresses = set(all_addresses)
+                duplicate_count = len(all_addresses) - len(unique_addresses)
+                if duplicate_count > 0:
+                    # Apply penalty based on duplicate ratio
+                    duplicate_ratio = duplicate_count / len(all_addresses)
+                    address_duplication_penalties[i] = min(duplicate_ratio, 1.0)
         
         if not variations:
             all_normalized_sets.append(None)
@@ -315,7 +340,9 @@ def detect_cheating_patterns(
         for name in seed_names:
             if name in variations and variations[name]:
                 has_any_variations = True
-                canon_list = [var for var in variations.get(name, [])]
+                name_variations = variations.get(name, [])
+                # Extract name variations (index 0 of each [name_var, dob_var, address_var] array)
+                canon_list = [var[0] for var in name_variations if len(var) > 0 and var[0]]
                 miner_map_for_signature[name] = canon_list
                 miner_normalized_sets[name] = build_normalized_set(canon_list)
 
@@ -419,6 +446,7 @@ def detect_cheating_patterns(
         "signature_penalties": signature_penalties,
         "collusion_penalties": collusion_penalties,
         "special_char_penalties": special_char_penalties,
+        "address_duplication_penalties": address_duplication_penalties,
         "special_char_counts": special_char_counts,
         "total_variations_counts": total_variations_counts,
         "special_char_ratios": special_char_ratios,
