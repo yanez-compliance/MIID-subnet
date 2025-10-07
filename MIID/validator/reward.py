@@ -66,9 +66,9 @@ def clean_transliteration_output(raw_response: str) -> str:
             transliterated = line
             break
 
-    # Remove known script words
+    # Remove known script words (case-insensitive)
     for word in ["latin", "cyrillic", "arabic", "chinese"]:
-        transliterated = transliterated.replace(word, "")
+        transliterated = re.sub(rf"\b{word}\b", "", transliterated, flags=re.IGNORECASE)
 
     # Remove unwanted characters, keep letters, hyphens, apostrophes, spaces
     transliterated = re.sub(r"[^A-Za-zÀ-ÿ\s\-\']", "", transliterated)
