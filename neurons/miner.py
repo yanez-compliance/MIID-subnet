@@ -213,11 +213,11 @@ class Miner(BaseMinerNeuron):
         """
         # Generate a unique run ID using timestamp
         run_id = int(time.time())
-        bt.logging.info(f"Starting run {run_id} for {len(synapse.names)} names")
+        bt.logging.info(f"Starting run {run_id} for {len(synapse.identity)} names")
         
         # Get timeout from synapse (default to 120s if not specified)
         timeout = getattr(synapse, 'timeout', 120.0)
-        bt.logging.info(f"Request timeout: {timeout:.1f}s for {len(synapse.names)} names")
+        bt.logging.info(f"Request timeout: {timeout:.1f}s for {len(synapse.identity)} names")
         start_time = time.time()
         
         # Create a run-specific directory
@@ -231,21 +231,26 @@ class Miner(BaseMinerNeuron):
         # Track which names we've processed
         processed_names = []
         
-        # Process each name in the request, respecting the timeout
-        for name in tqdm(synapse.names, desc="Processing names"):
+        # Process each identity in the request, respecting the timeout
+        for i, identity in enumerate(tqdm(synapse.identity, desc="Processing identities")):
             # Check if we're approaching the timeout (reserve 15% for processing)
             elapsed = time.time() - start_time
             remaining = timeout - elapsed
             time_buffer = timeout * 0.15  # Reserve 15% of total time for final processing
             
-            # If time is running out, skip remaining names
+            # If time is running out, skip remaining identities
             if remaining < time_buffer:
                 bt.logging.warning(
                     f"Time limit approaching ({elapsed:.1f}/{timeout:.1f}s), "
-                    f"processed {len(processed_names)}/{len(synapse.names)} names. "
-                    f"Skipping remaining names to ensure timely response."
+                    f"processed {len(processed_names)}/{len(synapse.identity)} identities. "
+                    f"Skipping remaining identities to ensure timely response."
                 )
                 break
+            
+            # Extract name, dob, and address from identity array
+            name = identity[0] if len(identity) > 0 else "Unknown"
+            dob = identity[1] if len(identity) > 1 else "Unknown"
+            address = identity[2] if len(identity) > 2 else "Unknown"
             
             # Format the response list for later processing
             Response_list.append("Respond")
@@ -253,8 +258,10 @@ class Miner(BaseMinerNeuron):
             Response_list.append("Query-" + name)
             Response_list.append("---")
             
-            # Format the query with the current name
+            # Format the query with the current name, address, and DOB
             formatted_query = synapse.query_template.replace("{name}", name)
+            formatted_query = formatted_query.replace("{address}", address)
+            formatted_query = formatted_query.replace("{dob}", dob)
             
             # Query the LLM with timeout awareness
             try:
@@ -279,7 +286,7 @@ class Miner(BaseMinerNeuron):
         
         # Only proceed with processing if we have enough time
         if remaining > 1.0:  # Ensure at least 1 second for processing
-            variations = self.process_variations(Response_list, run_id, run_dir)
+            variations = self.process_variations(Response_list, run_id, run_dir, synapse.identity)
             bt.logging.info(f"======== FINAL VARIATIONS===============================================: {variations}")
             # Set the variations in the synapse for return to the validator
             synapse.variations = variations
@@ -291,7 +298,7 @@ class Miner(BaseMinerNeuron):
         total_time = time.time() - start_time
         bt.logging.info(
             f"Request completed in {total_time:.2f}s of {timeout:.1f}s allowed. "
-            f"Processed {len(processed_names)}/{len(synapse.names)} names."
+            f"Processed {len(processed_names)}/{len(synapse.identity)} names."
         )
         
         bt.logging.info(f"======== SYNAPSE VARIATIONS===============================================: {synapse.variations}")
@@ -355,29 +362,29 @@ Remember: Only provide the name variations in a clean, comma-separated format.
             bt.logging.error(f"LLM query failed: {str(e)}")
             raise
     
-    def process_variations(self, Response_list: List[str], run_id: int, run_dir: str) -> Dict[str, List[str]]:
+    def process_variations(self, Response_list: List[str], run_id: int, run_dir: str, identity_list: List[List[str]]) -> Dict[str, List[List[str]]]:
         """
-        Process LLM responses to extract name variations.
+        Process LLM responses to extract identity variations.
         
         This function takes the raw LLM responses and extracts the name variations
-        using the Process_function. It handles the parsing and cleaning of the
-        LLM outputs, ensuring that all variations are properly cleaned before
-        being returned or saved.
+        using the Process_function. It then creates structured variations that include
+        name, DOB, and address variations for each identity.
         
         Args:
             Response_list: List of LLM responses in the format:
                           ["Respond", "---", "Query-{name}", "---", "{LLM response}"]
             run_id: Unique identifier for this processing run
             run_dir: Directory to save run-specific files
+            identity_list: List of identity arrays, each containing [name, dob, address]
             
         Returns:
-            Dictionary mapping each name to its list of variations
+            Dictionary mapping each name to its list of [name, dob, address] variations
         """
         bt.logging.info(f"Processing {len(Response_list)} responses")
         # Split the responses by "Respond" to get individual responses
         Responds = "".join(Response_list).split("Respond")
         
-        # Create a dictionary to store each name and its variations
+        # Create a dictionary to store each name and its structured variations
         name_variations = {}
         
         # Process each response to extract variations
@@ -390,11 +397,26 @@ Remember: Only provide the name variations in a clean, comma-separated format.
                 # Extract the seed name and variations
                 name = llm_respond[0]
                 
+                # Find the corresponding identity in the identity list
+                matching_identity = None
+                for identity in identity_list:
+                    if len(identity) > 0 and identity[0] == name:
+                        matching_identity = identity
+                        break
+                
+                if matching_identity is None:
+                    bt.logging.warning(f"Could not find identity for name {name}")
+                    continue
+                
+                # Get corresponding address and DOB
+                seed_address = matching_identity[2] if len(matching_identity) > 2 else "Unknown"
+                seed_dob = matching_identity[1] if len(matching_identity) > 1 else "Unknown"
+                
                 # Filter out empty or NaN variations
                 variations = [var for var in llm_respond[2] if not pd.isna(var) and var != ""]
                 
-                # Clean each variation before storing
-                cleaned_variations = []
+                # Clean each variation and create structured entries
+                structured_variations = []
                 for var in variations:
                     # Remove unwanted characters
                     cleaned_var = var.replace(")", "").replace("(", "").replace("]", "").replace("[", "").replace(",", "")
@@ -402,19 +424,17 @@ Remember: Only provide the name variations in a clean, comma-separated format.
                     cleaned_var = cleaned_var.strip()
                     # Only add non-empty variations
                     if cleaned_var:
-                        cleaned_variations.append(cleaned_var)
+                        # Create structured variation entry: [name_variation, dob_variation, address_variation]
+                        structured_variation = [cleaned_var, seed_dob, seed_address]
+                        structured_variations.append(structured_variation)
                 
-                # Store the cleaned variations for this name
-                name_variations[name] = cleaned_variations
-                bt.logging.info(f"=================== Name variations: {name_variations}")
-                
-                bt.logging.info(f"Processed {len(cleaned_variations)} variations for {name}")
+                # Store the structured variations for this name
+                name_variations[name] = structured_variations
+                bt.logging.info(f"Processed {len(structured_variations)} variations for {name}")
             except Exception as e:
                 bt.logging.error(f"Error processing response {i}: {e}")
         
-        # # Save processed variations to JSON for debugging and analysis
-        # self.save_variations_to_json(name_variations, run_id, run_dir)
-        
+        bt.logging.info(f"Generated structured variations: {name_variations}")
         return name_variations
     
     def save_variations_to_json(self, name_variations: Dict[str, List[str]], run_id: int, run_dir: str) -> None:
