@@ -1385,7 +1385,7 @@ class QueryGenerator:
                         continue
                     
                     if first_name and last_name:
-                        full_name = f"{first_name} {last_name} ({script})"
+                        full_name = f"{first_name} {last_name}"
                         if full_name not in seen_names:
                             seed_identities_with_labels.append({"name": full_name, "dob": dob, "address": address, "label": "positive", "script": script})
                             seen_names.add(full_name)
@@ -1416,7 +1416,7 @@ class QueryGenerator:
                         continue
                     
                     if first_name and last_name:
-                        full_name = f"{first_name} {last_name} ({script})"
+                        full_name = f"{first_name} {last_name}"
                         if full_name not in seen_names:
                             seed_identities_with_labels.append({"name": full_name, "dob": dob, "address": address, "label": "positive", "script": script})
                             seen_names.add(full_name)
@@ -1460,8 +1460,8 @@ class QueryGenerator:
                             dob = fake.date_of_birth(minimum_age=18, maximum_age=100).strftime("%Y-%m-%d")
                             name = f"{first_name} {last_name}"
                             
-                            if (3 <= len(first_name) <= 20 and 3 <= len(last_name) <= 20):
-                                full_name = f"{first_name} {last_name} ({selected_script})"
+                            if (3 <= len(first_name) <= 20 and 3 <= len(last_name) <= 20 and " " not in first_name and " " not in last_name):
+                                full_name = f"{first_name} {last_name}"
                                 if full_name not in seen_names:
                                     generated_names_high_risk.append({"name": full_name, "dob": dob, "address": country_name, "label": "High Risk", "script": selected_script})
                                     seen_names.add(full_name)
@@ -1491,8 +1491,8 @@ class QueryGenerator:
                     name = f"{first_name} {last_name}"
                     
                     if (name not in generated_names_high_risk and name not in seen_names and 
-                        3 <= len(first_name) <= 20 and 3 <= len(last_name) <= 20):
-                                full_name = f"{first_name} {last_name} (latin)"
+                        3 <= len(first_name) <= 20 and 3 <= len(last_name) <= 20 and " " not in first_name and " " not in last_name):
+                                full_name = f"{first_name} {last_name}"
                                 if full_name not in seen_names:
                                     generated_names_high_risk.append({"name": full_name, "dob": dob, "address": country_name, "label": "High Risk", "script": 'latin'})
                                     seen_names.add(full_name)
@@ -1504,11 +1504,11 @@ class QueryGenerator:
                     first_name = fake.first_name().lower()
                     last_name = fake.last_name().lower()
                     dob = fake.date_of_birth(minimum_age=18, maximum_age=100).strftime("%Y-%m-%d")
-                    name = f"{first_name} {last_name} (latin)"
+                    name = f"{first_name} {last_name}"
                     
                     if (name not in generated_names_high_risk and name not in seen_names and 
-                        3 <= len(first_name) <= 20 and 3 <= len(last_name) <= 20):
-                            full_name = f"{first_name} {last_name} (latin)"
+                        3 <= len(first_name) <= 20 and 3 <= len(last_name) <= 20 and " " not in first_name and " " not in last_name):
+                            full_name = f"{first_name} {last_name}"
                             if full_name not in seen_names:
                                 generated_names_high_risk.append({"name": full_name, "dob": dob, "address": country_name, "label": "High Risk", "script": 'Latin'})
                                 seen_names.add(full_name)
@@ -1565,10 +1565,10 @@ class QueryGenerator:
                         elif non_latin_locale.startswith(("zh_", "ja_", "ko_")):
                             script_type = "chinese"
 
-                        name = f"{first_name} {last_name} ({script_type})"
+                        name = f"{first_name} {last_name}"
                         if (name not in generated_names and name not in seen_names and 
                             3 <= len(first_name) <= 20 and 
-                            3 <= len(last_name) <= 20):
+                            3 <= len(last_name) <= 20 and " " not in first_name and " " not in last_name):
                             generated_names.append({
                                 "name": name, 
                                 "dob": dob, 
@@ -1613,10 +1613,10 @@ class QueryGenerator:
                     bt.logging.debug(f"🔄 No valid country found for Latin locale after {max_country_attempts} attempts. Skipping this attempt.")
                     continue
 
-                name = f"{first_name} {last_name} (latin)"
+                name = f"{first_name} {last_name}"
                 if (name not in generated_names and name not in seen_names and 
                     3 <= len(first_name) <= 20 and 
-                    3 <= len(last_name) <= 20):
+                    3 <= len(last_name) <= 20 and " " not in first_name and " " not in last_name):
                     generated_names.append({
                         "name": name, 
                         "dob": dob, 
@@ -1732,6 +1732,8 @@ class QueryGenerator:
             while len(seed_names) < fallback_sample_size:
                 first_name = fake.first_name().lower()
                 last_name = fake.last_name().lower()
+                if " " in first_name or " " in last_name:
+                    continue
                 name = f"{first_name} {last_name}"
                 
                 # Randomly decide whether to add a title (1/10 chance)
