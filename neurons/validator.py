@@ -362,15 +362,9 @@ class Validator(BaseValidatorNeuron):
         wandb_name = "validator-" + str(self.uid) + "-" + run_id
         # Make sure to finish the previous run if it exists
         if self.wandb_run:
-            try:
-                bt.logging.info("Finishing previous wandb run before creating new one")
-                self.wandb_run.finish()
-                # Clean up all previous run folders after finishing
-                self.cleanup_all_wandb_runs()
-            except Exception as e:
-                bt.logging.error(f"Error finishing previous wandb run: {e}")
-            finally:
-                self.wandb_run = None
+            bt.logging.info("Skipping wandb.finish() and cleanup to avoid infinite loop - keeping previous run active")
+            # Skip both wandb.finish() and cleanup to prevent any hanging issues
+            # Keep wandb_run active instead of setting to None
 
         try:
             # Create the wandb run with connection to servers
@@ -405,7 +399,7 @@ class Validator(BaseValidatorNeuron):
                 },
                 allow_val_change=True,
                 reinit=True, # Allows reinitializing runs, useful with max_run_steps config
-                settings=settings
+                # settings=settings
             )
 
             bt.logging.info(f"Started new wandb run for forward pass: {wandb_name}")

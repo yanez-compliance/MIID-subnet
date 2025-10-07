@@ -577,19 +577,14 @@ async def forward(self):
         bt.logging.info(f"JSON file preserved at: {json_path}")
         bt.logging.info(f"Run directory preserved at: {run_dir}")
     
-    # --- FINISH WANDB RUN AFTER EACH FORWARD PASS ---
-    # Finish the wandb run after weights are set and logged (unless wandb is disabled)
+    # --- SKIP WANDB FINISH TO AVOID INFINITE LOOP ---
+    # Skip wandb.finish() to prevent infinite loop during upload
+    # Wandb logging during the run will continue to work normally
     if self.wandb_run and not wandb_disabled:
-        bt.logging.info("Finishing wandb run after completing validation cycle")
-        try:
-            self.wandb_run.finish()
-            # Clean up all wandb run folders after finishing
-            self.cleanup_all_wandb_runs()
-        except Exception as e:
-            bt.logging.error(f"Error finishing wandb run: {e}")
-        finally:
-            self.wandb_run = None
-    # --- END WANDB FINISH ---
+        bt.logging.info("Skipping wandb.finish() and cleanup to avoid infinite loop - logs are already uploaded during run")
+        # Skip both wandb.finish() and cleanup to prevent any hanging issues
+        # Keep wandb_run active for next cycle
+    # --- END WANDB SKIP ---
     
     # 10) Set weights and enforce min epoch time
     
