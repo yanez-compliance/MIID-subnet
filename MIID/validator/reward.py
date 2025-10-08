@@ -1859,6 +1859,13 @@ def get_name_variation_rewards(
     #     #bt.logging.info("No rule-based requirements specified")
     #     pass
     
+    # Validate that responses and uids have the same length
+    if len(responses) != len(uids):
+        bt.logging.error(f"CRITICAL: Length mismatch between responses ({len(responses)}) and uids ({len(uids)})")
+        raise ValueError(f"Length mismatch: responses={len(responses)}, uids={len(uids)}")
+    
+    bt.logging.info(f"Processing rewards for {len(responses)} miners with UIDs: {uids}")
+    
     # Process each miner's response
     for i, (response, uid) in enumerate(zip(responses, uids)):
         #bt.logging.info(f"\n{'='*50}")
@@ -2296,6 +2303,15 @@ def get_name_variation_rewards(
         bt.logging.warning("Using rewards without similarity penalties as fallback")
         # Keep the original rewards without applying similarity penalties
         # detailed_metrics would remain as calculated before the penalty step
+    
+    # Final verification: ensure rewards array length matches UIDs length
+    if len(rewards) != len(uids):
+        bt.logging.error(f"CRITICAL: Final rewards length ({len(rewards)}) does not match UIDs length ({len(uids)})")
+        raise ValueError(f"Final length mismatch: rewards={len(rewards)}, uids={len(uids)}")
+    
+    bt.logging.info(f"Successfully calculated rewards for {len(rewards)} miners")
+    bt.logging.debug(f"Final rewards: {rewards}")
+    bt.logging.debug(f"Final UIDs: {uids}")
     
     return rewards, detailed_metrics
 
