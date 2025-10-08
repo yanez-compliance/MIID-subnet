@@ -1301,10 +1301,15 @@ def _calculate_similarity_and_penalties(responses: list, uids: list, seed_names:
     
     # Convert IdentitySynapse objects to dictionaries for cheat detection
     response_dicts = []
-    for response in responses:
-        if hasattr(response, 'variations') and response.variations:
-            response_dicts.append(response.variations)
+    for i, uid in enumerate(uids):
+        if i < len(responses) and responses[i] is not None:
+            response = responses[i]
+            if hasattr(response, 'variations') and response.variations:
+                response_dicts.append(response.variations)
+            else:
+                response_dicts.append({})
         else:
+            # No response received for this miner
             response_dicts.append({})
     
     cheating_results = detect_cheating_patterns(response_dicts, uids, rewards, seed_names)
@@ -1398,79 +1403,72 @@ def _calculate_similarity_and_penalties(responses: list, uids: list, seed_names:
     bt.logging.info(f"\n{'='*60}")
     
     # Apply penalties and update metrics
-    updated_rewards = np.copy(rewards)
-    num_miners = len(responses)
+    updated_rewards = rewards.copy()  # Copy the UID-based rewards dictionary
+    num_miners = len(uids)  # Process all miners, not just those with responses
     for i in range(num_miners):
         uid = uids[i]
         total_penalty = 0
 
         # Always record special character observability metrics
-        if i < len(detailed_metrics):
-            miner_metrics = detailed_metrics[i]
-            miner_metrics.setdefault('penalties', {})
-            miner_metrics['penalties']['special_chars_ratio'] = float(special_char_ratios[i])
-            miner_metrics['penalties']['special_char_variations_count'] = int(special_char_counts[i])
-            miner_metrics['penalties']['total_variations_count'] = int(total_variations_counts[i])
+        miner_metrics = detailed_metrics[uid]
+        miner_metrics.setdefault('penalties', {})
+        miner_metrics['penalties']['special_chars_ratio'] = float(special_char_ratios[i])
+        miner_metrics['penalties']['special_char_variations_count'] = int(special_char_counts[i])
+        miner_metrics['penalties']['total_variations_count'] = int(total_variations_counts[i])
 
         # Collusion Penalty
         if collusion_penalties[i] > 0:
             penalty_amount = collusion_penalties[i]
             total_penalty += penalty_amount
-            if i < len(detailed_metrics):
-                miner_metrics = detailed_metrics[i]
-                miner_metrics.setdefault('penalties', {})
-                miner_metrics['penalties']['collusion'] = penalty_amount
+            miner_metrics = detailed_metrics[uid]
+            miner_metrics.setdefault('penalties', {})
+            miner_metrics['penalties']['collusion'] = penalty_amount
 
         # Duplication Penalty
         if duplication_penalties[i] > 0:
             penalty_amount = duplication_penalties[i]
             total_penalty += penalty_amount
-            if i < len(detailed_metrics):
-                miner_metrics = detailed_metrics[i]
-                miner_metrics.setdefault('penalties', {})
-                miner_metrics['penalties']['duplication'] = penalty_amount
+            miner_metrics = detailed_metrics[uid]
+            miner_metrics.setdefault('penalties', {})
+            miner_metrics['penalties']['duplication'] = penalty_amount
 
         # Signature (exact-copy) Penalty
         if signature_penalties[i] > 0:
             penalty_amount = signature_penalties[i]
             total_penalty += penalty_amount
-            if i < len(detailed_metrics):
-                miner_metrics = detailed_metrics[i]
-                miner_metrics.setdefault('penalties', {})
-                miner_metrics['penalties']['signature_copy'] = penalty_amount
+            miner_metrics = detailed_metrics[uid]
+            miner_metrics.setdefault('penalties', {})
+            miner_metrics['penalties']['signature_copy'] = penalty_amount
 
         # Special Character Penalty
         if special_char_penalties[i] > 0:
             penalty_amount = special_char_penalties[i]
             total_penalty += penalty_amount
-            if i < len(detailed_metrics):
-                miner_metrics = detailed_metrics[i]
-                miner_metrics.setdefault('penalties', {})
-                miner_metrics['penalties']['special_chars'] = penalty_amount
+            miner_metrics = detailed_metrics[uid]
+            miner_metrics.setdefault('penalties', {})
+            miner_metrics['penalties']['special_chars'] = penalty_amount
 
         # Address Duplication Penalty
         if address_duplication_penalties[i] > 0:
             penalty_amount = address_duplication_penalties[i]
             total_penalty += penalty_amount
-            if i < len(detailed_metrics):
-                miner_metrics = detailed_metrics[i]
-                miner_metrics.setdefault('penalties', {})
-                miner_metrics['penalties']['address_duplication'] = penalty_amount
+            miner_metrics = detailed_metrics[uid]
+            miner_metrics.setdefault('penalties', {})
+            miner_metrics['penalties']['address_duplication'] = penalty_amount
 
         # Apply combined penalty
         if total_penalty > 0:
             total_penalty = min(total_penalty, 1.0) # Cap total penalty
-            current_reward = updated_rewards[i]
+            current_reward = updated_rewards[uid]
             penalized_reward = current_reward * (1.0 - total_penalty)
-            updated_rewards[i] = penalized_reward
-            if i < len(detailed_metrics):
-                # Record post-processing penalties separately and combined with pre-penalties
-                miner_metrics = detailed_metrics[i]
-                miner_metrics.setdefault('penalties', {})
-                miner_metrics['penalties']['post_total_penalty'] = float(total_penalty)
-                pre_total_penalty = float(miner_metrics['penalties'].get('total_penalty', 0.0))
-                miner_metrics['penalties']['overall_total_penalty'] = (1.0 - pre_total_penalty) * (1.0 - total_penalty)
-                detailed_metrics[i]['final_reward'] = penalized_reward
+            updated_rewards[uid] = penalized_reward
+            # Record post-processing penalties separately and combined with pre-penalties
+            miner_metrics = detailed_metrics[uid]
+            miner_metrics.setdefault('penalties', {})
+            miner_metrics['penalties']['post_total_penalty'] = float(total_penalty)
+            pre_total_penalty = float(miner_metrics['penalties'].get('total_penalty', 0.0))
+            miner_metrics['penalties']['overall_total_penalty'] = (1.0 - pre_total_penalty) * (1.0 - total_penalty)
+            detailed_metrics[uid]['final_reward'] = penalized_reward
 
     bt.logging.info(f"✅ Cheating detection and penalty application completed")
     bt.logging.info(f"{'='*60}\n")
@@ -1846,8 +1844,9 @@ def get_name_variation_rewards(
     
     # Run ID is now managed at the forward pass level, not in reward function
     
-    rewards = np.zeros(len(uids))
-    detailed_metrics = []  # Store detailed metrics for each miner
+    # Use UID-based indexing instead of index-based
+    rewards = {uid: 0.0 for uid in uids}
+    detailed_metrics = {uid: {} for uid in uids}  # Store detailed metrics for each miner
     
     # Log rule-based requirements if provided
     # if rule_based:
@@ -1892,14 +1891,14 @@ def get_name_variation_rewards(
                 bt.logging.warning(f"Miner {uid} did not respond")
             else:
                 bt.logging.warning(f"Miner {uid} returned invalid or empty response")
-            rewards[i] = 0.0
+            rewards[uid] = 0.0
             # Correctly set metrics for invalid/empty response
             miner_metrics["penalties"]["missing_names"] = 1.0  # All names are missing
             miner_metrics["penalties"]["total_penalty"] = 1.0 
             miner_metrics["completeness_multiplier"] = 0.0
             miner_metrics["average_quality"] = 0.0
             miner_metrics["final_reward"] = 0.0
-            detailed_metrics.append(miner_metrics)
+            detailed_metrics[uid] = miner_metrics
             continue
             
         quality_scores = []
@@ -2230,13 +2229,13 @@ def get_name_variation_rewards(
             # Final quality is sum of all components
             final_quality = quality_component + dob_component + address_component
             
-            rewards[i] = final_quality * completeness_multiplier
+            rewards[uid] = final_quality * completeness_multiplier
             miner_metrics["average_base_score"] = float(avg_base_score)
             miner_metrics["average_quality"] = float(avg_quality)
             miner_metrics["dob_adjusted_quality"] = float(final_quality)
-            miner_metrics["final_reward"] = float(rewards[i])
+            miner_metrics["final_reward"] = float(rewards[uid])
         else:
-            rewards[i] = 0.0
+            rewards[uid] = 0.0
             miner_metrics["average_quality"] = 0.0
             miner_metrics["dob_adjusted_quality"] = 0.0
             miner_metrics["final_reward"] = 0.0

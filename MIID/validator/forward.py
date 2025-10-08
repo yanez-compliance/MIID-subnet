@@ -331,7 +331,9 @@ async def forward(self):
         rule_based=query_labels.get('rule_based')  # Pass rule-based metadata
     )
 
-    self.update_scores(rewards, miner_uids)
+    # Convert UID-based rewards back to numpy array for update_scores
+    rewards_array = np.array([rewards[uid] for uid in miner_uids])
+    self.update_scores(rewards_array, miner_uids)
     bt.logging.info(f"REWARDS: {rewards}  for MINER UIDs: {miner_uids}")
 
     # 8) Save results locally
@@ -418,39 +420,63 @@ async def forward(self):
         "rewards": {}
     }
 
+    # Create UID-based mappings for easier access
+    uid_to_response = {}
+    uid_to_metrics = {}
+    
+    # Map responses to UIDs
     for i, uid in enumerate(miner_uids):
-        if i < len(all_responses):
-            bt.logging.info(f"#########################################Response Time miner {uid}: {all_responses[i].process_time}#########################################")
-
-            # Convert the response to a serializable format
-            response_data = {
-                "uid": int(uid),
-                "hotkey": str(self.metagraph.axons[uid].hotkey),
-                "response_time": all_responses[i].process_time,  # When we processed this response
-                "variations": {},
-                "error": None,
-                "scoring_details": detailed_metrics[i] if i < len(detailed_metrics) else {}
-            }
+        if i < len(all_responses) and all_responses[i] is not None:
+            uid_to_response[uid] = all_responses[i]
+        else:
+            uid_to_response[uid] = None
+    
+    # detailed_metrics is now already UID-based, so we can use it directly
+    uid_to_metrics = detailed_metrics
+    
+    # Process each miner using UID-based access
+    for uid in miner_uids:
+        # Convert the response to a serializable format
+        response_data = {
+            "uid": int(uid),
+            "hotkey": str(self.metagraph.axons[uid].hotkey),
+            "response_time": None,
+            "variations": {},
+            "error": None,
+            "scoring_details": uid_to_metrics[uid]
+        }
+        
+        response = uid_to_response[uid]
+        if response is not None:
+            bt.logging.info(f"#########################################Response Time miner {uid}: {response.process_time}#########################################")
+            response_data["response_time"] = response.process_time  # When we processed this response
             
             # Add variations if available
-            if hasattr(all_responses[i], 'variations') and all_responses[i].variations is not None:
-                response_data["variations"] = all_responses[i].variations
+            if hasattr(response, 'variations') and response.variations is not None:
+                response_data["variations"] = response.variations
             else:
                 # Log error information if available
-                if hasattr(all_responses[i], 'dendrite') and hasattr(all_responses[i].dendrite, 'status_code'):
+                if hasattr(response, 'dendrite') and hasattr(response.dendrite, 'status_code'):
                     response_data["error"] = {
-                        "status_code": all_responses[i].dendrite.status_code,
-                        "status_message": getattr(all_responses[i].dendrite, 'status_message', 'Unknown error')
+                        "status_code": response.dendrite.status_code,
+                        "status_message": getattr(response.dendrite, 'status_message', 'Unknown error')
                     }
                 else:
                     response_data["error"] = {
                         "message": "Invalid response format",
-                        "response_type": str(type(all_responses[i]))
+                        "response_type": str(type(response))
                     }
-            
-            # Add to the results
-            results["responses"][str(uid)] = response_data
-            results["rewards"][str(uid)] = float(rewards[i]) if i < len(rewards) else 0.0
+        else:
+            # No response received for this miner
+            response_data["error"] = {
+                "message": "No response received",
+                "status_code": "TIMEOUT"
+            }
+            bt.logging.warning(f"Miner {uid} did not respond")
+        
+        # Add to the results - every miner gets an entry
+        results["responses"][str(uid)] = response_data
+        results["rewards"][str(uid)] = float(rewards[uid])  # Use UID-based indexing
     
     # logging the spec_version before setting weights
     bt.logging.info(f"Spec version for setting weights: {self.spec_version}")
@@ -549,11 +575,14 @@ async def forward(self):
     
     wandb_extra_data["upload_success"] = upload_success
 
+    # Convert UID-based detailed_metrics back to list for log_step
+    detailed_metrics_list = [detailed_metrics[uid] for uid in miner_uids]
+    
     # Call log_step from the Validator instance AFTER the upload attempt
     self.log_step(
         uids=miner_uids, # Pass the list of uids
-        metrics=detailed_metrics, # Pass the detailed metrics list
-        rewards=rewards, # Pass the numpy array of rewards
+        metrics=detailed_metrics_list, # Pass the detailed metrics list
+        rewards=rewards_array, # Pass the numpy array of rewards
         extra_data=wandb_extra_data # Pass additional context
     )
     
