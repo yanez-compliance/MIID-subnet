@@ -2024,8 +2024,10 @@ def get_name_variation_rewards(
         # Optionally cap at 1.0 total
         extra_names_penalty = min(extra_names_penalty, 1.0)
         miner_metrics["penalties"]["extra_names"] = extra_names_penalty
-        miner_metrics["penalties"]["extra_names"]["dob_duplicates"] = dob_duplicates_penalty
-        miner_metrics["penalties"]["extra_names"]["address_duplicates"] = address_duplicates_penalty
+        miner_metrics["penalties"]["extra_names_breakdown"] = {
+            "dob_duplicates": dob_duplicates_penalty,
+            "address_duplicates": address_duplicates_penalty
+        }
     
         # Calculate penalty for missing names
         missing_names = set(seed_names) - set(variations.keys())
