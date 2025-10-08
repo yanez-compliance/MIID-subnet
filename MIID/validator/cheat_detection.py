@@ -324,9 +324,11 @@ def detect_cheating_patterns(
                 unique_addresses = set(all_addresses)
                 duplicate_count = len(all_addresses) - len(unique_addresses)
                 if duplicate_count > 0:
-                    # Apply penalty based on duplicate ratio
+                    # Apply penalty based on duplicate ratio, normalized and capped at 0.2
                     duplicate_ratio = duplicate_count / len(all_addresses)
-                    address_duplication_penalties[i] = min(duplicate_ratio, 1.0)
+                    # Normalize: scale the ratio to 0-1 range, then scale to 0-0.2 range
+                    normalized_penalty = duplicate_ratio * 0.2
+                    address_duplication_penalties[i] = min(normalized_penalty, 0.2)
         
         if not variations:
             all_normalized_sets.append(None)
