@@ -244,7 +244,8 @@ async def forward(self):
 
     # 6) Query the network in batches
     start_time = time.time()
-    all_responses = []
+    # Use a dictionary to maintain UID-response mapping instead of separate lists
+    uid_response_map = {}
     batch_size = self.config.neuron.batch_size
     total_batches = (len(miner_uids) + batch_size - 1) // batch_size
     
@@ -270,8 +271,11 @@ async def forward(self):
         batch_duration = time.time() - batch_start_time
         bt.logging.info(f"Batch {i//batch_size + 1} completed in {batch_duration:.1f}s")
 
+        # Map each response to its corresponding UID
         for idx_resp, response in enumerate(batch_responses):
             uid = batch_uids[idx_resp]
+            uid_response_map[uid] = response
+            
             if not hasattr(response, 'variations'):
                 bt.logging.warning(f"Miner {uid} returned response without 'variations' attribute.")
             elif response.variations is None:
@@ -295,12 +299,13 @@ async def forward(self):
                         
                 bt.logging.info(f"Miner {uid} returned {len(response.variations)} identity variations with {total_variations} total variations.")
         
-        all_responses.extend(batch_responses)
-        
         if i + batch_size < len(miner_uids):
             sleep_time = 2
             bt.logging.info(f"Sleeping for {sleep_time}s before next batch")
             await asyncio.sleep(sleep_time)
+    
+    # Create ordered lists from the mapping to maintain consistency
+    all_responses = [uid_response_map[uid] for uid in miner_uids]
     
     end_time = time.time()
     bt.logging.info(f"Query completed in {end_time - start_time:.2f} seconds")
@@ -331,6 +336,15 @@ async def forward(self):
         rule_based=query_labels.get('rule_based')  # Pass rule-based metadata
     )
 
+    # Verify UID-reward mapping before updating scores
+    bt.logging.info("=== UID-REWARD MAPPING VERIFICATION ===")
+    for i, uid in enumerate(miner_uids):
+        reward = rewards[i] if i < len(rewards) else 0.0
+        response = uid_response_map.get(uid)
+        has_response = response is not None
+        bt.logging.info(f"UID {uid}: Reward={reward:.4f}, HasResponse={has_response}")
+    bt.logging.info("=== END UID-REWARD MAPPING VERIFICATION ===")
+    
     self.update_scores(rewards, miner_uids)
     bt.logging.info(f"REWARDS: {rewards}  for MINER UIDs: {miner_uids}")
 
@@ -419,38 +433,55 @@ async def forward(self):
     }
 
     for i, uid in enumerate(miner_uids):
-        if i < len(all_responses):
-            bt.logging.info(f"#########################################Response Time miner {uid}: {all_responses[i].process_time}#########################################")
+        # Get the response for this specific UID from our mapping
+        response = uid_response_map.get(uid)
+        
+        if response is not None:
+            bt.logging.info(f"#########################################Response Time miner {uid}: {response.process_time}#########################################")
 
             # Convert the response to a serializable format
             response_data = {
                 "uid": int(uid),
                 "hotkey": str(self.metagraph.axons[uid].hotkey),
-                "response_time": all_responses[i].process_time,  # When we processed this response
+                "response_time": response.process_time,  # When we processed this response
                 "variations": {},
                 "error": None,
                 "scoring_details": detailed_metrics[i] if i < len(detailed_metrics) else {}
             }
             
             # Add variations if available
-            if hasattr(all_responses[i], 'variations') and all_responses[i].variations is not None:
-                response_data["variations"] = all_responses[i].variations
+            if hasattr(response, 'variations') and response.variations is not None:
+                response_data["variations"] = response.variations
             else:
                 # Log error information if available
-                if hasattr(all_responses[i], 'dendrite') and hasattr(all_responses[i].dendrite, 'status_code'):
+                if hasattr(response, 'dendrite') and hasattr(response.dendrite, 'status_code'):
                     response_data["error"] = {
-                        "status_code": all_responses[i].dendrite.status_code,
-                        "status_message": getattr(all_responses[i].dendrite, 'status_message', 'Unknown error')
+                        "status_code": response.dendrite.status_code,
+                        "status_message": getattr(response.dendrite, 'status_message', 'Unknown error')
                     }
                 else:
                     response_data["error"] = {
                         "message": "Invalid response format",
-                        "response_type": str(type(all_responses[i]))
+                        "response_type": str(type(response))
                     }
-            
-            # Add to the results
-            results["responses"][str(uid)] = response_data
-            results["rewards"][str(uid)] = float(rewards[i]) if i < len(rewards) else 0.0
+        else:
+            # Handle case where no response was received for this UID
+            bt.logging.warning(f"No response received for miner {uid}")
+            response_data = {
+                "uid": int(uid),
+                "hotkey": str(self.metagraph.axons[uid].hotkey),
+                "response_time": None,
+                "variations": {},
+                "error": {
+                    "message": "No response received",
+                    "response_type": "None"
+                },
+                "scoring_details": detailed_metrics[i] if i < len(detailed_metrics) else {}
+            }
+        
+        # Add to the results
+        results["responses"][str(uid)] = response_data
+        results["rewards"][str(uid)] = float(rewards[i]) if i < len(rewards) else 0.0
     
     # logging the spec_version before setting weights
     bt.logging.info(f"Spec version for setting weights: {self.spec_version}")
