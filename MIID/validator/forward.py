@@ -92,7 +92,7 @@ async def dendrite_with_retries(dendrite: bt.dendrite, axons: list, synapse: Ide
             axons=axons_for_retry,
             synapse=synapse,
             deserialize=deserialize,
-            timeout=timeout * (1 + attempt * 1.0)
+            timeout=timeout * (1 + attempt * 0.1)
         )
         
         new_idx = []
@@ -264,7 +264,7 @@ async def forward(self):
             synapse=request_synapse,
             deserialize=False,
             timeout=adaptive_timeout,
-            cnt_attempts=7
+            cnt_attempts=3
         )
         
         batch_duration = time.time() - batch_start_time
