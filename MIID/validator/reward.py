@@ -442,6 +442,10 @@ def transliterate_name_with_llm(original_name: str, script: str, model_name: str
             try:
                 prompt = f"Transliterate this {script} name to Latin script, output only the name:\n{original_name}"
 
+                adaptive_timeout = 10
+                if attempts == 4:
+                    adaptive_timeout = 30
+
                 response = ollama.generate(
                     model=current_model,
                     prompt=prompt,
@@ -449,7 +453,7 @@ def transliterate_name_with_llm(original_name: str, script: str, model_name: str
                         'temperature': 0.1,
                         'top_p': 0.9,
                         'max_tokens': 50,
-                        'timeout': 30
+                        'timeout': adaptive_timeout
                     }
                 )
 
@@ -1922,16 +1926,16 @@ def get_name_variation_rewards(
                 continue
             
             # Check if each variation has at least 3 elements (name, dob, address)
-            for i, var in enumerate(vars_list):
+            for j, var in enumerate(vars_list):
                 if not isinstance(var, (list, tuple)) or len(var) < 3:
-                    bt.logging.warning(f"Miner {uid} provided incomplete variation {i} for {name}: expected [name, dob, address], got {var}")
+                    bt.logging.warning(f"Miner {uid} provided incomplete variation {j} for {name}: expected [name, dob, address], got {var}")
                     # Pad with empty strings if needed
                     if isinstance(var, (list, tuple)):
                         while len(var) < 3:
                             var.append("")
                     else:
                         # If it's not a list/tuple, replace it with a properly formatted one
-                        vars_list[i] = [str(var) if var else "", "", ""]
+                        vars_list[j] = [str(var) if var else "", "", ""]
         
         # Penalty for too many variations per name, DOB, and addresses
         for name, vars_list in variations.items():
