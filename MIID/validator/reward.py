@@ -1469,7 +1469,8 @@ def _calculate_similarity_and_penalties(responses: list, uids: list, seed_names:
                 miner_metrics.setdefault('penalties', {})
                 miner_metrics['penalties']['post_total_penalty'] = float(total_penalty)
                 pre_total_penalty = float(miner_metrics['penalties'].get('total_penalty', 0.0))
-                miner_metrics['penalties']['overall_total_penalty'] = (1.0 - pre_total_penalty) * (1.0 - total_penalty)
+                # miner_metrics['penalties']['overall_total_penalty'] = (1.0 - pre_total_penalty) * (1.0 - total_penalty)
+                miner_metrics['penalties']['overall_total_penalty'] = 1.0 - ((1.0 - pre_total_penalty) * (1.0 - total_penalty))
                 detailed_metrics[i]['final_reward'] = penalized_reward
 
     bt.logging.info(f"✅ Cheating detection and penalty application completed")
@@ -1869,6 +1870,8 @@ def get_name_variation_rewards(
             "penalties": {
                 "extra_names": 0.0,
                 "missing_names": 0.0,
+                "insufficient_addresses": 0.0,
+                "insufficient_dob": 0.0,
                 "total_penalty": 0.0
             },
             "completeness_multiplier": 1.0,
@@ -1987,26 +1990,35 @@ def get_name_variation_rewards(
                 extra_names_penalty += penalty_duplicates
             
             # Penalty for duplicate variations - DOB (with normalization)
+            dob_duplicates_penalty = 0.0
             if dob_variations:  # Check if DOB list exists and is not empty
                 normalized_dobs = [normalize_dob(dob) for dob in dob_variations if dob]  # Filter out empty strings
                 duplicates_dob = len(normalized_dobs) - len(set(normalized_dobs))
                 if duplicates_dob > 0:
                     penalty_duplicates = duplicates_dob * 0.05  # e.g. 5% penalty per duplicate
                     # bt.logging.info(f"Duplicate DOB variations for {name}: {duplicates_dob} duplicates → penalty {penalty_duplicates}")
-                    extra_names_penalty += penalty_duplicates
+                    dob_duplicates_penalty += penalty_duplicates
             
+            dob_duplicates_penalty = min(dob_duplicates_penalty, 0.1)  # Max 10% penalty
             # Penalty for duplicate variations - addresses (with normalization)
+            address_duplicates_penalty = 0.0
             if address_variations:  # Check if address list exists and is not empty
                 normalized_addresses = [normalize_address(addr) for addr in address_variations if addr]  # Filter out empty strings
                 duplicates_addresses = len(normalized_addresses) - len(set(normalized_addresses))
                 if duplicates_addresses > 0:
                     penalty_duplicates = duplicates_addresses * 0.05  # e.g. 5% penalty per duplicate
                     # bt.logging.info(f"Duplicate address variations for {name}: {duplicates_addresses} duplicates → penalty {penalty_duplicates}")
-                    extra_names_penalty += penalty_duplicates
+                    address_duplicates_penalty += penalty_duplicates
+            
+            address_duplicates_penalty = min(address_duplicates_penalty, 0.2)  # Max 20% penalty
+
+            extra_names_penalty = extra_names_penalty + dob_duplicates_penalty + address_duplicates_penalty
 
         # Optionally cap at 1.0 total
         extra_names_penalty = min(extra_names_penalty, 1.0)
         miner_metrics["penalties"]["extra_names"] = extra_names_penalty
+        miner_metrics["penalties"]["extra_names"]["dob_duplicates"] = dob_duplicates_penalty
+        miner_metrics["penalties"]["extra_names"]["address_duplicates"] = address_duplicates_penalty
     
         # Calculate penalty for missing names
         missing_names = set(seed_names) - set(variations.keys())
@@ -2038,10 +2050,8 @@ def get_name_variation_rewards(
                     bt.logging.warning(f"Miner {uid} insufficient address variations for {name}: {address_count}/{min_required} → penalty {penalty_per_name}")
         
         # Cap the insufficient addresses penalty
-        insufficient_addresses_penalty = min(insufficient_addresses_penalty, 0.7)  # Max 70% penalty
+        insufficient_addresses_penalty = min(insufficient_addresses_penalty, 0.2)  # Max 20% penalty
         miner_metrics["penalties"]["insufficient_addresses"] = float(insufficient_addresses_penalty)
-        if insufficient_addresses:
-            miner_metrics["insufficient_addresses"] = insufficient_addresses
         
         # Calculate penalty for insufficient DOB variations
         insufficient_dob_penalty = 0.0
@@ -2063,10 +2073,8 @@ def get_name_variation_rewards(
                     bt.logging.warning(f"Miner {uid} insufficient DOB variations for {name}: {dob_count}/{min_required} → penalty {penalty_per_name}")
         
         # Cap the insufficient DOB penalty
-        insufficient_dob_penalty = min(insufficient_dob_penalty, 0.7)  # Max 70% penalty
+        insufficient_dob_penalty = min(insufficient_dob_penalty, 0.1)  # Max 10% penalty
         miner_metrics["penalties"]["insufficient_dob"] = float(insufficient_dob_penalty)
-        if insufficient_dob:
-            miner_metrics["insufficient_dob"] = insufficient_dob
         
         # Calculate total penalty and completeness multiplier
         total_penalty = min(0.9, miner_metrics["penalties"]["extra_names"] + miner_metrics["penalties"]["missing_names"] + miner_metrics["penalties"]["insufficient_addresses"] + miner_metrics["penalties"]["insufficient_dob"])
@@ -2129,6 +2137,7 @@ def get_name_variation_rewards(
                 bt.logging.error(f"Error calculating quality for miner {uid}, name '{base_name}': {str(e)}")
                 traceback.print_exc()
 
+        start_time = time.time()
         # Process each non-Latin seed name using phonetic-only scoring with LLM transliteration
         for name, script in zip(seed_names, seed_script):
             if name not in variations or not variations[name]:
@@ -2173,6 +2182,8 @@ def get_name_variation_rewards(
             quality_scores.append(quality)
             base_scores.append(base_score)
             miner_metrics["name_metrics"][name] = name_detailed_metrics
+        end_time = time.time()
+        bt.logging.info(f"Phonetic-only scoring time: {end_time - start_time:.2f} seconds")
         
         # Calculate overall rule compliance score if applicable
         if rule_based and quality_scores and any("rule_compliance" in miner_metrics["name_metrics"].get(name, {}) for name in seed_names):
@@ -2189,8 +2200,11 @@ def get_name_variation_rewards(
         miner_metrics["dob_grading"] = dob_grading_score
         
         # Grade address variations before final reward calculation
+        start_time = time.time()
         address_grading_score = _grade_address_variations(variations, seed_addresses, miner_metrics)
         miner_metrics["address_grading"] = address_grading_score
+        end_time = time.time()
+        bt.logging.info(f"Address grading time: {end_time - start_time:.2f} seconds")
         
         # Calculate final reward incorporating DOB and address grading
         if quality_scores:
@@ -2223,12 +2237,12 @@ def get_name_variation_rewards(
             rewards[i] = final_quality * completeness_multiplier
             miner_metrics["average_base_score"] = float(avg_base_score)
             miner_metrics["average_quality"] = float(avg_quality)
-            miner_metrics["dob_adjusted_quality"] = float(final_quality)
+            miner_metrics["identity_quality"] = float(final_quality)
             miner_metrics["final_reward"] = float(rewards[i])
         else:
             rewards[i] = 0.0
             miner_metrics["average_quality"] = 0.0
-            miner_metrics["dob_adjusted_quality"] = 0.0
+            miner_metrics["identity_quality"] = 0.0
             miner_metrics["final_reward"] = 0.0
         
         # # # ADD DETAILED LOGGING HERE to debug 0.0 scores
