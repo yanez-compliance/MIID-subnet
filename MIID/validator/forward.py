@@ -145,7 +145,11 @@ async def dendrite_with_retries(dendrite: bt.dendrite, axons: list, synapse: Ide
                         new_idx.append(idx[i])
                         new_axons.append(axons_for_retry[i])
         
-        if not new_idx:
+        if len(new_idx) <= 50:  # Only retry if more than 50 miners failed
+            bt.logging.info(f"Only {len(new_idx)} miners failed (≤50 threshold). Giving them default responses instead of retrying.")
+            # Give default responses to failed miners
+            for i in new_idx:
+                res[i] = create_default_response()
             break
         
         idx = new_idx
