@@ -309,6 +309,26 @@ def extract_city_country(address: str) -> tuple:
 
     return "", country
 
+# Global cache for geonames data to avoid reloading
+_geonames_cache = None
+_cities_data = None
+_countries_data = None
+
+def get_geonames_data():
+    """Get cached geonames data, loading it only once."""
+    global _geonames_cache, _cities_data, _countries_data
+    
+    if _geonames_cache is None:
+        bt.logging.info("Loading geonames data for the first time...")
+        start_time = time.time()
+        _geonames_cache = geonamescache.GeonamesCache()
+        _cities_data = _geonames_cache.get_cities()
+        _countries_data = _geonames_cache.get_countries()
+        end_time = time.time()
+        bt.logging.info(f"Geonames data loaded in {end_time - start_time:.2f} seconds")
+    
+    return _cities_data, _countries_data
+
 def city_in_country(city_name: str, country_name: str) -> bool:
     """
     Check if a city is actually in the specified country using geonamescache.
@@ -324,9 +344,7 @@ def city_in_country(city_name: str, country_name: str) -> bool:
         return False
     
     try:
-        gc = geonamescache.GeonamesCache()
-        cities = gc.get_cities()
-        countries = gc.get_countries()
+        cities, countries = get_geonames_data()
         
         city_name_lower = city_name.lower()
         country_name_lower = country_name.lower()
@@ -1866,6 +1884,22 @@ def get_name_variation_rewards(
     
     bt.logging.info(f"Processing rewards for {len(responses)} miners with UIDs: {uids}")
     
+    # Pre-transliterate non-Latin seed names once for all miners
+    bt.logging.info("Pre-transliterating non-Latin seed names...")
+    start_time = time.time()
+    transliterated_seed_names = {}
+    for name, script in zip(seed_names, seed_script):
+        if script != "latin":
+            bt.logging.info(f"Transliterating non-Latin name: '{name}' (script: {script})")
+            transliterated_name = transliterate_name_with_llm(name, script)
+            transliterated_seed_names[name] = transliterated_name
+            bt.logging.info(f"Transliterated '{name}' to '{transliterated_name}'")
+        else:
+            transliterated_seed_names[name] = name  # Keep Latin names as-is
+    end_time = time.time()
+    bt.logging.info(f"Transliteration complete in {end_time - start_time:.2f} seconds")
+    bt.logging.info(f"Transliteration complete. Transliterated names: {transliterated_seed_names}")
+    
     # Process each miner's response
     for i, (response, uid) in enumerate(zip(responses, uids)):
         #bt.logging.info(f"\n{'='*50}")
@@ -2147,7 +2181,7 @@ def get_name_variation_rewards(
                 traceback.print_exc()
 
         start_time = time.time()
-        # Process each non-Latin seed name using phonetic-only scoring with LLM transliteration
+        # Process each non-Latin seed name using phonetic-only scoring with pre-transliterated names
         for name, script in zip(seed_names, seed_script):
             if name not in variations or not variations[name]:
                 continue
@@ -2161,11 +2195,9 @@ def get_name_variation_rewards(
             all_variations = variations[name]
             name_variations = [var[0] for var in all_variations if len(var) > 0 and var[0]]
             
-            # Use LLM to transliterate the non-Latin name to Latin script
-            bt.logging.info(f"Transliterating non-Latin name: '{name}'")
-            transliterated_name = transliterate_name_with_llm(name, script)
+            # Use pre-transliterated name
+            transliterated_name = transliterated_seed_names[name]
             
-            bt.logging.info(f"Transliterated '{name}' to '{transliterated_name}'")
             # Use phonetic-only scoring on transliterated name
             try:
                 quality, base_score, name_detailed_metrics = calculate_variation_quality_phonetic_only(
@@ -2221,9 +2253,9 @@ def get_name_variation_rewards(
             avg_base_score = sum(base_scores) / len(base_scores)
             
             # Separate weights for each component
-            quality_weight = 0.7
+            quality_weight = 0.6
             dob_weight = 0.1
-            address_weight = 0.2
+            address_weight = 0.3
             
             # Calculate each component separately
             quality_component = avg_quality * quality_weight
@@ -2278,21 +2310,15 @@ def get_name_variation_rewards(
         detailed_metrics.append(miner_metrics)
         
     # After initial rewards are calculated, apply penalties for high similarity between miners
-    # Process seed names for cheating detection
+    # Process seed names for cheating detection using pre-transliterated names
     processed_seed_names = []
     for name, script in zip(seed_names, seed_script):
         if script != "latin":
-            # Get the LLM-provided transliterated name for this seed name, if available
-            transliterated_name = None
-            if name in miner_metrics.get("name_metrics", {}) and "transliteration" in miner_metrics["name_metrics"][name]:
-                transliterated_name = miner_metrics["name_metrics"][name]["transliteration"].get("transliterated_name")
-            if transliterated_name:
-                processed_seed_names.append(transliterated_name)
-            else:
-                processed_seed_names.append(name)
-            continue
-        # Use name as-is without script suffix processing
-        processed_seed_names.append(name)
+            # Use pre-transliterated name
+            processed_seed_names.append(transliterated_seed_names[name])
+        else:
+            # Use name as-is without script suffix processing
+            processed_seed_names.append(name)
     
     bt.logging.info(f"Processed seed names for cheating detection: {processed_seed_names}")
     
@@ -2397,7 +2423,7 @@ def calculate_rule_compliance_score(
     overall_compliant_count = len(rules_satisfied_by_variation)
     expected_compliant_count = max(1, int(len(variations) * target_percentage))
     
-    bt.logging.info(f"Found {overall_compliant_count} unique variations complying with at least one target rule (expected ~{expected_compliant_count} based on target percentage)")
+    # bt.logging.info(f"Found {overall_compliant_count} unique variations complying with at least one target rule (expected ~{expected_compliant_count} based on target percentage)")
     
     # for rule, variations_list in compliant_variations_by_rule.items():
     #     # This logging shows all rules returned by evaluate_rule_compliance, which should be the target_rules
@@ -2444,11 +2470,11 @@ def calculate_rule_compliance_score(
             # No effective rules means no rules were possible for this name structure
             rule_diversity_factor = 1.0
 
-    bt.logging.info(f"Met {num_target_rules_met} out of {len(compliant_variations_by_rule)} effective rules. Rule diversity factor: {rule_diversity_factor:.2f}")
+    #bt.logging.info(f"Met {num_target_rules_met} out of {len(compliant_variations_by_rule)} effective rules. Rule diversity factor: {rule_diversity_factor:.2f}")
 
     # Final score combines quantity and diversity
     final_score = quantity_score * rule_diversity_factor
-    bt.logging.info(f"Final rule compliance score (quantity * diversity): {final_score:.2f}")
+    # bt.logging.info(f"Final rule compliance score (quantity * diversity): {final_score:.2f}")
     
     return final_score, {
         "compliant_variations_by_rule": compliant_variations_by_rule,
