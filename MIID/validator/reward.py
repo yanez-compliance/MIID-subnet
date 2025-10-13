@@ -2305,9 +2305,9 @@ def get_name_variation_rewards(
             avg_base_score = sum(base_scores) / len(base_scores)
             
             # Separate weights for each component
-            quality_weight = 0.5
+            quality_weight = 0.3
             dob_weight = 0.1
-            address_weight = 0.4
+            address_weight = 0.6
             
             # Calculate each component separately
             quality_component = avg_quality * quality_weight
