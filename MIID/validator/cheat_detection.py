@@ -356,7 +356,7 @@ def detect_cheating_patterns(
                 address_list = [var[2] for var in name_variations if len(var) > 2 and var[2]]
                 # Normalize addresses for comparison (remove spaces, commas, convert to lowercase)
                 normalized_addresses = [
-                    addr.strip().replace(" ", "").replace(",", "").lower()
+                    re.sub(r'\d+', '', addr).strip().replace(" ", "").replace(",", "").lower()
                     for addr in address_list if addr and addr.strip()
                 ]
                 miner_address_sets[name] = set(normalized_addresses)
