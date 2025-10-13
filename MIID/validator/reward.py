@@ -310,17 +310,25 @@ def extract_city_country(address: str) -> tuple:
         
         # Try different combinations of words (1-2 words max)
         # Start with 2 words, then 1 word for better city matching
-        for num_words in range(min(2, len(words)), 0, -1):
-            # Try the first num_words from this section (left to right)
-            city_candidate = " ".join(words[:num_words])
-            
-            # Skip if contains numbers or is too short (allow 2-letter words like "El")
-            if any(ch.isdigit() for ch in city_candidate) or len(city_candidate) < 2:
-                continue
-                
-            # Validate that this city actually exists in the country
-            if city_in_country(city_candidate, country):
-                return city_candidate, country
+        for num_words in range(len(words)):
+            current_word = words[num_words]
+
+            # Try current word
+            candidates = [current_word]
+
+            # Also try current + previous (if exists)
+            if num_words > 0:
+                prev_plus_current = words[num_words - 1] + " " + words[num_words]
+                candidates.append(prev_plus_current)
+
+            for city_candidate in candidates:
+                # Skip if contains numbers or is too short
+                if any(char.isdigit() for char in city_candidate):
+                    continue
+                print(city_candidate)
+                # Validate the city exists in the country
+                if city_in_country(city_candidate, country):
+                    return city_candidate, country
 
     return "", country
 
