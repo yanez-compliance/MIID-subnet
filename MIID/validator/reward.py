@@ -325,7 +325,7 @@ def extract_city_country(address: str) -> tuple:
                 # Skip if contains numbers or is too short
                 if any(char.isdigit() for char in city_candidate):
                     continue
-                    
+
                 # Validate the city exists in the country
                 if city_in_country(city_candidate, country):
                     return city_candidate, country
@@ -1778,53 +1778,74 @@ def _grade_address_variations(variations: Dict[str, List[List[str]]], seed_addre
             "detailed_breakdown": address_breakdown
         }
     
-    # Only call API if all addresses passed first 2 checks
+    # Only call API if all addresses passed first 2 checks - now validates up to 5 addresses
     api_result = False
     api_attempts = []
-    if api_validated_addresses:
-        # Randomly choose 2 different addresses for API validation
-        if len(api_validated_addresses) >= 2:
-            chosen_addresses = random.sample(api_validated_addresses, 2)
-        else:
-            chosen_addresses = api_validated_addresses
-        
-        # Try first address
-        first_addr = chosen_addresses[0]
-        first_result = check_with_nominatim(first_addr)
-        api_attempts.append({
-            "address": first_addr,
-            "result": first_result,
-            "attempt": 1
-        })
-        
-        if first_result == True:
-            api_result = True
-        elif len(chosen_addresses) > 1:
-            # Try second address if first failed
-            second_addr = chosen_addresses[1]
-            second_result = check_with_nominatim(second_addr)
-            api_attempts.append({
-                "address": second_addr,
-                "result": second_result,
-                "attempt": 2
-            })
-            api_result = second_result
-        else:
-            api_result = first_result
+    successful_calls = 0
+    timeout_calls = 0
+    failed_calls = 0
+    total_calls = 0
     
-    # All-or-nothing scoring based on API result, with address duplication penalty
-    if api_result == "TIMEOUT":
-        base_score = 0.3  # 30% for timeout
-    elif api_result == True:
-        base_score = 1.0  # Perfect - all addresses passed and API validated
+    if api_validated_addresses:
+        # Randomly choose up to 5 different addresses for API validation
+        max_addresses = min(5, len(api_validated_addresses))
+        chosen_addresses = random.sample(api_validated_addresses, max_addresses)
+        
+        # Try all chosen addresses and track individual results
+        successful_calls = 0
+        timeout_calls = 0
+        failed_calls = 0
+        
+        for i, addr in enumerate(chosen_addresses):
+            result = check_with_nominatim(addr)
+            api_attempts.append({
+                "address": addr,
+                "result": result,
+                "attempt": i + 1
+            })
+            
+            if result == "TIMEOUT":
+                timeout_calls += 1
+            elif result == True:
+                successful_calls += 1
+            else:
+                failed_calls += 1
+            
+            # Wait 1 second between API calls to prevent rate limiting
+            # Skip wait after the last address
+            if i < len(chosen_addresses) - 1:
+                time.sleep(1.0)
+        
+        # Set final result based on individual results
+        total_calls = len(chosen_addresses)
+        if failed_calls > 0:
+            api_result = "FAILED"  # Any failure = 0.0 score
+        elif timeout_calls > 0:
+            api_result = "TIMEOUT"  # All pass but timeouts = -0.2 per timeout
+        else:
+            api_result = "SUCCESS"  # All pass without timeouts = perfect score
+    
+    # Scoring based on individual API results
+    if api_result == "FAILED":
+        base_score = 0.0  # Any failure = 0.0 score
+    elif api_result == "TIMEOUT":
+        # Calculate penalty: -0.2 per timeout
+        timeout_penalty = timeout_calls * 0.2
+        base_score = max(0.0, 1.0 - timeout_penalty)  # Ensure score doesn't go below 0
+    elif api_result == "SUCCESS":
+        base_score = 1.0  # Perfect - all addresses passed without timeouts
     else:
-        base_score = 0.0  # API failed
+        base_score = 0.0  # Default fallback
     
     # Store API validation results
     address_breakdown["api_validation"] = {
         "api_result": api_result,
         "total_eligible_addresses": len(api_validated_addresses),
-        "api_attempts": api_attempts
+        "api_attempts": api_attempts,
+        "successful_calls": successful_calls,
+        "timeout_calls": timeout_calls,
+        "failed_calls": failed_calls,
+        "total_calls": total_calls
     }
     
     return {
@@ -2284,9 +2305,9 @@ def get_name_variation_rewards(
             avg_base_score = sum(base_scores) / len(base_scores)
             
             # Separate weights for each component
-            quality_weight = 0.6
+            quality_weight = 0.5
             dob_weight = 0.1
-            address_weight = 0.3
+            address_weight = 0.4
             
             # Calculate each component separately
             quality_component = avg_quality * quality_weight
