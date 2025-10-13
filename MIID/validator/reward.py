@@ -325,7 +325,7 @@ def extract_city_country(address: str) -> tuple:
                 # Skip if contains numbers or is too short
                 if any(char.isdigit() for char in city_candidate):
                     continue
-                print(city_candidate)
+                    
                 # Validate the city exists in the country
                 if city_in_country(city_candidate, country):
                     return city_candidate, country
