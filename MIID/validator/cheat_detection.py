@@ -458,30 +458,6 @@ def detect_cheating_patterns(
                 duplication_penalties[idx1] = max(duplication_penalties[idx1], penalty)
                 duplication_penalties[idx2] = max(duplication_penalties[idx2], penalty)
 
-    # Check for name similarity between miners (cross-miner name duplication)
-    logging.info("Performing cross-miner name similarity check.")
-    valid_indices = [i for i, s in enumerate(all_normalized_sets) if isinstance(s, dict) and s]
-    for i in range(len(valid_indices)):
-        for j in range(i + 1, len(valid_indices)):
-            idx1 = valid_indices[i]
-            idx2 = valid_indices[j]
-            set1 = all_normalized_sets[idx1]
-            set2 = all_normalized_sets[idx2]
-
-            common_names = set1.keys() & set2.keys()
-            if not common_names:
-                overlap = 0.0
-                jac = 0.0
-            else:
-                overlap_scores = [overlap_coefficient(set1[name], set2[name]) for name in common_names]
-                jaccard_scores = [jaccard(set1[name], set2[name]) for name in common_names]
-                overlap = sum(overlap_scores) / len(overlap_scores)
-                jac = sum(jaccard_scores) / len(jaccard_scores)
-
-            if overlap > 0.95 or jac > 0.90:
-                penalty = 0.5
-                duplication_penalties[idx1] = max(duplication_penalties[idx1], penalty)
-                duplication_penalties[idx2] = max(duplication_penalties[idx2], penalty)
 
     # Check for address similarity between miners
     logging.info("Performing cross-miner address similarity check.")
