@@ -192,9 +192,9 @@ def calculate_orthographic_similarity(original_name: str, variation: str) -> flo
 
 def looks_like_address(address: str) -> bool:
     address = address.strip().lower()
-    if len(address) < 10:
+    if len(address) < 25:
         return False
-    if len(address) > 200:  # maximum length check
+    if len(address) > 300:  # maximum length check
         return False
     if re.match(r"^[^a-zA-Z]*$", address):  # no letters at all
         return False
@@ -203,6 +203,9 @@ def looks_like_address(address: str) -> bool:
     
     # Has at least one digit (street number)
     if not re.search(r"\d", address):
+        return False
+
+    if address.count(",") < 2:
         return False
     
     # # Contains common address words or patterns
@@ -262,13 +265,15 @@ def extract_city_country(address: str) -> tuple:
     """
     Extract city and country from an address.
     Country is always the last part.
-    City is the last part (before country) that doesn't contain numbers.
+    City is found by checking each section from right to left (excluding country)
+    and validating against geonames data to ensure it's a real city in the country.
     
     Examples:
     - "115 New Cavendish Street, London W1T 5DU, United Kingdom" -> ("London", "United Kingdom")
     - "223 William Street, Melbourne VIC 3000, Australia" -> ("Melbourne", "Australia")
     - "Rosenthaler Straße 1, 10119 Berlin, Germany" -> ("Berlin", "Germany")
     - "3 Upper Alma Road, Rosebank, Cape Town, 7700, South Africa" -> ("Cape Town", "South Africa")
+    - "6 , Yemen" -> ("", "Yemen")  # No valid city found
     
     Args:
         address: The address to extract from
@@ -286,26 +291,44 @@ def extract_city_country(address: str) -> tuple:
         return "", ""
     
     country = parts[-1]
+    
+    # If no country found, return empty
+    if not country:
+        return "", ""
 
-    # Check second-to-last, then third-to-last if needed
+    # Check each section from right to left (excluding the country)
     for i in range(2, len(parts) + 1):
         candidate_index = -i
         if abs(candidate_index) > len(parts):
             break
         
         candidate_part = parts[candidate_index]
+        if not candidate_part:
+            continue
+            
         words = candidate_part.split()
         
-        # Filter: remove words with numbers and 2-letter words
-        valid_words = [
-            w for w in words
-            if not any(ch.isdigit() for ch in w) and len(w) > 2
-        ]
-        
-        if valid_words:
-            # Take only the last 2 words at most
-            city = " ".join(valid_words[-2:])
-            return city, country
+        # Try different combinations of words (1-2 words max)
+        # Start with 2 words, then 1 word for better city matching
+        for num_words in range(len(words)):
+            current_word = words[num_words]
+
+            # Try current word
+            candidates = [current_word]
+
+            # Also try current + previous (if exists)
+            if num_words > 0:
+                prev_plus_current = words[num_words - 1] + " " + words[num_words]
+                candidates.append(prev_plus_current)
+
+            for city_candidate in candidates:
+                # Skip if contains numbers or is too short
+                if any(char.isdigit() for char in city_candidate):
+                    continue
+
+                # Validate the city exists in the country
+                if city_in_country(city_candidate, country):
+                    return city_candidate, country
 
     return "", country
 
@@ -401,7 +424,15 @@ def validate_address_region(generated_address: str, seed_address: str) -> bool:
     
     # Extract city and country from both addresses
     gen_city, gen_country = extract_city_country(generated_address)
-    seed_city, seed_country = seed_address.lower(), seed_address.lower()
+    seed_city, seed_country = extract_city_country(seed_address)
+    
+    # If no city was extracted from generated address, it's an error
+    if not gen_city:
+        return False
+    
+    # If no country was extracted from generated address, it's an error
+    if not gen_country:
+        return False
     
     # Check if either city or country matches
     city_match = False
@@ -1473,7 +1504,7 @@ def _calculate_similarity_and_penalties(responses: list, uids: list, seed_names:
             if i < len(detailed_metrics):
                 miner_metrics = detailed_metrics[i]
                 miner_metrics.setdefault('penalties', {})
-                miner_metrics['penalties']['address_duplication'] = penalty_amount
+                miner_metrics['penalties']['post_address_duplication'] = penalty_amount
 
         # Apply combined penalty
         if total_penalty > 0:
@@ -1527,7 +1558,7 @@ def _grade_dob_variations(variations: Dict[str, List[List[str]]], seed_dob: List
             
         # Extract DOB variations for this name
         all_variations = variations[name]
-        dob_variations = [var[1] for var in all_variations if len(var) > 1 and var[1]]
+        dob_variations = [var[1] for var in all_variations if len(var) > 1]  # Include empty strings for proper counting
         
         if not dob_variations:
             continue
@@ -1644,7 +1675,7 @@ def _grade_address_variations(variations: Dict[str, List[List[str]]], seed_addre
         if name in variations and len(variations[name]) >= 1 and name_idx < len(seed_addresses):
             # Extract address variations (index 2 of each [name_var, dob_var, address_var] array)
             all_variations = variations[name]
-            address_variations = [var[2] for var in all_variations if len(var) > 2 and var[2]]
+            address_variations = [var[2] for var in all_variations if len(var) > 2]  # Include empty strings for proper counting
             if address_variations and seed_addresses[name_idx]:
                 valid_addrs = [addr for addr in address_variations if addr and addr.strip()]
                 all_addresses.extend(valid_addrs)
@@ -1747,53 +1778,74 @@ def _grade_address_variations(variations: Dict[str, List[List[str]]], seed_addre
             "detailed_breakdown": address_breakdown
         }
     
-    # Only call API if all addresses passed first 2 checks
+    # Only call API if all addresses passed first 2 checks - now validates up to 5 addresses
     api_result = False
     api_attempts = []
-    if api_validated_addresses:
-        # Randomly choose 2 different addresses for API validation
-        if len(api_validated_addresses) >= 2:
-            chosen_addresses = random.sample(api_validated_addresses, 2)
-        else:
-            chosen_addresses = api_validated_addresses
-        
-        # Try first address
-        first_addr = chosen_addresses[0]
-        first_result = check_with_nominatim(first_addr)
-        api_attempts.append({
-            "address": first_addr,
-            "result": first_result,
-            "attempt": 1
-        })
-        
-        if first_result == True:
-            api_result = True
-        elif len(chosen_addresses) > 1:
-            # Try second address if first failed
-            second_addr = chosen_addresses[1]
-            second_result = check_with_nominatim(second_addr)
-            api_attempts.append({
-                "address": second_addr,
-                "result": second_result,
-                "attempt": 2
-            })
-            api_result = second_result
-        else:
-            api_result = first_result
+    successful_calls = 0
+    timeout_calls = 0
+    failed_calls = 0
+    total_calls = 0
     
-    # All-or-nothing scoring based on API result, with address duplication penalty
-    if api_result == "TIMEOUT":
-        base_score = 0.3  # 30% for timeout
-    elif api_result == True:
-        base_score = 1.0  # Perfect - all addresses passed and API validated
+    if api_validated_addresses:
+        # Randomly choose up to 5 different addresses for API validation
+        max_addresses = min(5, len(api_validated_addresses))
+        chosen_addresses = random.sample(api_validated_addresses, max_addresses)
+        
+        # Try all chosen addresses and track individual results
+        successful_calls = 0
+        timeout_calls = 0
+        failed_calls = 0
+        
+        for i, addr in enumerate(chosen_addresses):
+            result = check_with_nominatim(addr)
+            api_attempts.append({
+                "address": addr,
+                "result": result,
+                "attempt": i + 1
+            })
+            
+            if result == "TIMEOUT":
+                timeout_calls += 1
+            elif result == True:
+                successful_calls += 1
+            else:
+                failed_calls += 1
+            
+            # Wait 1 second between API calls to prevent rate limiting
+            # Skip wait after the last address
+            if i < len(chosen_addresses) - 1:
+                time.sleep(1.0)
+        
+        # Set final result based on individual results
+        total_calls = len(chosen_addresses)
+        if failed_calls > 0:
+            api_result = "FAILED"  # Any failure = 0.0 score
+        elif timeout_calls > 0:
+            api_result = "TIMEOUT"  # All pass but timeouts = -0.2 per timeout
+        else:
+            api_result = "SUCCESS"  # All pass without timeouts = perfect score
+    
+    # Scoring based on individual API results
+    if api_result == "FAILED":
+        base_score = 0.0  # Any failure = 0.0 score
+    elif api_result == "TIMEOUT":
+        # Calculate penalty: -0.2 per timeout
+        timeout_penalty = timeout_calls * 0.2
+        base_score = max(0.0, 1.0 - timeout_penalty)  # Ensure score doesn't go below 0
+    elif api_result == "SUCCESS":
+        base_score = 1.0  # Perfect - all addresses passed without timeouts
     else:
-        base_score = 0.0  # API failed
+        base_score = 0.0  # Default fallback
     
     # Store API validation results
     address_breakdown["api_validation"] = {
         "api_result": api_result,
         "total_eligible_addresses": len(api_validated_addresses),
-        "api_attempts": api_attempts
+        "api_attempts": api_attempts,
+        "successful_calls": successful_calls,
+        "timeout_calls": timeout_calls,
+        "failed_calls": failed_calls,
+        "total_calls": total_calls
     }
     
     return {
@@ -1973,9 +2025,9 @@ def get_name_variation_rewards(
             
             # Extract name, DOB, and address variations from the structure once
             # vars_list is [[name_var, dob_var, address_var], [name_var, dob_var, address_var], ...]
-            name_variations = [var[0] for var in vars_list if len(var) > 0 and var[0]]
-            dob_variations = [var[1] for var in vars_list if len(var) > 1 and var[1]]
-            address_variations = [var[2] for var in vars_list if len(var) > 2 and var[2]]
+            name_variations = [var[0] for var in vars_list if len(var) > 0]  # Include empty strings for proper counting
+            dob_variations = [var[1] for var in vars_list if len(var) > 1]  # Include empty strings for proper counting
+            address_variations = [var[2] for var in vars_list if len(var) > 2]  # Include empty strings for proper counting
             
             if variation_count > 0:
                 allowed_with_grace = int(variation_count * 1.2)  # 20% grace, rounded down
@@ -2082,7 +2134,7 @@ def get_name_variation_rewards(
             
             for name, vars_list in variations.items():
                 # Extract address variations from the structure
-                address_variations = [var[2] for var in vars_list if len(var) > 2 and var[2]]
+                address_variations = [var[2] for var in vars_list if len(var) > 2]  # Include empty strings for proper counting
                 address_count = len(address_variations)  # Count non-empty addresses
                 if address_count < min_required:
                     insufficient_count = min_required - address_count
@@ -2105,7 +2157,7 @@ def get_name_variation_rewards(
             
             for name, vars_list in variations.items():
                 # Extract DOB variations from the structure
-                dob_variations = [var[1] for var in vars_list if len(var) > 1 and var[1]]
+                dob_variations = [var[1] for var in vars_list if len(var) > 1]  # Include empty strings for proper counting
                 dob_count = len(dob_variations)  # Count non-empty DOBs
                 if dob_count < min_required:
                     insufficient_count = min_required - dob_count
@@ -2148,7 +2200,7 @@ def get_name_variation_rewards(
             # variations[name] is a list of [name_var, dob_var, address_var] arrays
             # We need to extract just the name variations (index 0 of each array)
             all_variations = variations[name]
-            name_variations = [var[0] for var in all_variations if len(var) > 0 and var[0]]
+            name_variations = [var[0] for var in all_variations if len(var) > 0]  # Include empty strings for proper counting
             name_metrics = {
                 "variations": [],
                 "quality_score": 0.0,
@@ -2193,7 +2245,7 @@ def get_name_variation_rewards(
             # variations[name] is a list of [name_var, dob_var, address_var] arrays
             # We need to extract just the name variations (index 0 of each array)
             all_variations = variations[name]
-            name_variations = [var[0] for var in all_variations if len(var) > 0 and var[0]]
+            name_variations = [var[0] for var in all_variations if len(var) > 0]  # Include empty strings for proper counting
             
             # Use pre-transliterated name
             transliterated_name = transliterated_seed_names[name]
@@ -2253,9 +2305,9 @@ def get_name_variation_rewards(
             avg_base_score = sum(base_scores) / len(base_scores)
             
             # Separate weights for each component
-            quality_weight = 0.6
+            quality_weight = 0.3
             dob_weight = 0.1
-            address_weight = 0.3
+            address_weight = 0.6
             
             # Calculate each component separately
             quality_component = avg_quality * quality_weight
