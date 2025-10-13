@@ -258,6 +258,7 @@ def detect_cheating_patterns(
 ) -> Dict[str, np.ndarray]:
     """
     Analyzes miner responses to detect cheating patterns like collusion, copying, and excessive special characters.
+    Now handles the new format where each variation is [name_var, dob_var, address_var].
 
     Returns a dictionary of numpy arrays, each with length equal to number of miners:
     - duplication_penalties
@@ -279,6 +280,7 @@ def detect_cheating_patterns(
     total_variations_counts = np.zeros(num_miners, dtype=int)
     special_char_ratios = np.zeros(num_miners)
     all_normalized_sets = []
+    all_address_sets = []  # New: track address variations for cross-miner comparison
     all_signatures = []
 
     for i in range(num_miners):
@@ -287,6 +289,8 @@ def detect_cheating_patterns(
         if variations:
             special_char_variations_count = 0
             total_variations_count = 0
+            all_addresses = []
+            
             for name in variations:
                 name_variations = variations.get(name, [])
                 if name_variations and len(name_variations) > 0:
@@ -295,8 +299,18 @@ def detect_cheating_patterns(
                     name_vars = [var[0] for var in name_variations if len(var) > 0 and var[0]]
                     total_variations_count += len(name_vars)
                     for var in name_vars:
-                        if any(not c.isalnum() and not c.isspace() for c in var):
+                        # Count as special char only if it has excessive non-alphanumeric characters
+                        # Allow common punctuation like periods, hyphens, apostrophes
+                        special_chars = sum(1 for c in var if not c.isalnum() and not c.isspace() and c not in ".-'")
+                        if special_chars > 2:  # Only penalize if more than 2 special chars
                             special_char_variations_count += 1
+                    
+                    # Extract address variations (index 2 of each [name_var, dob_var, address_var] array)
+                    address_vars = [var[2] for var in name_variations if len(var) > 2 and var[2]]
+                    all_addresses.extend([
+                        addr.strip().replace(" ", "").replace(",", "").lower()
+                        for addr in address_vars if addr and addr.strip()
+                    ])
 
             if total_variations_count > 0:
                 special_char_ratio = special_char_variations_count / total_variations_count
@@ -306,18 +320,6 @@ def detect_cheating_patterns(
                 if special_char_ratio > 0.5:
                     penalty = (special_char_ratio - 0.5) / 0.5
                     special_char_penalties[i] = min(penalty, 1.0)
-            
-            # Check for address duplication within this miner's variations
-            all_addresses = []
-            for name in variations:
-                name_variations = variations.get(name, [])
-                if name_variations and len(name_variations) > 0:
-                    # Extract address variations (index 2 of each [name_var, dob_var, address_var] array)
-                    address_vars = [var[2] for var in name_variations if len(var) > 2 and var[2]]
-                    all_addresses.extend([
-                        addr.strip().replace(" ", "").replace(",", "").lower()
-                        for addr in address_vars if addr and addr.strip()
-                    ])
             
             # Count duplicates within this miner's addresses
             if all_addresses:
@@ -332,10 +334,12 @@ def detect_cheating_patterns(
         
         if not variations:
             all_normalized_sets.append(None)
+            all_address_sets.append(None)
             all_signatures.append(None)
             continue
 
         miner_normalized_sets: Dict[str, Set[str]] = {}
+        miner_address_sets: Dict[str, Set[str]] = {}  # Track address variations by name
         miner_map_for_signature: Dict[str, list] = {}
         has_any_variations = False
         
@@ -347,13 +351,24 @@ def detect_cheating_patterns(
                 canon_list = [var[0] for var in name_variations if len(var) > 0 and var[0]]
                 miner_map_for_signature[name] = canon_list
                 miner_normalized_sets[name] = build_normalized_set(canon_list)
+                
+                # Extract address variations (index 2 of each [name_var, dob_var, address_var] array)
+                address_list = [var[2] for var in name_variations if len(var) > 2 and var[2]]
+                # Normalize addresses for comparison (remove spaces, commas, convert to lowercase)
+                normalized_addresses = [
+                    addr.strip().replace(" ", "").replace(",", "").lower()
+                    for addr in address_list if addr and addr.strip()
+                ]
+                miner_address_sets[name] = set(normalized_addresses)
 
         if not has_any_variations:
             all_normalized_sets.append(None)
+            all_address_sets.append(None)
             all_signatures.append(None)
             continue
         
         all_normalized_sets.append(miner_normalized_sets)
+        all_address_sets.append(miner_address_sets)
         all_signatures.append(hash_signature(miner_map_for_signature))
 
     fmt15 = [f"{r:.15f}" for r in rewards]
@@ -442,6 +457,63 @@ def detect_cheating_patterns(
                 penalty = 0.5
                 duplication_penalties[idx1] = max(duplication_penalties[idx1], penalty)
                 duplication_penalties[idx2] = max(duplication_penalties[idx2], penalty)
+
+    # Check for name similarity between miners (cross-miner name duplication)
+    logging.info("Performing cross-miner name similarity check.")
+    valid_indices = [i for i, s in enumerate(all_normalized_sets) if isinstance(s, dict) and s]
+    for i in range(len(valid_indices)):
+        for j in range(i + 1, len(valid_indices)):
+            idx1 = valid_indices[i]
+            idx2 = valid_indices[j]
+            set1 = all_normalized_sets[idx1]
+            set2 = all_normalized_sets[idx2]
+
+            common_names = set1.keys() & set2.keys()
+            if not common_names:
+                overlap = 0.0
+                jac = 0.0
+            else:
+                overlap_scores = [overlap_coefficient(set1[name], set2[name]) for name in common_names]
+                jaccard_scores = [jaccard(set1[name], set2[name]) for name in common_names]
+                overlap = sum(overlap_scores) / len(overlap_scores)
+                jac = sum(jaccard_scores) / len(jaccard_scores)
+
+            if overlap > 0.95 or jac > 0.90:
+                penalty = 0.5
+                duplication_penalties[idx1] = max(duplication_penalties[idx1], penalty)
+                duplication_penalties[idx2] = max(duplication_penalties[idx2], penalty)
+
+    # Check for address similarity between miners
+    logging.info("Performing cross-miner address similarity check.")
+    valid_address_indices = [i for i, s in enumerate(all_address_sets) if isinstance(s, dict) and s]
+    for i in range(len(valid_address_indices)):
+        for j in range(i + 1, len(valid_address_indices)):
+            idx1 = valid_address_indices[i]
+            idx2 = valid_address_indices[j]
+            addr_set1 = all_address_sets[idx1]
+            addr_set2 = all_address_sets[idx2]
+
+            common_names = addr_set1.keys() & addr_set2.keys()
+            if not common_names:
+                continue
+
+            # Check address similarity for each common name
+            for name in common_names:
+                addresses1 = addr_set1[name]
+                addresses2 = addr_set2[name]
+                
+                if not addresses1 or not addresses2:
+                    continue
+                
+                # Calculate overlap and jaccard for addresses
+                overlap = overlap_coefficient(addresses1, addresses2)
+                jac = jaccard(addresses1, addresses2)
+                
+                # If addresses are too similar, apply penalty
+                if overlap > 0.8 or jac > 0.7:
+                    penalty = min(0.6, max(overlap, jac) * 0.8)  # Scale penalty based on similarity
+                    address_duplication_penalties[idx1] = max(address_duplication_penalties[idx1], penalty)
+                    address_duplication_penalties[idx2] = max(address_duplication_penalties[idx2], penalty)
 
     return {
         "duplication_penalties": duplication_penalties,
