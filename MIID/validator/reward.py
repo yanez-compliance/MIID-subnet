@@ -424,7 +424,7 @@ def validate_address_region(generated_address: str, seed_address: str) -> bool:
     
     # Extract city and country from both addresses
     gen_city, gen_country = extract_city_country(generated_address)
-    seed_city, seed_country = extract_city_country(seed_address)
+    seed_city, seed_country = seed_address.lower(), seed_address.lower()
     
     # If no city was extracted from generated address, it's an error
     if not gen_city:
