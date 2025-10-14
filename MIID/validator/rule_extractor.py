@@ -43,8 +43,33 @@ RULE_FUNCTIONS = {
     ]
 }
 
-# Map rule names to their descriptions for inclusion in queries
+# updated for search
 RULE_DESCRIPTIONS = {
+    "replace_spaces_with_random_special_characters": "Replace space with special character",
+    "replace_double_letters_with_single_letter": "Replace double letter with single letter",
+    "replace_random_vowel_with_random_vowel": "Replace random vowel with different vowel",
+    "replace_random_consonant_with_random_consonant": "Replace random consonant with different consonant",
+    #"replace_random_special_character_with_random_special_character": "Replace special characters with different ones",
+    "swap_adjacent_consonants": "Swap adjacent consonant",
+    "swap_adjacent_syllables": "Swap adjacent syllable",
+    "swap_random_letter": "Swap random adjacent letter",
+    "delete_random_letter": "Delete random letter",
+    "remove_random_vowel": "Remove random vowel",
+    "remove_random_consonant": "Remove random consonant",
+    #"remove_random_special_character": "Remove a random special character",
+    #"remove_title": "Remove title (Mr., Dr., etc.)",
+    "remove_all_spaces": "Remove all space",
+    "duplicate_random_letter_as_double_letter": "Duplicate random letter",
+    "insert_random_letter": "Insert random letter",
+    "add_random_leading_title": "Add title prefix",
+    "add_random_trailing_title": "Add title suffix",
+    "initial_only_first_name": "Use first name initial with last name",
+    "shorten_name_to_initials": "Convert name to initial",
+    "shorten_name_to_abbreviations": "Abbreviate name part",
+    "name_parts_permutations": "Reorder name part"
+}
+
+RULE_DESCRIPTIONS_ORG = {
     "replace_spaces_with_random_special_characters": "Replace spaces with special characters",
     "replace_double_letters_with_single_letter": "Replace double letters with a single letter",
     "replace_random_vowel_with_random_vowel": "Replace random vowels with different vowels",
