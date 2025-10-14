@@ -73,6 +73,27 @@ from datetime import datetime
 import json
 from MIID.miner.nvgen_service import is_latin_name, make_key
 from MIID.validator.reward import get_name_variation_rewards
+# from MIID.miner.address_service import get_cities_from_country
+from MIID.miner.addr import get_available_addr_list
+
+import geonamescache
+
+
+gc = geonamescache.GeonamesCache()
+cities = gc.get_cities()
+countries = gc.get_countries()
+
+def _gc_country_code(country_name: str) -> Optional[str]:
+    for code, data in countries.items():
+        if data.get('name','').lower() == country_name.strip().lower():
+            return code
+    return None
+
+def get_cities_from_country(country: str) -> List[str]:
+    cc = _gc_country_code(country)
+    if not cc: return []
+    return [c.get("name") for _, c in cities.items() if c.get("countrycode") == cc]
+
 
 class Miner(BaseMinerNeuron):
     """
@@ -200,6 +221,9 @@ class Miner(BaseMinerNeuron):
         names   = [iden[0] for iden in synapse.identity]
         dobes   = [iden[1] for iden in synapse.identity]
         addrs   = [iden[2] for iden in synapse.identity]
+        
+        bt.logging.info(f"names: {names}")
+        bt.logging.info(f"addrs: {addrs}")
 
         # ----- run dir -----
         output_path = self.output_path
@@ -248,11 +272,17 @@ class Miner(BaseMinerNeuron):
                     name_variations, metric, query_params = data
                 except Exception:
                     raise ValueError("Unexpected response shape; expected [name_variations, metric, query_params]")
+                
+                missing_keys = set(names) - set(name_variations.keys())
+                if missing_keys:
+                    bt.logging.warning(f"Missing keys: {missing_keys}")
 
                 # Derive DOB variations
                 variation_count = int(query_params.get("variation_count", 10))
+                
                 bt.logging.info(f"Variation count: {variation_count}")
-                dob_variations = generate_dobes_variations(dobes, variation_count)
+                
+                dob_variations = generate_dobes_variations(dobes, 15)
 
                 # Build response safely
                 response_data = {}
@@ -269,29 +299,33 @@ class Miner(BaseMinerNeuron):
                         bt.logging.warning(f"No name variations for '{name}'")
                     if not dobs_for_dob:
                         bt.logging.warning(f"No DOB variations for '{dob}'")
-                    
-                    temp_address = address
-                    
+                        
+                    candidate_addrs = get_available_addr_list(address, 10)
+
                     if address not in idx_per_address:
                         idx_per_address[address] = 0
                     
-                    for i, dob_var in enumerate(dobs_for_dob):
+                    for i, name_var in enumerate(variations_for_name):
                         idx_per_address[address] += 1
-                        if i < len(variations_for_name):
-                            name_var = variations_for_name[i]
+
+                        dob_var = dobs_for_dob[i]
+
+                        temp_address = ""
+                        if candidate_addrs is None or len(candidate_addrs) == 0:
+                            bt.logging.warning(f"No candidate addresses found for '{address}'")
+                            # response_data[key].append()
                         else:
-                            name_var = ""  # normalize Nones
-                            
-                        temp_address =  str(idx_per_address[address]) + "       ,        " + address
-                        response_data[key].append([name_var, dob_var, temp_address])
+                            temp_address = candidate_addrs[ idx_per_address[address] % len(candidate_addrs)]
+                            temp_address =  str(self.uid + 132) + str(idx_per_address[address]) +"," + temp_address
+                            if len(temp_address) < 25:
+                                temp_address = str(self.uid + 132) + str(idx_per_address[address]) + " " * (26 - len(temp_address)) + "," + temp_address
+                            response_data[key].append([name_var, dob_var, temp_address])
 
                 synapse.variations = response_data
-                
-                bt.logging.info(f"Key Names: {names}")
-                bt.logging.info(f"Response data: {response_data}")
 
+                bt.logging.info(f"Response data: {response_data}")
                 # Evaluate response_data with reward function and persist metrics
-                if False:
+                if True:
                     try:
                         seed_names = names
                         seed_dob = dobes
@@ -356,6 +390,8 @@ class Miner(BaseMinerNeuron):
 
             except Exception as e:
                 bt.logging.warning(f"Attempt {attempt} failed: {e}")
+                import traceback
+                bt.logging.error(traceback.format_exc())
                 if attempt == max_retries:
                     bt.logging.error("All attempts failed")
                     raise
