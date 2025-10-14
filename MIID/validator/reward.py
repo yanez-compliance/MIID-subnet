@@ -193,12 +193,16 @@ def calculate_orthographic_similarity(original_name: str, variation: str) -> flo
 def looks_like_address(address: str) -> bool:
     address = address.strip().lower()
     if len(address) < 25:
+        bt.logging.warning(f"Address too short: {address}")
         return False
     if len(address) > 300:  # maximum length check
+        bt.logging.warning(f"Address too long: {address}")
         return False
     if re.match(r"^[^a-zA-Z]*$", address):  # no letters at all
+        bt.logging.warning(f"Address has no letters: {address}")
         return False
     if len(set(address)) < 5:  # all chars basically the same
+        bt.logging.warning(f"Address has all same chars: {address}")
         return False
     
     # Has at least one digit (street number)
@@ -455,6 +459,7 @@ def validate_address_region(generated_address: str, seed_address: str) -> bool:
     country_match = gen_country and seed_country and gen_country == seed_country
     
     if not (city_match or country_match):
+        bt.logging.warning(f"No city or country match for generated address: {generated_address} and seed address: {seed_address}")
         return False
     
     # If we have both city and country, validate city is in country
@@ -2378,6 +2383,7 @@ def get_name_variation_rewards(
         rewards, detailed_metrics = _calculate_similarity_and_penalties(
             responses, uids, processed_seed_names, detailed_metrics, rewards
         )
+        bt.logging.info(detailed_metrics)
     except Exception as e:
         bt.logging.error(f"Error in similarity and penalty calculation: {str(e)}")
         bt.logging.warning("Using rewards without similarity penalties as fallback")

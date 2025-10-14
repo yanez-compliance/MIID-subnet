@@ -371,8 +371,7 @@ def generate_address_variations_simple(country: str, city: Optional[str], count:
         if looks_like_address(addr):
             results.append(addr)
     return results
-        
-    
+
 def generate_address_variations(country: str, city: Optional[str], count: int, strict: bool = True) -> List[str]:
     """
     1) Choose a city center from GeoNamesCache (no network).

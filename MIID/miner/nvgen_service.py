@@ -101,7 +101,7 @@ A FastAPI-based service that provides name variants to miners' name variant pool
 """
 
 HOST = "0.0.0.0"
-PORT = 8001
+PORT = 8000
 
 # Global state
 pending_requests: Dict[str, asyncio.Event] = {}
