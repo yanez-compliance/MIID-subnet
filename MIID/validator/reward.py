@@ -193,7 +193,7 @@ def calculate_orthographic_similarity(original_name: str, variation: str) -> flo
 def looks_like_address(address: str) -> bool:
     address = address.strip().lower()
 
-    address_len = add.strip().replace(" ", "").replace(",", "")
+    address_len = address.strip().replace(" ", "").replace(",", "")
     if len(address_len) < 25:
         return False
     if len(address_len) > 300:  # maximum length check
@@ -233,6 +233,40 @@ def check_with_nominatim(address: str) -> bool:
         bt.logging.warning(f"API timeout for address: {address}")
         return "TIMEOUT"
     except:
+        return False
+
+def mapbox_verify_address(address: str) -> bool:
+    """
+    Return True if Mapbox confirms this is a valid, real-world address.
+    Returns False if relevance is above 0.6 (indicating low confidence).
+    """
+    url = f"https://api.mapbox.com/geocoding/v5/mapbox.places/{address}.json"
+    params = {"access_token": 'pk.eyJ1Ijoib21hci1hYmF6YSIsImEiOiJjbWdyMGRpZTAzMnAyMmxwcml0ZDR2OXdsIn0.04pTyGweTPBN2tRZ9XUFCA', "limit": 1, "autocomplete": "false"}
+    headers = {"User-Agent": "address-verifier"}
+
+    try:
+        resp = requests.get(url, params=params, headers=headers, timeout=5)
+        data = resp.json()
+
+        features = data.get("features", [])
+        if not features:
+            return False
+
+        result = features[0]
+        relevance = result.get("relevance", 0)
+        bt.logging.info(f"Mapbox relevance for {address}: {relevance}")
+        
+        # If relevance is above 0.6, consider it a fail (low confidence)
+        if relevance > 0.6:
+            return False
+            
+        return True
+
+    except requests.exceptions.Timeout:
+        bt.logging.warning(f"Mapbox API timeout for address: {address}")
+        return "TIMEOUT"
+    except Exception as e:
+        bt.logging.warning(f"Mapbox API error for address {address}: {str(e)}")
         return False
 
 
@@ -1753,49 +1787,81 @@ def _grade_address_variations(variations: Dict[str, List[List[str]]], seed_addre
             "detailed_breakdown": address_breakdown
         }
     
-    # Only call API if all addresses passed first 2 checks - now validates up to 5 addresses
+    # Only call API if all addresses passed first 2 checks - now validates with both APIs
     api_result = False
     api_attempts = []
-    successful_calls = 0
-    timeout_calls = 0
-    failed_calls = 0
+    nominatim_successful_calls = 0
+    nominatim_timeout_calls = 0
+    nominatim_failed_calls = 0
+    mapbox_successful_calls = 0
+    mapbox_timeout_calls = 0
+    mapbox_failed_calls = 0
     total_calls = 0
     
     if api_validated_addresses:
-        # Randomly choose up to 5 different addresses for API validation
-        max_addresses = min(5, len(api_validated_addresses))
+        # Randomly choose up to 4 different addresses for API validation (2 for each API)
+        max_addresses = min(4, len(api_validated_addresses))
         chosen_addresses = random.sample(api_validated_addresses, max_addresses)
         
-        # Try all chosen addresses and track individual results
-        successful_calls = 0
-        timeout_calls = 0
-        failed_calls = 0
+        # Split addresses for each API (2 each)
+        nominatim_addresses = chosen_addresses[:2]
+        mapbox_addresses = chosen_addresses[2:4] if len(chosen_addresses) > 2 else chosen_addresses[:2]
         
-        for i, addr in enumerate(chosen_addresses):
+        # Try Nominatim API (2 calls)
+        for i, addr in enumerate(nominatim_addresses):
             result = check_with_nominatim(addr)
             api_attempts.append({
                 "address": addr,
+                "api": "nominatim",
                 "result": result,
                 "attempt": i + 1
             })
             
             if result == "TIMEOUT":
-                timeout_calls += 1
+                nominatim_timeout_calls += 1
             elif result == True:
-                successful_calls += 1
+                nominatim_successful_calls += 1
             else:
-                failed_calls += 1
+                nominatim_failed_calls += 1
             
             # Wait 1 second between API calls to prevent rate limiting
-            # Skip wait after the last address
-            if i < len(chosen_addresses) - 1:
+            if i < len(nominatim_addresses) - 1:
                 time.sleep(1.0)
         
-        # Set final result based on individual results
+        # Wait between different APIs
+        if nominatim_addresses and mapbox_addresses:
+            time.sleep(1.0)
+        
+        # Try Mapbox API (2 calls)
+        for i, addr in enumerate(mapbox_addresses):
+            result = mapbox_verify_address(addr)
+            api_attempts.append({
+                "address": addr,
+                "api": "mapbox",
+                "result": result,
+                "attempt": i + 1
+            })
+            
+            if result == "TIMEOUT":
+                mapbox_timeout_calls += 1
+            elif result == True:
+                mapbox_successful_calls += 1
+            else:
+                mapbox_failed_calls += 1
+            
+            # Wait 1 second between API calls to prevent rate limiting
+            if i < len(mapbox_addresses) - 1:
+                time.sleep(1.0)
+        
+        # Set final result based on individual results from both APIs
         total_calls = len(chosen_addresses)
-        if failed_calls > 0:
+        total_successful = nominatim_successful_calls + mapbox_successful_calls
+        total_timeouts = nominatim_timeout_calls + mapbox_timeout_calls
+        total_failed = nominatim_failed_calls + mapbox_failed_calls
+        
+        if total_failed > 0:
             api_result = "FAILED"  # Any failure = 0.0 score
-        elif timeout_calls > 0:
+        elif total_timeouts > 0:
             api_result = "TIMEOUT"  # All pass but timeouts = -0.2 per timeout
         else:
             api_result = "SUCCESS"  # All pass without timeouts = perfect score
@@ -1805,7 +1871,7 @@ def _grade_address_variations(variations: Dict[str, List[List[str]]], seed_addre
         base_score = 0.0  # Any failure = 0.0 score
     elif api_result == "TIMEOUT":
         # Calculate penalty: -0.2 per timeout
-        timeout_penalty = timeout_calls * 0.2
+        timeout_penalty = total_timeouts * 0.2
         base_score = max(0.0, 1.0 - timeout_penalty)  # Ensure score doesn't go below 0
     elif api_result == "SUCCESS":
         base_score = 1.0  # Perfect - all addresses passed without timeouts
@@ -1817,9 +1883,15 @@ def _grade_address_variations(variations: Dict[str, List[List[str]]], seed_addre
         "api_result": api_result,
         "total_eligible_addresses": len(api_validated_addresses),
         "api_attempts": api_attempts,
-        "successful_calls": successful_calls,
-        "timeout_calls": timeout_calls,
-        "failed_calls": failed_calls,
+        "nominatim_successful_calls": nominatim_successful_calls,
+        "nominatim_timeout_calls": nominatim_timeout_calls,
+        "nominatim_failed_calls": nominatim_failed_calls,
+        "mapbox_successful_calls": mapbox_successful_calls,
+        "mapbox_timeout_calls": mapbox_timeout_calls,
+        "mapbox_failed_calls": mapbox_failed_calls,
+        "total_successful_calls": total_successful,
+        "total_timeout_calls": total_timeouts,
+        "total_failed_calls": total_failed,
         "total_calls": total_calls
     }
     
