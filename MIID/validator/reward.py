@@ -192,17 +192,21 @@ def calculate_orthographic_similarity(original_name: str, variation: str) -> flo
 
 def looks_like_address(address: str) -> bool:
     address = address.strip().lower()
-    if len(address) < 25:
+
+    address_len = add.strip().replace(" ", "").replace(",", "")
+    if len(address_len) < 25:
         return False
-    if len(address) > 300:  # maximum length check
+    if len(address_len) > 300:  # maximum length check
         return False
+
     if re.match(r"^[^a-zA-Z]*$", address):  # no letters at all
         return False
     if len(set(address)) < 5:  # all chars basically the same
         return False
-    
+        
     # Has at least one digit (street number)
-    if not re.search(r"\d", address):
+    number_groups = re.findall(r"\d+", address)
+    if len(number_groups) < 2:
         return False
 
     if address.count(",") < 2:
@@ -230,35 +234,6 @@ def check_with_nominatim(address: str) -> bool:
         return "TIMEOUT"
     except:
         return False
-
-def validate_addresses(addresses):
-    good, bad, checked = [], [], []
-    last_call_time = 0
-    
-    for i, addr in enumerate(addresses):
-        if looks_like_address(addr):
-            # Calculate time since last API call
-            current_time = time.time()
-            time_since_last_call = current_time - last_call_time
-            
-            # If less than 1 second has passed, wait for the remainder
-            if i > 0 and time_since_last_call < 1.0:
-                sleep_time = 1.0 - time_since_last_call
-                time.sleep(sleep_time)
-            
-            # Make the API call
-            if check_with_nominatim(addr):
-                good.append(addr)
-            else:
-                bad.append(addr)
-            checked.append(addr)
-            
-            # Update last call time
-            last_call_time = time.time()
-        else:
-            bad.append(addr)
-    
-    return good, bad, checked
 
 
 def extract_city_country(address: str) -> tuple:
