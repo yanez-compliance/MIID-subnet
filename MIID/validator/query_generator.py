@@ -385,7 +385,12 @@ class QueryGenerator:
             excluded_territories = {
                 'Antarctica',
                 'Bouvet Island', 
-                'Heard Island and McDonald Islands'
+                'Heard Island and McDonald Islands',
+                'United States Minor Outlying Islands',
+                'Tokelau',
+                'British Indian Ocean Territory',
+                'Netherlands Antilles',
+                'Serbia and Montenegro'
             }
             
             # Get sanctioned countries from the loaded data
