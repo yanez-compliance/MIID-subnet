@@ -192,17 +192,21 @@ def calculate_orthographic_similarity(original_name: str, variation: str) -> flo
 
 def looks_like_address(address: str) -> bool:
     address = address.strip().lower()
-    if len(address) < 25:
+
+    address_len = address.strip().replace(" ", "").replace(",", "")
+    if len(address_len) < 25:
         return False
-    if len(address) > 300:  # maximum length check
+    if len(address_len) > 300:  # maximum length check
         return False
+
     if re.match(r"^[^a-zA-Z]*$", address):  # no letters at all
         return False
     if len(set(address)) < 5:  # all chars basically the same
         return False
-    
+        
     # Has at least one digit (street number)
-    if not re.search(r"\d", address):
+    number_groups = re.findall(r"\d+", address)
+    if len(number_groups) < 2:
         return False
 
     if address.count(",") < 2:
@@ -231,34 +235,6 @@ def check_with_nominatim(address: str) -> bool:
     except:
         return False
 
-def validate_addresses(addresses):
-    good, bad, checked = [], [], []
-    last_call_time = 0
-    
-    for i, addr in enumerate(addresses):
-        if looks_like_address(addr):
-            # Calculate time since last API call
-            current_time = time.time()
-            time_since_last_call = current_time - last_call_time
-            
-            # If less than 1 second has passed, wait for the remainder
-            if i > 0 and time_since_last_call < 1.0:
-                sleep_time = 1.0 - time_since_last_call
-                time.sleep(sleep_time)
-            
-            # Make the API call
-            if check_with_nominatim(addr):
-                good.append(addr)
-            else:
-                bad.append(addr)
-            checked.append(addr)
-            
-            # Update last call time
-            last_call_time = time.time()
-        else:
-            bad.append(addr)
-    
-    return good, bad, checked
 
 
 def extract_city_country(address: str) -> tuple:
@@ -1778,49 +1754,53 @@ def _grade_address_variations(variations: Dict[str, List[List[str]]], seed_addre
             "detailed_breakdown": address_breakdown
         }
     
-    # Only call API if all addresses passed first 2 checks - now validates up to 5 addresses
+    # Only call API if all addresses passed first 2 checks - now validates with Nominatim API
     api_result = False
     api_attempts = []
-    successful_calls = 0
-    timeout_calls = 0
-    failed_calls = 0
+    nominatim_successful_calls = 0
+    nominatim_timeout_calls = 0
+    nominatim_failed_calls = 0
     total_calls = 0
     
     if api_validated_addresses:
-        # Randomly choose up to 5 different addresses for API validation
+        # Randomly choose up to 5 different addresses for API validation with Nominatim
         max_addresses = min(5, len(api_validated_addresses))
         chosen_addresses = random.sample(api_validated_addresses, max_addresses)
         
-        # Try all chosen addresses and track individual results
-        successful_calls = 0
-        timeout_calls = 0
-        failed_calls = 0
+        # Use all chosen addresses for Nominatim API
+        nominatim_addresses = chosen_addresses
         
-        for i, addr in enumerate(chosen_addresses):
+        # Try Nominatim API (up to 5 calls)
+        for i, addr in enumerate(nominatim_addresses):
             result = check_with_nominatim(addr)
             api_attempts.append({
                 "address": addr,
+                "api": "nominatim",
                 "result": result,
                 "attempt": i + 1
             })
             
             if result == "TIMEOUT":
-                timeout_calls += 1
+                nominatim_timeout_calls += 1
             elif result == True:
-                successful_calls += 1
+                nominatim_successful_calls += 1
             else:
-                failed_calls += 1
+                nominatim_failed_calls += 1
             
             # Wait 1 second between API calls to prevent rate limiting
-            # Skip wait after the last address
-            if i < len(chosen_addresses) - 1:
+            if i < len(nominatim_addresses) - 1:
                 time.sleep(1.0)
         
-        # Set final result based on individual results
+        
+        # Set final result based on Nominatim API results
         total_calls = len(chosen_addresses)
-        if failed_calls > 0:
+        total_successful = nominatim_successful_calls
+        total_timeouts = nominatim_timeout_calls
+        total_failed = nominatim_failed_calls
+        
+        if total_failed > 0:
             api_result = "FAILED"  # Any failure = 0.0 score
-        elif timeout_calls > 0:
+        elif total_timeouts > 0:
             api_result = "TIMEOUT"  # All pass but timeouts = -0.2 per timeout
         else:
             api_result = "SUCCESS"  # All pass without timeouts = perfect score
@@ -1830,7 +1810,7 @@ def _grade_address_variations(variations: Dict[str, List[List[str]]], seed_addre
         base_score = 0.0  # Any failure = 0.0 score
     elif api_result == "TIMEOUT":
         # Calculate penalty: -0.2 per timeout
-        timeout_penalty = timeout_calls * 0.2
+        timeout_penalty = total_timeouts * 0.2
         base_score = max(0.0, 1.0 - timeout_penalty)  # Ensure score doesn't go below 0
     elif api_result == "SUCCESS":
         base_score = 1.0  # Perfect - all addresses passed without timeouts
@@ -1842,9 +1822,12 @@ def _grade_address_variations(variations: Dict[str, List[List[str]]], seed_addre
         "api_result": api_result,
         "total_eligible_addresses": len(api_validated_addresses),
         "api_attempts": api_attempts,
-        "successful_calls": successful_calls,
-        "timeout_calls": timeout_calls,
-        "failed_calls": failed_calls,
+        "nominatim_successful_calls": nominatim_successful_calls,
+        "nominatim_timeout_calls": nominatim_timeout_calls,
+        "nominatim_failed_calls": nominatim_failed_calls,
+        "total_successful_calls": total_successful,
+        "total_timeout_calls": total_timeouts,
+        "total_failed_calls": total_failed,
         "total_calls": total_calls
     }
     
@@ -2103,7 +2086,7 @@ def get_name_variation_rewards(
                     # bt.logging.info(f"Duplicate address variations for {name}: {duplicates_addresses} duplicates → penalty {penalty_duplicates}")
                     address_duplicates_penalty += penalty_duplicates
             
-            address_duplicates_penalty = min(address_duplicates_penalty, 0.2)  # Max 20% penalty
+            address_duplicates_penalty = min(address_duplicates_penalty, 0.5)  # Max 50% penalty
 
             extra_names_penalty = extra_names_penalty + dob_duplicates_penalty + address_duplicates_penalty
 
