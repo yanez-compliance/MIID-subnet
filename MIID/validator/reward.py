@@ -1763,14 +1763,14 @@ def _grade_address_variations(variations: Dict[str, List[List[str]]], seed_addre
     total_calls = 0
     
     if api_validated_addresses:
-        # Randomly choose up to 4 different addresses for API validation with Nominatim
-        max_addresses = min(4, len(api_validated_addresses))
+        # Randomly choose up to 5 different addresses for API validation with Nominatim
+        max_addresses = min(5, len(api_validated_addresses))
         chosen_addresses = random.sample(api_validated_addresses, max_addresses)
         
         # Use all chosen addresses for Nominatim API
         nominatim_addresses = chosen_addresses
         
-        # Try Nominatim API (up to 4 calls)
+        # Try Nominatim API (up to 5 calls)
         for i, addr in enumerate(nominatim_addresses):
             result = check_with_nominatim(addr)
             api_attempts.append({
