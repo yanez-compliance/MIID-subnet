@@ -257,7 +257,7 @@ def mapbox_verify_address(address: str) -> bool:
         bt.logging.info(f"Mapbox relevance for {address}: {relevance}")
         
         # If relevance is above 0.6, consider it a fail (low confidence)
-        if relevance > 0.6:
+        if relevance < 0.6:
             return False
             
         return True
