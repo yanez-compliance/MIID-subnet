@@ -213,7 +213,7 @@ def looks_like_address(address: str) -> bool:
         return False
     
     # Check for special characters that should not be in addresses
-    special_chars = ['`', ':', '%', '$', '@', '*', '^', '&']
+    special_chars = ['`', ':', '%', '$', '@', '*', '^']
     if any(char in address for char in special_chars):
         return False
     
@@ -2104,12 +2104,12 @@ def get_name_variation_rewards(
         insufficient_addresses = []
         
         if variation_count > 0:
-            min_required = max(1, int(variation_count * 0.8))  # At least 80% of expected variations
+            min_required = max(1, int(variation_count * len(seed_names) * 0.8))  # At least 80% of expected variations
             
             for name, vars_list in variations.items():
                 # Extract address variations from the structure
                 address_variations = [var[2] for var in vars_list if len(var) > 2]  # Include empty strings for proper counting
-                address_count = len(address_variations)  # Count non-empty addresses
+                address_count = len([addr for addr in address_variations if addr.strip()])  # Count only non-empty addresses
                 if address_count < min_required:
                     insufficient_count = min_required - address_count
                     insufficient_addresses.append(f"{name}: {address_count}/{min_required}")
@@ -2127,12 +2127,12 @@ def get_name_variation_rewards(
         insufficient_dob = []
         
         if variation_count > 0:
-            min_required = max(1, int(variation_count * 0.8))  # At least 80% of expected variations
+            min_required = max(1, int(variation_count * len(seed_names) * 0.8))  # At least 80% of expected variations
             
             for name, vars_list in variations.items():
                 # Extract DOB variations from the structure
                 dob_variations = [var[1] for var in vars_list if len(var) > 1]  # Include empty strings for proper counting
-                dob_count = len(dob_variations)  # Count non-empty DOBs
+                dob_count = len([dob for dob in dob_variations if dob.strip()])  # Count only non-empty DOBs
                 if dob_count < min_required:
                     insufficient_count = min_required - dob_count
                     insufficient_dob.append(f"{name}: {dob_count}/{min_required}")
