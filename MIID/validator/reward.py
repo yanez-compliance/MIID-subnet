@@ -2104,7 +2104,7 @@ def get_name_variation_rewards(
         insufficient_addresses = []
         
         if variation_count > 0:
-            min_required = max(1, int(variation_count * len(seed_names) * 0.8))  # At least 80% of expected variations
+            min_required = max(1, int(variation_count * 0.8))  # At least 80% of expected variations
             
             for name, vars_list in variations.items():
                 # Extract address variations from the structure
@@ -2127,7 +2127,7 @@ def get_name_variation_rewards(
         insufficient_dob = []
         
         if variation_count > 0:
-            min_required = max(1, int(variation_count * len(seed_names) * 0.8))  # At least 80% of expected variations
+            min_required = max(1, int(variation_count * 0.8))  # At least 80% of expected variations
             
             for name, vars_list in variations.items():
                 # Extract DOB variations from the structure
