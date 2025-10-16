@@ -212,6 +212,11 @@ def looks_like_address(address: str) -> bool:
     if address.count(",") < 2:
         return False
     
+    # Check for special characters that should not be in addresses
+    special_chars = ['`', ':', '%', '$', '@', '*', '^', '&']
+    if any(char in address for char in special_chars):
+        return False
+    
     # # Contains common address words or patterns
     # common_words = ["st", "street", "rd", "road", "ave", "avenue", "blvd", "boulevard", "drive", "ln", "lane", "plaza", "city", "platz", "straße", "straße", "way", "place", "square", "allee", "allee", "gasse", "gasse"]
     # # Also check for common patterns like "1-1-1" (Japanese addresses) or "Unter den" (German)
@@ -1700,6 +1705,7 @@ def _grade_address_variations(variations: Dict[str, List[List[str]]], seed_addre
             if not addr or not addr.strip():
                 validation_results.append({
                     "address": addr,
+                    "seed_address": seed_addresses[name_idx],
                     "looks_like_address": False,
                     "region_match": False,
                     "passed_validation": False,
@@ -1727,6 +1733,7 @@ def _grade_address_variations(variations: Dict[str, List[List[str]]], seed_addre
             
             validation_results.append({
                 "address": addr,
+                "seed_address": seed_addresses[name_idx],
                 "looks_like_address": looks_like,
                 "region_match": region_match,
                 "passed_validation": passed_validation,
