@@ -194,7 +194,7 @@ def looks_like_address(address: str) -> bool:
     address = address.strip().lower()
 
     address_len = address.strip().replace(" ", "").replace(",", "")
-    if len(address_len) < 25:
+    if len(address_len) < 30:
         return False
     if len(address_len) > 300:  # maximum length check
         return False
@@ -204,12 +204,17 @@ def looks_like_address(address: str) -> bool:
     if len(set(address)) < 5:  # all chars basically the same
         return False
         
-    # Has at least one digit (street number)
+    # Has at least two digit (street number)
     number_groups = re.findall(r"\d+", address)
     if len(number_groups) < 2:
         return False
 
     if address.count(",") < 2:
+        return False
+    
+    # Check for special characters that should not be in addresses
+    special_chars = ['`', ':', '%', '$', '@', '*', '^']
+    if any(char in address for char in special_chars):
         return False
     
     # # Contains common address words or patterns
@@ -411,23 +416,7 @@ def validate_address_region(generated_address: str, seed_address: str) -> bool:
         return False
     
     # Check if either city or country matches
-    city_match = False
-    if gen_city and seed_city:
-        gen_words = gen_city.split()
-        
-        # Check exact match first
-        if gen_city == seed_city:
-            city_match = True
-        # Check first word match
-        elif len(gen_words) >= 1 and gen_words[0] in seed_city:
-            city_match = True
-        # Check second word match
-        elif len(gen_words) >= 2 and gen_words[1] in seed_city:
-            city_match = True
-        # Check both words together
-        elif len(gen_words) >= 2 and gen_words[0] in seed_city and gen_words[1] in seed_city:
-            city_match = True
-    
+    city_match = gen_city and seed_city and gen_city == seed_city
     country_match = gen_country and seed_country and gen_country == seed_country
     
     if not (city_match or country_match):
@@ -1700,6 +1689,7 @@ def _grade_address_variations(variations: Dict[str, List[List[str]]], seed_addre
             if not addr or not addr.strip():
                 validation_results.append({
                     "address": addr,
+                    "seed_address": seed_addresses[name_idx],
                     "looks_like_address": False,
                     "region_match": False,
                     "passed_validation": False,
@@ -1727,6 +1717,7 @@ def _grade_address_variations(variations: Dict[str, List[List[str]]], seed_addre
             
             validation_results.append({
                 "address": addr,
+                "seed_address": seed_addresses[name_idx],
                 "looks_like_address": looks_like,
                 "region_match": region_match,
                 "passed_validation": passed_validation,
@@ -2113,12 +2104,12 @@ def get_name_variation_rewards(
         insufficient_addresses = []
         
         if variation_count > 0:
-            min_required = max(1, int(variation_count * 0.8))  # At least 80% of expected variations
+            min_required = max(1, int(variation_count * len(seed_names) * 0.8))  # At least 80% of expected variations
             
             for name, vars_list in variations.items():
                 # Extract address variations from the structure
                 address_variations = [var[2] for var in vars_list if len(var) > 2]  # Include empty strings for proper counting
-                address_count = len(address_variations)  # Count non-empty addresses
+                address_count = len([addr for addr in address_variations if addr.strip()])  # Count only non-empty addresses
                 if address_count < min_required:
                     insufficient_count = min_required - address_count
                     insufficient_addresses.append(f"{name}: {address_count}/{min_required}")
@@ -2128,7 +2119,7 @@ def get_name_variation_rewards(
                     bt.logging.warning(f"Miner {uid} insufficient address variations for {name}: {address_count}/{min_required} → penalty {penalty_per_name}")
         
         # Cap the insufficient addresses penalty
-        insufficient_addresses_penalty = min(insufficient_addresses_penalty, 0.2)  # Max 20% penalty
+        insufficient_addresses_penalty = min(insufficient_addresses_penalty, 0.4)  # Max 40% penalty
         miner_metrics["penalties"]["insufficient_addresses"] = float(insufficient_addresses_penalty)
         
         # Calculate penalty for insufficient DOB variations
@@ -2136,12 +2127,12 @@ def get_name_variation_rewards(
         insufficient_dob = []
         
         if variation_count > 0:
-            min_required = max(1, int(variation_count * 0.8))  # At least 80% of expected variations
+            min_required = max(1, int(variation_count * len(seed_names) * 0.8))  # At least 80% of expected variations
             
             for name, vars_list in variations.items():
                 # Extract DOB variations from the structure
                 dob_variations = [var[1] for var in vars_list if len(var) > 1]  # Include empty strings for proper counting
-                dob_count = len(dob_variations)  # Count non-empty DOBs
+                dob_count = len([dob for dob in dob_variations if dob.strip()])  # Count only non-empty DOBs
                 if dob_count < min_required:
                     insufficient_count = min_required - dob_count
                     insufficient_dob.append(f"{name}: {dob_count}/{min_required}")
