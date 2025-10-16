@@ -194,7 +194,7 @@ def looks_like_address(address: str) -> bool:
     address = address.strip().lower()
 
     address_len = address.strip().replace(" ", "").replace(",", "")
-    if len(address_len) < 25:
+    if len(address_len) < 30:
         return False
     if len(address_len) > 300:  # maximum length check
         return False
@@ -204,7 +204,7 @@ def looks_like_address(address: str) -> bool:
     if len(set(address)) < 5:  # all chars basically the same
         return False
         
-    # Has at least one digit (street number)
+    # Has at least two digit (street number)
     number_groups = re.findall(r"\d+", address)
     if len(number_groups) < 2:
         return False
@@ -416,23 +416,7 @@ def validate_address_region(generated_address: str, seed_address: str) -> bool:
         return False
     
     # Check if either city or country matches
-    city_match = False
-    if gen_city and seed_city:
-        gen_words = gen_city.split()
-        
-        # Check exact match first
-        if gen_city == seed_city:
-            city_match = True
-        # Check first word match
-        elif len(gen_words) >= 1 and gen_words[0] in seed_city:
-            city_match = True
-        # Check second word match
-        elif len(gen_words) >= 2 and gen_words[1] in seed_city:
-            city_match = True
-        # Check both words together
-        elif len(gen_words) >= 2 and gen_words[0] in seed_city and gen_words[1] in seed_city:
-            city_match = True
-    
+    city_match = gen_city and seed_city and gen_city == seed_city
     country_match = gen_country and seed_country and gen_country == seed_country
     
     if not (city_match or country_match):
@@ -2135,7 +2119,7 @@ def get_name_variation_rewards(
                     bt.logging.warning(f"Miner {uid} insufficient address variations for {name}: {address_count}/{min_required} → penalty {penalty_per_name}")
         
         # Cap the insufficient addresses penalty
-        insufficient_addresses_penalty = min(insufficient_addresses_penalty, 0.2)  # Max 20% penalty
+        insufficient_addresses_penalty = min(insufficient_addresses_penalty, 0.4)  # Max 40% penalty
         miner_metrics["penalties"]["insufficient_addresses"] = float(insufficient_addresses_penalty)
         
         # Calculate penalty for insufficient DOB variations
