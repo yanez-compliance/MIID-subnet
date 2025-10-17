@@ -59,9 +59,6 @@ from tqdm import tqdm
 from MIID.miner.dob_variations import generate_dobes_variations
 import httpx
 import asyncio
-import hashlib
-import json
-import httpx  # make sure httpx is installed
 
 
 # Bittensor Miner Template:
@@ -157,83 +154,6 @@ class Miner(BaseMinerNeuron):
         bt.logging.info(f"Full path: {self.output_path}")
         bt.logging.info(f"NVGen url: {self.config.neuron.nvgen_url}")
 
-    def _make_round_id_from_identity(self, identity_obj) -> str:
-        """
-        Stable round_id from the exact identity content (order-insensitive for dicts).
-        Keeps it short for readability; adjust length if you prefer.
-        """
-        try:
-            payload = json.dumps(identity_obj, ensure_ascii=False, sort_keys=True)
-        except Exception:
-            # fallback: string repr
-            payload = str(identity_obj)
-        return hashlib.sha1(payload.encode("utf-8")).hexdigest()[:16]
-
-
-    async def _fetch_addresses_batch_from_allocator(
-        self,
-        seeds: list[str],
-        per_seed: int,
-        round_id: str,
-        base_url: str | None = None,
-        timeout_s: float = 30.0,
-    ) -> dict[str, list[str]]:
-        """
-        Call your Address Allocation Service /locations endpoint for many seeds.
-
-        Returns: { seed: [addresses...] }
-        """
-        if not seeds:
-            return {}
-
-        base = base_url or getattr(self.config.neuron, "addr_alloc_url", "http://localhost:9999")
-        url = base.rstrip("/") + "/locations"
-
-        payload = {
-            "round_id": round_id,
-            "seed_addresses": seeds,
-            "per_seed": int(per_seed),
-        }
-
-        out: dict[str, list[str]] = {}
-        try:
-            async with httpx.AsyncClient(timeout=httpx.Timeout(timeout_s)) as client:
-                resp = await client.post(url, json=payload)
-                resp.raise_for_status()
-                data = resp.json() or {}
-
-            # optional: log service warnings
-            for w in (data.get("warnings") or []):
-                bt.logging.warning(f"addr_alloc warning: {w}")
-
-            for item in (data.get("results") or []):
-                seed = item.get("seed")
-                alloc = item.get("allocated") or []
-                if isinstance(seed, str):
-                    out[seed] = [a for a in alloc if isinstance(a, str) and a.strip()]
-
-        except Exception as e:
-            bt.logging.warning(f"addr_alloc batch error: {e}")
-
-        return out
-
-
-    async def _fetch_addresses_from_allocator(
-        self,
-        seed: str,
-        per_seed: int,
-        round_id: str,
-        base_url: str | None = None,
-        timeout_s: float = 20.0,
-    ) -> list[str]:
-        """
-        Single-seed convenience wrapper using /locations.
-        """
-        m = await self._fetch_addresses_batch_from_allocator(
-            [seed], per_seed=per_seed, round_id=round_id, base_url=base_url, timeout_s=timeout_s
-        )
-        return m.get(seed, [])
-
     async def _verify_validator_request(self, synapse: IdentitySynapse) -> None:
         """
         Rejects any RPC that is not cryptographically proven to come from
@@ -277,6 +197,44 @@ class Miner(BaseMinerNeuron):
         bt.logging.info(
             f"Verified call from {self.WHITELISTED_VALIDATORS[hotkey]} ({hotkey})"
         )
+
+
+    async def _fetch_addresses_from_addr_v2(self, seed_country: str, limit: int = 15) -> List[str]:
+        """Fetch candidate addresses from the external addr_v2 service."""
+        url = "http://144.76.38.143:8888/addresses"
+        try:
+            async with httpx.AsyncClient(timeout=httpx.Timeout(20.0)) as client:
+                resp = await client.post(url, json={"country": seed_country, "limit": limit})
+                resp.raise_for_status()
+                data = resp.json()
+                addrs = data.get("addresses", [])
+                if isinstance(addrs, list):
+                    return addrs
+                return []
+        except Exception as e:
+            bt.logging.warning(f"addr_v2 service error for '{seed_country}': {e}")
+            return []
+
+    async def _fetch_addresses_batch_from_addr_v2(self, seed_countries: List[str], limit: int = 15) -> Dict[str, List[str]]:
+        """Batch-fetch candidate addresses for multiple seeds from addr_v2 service."""
+        results: Dict[str, List[str]] = {}
+        if not seed_countries:
+            return results
+        url = "http://144.76.38.143:8888/addresses/batch"
+        try:
+            async with httpx.AsyncClient(timeout=httpx.Timeout(400.0)) as client:
+                payload = {"countries": seed_countries, "limit": limit}
+                resp = await client.post(url, json=payload)
+                resp.raise_for_status()
+                data = resp.json() or {}
+                for item in data.get("results", []) or []:
+                    key = item.get("country")
+                    addrs = item.get("addresses", []) or []
+                    if isinstance(key, str) and isinstance(addrs, list):
+                        results[key] = addrs
+        except Exception as e:
+            bt.logging.warning(f"addr_v2 batch service error: {e}")
+        return results
 
 
     async def forward(self, synapse: IdentitySynapse) -> IdentitySynapse:
@@ -356,28 +314,24 @@ class Miner(BaseMinerNeuron):
                 if missing_keys:
                     bt.logging.warning(f"Missing keys: {missing_keys}")
 
-                response_data = {}
-                idx_per_address = {}
-
                 # Derive DOB variations
-                variation_count = int(query_params.get("variation_count", 15))
+                variation_count = int(query_params.get("variation_count", 10))
+                
+                # bt.logging.info(f"Variation count: {variation_count}")
                 
                 dob_variations = generate_dobes_variations(dobes, 25)
-                
-                round_id = self._make_round_id_from_identity(synapse.identity)
-                
-                bt.logging.info(f"addr_alloc round_id={round_id}")
 
-                # Prefetch all unique seeds in one batch via Address Allocation Service
-                    # per_seed matches your previous limit (15); tweak as you wish
-                addr_variants = await self._fetch_addresses_batch_from_allocator(
-                    seeds=addrs,
-                    per_seed=variation_count,
-                    round_id=round_id,
-                    base_url=getattr(self.config.neuron, "addr_alloc_url", "http://localhost:9999"),
-                    timeout_s=120.0,
-                )
-                
+                # Build response safely
+                response_data = {}
+                idx_per_address = {}
+                addr_variants_cache: Dict[str, List[str]] = {}
+                # Prefetch all unique seeds in one batch
+                try:
+                    unique_seeds = list(dict.fromkeys(addrs))
+                    batch_map = await self._fetch_addresses_batch_from_addr_v2(unique_seeds, 15)
+                    addr_variants_cache.update(batch_map)
+                except Exception as e:
+                    bt.logging.warning(f"Batch prefetch failed, will fallback to single fetch: {e}")
                 for idx, (name, dob, address) in enumerate(synapse.identity):
                     # ensure a unique key even for duplicate names
                     key = f"{name}"
@@ -385,40 +339,39 @@ class Miner(BaseMinerNeuron):
 
                     variations_for_name = name_variations.get(name, [])
                     dobs_for_dob = dob_variations.get(dob, [])
-                    addr_variants_for_address = addr_variants[idx]
 
                     if not variations_for_name:
                         bt.logging.warning(f"No name variations for '{name}'")
                     if not dobs_for_dob:
                         bt.logging.warning(f"No DOB variations for '{dob}'")
+                        
+                    if address not in addr_variants_cache:
+                        addr_variants_cache[address] = await self._fetch_addresses_from_addr_v2(address, 15)
+                    candidate_addrs = addr_variants_cache.get(address, [])
 
                     if address not in idx_per_address:
                         idx_per_address[address] = 0
                     
                     bt.logging.info(f"variations_for_name len: {len(variations_for_name)} for name: {name}")
-                    # bt.logging.info(f"Candidate addresses len: {len(candidate_addrs)} for address: {address}")
+                    bt.logging.info(f"Candidate addresses len: {len(candidate_addrs)} for address: {address}")
                     bt.logging.info(f"dobs_for_dob len: {len(dobs_for_dob)} for dob: {dob}")
-
+                        
                     for i, name_var in enumerate(variations_for_name):
-                        idx_per_address[address] += 1
+                        idx_per_address[address] += 1                        
                         dob_var = dobs_for_dob[i]
-
+                        
                         temp_address = ""
-                        if addr_variants_for_address is None or len(addr_variants_for_address["allocated"]) == 0 or addr_variants_for_address["seed"] != address:
+                        if candidate_addrs is None or len(candidate_addrs) == 0:
                             bt.logging.warning(f"No candidate addresses found for '{address}'")
                             # response_data[key].append()
                         else:
-                            temp_address = addr_variants_for_address["allocated"][i]
-                            if not temp_address:
-                                bt.logging.warning(f"No candidate addresses found for '{address}'")
-                                continue
+                            temp_address = candidate_addrs[ idx_per_address[address] % len(candidate_addrs)]
                             test_address =  str(self.uid + 132) + str(idx_per_address[address]) + " , " + temp_address
-                            if len(test_address) < 35:
-                                temp_address = str(self.uid + 132) + str(idx_per_address[address]) + " " * (35 - len(temp_address)) + "," + temp_address
+                            if len(test_address) < 25:
+                                temp_address = str(self.uid + 132) + str(idx_per_address[address]) + " " * (26 - len(temp_address)) + "," + temp_address
                             else:
                                 temp_address = test_address
                             response_data[key].append([name_var, dob_var, temp_address])
-                        response_data[key].append([name_var, dob_var])
 
                 synapse.variations = response_data
                 # bt.logging.info(f"Response data: {response_data}")
