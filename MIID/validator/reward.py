@@ -253,8 +253,6 @@ COUNTRY_MAPPING = {
     # Korea variations
     "korea, south": "south korea",
     "korea, north": "north korea",
-    "south korea": "south korea",
-    "north korea": "north korea",
     
     # Cote d'Ivoire variations
     "cote d ivoire": "ivory coast",
@@ -268,19 +266,15 @@ COUNTRY_MAPPING = {
     
     # Netherlands variations
     "netherlands": "the netherlands",
-    "the netherlands": "the netherlands",
     "holland": "the netherlands",
     
     # Congo variations
     "congo, democratic republic of the": "democratic republic of the congo",
-    "democratic republic of the congo": "democratic republic of the congo",
     "drc": "democratic republic of the congo",
     "congo, republic of the": "republic of the congo",
-    "republic of the congo": "republic of the congo",
     
     # Burma/Myanmar variations
     "burma": "myanmar",
-    "myanmar": "myanmar",
 
     # Bonaire variations
     'bonaire': 'bonaire, saint eustatius and saba',
