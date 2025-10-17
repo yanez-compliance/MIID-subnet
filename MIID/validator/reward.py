@@ -192,11 +192,20 @@ def calculate_orthographic_similarity(original_name: str, variation: str) -> flo
 
 def looks_like_address(address: str) -> bool:
     address = address.strip().lower()
-    address_len = address.strip().replace(" ", "").replace(",", "")
+
+    # Keep all letters (Latin and non-Latin) and numbers
+    # Using a more compatible approach for Unicode characters
+    address_len = re.sub(r'[^\w]', '', address.strip(), flags=re.UNICODE)
+
     if len(address_len) < 30:
         return False
     if len(address_len) > 300:  # maximum length check
 
+        return False
+
+    # Count letters (both Latin and non-Latin) - using \w which includes Unicode letters
+    letter_count = len(re.findall(r'[^\W\d]', address, flags=re.UNICODE))
+    if letter_count < 20:
         return False
 
     if re.match(r"^[^a-zA-Z]*$", address):  # no letters at all
@@ -215,7 +224,7 @@ def looks_like_address(address: str) -> bool:
         return False
     
     # Check for special characters that should not be in addresses
-    special_chars = ['`', ':', '%', '$', '@', '*', '^']
+    special_chars = ['`', ':', '%', '$', '@', '*', '^', '[', ']', '{', '}']
     if any(char in address for char in special_chars):
         return False
     
@@ -242,6 +251,50 @@ def check_with_nominatim(address: str) -> bool:
     except:
         return False
 
+# Global country name mapping to handle variations between miner submissions and geonames data
+# All keys and values are lowercase for case-insensitive matching
+COUNTRY_MAPPING = {
+    # Korea variations
+    "korea, south": "south korea",
+    "korea, north": "north korea",
+    
+    # Cote d'Ivoire variations
+    "cote d ivoire": "ivory coast",
+    "côte d'ivoire": "ivory coast",
+    "cote d'ivoire": "ivory coast",
+    "ivory coast": "ivory coast",
+    
+    # Gambia variations
+    "the gambia": "gambia",
+    "gambia": "gambia",
+    
+    # Netherlands variations
+    "netherlands": "the netherlands",
+    "holland": "the netherlands",
+    
+    # Congo variations
+    "congo, democratic republic of the": "democratic republic of the congo",
+    "drc": "democratic republic of the congo",
+    "congo, republic of the": "republic of the congo",
+    
+    # Burma/Myanmar variations
+    "burma": "myanmar",
+
+    # Bonaire variations
+    'bonaire': 'bonaire, saint eustatius and saba',
+    
+    # Additional common variations
+    "usa": "united states",
+    "us": "united states",
+    "united states of america": "united states",
+    "uk": "united kingdom",
+    "great britain": "united kingdom",
+    "britain": "united kingdom",
+    "uae": "united arab emirates",
+    "u.s.a.": "united states",
+    "u.s.": "united states",
+    "u.k.": "united kingdom",
+}
 
 
 def extract_city_country(address: str) -> tuple:
@@ -274,6 +327,7 @@ def extract_city_country(address: str) -> tuple:
         return "", ""
     
     country = parts[-1]
+    country = COUNTRY_MAPPING.get(country.lower(), country.lower())
     
     # If no country found, return empty
     if not country:
@@ -395,6 +449,9 @@ def validate_address_region(generated_address: str, seed_address: str) -> bool:
     """
     Validate that generated address has correct region from seed address.
     
+    Special handling for disputed regions not in geonames:
+    - Luhansk, Crimea, Donetsk, West Sahara
+    
     Args:
         generated_address: The generated address to validate
         seed_address: The seed address to match against
@@ -404,6 +461,16 @@ def validate_address_region(generated_address: str, seed_address: str) -> bool:
     """
     if not generated_address or not seed_address:
         return False
+    
+    # Special handling for disputed regions not in geonames
+    SPECIAL_REGIONS = ["luhansk", "crimea", "donetsk", "west sahara"]
+    
+    # Check if seed address is one of the special regions
+    seed_lower = seed_address.lower()
+    if seed_lower in SPECIAL_REGIONS:
+        # If seed is a special region, check if that region appears in generated address
+        gen_lower = generated_address.lower()
+        return seed_lower in gen_lower
     
     # Extract city and country from both addresses
     gen_city, gen_country = extract_city_country(generated_address)
