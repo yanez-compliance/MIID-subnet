@@ -14,7 +14,7 @@ import httpx
 import time
 
 from MIID.miner.custom_logger import CustomLogger
-from MIID.miner.generate_possible_count_pairs_v10 import generate_all_possible_count_pairs_v10
+from MIID.miner.generate_possible_count_pairs_v11 import generate_all_possible_count_pairs_v11
 from MIID.miner.rule_based_transformations_13 import RULE_BASED_TRANSFORMATIONS
 from MIID.miner.rule_based_transformations_13 import RULE_BASED_TRANSFORMATIONS_COMBINED
 from MIID.validator.reward import calculate_variation_quality, calculate_orthographic_similarity
@@ -880,7 +880,7 @@ def generate_name_variations(
     #     orthographic_similarity,
     #     len(effective_rules)
     # )
-    rule_count_pairs = generate_all_possible_count_pairs_v10(
+    rule_count_pairs = generate_all_possible_count_pairs_v11(
         expected_total_count,
         len(cand_minrequired_rule_varset),
         rule_percentage,
