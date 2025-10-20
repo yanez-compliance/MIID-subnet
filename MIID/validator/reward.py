@@ -332,10 +332,12 @@ def extract_city_country(address: str, two_parts: bool = False) -> tuple:
     used_two_parts_for_country = bool(two_parts)
     if used_two_parts_for_country and len(parts) >= 2:
         two_part_raw = f"{parts[-2]}, {parts[-1]}".lower()
-        country = COUNTRY_MAPPING.get(two_part_raw, two_part_raw)
+        country_checking_name = COUNTRY_MAPPING.get(two_part_raw, two_part_raw)
+        country = two_part_raw
     else:
         last_part = parts[-1]
-        country = COUNTRY_MAPPING.get(last_part.lower(), last_part.lower())
+        country_checking_name = COUNTRY_MAPPING.get(last_part.lower(), last_part.lower())
+        country = last_part.lower()
 
     # If no country found, return empty
     if not country:
@@ -374,7 +376,7 @@ def extract_city_country(address: str, two_parts: bool = False) -> tuple:
                     continue
 
                 # Validate the city exists in the country
-                if city_in_country(city_candidate, country):
+                if city_in_country(city_candidate, country_checking_name):
                     return city_candidate, country
 
     return "", country
@@ -500,10 +502,6 @@ def validate_address_region(generated_address: str, seed_address: str) -> bool:
     
     if not (city_match or country_match):
         return False
-    
-    # If we have both city and country, validate city is in country
-    if gen_city and gen_country:
-        return city_in_country(gen_city, gen_country)
     
     return True
 
