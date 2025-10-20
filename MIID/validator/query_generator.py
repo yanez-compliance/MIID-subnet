@@ -995,40 +995,40 @@ class QueryGenerator:
         # They will be added as context strings at the end after LLM responses
 
         # Build example format without address/DOB placeholders
-        example_parts = [
-            f"Generate {variation_count} variations of {{name}}",
-            f"ensuring phonetic similarity ({phonetic_spec}) and orthographic similarity ({orthographic_spec})",
-            f"Approximately {rule_percentage}% of the total {variation_count} variations should follow these rule-based transformations: {rule_template}"
-        ]
+        example_format = f"Generate {variation_count} different spellings of {{name}} that sound similar ({phonetic_spec}) and look similar ({orthographic_spec}). About {rule_percentage}% of these variations should follow these specific changes: {rule_template}."
+        
+        prompt = f"""TASK: Create a natural language instruction for generating name variations.
 
-        example_format = ". ".join(example_parts) + "."
-        
-        prompt = f"""Generate a Threat Scenario generation query with these specifications:
+        CONTEXT:
+        You need to create a simple, clear instruction that will be given to human workers (miners) to generate name variations for testing purposes.
 
-        THREAT SCENARIO CONTEXT:
-        You are developing execution vectors to test an sanctions screening system. The regulators expect sanctions screening systems to detect these entities even when these may be trying to obfuscate themselves by providing variation of their names, instead of their actual names.
-        These execution vectors will help identify potential vulnerabilities in these systems.
-        
-        EXECUTION VECTOR SPECIFICATIONS:
-        1. Generate exactly {variation_count} execution vectors (name variations) for each target identity
-        2. For phonetic similarity (sound-alike names), implement: {phonetic_spec}
-        3. For orthographic similarity (visually similar spellings), implement: {orthographic_spec}
-        4. IMPORTANT: Approximately {rule_percentage}% of the total variations should follow the rule-based transformations below. This percentage applies to the entire group of transformations, not to each one individually. All listed transformations must be represented across the set of rule-based variations.
-        Transformations: {rule_template}
-        
-        IMPORTANT FORMATTING REQUIREMENTS:
-        1. The query MUST use {{name}} as a placeholder for the target name.
-        2. Format as a natural language request that explicitly states all requirements.
-        3. Include both the similarity requirements (phonetic and orthographic) AND the rule-based transformation requirements in the query.
-        4. Do not write any SQL queries or any code. Return text only.
-        5. Do NOT calculate totals, percentages, or counts beyond what is explicitly given.
-        6. Do NOT add extra rules, suffixes, prefixes, or transformations not listed in the given rule set.
-        
-        CRITICAL: Return ONLY the query template text. Do not include any explanations, analysis, or commentary about the query. Do not say "this query meets requirements" or similar phrases. Just return the actual query template that miners will receive.
-        
-        Example format: {example_format}
-        
-        YOUR RESPONSE (query template only):"""
+        REQUIREMENTS:
+        1. Generate exactly {variation_count} name variations for each target name
+        2. Phonetic similarity requirements: {phonetic_spec}
+        3. Orthographic similarity requirements: {orthographic_spec}
+        4. Rule-based transformations: Approximately {rule_percentage}% of variations should follow these specific transformations: {rule_template}
+
+        CRITICAL FORMATTING RULES:
+        1. Write ONLY in natural, conversational English - like you're talking to a person
+        2. Use {{name}} as the placeholder for the target name
+        3. Make it sound like a simple request, not a technical specification
+        4. Include all requirements in one clear, flowing sentence or short paragraph
+        5. Do NOT use any technical jargon, SQL syntax, code, or database terminology
+        6. Do NOT include percentages, calculations, or mathematical formulas
+        7. Do NOT add extra rules beyond what's specified above
+
+        EXAMPLE OF GOOD FORMAT:
+        "Generate {variation_count} different spellings of {{name}} that sound similar ({phonetic_spec}) and look similar ({orthographic_spec}). About {rule_percentage}% of these variations should follow these specific changes: {rule_template}."
+
+        YOUR TASK: Write a natural, conversational instruction that miners can easily understand and follow. Make it sound like you're asking a person to help you create name variations.
+
+        REMEMBER: 
+        - This is for HUMAN workers, not computers
+        - Write like you're talking to a friend
+        - NO SQL, NO code, NO technical syntax
+        - Just a simple, clear request in plain English
+
+        YOUR RESPONSE (natural language instruction only):"""
         
         
         # ============================================================================
