@@ -290,10 +290,6 @@ COUNTRY_MAPPING = {
     "u.s.a.": "united states",
     "u.s.": "united states",
     "u.k.": "united kingdom",
-
-    # netherlands variations
-    "netherlands": "the netherlands",
-    "holland": "the netherlands",
 }
 
 
