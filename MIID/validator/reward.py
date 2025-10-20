@@ -293,7 +293,7 @@ COUNTRY_MAPPING = {
 }
 
 
-def extract_city_country(address: str) -> tuple:
+def extract_city_country(address: str, two_parts: bool = False) -> tuple:
     """
     Extract city and country from an address.
     Country is always the last part.
@@ -310,6 +310,11 @@ def extract_city_country(address: str) -> tuple:
     Args:
         address: The address to extract from
         
+    Args:
+        address: The address to extract from
+        two_parts: If True, treat the last two comma-separated segments as the country
+                   (e.g., "congo, republic of the"). Defaults to False.
+
     Returns:
         Tuple of (city, country) - both strings, empty if not found
     """
@@ -321,16 +326,25 @@ def extract_city_country(address: str) -> tuple:
     parts = [p.strip() for p in address.split(",")]
     if len(parts) < 2:
         return "", ""
-    
-    country = parts[-1]
-    country = COUNTRY_MAPPING.get(country.lower(), country.lower())
-    
+
+    # Determine country. If two_parts is True, use the last two parts as the country;
+    # otherwise, use only the last part (original behavior).
+    used_two_parts_for_country = bool(two_parts)
+    if used_two_parts_for_country and len(parts) >= 2:
+        two_part_raw = f"{parts[-2]}, {parts[-1]}".lower()
+        country = COUNTRY_MAPPING.get(two_part_raw, two_part_raw)
+    else:
+        last_part = parts[-1]
+        country = COUNTRY_MAPPING.get(last_part.lower(), last_part.lower())
+
     # If no country found, return empty
     if not country:
         return "", ""
 
     # Check each section from right to left (excluding the country)
-    for i in range(2, len(parts) + 1):
+    exclude_count = 2 if used_two_parts_for_country else 1
+    # Start from 2 when excluding one part (country), 3 when excluding two parts
+    for i in range(exclude_count + 1, len(parts) + 1):
         candidate_index = -i
         if abs(candidate_index) > len(parts):
             break
@@ -469,7 +483,7 @@ def validate_address_region(generated_address: str, seed_address: str) -> bool:
         return seed_lower in gen_lower
     
     # Extract city and country from both addresses
-    gen_city, gen_country = extract_city_country(generated_address)
+    gen_city, gen_country = extract_city_country(generated_address, two_parts=(',' in seed_address))
     seed_city, seed_country = seed_address.lower(), seed_address.lower()
     
     # If no city was extracted from generated address, it's an error
