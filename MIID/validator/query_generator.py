@@ -1002,30 +1002,36 @@ class QueryGenerator:
         ]
 
         example_format = ". ".join(example_parts) + "."
-        
-        prompt = f"""Generate a query template that follows the EXACT format and structure of the example below.
 
-        REQUIREMENTS:
-        1. Generate exactly {variation_count} variations of {{name}}
-        2. Phonetic similarity: {phonetic_spec}
-        3. Orthographic similarity: {orthographic_spec}
-        4. Rule-based transformations: Approximately {rule_percentage}% of variations should follow these transformations: {rule_template}
+        prompt = f"""You are to produce a *natural-language request template* (NOT a code snippet, NOT a SQL statement).
 
-        CRITICAL: Your response must follow the EXACT same structure and wording pattern as the example below. Do not deviate from this format.
+        PURPOSE CONTEXT:
+        You are helping generate name variation prompts for testing a sanctions screening system. Regulators expect these systems to detect obfuscated or misspelled names. Your task is to create a human-readable *query prompt* describing how to generate such name variations, not an executable program.
 
-        EXAMPLE FORMAT TO COPY:
+        TASK INSTRUCTIONS:
+        Create one natural-language prompt that instructs a model to:
+        1. Generate exactly {variation_count} variations of a target identity represented by {{name}}.
+        2. Ensure the generated variations reflect:
+        - Phonetic similarity (sound-alike names) based on: {phonetic_spec}
+        - Orthographic similarity (visual similarity) based on: {orthographic_spec}
+        3. Make sure approximately {rule_percentage}% of all generated variations follow the rule-based transformations below (as a group, not per rule):
+        {rule_template}
+
+        IMPORTANT FORMATTING REQUIREMENTS:
+        1. The output must be a single, natural-language prompt that uses {{name}} as the placeholder for the target name.
+        2. It must include both the similarity requirements (phonetic and orthographic) AND the rule-based transformation requirements.
+        3. Do **not** include any SQL, pseudocode, code syntax, table references, or structured data.
+        4. Do **not** calculate totals, percentages, or perform any computation.
+        5. Do **not** add extra transformations beyond the listed rules.
+        6. The response must look like a human instruction for generating name variations, not a technical query or script.
+
+        CRITICAL OUTPUT RULE:
+        Return **only** the natural-language prompt. Do not explain, analyze, or describe it.
+
+        Example format to follow:
         {example_format}
 
-        FORMATTING RULES:
-        1. Use {{name}} as the placeholder for the target name
-        2. Follow the exact sentence structure of the example
-        3. Include all requirements in the same order as the example
-        4. Do NOT write SQL queries, code, or technical syntax
-        5. Do NOT add extra rules or requirements beyond what's specified
-        6. Do NOT change the wording pattern - use the same style as the example
-
-        YOUR RESPONSE (follow the example format exactly):"""
-        
+        YOUR RESPONSE (prompt only):"""
         
         # ============================================================================
         # STEP 6: Set up model and timeout selection with fallback strategy
