@@ -212,7 +212,9 @@ def looks_like_address(address: str) -> bool:
         return False
         
     # Has at least two digit (street number)
-    number_groups = re.findall(r"\d+", address)
+    # Replace hyphens and semicolons with empty strings before counting numbers
+    address_for_number_count = address.replace('-', '').replace(';', '')
+    number_groups = re.findall(r"\d+", address_for_number_count)
     if len(number_groups) < 2:
         return False
 
