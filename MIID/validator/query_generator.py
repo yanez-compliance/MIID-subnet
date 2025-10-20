@@ -995,40 +995,36 @@ class QueryGenerator:
         # They will be added as context strings at the end after LLM responses
 
         # Build example format without address/DOB placeholders
-        example_format = f"Generate {variation_count} different spellings of {{name}} that sound similar ({phonetic_spec}) and look similar ({orthographic_spec}). About {rule_percentage}% of these variations should follow these specific changes: {rule_template}."
-        
-        prompt = f"""TASK: Create a natural language instruction for generating name variations.
+        example_parts = [
+            f"Generate {variation_count} variations of {{name}}",
+            f"ensuring phonetic similarity ({phonetic_spec}) and orthographic similarity ({orthographic_spec})",
+            f"Approximately {rule_percentage}% of the total {variation_count} variations should follow these rule-based transformations: {rule_template}"
+        ]
 
-        CONTEXT:
-        You need to create a simple, clear instruction that will be given to human workers (miners) to generate name variations for testing purposes.
+        example_format = ". ".join(example_parts) + "."
+        
+        prompt = f"""Generate a query template that follows the EXACT format and structure of the example below.
 
         REQUIREMENTS:
-        1. Generate exactly {variation_count} name variations for each target name
-        2. Phonetic similarity requirements: {phonetic_spec}
-        3. Orthographic similarity requirements: {orthographic_spec}
-        4. Rule-based transformations: Approximately {rule_percentage}% of variations should follow these specific transformations: {rule_template}
+        1. Generate exactly {variation_count} variations of {{name}}
+        2. Phonetic similarity: {phonetic_spec}
+        3. Orthographic similarity: {orthographic_spec}
+        4. Rule-based transformations: Approximately {rule_percentage}% of variations should follow these transformations: {rule_template}
 
-        CRITICAL FORMATTING RULES:
-        1. Write ONLY in natural, conversational English - like you're talking to a person
-        2. Use {{name}} as the placeholder for the target name
-        3. Make it sound like a simple request, not a technical specification
-        4. Include all requirements in one clear, flowing sentence or short paragraph
-        5. Do NOT use any technical jargon, SQL syntax, code, or database terminology
-        6. Do NOT include percentages, calculations, or mathematical formulas
-        7. Do NOT add extra rules beyond what's specified above
+        CRITICAL: Your response must follow the EXACT same structure and wording pattern as the example below. Do not deviate from this format.
 
-        EXAMPLE OF GOOD FORMAT:
-        "Generate {variation_count} different spellings of {{name}} that sound similar ({phonetic_spec}) and look similar ({orthographic_spec}). About {rule_percentage}% of these variations should follow these specific changes: {rule_template}."
+        EXAMPLE FORMAT TO COPY:
+        {example_format}
 
-        YOUR TASK: Write a natural, conversational instruction that miners can easily understand and follow. Make it sound like you're asking a person to help you create name variations.
+        FORMATTING RULES:
+        1. Use {{name}} as the placeholder for the target name
+        2. Follow the exact sentence structure of the example
+        3. Include all requirements in the same order as the example
+        4. Do NOT write SQL queries, code, or technical syntax
+        5. Do NOT add extra rules or requirements beyond what's specified
+        6. Do NOT change the wording pattern - use the same style as the example
 
-        REMEMBER: 
-        - This is for HUMAN workers, not computers
-        - Write like you're talking to a friend
-        - NO SQL, NO code, NO technical syntax
-        - Just a simple, clear request in plain English
-
-        YOUR RESPONSE (natural language instruction only):"""
+        YOUR RESPONSE (follow the example format exactly):"""
         
         
         # ============================================================================
