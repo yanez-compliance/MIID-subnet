@@ -134,7 +134,7 @@ def calculate_phonetic_similarity(original_name: str, variation: str) -> float:
 
     We randomize the subset and weights of multiple phonetic algorithms (Soundex, Metaphone, NYSIIS)
     to reduce overfitting to any single encoding. Randomness is deterministically seeded per interpreter
-    session using Python’s salted hash of `original_name`, which yields:
+    session using Python's salted hash of `original_name`, which yields:
       • Reproducibility for the same name within a single run (same selection/weights each time)
       • Variation across different runs (fresh selections/weights after interpreter restart)
 
@@ -1832,6 +1832,69 @@ def _grade_address_variations(variations: Dict[str, List[List[str]]], seed_addre
     }
 
 
+def _apply_blended_rank_cap_with_quality(rewards: np.ndarray, detailed_metrics: List[Dict], top_miner_cap: int, quality_threshold: float, decay_rate: float, blend_factor: float) -> Tuple[np.ndarray, List[Dict]]:
+    """
+    Applies a blended ranking model with a quality threshold.
+    1. Ranks all miners based on their initial reward scores.
+    2. Filters for miners within the top_miner_cap.
+    3. From that group, further filters for miners who meet the quality_threshold.
+    4. Re-ranks the final qualified group and calculates an exponential decay reward.
+    5. Blends the rank-based reward with the original reward score.
+    6. Miners who do not qualify receive a reward of 0.
+    """
+    # Get initial quality scores from detailed metrics for thresholding
+    quality_scores = np.array([
+        metrics.get('average_quality', 0.0) 
+        for metrics in detailed_metrics
+    ])
+    
+    # Get global ranks (0 = best) based on the initial rewards
+    global_ranks = (-rewards).argsort().argsort()
+    
+    # Stage 1: Identify miners within top cap
+    within_cap_mask = global_ranks < top_miner_cap
+    
+    # Stage 2: Among top miners, filter by quality threshold
+    qualified_mask = (within_cap_mask) & (quality_scores >= quality_threshold)
+    qualified_indices = np.where(qualified_mask)[0]
+    
+    final_rewards = np.zeros_like(rewards)
+    
+    if len(qualified_indices) > 0:
+        # Get original rewards for the qualified miners
+        qualified_original_rewards = rewards[qualified_indices]
+        
+        # Re-rank ONLY among the qualified miners
+        qualified_ranks = (-qualified_original_rewards).argsort().argsort()
+        
+        # Calculate exponential decay reward based on rank
+        ranked_rewards_component = np.exp(-decay_rate * qualified_ranks)
+        
+        # Blend the rank reward with the original reward
+        blended_rewards = (blend_factor * ranked_rewards_component + 
+                           (1 - blend_factor) * qualified_original_rewards)
+        
+        # Place the calculated blended rewards into the final rewards array
+        final_rewards[qualified_indices] = blended_rewards
+
+    bt.logging.info(f"Applied blended ranking: {qualified_mask.sum()} of {len(rewards)} miners qualified for rewards.")
+
+    # Update detailed metrics for logging and analysis
+    for i, metrics in enumerate(detailed_metrics):
+        is_qualified = qualified_mask[i]
+        metrics['ranking_info'] = {
+            'initial_reward': float(rewards[i]),
+            'global_rank': int(global_ranks[i]),
+            'within_top_cap': bool(within_cap_mask[i]),
+            'quality_score': float(quality_scores[i]),
+            'meets_quality_threshold': bool(quality_scores[i] >= quality_threshold),
+            'is_qualified_for_ranking': bool(is_qualified),
+            'final_blended_reward_before_penalties': float(final_rewards[i])
+        }
+    
+    return final_rewards, detailed_metrics
+
+
 def get_name_variation_rewards(
     self,
     seed_names: List[str],
@@ -2358,6 +2421,18 @@ def get_name_variation_rewards(
         # Keep the original rewards without applying similarity penalties
         # detailed_metrics would remain as calculated before the penalty step
     
+    # Apply the blended ranking and quality threshold based on the validator's config.
+    if self.config.neuron.apply_ranking:
+        bt.logging.info("Applying blended ranking and quality threshold to post-penalty rewards.")
+        rewards, detailed_metrics = _apply_blended_rank_cap_with_quality(
+            rewards,
+            detailed_metrics,
+            top_miner_cap=self.config.neuron.top_miner_cap,
+            quality_threshold=self.config.neuron.quality_threshold,
+            decay_rate=self.config.neuron.decay_rate,
+            blend_factor=self.config.neuron.blend_factor,
+        )
+
     # Final verification: ensure rewards array length matches UIDs length
     if len(rewards) != len(uids):
         bt.logging.error(f"CRITICAL: Final rewards length ({len(rewards)}) does not match UIDs length ({len(uids)})")
