@@ -1002,34 +1002,36 @@ class QueryGenerator:
         ]
 
         example_format = ". ".join(example_parts) + "."
-        
-        prompt = f"""Generate a Threat Scenario generation query with these specifications:
 
-        THREAT SCENARIO CONTEXT:
-        You are developing execution vectors to test an sanctions screening system. The regulators expect sanctions screening systems to detect these entities even when these may be trying to obfuscate themselves by providing variation of their names, instead of their actual names.
-        These execution vectors will help identify potential vulnerabilities in these systems.
-        
-        EXECUTION VECTOR SPECIFICATIONS:
-        1. Generate exactly {variation_count} execution vectors (name variations) for each target identity
-        2. For phonetic similarity (sound-alike names), implement: {phonetic_spec}
-        3. For orthographic similarity (visually similar spellings), implement: {orthographic_spec}
-        4. IMPORTANT: Approximately {rule_percentage}% of the total variations should follow the rule-based transformations below. This percentage applies to the entire group of transformations, not to each one individually. All listed transformations must be represented across the set of rule-based variations.
-        Transformations: {rule_template}
-        
+        prompt = f"""You are to produce a *natural-language request template* (NOT a code snippet, NOT a SQL statement).
+
+        PURPOSE CONTEXT:
+        You are helping generate name variation prompts for testing a sanctions screening system. Regulators expect these systems to detect obfuscated or misspelled names. Your task is to create a human-readable *query prompt* describing how to generate such name variations, not an executable program.
+
+        TASK INSTRUCTIONS:
+        Create one natural-language prompt that instructs a model to:
+        1. Generate exactly {variation_count} variations of a target identity represented by {{name}}.
+        2. Ensure the generated variations reflect:
+        - Phonetic similarity (sound-alike names) based on: {phonetic_spec}
+        - Orthographic similarity (visual similarity) based on: {orthographic_spec}
+        3. Make sure approximately {rule_percentage}% of all generated variations follow the rule-based transformations below (as a group, not per rule):
+        {rule_template}
+
         IMPORTANT FORMATTING REQUIREMENTS:
-        1. The query MUST use {{name}} as a placeholder for the target name.
-        2. Format as a natural language request that explicitly states all requirements.
-        3. Include both the similarity requirements (phonetic and orthographic) AND the rule-based transformation requirements in the query.
-        4. Do not write any SQL queries or any code. Return text only.
-        5. Do NOT calculate totals, percentages, or counts beyond what is explicitly given.
-        6. Do NOT add extra rules, suffixes, prefixes, or transformations not listed in the given rule set.
-        
-        CRITICAL: Return ONLY the query template text. Do not include any explanations, analysis, or commentary about the query. Do not say "this query meets requirements" or similar phrases. Just return the actual query template that miners will receive.
-        
-        Example format: {example_format}
-        
-        YOUR RESPONSE (query template only):"""
-        
+        1. The output must be a single, natural-language prompt that uses {{name}} as the placeholder for the target name.
+        2. It must include both the similarity requirements (phonetic and orthographic) AND the rule-based transformation requirements.
+        3. Do **not** include any SQL, pseudocode, code syntax, table references, or structured data.
+        4. Do **not** calculate totals, percentages, or perform any computation.
+        5. Do **not** add extra transformations beyond the listed rules.
+        6. The response must look like a human instruction for generating name variations, not a technical query or script.
+
+        CRITICAL OUTPUT RULE:
+        Return **only** the natural-language prompt. Do not explain, analyze, or describe it.
+
+        Example format to follow:
+        {example_format}
+
+        YOUR RESPONSE (prompt only):"""
         
         # ============================================================================
         # STEP 6: Set up model and timeout selection with fallback strategy
