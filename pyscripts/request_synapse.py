@@ -34,7 +34,7 @@ async def test_identity_synapse():
     # test_uid = 14 # 5EWQ
     # test_uid = 138 # 5DHQ
     # test_uid = 41 # 5Hqjr
-    test_uid = 128 # 5Ct2
+    test_uid = 108 # 5Ct2
     coldkey = metagraph.axons[test_uid].coldkey
     try:
         async with bt.dendrite(wallet=wallet) as dendrite:

@@ -177,16 +177,16 @@ class Miner(BaseMinerNeuron):
         round_id: str,
         base_url: str | None = None,
         timeout_s: float = 30.0,
-    ) -> dict[str, list[str]]:
+    ) -> [(str, list[str])]:
         """
         Call your Address Allocation Service /locations endpoint for many seeds.
 
-        Returns: { seed: [addresses...] }
+        Returns: [{ seed: [addresses...] }]
         """
         if not seeds:
             return {}
 
-        base = base_url or getattr(self.config.neuron, "addr_alloc_url", "http://localhost:9999")
+        base = base_url or getattr(self.config.neuron, "addr_alloc_url", "http://144.76.38.143:9999")
         url = base.rstrip("/") + "/locations"
 
         payload = {
@@ -195,7 +195,7 @@ class Miner(BaseMinerNeuron):
             "per_seed": int(per_seed),
         }
 
-        out: dict[str, list[str]] = {}
+        out: [(str, list[str])] = []
         try:
             async with httpx.AsyncClient(timeout=httpx.Timeout(timeout_s)) as client:
                 resp = await client.post(url, json=payload)
@@ -210,7 +210,7 @@ class Miner(BaseMinerNeuron):
                 seed = item.get("seed")
                 alloc = item.get("allocated") or []
                 if isinstance(seed, str):
-                    out[seed] = [a for a in alloc if isinstance(a, str) and a.strip()]
+                    out.append((seed, [a for a in alloc if isinstance(a, str) and a.strip()]))
 
         except Exception as e:
             bt.logging.warning(f"addr_alloc batch error: {e}")
@@ -232,7 +232,7 @@ class Miner(BaseMinerNeuron):
         m = await self._fetch_addresses_batch_from_allocator(
             [seed], per_seed=per_seed, round_id=round_id, base_url=base_url, timeout_s=timeout_s
         )
-        return m.get(seed, [])
+        return m[0][1] if m else []
 
     async def _verify_validator_request(self, synapse: IdentitySynapse) -> None:
         """
@@ -374,7 +374,7 @@ class Miner(BaseMinerNeuron):
                     seeds=addrs,
                     per_seed=variation_count,
                     round_id=round_id,
-                    base_url=getattr(self.config.neuron, "addr_alloc_url", "http://localhost:9999"),
+                    base_url=getattr(self.config.neuron, "addr_alloc_url", "http://144.76.38.143:9999"),
                     timeout_s=120.0,
                 )
                 
@@ -385,7 +385,7 @@ class Miner(BaseMinerNeuron):
 
                     variations_for_name = name_variations.get(name, [])
                     dobs_for_dob = dob_variations.get(dob, [])
-                    addr_variants_for_address = addr_variants[idx]
+                    seed, addr_variants_for_address = addr_variants[idx] if addr_variants else (None, [])
 
                     if not variations_for_name:
                         bt.logging.warning(f"No name variations for '{name}'")
@@ -403,25 +403,18 @@ class Miner(BaseMinerNeuron):
                         idx_per_address[address] += 1
                         dob_var = dobs_for_dob[i]
 
-                        temp_address = ""
-                        if addr_variants_for_address is None or len(addr_variants_for_address["allocated"]) == 0 or addr_variants_for_address["seed"] != address:
+                        if addr_variants_for_address is None or seed != address or len(addr_variants_for_address) == 0 or addr_variants_for_address[i] is None:
                             bt.logging.warning(f"No candidate addresses found for '{address}'")
                             # response_data[key].append()
+                            import random
+                            import string
+                            rand_str = ''.join(random.choices(string.ascii_letters + string.digits, k=4))
+                            response_data[key].append([name_var, dob_var , rand_str])
                         else:
-                            temp_address = addr_variants_for_address["allocated"][i]
-                            if not temp_address:
-                                bt.logging.warning(f"No candidate addresses found for '{address}'")
-                                continue
-                            test_address =  str(self.uid + 132) + str(idx_per_address[address]) + " , " + temp_address
-                            if len(test_address) < 30:
-                                temp_address = str(self.uid + 132) + str(idx_per_address[address]) + " " * (30 - len(temp_address)) + "," + temp_address
-                            else:
-                                temp_address = test_address
-                            response_data[key].append([name_var, dob_var, temp_address])
-                        response_data[key].append([name_var, dob_var])
+                            response_data[key].append([name_var, dob_var, addr_variants_for_address[i]])
 
                 synapse.variations = response_data
-                # bt.logging.info(f"Response data: {response_data}")
+                bt.logging.info(f"Response data: {response_data}")
                 # Evaluate response_data with reward function and persist metrics
                 if True:
                     try:
