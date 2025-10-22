@@ -1832,7 +1832,7 @@ def _grade_address_variations(variations: Dict[str, List[List[str]]], seed_addre
     }
 
 
-def _apply_blended_rank_cap_with_quality(rewards: np.ndarray, detailed_metrics: List[Dict], top_miner_cap: int, quality_threshold: float, decay_rate: float, blend_factor: float) -> Tuple[np.ndarray, List[Dict]]:
+def _apply_blended_rank_cap_with_quality(rewards: np.ndarray, detailed_metrics: List[Dict], uids: List[int], top_miner_cap: int, quality_threshold: float, decay_rate: float, blend_factor: float) -> Tuple[np.ndarray, np.ndarray, List[Dict]]:
     """
     Applies a blended ranking model with a quality threshold.
     1. Ranks all miners based on their initial reward scores.
@@ -1841,14 +1841,14 @@ def _apply_blended_rank_cap_with_quality(rewards: np.ndarray, detailed_metrics: 
     4. Re-ranks the final qualified group and calculates an exponential decay reward.
     5. Blends the rank-based reward with the original reward score.
     6. Miners who do not qualify receive a reward of 0.
-    """
+    """    
     # Get initial quality scores from detailed metrics for thresholding
     quality_scores = np.array([
         metrics.get('average_quality', 0.0) 
         for metrics in detailed_metrics
     ])
     
-    # Get global ranks (0 = best) based on the initial rewards
+    # Get global ranks (0 = best) based on the post-penalty rewards
     global_ranks = (-rewards).argsort().argsort()
     
     # Stage 1: Identify miners within top cap
@@ -1859,6 +1859,19 @@ def _apply_blended_rank_cap_with_quality(rewards: np.ndarray, detailed_metrics: 
     qualified_indices = np.where(qualified_mask)[0]
     
     final_rewards = np.zeros_like(rewards)
+    
+    # Update detailed metrics for logging and analysis (before burn check)
+    for i, metrics in enumerate(detailed_metrics):
+        is_qualified = qualified_mask[i]
+        metrics['ranking_info'] = {
+            'initial_reward': float(rewards[i]), # This is now the post-penalty reward
+            'global_rank': int(global_ranks[i]),
+            'within_top_cap': bool(within_cap_mask[i]),
+            'quality_score': float(quality_scores[i]),
+            'meets_quality_threshold': bool(quality_scores[i] >= quality_threshold),
+            'is_qualified_for_ranking': bool(is_qualified),
+            'final_blended_reward': 0.0  # Will be updated if miner qualifies
+        }
     
     if len(qualified_indices) > 0:
         # Get original rewards for the qualified miners
@@ -1876,23 +1889,44 @@ def _apply_blended_rank_cap_with_quality(rewards: np.ndarray, detailed_metrics: 
         
         # Place the calculated blended rewards into the final rewards array
         final_rewards[qualified_indices] = blended_rewards
-
-    bt.logging.info(f"Applied blended ranking: {qualified_mask.sum()} of {len(rewards)} miners qualified for rewards.")
-
-    # Update detailed metrics for logging and analysis
-    for i, metrics in enumerate(detailed_metrics):
-        is_qualified = qualified_mask[i]
-        metrics['ranking_info'] = {
-            'initial_reward': float(rewards[i]),
-            'global_rank': int(global_ranks[i]),
-            'within_top_cap': bool(within_cap_mask[i]),
-            'quality_score': float(quality_scores[i]),
-            'meets_quality_threshold': bool(quality_scores[i] >= quality_threshold),
-            'is_qualified_for_ranking': bool(is_qualified),
-            'final_blended_reward_before_penalties': float(final_rewards[i])
+        
+        # Update the final_blended_reward for qualified miners
+        for idx, qualified_idx in enumerate(qualified_indices):
+            detailed_metrics[qualified_idx]['ranking_info']['final_blended_reward'] = float(blended_rewards[idx])
+        
+        bt.logging.info(f"Applied blended ranking: {qualified_mask.sum()} of {len(rewards)} miners qualified for rewards.")
+        return final_rewards, uids, detailed_metrics
+    else:
+        # No miners qualified - burn all emissions
+        bt.logging.warning("🔥 BURN EVENT: No miners qualified after applying top cap and quality threshold")
+        bt.logging.warning(f"All emissions will be burned to UID 59")
+        
+        # Extend arrays to include burn UID
+        burn_uid = 59
+        extended_uids = np.append(uids, burn_uid)
+        extended_rewards = np.append(final_rewards, 1.0)  # All zeros except burn UID gets 1.0
+        
+        # Update detailed metrics to include burn UID
+        burn_metrics = {
+            'uid': burn_uid,
+            'variations': {},
+            'average_quality': 0.0,
+            'similarity_penalty': 0.0,
+            'post_penalty_reward': 1.0,
+            'is_burn': True,
+            'ranking_info': {
+                'initial_reward': 0.0,
+                'global_rank': -1,  # Special rank for burn
+                'within_top_cap': False,
+                'quality_score': 0.0,
+                'meets_quality_threshold': False,
+                'is_qualified_for_ranking': False,
+                'final_blended_reward': 1.0  # Burn gets all rewards
+            }
         }
-    
-    return final_rewards, detailed_metrics
+        detailed_metrics.append(burn_metrics)
+        
+        return extended_rewards, extended_uids, detailed_metrics
 
 
 def get_name_variation_rewards(
@@ -2424,9 +2458,10 @@ def get_name_variation_rewards(
     # Apply the blended ranking and quality threshold based on the validator's config.
     if self.config.neuron.apply_ranking:
         bt.logging.info("Applying blended ranking and quality threshold to post-penalty rewards.")
-        rewards, detailed_metrics = _apply_blended_rank_cap_with_quality(
+        rewards, uids, detailed_metrics = _apply_blended_rank_cap_with_quality(
             rewards,
             detailed_metrics,
+            uids,
             top_miner_cap=self.config.neuron.top_miner_cap,
             quality_threshold=self.config.neuron.quality_threshold,
             decay_rate=self.config.neuron.decay_rate,
@@ -2442,7 +2477,7 @@ def get_name_variation_rewards(
     bt.logging.debug(f"Final rewards: {rewards}")
     bt.logging.debug(f"Final UIDs: {uids}")
     
-    return rewards, detailed_metrics
+    return rewards, uids, detailed_metrics
 
 
 def calculate_rule_compliance_score(

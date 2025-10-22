@@ -326,7 +326,7 @@ async def forward(self):
     bt.logging.info(f"Received {valid_responses} valid responses out of {len(all_responses)}")
 
     seed_script = [item['script'] for item in seed_names_with_labels]
-    rewards, detailed_metrics = get_name_variation_rewards(
+    rewards, updated_uids, detailed_metrics = get_name_variation_rewards(
         self, 
         seed_names,
         seed_dob,
@@ -342,15 +342,18 @@ async def forward(self):
 
     # Verify UID-reward mapping before updating scores
     bt.logging.info("=== UID-REWARD MAPPING VERIFICATION ===")
-    for i, uid in enumerate(miner_uids):
+    for i, uid in enumerate(updated_uids):
         reward = rewards[i] if i < len(rewards) else 0.0
-        response = uid_response_map.get(uid)
+        response = uid_response_map.get(uid) if uid != 59 else None  # Burn UID won't have a response
         has_response = response is not None
-        bt.logging.info(f"UID {uid}: Reward={reward:.4f}, HasResponse={has_response}")
+        if uid == 59:
+            bt.logging.info(f"UID {uid}: IS BURNED EVENT. NO REWARD OR RESPONSE.")
+        else:
+            bt.logging.info(f"UID {uid}: Reward={reward:.4f}, HasResponse={has_response}")
     bt.logging.info("=== END UID-REWARD MAPPING VERIFICATION ===")
     
-    self.update_scores(rewards, miner_uids)
-    bt.logging.info(f"REWARDS: {rewards}  for MINER UIDs: {miner_uids}")
+    self.update_scores(rewards, updated_uids)
+    bt.logging.info(f"REWARDS: {rewards}  for UIDs: {updated_uids}")
 
     # 8) Save results locally
     timestamp = datetime.now().strftime("%Y-%m-%d_%H-%M-%S")
