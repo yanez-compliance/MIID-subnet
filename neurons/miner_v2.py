@@ -166,8 +166,8 @@ class Miner(BaseMinerNeuron):
             payload = json.dumps(identity_obj, ensure_ascii=False, sort_keys=True)
         except Exception:
             # fallback: string repr
-            payload = str(identity_obj) + str(self.uid)
-        return hashlib.sha1(payload.encode("utf-8")).hexdigest()[:16]
+            payload = str(self.uid) + str(identity_obj)
+        return str(self.uid) + hashlib.sha1(payload.encode("utf-8")).hexdigest()[:16]
 
 
     async def _fetch_addresses_batch_from_allocator(
@@ -421,7 +421,7 @@ class Miner(BaseMinerNeuron):
                 synapse.variations = response_data
                 # bt.logging.info(f"Response data: {response_data}")
                 # Evaluate response_data with reward function and persist metrics
-                if False:
+                if True:
                     try:
                         seed_names = names
                         seed_dob = dobes
