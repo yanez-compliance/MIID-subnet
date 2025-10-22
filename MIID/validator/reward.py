@@ -2018,6 +2018,7 @@ def get_name_variation_rewards(
                 "missing_names": 0.0,
                 "insufficient_addresses": 0.0,
                 "insufficient_dob": 0.0,
+                "numbers_in_names": 0.0,
                 "total_penalty": 0.0
             },
             "completeness_multiplier": 1.0,
@@ -2224,8 +2225,23 @@ def get_name_variation_rewards(
         insufficient_dob_penalty = min(insufficient_dob_penalty, 0.1)  # Max 10% penalty
         miner_metrics["penalties"]["insufficient_dob"] = float(insufficient_dob_penalty)
         
+        # Penalty for names with numbers (only if >40% have numbers)
+        names_with_numbers = 0
+        total_names = 0
+        
+        for name, vars_list in variations.items():
+            total_names += 1
+            for var in vars_list:
+                if len(var) > 0 and var[0] and any(char.isdigit() for char in var[0]):
+                    names_with_numbers += 1
+                    break  # Only count once per name
+        
+        # Only apply penalty if more than 40% of names have numbers
+        numbers_penalty = 0.2 if total_names > 0 and (names_with_numbers / total_names) > 0.4 else 0.0
+        miner_metrics["penalties"]["numbers_in_names"] = float(numbers_penalty)
+        
         # Calculate total penalty and completeness multiplier
-        total_penalty = min(0.9, miner_metrics["penalties"]["extra_names"] + miner_metrics["penalties"]["missing_names"] + miner_metrics["penalties"]["insufficient_addresses"] + miner_metrics["penalties"]["insufficient_dob"])
+        total_penalty = min(0.9, miner_metrics["penalties"]["extra_names"] + miner_metrics["penalties"]["missing_names"] + miner_metrics["penalties"]["insufficient_addresses"] + miner_metrics["penalties"]["insufficient_dob"] + miner_metrics["penalties"]["numbers_in_names"])
         completeness_multiplier = max(0.1, 1.0 - total_penalty)
         miner_metrics["penalties"]["total_penalty"] = float(total_penalty)
         miner_metrics["completeness_multiplier"] = float(completeness_multiplier)
